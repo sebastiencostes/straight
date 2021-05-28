@@ -1,0 +1,18 @@
+@for $i from 1 through 10 {
+    .padding-#{$i} {
+      padding: #{$i}rem;
+    }
+  }
+
+@mixin padding-direction($padding, $value){
+    padding-#{$padding}: $value;
+  }
+  
+  @for $i from 1 through 10 {
+    @each $padding in top, left, bottom, right {
+      .padding-#{$padding}-#{$i}{
+        @include padding-direction($padding, 1rem * $i) 
+      }
+    }
+}
+

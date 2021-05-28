@@ -1,0 +1,7 @@
+@import 'color';
+@mixin border{
+    border: solid 1px $black;
+}
+@mixin border-bottom{
+    border-bottom: solid 1px $black;
+}

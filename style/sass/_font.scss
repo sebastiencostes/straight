@@ -1,0 +1,40 @@
+@mixin text-transform($value) {
+    text-transform: $value;
+}
+
+.text-capitalize {
+    @include text-transform(capitalize)
+}
+
+.text-lowercase {
+    @include text-transform(lowercase)
+}
+
+.text-uppercase {
+    @include text-transform(uppercase)
+}
+
+@mixin text-align($value) {
+    text-align: $value;
+}
+
+.text-center {
+    @include text-align(center);
+} 
+
+.text-left {
+    @include text-align(left);
+}
+
+.text-right {
+    @include text-align(right);
+}
+
+.text-justify {
+    @include text-align(justify);
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}

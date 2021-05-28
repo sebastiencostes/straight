@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style/css/style.css">
 </head>
 <body>
-    <nav></nav>
+    <!--<nav></nav>
     <header>
         <h1>straight h1</h1>
         <h2>straight h2</h2>
@@ -27,20 +27,35 @@
         <a href="#" rel="noopener noreferrer">staright lien</a>
     </header>
     <section>
-        <article>
+        <article >
             <h1>section</h1>
+            <picture>
+                <source srcset="/assets/img/card-img.jpg" media="(min-width: 280px)">
+                <img class="responsive-img card--img" src="/assets/img/card-img.jpg" alt="image">
+            </picture>
         </article>
-        <figure>
-            <img src="" alt="image">
-            <figcaption>
-                figcaption
-            </figcaption>
-        </figure>
+    </section>-->
+    <section class="padding-2">
+        <article class="card">
+            <figure cclass="card--figure">
+                <img class="card--img" src="/assets/img/card-img.jpg" alt="image">
+                <figcaption class="card--title--container">
+                  <h3 class="card--title">card title</h3>
+                </figcaption>
+            </figure>
+            <div class="card--text--container">
+                <p class="card--text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </article>
     </section>
+    <!--
     <aside>aside</aside>
     <video>video</video>
     <iframe>iframe</iframe>
     <code>https://github.com/sebastiencostes/straight.git</code>
     <pre>gdfgdfgdfgdffd</pre>
+    -->
 </body>
 </html>

@@ -1,0 +1,29 @@
+@import 'border';
+@import 'color';
+@import 'flexbox';
+@import 'margin';
+@import 'image';
+@import 'padding';
+
+.card {
+    background-color: $white;
+    @include border();
+    display: $display-flex; 
+    flex-direction: $direction-column;
+   &--img{
+       @include responsive-img();
+       @include border-bottom();
+   }
+   &--title--container {
+       //padding: 1rem;
+   }
+   &--title {
+        @include margin-direction(left,2rem);
+   }
+   &--text--container {
+        @include padding-direction(bottom,2rem);
+        @include padding-direction(left,2rem);
+        @include padding-direction(right,2rem);
+        @include padding-direction(top,1rem);
+   }
+}

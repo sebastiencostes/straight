@@ -1,0 +1,18 @@
+
+@for $i from 1 through 10 {
+    .margin-#{$i} {
+    margin: #{$i}rem;
+    }
+}
+  
+
+@mixin margin-direction($margin, $value){
+    margin-#{$margin}: $value;
+  }
+  @for $i from 1 through 10 {
+    @each $margin in top, left, bottom, right {
+      .margin-#{$margin}-#{$i}{
+        @include margin-direction($margin, 1rem * $i) 
+      }
+    }
+  }

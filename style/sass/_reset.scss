@@ -1,11 +1,13 @@
 @import 'color';
-* {
+*, ::before, ::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box; 
 }
   
 html {
     font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
     //scroll-behavior: smooth;
   }
   
@@ -14,7 +16,7 @@ body {
     color: $black;
     font-family: sans-serif;
     font-size: 1.6rem;
-    line-height: 1.8;
+    line-height: 1.6;
     margin: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -32,6 +34,7 @@ body::-webkit-scrollbar {
 
 h1, h2, h3, h4, h5, h6, p, small, address, blockquote, cite, a {
     font-weight: lighter;
+    margin: 0;
 }
 
 blockquote, figure {
