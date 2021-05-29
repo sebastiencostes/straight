@@ -1,4 +1,5 @@
 @import 'border';
+@import 'font';
 @import 'flexbox';
 @import 'margin';
 @import 'image';
@@ -8,20 +9,126 @@
     @include border();
     display: $display-flex; 
     flex-direction: $direction-column;
-   &--img{
-       @include responsive-img();
-       @include border-bottom();
-   }
-   &--title--container {
-       //padding: 1rem;
-   }
-   &--title {
-        @include margin-direction(left,2rem);
-   }
-   &--text--container {
-        @include padding-direction(bottom,2rem);
-        @include padding-direction(left,2rem);
-        @include padding-direction(right,2rem);
-        @include padding-direction(top,1rem);
-   }
+    margin: 1rem 0 1rem 0;
+    &--figure {
+        display: $display-flex; 
+        flex-direction: column-reverse;
+    }
+    &--img {
+       @include responsive-img;
+    }
+    &--title--container {
+        @include border-bottom;
+    }
+    &--title {
+        @include text-transform(uppercase);
+        padding: 1rem;
+    }
+    &--reverse {
+        @include border();
+        display: $display-flex; 
+        flex-direction: $direction-column;
+        margin: 1rem 0 1rem 0;
+        &--figure {
+            display: $display-flex; 
+            flex-direction: column;
+        }
+        &--img {
+           @include responsive-img;
+        }
+        &--title--container {
+            @include border-top;
+        }
+        &--title {
+            @include text-transform(uppercase);
+            padding: 1rem;
+        }
+    }
+}
+
+.card--reverse {
+    @include border();
+    display: $display-flex; 
+    flex-direction: $direction-column;
+    margin: 1rem 0 1rem 0;
+    &--figure {
+        display: $display-flex; 
+        flex-direction: column;
+    }
+    &--img {
+       @include responsive-img;
+    }
+    &--title--container {
+        @include border-top;
+    }
+    &--title {
+        @include text-transform(uppercase);
+        padding: 1rem;
+    }
+}
+
+.card--action {
+    @include border();
+    display: $display-flex; 
+    flex-direction: $direction-column;
+    position:  relative;
+    margin: 1rem 0 1rem 0;
+    &--figure {
+        display: $display-flex; 
+        flex-direction: column-reverse;
+    }
+    &--img {
+       @include responsive-img;
+    }
+    &--title--container {
+        @include border-bottom;
+    }
+    &--title {
+        @include text-transform(uppercase);
+        @include padding(1rem);
+    }
+    &--cta--container {
+        position: absolute;
+        bottom: -2em;
+        right: 1rem;
+    }
+    &--cta {
+        background-color: #fffffc;
+        @include border;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        border-radius: 50%;
+        height: 6rem;
+        width: 6rem;
+        font-size: 5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+}
+
+.card--specification {
+    @include border();
+    display: $display-flex; 
+    flex-direction: $direction-column;
+    margin: 1rem 0 1rem 0;
+    &--figure {
+        display: $display-flex; 
+        flex-direction: column-reverse;
+        border-bottom: solid 1px #333333;
+    }
+    &--img {
+       @include responsive-img;
+    }
+    &--title--container {
+        @include border-bottom;
+    }
+    &--title {
+        @include text-transform(uppercase);
+        padding: 1rem;
+    }
+    &--text--container {
+        @include padding(2rem);
+    }
 }

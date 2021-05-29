@@ -1,11 +1,12 @@
-
+@mixin margin($valiue) {
+  margin: $value;
+}
 @for $i from 1 through 10 {
     .margin-#{$i} {
     margin: #{$i}rem;
     }
 }
   
-
 @mixin margin-direction($margin, $value){
     margin-#{$margin}: $value;
   }
