@@ -1,3 +1,99 @@
+.bg-black {
+  background-color: #333333;
+}
+
+.black {
+  color: #333333;
+}
+
+.bg-blue {
+  background-color: #4D91C6;
+}
+
+.blue {
+  color: #4D91C6;
+}
+
+.bg-gray {
+  background-color: #8E918F;
+}
+
+.gray {
+  color: #8E918F;
+}
+
+.bg-orange {
+  background-color: #F48037;
+}
+
+.orange {
+  color: #F48037;
+}
+
+.bg-green {
+  background-color: #009B74;
+}
+
+.green {
+  color: #009B74;
+}
+
+.bg-pink {
+  background-color: #D23C77;
+}
+
+.pink {
+  color: #D23C77;
+}
+
+.bg-red {
+  background-color: #BF1932;
+}
+
+.red {
+  color: #BF1932;
+}
+
+.bg-taupe {
+  background-color: #AD9F93;
+}
+
+.taupe {
+  color: #AD9F93;
+}
+
+.bg-turquoise {
+  background-color: #45B5AA;
+}
+
+.turquoise {
+  color: #45B5AA;
+}
+
+.bg-violet {
+  background-color: #C180B5;
+}
+
+.violet {
+  color: #C180B5;
+}
+
+.bg-yellow {
+  background-color: #FFC300;
+}
+
+.yellow {
+  color: #FFC300;
+}
+
+.bg-white {
+  background-color: #FFFFFC;
+}
+
+.white {
+  color: #FFFFFC;
+}
+
 .margin-1 {
   margin: 1rem;
 }
@@ -404,7 +500,6 @@
 }
 
 .card {
-  background-color: #fffffc;
   border: solid 1px #333333;
   display: flex;
   flex-direction: column;
@@ -457,6 +552,102 @@
   word-wrap: break-word;
 }
 
+.bg-black {
+  background-color: #333333;
+}
+
+.black {
+  color: #333333;
+}
+
+.bg-blue {
+  background-color: #4D91C6;
+}
+
+.blue {
+  color: #4D91C6;
+}
+
+.bg-gray {
+  background-color: #8E918F;
+}
+
+.gray {
+  color: #8E918F;
+}
+
+.bg-orange {
+  background-color: #F48037;
+}
+
+.orange {
+  color: #F48037;
+}
+
+.bg-green {
+  background-color: #009B74;
+}
+
+.green {
+  color: #009B74;
+}
+
+.bg-pink {
+  background-color: #D23C77;
+}
+
+.pink {
+  color: #D23C77;
+}
+
+.bg-red {
+  background-color: #BF1932;
+}
+
+.red {
+  color: #BF1932;
+}
+
+.bg-taupe {
+  background-color: #AD9F93;
+}
+
+.taupe {
+  color: #AD9F93;
+}
+
+.bg-turquoise {
+  background-color: #45B5AA;
+}
+
+.turquoise {
+  color: #45B5AA;
+}
+
+.bg-violet {
+  background-color: #C180B5;
+}
+
+.violet {
+  color: #C180B5;
+}
+
+.bg-yellow {
+  background-color: #FFC300;
+}
+
+.yellow {
+  color: #FFC300;
+}
+
+.bg-white {
+  background-color: #FFFFFC;
+}
+
+.white {
+  color: #FFFFFC;
+}
+
 *, ::before, ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -469,7 +660,7 @@ html {
 }
 
 body {
-  background-color: #fffffc;
+  background-color: #FFFFFC;
   color: #333333;
   font-family: sans-serif;
   font-size: 1.6rem;
@@ -512,7 +703,7 @@ address {
 
 code, pre, samp {
   background-color: #333333;
-  color: #fffffc;
+  color: #FFFFFC;
   display: inline-block;
   padding: 0.5rem;
   width: 100%;
@@ -524,7 +715,7 @@ iframe {
 
 mark {
   background-color: #333333;
-  color: #fffffc;
+  color: #FFFFFC;
   padding: 0.5rem;
 }
 

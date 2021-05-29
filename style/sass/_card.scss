@@ -1,12 +1,10 @@
 @import 'border';
-@import 'color';
 @import 'flexbox';
 @import 'margin';
 @import 'image';
 @import 'padding';
 
 .card {
-    background-color: $white;
     @include border();
     display: $display-flex; 
     flex-direction: $direction-column;
