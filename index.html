@@ -55,6 +55,28 @@
             </figure>
         </article>
 
+        <article class="card--link">
+            <figure class="card--link--figure">
+                <a href="#" rel="noopener noreferrer">
+                    <img class="card--link--img" src="/assets/img/card-img.jpg" alt="image">
+                </a>
+                <figcaption class="card--link--title--container">
+                    <h3 class="card--link--title">linked card</h3>
+                </figcaption>
+            </figure>
+        </article>
+
+        <article class="card--link--reverse">
+            <figure class="card--link--reverse--figure">
+                <a href="#" rel="noopener noreferrer">
+                    <img class="card--link--reverse--img" src="/assets/img/card-img.jpg" alt="image">
+                </a>
+                <figcaption class="card--link--reverse--title--container">
+                    <h3 class="card--link--reverse--title">linked card reverse</h3>
+                </figcaption>
+            </figure>
+        </article>
+
         <article class="card--action">
             <figure class="card--action--figure">
                 <img class="card--action--img" src="/assets/img/card-img.jpg" alt="image">
@@ -76,11 +98,32 @@
                     <h3 class="card--specification--title">card with specification</h3>
                 </figcaption>
             </figure>
-            <div class="card--specification--text--container">
+            <details class="card--specification--text--container" open onclick="return false;">
+                <summary>Detail</summary>
                 <p class="card--specification--text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
-            </div>
+            </details>
+        </article>
+
+        <article class="card--specification--action">
+            <figure class="card--specification--action--figure">
+                <img class="card--specification--action--img" src="/assets/img/card-img.jpg" alt="image">
+                <figcaption class="card--specification--action--title--container">
+                    <h3 class="card--specification--action--title">card with specification action</h3>
+                </figcaption>
+            </figure>
+            <details class="card--specification--action--text--container" open onclick="return false;">
+                <summary>17,90€</summary>
+                <p class="card--specification--action--text">
+                    Lorem ipsum dolor sit amet
+                </p>
+            </details>
+            <!-- <div class="card--specification--action--cta--container">
+                <button class="card--specification--action--cta">
+                    +
+                </button>
+            </div> -->
         </article>
 
     </section>

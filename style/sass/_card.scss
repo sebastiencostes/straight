@@ -4,6 +4,7 @@
 @import 'margin';
 @import 'image';
 @import 'padding';
+@import 'width';
 
 .card {
     @include border();
@@ -15,34 +16,15 @@
         flex-direction: column-reverse;
     }
     &--img {
-       @include responsive-img;
+       @include responsive-img();
     }
     &--title--container {
-        @include border-bottom;
+        @include border-bottom();
     }
     &--title {
+        @include padding(1rem);
         @include text-transform(uppercase);
-        padding: 1rem;
-    }
-    &--reverse {
-        @include border();
-        display: $display-flex; 
-        flex-direction: $direction-column;
-        margin: 1rem 0 1rem 0;
-        &--figure {
-            display: $display-flex; 
-            flex-direction: column;
-        }
-        &--img {
-           @include responsive-img;
-        }
-        &--title--container {
-            @include border-top;
-        }
-        &--title {
-            @include text-transform(uppercase);
-            padding: 1rem;
-        }
+        @include text-ellipsis();
     }
 }
 
@@ -56,14 +38,59 @@
         flex-direction: column;
     }
     &--img {
-       @include responsive-img;
+       @include responsive-img();
     }
     &--title--container {
-        @include border-top;
+        @include border-top();
     }
     &--title {
+        @include padding(1rem);
         @include text-transform(uppercase);
-        padding: 1rem;
+        @include text-ellipsis();
+    }
+}
+
+.card--link {
+    @include border();
+    display: $display-flex; 
+    flex-direction: $direction-column;
+    margin: 1rem 0 1rem 0;
+    &--figure {
+        display: $display-flex; 
+        flex-direction: column-reverse;
+    }
+    &--img {
+       @include width(100%);
+    }
+    &--title--container {
+        @include border-bottom();
+    }
+    &--title {
+        @include padding(1rem);
+        @include text-transform(uppercase);
+        @include text-ellipsis();
+    }
+}
+
+.card--link--reverse {
+    @include border();
+    display: $display-flex; 
+    flex-direction: $direction-column;
+    margin: 1rem 0 1rem 0;
+    &--figure {
+        display: $display-flex; 
+        flex-direction: column;
+    }
+    &--img {
+        @include width(100%);
+    }
+    &--title--container {
+        @include border-top();
+    }
+    &--title {
+        @include padding(1rem);
+        @include text-transform(uppercase);
+        @include text-ellipsis();
     }
 }
 
@@ -78,14 +105,15 @@
         flex-direction: column-reverse;
     }
     &--img {
-       @include responsive-img;
+       @include responsive-img();
     }
     &--title--container {
-        @include border-bottom;
+        @include border-bottom();
     }
     &--title {
-        @include text-transform(uppercase);
         @include padding(1rem);
+        @include text-transform(uppercase);
+        @include text-ellipsis();
     }
     &--cta--container {
         position: absolute;
@@ -119,16 +147,72 @@
         border-bottom: solid 1px #333333;
     }
     &--img {
-       @include responsive-img;
+       @include responsive-img();
     }
     &--title--container {
-        @include border-bottom;
+        @include border-bottom();
     }
     &--title {
+        @include padding(1rem);
         @include text-transform(uppercase);
-        padding: 1rem;
+        @include text-ellipsis();
     }
     &--text--container {
         @include padding(2rem);
     }
 }
+
+.card--specification--action {
+    @include border();
+    display: $display-flex; 
+    flex-direction: $direction-column;
+    margin: 1rem 0 1rem 0;
+    &--figure {
+        display: $display-flex; 
+        flex-direction: column-reverse;
+        border-bottom: solid 1px #333333;
+    }
+    &--img {
+       @include responsive-img();
+    }
+    &--title--container {
+        @include border-bottom();
+    }
+    &--title {
+        @include padding(1rem);
+        @include text-transform(uppercase);
+        @include text-ellipsis();
+    }
+    &--text--container {
+        @include padding(2rem);
+    }
+    &--cta--container {
+        position: absolute;
+        bottom: -2em;
+        right: 1rem;
+    }
+    &--cta {
+        background-color: #fffffc;
+        @include border();
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        border-radius: 50%;
+        height: 6rem;
+        width: 6rem;
+        font-size: 5rem;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+}
+
+.card--specification details > summary, .card--specification--action details > summary {
+    list-style: none;
+    }
+  .card--specification  details > summary::-webkit-details-marker, .card--specification--action details > summary::-webkit-details-marker {
+    display: none;
+  }
+//   details {
+//     flex-grow: 1;
+//   }

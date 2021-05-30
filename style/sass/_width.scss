@@ -1,0 +1,26 @@
+@mixin width($value) {
+    width: $value;
+  }
+@for $i from 1 through 100 {
+    .width-#{$i} {
+        width : #{1% * $i};
+    }
+}
+
+@mixin vw($value) {
+    width: $value;
+}
+@for $i from 1 through 100 {
+    .vw-#{$i} {
+        width : #{1vw * $i}
+    }
+}
+
+@mixin width-rem($value) {
+    width: $value;
+}
+@for $i from 1 through 300 {
+    .width-rem-#{$i} {
+        width : #{1rem * $i}
+    }
+}

@@ -38,3 +38,13 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-ellipsis {
+    @include text-ellipsis();
+}
