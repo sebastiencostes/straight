@@ -1,12 +1,100 @@
-$direction-row: row;
-$direction-column: column;
-$display-flex: flex; 
-$item-center: center;
-$item-start: flex-start;
-$item-end: flex-end;
-$justify-center: center;
-$jsutify-between: space-between;
-$jsutify-around: space-around;
-$jsutify-evenly: space-evenly;
-$no-wrap: nowrap;
-$wrap: wrap;
+@mixin display-flex {
+    display: flex;
+}
+.display-flex {
+    @include display-flex();
+}
+
+//flex-direction
+@mixin flex-direction($value) {
+    flex-direction: $value;
+}
+.direction-column {
+    @include flex-direction(column);
+}
+.direction-column-reverse {
+    @include flex-direction(column-reverse);
+}
+.direction-row {
+    @include flex-direction(row);
+}
+.direction-row-reverse {
+    @include flex-direction(row-reverse);
+}
+
+//flex wrap
+@mixin flex-wrap($value) {
+    flex-wrap: $value;
+}
+.wrap {
+    @include flex-wrap(wrap);
+}
+.nowrap {
+    @include flex-wrap(nowrap);
+}
+.wrap-reverse {
+    @include flex-wrap(wrap-reverse);
+}
+
+//justify-content
+@mixin justify-content($value) {
+    justify-content: $value;
+}
+.justify-between {
+    @include justify-content(space-between);
+}
+.justify-evenly {
+    @include justify-content(space-evenly);
+}
+.justify-center{
+    @include justify-content(center);
+}
+.justify-around {
+    @include justify-content(space-around);
+}
+.justify-stretch {
+    @include justify-content(stretch);
+}
+.justify-start {
+    @include justify-content(flex-start);
+}
+.justify-end {
+    @include justify-content(flex-end);
+}
+.justify-revert {
+    @include justify-content(revert);
+}
+
+//align-items
+@mixin align-items($value) {
+    align-items: $value;
+}
+.items-base {
+    @include align-items(baseline);
+}
+.items-revert {
+    @include align-items(revert);
+}
+.items-center{
+    @include align-items(center);
+}
+.items-stretch {
+    @include align-items(stretch);
+}
+.items-start {
+    @include align-items(flex-start);
+}
+.items-end {
+    @include align-items(flex-end);
+}
+
+//flex-basis
+@mixin flex-basis($value) {
+    flex-basis: $value;
+}
+@for $i from 1 through 100 {
+    .flex-basis-#{$i} {
+        flex-basis : #{1% * $i}
+    }
+}
+

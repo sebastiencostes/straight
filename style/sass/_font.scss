@@ -48,3 +48,12 @@
 .text-ellipsis {
     @include text-ellipsis();
 }
+
+@mixin text-overlay($font-size) {
+    filter: drop-shadow(2px 4px 6px black);
+    font-size: $font-size
+}
+
+.text-overlay {
+    @include text-overlay(3rem);
+}

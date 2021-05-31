@@ -35,9 +35,13 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, small, address, blockquote, cite, a, button, details, summary {
+h1, h2, h3, h4, h5, h6, p, small, address, blockquote, cite, a,, details, summary {
     font-weight: 300;
     margin: 0;
+}
+
+a {
+    cursor: pointer;
 }
 
 blockquote, figure {
@@ -46,9 +50,27 @@ blockquote, figure {
     margin-inline-start: 0;
     margin-inline-end: 0;
 }
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
 
-a, button {
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
     cursor: pointer;
+}
+
+code, pre, samp {
+    background-color: $black;
+    color: $white;
+    display: inline-block;
+    padding: .5rem;
+    width:100%;
 }
 
 img, svg {
@@ -60,20 +82,15 @@ a {
     text-decoration: none;
 }
 
+button {
+    border: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
 address {
     font-style: normal;
-}
-
-code, pre, samp {
-    background-color: $black;
-    color: $white;
-    display: inline-block;
-    padding: .5rem;
-    width:100%;
-}
-
-iframe {
-    border: solid 1px $black;
 }
 
 mark {

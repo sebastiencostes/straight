@@ -1,0 +1,26 @@
+@mixin height($value) {
+    height: $value;
+  }
+@for $i from 1 through 100 {
+    .h-#{$i} {
+        height : #{1% * $i};
+    }
+}
+
+@mixin vh($value) {
+    height: $value;
+}
+@for $i from 1 through 100 {
+    .vh-#{$i} {
+        height : #{1vw * $i}
+    }
+}
+
+@mixin height-rem($value) {
+    height: $value;
+}
+@for $i from 1 through 300 {
+    .h-rem-#{$i} {
+        height : #{1rem * $i}
+    }
+}

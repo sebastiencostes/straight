@@ -2,217 +2,78 @@
 @import 'font';
 @import 'flexbox';
 @import 'margin';
+@import 'position';
 @import 'image';
 @import 'padding';
 @import 'width';
 
-.card {
+%card-shared {
     @include border();
-    display: $display-flex; 
-    flex-direction: $direction-column;
-    margin: 1rem 0 1rem 0;
-    &--figure {
-        display: $display-flex; 
-        flex-direction: column-reverse;
-    }
-    &--img {
-       @include responsive-img();
-    }
-    &--title--container {
-        @include border-bottom();
-    }
-    &--title {
-        @include padding(1rem);
-        @include text-transform(uppercase);
-        @include text-ellipsis();
-    }
-}
-
-.card--reverse {
-    @include border();
-    display: $display-flex; 
-    flex-direction: $direction-column;
-    margin: 1rem 0 1rem 0;
-    &--figure {
-        display: $display-flex; 
-        flex-direction: column;
-    }
-    &--img {
-       @include responsive-img();
-    }
-    &--title--container {
-        @include border-top();
-    }
-    &--title {
-        @include padding(1rem);
-        @include text-transform(uppercase);
-        @include text-ellipsis();
-    }
-}
-
-.card--link {
-    @include border();
-    display: $display-flex; 
-    flex-direction: $direction-column;
-    margin: 1rem 0 1rem 0;
-    &--figure {
-        display: $display-flex; 
-        flex-direction: column-reverse;
-    }
-    &--img {
-       @include width(100%);
-    }
-    &--title--container {
-        @include border-bottom();
-    }
-    &--title {
-        @include padding(1rem);
-        @include text-transform(uppercase);
-        @include text-ellipsis();
-    }
-}
-
-.card--link--reverse {
-    @include border();
-    display: $display-flex; 
-    flex-direction: $direction-column;
-    margin: 1rem 0 1rem 0;
-    &--figure {
-        display: $display-flex; 
-        flex-direction: column;
-    }
-    &--img {
-        @include width(100%);
-    }
-    &--title--container {
-        @include border-top();
-    }
-    &--title {
-        @include padding(1rem);
-        @include text-transform(uppercase);
-        @include text-ellipsis();
-    }
-}
-
-.card--action {
-    @include border();
-    display: $display-flex; 
-    flex-direction: $direction-column;
-    position:  relative;
-    margin: 1rem 0 1rem 0;
-    &--figure {
-        display: $display-flex; 
-        flex-direction: column-reverse;
-    }
-    &--img {
-       @include responsive-img();
-    }
-    &--title--container {
-        @include border-bottom();
-    }
-    &--title {
-        @include padding(1rem);
-        @include text-transform(uppercase);
-        @include text-ellipsis();
-    }
-    &--cta--container {
-        position: absolute;
-        bottom: -2em;
-        right: 1rem;
-    }
-    &--cta {
-        background-color: #fffffc;
-        @include border;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: middle;
-        border-radius: 50%;
-        height: 6rem;
-        width: 6rem;
-        font-size: 5rem;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-    }
-}
-
-.card--specification {
-    @include border();
-    display: $display-flex; 
-    flex-direction: $direction-column;
-    margin: 1rem 0 1rem 0;
-    &--figure {
-        display: $display-flex; 
-        flex-direction: column-reverse;
-        border-bottom: solid 1px #333333;
-    }
-    &--img {
-       @include responsive-img();
-    }
-    &--title--container {
-        @include border-bottom();
-    }
-    &--title {
-        @include padding(1rem);
-        @include text-transform(uppercase);
-        @include text-ellipsis();
-    }
-    &--text--container {
-        @include padding(2rem);
-    }
-}
-
-.card--specification--action {
-    @include border();
-    display: $display-flex; 
-    flex-direction: $direction-column;
-    margin: 1rem 0 1rem 0;
-    &--figure {
-        display: $display-flex; 
-        flex-direction: column-reverse;
-        border-bottom: solid 1px #333333;
-    }
-    &--img {
-       @include responsive-img();
-    }
-    &--title--container {
-        @include border-bottom();
-    }
-    &--title {
-        @include padding(1rem);
-        @include text-transform(uppercase);
-        @include text-ellipsis();
-    }
-    &--text--container {
-        @include padding(2rem);
-    }
-    &--cta--container {
-        position: absolute;
-        bottom: -2em;
-        right: 1rem;
-    }
-    &--cta {
-        background-color: #fffffc;
-        @include border();
-        text-align: center;
-        text-decoration: none;
-        vertical-align: middle;
-        border-radius: 50%;
-        height: 6rem;
-        width: 6rem;
-        font-size: 5rem;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-    }
-}
-
-.card--specification details > summary, .card--specification--action details > summary {
-    list-style: none;
-    }
-  .card--specification  details > summary::-webkit-details-marker, .card--specification--action details > summary::-webkit-details-marker {
-    display: none;
+    @include display-flex();
+    @include margin-direction(top, 1rem);
+    @include margin-direction(bottom, 1rem);
+    @include position(relative);
+    @include flex-direction(column);
+    overflow: hidden;
   }
-//   details {
-//     flex-grow: 1;
-//   }
+
+  %card-img-container-shared {
+    @include display-flex();
+    @include position(relative);
+  }
+
+  %card-img-shared {
+    @include width(100%);
+  }
+
+  %card-title-container-shared {
+    @include padding(1rem)
+  }
+
+  %card-title-shared {
+    @include text-transform(capitalize);
+    @include text-ellipsis();
+  }
+
+  %card-text {
+    @include padding(1rem)
+  }
+
+  %card-footer-shared {
+    @include align-items(center);
+    @include border-top();
+    @include display-flex();
+    @include justify-content(space-between);
+    @include padding(1rem);
+  }
+
+  .card {
+    @extend %card-shared;
+    &-img-container {
+        @extend %card-img-container-shared;
+       
+      }
+    &-img {
+        @extend %card-img-shared;
+    }
+    &-title-container {
+        @extend %card-title-container-shared;
+    }
+    &-title {
+        @extend %card-title-shared;
+    }
+    &-text {
+        @extend %card-text;
+    }
+    &-cta-container {
+        @include position(absolute);
+        bottom: 0;
+        right: 0;
+    }
+    &-cta {
+        
+    }
+    &-footer {
+      @extend %card-footer-shared;
+    }
+  }

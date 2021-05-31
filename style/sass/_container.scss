@@ -1,0 +1,23 @@
+@mixin container-absolute(){
+    margin: 0 auto;
+    width: 1200px; 
+}
+.container-absolute {
+    @include container-absolute()
+}
+//relative to screen device
+@mixin container-relative-screen() {
+    margin: 0 auto;
+    width: calc(100vw - 4rem)
+}
+.container-relative-screen {
+    @include container-relative-screen();
+}
+//relative to window
+@mixin container-relative-window() {
+    margin: 0 auto;
+    width: calc(100% - 4rem)
+}
+.container-relative-window {
+    @include container-relative-window();
+}

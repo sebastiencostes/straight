@@ -2,7 +2,7 @@
     width: $value;
   }
 @for $i from 1 through 100 {
-    .width-#{$i} {
+    .w-#{$i} {
         width : #{1% * $i};
     }
 }
@@ -20,7 +20,7 @@
     width: $value;
 }
 @for $i from 1 through 300 {
-    .width-rem-#{$i} {
+    .w-rem-#{$i} {
         width : #{1rem * $i}
     }
 }

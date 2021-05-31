@@ -1,0 +1,7 @@
+@mixin text-overlay() {
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.text-overlay {
+    @include text-overlay();
+}
