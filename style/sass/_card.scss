@@ -8,17 +8,18 @@
 @import 'width';
 
 %card-shared {
+    background-clip: border-box;
     @include border();
-    @include display-flex();
-    @include margin-direction(top, 1rem);
-    @include margin-direction(bottom, 1rem);
+    @include d-flex();
+    // @include margin-direction(top, 1rem);
+    // @include margin-direction(bottom, 1rem);
     @include position(relative);
-    @include flex-direction(column);
+    @include f-dir-col();
     overflow: hidden;
   }
 
   %card-img-container-shared {
-    @include display-flex();
+    @include d-flex();
     @include position(relative);
   }
 
@@ -36,14 +37,16 @@
   }
 
   %card-text {
-    @include padding(1rem)
+    @include padding(1rem);
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   %card-footer-shared {
     @include align-items(center);
     @include border-top();
-    @include display-flex();
-    @include justify-content(space-between);
+    @include d-flex();
+    @include justify-between();
     @include padding(1rem);
   }
 

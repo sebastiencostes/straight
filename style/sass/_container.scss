@@ -1,23 +1,31 @@
-@mixin container-absolute(){
+@mixin container-fix(){
     margin: 0 auto;
     width: 1200px; 
 }
-.container-absolute {
-    @include container-absolute()
+.container-fix {
+    @include container-fix()
 }
 //relative to screen device
-@mixin container-relative-screen() {
+@mixin container-screen() {
     margin: 0 auto;
-    width: calc(100vw - 4rem)
+    width: calc(100vw - 4rem);
 }
-.container-relative-screen {
-    @include container-relative-screen();
+.container-screen {
+    @include container-screen();
 }
 //relative to window
-@mixin container-relative-window() {
+@mixin container-window() {
     margin: 0 auto;
     width: calc(100% - 4rem)
 }
-.container-relative-window {
-    @include container-relative-window();
+.container-window {
+    @include container-window();
+}
+
+//no-margin
+@mixin container-full() {
+    width: 100%;
+}
+.container-full {
+    @include container-full();
 }
