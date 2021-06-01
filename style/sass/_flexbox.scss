@@ -42,7 +42,7 @@
     -ms-flex-direction: row;
     flex-direction: row; 
 }
-.direction-row {
+.f-dir-row {
     @include f-dir-row();
 }
 @mixin f-dir-row-reverse() {
@@ -51,7 +51,7 @@
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
 }
-.direction-row-reverse {
+.f-dir-row-reverse {
   @include f-dir-row-reverse();
 }
 //flex wrap

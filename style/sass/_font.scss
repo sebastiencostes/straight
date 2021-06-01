@@ -41,6 +41,7 @@
 
 @mixin text-ellipsis {
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -49,11 +50,32 @@
     @include text-ellipsis();
 }
 
-@mixin text-overlay($font-size) {
+@mixin text-overlay() {
+    -webkit-filter: drop-shadow(2px 4px 6px black);
     filter: drop-shadow(2px 4px 6px black);
-    font-size: $font-size
 }
 
 .text-overlay {
-    @include text-overlay(3rem);
+    @include text-overlay;
+}
+h1 {
+    font-size: 7.2rem;
+}
+h2 {
+    font-size: 6rem;
+}
+h3 {
+    font-size: 4.8em;
+}
+h4 {
+    font-size: 4.2em;
+}
+h5 {
+    font-size: 3.6em;
+}
+h6 {
+    font-size: 3rem;
+}
+p {
+    font-size: 2.4rem;
 }

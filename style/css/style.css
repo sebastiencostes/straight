@@ -1,100 +1,4 @@
 @charset "UTF-8";
-.bg-black {
-  background-color: #333333;
-}
-
-.black {
-  color: #333333;
-}
-
-.bg-blue {
-  background-color: #4D91C6;
-}
-
-.blue {
-  color: #4D91C6;
-}
-
-.bg-gray {
-  background-color: #8E918F;
-}
-
-.gray {
-  color: #8E918F;
-}
-
-.bg-orange {
-  background-color: #F48037;
-}
-
-.orange {
-  color: #F48037;
-}
-
-.bg-green {
-  background-color: #009B74;
-}
-
-.green {
-  color: #009B74;
-}
-
-.bg-pink {
-  background-color: #D23C77;
-}
-
-.pink {
-  color: #D23C77;
-}
-
-.bg-red {
-  background-color: #BF1932;
-}
-
-.red {
-  color: #BF1932;
-}
-
-.bg-taupe {
-  background-color: #AD9F93;
-}
-
-.taupe {
-  color: #AD9F93;
-}
-
-.bg-turquoise {
-  background-color: #45B5AA;
-}
-
-.turquoise {
-  color: #45B5AA;
-}
-
-.bg-violet {
-  background-color: #C180B5;
-}
-
-.violet {
-  color: #C180B5;
-}
-
-.bg-yellow {
-  background-color: #FFC300;
-}
-
-.yellow {
-  color: #FFC300;
-}
-
-.bg-white {
-  background-color: #FFFFFC;
-}
-
-.white {
-  color: #FFFFFC;
-}
-
 *, ::before, ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -107,8 +11,6 @@ html {
 }
 
 body {
-  background-color: #FFFFFC;
-  color: #333333;
   font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -127,8 +29,16 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-h1, h2, h3, h4, h5, h6, p, small, address, blockquote, cite, a, details, summary {
+p, small, address, blockquote, cite, a, details, input, code, pre, samp {
+  margin: 0;
+}
+
+p, small, address, blockquote, cite, a, details, summary, input, code, pre, samp {
   font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, b, mark, strong, summary, button, mark {
+  font-weight: 400;
   margin: 0;
 }
 
@@ -159,8 +69,6 @@ button, input, optgroup, select, textarea {
 }
 
 code, pre, samp {
-  background-color: #333333;
-  color: #FFFFFC;
   display: inline-block;
   padding: 0.5rem;
   width: 100%;
@@ -175,7 +83,6 @@ img, svg {
 }
 
 a {
-  color: #4D91C6;
   text-decoration: none;
 }
 
@@ -191,9 +98,7 @@ address {
 }
 
 mark {
-  background-color: #333333;
-  color: #FFFFFC;
-  padding: 0.5rem;
+  display: inline-block;
 }
 
 .text-capitalize {
@@ -231,13 +136,42 @@ mark {
 
 .text-ellipsis {
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .text-overlay {
+  -webkit-filter: drop-shadow(2px 4px 6px black);
   filter: drop-shadow(2px 4px 6px black);
+}
+
+h1 {
+  font-size: 7.2rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 4.8em;
+}
+
+h4 {
+  font-size: 4.2em;
+}
+
+h5 {
+  font-size: 3.6em;
+}
+
+h6 {
   font-size: 3rem;
+}
+
+p {
+  font-size: 2.4rem;
 }
 
 .bg-black {
@@ -395,13 +329,42 @@ mark {
 
 .text-ellipsis {
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .text-overlay {
+  -webkit-filter: drop-shadow(2px 4px 6px black);
   filter: drop-shadow(2px 4px 6px black);
+}
+
+h1 {
+  font-size: 7.2rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 4.8em;
+}
+
+h4 {
+  font-size: 4.2em;
+}
+
+h5 {
+  font-size: 3.6em;
+}
+
+h6 {
   font-size: 3rem;
+}
+
+p {
+  font-size: 2.4rem;
 }
 
 .d-flex {
@@ -430,14 +393,14 @@ mark {
   flex-direction: column-reverse;
 }
 
-.direction-row {
+.f-dir-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
 
-.direction-row-reverse {
+.f-dir-row-reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
@@ -3398,21 +3361,34 @@ mark {
 .card-title {
   text-transform: capitalize;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 3rem;
 }
 
-.card-text {
+.card-info-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.card-info-text {
   padding: 1rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.card-body {
   margin-top: auto;
   margin-bottom: auto;
+  padding: 1rem;
 }
 
 .card-footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-top: solid 1px #333333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3420,6 +3396,10 @@ mark {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 1rem;
+}
+
+.card-footer-info {
+  font-size: 2rem;
 }
 
 .card-cta-container {
@@ -3472,14 +3452,14 @@ mark {
   flex-direction: column-reverse;
 }
 
-.direction-row {
+.f-dir-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
 }
 
-.direction-row-reverse {
+.f-dir-row-reverse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;

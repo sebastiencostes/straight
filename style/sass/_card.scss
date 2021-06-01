@@ -34,20 +34,34 @@
   %card-title-shared {
     @include text-transform(capitalize);
     @include text-ellipsis();
+    font-size: 3rem;
   }
-
-  %card-text {
+  %card-info-container-shared {
+    @include position(absolute);
+    right: 0;
+    top: 0;
+  }
+  %card-info-text-shared {
     @include padding(1rem);
+    @include text-transform(uppercase);
+    font-size: 2rem;
+  }
+  %card-body-shared {
     margin-top: auto;
     margin-bottom: auto;
+    @include padding(1rem);
   }
-
+  %card-text-shared {
+  
+  }
   %card-footer-shared {
     @include align-items(center);
-    @include border-top();
     @include d-flex();
     @include justify-between();
     @include padding(1rem);
+  }
+  %card-footer-info-shared {
+    font-size: 2rem;
   }
 
   .card {
@@ -65,8 +79,17 @@
     &-title {
         @extend %card-title-shared;
     }
+    &-info-container {
+      @extend %card-info-container-shared;
+    }
+    &-info-text {
+      @extend %card-info-text-shared;
+    }
+    &-body {
+      @extend %card-body-shared;
+    }
     &-text {
-        @extend %card-text;
+        @extend %card-text-shared;
     }
     &-cta-container {
         @include position(absolute);
@@ -78,5 +101,9 @@
     }
     &-footer {
       @extend %card-footer-shared;
+      &-info {
+        @extend %card-footer-info-shared;
+      }
     }
+
   }
