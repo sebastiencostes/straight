@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
     <title>Straight</title>
-    <link rel="stylesheet" type="text/css" href="style/css/style.css">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400" rel="stylesheet"> -->
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
 </head>
+
 <body>
     <nav>
         <ul>
             <li>link</li>
         </ul>
     </nav>
-    
+
     <!-- <header>
         <h1>straight h1</h1>
         <h2>straight h2</h2>
@@ -41,7 +47,7 @@
         </article>
     </section> -->
 
-    <section class="g-container-4 container-screen bg-white">
+    <section class="g-container-4 container-screen">
 
         <article class="card">
             <figure class="card-img-container f-dir-col-reverse">
@@ -64,8 +70,8 @@
         <article class="card">
             <figure class="card-img-container">
                 <img class="card-img" src="/assets/img/img-card-mobile.jpg" alt="image" draggable="false">
-                <figcaption class="card-title-container pos-absolute-centering">
-                    <h3 class="card-title white text-overlay">overlayed card</h3>
+                <figcaption class="card-title-container-overlay pos-absolute-centering">
+                    <h3 class="card-title-overlay">overlayed card</h3>
                 </figcaption>
             </figure>
         </article>
@@ -97,8 +103,8 @@
                 <a class="card-link" href="#" rel="noopener noreferrer">
                     <img class="card-img" src="/assets/img/img-card-mobile.jpg" alt="image" draggable="false">
                 </a>
-                <figcaption class="card-title-container pos-absolute-centering">
-                    <h3 class="card-title white text-overlay">overlayed card linked</h3>
+                <figcaption class="card-title-container-overlay pos-absolute-centering">
+                    <h3 class="card-title-overlay">overlayed card linked</h3>
                 </figcaption>
             </figure>
         </article>
@@ -111,7 +117,7 @@
                 </figcaption>
             </figure>
             <div class="card-cta-container">
-                <button class="card-cta bg-white">
+                <button class="card-cta">
                     +
                 </button>
             </div>
@@ -126,7 +132,8 @@
             </figure>
             <div class="card-body">
                 <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                 </p>
             </div>
         </article>
@@ -140,7 +147,8 @@
             </figure>
             <div class="card-body">
                 <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                 </p>
             </div>
         </article>
@@ -153,7 +161,7 @@
                 </figcaption>
             </figure>
             <div class="card-body">
-                <i>icon</i>   
+                <i>icon</i>
                 <i>icon</i>
                 <i>icon</i>
                 <p class="card-text">
@@ -162,10 +170,12 @@
             </div>
             <footer class="card-footer">
                 <aside>
-                    17.90€
+                    <strong class="card-footer-info">
+                        17.90€
+                    </strong>
                 </aside>
                 <aside>
-                    <button class="card-cta bg-white">
+                    <button class="card-cta">
                         +
                     </button>
                 </aside>
@@ -180,19 +190,22 @@
                 </figcaption>
             </figure>
             <div class="card-body">
-                <i>icon</i>   
+                <i>icon</i>
                 <i>icon</i>
                 <i>icon</i>
                 <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                 </p>
             </div>
             <footer class="card-footer">
                 <aside>
-                    17.90€
+                    <strong class="card-footer-info">
+                        17.90€
+                    </strong>
                 </aside>
                 <aside>
-                    <button class="card-cta bg-white">
+                    <button class="card-cta">
                         +
                     </button>
                 </aside>
@@ -202,26 +215,27 @@
         <article class="card">
             <figure class="card-img-container f-dir-col">
                 <img class="card-img" src="/assets/img/img-card-mobile.jpg" alt="image" draggable="false">
-                <figcaption class="card-title-container pos-absolute-centering">
-                    <h3 class="card-title text-overlay white">overlayed detailed card</h3>
+                <figcaption class="card-title-container-overlay pos-absolute-centering">
+                    <h3 class="card-title-overlay">overlayed detailed card</h3>
                 </figcaption>
             </figure>
             <div class="card-body">
                 <div>
-                    <i>icon</i>   
+                    <i>icon</i>
                     <i>icon</i>
                     <i>icon</i>
                 </div>
                 <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                 </p>
             </div>
             <footer class="card-footer">
                 <aside>
-                    <strong>17.90€</strong>
+                    <strong class="card-footer-info">17.90€</strong>
                 </aside>
                 <aside>
-                    <button class="card-cta bg-white">
+                    <button class="card-cta">
                         +
                     </button>
                 </aside>
@@ -239,11 +253,12 @@
                 <mark class="card-info-text">promo -30%</mark>
             </aside>
             <div class="card-body">
-                <i>icon</i>   
+                <i>icon</i>
                 <i>icon</i>
                 <i>icon</i>
                 <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
                 </p>
             </div>
             <footer class="card-footer">
@@ -251,7 +266,7 @@
                     <strong class="card-footer-info">17.90€</strong>
                 </aside>
                 <aside>
-                    <button class="card-cta bg-white">
+                    <button class="card-cta">
                         +
                     </button>
                 </aside>
@@ -259,7 +274,7 @@
         </article>
 
     </section>
-    
+
     <!--
     <aside>aside</aside>
     <video>video</video>
@@ -268,4 +283,5 @@
     <pre>gdfgdfgdfgdffd</pre>
     -->
 </body>
+
 </html>

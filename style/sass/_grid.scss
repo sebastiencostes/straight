@@ -1,79 +1,92 @@
-@import 'flexbox';
+@import "flexbox";
 @mixin d-grid {
-    display: -ms-grid;
-    display: grid;
+  display: -ms-grid;
+  display: grid;
 }
 .d-grid {
-    @include d-grid();
+  @include d-grid();
 }
 @mixin d-inline-grid() {
-    display: -ms-inline-grid;
-    display: inline-grid
+  display: -ms-inline-grid;
+  display: inline-grid;
 }
 .d-inline-grid {
-    @include d-inline-grid();
+  @include d-inline-grid();
 }
 //grid-template-columns
 @mixin g-tmp-col($value) {
-    -ms-grid-columns: $value;
-    grid-template-columns: $value;
+  -ms-grid-columns: $value;
+  grid-template-columns: $value;
 }
 @mixin g-tmp-col-1() {
-    @include g-tmp-col(100%);
+  @include g-tmp-col(100%);
 }
 @mixin g-tmp-col-2() {
-    @include g-tmp-col(calc(50% - (1.8rem * .555)) calc(50% - (1.8rem * .555)));
+  @include g-tmp-col(calc(50% - (1.8rem * 0.555)) calc(50% - (1.8rem * 0.555)));
 }
 @mixin g-tmp-col-3() {
-    @include g-tmp-col(calc(33.333% - (3rem * .333)) calc(33.333% - (3rem * .667)) calc(33.333% - (3rem * .333)));
+  @include g-tmp-col(
+    calc(33.333% - (3rem * 0.333)) calc(33.333% - (3rem * 0.667))
+      calc(33.333% - (3rem * 0.333))
+  );
 }
 @mixin g-tmp-col-4() {
-    @include g-tmp-col(calc(25% - (2.5rem * .599)) calc(25% - (2.5rem * .599)) calc(25% - (2.5rem * .599)) calc(25% - (2.5rem * .599)));
+  @include g-tmp-col(
+    calc(25% - (2.5rem * 0.599)) calc(25% - (2.5rem * 0.599))
+      calc(25% - (2.5rem * 0.599)) calc(25% - (2.5rem * 0.599))
+  );
 }
 @mixin g-tmp-col-5() {
-    @include g-tmp-col(calc(20% - (2.899rem * .555)) calc(20% - (2.899rem * .555)) calc(20% - (2.899rem * .555)) calc(20% - (2.899rem * .555)) calc(20% - (2.899rem * .555)));
+  @include g-tmp-col(
+    calc(20% - (2.899rem * 0.555)) calc(20% - (2.899rem * 0.555))
+      calc(20% - (2.899rem * 0.555)) calc(20% - (2.899rem * 0.555))
+      calc(20% - (2.899rem * 0.555))
+  );
 }
 @mixin g-tmp-col-6() {
-    @include g-tmp-col(calc(16.666% - (7.166rem * .231)) calc(16.666% - (7.166rem * .231)) calc(16.666% - (7.166rem * .231)) calc(16.666% - (7.166rem * .231)) 
-    calc(16.666% - (7.166rem * .231)) calc(16.666% - (7.166rem * .231)));
+  @include g-tmp-col(
+    calc(16.666% - (7.166rem * 0.231)) calc(16.666% - (7.166rem * 0.231))
+      calc(16.666% - (7.166rem * 0.231)) calc(16.666% - (7.166rem * 0.231))
+      calc(16.666% - (7.166rem * 0.231)) calc(16.666% - (7.166rem * 0.231))
+  );
 }
 //column-gap
 @mixin g-col-gap($value) {
-    -webkit-column-gap: $value;
-    -moz-column-gap: $value;
-    column-gap: $value;
+  -webkit-column-gap: $value;
+  -moz-column-gap: $value;
+  column-gap: $value;
 }
 //row-gap
 @mixin row-gap($value) {
-    row-gap: $value;
+  row-gap: $value;
 }
 %g-container-shared {
-    @include d-grid();
-    @include g-col-gap(2rem);
-    @include justify-content(center);
-    @include row-gap(2rem);
+  @include d-grid();
+  @include g-col-gap(2rem);
+  @include justify-content(center);
+  @include row-gap(2rem);
 }
 .g-container-1 {
-    @extend %g-container-shared;
-    @include g-tmp-col-1();
+  @extend %g-container-shared;
+  @include g-tmp-col-1();
 }
 .g-container-2 {
-    @extend %g-container-shared;
-    @include g-tmp-col-2();
+  @extend %g-container-shared;
+  @include g-tmp-col-2();
 }
 .g-container-3 {
-    @extend %g-container-shared;
-    @include g-tmp-col-3();
+  @extend %g-container-shared;
+  @include g-tmp-col-3();
 }
 .g-container-4 {
-    @extend %g-container-shared;
-    @include g-tmp-col-4();
+  @extend %g-container-shared;
+  @include g-tmp-col-4();
 }
 .g-container-5 {
-    @extend %g-container-shared;
-    @include g-tmp-col-5();
+  @extend %g-container-shared;
+  @include g-tmp-col-5();
 }
 .g-container-6 {
-    @extend %g-container-shared;
-    @include g-tmp-col-6();
+  @extend %g-container-shared;
+  @include g-tmp-col-6();
 }

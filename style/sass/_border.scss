@@ -1,49 +1,47 @@
-@import 'color';
-@mixin border{
-    border: solid 1px $black;
+@import "color";
+@mixin border() {
+  border: solid 1px $black;
 }
 .border {
-    @include border;
+  @include border();
 }
 
-@mixin border-top{
-    border-top: solid 1px $black;
+@mixin border-top {
+  border-top: solid 1px $black;
 }
 .border-top {
-    @include border-top;
+  @include border-top;
 }
 
-@mixin border-right{
-    border-right: solid 1px $black;
+@mixin border-right {
+  border-right: solid 1px $black;
 }
 .border-right {
-    @include border-right;
+  @include border-right;
 }
 
-@mixin border-bottom{
-    border-bottom: solid 1px $black;
+@mixin border-bottom {
+  border-bottom: solid 1px $black;
 }
 .border-bottom {
-    @include border-bottom;
+  @include border-bottom;
 }
 
-@mixin border-left{
-    border-left: solid 1px $black;
+@mixin border-left {
+  border-left: solid 1px $black;
 }
 .border-left {
-    @include border-left;
+  @include border-left;
 }
 
 @mixin no-border {
-    border: 0;
+  border: 0;
 }
 .no-border {
-    @include no-border;
+  @include no-border;
 }
 
-
-
-
-
-
+@mixin b-radius($value) {
+  border-radius: $value;
+}
 
