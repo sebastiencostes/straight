@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
     <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
+    <!-- <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"> -->
     <link rel="preload" href="style/css/style.css" as="style">
     <link rel="stylesheet" href="style/css/style.css">
 </head>
@@ -22,22 +23,42 @@
         </ul>
     </nav>
 
-    <main>
+    <main class="container-screen">
 
-        <section class="g-container-1 container-screen">
+        <section id="cardContainer" class="g-container-1 margin-top-2 margin-bottom-2">
+        
+            <div>
+                <button id="vGrid" class="btn-square-m">
+                    <span class="material-icons md-36">
+                        crop_portrait
+                    </span>
+                </button>
+
+                <button id="hGrid" class="btn-square-m">
+                    <span class="material-icons md-36">
+                        crop_landscape
+                    </span>
+                </button>
+
+                <button id="lGrid" class="btn-square-m">
+                    <span class="material-icons md-36">
+                        list
+                    </span>
+                </button>
+            </div>
 
             <!--CARD-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title">v card</h3>
-                    <button class="card-header-cta">
+                    <h3 class="card-title">vertical card</h3>
+                    <button class="card-header-cta btn-circle-s">
                         <span class="material-icons">
                             more_horiz
                         </span>
                     </button>
                 </header>
                 <picture class="card-img-container">
-                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 800px)">
+                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
                     <img class="card-img" src="/assets/img/card-img.jpg"
                         alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                 </picture>
@@ -62,17 +83,52 @@
             </article>
 
             <!--CARD-H-->
-            <article class="card card-h">
+            <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title">h card</h3>
-                    <button class="card-header-cta">
+                    <h3 class="card-title">card</h3>
+                    <button class="card-header-cta btn-circle-s">
                         <span class="material-icons">
                             more_horiz
                         </span>
                     </button>
                 </header>
                 <picture class="card-img-container">
-                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 800px)">
+                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
+                    <img class="card-img" src="/assets/img/card-img.jpg"
+                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                </picture>
+                <div class="card-body">
+                    <h4 class="card-body-title">.card-v</h4>
+                    <p class="card-text">card-body</p>
+                </div>
+                <footer class="card-footer">
+                    <div class="card-info-container">
+                        <sapn class="card-info-text">
+                            17.90€
+                        </sapn>
+                    </div>
+                    <div class="card-cta-container">
+                        <button class="card-footer-cta">
+                            <span class="material-icons">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+            <!--CARD-L-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title">list card</h3>
+                    <button class="card-header-cta btn-circle-s">
+                        <span class="material-icons">
+                            more_horiz
+                        </span>
+                    </button>
+                </header>
+                <picture class="card-img-container">
+                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
                     <img class="card-img" src="/assets/img/card-img.jpg"
                         alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                 </picture>
@@ -99,7 +155,13 @@
         </section>
 
     </main>
-
+    <footer>
+        footer
+    </footer>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+    <script src="script/main.js"></script>
 </body>
 
 </html>

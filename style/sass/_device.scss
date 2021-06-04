@@ -3,3 +3,23 @@ $tablet-landscape: 1024px;
 $laptop: 1440px;
 $desktop: 1920px;
 
+@mixin tablet-portrait {
+  @media screen and (min-width: $tablet-portrait) {
+    @content;
+  }
+}
+@mixin tablet-landscape {
+  @media screen and (min-width: $tablet-landscape) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}

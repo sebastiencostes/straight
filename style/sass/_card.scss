@@ -8,36 +8,60 @@
 @import "padding";
 @import "width";
 @import "height";
+@import "utility";
 
 %card-shared {
   @include d-flex();
   @include position(relative);
   @include f-dir-col();
   background-clip: border-box;
+  height: 100%;
   overflow: hidden;
   &%-h-shared {
     @include f-dir-row-reverse();
     @include flex-wrap(wrap);
     & .card-header {
-      flex: 1 1 50%;
-      height: 50%;
-    }
-    & .card-title,
-    & .card-header-cta {
-      margin-bottom: auto;
-    }
-    & .card-img-container {
-      flex: 1 1 50%;
-    }
-    & .card-footer {
+      @include items-start();
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
       flex: 0 1 50%;
       height: 50%;
-      margin-top: -35%;
     }
-
-    &.card-info-container,
-    & .card-cta-container {
-      margin-top: auto;
+    & .card-img-container {
+      flex: 0 1 50%;
+    }
+    & .card-footer {
+      @include items-end();
+      @include padding(1rem);
+      @include position(absolute);
+      bottom: 0;
+      height: 50%;
+      width: 50%;
+    }
+  }
+  &%-l-shared {
+    @include f-dir-row-reverse();
+    @include flex-wrap(wrap);
+    & .card-header {
+      @include align-items(center);
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 75%;
+      flex: 0 1 75%;
+      height: 50%;
+    }
+    & .card-title {
+      font-size: 1.6rem;
+    }
+    & .card-img-container {
+      flex: 0 1 25%;
+    }
+    & .card-footer {
+      @include position(absolute);
+      @include align-items(center);
+      @include padding(1rem);
+      bottom: 0;
+      height: 50%;
+      width: 75%;
     }
   }
 }
@@ -50,11 +74,6 @@
   @include padding(1rem);
   @include align-items(center);
 }
-%card-header-cta-shared {
-  @include width(3.6rem);
-  @include height-rem(3.6rem);
-  @include b-radius(50%);
-}
 %card-title-shared {
   @include text-transform(capitalize);
   @include text-ellipsis();
@@ -62,7 +81,7 @@
   font-weight: 300;
 }
 %card-body-shared {
-  display: none;
+  @include d-none;
 }
 %card-footer-shared {
   @include d-flex();
@@ -82,9 +101,6 @@
   @extend %card-shared;
   &-header {
     @extend %card-header-shared;
-    &-cta {
-      @extend %card-header-cta-shared;
-    }
   }
   &-img {
     @extend %card-img-shared;
@@ -106,6 +122,9 @@
   }
   &-h {
     @extend %-h-shared;
+  }
+  &-l {
+    @extend %-l-shared;
   }
 }
 

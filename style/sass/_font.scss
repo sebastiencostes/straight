@@ -48,6 +48,10 @@
   color: rgba(238, 238, 238, 0.3);
 }
 
+@mixin font-size($value) {
+  font-size: $value;
+}
+
 @mixin text-transform($value) {
   text-transform: $value;
 }
