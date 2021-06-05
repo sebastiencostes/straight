@@ -1,4 +1,5 @@
 @import "border";
+@import "color";
 @import "font";
 @import "height";
 @import "width";
@@ -103,4 +104,18 @@
 }
 .btn-circle-xl {
   @include btn-circle-xl();
+}
+
+@media (prefers-color-scheme: dark) {
+  button,
+  .btn {
+    background-color: $black-medium;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  button,
+  .btn {
+    background-color: $white-medium;
+  }
 }

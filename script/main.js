@@ -2,6 +2,9 @@ const vCard = document.querySelectorAll("#cardContainer .card");
 const btnV = document.querySelector("#vGrid");
 const btnH = document.querySelector("#hGrid");
 const btnL = document.querySelector("#lGrid");
+const btnHeaderCta = document.querySelectorAll(".card-header-cta");
+const cardBody = document.querySelectorAll(".card-body");
+const btnClose = document.querySelectorAll(".close");
 
 function vDisplay() {
   for (const card of vCard) {
@@ -43,3 +46,33 @@ function lDisplay() {
   }
 }
 btnL.onclick = lDisplay;
+
+//show
+for (let button of btnHeaderCta) {
+  button.addEventListener("click", (e) => {
+    for (let content of cardBody) {
+      if (
+        content.getAttribute("data-number") ===
+        button.getAttribute("data-number")
+      ) {
+        content.classList.remove("d-none");
+        content.classList.add("d-flex");
+      }
+    }
+  });
+}
+
+//hide
+for (let button of btnClose) {
+  button.addEventListener("click", (e) => {
+    for (let content of cardBody) {
+      if (
+        content.getAttribute("data-number") ===
+        button.getAttribute("data-number")
+      ) {
+        content.classList.add("d-none");
+        content.classList.remove("d-flex");
+      }
+    }
+  });
+}

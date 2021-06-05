@@ -12,20 +12,21 @@
 
 %card-shared {
   @include d-flex();
+  @include height(100%);
   @include position(relative);
   @include f-dir-col();
   background-clip: border-box;
-  height: 100%;
   overflow: hidden;
   &%-h-shared {
     @include f-dir-row-reverse();
     @include flex-wrap(wrap);
     & .card-header {
+      @include height(50%);
       @include items-start();
       -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
       flex: 0 1 50%;
-      height: 50%;
+      max-width: 50%;
     }
     & .card-img-container {
       flex: 0 1 50%;
@@ -35,7 +36,7 @@
       @include padding(1rem);
       @include position(absolute);
       bottom: 0;
-      height: 50%;
+      @include height(50%);
       width: 50%;
     }
   }
@@ -44,10 +45,11 @@
     @include flex-wrap(wrap);
     & .card-header {
       @include align-items(center);
+      @include height(50%);
       -webkit-box-flex: 0;
       -ms-flex: 0 1 75%;
       flex: 0 1 75%;
-      height: 50%;
+      max-width: 75%;
     }
     & .card-title {
       font-size: 1.6rem;
@@ -56,11 +58,11 @@
       flex: 0 1 25%;
     }
     & .card-footer {
-      @include position(absolute);
       @include align-items(center);
+      @include height(50%);
       @include padding(1rem);
+      @include position(absolute);
       bottom: 0;
-      height: 50%;
       width: 75%;
     }
   }
@@ -81,7 +83,36 @@
   font-weight: 300;
 }
 %card-body-shared {
-  @include d-none;
+  @include f-dir-col();
+  @include position(absolute);
+  @include height(100%);
+  @include padding(1rem 1rem 1rem);
+  @include width(100%);
+  overflow-y: scroll;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+%card-body-header-shared {
+  @include d-flex();
+  @include justify-between();
+  @include align-items(center);
+  @include padding-direction(bottom, 1rem);
+}
+%card-body-header-shared {
+  @include text-transform(capitalize);
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+%card-body-text-shared {
+  @include margin(1rem 0);
+}
+%card-body-footer-shared {
+  @include d-flex();
+  @include justify-between();
+  @include align-items(center);
+  @include margin-direction(top, auto);
+  @include padding-direction(top, 2rem);
 }
 %card-footer-shared {
   @include d-flex();
@@ -110,6 +141,15 @@
   }
   &-body {
     @extend %card-body-shared;
+    &-header {
+      @extend %card-body-header-shared;
+    }
+    &-text {
+      @extend %card-body-text-shared;
+    }
+    &-footer {
+      @extend %card-body-footer-shared;
+    }
   }
   &-footer {
     @extend %card-footer-shared;
@@ -130,12 +170,15 @@
 
 @media (prefers-color-scheme: dark) {
   .card,
-  .card-footer {
+  .card-footer,
+  .card-body {
     background-color: $black-light;
   }
+
   .card-header-cta,
   .card-footer-cta,
-  .card-title {
+  .card-title,
+  .card-body-text {
     color: $text-dark;
   }
   .card-header {
@@ -144,8 +187,9 @@
   .card-header-cta {
     background-color: $black-ultra-light;
   }
-  .card-footer-cta {
-    background-color: transparent;
+  .card-footer-cta,
+  .card-body-info-qty-cta {
+    background-color: $transparent;
   }
 }
 
@@ -161,13 +205,15 @@
   .card-info-text,
   .card-header-cta,
   .card-footer-cta,
-  .card-title {
+  .card-title,
+  .card-body-text {
     color: $text-light;
   }
   .card-header-cta {
     background-color: $white-ultra-light;
   }
-  .card-footer-cta {
-    background-color: transparent;
+  .card-footer-cta,
+  .card-body-info-qty-cta {
+    background-color: $transparent;
   }
 }

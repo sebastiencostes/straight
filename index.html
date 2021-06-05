@@ -26,21 +26,21 @@
     <main class="container-screen">
 
         <section id="cardContainer" class="g-container-1 margin-top-2 margin-bottom-2">
-        
+
             <div>
-                <button id="vGrid" class="btn-square-m">
+                <button id="vGrid" class="btn-square-m  card-btn-gallery">
                     <span class="material-icons md-36">
                         crop_portrait
                     </span>
                 </button>
 
-                <button id="hGrid" class="btn-square-m">
+                <button id="hGrid" class="btn-square-m card-btn-gallery">
                     <span class="material-icons md-36">
                         crop_landscape
                     </span>
                 </button>
 
-                <button id="lGrid" class="btn-square-m">
+                <button id="lGrid" class="btn-square-m card-btn-gallery">
                     <span class="material-icons md-36">
                         list
                     </span>
@@ -51,7 +51,7 @@
             <article class="card">
                 <header class="card-header">
                     <h3 class="card-title">vertical card</h3>
-                    <button class="card-header-cta btn-circle-s">
+                    <button class="card-header-cta btn-circle-s" data-number="1">
                         <span class="material-icons">
                             more_horiz
                         </span>
@@ -62,10 +62,53 @@
                     <img class="card-img" src="/assets/img/card-img.jpg"
                         alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                 </picture>
-                <div class="card-body">
-                    <h4 class="card-body-title">.card-v</h4>
-                    <p class="card-text">card-body</p>
-                </div>
+                <aside class="card-body d-none" data-number="1">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title"><a href="#">vertical card body</a></h4>
+                        <button class="card-header-cta btn-circle-s close" data-number="1">
+                            <span class="material-icons">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <p class="card-body-text text-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                    </p>
+                    <div class="card-body-footer">
+                        <div class="card-body-info-container">
+                            <sapn class="card-info-text">
+                                17.90€
+                            </sapn>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    remove
+                                </span>
+                            </button>
+                            <span class="margin-left-2 margin-right-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-cta-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
                 <footer class="card-footer">
                     <div class="card-info-container">
                         <sapn class="card-info-text">
@@ -85,8 +128,8 @@
             <!--CARD-H-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title">card</h3>
-                    <button class="card-header-cta btn-circle-s">
+                    <h3 class="card-title">horizontal card</h3>
+                    <button class="card-header-cta btn-circle-s" data-number="2">
                         <span class="material-icons">
                             more_horiz
                         </span>
@@ -97,10 +140,53 @@
                     <img class="card-img" src="/assets/img/card-img.jpg"
                         alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                 </picture>
-                <div class="card-body">
-                    <h4 class="card-body-title">.card-v</h4>
-                    <p class="card-text">card-body</p>
-                </div>
+                <aside class="card-body d-none" data-number="2">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title"><a href="#">horizontal card</a></h4>
+                        <button class="card-header-cta btn-circle-s close" data-number="2">
+                            <span class="material-icons">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <p class="card-body-text text-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                    </p>
+                    <div class="card-body-footer">
+                        <div class="card-body-info-container">
+                            <sapn class="card-info-text">
+                                17.90€
+                            </sapn>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    remove
+                                </span>
+                            </button>
+                            <span class="margin-left-2 margin-right-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-cta-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
                 <footer class="card-footer">
                     <div class="card-info-container">
                         <sapn class="card-info-text">
@@ -121,7 +207,7 @@
             <article class="card">
                 <header class="card-header">
                     <h3 class="card-title">list card</h3>
-                    <button class="card-header-cta btn-circle-s">
+                    <button class="card-header-cta btn-circle-s" data-number="3">
                         <span class="material-icons">
                             more_horiz
                         </span>
@@ -132,10 +218,49 @@
                     <img class="card-img" src="/assets/img/card-img.jpg"
                         alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                 </picture>
-                <div class="card-body">
-                    <h4 class="card-body-title">.card-v</h4>
-                    <p class="card-text">card-body</p>
-                </div>
+                <aside class="card-body d-none" data-number="3">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title"><a href="#">list card</a></h4>
+                        <button class="card-header-cta btn-circle-s close" data-number="3">
+                            <span class="material-icons">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <!-- <p class="card-body-text text-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                    </p> -->
+                    <div class="card-body-footer">
+                        <div class="card-body-info-container">
+                            <sapn class="card-info-text">
+                                17.90€
+                            </sapn>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    remove
+                                </span>
+                            </button>
+                            <span class="margin-left-2 margin-right-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-cta-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
                 <footer class="card-footer">
                     <div class="card-info-container">
                         <sapn class="card-info-text">

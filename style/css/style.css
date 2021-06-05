@@ -678,6 +678,102 @@ nav ul li {
   color: white;
 }
 
+.bg-black {
+  background-color: black;
+}
+
+.black {
+  color: black;
+}
+
+.bg-blue {
+  background-color: #54bbb6;
+}
+
+.blue {
+  color: #54bbb6;
+}
+
+.bg-gray {
+  background-color: #8e918f;
+}
+
+.gray {
+  color: #8e918f;
+}
+
+.bg-orange {
+  background-color: #f48037;
+}
+
+.orange {
+  color: #f48037;
+}
+
+.bg-green {
+  background-color: #009b74;
+}
+
+.green {
+  color: #009b74;
+}
+
+.bg-pink {
+  background-color: #d23c77;
+}
+
+.pink {
+  color: #d23c77;
+}
+
+.bg-red {
+  background-color: #bf1932;
+}
+
+.red {
+  color: #bf1932;
+}
+
+.bg-taupe {
+  background-color: #ad9f93;
+}
+
+.taupe {
+  color: #ad9f93;
+}
+
+.bg-turquoise {
+  background-color: #45b5aa;
+}
+
+.turquoise {
+  color: #45b5aa;
+}
+
+.bg-violet {
+  background-color: #c180b5;
+}
+
+.violet {
+  color: #c180b5;
+}
+
+.bg-yellow {
+  background-color: #ffc300;
+}
+
+.yellow {
+  color: #ffc300;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.white {
+  color: white;
+}
+
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
@@ -4881,6 +4977,18 @@ p {
   border-radius: 50%;
 }
 
+@media (prefers-color-scheme: dark) {
+  button,
+.btn {
+    background-color: #2d3848;
+  }
+}
+@media (prefers-color-scheme: light) {
+  button,
+.btn {
+    background-color: #e2e8f0;
+  }
+}
 .bg-black {
   background-color: black;
 }
@@ -10285,17 +10393,21 @@ p {
   height: 300rem;
 }
 
+.d-none {
+  display: none;
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   background-clip: border-box;
-  height: 100%;
   overflow: hidden;
 }
 .card.card-h {
@@ -10307,13 +10419,14 @@ p {
   flex-wrap: wrap;
 }
 .card.card-h .card-header {
+  height: 50%;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
   -webkit-box-flex: 0;
   -ms-flex: 0 1 50%;
   flex: 0 1 50%;
-  height: 50%;
+  max-width: 50%;
 }
 .card.card-h .card-img-container {
   flex: 0 1 50%;
@@ -10340,10 +10453,11 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  height: 50%;
   -webkit-box-flex: 0;
   -ms-flex: 0 1 75%;
   flex: 0 1 75%;
-  height: 50%;
+  max-width: 75%;
 }
 .card.card-l .card-title {
   font-size: 1.6rem;
@@ -10352,13 +10466,13 @@ p {
   flex: 0 1 25%;
 }
 .card.card-l .card-footer {
-  position: absolute;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1rem;
-  bottom: 0;
   height: 50%;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
   width: 75%;
 }
 
@@ -10390,7 +10504,55 @@ p {
 }
 
 .card-body {
-  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  padding: 1rem 1rem 1rem;
+  width: 100%;
+  overflow-y: scroll;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.card-body-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.card-body-header {
+  text-transform: capitalize;
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+
+.card-body-text {
+  margin: 1rem 0;
+}
+
+.card-body-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 2rem;
 }
 
 .card-footer {
@@ -10417,13 +10579,15 @@ p {
 
 @media (prefers-color-scheme: dark) {
   .card,
-.card-footer {
+.card-footer,
+.card-body {
     background-color: #3a4556;
   }
 
   .card-header-cta,
 .card-footer-cta,
-.card-title {
+.card-title,
+.card-body-text {
     color: #eee;
   }
 
@@ -10435,7 +10599,8 @@ p {
     background-color: #4a5567;
   }
 
-  .card-footer-cta {
+  .card-footer-cta,
+.card-body-info-qty-cta {
     background-color: transparent;
   }
 }
@@ -10453,7 +10618,8 @@ p {
   .card-info-text,
 .card-header-cta,
 .card-footer-cta,
-.card-title {
+.card-title,
+.card-body-text {
     color: #222;
   }
 
@@ -10461,7 +10627,8 @@ p {
     background-color: #fefefe;
   }
 
-  .card-footer-cta {
+  .card-footer-cta,
+.card-body-info-qty-cta {
     background-color: transparent;
   }
 }

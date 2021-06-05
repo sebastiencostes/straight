@@ -1,4 +1,4 @@
-@mixin margin($valiue) {
+@mixin margin($value) {
   margin: $value;
 }
 @for $i from 1 through 10 {
