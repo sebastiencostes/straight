@@ -9,6 +9,7 @@
 html {
   font-size: calc(1em * 0.625);
   line-height: 1.15;
+  overflow: scroll;//TODO
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -34,6 +35,10 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 ::-webkit-file-upload-button {

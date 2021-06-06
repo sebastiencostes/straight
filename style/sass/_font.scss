@@ -146,7 +146,7 @@ p {
   //1.5rem  1200px
   //1.6rem desktop
 
-//TODO//
+  //TODO//
   //1.68rem
   //2.2rem
   //2.8rem
@@ -155,3 +155,14 @@ p {
   //4.5rem
 }
 
+@include dark-theme {
+  .material-icons {
+    color: $text-dark;
+  }
+}
+
+@include light-theme {
+  .material-icons {
+    color: $text-light;
+  }
+}

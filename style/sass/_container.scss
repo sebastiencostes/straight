@@ -3,7 +3,9 @@
 @import "width";
 @mixin container-fix() {
   @include margin(0 auto);
-  @include width(1200px);
+  @include laptop () {
+    @include width(120rem);
+  }
 }
 .container-fix {
   @include container-fix();

@@ -12,6 +12,7 @@ theme
 html {
   font-size: calc(1em * 0.625);
   line-height: 1.15;
+  overflow: scroll;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -35,6 +36,11 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 ::-webkit-file-upload-button {
@@ -512,6 +518,16 @@ p {
   font-size: 1.4rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  .material-icons {
+    color: #eee;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .material-icons {
+    color: #222;
+  }
+}
 /*
 Percent
 */
@@ -12533,6 +12549,10 @@ Rem
 /*
 .btn
 */
+.btn-xs {
+  font-size: 1.6rem;
+}
+
 .btn-s {
   font-size: 2.4rem;
 }
@@ -12579,6 +12599,12 @@ Rem
 /*
 .btn-circle
 */
+.btn-circle-xs {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+}
+
 .btn-circle-s {
   width: 3.6rem;
   height: 3.6rem;
@@ -12756,6 +12782,16 @@ p {
   font-size: 1.4rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  .material-icons {
+    color: #eee;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .material-icons {
+    color: #222;
+  }
+}
 /*
 Percent
 */
@@ -32789,7 +32825,11 @@ Rem
 
 .container-fix {
   margin: 0 auto;
-  width: 1200px;
+}
+@media only screen and (min-width: 1400px) {
+  .container-fix {
+    width: 120rem;
+  }
 }
 
 /*
