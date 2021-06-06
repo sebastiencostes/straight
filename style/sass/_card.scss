@@ -1,0 +1,243 @@
+@import "border";
+@import "color";
+@import "font";
+@import "height";
+@import "image";
+@import "flexbox";
+@import "margin";
+@import "padding";
+@import "position";
+@import "utility";
+@import "width";
+@import "z-index";
+
+%card-shared {
+  @include d-flex();
+  @include height(100%);
+  @include position(relative);
+  @include f-dir-col();
+  background-clip: border-box;
+  overflow: hidden;
+  &%-h-shared {
+    @include f-dir-row-reverse();
+    @include flex-wrap(wrap);
+    & .card-header {
+      @include height(50%);
+      @include max-width(50%);
+      @include items-start();
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+      flex: 0 1 50%;
+    }
+    & .card-img-container {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+      flex: 0 1 50%;
+    }
+    & .card-footer {
+      @include items-end();
+      @include padding(1rem);
+      @include position(absolute);
+      @include height(50%);
+      @include width(50%);
+      bottom: 0;
+    }
+  }
+  &%-l-shared {
+    @include f-dir-row-reverse();
+    @include flex-wrap(wrap);
+    & .card-header {
+      @include align-items(center);
+      @include height(50%);
+      @include max-width(75%);
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 75%;
+      flex: 0 1 75%;
+    }
+    & .card-title {
+      @include font-size(1.6rem);
+    }
+    & .card-img-container {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
+      flex: 0 1 25%;
+    }
+    & .card-footer {
+      @include align-items(center);
+      @include height(50%);
+      @include padding(1rem);
+      @include position(absolute);
+      @include width(75%);
+      bottom: 0;
+    }
+  }
+}
+%card-img-shared {
+  @include width(100%);
+}
+%card-header-shared {
+  @include d-flex();
+  @include justify-between();
+  @include padding(1rem);
+  @include align-items(center);
+}
+%card-title-shared {
+  @include text-transform(capitalize);
+  @include font-size(2.4rem);
+  font-weight: 300;
+}
+%card-body-shared {
+  @include f-dir-col();
+  @include position(absolute);
+  @include height(100%);
+  @include padding(1rem 1rem 1rem);
+  @include width(100%);
+  @include z-index(1);
+  overflow-y: scroll;
+  right: 0;
+  top: 0;
+}
+%card-body-header-shared {
+  @include d-flex();
+  @include justify-between();
+  @include align-items(center);
+  @include padding-direction(bottom, 1rem);
+}
+%card-body-header-shared {
+  @include text-transform(capitalize);
+  @include font-size(2.4rem);
+  font-weight: 300;
+}
+%card-body-text-shared {
+  @include margin(1rem 0);
+}
+%card-body-footer-shared {
+  @include d-flex();
+  @include justify-between();
+  @include align-items(center);
+  @include margin-direction(top, auto);
+  @include padding-direction(top, 2rem);
+}
+%card-footer-shared {
+  @include d-flex();
+  @include justify-between();
+  @include align-items(center);
+  @include padding(1.5rem 1rem);
+}
+%card-info-text-shared {
+  @include font-size(1.6rem);
+  font-weight: 300;
+}
+%card-footer-cta-shared {
+  @include padding(0);
+}
+
+.card {
+  @extend %card-shared;
+  &-header {
+    @extend %card-header-shared;
+  }
+  &-img {
+    @extend %card-img-shared;
+  }
+  &-title {
+    @extend %card-title-shared;
+  }
+  &-body {
+    @extend %card-body-shared;
+    &-header {
+      @extend %card-body-header-shared;
+    }
+    &-text {
+      @extend %card-body-text-shared;
+    }
+    &-footer {
+      @extend %card-body-footer-shared;
+    }
+  }
+  &-footer {
+    @extend %card-footer-shared;
+    &-cta {
+      @extend %card-footer-cta-shared;
+    }
+  }
+  &-info-text {
+    @extend %card-info-text-shared;
+  }
+  &-h {
+    @extend %-h-shared;
+  }
+  &-l {
+    @extend %-l-shared;
+  }
+}
+
+/*
+Theme
+*/
+@include dark-theme {
+  .card {
+    background-color: $black-light;
+    &-header {
+      background-color: $black-medium;
+      color: $text-dark;
+      &-cta {
+        background-color: $black-ultra-light;
+      }
+    }
+    &-title {
+      color: $text-dark;
+    }
+    &-footer {
+      background-color: $black-light;
+      &-cta {
+        background-color: $transparent;
+        color: $text-dark;
+      }
+    }
+    &-body {
+      background-color: $black-light;
+      &-text {
+        color: $text-dark;
+      }
+      &-info-qty-cta {
+        background-color: $transparent;
+      }
+    }
+  }
+}
+
+@include light-theme {
+  .card {
+    background-color: $white-medium;
+    &-header {
+      background-color: $white-medium;
+      &-cta {
+        background-color: $white-ultra-light;
+        color: $text-light;
+      }
+    }
+    &-title {
+      color: $text-light;
+    }
+    &-body {
+      background-color: $white-light;
+      &-text {
+        color: $text-light;
+      }
+      &-info-qty-cta {
+        background-color: $transparent;
+      }
+    }
+    &-footer {
+      background-color: $white-light;
+      &-cta {
+        background-color: $transparent;
+        color: $text-light;
+      }
+    }
+    &-info-text {
+      color: $text-light;
+    }
+  }
+}

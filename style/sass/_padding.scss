@@ -1,0 +1,37 @@
+@mixin padding($value) {
+  padding: $value;
+}
+
+@for $i from 1 through 10 {
+  .p-#{$i} {
+    padding: #{$i}rem;
+  }
+}
+
+@for $i from 1 through 10 {
+  .p-t-#{$i} {
+    padding-top: #{$i}rem;
+  }
+}
+
+@for $i from 1 through 10 {
+  .p-b-#{$i} {
+    padding-bottom: #{$i}rem;
+  }
+}
+
+@for $i from 1 through 10 {
+  .p-l-#{$i} {
+    padding-left: #{$i}rem;
+  }
+}
+
+@for $i from 1 through 10 {
+  .p-r-#{$i} {
+    padding-right: #{$i}rem;
+  }
+}
+
+@mixin padding-direction($padding, $value) {
+  padding-#{$padding}: $value;
+}

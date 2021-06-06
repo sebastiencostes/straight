@@ -1,0 +1,9 @@
+@mixin z-index($value) {
+  z-index: $value;
+}
+
+@for $i from 1 through 100 {
+  .z-#{$i} {
+    z-index: #{$i}rem;
+  }
+}

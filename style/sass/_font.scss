@@ -1,0 +1,157 @@
+@import "color";
+
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2)
+      format("woff2"),
+    url(/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff)
+      format("woff"),
+    url(/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf)
+      format("truetype");
+}
+.material-icons {
+  font-size: 2.4rem; /* Preferred icon size */
+  display: block;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 {
+  font-size: 1.8rem;
+}
+.material-icons.md-24 {
+  font-size: 2.4rem;
+}
+.material-icons.md-36 {
+  font-size: 3.6rem;
+}
+.material-icons.md-48 {
+  font-size: 4.8rem;
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: $text-light;
+}
+.material-icons.md-dark.md-inactive {
+  color: rgba(34, 34, 34, 0.26);
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light {
+  color: $text-dark;
+}
+.material-icons.md-light.md-inactive {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+@mixin font-size($value) {
+  font-size: $value;
+}
+
+@mixin text-transform($value) {
+  text-transform: $value;
+}
+
+.t-capitalize {
+  @include text-transform(capitalize);
+}
+
+.t-lowercase {
+  @include text-transform(lowercase);
+}
+
+.t-uppercase {
+  @include text-transform(uppercase);
+}
+
+@mixin text-align($value) {
+  text-align: $value;
+}
+
+.t-center {
+  @include text-align(center);
+}
+
+.t-left {
+  @include text-align(left);
+}
+
+.t-right {
+  @include text-align(right);
+}
+
+.t-justify {
+  @include text-align(justify);
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.t-ellipsis {
+  @include text-ellipsis();
+}
+
+@mixin text-overlay() {
+  color: $white-ultra-light;
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 4px 6px black);
+  font-weight: 200;
+}
+
+.t-overlay {
+  @include text-overlay;
+}
+h1 {
+  font-size: 4.2rem;
+  line-height: 110%;
+}
+h2 {
+  font-size: 3.56rem;
+  line-height: 110%;
+}
+h3 {
+  font-size: 2.92rem;
+  line-height: 110%;
+}
+h4 {
+  font-size: 2.28rem;
+  line-height: 110%;
+}
+h5 {
+  font-size: 1.64rem;
+  line-height: 110%;
+}
+h6 {
+  font-size: 1.15rem;
+  line-height: 110%;
+}
+p {
+  font-size: 1.4rem;
+
+  //font-size: 1.4rem; mob
+  //1.45rem pad
+  //1.5rem  1200px
+  //1.6rem desktop
+
+//TODO//
+  //1.68rem
+  //2.2rem
+  //2.8rem
+  //3.4rem
+  //4rem
+  //4.5rem
+}
+
