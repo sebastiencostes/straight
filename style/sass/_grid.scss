@@ -1,4 +1,6 @@
 @import "flexbox";
+@import "device";
+
 @mixin d-grid {
   display: -ms-grid;
   display: grid;
@@ -12,50 +14,6 @@
 }
 .d-inline-grid {
   @include d-inline-grid();
-}
-
-/*
-grid-template-columns
-*/
-@mixin g-tmp-col($value) {
-  -ms-grid-columns: $value;
-  grid-template-columns: $value;
-}
-@mixin g-col-1() {
-  @include g-tmp-col(1fr);
-}
-@mixin g-col-2() {
-  @include g-tmp-col(1fr 1fr);
-}
-@mixin g-col-3() {
-  @include g-tmp-col(1fr 1fr 1fr);
-}
-@mixin g-col-4() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr);
-}
-@mixin g-col-5() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr 1fr);
-}
-@mixin g-col-6() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr 1fr 1fr);
-}
-@mixin g-col-7() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr 1fr 1fr 1fr);
-}
-@mixin g-col-8() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
-}
-@mixin g-col-9() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
-}
-@mixin g-col-10() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
-}
-@mixin g-col-11() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
-}
-@mixin g-col-12() {
-  @include g-tmp-col(1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr);
 }
 
 /*
@@ -73,117 +31,104 @@ row-gap
 @mixin row-gap($value) {
   row-gap: $value;
 }
-%g-container-shared {
+
+/*
+G-container
+*/
+@mixin g-container() {
   @include d-grid();
   @include g-col-gap(2rem);
   @include justify-content(center);
   @include row-gap(2rem);
 }
-%g-container-no-r-g-shared {
+
+.g-col {
+  @include g-container();
+}
+
+@mixin g-container-no-rg() {
   @include d-grid();
   @include justify-content(center);
   @include g-col-gap(0);
   @include row-gap(0);
 }
+
+@mixin g-container-no-row {
+  @include row-gap(0);
+}
+.g-no-row {
+  @include g-container-no-row();
+}
+@mixin g-container-no-col {
+  @include g-col-gap(0);
+}
+.g-no-col {
+  @include g-container-no-col();
+}
+
+@mixin g-container-no-r-g {
+  @include g-col-gap(0);
+  @include row-gap(0);
+}
+.g-no-row-col {
+  @include g-container-no-r-g();
+}
+
 /*
-g-container
+grid-template-columns
 */
-.g-1 {
-  @extend %g-container-shared;
-  @include g-col-1();
+@mixin g-tmp-col($value) {
+  grid-template-columns: $value;
 }
-.g-2 {
-  @extend %g-container-shared;
-  @include g-col-2();
+
+@for $i from 1 through 16 {
+  .g-col-#{$i} {
+    -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
+    grid-template-columns: (repeat(#{$i}, 1fr));
+  }
 }
-.g-3 {
-  @extend %g-container-shared;
-  @include g-col-3();
+
+@include phone {
+  @for $i from 1 through 16 {
+    .g-col-s-#{$i} {
+      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
 }
-.g-4 {
-  @extend %g-container-shared;
-  @include g-col-4();
+
+@include tablet-portrait {
+  @for $i from 1 through 16 {
+    .g-col-m-#{$i} {
+      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
 }
-.g-5 {
-  @extend %g-container-shared;
-  @include g-col-5();
+
+@include tablet-landscape {
+  @for $i from 1 through 16 {
+    .g-col-l-#{$i} {
+      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
 }
-.g-6 {
-  @extend %g-container-shared;
-  @include g-col-6();
+
+@include laptop {
+  @for $i from 1 through 16 {
+    .g-col-xl-#{$i} {
+      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
 }
-.g-7 {
-  @extend %g-container-shared;
-  @include g-col-7();
-}
-.g-8 {
-  @extend %g-container-shared;
-  @include g-col-8();
-}
-.g-9 {
-  @extend %g-container-shared;
-  @include g-col-9();
-}
-.g-10 {
-  @extend %g-container-shared;
-  @include g-col-10();
-}
-.g-11 {
-  @extend %g-container-shared;
-  @include g-col-11();
-}
-.g-12 {
-  @extend %g-container-shared;
-  @include g-col-12();
-}
-/*
-g-container-no-r-g
-*/
-.g-no-r-g-1 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-1();
-}
-.g-no-r-g-2 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-2();
-}
-.g-no-r-g-3 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-3();
-}
-.g-no-r-g-4 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-4();
-}
-.g-no-r-g-5 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-5();
-}
-.g-no-r-g-6 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-6();
-}
-.g-no-r-g-7 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-7();
-}
-.g-no-r-g-8 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-8();
-}
-.g-no-r-g-9 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-9();
-}
-.g-no-r-g-10 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-10();
-}
-.g-no-r-g-11 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-11();
-}
-.g-no-r-g-12 {
-  @extend %g-container-no-r-g-shared;
-  @include g-col-12();
+
+@include desktop {
+  @for $i from 1 through 16 {
+    .g-col-xxl-#{$i} {
+      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
 }

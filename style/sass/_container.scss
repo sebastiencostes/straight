@@ -2,7 +2,7 @@
 @import "margin";
 @import "width";
 @mixin container-fix() {
-  margin: 0 auto;
+  @include margin(0 auto);
   @include width(1200px);
 }
 .container-fix {
