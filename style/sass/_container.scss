@@ -1,0 +1,36 @@
+@import 'device';
+@mixin container-fix(){
+    margin: 0 auto;
+    width: 1200px; 
+}
+.container-fix {
+    @include container-fix()
+}
+//relative to screen device
+@mixin container-screen() {
+    @include tablet-portrait {
+        margin: 0 auto;
+        width: calc(100vw - 4rem);
+    }
+}
+.container-screen {
+    @include container-screen();
+}
+//relative to window
+@mixin container-window() {
+    @include tablet-portrait {
+        margin: 0 auto;
+        width: calc(100% - 4rem);
+    }
+}
+.container-window {
+    @include container-window();
+}
+
+//no-margin
+@mixin container-full() {
+    width: 100%;
+}
+.container-full {
+    @include container-full();
+}

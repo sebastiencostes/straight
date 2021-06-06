@@ -1,12 +1,284 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
     <title>Straight</title>
+    <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
+    <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
 </head>
+
 <body>
-    
+
+    <main class="container-screen">
+
+        <section id="cardContainer" class="g-container-1 m-t-2 m-b-2">
+
+            <div>
+                <button id="vGrid" class="btn-square-m  card-btn-gallery">
+                    <span class="material-icons md-36">
+                        crop_portrait
+                    </span>
+                </button>
+
+                <button id="hGrid" class="btn-square-m card-btn-gallery">
+                    <span class="material-icons md-36">
+                        crop_landscape
+                    </span>
+                </button>
+
+                <button id="lGrid" class="btn-square-m card-btn-gallery">
+                    <span class="material-icons md-36">
+                        list
+                    </span>
+                </button>
+            </div>
+
+            <!--CARD-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">vertical card</h3>
+                    <button class="card-header-cta btn-circle-s" data-number="1">
+                        <span class="material-icons">
+                            more_horiz
+                        </span>
+                    </button>
+                </header>
+                <picture class="card-img-container">
+                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
+                    <img class="card-img" src="/assets/img/card-img.jpg"
+                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                </picture>
+                <aside class="card-body d-none" data-number="1">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title"><a href="#">vertical card body</a></h4>
+                        <button class="card-header-cta btn-circle-s close" data-number="1">
+                            <span class="material-icons">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <p class="card-body-text t-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                    </p>
+                    <div class="card-body-footer">
+                        <div class="card-body-info-container">
+                            <sapn class="card-info-text">
+                                17.90€
+                            </sapn>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    remove
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-cta-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-info-container">
+                        <sapn class="card-info-text">
+                            17.90€
+                        </sapn>
+                    </div>
+                    <div class="card-cta-container">
+                        <button class="card-footer-cta">
+                            <span class="material-icons">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+            <!--CARD-H-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">horizontal card</h3>
+                    <button class="card-header-cta btn-circle-s" data-number="2">
+                        <span class="material-icons">
+                            more_horiz
+                        </span>
+                    </button>
+                </header>
+                <picture class="card-img-container">
+                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
+                    <img class="card-img" src="/assets/img/card-img.jpg"
+                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                </picture>
+                <aside class="card-body d-none" data-number="2">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title"><a href="#">horizontal card</a></h4>
+                        <button class="card-header-cta btn-circle-s close" data-number="2">
+                            <span class="material-icons">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <p class="card-body-text t-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                        pour l'inciter à cliquer sur l'article et à le lire.
+                    </p>
+                    <div class="card-body-footer">
+                        <div class="card-body-info-container">
+                            <sapn class="card-info-text">
+                                17.90€
+                            </sapn>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    remove
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-cta-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-info-container">
+                        <sapn class="card-info-text">
+                            17.90€
+                        </sapn>
+                    </div>
+                    <div class="card-cta-container">
+                        <button class="card-footer-cta">
+                            <span class="material-icons">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+            <!--CARD-L-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">list card</h3>
+                    <button class="card-header-cta btn-circle-s" data-number="3">
+                        <span class="material-icons">
+                            more_horiz
+                        </span>
+                    </button>
+                </header>
+                <picture class="card-img-container">
+                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
+                    <img class="card-img" src="/assets/img/card-img.jpg"
+                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                </picture>
+                <aside class="card-body d-none" data-number="3">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title"><a href="#">list card</a></h4>
+                        <button class="card-header-cta btn-circle-s close" data-number="3">
+                            <span class="material-icons">
+                                close
+                            </span>
+                        </button>
+                    </div>
+                    <!-- <p class="card-body-text t-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                    </p> -->
+                    <div class="card-body-footer">
+                        <div class="card-body-info-container">
+                            <sapn class="card-info-text">
+                                17.90€
+                            </sapn>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    remove
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons">
+                                    add
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-cta-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-info-container">
+                        <sapn class="card-info-text">
+                            17.90€
+                        </sapn>
+                    </div>
+                    <div class="card-cta-container">
+                        <button class="card-footer-cta">
+                            <span class="material-icons">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+        </section>
+
+    </main>
+    <footer>
+        footer
+    </footer>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+    <script src="script/main.js"></script>
 </body>
+
 </html>

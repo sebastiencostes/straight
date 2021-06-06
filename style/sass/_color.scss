@@ -1,0 +1,30 @@
+$black: black;
+$text-dark: #eee;
+$black-dark: #1a202c;
+$black-medium: #2d3848;
+$black-light: #3a4556;
+$black-ultra-light: #4a5567;
+$blue-dark: #436f70;
+$blue: #54bbb6;
+$white: white;
+$text-light: #222;
+$white-ultra-light: #fefefe;
+$white-light: #f7fafb;
+$white-medium: #e2e8f0;
+$white-dark: #cbd5df;
+$transparent: transparent;
+
+/*
+theme
+*/
+@mixin dark-theme {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
+@mixin light-theme {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
+}

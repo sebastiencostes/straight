@@ -1,0 +1,16 @@
+@import "color";
+@mixin border($type, $dim, $color) {
+  border: $type, $dim, $color;
+}
+
+@mixin no-border {
+  border: 0;
+}
+.no-b {
+  @include no-border;
+}
+
+@mixin b-radius($value) {
+  border-radius: $value;
+}
+

@@ -1,0 +1,6 @@
+@mixin d-none {
+  display: none;
+}
+.d-none {
+  @include d-none();
+}
