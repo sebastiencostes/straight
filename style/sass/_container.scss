@@ -1,36 +1,44 @@
-@import 'device';
-@mixin container-fix(){
-    margin: 0 auto;
-    width: 1200px; 
+@import "device";
+@import "margin";
+@import "width";
+@mixin container-fix() {
+  margin: 0 auto;
+  @include width(1200px);
 }
 .container-fix {
-    @include container-fix()
+  @include container-fix();
 }
-//relative to screen device
+/*
+relative to screen device
+*/
 @mixin container-screen() {
-    @include tablet-portrait {
-        margin: 0 auto;
-        width: calc(100vw - 4rem);
-    }
+  @include tablet-portrait {
+    @include margin(0 auto);
+    @include width(calc(100vw - 4rem));
+  }
 }
 .container-screen {
-    @include container-screen();
+  @include container-screen();
 }
-//relative to window
+/*
+relative to window
+*/
 @mixin container-window() {
-    @include tablet-portrait {
-        margin: 0 auto;
-        width: calc(100% - 4rem);
-    }
+  @include tablet-portrait {
+    @include margin(0 auto);
+    @include width(calc(100% - 4rem));
+  }
 }
 .container-window {
-    @include container-window();
+  @include container-window();
 }
 
-//no-margin
+/*
+no-margin
+*/
 @mixin container-full() {
-    width: 100%;
+  @include width(100%);
 }
 .container-full {
-    @include container-full();
+  @include container-full();
 }
