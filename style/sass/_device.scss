@@ -4,22 +4,22 @@ $laptop: 1440px;
 $desktop: 1920px;
 
 @mixin tablet-portrait {
-  @media screen and (min-width: $tablet-portrait) {
+  @media only screen and (min-width: $tablet-portrait) {
     @content;
   }
 }
 @mixin tablet-landscape {
-  @media screen and (min-width: $tablet-landscape) {
+  @media only screen and (min-width: $tablet-landscape) {
     @content;
   }
 }
 @mixin laptop {
-  @media screen and (min-width: $laptop) {
+  @media only screen and (min-width: $laptop) {
     @content;
   }
 }
-@mixin desktop {
-  @media screen and (min-width: $desktop) {
+@mixin  desktop {
+  @media only screen and (min-width: $desktop) {
     @content;
   }
 }

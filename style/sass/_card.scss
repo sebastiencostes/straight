@@ -1,14 +1,15 @@
 @import "border";
 @import "color";
 @import "font";
+@import "height";
+@import "image";
 @import "flexbox";
 @import "margin";
-@import "position";
-@import "image";
 @import "padding";
-@import "width";
-@import "height";
+@import "position";
 @import "utility";
+@import "width";
+@import "z-index";
 
 %card-shared {
   @include d-flex();
@@ -22,22 +23,24 @@
     @include flex-wrap(wrap);
     & .card-header {
       @include height(50%);
+      @include max-width(50%);
       @include items-start();
       -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
       flex: 0 1 50%;
-      max-width: 50%;
     }
     & .card-img-container {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
       flex: 0 1 50%;
     }
     & .card-footer {
       @include items-end();
       @include padding(1rem);
       @include position(absolute);
-      bottom: 0;
       @include height(50%);
-      width: 50%;
+      @include width(50%);
+      bottom: 0;
     }
   }
   &%-l-shared {
@@ -46,15 +49,17 @@
     & .card-header {
       @include align-items(center);
       @include height(50%);
+      @include max-width(75%);
       -webkit-box-flex: 0;
       -ms-flex: 0 1 75%;
       flex: 0 1 75%;
-      max-width: 75%;
     }
     & .card-title {
-      font-size: 1.6rem;
+      @include font-size(1.6rem);
     }
     & .card-img-container {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 25%;
       flex: 0 1 25%;
     }
     & .card-footer {
@@ -62,8 +67,8 @@
       @include height(50%);
       @include padding(1rem);
       @include position(absolute);
+      @include width(75%);
       bottom: 0;
-      width: 75%;
     }
   }
 }
@@ -78,8 +83,7 @@
 }
 %card-title-shared {
   @include text-transform(capitalize);
-  @include text-ellipsis();
-  font-size: 2.4rem;
+  @include font-size(2.4rem);
   font-weight: 300;
 }
 %card-body-shared {
@@ -88,10 +92,10 @@
   @include height(100%);
   @include padding(1rem 1rem 1rem);
   @include width(100%);
+  @include z-index(1);
   overflow-y: scroll;
   right: 0;
   top: 0;
-  z-index: 1;
 }
 %card-body-header-shared {
   @include d-flex();
@@ -101,7 +105,7 @@
 }
 %card-body-header-shared {
   @include text-transform(capitalize);
-  font-size: 2.4rem;
+  @include font-size(2.4rem);
   font-weight: 300;
 }
 %card-body-text-shared {
@@ -121,7 +125,7 @@
   @include padding(1.5rem 1rem);
 }
 %card-info-text-shared {
-  font-size: 1.6rem;
+  @include font-size(1.6rem);
   font-weight: 300;
 }
 %card-footer-cta-shared {
@@ -168,52 +172,72 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .card-footer,
-  .card-body {
+/*
+Theme
+*/
+@include dark-theme {
+  .card {
     background-color: $black-light;
-  }
-
-  .card-header-cta,
-  .card-footer-cta,
-  .card-title,
-  .card-body-text {
-    color: $text-dark;
-  }
-  .card-header {
-    background-color: $black-medium;
-  }
-  .card-header-cta {
-    background-color: $black-ultra-light;
-  }
-  .card-footer-cta,
-  .card-body-info-qty-cta {
-    background-color: $transparent;
+    &-header {
+      background-color: $black-medium;
+      color: $text-dark;
+      &-cta {
+        background-color: $black-ultra-light;
+      }
+    }
+    &-title {
+      color: $text-dark;
+    }
+    &-footer {
+      background-color: $black-light;
+      &-cta {
+        background-color: $transparent;
+        color: $text-dark;
+      }
+    }
+    &-body {
+      background-color: $black-light;
+      &-text {
+        color: $text-dark;
+      }
+      &-info-qty-cta {
+        background-color: $transparent;
+      }
+    }
   }
 }
 
-@media (prefers-color-scheme: light) {
-  .card,
-  .card-header {
+@include light-theme {
+  .card {
     background-color: $white-medium;
-  }
-  .card-body,
-  .card-footer {
-    background-color: $white-light;
-  }
-  .card-info-text,
-  .card-header-cta,
-  .card-footer-cta,
-  .card-title,
-  .card-body-text {
-    color: $text-light;
-  }
-  .card-header-cta {
-    background-color: $white-ultra-light;
-  }
-  .card-footer-cta,
-  .card-body-info-qty-cta {
-    background-color: $transparent;
+    &-header {
+      background-color: $white-medium;
+      &-cta {
+        background-color: $white-ultra-light;
+        color: $text-light;
+      }
+    }
+    &-title {
+      color: $text-light;
+    }
+    &-body {
+      background-color: $white-light;
+      &-text {
+        color: $text-light;
+      }
+      &-info-qty-cta {
+        background-color: $transparent;
+      }
+    }
+    &-footer {
+      background-color: $white-light;
+      &-cta {
+        background-color: $transparent;
+        color: $text-light;
+      }
+    }
+    &-info-text {
+      color: $text-light;
+    }
   }
 }

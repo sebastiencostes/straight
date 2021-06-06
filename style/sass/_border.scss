@@ -1,43 +1,12 @@
 @import "color";
-@mixin border() {
-  border: solid 1px $black;
-}
-.border {
-  @include border();
-}
-
-@mixin border-top {
-  border-top: solid 1px $black;
-}
-.border-top {
-  @include border-top;
-}
-
-@mixin border-right {
-  border-right: solid 1px $black;
-}
-.border-right {
-  @include border-right;
-}
-
-@mixin border-bottom {
-  border-bottom: solid 1px $black;
-}
-.border-bottom {
-  @include border-bottom;
-}
-
-@mixin border-left {
-  border-left: solid 1px $black;
-}
-.border-left {
-  @include border-left;
+@mixin border($type, $dim, $color) {
+  border: $type, $dim, $color;
 }
 
 @mixin no-border {
   border: 0;
 }
-.no-border {
+.no-b {
   @include no-border;
 }
 

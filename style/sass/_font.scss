@@ -34,7 +34,7 @@
 
 /* Rules for using icons as black on a light background. */
 .material-icons.md-dark {
-  color: text-light;
+  color: $text-light;
 }
 .material-icons.md-dark.md-inactive {
   color: rgba(34, 34, 34, 0.26);
@@ -56,15 +56,15 @@
   text-transform: $value;
 }
 
-.text-capitalize {
+.t-capitalize {
   @include text-transform(capitalize);
 }
 
-.text-lowercase {
+.t-lowercase {
   @include text-transform(lowercase);
 }
 
-.text-uppercase {
+.t-uppercase {
   @include text-transform(uppercase);
 }
 
@@ -72,19 +72,19 @@
   text-align: $value;
 }
 
-.text-center {
+.t-center {
   @include text-align(center);
 }
 
-.text-left {
+.t-left {
   @include text-align(left);
 }
 
-.text-right {
+.t-right {
   @include text-align(right);
 }
 
-.text-justify {
+.t-justify {
   @include text-align(justify);
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -100,18 +100,18 @@
   white-space: nowrap;
 }
 
-.text-ellipsis {
+.t-ellipsis {
   @include text-ellipsis();
 }
 
 @mixin text-overlay() {
-  color: $white;
+  color: $white-ultra-light;
   -webkit-filter: drop-shadow(2px 4px 6px black);
   filter: drop-shadow(2px 4px 6px black);
   font-weight: 200;
 }
 
-.text-overlay {
+.t-overlay {
   @include text-overlay;
 }
 h1 {

@@ -1,19 +1,37 @@
 @mixin margin($value) {
   margin: $value;
 }
+
 @for $i from 1 through 10 {
-    .margin-#{$i} {
+  .m-#{$i} {
     margin: #{$i}rem;
-    }
+  }
 }
-  
-@mixin margin-direction($margin, $value){
-    margin-#{$margin}: $value;
+
+@for $i from 1 through 10 {
+  .m-t-#{$i} {
+    margin-top: #{$i}rem;
   }
-  @for $i from 1 through 10 {
-    @each $margin in top, left, bottom, right {
-      .margin-#{$margin}-#{$i}{
-        @include margin-direction($margin, 1rem * $i) 
-      }
-    }
+}
+
+@for $i from 1 through 10 {
+  .m-b-#{$i} {
+    margin-bottom: #{$i}rem;
   }
+}
+
+@for $i from 1 through 10 {
+  .m-l-#{$i} {
+    margin-left: #{$i}rem;
+  }
+}
+
+@for $i from 1 through 10 {
+  .m-r-#{$i} {
+    margin-right: #{$i}rem;
+  }
+}
+
+@mixin margin-direction($margin, $value) {
+  margin-#{$margin}: $value;
+}

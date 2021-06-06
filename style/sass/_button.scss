@@ -107,15 +107,13 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  button,
-  .btn {
+  button {
     background-color: $black-medium;
   }
 }
 
 @media (prefers-color-scheme: light) {
-  button,
-  .btn {
+  button {
     background-color: $white-medium;
   }
 }

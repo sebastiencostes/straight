@@ -4,19 +4,9 @@ $black-dark: #1a202c;
 $black-medium: #2d3848;
 $black-light: #3a4556;
 $black-ultra-light: #4a5567;
-$link-dark: #436f70;
+$blue-dark: #436f70;
 $blue: #54bbb6;
-$gray: #8e918f;
-$orange: #f48037;
-$green: #009b74;
-$pink: #d23c77;
-$red: #bf1932;
-$taupe: #ad9f93;
-$turquoise: #45b5aa;
-$violet: #c180b5;
-$yellow: #ffc300;
-$link-light: #54bbb6;
-$white:white;
+$white: white;
 $text-light: #222;
 $white-ultra-light: #fefefe;
 $white-light: #f7fafb;
@@ -24,146 +14,17 @@ $white-medium: #e2e8f0;
 $white-dark: #cbd5df;
 $transparent: transparent;
 
-//OPEN black
-@mixin bg-black($bgColor) {
-  .bg-black {
-    background-color: $bgColor;
-  }
-  .black {
-    color: $bgColor;
-  }
+/*
+theme
+*/
+@mixin dark-theme {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
 }
-@include bg-black($black);
-//CLOSE black
 
-//OPEN blue
-@mixin bg-blue($bgColor) {
-  .bg-blue {
-    background-color: $bgColor;
-  }
-  .blue {
-    color: $bgColor;
-  }
+@mixin light-theme {
+    @media (prefers-color-scheme: light) {
+        @content;
+    }
 }
-@include bg-blue($blue);
-//CLOSE blue
-
-//OPEN gray
-@mixin bg-gray($bgColor) {
-  .bg-gray {
-    background-color: $bgColor;
-  }
-  .gray {
-    color: $bgColor;
-  }
-}
-@include bg-gray($gray);
-//CLOSE gray
-
-//OPEN orange
-@mixin bg-orange($bgColor) {
-  .bg-orange {
-    background-color: $bgColor;
-  }
-  .orange {
-    color: $bgColor;
-  }
-}
-@include bg-orange($orange);
-//CLOSE orange
-
-//OPEN green
-@mixin bg-green($bgColor) {
-  .bg-green {
-    background-color: $bgColor;
-  }
-  .green {
-    color: $bgColor;
-  }
-}
-@include bg-green($green);
-//CLOSE green
-
-//OPEN pink
-@mixin bg-pink($bgColor) {
-  .bg-pink {
-    background-color: $bgColor;
-  }
-  .pink {
-    color: $bgColor;
-  }
-}
-@include bg-pink($pink);
-//CLOSE pink
-
-//OPEN red
-@mixin bg-red($bgColor) {
-  .bg-red {
-    background-color: $bgColor;
-  }
-  .red {
-    color: $bgColor;
-  }
-}
-@include bg-red($red);
-//CLOSE red
-
-//OPEN taupe
-@mixin bg-taupe($bgColor) {
-  .bg-taupe {
-    background-color: $bgColor;
-  }
-  .taupe {
-    color: $bgColor;
-  }
-}
-@include bg-taupe($taupe);
-//CLOSE taupe
-
-//OPEN turquuoise
-@mixin bg-turquoise($bgColor) {
-  .bg-turquoise {
-    background-color: $bgColor;
-  }
-  .turquoise {
-    color: $bgColor;
-  }
-}
-@include bg-turquoise($turquoise);
-//CLOSE turquoise
-
-//OPEN violet
-@mixin bg-violet($bgColor) {
-  .bg-violet {
-    background-color: $bgColor;
-  }
-  .violet {
-    color: $bgColor;
-  }
-}
-@include bg-violet($violet);
-//CLOSE vilet
-
-//OPEN yellow
-@mixin bg-yellow($bgColor) {
-  .bg-yellow {
-    background-color: $bgColor;
-  }
-  .yellow {
-    color: $bgColor;
-  }
-}
-@include bg-yellow($yellow);
-//CLOSE yellow
-
-//OPEN white
-@mixin bg-white($bgColor) {
-  .bg-white {
-    background-color: $bgColor;
-  }
-  .white {
-    color: $bgColor;
-  }
-}
-@include bg-white($white);
-//CLOSE white
