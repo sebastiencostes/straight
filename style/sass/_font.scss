@@ -120,31 +120,34 @@
 }
 h1 {
   font-size: clamp(4.1rem, 3.7193rem + 1.3596vw, 7.2rem);
-  line-height: 110%;
 }
 h2 {
   font-size: clamp(3.4rem, 3.0193rem + 1.3596vw, 6.5rem);
-  line-height: 110%;
 }
 h3 {
   font-size: clamp(2.8rem, 2.4193rem + 1.3596vw, 5.9rem);
-  line-height: 110%;
 }
 h4 {
   font-size: clamp(2.4rem, 2.0193rem + 1.3596vw, 5.5rem);
-  line-height: 110%;
 }
 h5 {
   font-size: clamp(2.2rem, 1.8193rem + 1.3596vw, 5.3rem);
-  line-height: 110%;
 }
 h6 {
   font-size: clamp(1.8rem, 1.4193rem + 1.3596vw, 4.9rem);
-  line-height: 110%;
 }
 p,
 span {
   font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
+}
+h1,
+h2,
+h3,
+h4,
+H5,
+h6 {
+  cursor: default;
+  line-height: 110%;
 }
 
 @include c.dark-theme {

@@ -187,9 +187,6 @@ Theme
     &-header {
       background-color: c.$black-medium;
       color: c.$text-dark;
-      &-cta {
-        background-color: c.$black-ultra-light;
-      }
     }
     &-title {
       color: c.$text-dark;
@@ -210,6 +207,9 @@ Theme
         background-color: c.$transparent;
       }
     }
+    .close {
+      background-color: c.$transparent;
+    }
   }
 }
 
@@ -219,7 +219,6 @@ Theme
     &-header {
       background-color: c.$white-medium;
       &-cta {
-        background-color: c.$white-ultra-light;
         color: c.$text-light;
       }
     }
@@ -244,6 +243,9 @@ Theme
     }
     &-info-text {
       color: c.$text-light;
+    }
+    .close {
+      background-color: c.$transparent;
     }
   }
 }
