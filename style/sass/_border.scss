@@ -14,3 +14,6 @@
   border-radius: $value;
 }
 
+.circle {
+  @include b-radius(50%);
+}

@@ -1,38 +1,38 @@
-@import "border";
-@import "color";
-@import "font";
-@import "height";
-@import "width";
+@use "border" as b;
+@use "font" as f;
+@use "color" as c;
+@use "height" as h;
+@use "width" as w;
 /*
 .btn
 */
 @mixin btn-xs {
-  @include font-size(1.6rem);
+  @include f.font-size(1.6rem);
 }
 .btn-xs {
   @include btn-xs();
 }
 @mixin btn-s {
-  @include font-size(2.4rem);
+  @include f.font-size(2.4rem);
 }
 .btn-s {
   @include btn-s();
 }
 @mixin btn-m {
-  @include font-size(3.6rem);
+  @include f.font-size(3.6rem);
 }
 .btn-m {
   @include btn-m();
 }
 @mixin btn-l {
-  @include font-size(4.8rem);
+  @include f.font-size(4.8rem);
 }
 .btn-l {
   @include btn-l();
 }
 
 @mixin btn-xl {
-  @include font-size(6rem);
+  @include f.font-size(6rem);
 }
 .btn-xl {
   @include btn-xl();
@@ -41,35 +41,43 @@
 /*
 .btn-square
 */
+@mixin btn-square-xs {
+  @include w.width(2.6rem);
+  @include h.height(2.6rem);
+  @include f.font-size(2.6rem);
+}
+.btn-square-xs {
+  @include btn-square-xs();
+}
 @mixin btn-square-s {
-  @include width(3.6rem);
-  @include height(3.6rem);
-  @include font-size(3.6rem);
+  @include w.width(3.6rem);
+  @include h.height(3.6rem);
+  @include f.font-size(3.6rem);
 }
 .btn-square-s {
   @include btn-square-s();
 }
 @mixin btn-square-m {
-  @include width(4.8rem);
-  @include height(4.8rem);
-  @include font-size(3.6rem);
+  @include w.width(4.8rem);
+  @include h.height(4.8rem);
+  @include f.font-size(3.6rem);
 }
 .btn-square-m {
   @include btn-square-m();
 }
 @mixin btn-square-l {
-  @include width(6rem);
-  @include height(6rem);
-  @include font-size(4.8rem);
+  @include w.width(6rem);
+  @include h.height(6rem);
+  @include f.font-size(4.8rem);
 }
 .btn-square-l {
   @include btn-square-l();
 }
 
 @mixin btn-square-xl {
-  @include width(7.2rem);
-  @include height(7.2rem);
-  @include font-size(6rem);
+  @include w.width(7.2rem);
+  @include h.height(7.2rem);
+  @include f.font-size(6rem);
 }
 .btn-square-xl {
   @include btn-square-xl();
@@ -78,43 +86,49 @@
 /*
 .btn-circle
 */
+@mixin btn-circle {
+  @include b.b-radius(50%);
+}
+.btn-circle {
+  @include btn-circle();
+}
 @mixin btn-circle-xs {
-  @include width(2.4rem);
-  @include height(2.4rem);
-  @include b-radius(50%);
+  @include w.width(2.6rem);
+  @include h.height(2.6rem);
+  @include b.b-radius(50%);
 }
 .btn-circle-xs {
   @include btn-circle-xs();
 }
 @mixin btn-circle-s {
-  @include width(3.6rem);
-  @include height(3.6rem);
-  @include b-radius(50%);
+  @include w.width(3.6rem);
+  @include h.height(3.6rem);
+  @include b.b-radius(50%);
 }
 .btn-circle-s {
   @include btn-circle-s();
 }
 @mixin btn-circle-m {
-  @include width(4.8rem);
-  @include height(4.8rem);
-  @include b-radius(50%);
+  @include w.width(4.8rem);
+  @include h.height(4.8rem);
+  @include b.b-radius(50%);
 }
 .btn-circle-m {
   @include btn-circle-m();
 }
 @mixin btn-circle-l {
-  @include width(6rem);
-  @include height(6rem);
-  @include b-radius(50%);
+  @include w.width(6rem);
+  @include h.height(6rem);
+  @include b.b-radius(50%);
 }
 .btn-circle-l {
   @include btn-circle-l();
 }
 
 @mixin btn-circle-xl {
-  @include width(7.2rem);
-  @include height(7.2rem);
-  @include b-radius(50%);
+  @include w.width(7.2rem);
+  @include h.height(7.2rem);
+  @include b.b-radius(50%);
 }
 .btn-circle-xl {
   @include btn-circle-xl();
@@ -122,12 +136,12 @@
 
 @media (prefers-color-scheme: dark) {
   button {
-    background-color: $black-medium;
+    background-color: c.$black-medium;
   }
 }
 
 @media (prefers-color-scheme: light) {
   button {
-    background-color: $white-medium;
+    background-color: c.$white-medium;
   }
 }

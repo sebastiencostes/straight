@@ -1,33 +1,34 @@
-@import "border";
-@import "color";
-@import "font";
-@import "height";
-@import "image";
-@import "flexbox";
-@import "margin";
-@import "padding";
-@import "position";
-@import "utility";
-@import "width";
-@import "z-index";
+@use "font" as f;
+@use "color" as c;
+@use "height" as h;
+@use "flexbox" as fx;
+@use "margin" as m;
+@use "padding" as p;
+@use "position" as pos;
+@use "utility" as u;
+@use "width" as w;
+@use "z-index" as z;
 
 %card-shared {
-  @include d-flex();
-  @include height(100%);
-  @include position(relative);
-  @include f-dir-col();
+  @include fx.d-flex();
+  @include h.height(100%);
+  @include pos.position(relative);
+  @include fx.f-dir-col();
   background-clip: border-box;
   overflow: hidden;
   &%-h-shared {
-    @include f-dir-row-reverse();
-    @include flex-wrap(wrap);
+    @include fx.f-dir-row-reverse();
+    @include fx.flex-wrap(wrap);
     & .card-header {
-      @include height(50%);
-      @include max-width(50%);
-      @include items-start();
+      @include h.height(50%);
+      @include w.max-width(50%);
+      @include fx.items-start();
       -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
       flex: 0 1 50%;
+    }
+    & .card-title {
+      font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
     }
     & .card-img-container {
       -webkit-box-flex: 0;
@@ -35,27 +36,27 @@
       flex: 0 1 50%;
     }
     & .card-footer {
-      @include items-end();
-      @include padding(1rem);
-      @include position(absolute);
-      @include height(50%);
-      @include width(50%);
+      @include fx.items-end();
+      @include p.padding(1rem);
+      @include pos.position(absolute);
+      @include h.height(50%);
+      @include w.width(50%);
       bottom: 0;
     }
   }
   &%-l-shared {
-    @include f-dir-row-reverse();
-    @include flex-wrap(wrap);
+    @include fx.f-dir-row-reverse();
+    @include fx.flex-wrap(wrap);
     & .card-header {
-      @include align-items(center);
-      @include height(50%);
-      @include max-width(75%);
+      @include fx.align-items(center);
+      @include h.height(50%);
+      @include w.max-width(75%);
       -webkit-box-flex: 0;
       -ms-flex: 0 1 75%;
       flex: 0 1 75%;
     }
     & .card-title {
-      @include font-size(1.6rem);
+      font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
     }
     & .card-img-container {
       -webkit-box-flex: 0;
@@ -63,73 +64,75 @@
       flex: 0 1 25%;
     }
     & .card-footer {
-      @include align-items(center);
-      @include height(50%);
-      @include padding(1rem);
-      @include position(absolute);
-      @include width(75%);
+      @include fx.align-items(center);
+      @include h.height(50%);
+      @include p.padding(1rem);
+      @include pos.position(absolute);
+      @include w.width(75%);
       bottom: 0;
     }
   }
 }
 %card-img-shared {
-  @include width(100%);
+  @include w.width(100%);
 }
 %card-header-shared {
-  @include d-flex();
-  @include justify-between();
-  @include padding(1rem);
-  @include align-items(center);
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include p.padding(1rem);
+  @include fx.align-items(center);
 }
 %card-title-shared {
-  @include text-transform(capitalize);
-  @include font-size(2.4rem);
-  font-weight: 300;
+  font-size: clamp(2.4rem, 2.3263rem + 0.2632vw, 3rem);
+  &::first-letter {
+    @include f.text-transform(capitalize);
+  }
 }
 %card-body-shared {
-  @include f-dir-col();
-  @include position(absolute);
-  @include height(100%);
-  @include padding(1rem 1rem 1rem);
-  @include width(100%);
-  @include z-index(1);
+  @include fx.f-dir-col();
+  @include pos.position(absolute);
+  @include h.height(100%);
+  @include p.padding(1rem 2rem 1rem);
+  @include w.width(100%);
+  @include z.z-index(1);
   overflow-y: scroll;
   right: 0;
   top: 0;
 }
 %card-body-header-shared {
-  @include d-flex();
-  @include justify-between();
-  @include align-items(center);
-  @include padding-direction(bottom, 1rem);
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include fx.items-start();
 }
-%card-body-header-shared {
-  @include text-transform(capitalize);
-  @include font-size(2.4rem);
-  font-weight: 300;
+%card-body-title-shared {
+  font-size: clamp(2.4rem, 2.3263rem + 0.2632vw, 3rem);
+  &::first-letter {
+    @include f.text-transform(capitalize);
+  }
 }
 %card-body-text-shared {
-  @include margin(1rem 0);
+  @include m.margin(1rem 0);
+  &::first-letter {
+    @include f.text-transform(capitalize);
+  }
 }
 %card-body-footer-shared {
-  @include d-flex();
-  @include justify-between();
-  @include align-items(center);
-  @include margin-direction(top, auto);
-  @include padding-direction(top, 2rem);
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include fx.align-items(center);
+  @include m.margin-direction(top, auto);
 }
 %card-footer-shared {
-  @include d-flex();
-  @include justify-between();
-  @include align-items(center);
-  @include padding(1.5rem 1rem);
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include fx.align-items(center);
+  @include p.padding(1rem);
 }
 %card-info-text-shared {
-  @include font-size(1.6rem);
-  font-weight: 300;
+  cursor: default;
 }
 %card-footer-cta-shared {
-  @include padding(0);
+  @include p.padding(0);
 }
 
 .card {
@@ -147,6 +150,9 @@
     @extend %card-body-shared;
     &-header {
       @extend %card-body-header-shared;
+    }
+    &-title {
+      @extend %card-body-title-shared;
     }
     &-text {
       @extend %card-body-text-shared;
@@ -175,69 +181,69 @@
 /*
 Theme
 */
-@include dark-theme {
+@include c.dark-theme {
   .card {
-    background-color: $black-light;
+    background-color: c.$black-light;
     &-header {
-      background-color: $black-medium;
-      color: $text-dark;
+      background-color: c.$black-medium;
+      color: c.$text-dark;
       &-cta {
-        background-color: $black-ultra-light;
+        background-color: c.$black-ultra-light;
       }
     }
     &-title {
-      color: $text-dark;
+      color: c.$text-dark;
     }
     &-footer {
-      background-color: $black-light;
+      background-color: c.$black-light;
       &-cta {
-        background-color: $transparent;
-        color: $text-dark;
+        background-color: c.$transparent;
+        color: c.$text-dark;
       }
     }
     &-body {
-      background-color: $black-light;
+      background-color: c.$black-light;
       &-text {
-        color: $text-dark;
+        color: c.$text-dark;
       }
       &-info-qty-cta {
-        background-color: $transparent;
+        background-color: c.$transparent;
       }
     }
   }
 }
 
-@include light-theme {
+@include c.light-theme {
   .card {
-    background-color: $white-medium;
+    background-color: c.$white-medium;
     &-header {
-      background-color: $white-medium;
+      background-color: c.$white-medium;
       &-cta {
-        background-color: $white-ultra-light;
-        color: $text-light;
+        background-color: c.$white-ultra-light;
+        color: c.$text-light;
       }
     }
     &-title {
-      color: $text-light;
+      color: c.$text-light;
     }
     &-body {
-      background-color: $white-light;
+      background-color: c.$white-light;
       &-text {
-        color: $text-light;
+        color: c.$text-light;
       }
       &-info-qty-cta {
-        background-color: $transparent;
+        background-color: c.$transparent;
       }
     }
     &-footer {
-      background-color: $white-light;
+      background-color: c.$white-light;
       &-cta {
-        background-color: $transparent;
-        color: $text-light;
+        background-color: c.$transparent;
+        color: c.$text-light;
       }
     }
     &-info-text {
-      color: $text-light;
+      color: c.$text-light;
     }
   }
 }

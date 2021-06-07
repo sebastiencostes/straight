@@ -1,10 +1,11 @@
-@import "device";
-@import "margin";
-@import "width";
+@use "device" as d;
+@use "margin" as m;
+@use "width" as w;
+
 @mixin container-fix() {
-  @include margin(0 auto);
-  @include laptop () {
-    @include width(120rem);
+  @include m.margin(0 auto);
+  @include d.laptop () {
+    @include w.width(120rem);
   }
 }
 .container-fix {
@@ -14,9 +15,9 @@
 relative to screen device
 */
 @mixin container-screen() {
-  @include tablet-portrait {
-    @include margin(0 auto);
-    @include width(calc(100vw - 4rem));
+  @include d.tablet-portrait {
+    @include m.margin(0 auto);
+    @include w.width(calc(100vw - 4rem));
   }
 }
 .container-screen {
@@ -26,9 +27,9 @@ relative to screen device
 relative to window
 */
 @mixin container-window() {
-  @include tablet-portrait {
-    @include margin(0 auto);
-    @include width(calc(100% - 4rem));
+  @include d.tablet-portrait {
+    @include m.margin(0 auto);
+    @include w.width(calc(100% - 4rem));
   }
 }
 .container-window {
@@ -39,7 +40,7 @@ relative to window
 no-margin
 */
 @mixin container-full() {
-  @include width(100%);
+  @include w.width(100%);
 }
 .container-full {
   @include container-full();

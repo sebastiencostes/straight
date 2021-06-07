@@ -1,4 +1,4 @@
-@import "color";
+@use "color" as c;
 *,
 ::before,
 ::after {
@@ -70,13 +70,13 @@ strong,
 summary,
 button,
 mark,
-p,
 small,
 address,
 blockquote,
 cite,
 a,
 details,
+span,
 summary,
 input,
 code,
@@ -84,6 +84,10 @@ pre,
 samp {
   font-weight: 400;
   margin: 0;
+}
+
+p {
+  font-weight: 300;
 }
 
 b,
@@ -340,10 +344,10 @@ ul {
   color-scheme: light dark;
 }
 
-@include dark-theme {
+@include c.dark-theme {
   body {
-    color: $text-dark;
-    background: $black-dark;
+    color: c.$text-dark;
+    background: c.$black-dark;
   }
   img {
     -webkit-filter: brightness(0.8) contrast(1.2);
@@ -351,18 +355,18 @@ ul {
   }
   a,
   nav ul li {
-    color: $blue;
+    color: c.$blue;
   }
 }
 
-@include light-theme {
+@include c.light-theme {
   body {
-    color: $text-light;
-    background: $white-dark;
+    color: c.$text-light;
+    background: c.$white-dark;
   }
   a,
   nav ul li {
-    color: $blue;
+    color: c.$blue;
   }
 }
 

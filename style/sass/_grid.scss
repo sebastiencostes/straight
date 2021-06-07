@@ -1,5 +1,5 @@
-@import "flexbox";
-@import "device";
+@use "flexbox" as f;
+@use "device" as d;
 
 @mixin d-grid {
   display: -ms-grid;
@@ -38,7 +38,7 @@ G-container
 @mixin g-container() {
   @include d-grid();
   @include g-col-gap(2rem);
-  @include justify-content(center);
+  @include f.justify-content(center);
   @include row-gap(2rem);
 }
 
@@ -48,7 +48,7 @@ G-container
 
 @mixin g-container-no-rg() {
   @include d-grid();
-  @include justify-content(center);
+  @include f.justify-content(center);
   @include g-col-gap(0);
   @include row-gap(0);
 }
@@ -88,7 +88,7 @@ grid-template-columns
   }
 }
 
-@include phone {
+@include d.phone {
   @for $i from 1 through 16 {
     .g-col-s-#{$i} {
       -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
@@ -97,7 +97,7 @@ grid-template-columns
   }
 }
 
-@include tablet-portrait {
+@include d.tablet-portrait {
   @for $i from 1 through 16 {
     .g-col-m-#{$i} {
       -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
@@ -106,7 +106,7 @@ grid-template-columns
   }
 }
 
-@include tablet-landscape {
+@include d.tablet-landscape {
   @for $i from 1 through 16 {
     .g-col-l-#{$i} {
       -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
@@ -115,7 +115,7 @@ grid-template-columns
   }
 }
 
-@include laptop {
+@include d.laptop {
   @for $i from 1 through 16 {
     .g-col-xl-#{$i} {
       -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
@@ -124,7 +124,7 @@ grid-template-columns
   }
 }
 
-@include desktop {
+@include d.desktop {
   @for $i from 1 through 16 {
     .g-col-xxl-#{$i} {
       -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
