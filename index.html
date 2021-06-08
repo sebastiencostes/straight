@@ -36,33 +36,159 @@
             </p>
         </article>
 
-        <div class="t-right">
-            <button id="vGrid" class="btn-square-m  card-btn-gallery m-r-2">
+        <article>
+            <!--CIRCLE-->
+            <button class="btn btn-circle-xs">
+                <span class="material-icons md-12">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-circle-s">
+                <span class="material-icons">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-circle-m">
                 <span class="material-icons md-36">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-circle-l">
+                <span class="material-icons md-48">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-circle-xl">
+                <span class="material-icons md-60">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn circle-hover btn-circle-xxl">
+                <span class="material-icons md-78">
+                    more_horizontal
+                </span>
+            </button>
+
+            <!--SQUARE-->
+
+            <button class="btn btn-square-xs">
+                <span class="material-icons md-12">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-square-s">
+                <span class="material-icons">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-square-m">
+                <span class="material-icons md-36">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-square-l">
+                <span class="material-icons md-48">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-square-xl">
+                <span class="material-icons md-60">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn square-hover btn-square-xxl">
+                <span class="material-icons md-78">
+                    more_horizontal
+                </span>
+            </button>
+
+            <!--BTN-->
+
+            <button class="btn-xs">
+                button
+            </button>
+
+            <button class="btn-s">
+                button
+            </button>
+
+            <button class="btn-m">
+                button
+            </button>
+
+            <button class="btn-l">
+                button
+            </button>
+
+            <button class="btn-xl">
+                button
+            </button>
+
+            <button class="btn-xxl">
+                button
+            </button>
+        </article>
+
+        <div class="t-right">
+            <button id="vGrid" class="btn-square-s  card-btn-gallery m-r-2">
+                <span class="material-icons">
                     crop_portrait
                 </span>
             </button>
 
-            <button id="hGrid" class="btn-square-m card-btn-gallery">
-                <span class="material-icons md-36">
+            <button id="hGrid" class="btn-square-s card-btn-gallery">
+                <span class="material-icons">
                     crop_5_4
                 </span>
             </button>
 
-            <button id="lGrid" class="btn-square-m card-btn-gallery m-l-2">
-                <span class="material-icons md-36">
+            <button id="lGrid" class="btn-square-s card-btn-gallery m-l-2">
+                <span class="material-icons">
                     crop_7_5
                 </span>
             </button>
         </div>
         <section id="cardContainer" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
+
+
+            <!--CARD SIMPLE-->
+            <article class="card">
+                <figure class="card-img-container">
+                    <picture>
+                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
+                    <img class="card-img" src="/assets/img/card-img.jpg"
+                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                    </picture>
+                    <figcaption class="card-header">
+                        <h3 class="card-title t-ellipsis">simple card</h3>
+                    </figcaption>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-info-container">
+                        <span class="card-info-text">
+                            A simple text to resume your picture
+                        </span>
+                    </div>
+                </footer>
+            </article>
+
             <!--CARD-->
             <article class="card">
                 <header class="card-header">
                     <h3 class="card-title t-ellipsis">Bowl de patates douces, chou kale & riz vinaigré</h3>
-                    <button class="card-header-cta" data-number="1">
+                    <button class="card-header-cta btn-circle-s" data-card="1">
                         <span class="material-icons">
-                            more
+                            more_horizontal
                         </span>
                     </button>
                 </header>
@@ -73,28 +199,29 @@
                             alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                     </picture>
                 </a>
-                <aside class="card-body d-none" data-number="1">
+                <aside class="card-body d-none" data-card="1">
+                    <button class="card-header-cta close t-right btn-circle-s m-l-auto" data-card="1">
+                        <span class="material-icons md-36">
+                            cancel
+                        </span>
+                    </button>
                     <div class="card-body-header">
                         <h4 class="card-body-title"><a href="#">Bowl de patates douces, chou kale & riz vinaigré</a>
                         </h4>
-                        <button class="card-header-cta close" data-number="1">
-                            <span class="material-icons">
-                                cancel
-                            </span>
-                        </button>
                     </div>
+                    <ul class="card-body-text">
+                        <li>fdfgdfxfgd</li>
+                        <li>dfgdfgdf</li>
+                        <li>dffgdfgf</li>
+                    </ul>
                     <p class="card-body-text t-justify">
                         Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
                         pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
                     </p>
-                    <p class="card-body-text t-justify">
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                    </p>
+                    <details class="m-b-2">
+                        <summary>details</summary>
+                        ,g,hk,hfghm,ghù,lfh,ùgkh,kfdhh,fd
+                    </details>
                     <div class="card-body-footer">
                         <div class="card-body-info-container">
                             <span class="card-info-text">
@@ -111,12 +238,12 @@
                             <button class="card-body-info-qty-cta">
                                 <span class="material-icons">
                                     add_circle
-                                    </span>
+                                </span>
                             </button>
                         </div>
                         <div class="card-body-cta-container">
                             <button class="card-footer-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     shopping_cart
                                 </span>
                             </button>
@@ -131,7 +258,7 @@
                     </div>
                     <div class="card-cta-container">
                         <button class="card-footer-cta">
-                            <span class="material-icons">
+                            <span class="material-icons md-36">
                                 shopping_cart
                             </span>
                         </button>
@@ -143,9 +270,9 @@
             <article class="card">
                 <header class="card-header">
                     <h3 class="card-title t-ellipsis">horizontal card</h3>
-                    <button class="card-header-cta" data-number="2">
+                    <button class="card-header-cta btn-circle-s" data-card="2">
                         <span class="material-icons">
-                            more
+                            more_horizontal
                         </span>
                     </button>
                 </header>
@@ -156,25 +283,29 @@
                             alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                     </picture>
                 </a>
-                <aside class="card-body d-none" data-number="2">
+                <aside class="card-body d-none" data-card="2">
+                    <button class="card-header-cta close t-right" data-card="2">
+                        <span class="material-icons">
+                            cancel
+                        </span>
+                    </button>
                     <div class="card-body-header">
                         <h4 class="card-body-title"><a href="#">horizontal card</a></h4>
-                        <button class="card-header-cta close" data-number="2">
-                            <span class="material-icons">
-                                cancel
-                            </span>
-                        </button>
                     </div>
+                    <ul class="card-body-text">
+                        <li>fdfgdfxfgd</li>
+                        <li>dfgdfgdf</li>
+                        <li>dffgdfgf</li>
+                    </ul>
                     <p class="card-body-text t-justify">
                         Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
                         pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
                     </p>
+
+                    <details class="m-b-2">
+                        <summary>details</summary>
+                        ,g,hk,hfghm,ghù,lfh,ùgkh,kfdhh,fd
+                    </details>
                     <div class="card-body-footer">
                         <div class="card-body-info-container">
                             <span class="card-info-text">
@@ -191,7 +322,7 @@
                             <button class="card-body-info-qty-cta">
                                 <span class="material-icons">
                                     add_circle
-                                    </span>
+                                </span>
                             </button>
                         </div>
                         <div class="card-body-cta-container">
@@ -211,7 +342,7 @@
                     </div>
                     <div class="card-cta-container">
                         <button class="card-footer-cta">
-                            <span class="material-icons">
+                            <span class="material-icons md-36">
                                 shopping_cart
                             </span>
                         </button>
@@ -223,9 +354,9 @@
             <article class="card">
                 <header class="card-header">
                     <h3 class="card-title t-ellipsis">list card</h3>
-                    <button class="card-header-cta" data-number="3">
+                    <button class="card-header-cta btn-circle-s" data-card="3">
                         <span class="material-icons">
-                            more
+                            more_horizontal
                         </span>
                     </button>
                 </header>
@@ -236,14 +367,15 @@
                             alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                     </picture>
                 </a>
-                <aside class="card-body d-none" data-number="3">
+                <aside class="card-body d-none" data-card="3">
+                    <button class="card-header-cta close t-right" data-card="3">
+                        <span class="material-icons">
+                            cancel
+                        </span>
+                    </button>
                     <div class="card-body-header">
                         <h4 class="card-body-title"><a href="#">list card</a></h4>
-                        <button class="card-header-cta close" data-number="3">
-                            <span class="material-icons">
-                                cancel
-                            </span>
-                        </button>
+
                     </div>
                     <!-- <p class="card-body-text t-justify">
                         Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
@@ -267,7 +399,7 @@
                             <button class="card-body-info-qty-cta">
                                 <span class="material-icons">
                                     add_circle
-                                    </span>
+                                </span>
                             </button>
                         </div>
                         <div class="card-body-cta-container">
@@ -287,7 +419,7 @@
                     </div>
                     <div class="card-cta-container">
                         <button class="card-footer-cta">
-                            <span class="material-icons">
+                            <span class="material-icons md-36">
                                 shopping_cart
                             </span>
                         </button>

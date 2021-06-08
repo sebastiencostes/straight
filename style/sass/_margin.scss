@@ -35,3 +35,16 @@
 @mixin margin-direction($margin, $value) {
   margin-#{$margin}: $value;
 }
+
+.m-l-auto {
+  @include margin-direction(left, auto);
+}
+.m-r-auto {
+  @include margin-direction(right, auto);
+}
+.m-t-auto {
+  @include margin-direction(top, auto);
+}
+.m-b-auto {
+  @include margin-direction(bottom, auto);
+}

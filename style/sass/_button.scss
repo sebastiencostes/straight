@@ -1,41 +1,54 @@
 @use "border" as b;
 @use "font" as f;
 @use "color" as c;
+@use "padding" as p;
 @use "height" as h;
 @use "width" as w;
+@use "transition" as t;
 /*
 .btn
 */
 @mixin btn-xs {
-  @include f.font-size(1.6rem);
+  @include f.font-size(1.35rem);
+  @include p.padding(1rem);
 }
 .btn-xs {
   @include btn-xs();
 }
 @mixin btn-s {
   @include f.font-size(2.4rem);
+  @include p.padding(1rem);
 }
 .btn-s {
   @include btn-s();
 }
 @mixin btn-m {
   @include f.font-size(3.6rem);
+  @include p.padding(1rem);
 }
 .btn-m {
   @include btn-m();
 }
 @mixin btn-l {
   @include f.font-size(4.8rem);
+   @include p.padding(1rem);
 }
 .btn-l {
   @include btn-l();
 }
-
 @mixin btn-xl {
   @include f.font-size(6rem);
+  @include p.padding(1rem);
 }
 .btn-xl {
   @include btn-xl();
+}
+@mixin btn-xxl {
+  @include f.font-size(7.2rem);
+  @include p.padding(0 1.75rem 1rem 1.75rem);
+}
+.btn-xxl {
+  @include btn-xxl();
 }
 
 /*
@@ -82,16 +95,18 @@
 .btn-square-xl {
   @include btn-square-xl();
 }
+@mixin btn-square-xxl {
+  @include w.width(8.4rem);
+  @include h.height(8.4rem);
+  @include f.font-size(7.2rem);
+}
+.btn-square-xxl {
+  @include btn-square-xxl();
+}
 
 /*
 .btn-circle
 */
-@mixin btn-circle {
-  @include b.b-radius(50%);
-}
-.btn-circle {
-  @include btn-circle();
-}
 @mixin btn-circle-xs {
   @include w.width(2.6rem);
   @include h.height(2.6rem);
@@ -133,15 +148,23 @@
 .btn-circle-xl {
   @include btn-circle-xl();
 }
+@mixin btn-circle-xxl {
+  @include w.width(8.4rem);
+  @include h.height(8.4rem);
+  @include b.b-radius(50%);
+}
+.btn-circle-xxl {
+  @include btn-circle-xxl();
+}
 
 @media (prefers-color-scheme: dark) {
   button {
-    background-color: c.$black-medium;
+    background-color: c.$black-ultra-light;
   }
 }
 
 @media (prefers-color-scheme: light) {
   button {
-    background-color: c.$white-medium;
+    background-color: c.$white-ultra-light;
   }
 }

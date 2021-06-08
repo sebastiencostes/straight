@@ -4,12 +4,13 @@
 ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  scrollbar-width: none !important;
 }
 
 html {
   font-size: calc(1em * 0.625);
   line-height: 1.15;
-  overflow: scroll;//TODO
+  overflow: scroll; //TODO
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -86,7 +87,8 @@ samp {
   margin: 0;
 }
 
-p {
+p,
+li {
   font-weight: 300;
 }
 
@@ -256,6 +258,7 @@ caption {
 }
 
 details {
+  cursor: pointer;
   display: block;
 }
 

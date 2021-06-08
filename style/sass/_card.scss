@@ -8,6 +8,7 @@
 @use "utility" as u;
 @use "width" as w;
 @use "z-index" as z;
+@use "device" as d;
 
 %card-shared {
   @include fx.d-flex();
@@ -92,12 +93,24 @@
   @include fx.f-dir-col();
   @include pos.position(absolute);
   @include h.height(100%);
-  @include p.padding(1rem 2rem 1rem);
+  @include p.padding(1rem 1rem 1rem);
+  @include d.tablet-portrait {
+    @include p.padding(1rem 2rem 1rem);
+  }
   @include w.width(100%);
   @include z.z-index(1);
   overflow-y: scroll;
   right: 0;
   top: 0;
+  // details > summary {
+  //   list-style: none;
+  // }
+  // details > summary::-webkit-details-marker {
+  //   display: none;
+  // }
+  li {
+    list-style: inside;
+  }
 }
 %card-body-header-shared {
   @include fx.d-flex();
