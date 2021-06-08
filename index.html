@@ -160,83 +160,85 @@
         </div>
         <section id="cardContainer" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
 
-
             <!--CARD SIMPLE-->
             <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">simple card</h3>
+                </header>
                 <figure class="card-img-container">
                     <picture>
-                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                    <img class="card-img" src="/assets/img/card-img.jpg"
-                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                        <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card-img.jpg"
+                            alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                     </picture>
-                    <figcaption class="card-header">
-                        <h3 class="card-title t-ellipsis">simple card</h3>
-                    </figcaption>
                 </figure>
                 <footer class="card-footer">
                     <div class="card-info-container">
                         <span class="card-info-text">
-                            A simple text to resume your picture
+                            simple text card
                         </span>
                     </div>
                 </footer>
             </article>
+            <!--CARD SIMPLE-->
 
-            <!--CARD-->
+            <!--CARD ACTION-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">Bowl de patates douces, chou kale & riz vinaigré</h3>
+                    <h3 class="card-title t-ellipsis">card action</h3>
                     <button class="card-header-cta btn-circle-s" data-card="1">
                         <span class="material-icons">
                             more_horizontal
                         </span>
                     </button>
                 </header>
-                <a href="#" class="card-img-container">
+                <figure class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
                         <img class="card-img" src="/assets/img/card-img.jpg"
                             alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                     </picture>
-                </a>
+                </figure>
                 <aside class="card-body d-none" data-card="1">
-                    <button class="card-header-cta close t-right btn-circle-s m-l-auto" data-card="1">
+                    <button class="card-header-cta close t-right m-l-auto" data-card="1">
                         <span class="material-icons md-36">
                             cancel
                         </span>
                     </button>
                     <div class="card-body-header">
-                        <h4 class="card-body-title"><a href="#">Bowl de patates douces, chou kale & riz vinaigré</a>
+                        <h4 class="card-body-title"><a href="#">card action</a>
                         </h4>
                     </div>
-                    <ul class="card-body-text">
-                        <li>fdfgdfxfgd</li>
-                        <li>dfgdfgdf</li>
-                        <li>dffgdfgf</li>
-                    </ul>
                     <p class="card-body-text t-justify">
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Cards are surfaces that display content and actions on a single topic.
+                        They should be easy to scan for relevant and actionable information.
+                        Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.
                     </p>
-                    <details class="m-b-2">
-                        <summary>details</summary>
-                        ,g,hk,hfghm,ghù,lfh,ùgkh,kfdhh,fd
+                    <ul>
+                        <li>free</li>
+                        <li>new</li>
+                        <li>green</li>
+                    </ul>
+                    <details class="card-body-detail">
+                        <summary class="m-b-1">details</summary>
+                        Notices are factual and to-the-point. The language used is simple and formal, not flowery.
+                        They are put up on display boards in schools or in public places.
                     </details>
                     <div class="card-body-footer">
                         <div class="card-body-info-container">
-                            <span class="card-info-text">
-                                17.90€
+                            <span class="card-info-text card-info-price">
+                                17<sup>€90</sup>
                             </span>
                         </div>
                         <div class="card-body-info-qty">
                             <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     remove_circle
                                 </span>
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
                             <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     add_circle
                                 </span>
                             </button>
@@ -252,8 +254,8 @@
                 </aside>
                 <footer class="card-footer">
                     <div class="card-info-container">
-                        <span class="card-info-text">
-                            17.90€
+                        <span class="card-info-text card-info-price">
+                            17<sup>€90</sup>
                         </span>
                     </div>
                     <div class="card-cta-container">
@@ -265,11 +267,12 @@
                     </div>
                 </footer>
             </article>
+            <!--CARD ACTION-->
 
             <!--CARD-H-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">horizontal card</h3>
+                    <h3 class="card-title t-ellipsis">card carousel</h3>
                     <button class="card-header-cta btn-circle-s" data-card="2">
                         <span class="material-icons">
                             more_horizontal
@@ -302,7 +305,7 @@
                         pour l'inciter à cliquer sur l'article et à le lire.
                     </p>
 
-                    <details class="m-b-2">
+                    <details class="card-body-detail">
                         <summary>details</summary>
                         ,g,hk,hfghm,ghù,lfh,ùgkh,kfdhh,fd
                     </details>

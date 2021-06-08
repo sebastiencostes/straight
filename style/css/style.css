@@ -14283,8 +14283,6 @@ Order
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .card.card-h .card-header {
   height: 50%;
@@ -14292,17 +14290,12 @@ Order
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 50%;
-  flex: 0 1 50%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 50%;
+  flex: 1 0 50%;
 }
 .card.card-h .card-title {
   font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
-}
-.card.card-h .card-img-container {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 50%;
-  flex: 0 1 50%;
 }
 .card.card-h .card-footer {
   -webkit-box-align: end;
@@ -14319,8 +14312,6 @@ Order
   -webkit-box-direction: reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .card.card-l .card-header {
   -webkit-box-align: center;
@@ -14328,17 +14319,12 @@ Order
   align-items: center;
   height: 50%;
   max-width: 75%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 75%;
-  flex: 0 1 75%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 75%;
+  flex: 1 0 75%;
 }
 .card.card-l .card-title {
   font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
-}
-.card.card-l .card-img-container {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 1 25%;
-  flex: 0 1 25%;
 }
 .card.card-l .card-footer {
   -webkit-box-align: center;
@@ -14398,45 +14384,24 @@ Order
   list-style: inside;
 }
 
-.card-body-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+.card-body-text::first-letter,
+.card-body-title::first-letter {
+  text-transform: capitalize;
 }
 
 .card-body-title {
   font-size: clamp(2.4rem, 2.3263rem + 0.2632vw, 3rem);
 }
-.card-body-title::first-letter {
-  text-transform: capitalize;
-}
 
 .card-body-text {
-  margin: 1rem 0;
-}
-.card-body-text::first-letter {
-  text-transform: capitalize;
+  margin: 1rem 0 0;
 }
 
-.card-body-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-top: auto;
+.card-body-detail {
+  margin: 1rem 1rem 2rem 0;
 }
 
+.card-body-footer,
 .card-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14447,11 +14412,24 @@ Order
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.card-body-footer {
+  margin-top: auto;
+}
+
+.card-footer {
   padding: 1rem;
 }
 
 .card-info-text {
   cursor: default;
+}
+
+.card-info-price sup {
+  top: inherit;
+  font-size: 0.65em;
+  vertical-align: 0.41em;
 }
 
 .card-footer-cta {
