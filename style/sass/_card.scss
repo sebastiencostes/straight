@@ -62,6 +62,9 @@
     }
   }
 }
+%card-img-container-shared {
+  position: relative;
+}
 %card-img-shared {
   @include w.width(100%);
 }
@@ -137,6 +140,9 @@
   @extend %card-shared;
   &-header {
     @extend %card-header-shared;
+  }
+  &-img-container {
+    @extend %card-img-container-shared;
   }
   &-img {
     @extend %card-img-shared;

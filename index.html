@@ -168,7 +168,7 @@
                 <figure class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card-img.jpg"
+                        <img class="card-img" src="/assets/img/img-carousel-1.jpg"
                             alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                     </picture>
                 </figure>
@@ -195,7 +195,7 @@
                 <figure class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card-img.jpg"
+                        <img class="card-img" src="/assets/img/img-carousel-1.jpg"
                             alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                     </picture>
                 </figure>
@@ -212,7 +212,8 @@
                     <p class="card-body-text t-justify">
                         Cards are surfaces that display content and actions on a single topic.
                         They should be easy to scan for relevant and actionable information.
-                        Elements, like text and images, should be placed on them in a way that clearly indicates hierarchy.
+                        Elements, like text and images, should be placed on them in a way that clearly indicates
+                        hierarchy.
                     </p>
                     <ul>
                         <li>free</li>
@@ -269,7 +270,7 @@
             </article>
             <!--CARD ACTION-->
 
-            <!--CARD-H-->
+            <!--CARD-CAROUSEL-->
             <article class="card">
                 <header class="card-header">
                     <h3 class="card-title t-ellipsis">card carousel</h3>
@@ -279,58 +280,78 @@
                         </span>
                     </button>
                 </header>
-                <a href="#" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card-img.jpg"
-                            alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                <figure class="card-img-container slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <picture class="mySlides">
+                        <img class="card-img" src="/assets/img/img-carousel-1.jpg">
                     </picture>
-                </a>
+    
+                    <picture class="mySlides">
+                        <img class="card-img" src="/assets/img/img-carousel-2.jpg">
+                    </picture>
+    
+                    <picture class="mySlides">
+                        <img class="card-img" src="/assets/img/img-carousel-3.jpg">
+                    </picture>
+                    <button class="prev btn-square-m" onclick="plusSlides(-1)">
+                        <span class="t-overlay material-icons md-36">
+                            navigate_before
+                        </span> 
+                    </button>
+                    <button class="next btn-square-m" onclick="plusSlides(1)">
+                        <span class="t-overlay material-icons md-36">
+                            navigate_next
+                        </span> 
+                    </button>   
+                </figure>
                 <aside class="card-body d-none" data-card="2">
-                    <button class="card-header-cta close t-right" data-card="2">
-                        <span class="material-icons">
+                    <button class="card-header-cta close t-right m-l-auto" data-card="2">
+                        <span class="material-icons md-36">
                             cancel
                         </span>
                     </button>
                     <div class="card-body-header">
-                        <h4 class="card-body-title"><a href="#">horizontal card</a></h4>
+                        <h4 class="card-body-title"><a href="#">card carousel</a>
+                        </h4>
                     </div>
-                    <ul class="card-body-text">
-                        <li>fdfgdfxfgd</li>
-                        <li>dfgdfgdf</li>
-                        <li>dffgdfgf</li>
-                    </ul>
                     <p class="card-body-text t-justify">
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
+                        Cards are surfaces that display content and actions on a single topic.
+                        They should be easy to scan for relevant and actionable information.
+                        Elements, like text and images, should be placed on them in a way that clearly indicates
+                        hierarchy.
                     </p>
-
+                    <ul>
+                        <li>free</li>
+                        <li>new</li>
+                        <li>green</li>
+                    </ul>
                     <details class="card-body-detail">
-                        <summary>details</summary>
-                        ,g,hk,hfghm,ghù,lfh,ùgkh,kfdhh,fd
+                        <summary class="m-b-1">details</summary>
+                        Notices are factual and to-the-point. The language used is simple and formal, not flowery.
+                        They are put up on display boards in schools or in public places.
                     </details>
                     <div class="card-body-footer">
                         <div class="card-body-info-container">
-                            <span class="card-info-text">
-                                9.90€
+                            <span class="card-info-text card-info-price">
+                                17<sup>€90</sup>
                             </span>
                         </div>
                         <div class="card-body-info-qty">
                             <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     remove_circle
                                 </span>
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
                             <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     add_circle
                                 </span>
                             </button>
                         </div>
                         <div class="card-body-cta-container">
                             <button class="card-footer-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     shopping_cart
                                 </span>
                             </button>
@@ -339,8 +360,8 @@
                 </aside>
                 <footer class="card-footer">
                     <div class="card-info-container">
-                        <span class="card-info-text">
-                            9.90€
+                        <span class="card-info-text card-info-price">
+                            17<sup>€90</sup>
                         </span>
                     </div>
                     <div class="card-cta-container">
@@ -352,6 +373,7 @@
                     </div>
                 </footer>
             </article>
+            <!--CARD CAROUSEL-->
 
             <!--CARD-L-->
             <article class="card">
@@ -366,7 +388,7 @@
                 <a href="#" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card-img.jpg"
+                        <img class="card-img" src="/assets/img/img-carousel-1.jpg"
                             alt="Photo de guitare par Gustavo Borges provenant de Pexels">
                     </picture>
                 </a>
@@ -440,6 +462,7 @@
     <script defer src="node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
     <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
     <script src="script/main.js"></script>
+    <script src="script/carousel.js"></script>
 </body>
 
 </html>
