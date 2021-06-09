@@ -116,8 +116,8 @@
 
 @mixin text-overlay() {
   color: c.$white-ultra-light;
-  -webkit-filter: drop-shadow(2px 4px 6px c.$black);
-  filter: drop-shadow(2px 4px 6px c.$black);
+  -webkit-filter: drop-shadow(1px 1px 2px c.$black);
+  filter: drop-shadow(1px 1px 2px c.$black);
   font-weight: 400;
 }
 
@@ -153,8 +153,16 @@ h3,
 h4,
 H5,
 h6 {
-  cursor: default;
   line-height: 110%;
+}
+h1,
+h2,
+h3,
+h4,
+H5,
+h6,
+p {
+  cursor: default;
 }
 
 @include c.dark-theme {

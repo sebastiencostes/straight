@@ -28,3 +28,10 @@ theme
         @content;
     }
 }
+
+.bg-transparent {
+    background-color: $transparent;
+}
+.white {
+    color: $white-ultra-light;
+}

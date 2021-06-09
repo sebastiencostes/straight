@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <title>Straight</title>
+    <title>Straight | Card</title>
     <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
     <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
     <link rel="preload" href="style/css/style.css" as="style">
@@ -14,165 +14,30 @@
 </head>
 
 <body>
-
 <nav>
     <ul>
-        <li>
-            <a href="/card.html">
-                card
-            </a>
-        </li>
+        <li><a href="index.html">home</a></li>
+        <li><a href="carousel.html">carousel</a></li>
     </ul>
 </nav>
-
     <main class="container-screen">
 
-        <article class="w-vw-50">
-            <figure class="card-img-container slideshow-container">
-                <picture class="slides">
-                    <img class="card-img" src="/assets/img/img-carousel-1.jpg">
-                </picture>
-                <picture class="slides">
-                    <img class="card-img" src="/assets/img/img-carousel-2.jpg">
-                </picture>
-                <picture class="slides">
-                    <img class="card-img" src="/assets/img/img-carousel-3.jpg">
-                </picture>
-                <button class="prev btn-square-m" onclick="plusSlides(-1)">
-                    <span class="t-overlay material-icons md-36">
-                        navigate_before
-                    </span> 
-                </button>
-                <button class="next btn-square-m" onclick="plusSlides(1)">
-                    <span class="t-overlay material-icons md-36">
-                        navigate_next
-                    </span> 
-                </button>   
-        </article>
+        <header class="g-col p-2">
+            <h1>Card module</h1>
+        </header>
 
-        <article>
-            <h1>nos plats préférés</h1>
-            <h2>nos plats préférés</h2>
-            <h3>nos plats préférés</h3>
-            <h4>nos plats préférés</h4>
-            <h5>nos plats préférés</h5>
-            <h6>nos plats préférés</h6>
-            <p>
-                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                pour l'inciter à cliquer sur l'article et à le lire.
-                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                pour l'inciter à cliquer sur l'article et à le lire.
-                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                pour l'inciter à cliquer sur l'article et à le lire.
-                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                pour l'inciter à cliquer sur l'article et à le lire.
-            </p>
-        </article>
+        <section>
+            <article>
+                <h2>
+                    Card models
+                </h2>
+            </article>
 
-        <article>
-            <!--CIRCLE-->
-            <button class="btn btn-circle-xs">
-                <span class="material-icons md-12">
-                    more_horizontal
-                </span>
-            </button>
 
-            <button class="btn btn-circle-s">
-                <span class="material-icons">
-                    more_horizontal
-                </span>
-            </button>
 
-            <button class="btn btn-circle-m">
-                <span class="material-icons md-36">
-                    more_horizontal
-                </span>
-            </button>
+        </section>
 
-            <button class="btn btn-circle-l">
-                <span class="material-icons md-48">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-circle-xl">
-                <span class="material-icons md-60">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn circle-hover btn-circle-xxl">
-                <span class="material-icons md-78">
-                    more_horizontal
-                </span>
-            </button>
-
-            <!--SQUARE-->
-
-            <button class="btn btn-square-xs">
-                <span class="material-icons md-12">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-square-s">
-                <span class="material-icons">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-square-m">
-                <span class="material-icons md-36">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-square-l">
-                <span class="material-icons md-48">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-square-xl">
-                <span class="material-icons md-60">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn square-hover btn-square-xxl">
-                <span class="material-icons md-78">
-                    more_horizontal
-                </span>
-            </button>
-
-            <!--BTN-->
-
-            <button class="btn-xs">
-                button
-            </button>
-
-            <button class="btn-s">
-                button
-            </button>
-
-            <button class="btn-m">
-                button
-            </button>
-
-            <button class="btn-l">
-                button
-            </button>
-
-            <button class="btn-xl">
-                button
-            </button>
-
-            <button class="btn-xxl">
-                button
-            </button>
-        </article>
-
-        <div class="t-right">
+        <section class="t-right">
             <button id="vGrid" class="btn-square-s  card-btn-gallery m-r-2">
                 <span class="material-icons">
                     crop_portrait
@@ -190,7 +55,8 @@
                     crop_7_5
                 </span>
             </button>
-        </div>
+        </section>
+
         <section id="cardContainer" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
 
             <!--CARD SIMPLE-->
@@ -313,29 +179,29 @@
                         </span>
                     </button>
                 </header>
-                <figure class="card-img-container slideshow-container">
+                <figure class="card-img-container">
                     <!-- Full-width images with number and caption text -->
-                    <picture class="slides">
+                    <picture class="carousel-slide">
                         <img class="card-img" src="/assets/img/img-carousel-1.jpg">
                     </picture>
-    
-                    <picture class="slides">
+
+                    <picture class="carousel-slide">
                         <img class="card-img" src="/assets/img/img-carousel-2.jpg">
                     </picture>
-    
-                    <picture class="slides">
+
+                    <picture class="carousel-slide">
                         <img class="card-img" src="/assets/img/img-carousel-3.jpg">
                     </picture>
-                    <button class="prev btn-square-m" onclick="plusSlides(-1)">
-                        <span class="t-overlay material-icons md-36">
+                    <button class="carousel-cta carousel-prev transparent" onclick="plusSlides(-1)">
+                        <span class="t-overlay material-icons md-light md-36">
                             navigate_before
-                        </span> 
+                        </span>
                     </button>
-                    <button class="next btn-square-m" onclick="plusSlides(1)">
-                        <span class="t-overlay material-icons md-36">
+                    <button class="carousel-cta carousel-next transparent" onclick="plusSlides(1)">
+                        <span class="t-overlay material-icons md-light md-36">
                             navigate_next
-                        </span> 
-                    </button>   
+                        </span>
+                    </button>
                 </figure>
                 <aside class="card-body d-none" data-card="2">
                     <button class="card-header-cta close t-right m-l-auto" data-card="2">

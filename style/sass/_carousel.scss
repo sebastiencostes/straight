@@ -1,37 +1,30 @@
+@use "position" as p;
+@use "margin" as m;
+@use "utility" as u;
 
-
-/* Slideshow container */
-.slideshow-container {
-//   position: relative;
-//   margin: auto;
+%carousel-slide-shared {
+  @include u.d-none;
+  @include p.position(relative);
 }
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
+%carousel-cta-shared {
+  @include m.margin-direction(top, -2.2rem);
+  @include p.position(absolute);
+  cursor: pointer;
+  top: 50%;
+  user-select: none;
 }
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-  
-    margin-top: -2.2rem;
-  
-    color: white;
-  
-    user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
+%carousel-next-shared {
   right: 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-
-/* The dots/bullets/indicators */
-
-
-
+.carousel {
+  &-slide {
+    @extend %carousel-slide-shared;
+  }
+  &-cta {
+    @extend %carousel-cta-shared;
+  }
+  &-next {
+    @extend %carousel-next-shared;
+  }
+}

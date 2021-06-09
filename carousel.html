@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <title>Straight | Carousel</title>
+    <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
+    <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/card.html">
+                    card
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container-fix">
+
+        <headder>
+            <h1>Carousel</h1>
+        </headder>
+
+        <article>
+            <h2>
+                Carousel with text overlay
+            </h2>
+        </article>
+
+        <!-- <article class="pos-relative carousel">
+            <figure class="carousel-slide pos-relative" data-carousel="2">
+                <picture>
+                    <img class="responsive-img" src="/assets/img/carousel/carousel-1.jpg">
+                </picture>
+                <figcaption class="pos-absolute-centering t-center">
+                    <h3 class="t-overlay">Carousel with text overlay</h3>
+                    <p class="t-overlay">This is a carousel with text overlay</p>
+                </figcaption>
+            </figure>
+            <figure class="carousel-slide" data-carousel="2">
+                <picture>
+                    <img class="responsive-img" src="/assets/img/carousel/carousel-2.jpg">
+                </picture>
+                <figcaption class="pos-absolute-centering t-center">
+                    <h3 class="t-overlay">Carousel with text overlay</h3>
+                    <p class="t-overlay">This is a carousel with text overlay</p>
+                </figcaption>
+            </figure>
+            <figure class="carousel-slide" data-carousel="2">
+                <picture>
+                    <img class="responsive-img" src="/assets/img/carousel/carousel-3.jpg">
+                </picture>
+                <figcaption class="pos-absolute-centering t-center">
+                    <h3 class="t-overlay">Carousel with text overlay</h3>
+                    <p class="t-overlay">This is a carousel with text overlay</p>
+                </figcaption>
+            </figure>
+            <button class="carousel-cta carousel-prev btn-square-m bg-transparent" onclick="plusSlides(-1)" data-carousel="2">
+                <span class="t-overlay material-icons md-36 md-light">
+                    navigate_before
+                </span>
+            </button>
+            <button class="carousel-cta carousel-next btn-square-m bg-transparent" onclick="plusSlides(1)" data-carousel="2">
+                <span class="t-overlay material-icons md-36 md-light">
+                    navigate_next
+                </span>
+            </button>
+        </article> -->
+
+    
+
+        <article class="pos-relative carousel">
+            <figure class="carousel-slide pos-relative" data-carousel="1">
+                <picture>
+                    <img class="responsive-img" src="/assets/img/carousel/carousel-1.jpg">
+                </picture>
+            </figure>
+            <figure class="carousel-slide pos-relative" data-carousel="1">
+                <picture>
+                    <img class="responsive-img" src="/assets/img/carousel/carousel-2.jpg">
+                </picture>
+            </figure>
+            <figure class="carousel-slide pos-relative" data-carousel="1">
+                <picture>
+                    <img class="responsive-img" src="/assets/img/carousel/carousel-3.jpg">
+                </picture>
+            </figure>
+            <button class="carousel-cta carousel-prev btn-square-m bg-transparent" onclick="plusSlides(-1)" data-carousel="1">
+                <span class="t-overlay material-icons md-36 md-light">
+                    navigate_before
+                </span>
+            </button>
+            <button class="carousel-cta carousel-next btn-square-m bg-transparent" onclick="plusSlides(1)" data-carousel="1">
+                <span class="t-overlay material-icons md-36 md-light">
+                    navigate_next
+                </span>
+            </button>
+        </article>
+
+    </main>
+    <footer>
+        footer
+    </footer>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+    <!-- <script src="script/main.js"></script> -->
+    <script src="script/carousel.js"></script>
+</body>
+
+</html>
