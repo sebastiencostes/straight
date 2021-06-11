@@ -1,13 +1,38 @@
+let carouselsId = "";
+let ids = [];
+let classes = []
+let slideIndex = 1;
 const carousels = document.querySelectorAll(".carousel");
 const slides = document.querySelectorAll(".carousel-slide");
 const next = document.querySelector(".carousel-next");
 const prev = document.querySelector(".carousel-prev");
 const buttonsPrev = document.querySelectorAll(".carousel-prev");
 const buttonsNext = document.querySelectorAll(".carousel-next");
-const error = 'Straight Carousel - Simon says : ‘Please add an ID to <article id="" class="carousel" />‘'
+const error =
+  'Straight Carousel - Simon says : ‘Please add an ID to <article id="" class="carousel" />‘';
 
-let slideIndex = 1;
-carousel(slideIndex);
+
+
+  for(carousel of carousels) {
+    let tmpId = carousel.getAttribute("id");
+    ids.push(tmpId);
+      for (let slide of slides) {
+        let tmpClass = tmpId+ '  ' +slide.getAttribute("class");
+        console.log(tmpClass)
+      }
+      
+  }
+  console.log(ids.includes('carousel'));
+////ids
+  
+
+
+
+
+
+
+straigthCarousel(slideIndex);
+
 
 // prev.addEventListener("click", () => {
 //   // for(let slide of slides) {
@@ -27,7 +52,34 @@ carousel(slideIndex);
 //   carousel((slideIndex = slideIndex + 1));
 // });
 
-function carousel(tmpSlideIndex) {
+for(let btn of buttonsPrev) {
+  btn.addEventListener("click", (e) => {
+  carouselsId = e.currentTarget.parentNode.id;
+  for (let slide of slides) {
+    slide.setAttribute("straigth-carousel", carouselsId);
+    // let isId = slide.getAttribute("straigth-carousel") === carouselsId;
+    // isId ? carousel((slideIndex = slideIndex - 1)) : console.log(error);
+  }
+  straigthCarousel((slideIndex = slideIndex - 1));
+  console.log(carouselsId);
+});
+}
+
+for(let btn of buttonsNext) {
+  btn.addEventListener("click", (e) => {
+  carouselsId = e.currentTarget.parentNode.id;
+  for (let slide of slides) {
+    slide.setAttribute("straigth-carousel", carouselsId);
+    // let isId = slide.getAttribute("straigth-carousel") === carouselsId;
+    // isId ? carousel((slideIndex = slideIndex + 1)) : console.log(error);
+  }
+  straigthCarousel((slideIndex = slideIndex + 1));
+  console.log(carouselsId);
+});
+}
+
+
+function straigthCarousel(tmpSlideIndex) {
   if (tmpSlideIndex < 1) {
     slideIndex = slides.length;
   }
@@ -35,43 +87,8 @@ function carousel(tmpSlideIndex) {
     slideIndex = 1;
   }
   for (let slide of slides) {
-    if (
-      prev.getAttribute("data-carousel") ===
-        slide.getAttribute("data-carousel") &&
-      next.getAttribute("data-carousel") === slide.getAttribute("data-carousel")
-    ) {
-      slide.style.display = "none";
-    }
+    slide.style.display = "none";
   }
-  
   slides[slideIndex - 1].style.display = "block";
 }
 
-///////////
-////1/////
-//////////
-let carouselsId = "";
-let newCarousels = document.getElementById(carouselsId);
-
-
-prev.addEventListener("click", (e) => {
-  carouselsId = e.currentTarget.parentNode.id;
-  for(let slide of slides) {
-    slide.setAttribute('straigth-carousel', carouselsId);
-    let isId = slide.getAttribute('straigth-carousel') === carouselsId;
-    isId ? carousel((slideIndex = slideIndex + 1)) : console.log(error);
-  }
-  carousel((slideIndex = slideIndex - 1));
-  console.log(carouselsId);
-});
-
-next.addEventListener("click", (e) => {
-  carouselsId = e.currentTarget.parentNode.id;
-  for(let slide of slides) {
-    slide.setAttribute('straigth-carousel', carouselsId);
-    let isId = slide.getAttribute('straigth-carousel') === carouselsId;
-    isId ? carousel((slideIndex = slideIndex + 1)) : console.log(error);
-  }
-  carousel((slideIndex = slideIndex + 1));
-  console.log(carouselsId);
-});
