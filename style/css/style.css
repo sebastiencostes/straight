@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*BLUE*/
+/*PINK*/
 /*
 theme
 */
@@ -673,7 +675,6 @@ nav ul li {
 }
 
 .carousel-slide {
-  display: none;
   position: relative;
 }
 
@@ -689,6 +690,8 @@ nav ul li {
   right: 0;
 }
 
+/*BLUE*/
+/*PINK*/
 /*
 theme
 */

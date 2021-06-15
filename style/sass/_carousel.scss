@@ -3,7 +3,7 @@
 @use "utility" as u;
 
 %carousel-slide-shared {
-  @include u.d-none;
+ // @include u.d-none;
   @include p.position(relative);
 }
 %carousel-cta-shared {
