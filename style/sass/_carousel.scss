@@ -1,9 +1,7 @@
 @use "position" as p;
 @use "margin" as m;
-//@use "utility" as u;
 
 %carousel-slide-shared {
- // @include u.d-none;
   @include p.position(relative);
 }
 %carousel-cta-shared {
@@ -12,9 +10,6 @@
   cursor: pointer;
   top: 50%;
   user-select: none;
-  // &:hover {
-  //   background-color: red;
-  // }
 }
 %carousel-next-shared {
   right: 0;

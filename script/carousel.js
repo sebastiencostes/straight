@@ -1,10 +1,7 @@
 const controls = document.querySelectorAll(".carousel-cta");
 const carousels = document.querySelectorAll(".carousel");
-let currentIndex = 1;
 const arrayCarousels = [];
-
-//var currentIndex = Array.prototype.indexOf.call(parent.children, child);
-//let tmpIdx = e.currentTarget.parentNode.closest('.carousel-slide')
+let currentIndex = 1;
 
 carousel = () => {
   //get all id from .carousel and push them in arrayCarousels
@@ -31,7 +28,6 @@ carousel = () => {
 
     sliders[currentIndex - 1].classList.remove("d-none");
     sliders[currentIndex - 1].classList.add("d-block");
-    console.log("currentIndex dans carousel: " + id + " " + currentIndex);
   };
 
   for (let btn of controls) {
@@ -41,17 +37,15 @@ carousel = () => {
       //check if cta is prev or next and go to to next or prev slide
       let isPrev = e.currentTarget.classList.contains("carousel-prev");
       isPrev
-        ? (straightCarousel(tmpId, currentIndex--))
-        : (straightCarousel(tmpId, currentIndex++));
-
-      console.log("currentIndex dans button : " + tmpId + " " + currentIndex);
+        ? straightCarousel(tmpId, currentIndex--)
+        : straightCarousel(tmpId, currentIndex++);
     });
   }
 
   document.addEventListener("DOMContentLoaded", () => {
     //get all id to launch straightCarousel()
     for (let id of arrayCarousels) {
-      straightCarousel(id,1);
+      straightCarousel(id, 1);
     }
   });
 };
