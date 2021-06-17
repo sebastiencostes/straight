@@ -662,18 +662,6 @@ nav ul li {
   margin-bottom: auto;
 }
 
-.d-none {
-  display: none;
-}
-
-.d-block {
-  display: block;
-}
-
-.d-inline-block {
-  display: inline-block;
-}
-
 .carousel-slide {
   position: relative;
 }
@@ -13978,6 +13966,18 @@ Order
   -webkit-box-ordinal-group: 12;
   -ms-flex-order: 12;
   order: 12;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-inline-block {
+  display: inline-block;
 }
 
 .z-1 {

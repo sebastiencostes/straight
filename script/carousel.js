@@ -1,41 +1,58 @@
-const controls = document.querySelectorAll('.carousel-cta')
-let  slideIndex = 1
-//var slideIndex = Array.prototype.indexOf.call(parent.children, child);
+const controls = document.querySelectorAll(".carousel-cta");
+const carousels = document.querySelectorAll(".carousel");
+let currentIndex = 1;
+const arrayCarousels = [];
 
-carousel = (id) => {
-  const carouselID = document.querySelector(id)
-  const sliders = carouselID.querySelectorAll('.carousel-slide')
+//var currentIndex = Array.prototype.indexOf.call(parent.children, child);
+//let tmpIdx = e.currentTarget.parentNode.closest('.carousel-slide')
 
-  if (slideIndex < 1) {
-    slideIndex = sliders.length
+carousel = () => {
+  //get all id from .carousel and push them in arrayCarousels
+  for (let carousel of carousels) {
+    let tmpCarousel = carousel.getAttribute("id");
+    arrayCarousels.push("#" + tmpCarousel);
   }
-  if (slideIndex > sliders.length) {
-    slideIndex = 1
+
+  straightCarousel = (id, idx) => {
+    const carouselID = document.querySelector(id);
+    const sliders = carouselID.querySelectorAll(".carousel-slide");
+
+    if (currentIndex < 1) {
+      currentIndex = sliders.length;
+    }
+    if (currentIndex > sliders.length) {
+      currentIndex = 1;
+    }
+
+    for (let slide of sliders) {
+      slide.classList.remove("d-block");
+      slide.classList.add("d-none");
+    }
+
+    sliders[currentIndex - 1].classList.remove("d-none");
+    sliders[currentIndex - 1].classList.add("d-block");
+    console.log("currentIndex dans carousel: " + id + " " + currentIndex);
+  };
+
+  for (let btn of controls) {
+    btn.addEventListener("click", (e) => {
+      //fetch current carousel id
+      let tmpId = "#" + e.currentTarget.parentNode.id;
+      //check if cta is prev or next and go to to next or prev slide
+      let isPrev = e.currentTarget.classList.contains("carousel-prev");
+      isPrev
+        ? (straightCarousel(tmpId, currentIndex--))
+        : (straightCarousel(tmpId, currentIndex++));
+
+      console.log("currentIndex dans button : " + tmpId + " " + currentIndex);
+    });
   }
 
-  for (let slide of sliders) {
-    slide.classList.remove('d-block')
-    slide.classList.add('d-none')
-  }
-  
-  sliders[slideIndex -1].classList.remove('d-none')
-  sliders[slideIndex -1].classList.add('d-block')
-  console.log('slideIndex dans carousel: ' + slideIndex)
-}
-
-for(let btn of controls) {
-  btn.addEventListener('click', (e) => {
-    //fetch current carousel id
-    let tmpId = '#' + e.currentTarget.parentNode.id
-
-    //check if cta is prev or next and go to to next or prev slide
-    let isPrev = e.currentTarget.classList.contains('carousel-prev')
-    isPrev ? (carousel(tmpId), slideIndex--) : (carousel(tmpId), slideIndex++)
-
-    console.log('slideIndex dans button : ' + slideIndex)
-  })
-}
-
-carousel('#carousel1')
-carousel('#carousel2')
-carousel('#carousel3')
+  document.addEventListener("DOMContentLoaded", () => {
+    //get all id to launch straightCarousel()
+    for (let id of arrayCarousels) {
+      straightCarousel(id,1);
+    }
+  });
+};
+carousel();
