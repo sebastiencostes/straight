@@ -115,7 +115,7 @@
 }
 
 @mixin text-overlay() {
-  color: c.$white-ultra-light;
+  color: c.$white;
   -webkit-filter: drop-shadow(1px 1px 2px c.$black);
   filter: drop-shadow(1px 1px 2px c.$black);
   font-weight: 400;
@@ -125,27 +125,27 @@
   @include text-overlay;
 }
 h1 {
-  font-size: clamp(4.1rem, 3.7193rem + 1.3596vw, 7.2rem);
+  font-size: clamp(4rem, 3.4400rem + 2.0000vw, 7.2rem);
 }
 h2 {
-  font-size: clamp(3.4rem, 3.0193rem + 1.3596vw, 6.5rem);
+  font-size: clamp(3.2rem, 2.6400rem + 2.0000vw, 6.4rem);
 }
 h3 {
-  font-size: clamp(2.8rem, 2.4193rem + 1.3596vw, 5.9rem);
+  font-size: clamp(2.4rem, 1.8400rem + 2.0000vw, 5.6rem);
 }
 h4 {
-  font-size: clamp(2.4rem, 2.0193rem + 1.3596vw, 5.5rem);
+  font-size: clamp(2.4rem, 1.9800rem + 1.5000vw, 4.8rem);
 }
 h5 {
-  font-size: clamp(2.2rem, 1.8193rem + 1.3596vw, 5.3rem);
+  font-size: clamp(2.4rem, 2.1200rem + 1.0000vw, 4rem);
 }
 h6 {
-  font-size: clamp(1.8rem, 1.4193rem + 1.3596vw, 4.9rem);
+  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
 }
 p,
 span,
 li {
-  font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
+  font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
 }
 h1,
 h2,
@@ -163,6 +163,10 @@ H5,
 h6,
 p {
   cursor: default;
+}
+
+.t-white {
+  color: c.$white;
 }
 
 @include c.dark-theme {

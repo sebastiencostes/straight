@@ -3,9 +3,14 @@
 @use "width" as w;
 
 @mixin container-fix() {
-  @include m.margin(0 auto);
+  @include m.margin-direction(left, auto);
+  @include m.margin-direction(right, auto);
+  @include w.width(calc(100vw - 4rem));
   @include d.laptop () {
     @include w.width(120rem);
+  }
+  @include d.desktop () {
+    @include w.width(136.6rem);
   }
 }
 .container-fix {
@@ -15,7 +20,8 @@
 relative to screen device
 */
 @mixin container-screen() {
-    @include m.margin(0 auto);
+  @include m.margin-direction(left, auto);
+  @include m.margin-direction(right, auto);
     @include w.width(calc(100vw - 4rem));
 }
 .container-screen {
@@ -26,7 +32,8 @@ relative to window
 */
 @mixin container-window() {
   @include d.tablet-portrait {
-    @include m.margin(0 auto);
+    @include m.margin-direction(left, auto);
+    @include m.margin-direction(right, auto);
     @include w.width(calc(100% - 4rem));
   }
 }

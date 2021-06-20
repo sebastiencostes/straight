@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
     <title>Straight | Card</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
     <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
     <link rel="preload" href="style/css/style.css" as="style">
@@ -22,26 +21,39 @@
             <li><a href="carousel.html">carousel</a></li>
         </ul>
     </nav>
-    <main class="container-screen">
-
-        <header class="g-col p-2">
-            <h1>Card module</h1>
+        <header class="p-2 m-b-6 presentation bg-pink white">
+            <h1 class="presentation-title t-white">Card</h1>
         </header>
 
-        <section>
+        <main class="container-screen">
+
+        <section class="m-b-6">
             <article>
                 <h2>
-                    Card models
+                    About
                 </h2>
+                <p>
+                    Cards allows you to face on some fancy contents. Related Informations must be short, clear and explicit.
+                    They offers the possibility to make some actions, add some medias and many more.
+                    Cards are the deal to preview your products, projects and more ...
+                </p>
             </article>
         </section>
 
-        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
+        <section class="note-pink">
+            <article>
+                <h3>
+                    Card models
+                </h3>
+            </article>
+        </section>
+
+        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-6">
 
             <!--CARD SIMPLE-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">simple card</h3>
+                    <h4 class="card-title t-ellipsis">simple card</h4>
                 </header>
                 <figure class="card-img-container">
                     <picture>
@@ -63,7 +75,7 @@
             <!--CARD ACTION-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">card action</h3>
+                    <h4 class="card-title t-ellipsis">card action</h4>
                     <button class="card-cta open btn-circle-s" data-card="1">
                         <span class="material-icons md-36">
                             more_horizontal
@@ -142,7 +154,7 @@
             <!--CARD-L-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">linked card</h3>
+                    <h4 class="card-title t-ellipsis">linked card</h4>
                     <button class="card-cta open btn-circle-s" data-card="3">
                         <span class="material-icons md-36">
                             more_horizontal
@@ -218,116 +230,120 @@
             </article>
             <!--CARD L-->
 
-                        <!--CARD-CAROUSEL-->
-                        <article class="card">
-                            <header class="card-header">
-                                <h3 class="card-title t-ellipsis">card carousel</h3>
-                                <button class="card-cta open btn-circle-s" data-card="2">
-                                    <span class="material-icons md-36">
-                                        more_horizontal
-                                    </span>
-                                </button>
-                            </header>
-                            <figure id="cardCarousel" class="carousel card-img-container">
-                                <picture class="carousel-slide">
-                                    <img class="responsive-img" src="/assets/img/card/meal.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
-                                </picture>
-                                <picture class="carousel-slide">
-                                    <img class="responsive-img" src="/assets/img/card/eggs.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
-                                </picture>
-                                <picture class="carousel-slide">
-                                    <img class="responsive-img" src="/assets/img/card/toast.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
-                                </picture>
-                                <picture class="carousel-slide">
-                                    <img class="responsive-img" src="/assets/img/card/pancake.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
-                                </picture>
-                                <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
-                                    <span class="t-overlay material-icons md-36 md-light">
-                                        navigate_before
-                                    </span>
-                                </button>
-                                <button class="carousel-cta carousel-next btn-square-m bg-transparent">
-                                    <span class="t-overlay material-icons md-36 md-light">
-                                        navigate_next
-                                    </span>
-                                </button>
-                            </figure>
-                            <aside class="card-body d-none" data-card="2">
-                                <div class="card-body-header">
-                                    <h4 class="card-body-title t-ellipsis">
-                                        <a href="#">card carousel</a>
-                                    </h4>
-                                    <button class="card-cta close p-0" data-card="2">
-                                        <span class="material-icons md-36">
-                                            cancel
-                                        </span>
-                                    </button>
-                                </div>
-                                <p class="card-body-text t-justify">
-                                    Cards are surfaces that display content and actions on a single topic.
-                                    They should be easy to scan for relevant and actionable information.
-                                    Elements, like text and images, should be placed on them in a way that clearly indicates
-                                    hierarchy.
-                                </p>
-                                <ul class="card-body-text">
-                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                                </ul>
-                                <details class="card-body-text">
-                                    <summary class="m-b-1">ingredients</summary>
-                                    Notices are factual and to-the-point. The language used is simple and formal, not flowery.
-                                    They are put up on display boards in schools or in public places.
-                                </details>
-                                <div class="card-body-footer">
-                                    <div class="card-footer-left-container">
-                                        <span class="card-left-text">
-                                            11<sup>€90</sup>
-                                        </span>
-                                    </div>
-                                    <div class="card-footer-center-container">
-                                        <button class="card-footer-cta">
-                                            <span class="material-icons md-36">
-                                                remove_circle
-                                            </span>
-                                        </button>
-                                        <span class="m-l-2 m-r-2">1</span>
-                                        <button class="card-cta">
-                                            <span class="material-icons md-36">
-                                                add_circle
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div class="card-footer-right-container">
-                                        <button class="card-cta">
-                                            <span class="material-icons md-36">
-                                                shopping_cart
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </aside>
-                            <footer class="card-footer">
-                                <div class="card-footer-left-container">
-                                    <span class="card-left-text">
-                                        11<sup>€90</sup>
-                                    </span>
-                                </div>
-                                <div class="card-footer-right-container">
-                                    <button class="card-cta">
-                                        <span class="material-icons md-36">
-                                            shopping_cart
-                                        </span>
-                                    </button>
-                                </div>
-                            </footer>
-                        </article>
-                        <!--CARD CAROUSEL-->
-
-                        <!--CARD Facing-->
+            <!--CARD-CAROUSEL-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">facing card</h3>
+                    <h4 class="card-title t-ellipsis">card carousel</h4>
+                    <button class="card-cta open btn-circle-s" data-card="2">
+                        <span class="material-icons md-36">
+                            more_horizontal
+                        </span>
+                    </button>
+                </header>
+                <figure id="cardCarousel" class="carousel card-img-container">
+                    <picture class="carousel-slide">
+                        <img class="responsive-img" src="/assets/img/card/meal.jpg"
+                            alt="Photo de Daniela Constantini provenant de Pexels">
+                    </picture>
+                    <picture class="carousel-slide">
+                        <img class="responsive-img" src="/assets/img/card/eggs.jpg"
+                            alt="Photo de Daniela Constantini provenant de Pexels">
+                    </picture>
+                    <picture class="carousel-slide">
+                        <img class="responsive-img" src="/assets/img/card/toast.jpg"
+                            alt="Photo de Daniela Constantini provenant de Pexels">
+                    </picture>
+                    <picture class="carousel-slide">
+                        <img class="responsive-img" src="/assets/img/card/pancake.jpg"
+                            alt="Photo de Daniela Constantini provenant de Pexels">
+                    </picture>
+                    <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
+                        <span class="t-overlay material-icons md-36 md-light">
+                            navigate_before
+                        </span>
+                    </button>
+                    <button class="carousel-cta carousel-next btn-square-m bg-transparent">
+                        <span class="t-overlay material-icons md-36 md-light">
+                            navigate_next
+                        </span>
+                    </button>
+                </figure>
+                <aside class="card-body d-none" data-card="2">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title t-ellipsis">
+                            <a href="#">card carousel</a>
+                        </h4>
+                        <button class="card-cta close p-0" data-card="2">
+                            <span class="material-icons md-36">
+                                cancel
+                            </span>
+                        </button>
+                    </div>
+                    <p class="card-body-text t-justify">
+                        Cards are surfaces that display content and actions on a single topic.
+                        They should be easy to scan for relevant and actionable information.
+                        Elements, like text and images, should be placed on them in a way that clearly indicates
+                        hierarchy.
+                    </p>
+                    <ul class="card-body-text">
+                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                    </ul>
+                    <details class="card-body-text">
+                        <summary class="m-b-1">ingredients</summary>
+                        Notices are factual and to-the-point. The language used is simple and formal, not flowery.
+                        They are put up on display boards in schools or in public places.
+                    </details>
+                    <div class="card-body-footer">
+                        <div class="card-footer-left-container">
+                            <span class="card-left-text">
+                                11<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-footer-center-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons md-36">
+                                    remove_circle
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta">
+                                <span class="material-icons md-36">
+                                    add_circle
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-footer-right-container">
+                            <button class="card-cta">
+                                <span class="material-icons md-36">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            11<sup>€90</sup>
+                        </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-cta">
+                            <span class="material-icons md-36">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+            <!--CARD CAROUSEL-->
+
+            <!--CARD Facing-->
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">facing card</h4>
                     <button class="card-cta open btn-circle-s" data-card="4">
                         <span class="material-icons md-36">
                             more_horizontal
@@ -401,33 +417,33 @@
                     </div>
                 </footer>
             </article>
-                 <!--CARD Facing-->
+            <!--CARD Facing-->
 
         </section>
 
 
-        <section>
+        <section class="note-pink">
             <article>
-                <h2>
+                <h3>
                     Card models with variations
-                </h2>
+                </h3>
             </article>
         </section>
 
         <section class="t-right">
-            <button id="vGrid" class="btn-square-s  card-btn-gallery m-r-2">
+            <button id="vGrid" class="btn  card-btn-gallery m-r-2">
                 <span class="material-icons">
                     crop_portrait
                 </span>
             </button>
 
-            <button id="hGrid" class="btn-square-s card-btn-gallery">
+            <button id="hGrid" class="btn card-btn-gallery">
                 <span class="material-icons">
                     crop_5_4
                 </span>
             </button>
 
-            <button id="lGrid" class="btn-square-s card-btn-gallery m-l-2">
+            <button id="lGrid" class="btn card-btn-gallery m-l-2">
                 <span class="material-icons">
                     crop_7_5
                 </span>
@@ -439,7 +455,7 @@
             <!--CARD SIMPLE-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">simple card</h3>
+                    <h4 class="card-title t-ellipsis">simple card</h4>
                 </header>
                 <figure class="card-img-container">
                     <picture>
@@ -461,7 +477,7 @@
             <!--CARD ACTION-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">card action</h3>
+                    <h4 class="card-title t-ellipsis">card action</h4>
                     <button class="card-cta open btn-circle-s" data-card="5">
                         <span class="material-icons md-36">
                             more_horizontal
@@ -540,7 +556,7 @@
             <!--CARD-L-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">linked card</h3>
+                    <h4 class="card-title t-ellipsis">linked card</h4>
                     <button class="card-cta open btn-circle-s" data-card="6">
                         <span class="material-icons md-36">
                             more_horizontal
@@ -616,116 +632,120 @@
             </article>
             <!--CARD L-->
 
-                        <!--CARD-CAROUSEL-->
-                        <article class="card">
-                            <header class="card-header">
-                                <h3 class="card-title t-ellipsis">card carousel</h3>
-                                <button class="card-cta open btn-circle-s" data-card="7">
-                                    <span class="material-icons md-36">
-                                        more_horizontal
-                                    </span>
-                                </button>
-                            </header>
-                            <figure id="cardCarousel2" class="carousel card-img-container">
-                                <picture class="carousel-slide">
-                                    <img class="responsive-img" src="/assets/img/card/meal.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
-                                </picture>
-                                <picture class="carousel-slide">
-                                    <img class="responsive-img" src="/assets/img/card/eggs.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
-                                </picture>
-                                <picture class="carousel-slide">
-                                    <img class="responsive-img" src="/assets/img/card/toast.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
-                                </picture>
-                                <picture class="carousel-slide">
-                                    <img class="responsive-img" src="/assets/img/card/pancake.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
-                                </picture>
-                                <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
-                                    <span class="t-overlay material-icons md-36 md-light">
-                                        navigate_before
-                                    </span>
-                                </button>
-                                <button class="carousel-cta carousel-next btn-square-m bg-transparent">
-                                    <span class="t-overlay material-icons md-36 md-light">
-                                        navigate_next
-                                    </span>
-                                </button>
-                            </figure>
-                            <aside class="card-body d-none" data-card="7">
-                                <div class="card-body-header">
-                                    <h4 class="card-body-title t-ellipsis">
-                                        <a href="#">card carousel</a>
-                                    </h4>
-                                    <button class="card-cta close p-0" data-card="7">
-                                        <span class="material-icons md-36">
-                                            cancel
-                                        </span>
-                                    </button>
-                                </div>
-                                <p class="card-body-text t-justify">
-                                    Cards are surfaces that display content and actions on a single topic.
-                                    They should be easy to scan for relevant and actionable information.
-                                    Elements, like text and images, should be placed on them in a way that clearly indicates
-                                    hierarchy.
-                                </p>
-                                <ul class="card-body-text">
-                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                                </ul>
-                                <details class="card-body-text">
-                                    <summary class="m-b-1">ingredients</summary>
-                                    Notices are factual and to-the-point. The language used is simple and formal, not flowery.
-                                    They are put up on display boards in schools or in public places.
-                                </details>
-                                <div class="card-body-footer">
-                                    <div class="card-footer-left-container">
-                                        <span class="card-left-text">
-                                            11<sup>€90</sup>
-                                        </span>
-                                    </div>
-                                    <div class="card-footer-center-container">
-                                        <button class="card-footer-cta">
-                                            <span class="material-icons md-36">
-                                                remove_circle
-                                            </span>
-                                        </button>
-                                        <span class="m-l-2 m-r-2">1</span>
-                                        <button class="card-cta">
-                                            <span class="material-icons md-36">
-                                                add_circle
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div class="card-footer-right-container">
-                                        <button class="card-cta">
-                                            <span class="material-icons md-36">
-                                                shopping_cart
-                                            </span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </aside>
-                            <footer class="card-footer">
-                                <div class="card-footer-left-container">
-                                    <span class="card-left-text">
-                                        11<sup>€90</sup>
-                                    </span>
-                                </div>
-                                <div class="card-footer-right-container">
-                                    <button class="card-cta">
-                                        <span class="material-icons md-36">
-                                            shopping_cart
-                                        </span>
-                                    </button>
-                                </div>
-                            </footer>
-                        </article>
-                        <!--CARD CAROUSEL-->
-
-                        <!--CARD Facing-->
+            <!--CARD-CAROUSEL-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">facing card</h3>
+                    <h4 class="card-title t-ellipsis">card carousel</h4>
+                    <button class="card-cta open btn-circle-s" data-card="7">
+                        <span class="material-icons md-36">
+                            more_horizontal
+                        </span>
+                    </button>
+                </header>
+                <figure id="cardCarousel2" class="carousel card-img-container">
+                    <picture class="carousel-slide">
+                        <img class="responsive-img" src="/assets/img/card/meal.jpg"
+                            alt="Photo de Daniela Constantini provenant de Pexels">
+                    </picture>
+                    <picture class="carousel-slide">
+                        <img class="responsive-img" src="/assets/img/card/eggs.jpg"
+                            alt="Photo de Daniela Constantini provenant de Pexels">
+                    </picture>
+                    <picture class="carousel-slide">
+                        <img class="responsive-img" src="/assets/img/card/toast.jpg"
+                            alt="Photo de Daniela Constantini provenant de Pexels">
+                    </picture>
+                    <picture class="carousel-slide">
+                        <img class="responsive-img" src="/assets/img/card/pancake.jpg"
+                            alt="Photo de Daniela Constantini provenant de Pexels">
+                    </picture>
+                    <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
+                        <span class="t-overlay material-icons md-36 md-light">
+                            navigate_before
+                        </span>
+                    </button>
+                    <button class="carousel-cta carousel-next btn-square-m bg-transparent">
+                        <span class="t-overlay material-icons md-36 md-light">
+                            navigate_next
+                        </span>
+                    </button>
+                </figure>
+                <aside class="card-body d-none" data-card="7">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title t-ellipsis">
+                            <a href="#">card carousel</a>
+                        </h4>
+                        <button class="card-cta close p-0" data-card="7">
+                            <span class="material-icons md-36">
+                                cancel
+                            </span>
+                        </button>
+                    </div>
+                    <p class="card-body-text t-justify">
+                        Cards are surfaces that display content and actions on a single topic.
+                        They should be easy to scan for relevant and actionable information.
+                        Elements, like text and images, should be placed on them in a way that clearly indicates
+                        hierarchy.
+                    </p>
+                    <ul class="card-body-text">
+                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                    </ul>
+                    <details class="card-body-text">
+                        <summary class="m-b-1">ingredients</summary>
+                        Notices are factual and to-the-point. The language used is simple and formal, not flowery.
+                        They are put up on display boards in schools or in public places.
+                    </details>
+                    <div class="card-body-footer">
+                        <div class="card-footer-left-container">
+                            <span class="card-left-text">
+                                11<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-footer-center-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons md-36">
+                                    remove_circle
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta">
+                                <span class="material-icons md-36">
+                                    add_circle
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-footer-right-container">
+                            <button class="card-cta">
+                                <span class="material-icons md-36">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            11<sup>€90</sup>
+                        </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-cta">
+                            <span class="material-icons md-36">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+            <!--CARD CAROUSEL-->
+
+            <!--CARD Facing-->
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">facing card</h4>
                     <button class="card-cta open btn-circle-s" data-card="8">
                         <span class="material-icons md-36">
                             more_horizontal
@@ -799,7 +819,7 @@
                     </div>
                 </footer>
             </article>
-                 <!--CARD Facing-->
+            <!--CARD Facing-->
 
         </section>
 

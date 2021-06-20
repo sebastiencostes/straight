@@ -11,7 +11,12 @@
 @use "z-index" as z;
 
 %card-shared {
-  @include b.border(c.$carbon);
+  @include c.dark-theme() {
+    @include b.border(c.$text-dark);
+  }
+  @include c.light-theme() {
+    @include b.border(c.$carbon);
+  }
   @include fx.d-flex();
   @include h.height(100%);
   @include pos.position(relative);
@@ -29,7 +34,7 @@
       flex: 1 0 50%;
     }
     & .card-title {
-      font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
+      font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
     }
     & .card-img-container {
       @include b.b-right(c.$carbon);
@@ -55,7 +60,7 @@
       flex: 1 0 75%;
     }
     & .card-title {
-      font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
+      font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
     }
     & .card-img-container {
       @include b.b-right(c.$carbon);
@@ -71,7 +76,7 @@
     }
   }
   &:hover {
-    @include u.b-shadow-s-hovered();
+    @include u.b-shadow-hovered();
   }
 }
 %card-img-container-shared {
@@ -82,7 +87,12 @@
 }
 %card-header-shared,
 %card-body-header-shared {
-  @include b.b-bottom(c.$carbon);
+  @include c.light-theme() {
+    @include b.b-bottom(c.$carbon);
+  }
+  @include c.dark-theme() {
+    @include b.b-bottom(c.$text-dark);
+  }
   @include fx.d-flex();
   @include fx.justify-between();
   @include p.padding(1rem);
@@ -91,7 +101,7 @@
 }
 %card-title-shared,
 %card-body-title-shared {
-  font-size: clamp(2.4rem, 2.3263rem + 0.2632vw, 3rem);
+  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
   &::first-letter {
     @include f.text-transform(capitalize);
   }
@@ -121,7 +131,12 @@
   @include fx.justify-between();
   @include fx.align-items(center);
   @include p.padding(1rem);
-  @include b.b-top(c.$carbon);
+  @include c.dark-theme() {
+   @include b.b-top(c.$text-dark);
+  }
+  @include c.light-theme() {
+    @include b.b-top(c.$carbon);
+   }
   @include h.height(6rem);
 }
 %card-body-footer-shared {
@@ -193,69 +208,16 @@ Theme
 */
 @include c.dark-theme {
   .card {
-    background-color: c.$black-light;
-    &-header {
-      background-color: c.$black-medium;
-      color: c.$text-dark;
-    }
-    &-title {
-      color: c.$text-dark;
-    }
-    &-footer {
-      background-color: c.$black-light;
-      &-cta {
-        background-color: c.$transparent;
-        color: c.$text-dark;
-      }
-    }
     &-body {
-      background-color: c.$black-light;
-      &-text {
-        color: c.$text-dark;
-      }
-      &-info-qty-cta {
-        background-color: c.$transparent;
-      }
-    }
-    .close {
-      background-color: c.$transparent;
+      background-color: c.$black-dark;
     }
   }
 }
 
 @include c.light-theme {
   .card {
-    // background-color: c.$white-medium;
-    // &-header {
-    //   background-color: c.$white-medium;
-    //   &-cta {
-    //     color: c.$text-light;
-    //   }
-    // }
-    // &-title {
-    //   color: c.$text-light;
-    // }
     &-body {
       background-color: c.$white;
-      &-text {
-        color: c.$text-light;
-      }
-      &-info-qty-cta {
-        background-color: c.$transparent;
-      }
-    }
-    // &-footer {
-    //   background-color: c.$white-light;
-    //   &-cta {
-    //     background-color: c.$transparent;
-    //     color: c.$text-light;
-    //   }
-    // }
-    // &-info-text {
-    //   color: c.$text-light;
-    //}
-    .close {
-      background-color: c.$transparent;
     }
   }
 }

@@ -168,7 +168,7 @@
   background-color: transparent;
   border: 1px solid transparent;
   padding: .375rem .75rem;
-  font-size: 1.6rem;
+  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
   &-red {
     background-color: c.$red;
     color: c.$white;
@@ -318,12 +318,12 @@ scheme colors
 */
 @media (prefers-color-scheme: dark) {
   button {
-    background-color: c.$black-ultra-light;
+    //background-color: c.$black-ultra-light;
   }
 }
 
 @media (prefers-color-scheme: light) {
   button {
-    background-color: c.$white-ultra-light;
+    //background-color: c.$white-ultra-light;
   }
 }

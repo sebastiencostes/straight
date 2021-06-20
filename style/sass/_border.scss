@@ -1,10 +1,11 @@
 @use "color" as c;
+@use "padding"as p;
 
 @mixin border($color) {
   border: solid 1px $color;
 }
 .border {
-  @include border(c.$carbon)
+  @include border(c.$carbon);
 }
 /*
 border direction
@@ -24,20 +25,20 @@ border direction
 @mixin b-left($color) {
   border-left: solid 1px $color;
 }
-.b{
+.b {
   &-top {
-    @include b-top(c.$carbon)
+    @include b-top(c.$carbon);
   }
   &-right {
-    @include b-top(c.$carbon)
+    @include b-top(c.$carbon);
   }
   &-bottom {
-    @include b-top(c.$carbon)
+    @include b-top(c.$carbon);
   }
   &-left {
-    @include b-top(c.$carbon)
+    @include b-top(c.$carbon);
   }
-} 
+}
 /*
 border-radius
 */
@@ -71,4 +72,61 @@ no border
 .no-b {
   @include no-border;
 }
-
+/*
+.note
+*/
+.note-black {
+  @include b-left(c.$carbon);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-blue {
+  @include b-left(c.$blue);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-red {
+  @include b-left(c.$red);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-green {
+  @include b-left(c.$green);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-pink {
+  @include b-left(c.$pink);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-purple {
+  @include b-left(c.$purple);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-navy {
+  @include b-left(c.$navy);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-orange {
+  @include b-left(c.$orange);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-yellow {
+  @include b-left(c.$yellow);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-brown {
+  @include b-left(c.$brown);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-grey {
+  @include b-left(c.$grey);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
