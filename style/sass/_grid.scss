@@ -2,14 +2,12 @@
 @use "device" as d;
 
 @mixin d-grid {
-  display: -ms-grid;
   display: grid;
 }
 .d-grid {
   @include d-grid();
 }
 @mixin d-inline-grid() {
-  display: -ms-inline-grid;
   display: inline-grid;
 }
 .d-inline-grid {
@@ -83,7 +81,6 @@ grid-template-columns
 
 @for $i from 1 through 16 {
   .g-col-#{$i} {
-    -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
     grid-template-columns: (repeat(#{$i}, 1fr));
   }
 }
@@ -91,7 +88,6 @@ grid-template-columns
 @include d.phone {
   @for $i from 1 through 16 {
     .g-col-s-#{$i} {
-      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
       grid-template-columns: (repeat(#{$i}, 1fr));
     }
   }
@@ -100,7 +96,6 @@ grid-template-columns
 @include d.tablet-portrait {
   @for $i from 1 through 16 {
     .g-col-m-#{$i} {
-      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
       grid-template-columns: (repeat(#{$i}, 1fr));
     }
   }
@@ -109,7 +104,6 @@ grid-template-columns
 @include d.tablet-landscape {
   @for $i from 1 through 16 {
     .g-col-l-#{$i} {
-      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
       grid-template-columns: (repeat(#{$i}, 1fr));
     }
   }
@@ -118,7 +112,6 @@ grid-template-columns
 @include d.laptop {
   @for $i from 1 through 16 {
     .g-col-xl-#{$i} {
-      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
       grid-template-columns: (repeat(#{$i}, 1fr));
     }
   }
@@ -127,7 +120,6 @@ grid-template-columns
 @include d.desktop {
   @for $i from 1 through 16 {
     .g-col-xxl-#{$i} {
-      -ms-grid-columns: (#{"("+1fr+")"}[#{$i}]);
       grid-template-columns: (repeat(#{$i}, 1fr));
     }
   }

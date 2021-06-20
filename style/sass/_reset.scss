@@ -4,7 +4,7 @@
 ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  scrollbar-width: none !important;
+  //scrollbar-width: none !important;
 }
 
 html {
@@ -245,10 +245,13 @@ abbr[title] {
   text-decoration: underline dotted;
 }
 
-button {
+button,
+a.btn {
   border: 0;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
+  user-select: none;
   vertical-align: middle;
 }
 
@@ -358,18 +361,18 @@ ul {
   }
   a,
   nav ul li {
-    color: c.$blue;
+    color: c.$link;
   }
 }
 
 @include c.light-theme {
   body {
     color: c.$text-light;
-    background: c.$white-dark;
+    //background: c.$white-dark;
   }
   a,
   nav ul li {
-    color: c.$blue;
+    color: c.$link;
   }
 }
 

@@ -1,3 +1,8 @@
+@use "color" as c;
+$time: .28s;
+@mixin transition($property, $time) {
+  transition: $property $time;
+}
 @mixin d-none {
   display: none;
 }
@@ -16,3 +21,49 @@
 .d-inline-block {
   @include d-inline-block;
 }
+@mixin b-shadow-s {
+  box-shadow: 0 5px 10px c.$color-shadow;
+}
+
+@mixin b-shadow-m {
+  box-shadow: 0 15px 10px c.$color-shadow;
+}
+
+@mixin b-shadow-s-hovered {
+  @include transition(box-shadow, $time);
+  box-shadow: 10px 15px 10px c.$color-shadow;
+}
+
+@mixin b-shadow-l {
+  box-shadow: 0 25px 10px c.$color-shadow;
+}
+
+@mixin b-shadow-xl {
+  box-shadow: 0 40px 10px c.$color-shadow;
+}
+.b-shadow-s {
+  @include b-shadow-s();
+}
+.b-shadow-s-hoverable {
+  @include b-shadow-s();
+  &:hover {
+    @include transition(box-shadow, $time);
+    @include b-shadow-s-hovered();
+  }
+}
+.b-shadow-m {
+  @include b-shadow-m();
+}
+
+.b-shadow-l {
+  @include b-shadow-l();
+}
+
+.b-shadow-xl {
+  @include b-shadow-xl();
+  &:hover {
+    @include transition(box-shadow, $time);
+    @include b-shadow-s-hovered();
+  }
+}
+

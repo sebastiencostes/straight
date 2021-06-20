@@ -15,10 +15,8 @@
 relative to screen device
 */
 @mixin container-screen() {
-  @include d.tablet-portrait {
     @include m.margin(0 auto);
     @include w.width(calc(100vw - 4rem));
-  }
 }
 .container-screen {
   @include container-screen();

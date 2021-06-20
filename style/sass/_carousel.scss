@@ -1,14 +1,13 @@
 @use "position" as p;
-@use "margin" as m;
 
 %carousel-slide-shared {
   @include p.position(relative);
+  animation-name: carousel;
+  animation-duration: 0.28s;
 }
 %carousel-cta-shared {
-  @include m.margin-direction(top, -2.2rem);
   @include p.position(absolute);
-  cursor: pointer;
-  top: 50%;
+  top: calc(50% - 2.2rem);
   user-select: none;
 }
 %carousel-next-shared {
@@ -16,6 +15,7 @@
 }
 
 .carousel {
+  overflow: hidden;
   &-slide {
     @extend %carousel-slide-shared;
   }
@@ -24,5 +24,23 @@
   }
   &-next {
     @extend %carousel-next-shared;
+  }
+}
+
+@-webkit-keyframes carousel {
+  from {
+    transform: scaleX(-1);
+  }
+  to {
+    ransform: scaleX(1);
+  }
+}
+
+@keyframes carousel {
+  from {
+    transform: scaleX(-1);
+  }
+  to {
+    ransform: scaleX(1);
   }
 }

@@ -1,5 +1,5 @@
-const controls = document.querySelectorAll(".carousel-cta");
 const carousels = document.querySelectorAll(".carousel");
+const controls = document.querySelectorAll(".carousel-cta");
 const arrayCarousels = [];
 let currentIndex = 1;
 
@@ -43,9 +43,9 @@ carousel = () => {
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    //get all id to launch straightCarousel()
+    //get all id to auto launch straightCarousel()
     for (let id of arrayCarousels) {
-      straightCarousel(id, 1);
+      straightCarousel(id, currentIndex);
     }
   });
 };

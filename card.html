@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
     <title>Straight | Card</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
     <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
     <link rel="preload" href="style/css/style.css" as="style">
@@ -14,12 +16,12 @@
 </head>
 
 <body>
-<nav>
-    <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="carousel.html">carousel</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="carousel.html">carousel</a></li>
+        </ul>
+    </nav>
     <main class="container-screen">
 
         <header class="g-col p-2">
@@ -32,9 +34,384 @@
                     Card models
                 </h2>
             </article>
+        </section>
+
+        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
+
+            <!--CARD SIMPLE-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">simple card</h3>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/grenade.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/grenade.jpg"
+                            alt="Photo de Engin Akyurt provenant de Pexels">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            this is a simple text card
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <!--CARD SIMPLE-->
+
+            <!--CARD ACTION-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">card action</h3>
+                    <button class="card-cta open btn-circle-s" data-card="1">
+                        <span class="material-icons md-36">
+                            more_horizontal
+                        </span>
+                    </button>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/lime.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/lime.jpg"
+                            alt="Photo de Jamal Yahya provenant de Pexels">
+                    </picture>
+                </figure>
+                <aside class="card-body d-none" data-card="1">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="">card action</a>
+                        </h4>
+                        <button class="card-cta close" data-card="1">
+                            <span class="material-icons md-36">
+                                cancel
+                            </span>
+                        </button>
+                    </div>
+                    <p class="card-body-text t-justify">
+                        Cards are surfaces that display content and actions on a single topic.
+                        They should be easy to scan for relevant and actionable information.
+                        Elements, like text and images, should be placed on them in a way that clearly indicates
+                        hierarchy.
+                    </p>
+                    <div class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                6<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons md-36">
+                                    remove_circle
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons md-36">
+                                    add_circle
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons md-36">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            6<sup>€90</sup>
+                        </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-footer-cta">
+                            <span class="material-icons md-36">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+            <!--CARD ACTION-->
+
+            <!--CARD-L-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">linked card</h3>
+                    <button class="card-cta open btn-circle-s" data-card="3">
+                        <span class="material-icons md-36">
+                            more_horizontal
+                        </span>
+                    </button>
+                </header>
+                <a href="#" class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
+                            alt="Photo de Engin Akyurt provenant de Pexels">
+                    </picture>
+                </a>
+                <aside class="card-body d-none" data-card="3">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="">linked card</a>
+                        </h4>
+                        <button class="card-cta close" data-card="3">
+                            <span class="material-icons md-36">
+                                cancel
+                            </span>
+                        </button>
+                    </div>
+                    <!-- <p class="card-body-text t-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                    </p> -->
+                    <div class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                1790€
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons md-36">
+                                    remove_circle
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons md-36">
+                                    add_circle
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons md-36">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            1790€
+                        </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-footer-cta">
+                            <span class="material-icons md-36">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+            <!--CARD L-->
+
+                        <!--CARD-CAROUSEL-->
+                        <article class="card">
+                            <header class="card-header">
+                                <h3 class="card-title t-ellipsis">card carousel</h3>
+                                <button class="card-cta open btn-circle-s" data-card="2">
+                                    <span class="material-icons md-36">
+                                        more_horizontal
+                                    </span>
+                                </button>
+                            </header>
+                            <figure id="cardCarousel" class="carousel card-img-container">
+                                <picture class="carousel-slide">
+                                    <img class="responsive-img" src="/assets/img/card/meal.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
+                                </picture>
+                                <picture class="carousel-slide">
+                                    <img class="responsive-img" src="/assets/img/card/eggs.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
+                                </picture>
+                                <picture class="carousel-slide">
+                                    <img class="responsive-img" src="/assets/img/card/toast.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
+                                </picture>
+                                <picture class="carousel-slide">
+                                    <img class="responsive-img" src="/assets/img/card/pancake.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
+                                </picture>
+                                <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
+                                    <span class="t-overlay material-icons md-36 md-light">
+                                        navigate_before
+                                    </span>
+                                </button>
+                                <button class="carousel-cta carousel-next btn-square-m bg-transparent">
+                                    <span class="t-overlay material-icons md-36 md-light">
+                                        navigate_next
+                                    </span>
+                                </button>
+                            </figure>
+                            <aside class="card-body d-none" data-card="2">
+                                <div class="card-body-header">
+                                    <h4 class="card-body-title t-ellipsis">
+                                        <a href="#">card carousel</a>
+                                    </h4>
+                                    <button class="card-cta close p-0" data-card="2">
+                                        <span class="material-icons md-36">
+                                            cancel
+                                        </span>
+                                    </button>
+                                </div>
+                                <p class="card-body-text t-justify">
+                                    Cards are surfaces that display content and actions on a single topic.
+                                    They should be easy to scan for relevant and actionable information.
+                                    Elements, like text and images, should be placed on them in a way that clearly indicates
+                                    hierarchy.
+                                </p>
+                                <ul class="card-body-text">
+                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                                </ul>
+                                <details class="card-body-text">
+                                    <summary class="m-b-1">ingredients</summary>
+                                    Notices are factual and to-the-point. The language used is simple and formal, not flowery.
+                                    They are put up on display boards in schools or in public places.
+                                </details>
+                                <div class="card-body-footer">
+                                    <div class="card-footer-left-container">
+                                        <span class="card-left-text">
+                                            11<sup>€90</sup>
+                                        </span>
+                                    </div>
+                                    <div class="card-footer-center-container">
+                                        <button class="card-footer-cta">
+                                            <span class="material-icons md-36">
+                                                remove_circle
+                                            </span>
+                                        </button>
+                                        <span class="m-l-2 m-r-2">1</span>
+                                        <button class="card-cta">
+                                            <span class="material-icons md-36">
+                                                add_circle
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="card-footer-right-container">
+                                        <button class="card-cta">
+                                            <span class="material-icons md-36">
+                                                shopping_cart
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </aside>
+                            <footer class="card-footer">
+                                <div class="card-footer-left-container">
+                                    <span class="card-left-text">
+                                        11<sup>€90</sup>
+                                    </span>
+                                </div>
+                                <div class="card-footer-right-container">
+                                    <button class="card-cta">
+                                        <span class="material-icons md-36">
+                                            shopping_cart
+                                        </span>
+                                    </button>
+                                </div>
+                            </footer>
+                        </article>
+                        <!--CARD CAROUSEL-->
+
+                        <!--CARD Facing-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">facing card</h3>
+                    <button class="card-cta open btn-circle-s" data-card="4">
+                        <span class="material-icons md-36">
+                            more_horizontal
+                        </span>
+                    </button>
+                </header>
+                <a href="#" class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/salad.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/salad.jpg"
+                            alt="Photo de Engin Akyurt provenant de Pexels">
+                    </picture>
+                </a>
+                <aside class="card-body d-none" data-card="4">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="">facing card</a>
+                        </h4>
+                        <button class="card-cta close" data-card="4">
+                            <span class="material-icons md-36">
+                                cancel
+                            </span>
+                        </button>
+                    </div>
+                    <!-- <p class="card-body-text t-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                    </p> -->
+                    <div class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                1790€
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons md-36">
+                                    remove_circle
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons md-36">
+                                    add_circle
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons md-36">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            1790€
+                        </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-footer-cta">
+                            <span class="material-icons md-36">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+                 <!--CARD Facing-->
+
+        </section>
 
 
-
+        <section>
+            <article>
+                <h2>
+                    Card models with variations
+                </h2>
+            </article>
         </section>
 
         <section class="t-right">
@@ -57,7 +434,7 @@
             </button>
         </section>
 
-        <section id="cardContainer" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
+        <section id="cardGallery" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
 
             <!--CARD SIMPLE-->
             <article class="card">
@@ -66,15 +443,15 @@
                 </header>
                 <figure class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/img-carousel-1.jpg"
-                            alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                        <source srcset="/assets/img/card/grenade.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/grenade.jpg"
+                            alt="Photo de Engin Akyurt provenant de Pexels">
                     </picture>
                 </figure>
                 <footer class="card-footer">
-                    <div class="card-info-container">
-                        <span class="card-info-text">
-                            simple text card
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            this is a simple text card
                         </span>
                     </div>
                 </footer>
@@ -85,28 +462,29 @@
             <article class="card">
                 <header class="card-header">
                     <h3 class="card-title t-ellipsis">card action</h3>
-                    <button class="card-header-cta btn-circle-s" data-card="1">
-                        <span class="material-icons">
+                    <button class="card-cta open btn-circle-s" data-card="5">
+                        <span class="material-icons md-36">
                             more_horizontal
                         </span>
                     </button>
                 </header>
                 <figure class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/img-carousel-1.jpg"
-                            alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                        <source srcset="/assets/img/card/lime.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/lime.jpg"
+                            alt="Photo de Jamal Yahya provenant de Pexels">
                     </picture>
                 </figure>
-                <aside class="card-body d-none" data-card="1">
-                    <button class="card-header-cta close t-right m-l-auto" data-card="1">
-                        <span class="material-icons md-36">
-                            cancel
-                        </span>
-                    </button>
+                <aside class="card-body d-none" data-card="5">
                     <div class="card-body-header">
-                        <h4 class="card-body-title"><a href="#">card action</a>
+                        <h4 class="card-body-title">
+                            <a href="">card action</a>
                         </h4>
+                        <button class="card-cta close" data-card="5">
+                            <span class="material-icons md-36">
+                                cancel
+                            </span>
+                        </button>
                     </div>
                     <p class="card-body-text t-justify">
                         Cards are surfaces that display content and actions on a single topic.
@@ -114,20 +492,10 @@
                         Elements, like text and images, should be placed on them in a way that clearly indicates
                         hierarchy.
                     </p>
-                    <ul>
-                        <li>free</li>
-                        <li>new</li>
-                        <li>green</li>
-                    </ul>
-                    <details class="card-body-detail">
-                        <summary class="m-b-1">details</summary>
-                        Notices are factual and to-the-point. The language used is simple and formal, not flowery.
-                        They are put up on display boards in schools or in public places.
-                    </details>
                     <div class="card-body-footer">
-                        <div class="card-body-info-container">
-                            <span class="card-info-text card-info-price">
-                                17<sup>€90</sup>
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                6<sup>€90</sup>
                             </span>
                         </div>
                         <div class="card-body-info-qty">
@@ -143,7 +511,7 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="card-body-cta-container">
+                        <div class="card-body-footer-right-container">
                             <button class="card-footer-cta">
                                 <span class="material-icons md-36">
                                     shopping_cart
@@ -153,12 +521,12 @@
                     </div>
                 </aside>
                 <footer class="card-footer">
-                    <div class="card-info-container">
-                        <span class="card-info-text card-info-price">
-                            17<sup>€90</sup>
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            6<sup>€90</sup>
                         </span>
                     </div>
-                    <div class="card-cta-container">
+                    <div class="card-footer-right-container">
                         <button class="card-footer-cta">
                             <span class="material-icons md-36">
                                 shopping_cart
@@ -169,134 +537,33 @@
             </article>
             <!--CARD ACTION-->
 
-            <!--CARD-CAROUSEL-->
-            <article class="card">
-                <header class="card-header">
-                    <h3 class="card-title t-ellipsis">card carousel</h3>
-                    <button class="card-header-cta btn-circle-s" data-card="2">
-                        <span class="material-icons">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <figure id="cardCarousel" class="carousel pos-relative m-b-10">
-                    <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/img-carousel-1.jpg" alt="">
-                    </picture>
-                    <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/img-carousel-2.jpg" alt="">
-                    </picture>
-                    <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/img-carousel-3.jpg" alt="">
-                    </picture>
-                    <button class="carousel-cta carousel-prev btn-square-m bg-transparent"> 
-                        <span class="t-overlay material-icons md-36 md-light">
-                            navigate_before
-                        </span>
-                    </button>
-                    <button class="carousel-cta carousel-next btn-square-m bg-transparent"> 
-                        <span class="t-overlay material-icons md-36 md-light">
-                            navigate_next
-                        </span>
-                    </button>
-                </figure>
-                <aside class="card-body d-none" data-card="2">
-                    <button class="card-header-cta close t-right m-l-auto" data-card="2">
-                        <span class="material-icons md-36">
-                            cancel
-                        </span>
-                    </button>
-                    <div class="card-body-header">
-                        <h4 class="card-body-title"><a href="#">card carousel</a>
-                        </h4>
-                    </div>
-                    <p class="card-body-text t-justify">
-                        Cards are surfaces that display content and actions on a single topic.
-                        They should be easy to scan for relevant and actionable information.
-                        Elements, like text and images, should be placed on them in a way that clearly indicates
-                        hierarchy.
-                    </p>
-                    <ul>
-                        <li>free</li>
-                        <li>new</li>
-                        <li>green</li>
-                    </ul>
-                    <details class="card-body-detail">
-                        <summary class="m-b-1">details</summary>
-                        Notices are factual and to-the-point. The language used is simple and formal, not flowery.
-                        They are put up on display boards in schools or in public places.
-                    </details>
-                    <div class="card-body-footer">
-                        <div class="card-body-info-container">
-                            <span class="card-info-text card-info-price">
-                                17<sup>€90</sup>
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-cta-container">
-                            <button class="card-footer-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-info-container">
-                        <span class="card-info-text card-info-price">
-                            17<sup>€90</sup>
-                        </span>
-                    </div>
-                    <div class="card-cta-container">
-                        <button class="card-footer-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-            <!--CARD CAROUSEL-->
-
             <!--CARD-L-->
             <article class="card">
                 <header class="card-header">
-                    <h3 class="card-title t-ellipsis">list card</h3>
-                    <button class="card-header-cta btn-circle-s" data-card="3">
-                        <span class="material-icons">
+                    <h3 class="card-title t-ellipsis">linked card</h3>
+                    <button class="card-cta open btn-circle-s" data-card="6">
+                        <span class="material-icons md-36">
                             more_horizontal
                         </span>
                     </button>
                 </header>
                 <a href="#" class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/img-carousel-1.jpg"
-                            alt="Photo de guitare par Gustavo Borges provenant de Pexels">
+                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
+                            alt="Photo de Engin Akyurt provenant de Pexels">
                     </picture>
                 </a>
-                <aside class="card-body d-none" data-card="3">
-                    <button class="card-header-cta close t-right" data-card="3">
-                        <span class="material-icons">
-                            cancel
-                        </span>
-                    </button>
+                <aside class="card-body d-none" data-card="6">
                     <div class="card-body-header">
-                        <h4 class="card-body-title"><a href="#">list card</a></h4>
-
+                        <h4 class="card-body-title">
+                            <a href="">linked card</a>
+                        </h4>
+                        <button class="card-cta close" data-card="6">
+                            <span class="material-icons md-36">
+                                cancel
+                            </span>
+                        </button>
                     </div>
                     <!-- <p class="card-body-text t-justify">
                         Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
@@ -305,27 +572,27 @@
                         Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
                     </p> -->
                     <div class="card-body-footer">
-                        <div class="card-body-info-container">
-                            <span class="card-info-text">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
                                 1790€
                             </span>
                         </div>
                         <div class="card-body-info-qty">
                             <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     remove_circle
                                 </span>
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
                             <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     add_circle
                                 </span>
                             </button>
                         </div>
-                        <div class="card-body-cta-container">
+                        <div class="card-body-footer-right-container">
                             <button class="card-footer-cta">
-                                <span class="material-icons">
+                                <span class="material-icons md-36">
                                     shopping_cart
                                 </span>
                             </button>
@@ -333,12 +600,12 @@
                     </div>
                 </aside>
                 <footer class="card-footer">
-                    <div class="card-info-container">
-                        <span class="card-info-text">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
                             1790€
                         </span>
                     </div>
-                    <div class="card-cta-container">
+                    <div class="card-footer-right-container">
                         <button class="card-footer-cta">
                             <span class="material-icons md-36">
                                 shopping_cart
@@ -347,6 +614,192 @@
                     </div>
                 </footer>
             </article>
+            <!--CARD L-->
+
+                        <!--CARD-CAROUSEL-->
+                        <article class="card">
+                            <header class="card-header">
+                                <h3 class="card-title t-ellipsis">card carousel</h3>
+                                <button class="card-cta open btn-circle-s" data-card="7">
+                                    <span class="material-icons md-36">
+                                        more_horizontal
+                                    </span>
+                                </button>
+                            </header>
+                            <figure id="cardCarousel2" class="carousel card-img-container">
+                                <picture class="carousel-slide">
+                                    <img class="responsive-img" src="/assets/img/card/meal.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
+                                </picture>
+                                <picture class="carousel-slide">
+                                    <img class="responsive-img" src="/assets/img/card/eggs.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
+                                </picture>
+                                <picture class="carousel-slide">
+                                    <img class="responsive-img" src="/assets/img/card/toast.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
+                                </picture>
+                                <picture class="carousel-slide">
+                                    <img class="responsive-img" src="/assets/img/card/pancake.jpg" alt="Photo de Daniela Constantini provenant de Pexels">
+                                </picture>
+                                <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
+                                    <span class="t-overlay material-icons md-36 md-light">
+                                        navigate_before
+                                    </span>
+                                </button>
+                                <button class="carousel-cta carousel-next btn-square-m bg-transparent">
+                                    <span class="t-overlay material-icons md-36 md-light">
+                                        navigate_next
+                                    </span>
+                                </button>
+                            </figure>
+                            <aside class="card-body d-none" data-card="7">
+                                <div class="card-body-header">
+                                    <h4 class="card-body-title t-ellipsis">
+                                        <a href="#">card carousel</a>
+                                    </h4>
+                                    <button class="card-cta close p-0" data-card="7">
+                                        <span class="material-icons md-36">
+                                            cancel
+                                        </span>
+                                    </button>
+                                </div>
+                                <p class="card-body-text t-justify">
+                                    Cards are surfaces that display content and actions on a single topic.
+                                    They should be easy to scan for relevant and actionable information.
+                                    Elements, like text and images, should be placed on them in a way that clearly indicates
+                                    hierarchy.
+                                </p>
+                                <ul class="card-body-text">
+                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                                    <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                                </ul>
+                                <details class="card-body-text">
+                                    <summary class="m-b-1">ingredients</summary>
+                                    Notices are factual and to-the-point. The language used is simple and formal, not flowery.
+                                    They are put up on display boards in schools or in public places.
+                                </details>
+                                <div class="card-body-footer">
+                                    <div class="card-footer-left-container">
+                                        <span class="card-left-text">
+                                            11<sup>€90</sup>
+                                        </span>
+                                    </div>
+                                    <div class="card-footer-center-container">
+                                        <button class="card-footer-cta">
+                                            <span class="material-icons md-36">
+                                                remove_circle
+                                            </span>
+                                        </button>
+                                        <span class="m-l-2 m-r-2">1</span>
+                                        <button class="card-cta">
+                                            <span class="material-icons md-36">
+                                                add_circle
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="card-footer-right-container">
+                                        <button class="card-cta">
+                                            <span class="material-icons md-36">
+                                                shopping_cart
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </aside>
+                            <footer class="card-footer">
+                                <div class="card-footer-left-container">
+                                    <span class="card-left-text">
+                                        11<sup>€90</sup>
+                                    </span>
+                                </div>
+                                <div class="card-footer-right-container">
+                                    <button class="card-cta">
+                                        <span class="material-icons md-36">
+                                            shopping_cart
+                                        </span>
+                                    </button>
+                                </div>
+                            </footer>
+                        </article>
+                        <!--CARD CAROUSEL-->
+
+                        <!--CARD Facing-->
+            <article class="card">
+                <header class="card-header">
+                    <h3 class="card-title t-ellipsis">facing card</h3>
+                    <button class="card-cta open btn-circle-s" data-card="8">
+                        <span class="material-icons md-36">
+                            more_horizontal
+                        </span>
+                    </button>
+                </header>
+                <a href="#" class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/salad.jpg" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/salad.jpg"
+                            alt="Photo de Engin Akyurt provenant de Pexels">
+                    </picture>
+                </a>
+                <aside class="card-body d-none" data-card="8">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="">facing card</a>
+                        </h4>
+                        <button class="card-cta close" data-card="8">
+                            <span class="material-icons md-36">
+                                cancel
+                            </span>
+                        </button>
+                    </div>
+                    <!-- <p class="card-body-text t-justify">
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
+                    </p> -->
+                    <div class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                1790€
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons md-36">
+                                    remove_circle
+                                </span>
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-body-info-qty-cta">
+                                <span class="material-icons md-36">
+                                    add_circle
+                                </span>
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-footer-cta">
+                                <span class="material-icons md-36">
+                                    shopping_cart
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            1790€
+                        </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-footer-cta">
+                            <span class="material-icons md-36">
+                                shopping_cart
+                            </span>
+                        </button>
+                    </div>
+                </footer>
+            </article>
+                 <!--CARD Facing-->
 
         </section>
 
@@ -354,10 +807,7 @@
     <footer>
         footer
     </footer>
-    <script defer src="node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
-    <script defer src="node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
-    <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
-    <script src="script/main.js"></script>
+    <script src="script/card.js"></script>
     <script src="script/carousel.js"></script>
 </body>
 

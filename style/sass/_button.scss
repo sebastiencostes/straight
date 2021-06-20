@@ -4,6 +4,7 @@
 @use "padding" as p;
 @use "height" as h;
 @use "width" as w;
+@use "utility" as u;
 /*
 .btn
 */
@@ -30,7 +31,7 @@
 }
 @mixin btn-l {
   @include f.font-size(4.8rem);
-   @include p.padding(1rem);
+  @include p.padding(1rem);
 }
 .btn-l {
   @include btn-l();
@@ -155,7 +156,166 @@
 .btn-circle-xxl {
   @include btn-circle-xxl();
 }
-
+/*
+.btn classes & colors
+*/
+.btn {
+  @include u.transition(background-color, u.$time);
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: c.$carbon;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1.6rem;
+  &-red {
+    background-color: c.$red;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$red-dark;
+    }
+    &:disabled {
+      background-color: c.$red-light;
+    }
+  }
+  &-blue {
+    background-color: c.$blue;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$blue-dark;
+    }
+    &:disabled {
+      background-color: c.$blue-light;
+    }
+  }
+  &-yellow {
+    background-color: c.$yellow;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$yellow-dark;
+    }
+    &:disabled {
+      background-color: c.$yellow-light;
+    }
+  }
+  &-orange {
+    background-color: c.$orange;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$orange-dark;
+    }
+    &:disabled {
+      background-color: c.$orange-light;
+    }
+  }
+  &-purple {
+    background-color: c.$purple;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$purple-dark;
+    }
+    &:disabled {
+      background-color: c.$purple-light;
+    }
+  }
+  &-pink {
+    background-color: c.$pink;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$pink-dark;
+    }
+    &:disabled {
+      background-color: c.$pink-light;
+    }
+  }
+  &-green {
+    background-color: c.$green;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$green-dark;
+    }
+    &:disabled {
+      background-color: c.$green-light;
+    }
+  }
+  &-black {
+    background-color: c.$carbon;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$carbon-dark;
+    }
+    &:disabled {
+      background-color: c.$carbon-light;
+    }
+  }
+  &-navy {
+    background-color: c.$navy;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$navy-dark;
+    }
+    &:disabled {
+      background-color: c.$navy-light;
+    }
+  }
+  &-grey {
+    background-color: c.$grey;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$grey-dark;
+    }
+    &:disabled {
+      background-color: c.$grey-light;
+    }
+  }
+  &-brown {
+    background-color: c.$brown;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$brown-dark;
+    }
+    &:disabled {
+      background-color: c.$brown-light;
+    }
+  }
+}
+/*
+scheme colors
+*/
 @media (prefers-color-scheme: dark) {
   button {
     background-color: c.$black-ultra-light;

@@ -1,8 +1,70 @@
-@import "color";
-@mixin border($type, $dim, $color) {
-  border: $type, $dim, $color;
+@use "color" as c;
+
+@mixin border($color) {
+  border: solid 1px $color;
+}
+.border {
+  @include border(c.$carbon)
+}
+/*
+border direction
+*/
+@mixin b-top($color) {
+  border-top: solid 1px $color;
 }
 
+@mixin b-right($color) {
+  border-right: solid 1px $color;
+}
+
+@mixin b-bottom($color) {
+  border-bottom: solid 1px $color;
+}
+
+@mixin b-left($color) {
+  border-left: solid 1px $color;
+}
+.b{
+  &-top {
+    @include b-top(c.$carbon)
+  }
+  &-right {
+    @include b-top(c.$carbon)
+  }
+  &-bottom {
+    @include b-top(c.$carbon)
+  }
+  &-left {
+    @include b-top(c.$carbon)
+  }
+} 
+/*
+border-radius
+*/
+@mixin b-radius($value) {
+  border-radius: $value;
+}
+.b-radius-s {
+  @include b-radius(1rem);
+}
+.b-radius-m {
+  @include b-radius(2rem);
+}
+.b-radius-l {
+  @include b-radius(3rem);
+}
+.b-radius-xl {
+  @include b-radius(4rem);
+}
+/*
+cricle
+*/
+.circle {
+  @include b-radius(50%);
+}
+/*
+no border
+*/
 @mixin no-border {
   border: 0;
 }
@@ -10,10 +72,3 @@
   @include no-border;
 }
 
-@mixin b-radius($value) {
-  border-radius: $value;
-}
-
-.circle {
-  @include b-radius(50%);
-}

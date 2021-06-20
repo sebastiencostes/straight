@@ -1,4 +1,5 @@
 @use "font" as f;
+@use "border" as b;
 @use "color" as c;
 @use "height" as h;
 @use "flexbox" as fx;
@@ -8,9 +9,9 @@
 @use "utility" as u;
 @use "width" as w;
 @use "z-index" as z;
-@use "device" as d;
 
 %card-shared {
+  @include b.border(c.$carbon);
   @include fx.d-flex();
   @include h.height(100%);
   @include pos.position(relative);
@@ -30,7 +31,11 @@
     & .card-title {
       font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
     }
+    & .card-img-container {
+      @include b.b-right(c.$carbon);
+    }
     & .card-footer {
+      @include b.no-border();
       @include fx.items-end();
       @include p.padding(1rem);
       @include pos.position(absolute);
@@ -52,7 +57,11 @@
     & .card-title {
       font-size: clamp(1.6rem, 1.5386rem + 0.2193vw, 2.1rem);
     }
+    & .card-img-container {
+      @include b.b-right(c.$carbon);
+    }
     & .card-footer {
+      @include b.no-border();
       @include fx.align-items(center);
       @include h.height(50%);
       @include p.padding(1rem);
@@ -61,6 +70,9 @@
       bottom: 0;
     }
   }
+  &:hover {
+    @include u.b-shadow-s-hovered();
+  }
 }
 %card-img-container-shared {
   position: relative;
@@ -68,13 +80,17 @@
 %card-img-shared {
   @include w.width(100%);
 }
-%card-header-shared {
+%card-header-shared,
+%card-body-header-shared {
+  @include b.b-bottom(c.$carbon);
   @include fx.d-flex();
   @include fx.justify-between();
   @include p.padding(1rem);
   @include fx.align-items(center);
+  @include h.height(6rem);
 }
-%card-title-shared {
+%card-title-shared,
+%card-body-title-shared {
   font-size: clamp(2.4rem, 2.3263rem + 0.2632vw, 3rem);
   &::first-letter {
     @include f.text-transform(capitalize);
@@ -84,60 +100,50 @@
   @include fx.f-dir-col();
   @include pos.position(absolute);
   @include h.height(100%);
-  @include p.padding(1rem 1rem 1rem);
-  @include d.tablet-portrait {
-    @include p.padding(1rem 2rem 1rem);
-  }
   @include w.width(100%);
   @include z.z-index(1);
   overflow-y: scroll;
   right: 0;
   top: 0;
-  li {
-    list-style: inside;
-  }
 }
-%card-body-text-shared,
-%card-body-title-shared {
+%card-body-text-shared {
   &::first-letter {
     @include f.text-transform(capitalize);
   }
 }
-%card-body-title-shared {
-  font-size: clamp(2.4rem, 2.3263rem + 0.2632vw, 3rem);
-}
 %card-body-text-shared {
-  @include m.margin(1rem 0 0);
-}
-%card-body-detail-shared {
-  @include m.margin(1rem 1rem 2rem 0);
+  @include m.margin(2rem 0 2rem);
+  @include p.padding(0 2rem);
 }
 %card-body-footer-shared,
 %card-footer-shared {
   @include fx.d-flex();
   @include fx.justify-between();
   @include fx.align-items(center);
+  @include p.padding(1rem);
+  @include b.b-top(c.$carbon);
+  @include h.height(6rem);
 }
 %card-body-footer-shared {
   @include m.margin-direction(top, auto);
 }
-%card-footer-shared {
-  @include p.padding(1rem);
-}
-%card-info-text-shared {
+%card-left-text-shared {
   cursor: default;
 }
-%card-info-price-shared {
+%card-sup {
   top: inherit;
   @include f.font-size(0.65em);
   vertical-align: 0.41em;
 }
-%card-footer-cta-shared {
+%card-cta-shared {
   @include p.padding(0);
 }
 
 .card {
   @extend %card-shared;
+  &-cta {
+    @extend %card-cta-shared;
+  }
   &-header {
     @extend %card-header-shared;
   }
@@ -152,14 +158,14 @@
   }
   &-body {
     @extend %card-body-shared;
+    &-header {
+      @extend %card-body-header-shared;
+    }
     &-title {
       @extend %card-body-title-shared;
     }
     &-text {
       @extend %card-body-text-shared;
-    }
-    &-detail {
-      @extend %card-body-detail-shared;
     }
     &-footer {
       @extend %card-body-footer-shared;
@@ -167,15 +173,12 @@
   }
   &-footer {
     @extend %card-footer-shared;
-    &-cta {
-      @extend %card-footer-cta-shared;
-    }
   }
-  &-info-text {
-    @extend %card-info-text-shared;
+  &-left-text {
+    @extend %card-left-text-shared;
   }
-  &-info-price sup {
-    @extend %card-info-price-shared;
+  & sup {
+    @extend %card-sup;
   }
   &-h {
     @extend %-h-shared;
@@ -222,18 +225,18 @@ Theme
 
 @include c.light-theme {
   .card {
-    background-color: c.$white-medium;
-    &-header {
-      background-color: c.$white-medium;
-      &-cta {
-        color: c.$text-light;
-      }
-    }
-    &-title {
-      color: c.$text-light;
-    }
+    // background-color: c.$white-medium;
+    // &-header {
+    //   background-color: c.$white-medium;
+    //   &-cta {
+    //     color: c.$text-light;
+    //   }
+    // }
+    // &-title {
+    //   color: c.$text-light;
+    // }
     &-body {
-      background-color: c.$white-light;
+      background-color: c.$white;
       &-text {
         color: c.$text-light;
       }
@@ -241,16 +244,16 @@ Theme
         background-color: c.$transparent;
       }
     }
-    &-footer {
-      background-color: c.$white-light;
-      &-cta {
-        background-color: c.$transparent;
-        color: c.$text-light;
-      }
-    }
-    &-info-text {
-      color: c.$text-light;
-    }
+    // &-footer {
+    //   background-color: c.$white-light;
+    //   &-cta {
+    //     background-color: c.$transparent;
+    //     color: c.$text-light;
+    //   }
+    // }
+    // &-info-text {
+    //   color: c.$text-light;
+    //}
     .close {
       background-color: c.$transparent;
     }
