@@ -1,0 +1,48 @@
+
+pre {
+    //background: white;
+    clear: both;
+    color: #3aaebf;
+    font-family: 'Inconsolata', monospace;
+    hyphens: none;
+    line-height: 2rem;
+    min-width: 100%;
+    position: relative;
+    word-break: normal;
+    border: 1px solid #787878;
+    border-radius: 4px;
+  }
+  
+  pre[rel]::before {
+    display: flex;
+    padding-top: 0;
+  }
+  
+  pre[rel]::before {
+      left: auto;
+      position: relative;
+      top: auto;
+      width: 30px;
+  }
+  pre[rel]::before {
+      background: #999;
+      color: #f1f8f9;
+      content: attr(rel);
+      left: 0;
+      padding: 1px 0;
+      position: absolute;
+      text-indent: 15px;
+      top: 0;
+      height: 100%;
+      writing-mode: vertical-lr;
+  }
+  
+ 
+  
+  pre code {
+      display: block;
+      font-family: 'Inconsolata', monospace;
+      padding-left:3rem;
+      white-space: pre-wrap;
+      overflow: auto;
+  }

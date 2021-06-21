@@ -161,13 +161,13 @@
 */
 .btn {
   @include u.transition(background-color, u.$time);
-  display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
+  @include u.d-inline-block();
+  @include b.border(c.$transparent);
+  background-color: c.$transparent;
   color: c.$carbon;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
+  font-weight: 400;
+  //line-height: 1.5;
+  //padding: .375rem .75rem;
   font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
   &-red {
     background-color: c.$red;

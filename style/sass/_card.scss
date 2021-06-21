@@ -75,9 +75,6 @@
       bottom: 0;
     }
   }
-  &:hover {
-    @include u.b-shadow-hovered();
-  }
 }
 %card-img-container-shared {
   position: relative;

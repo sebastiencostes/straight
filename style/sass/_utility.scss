@@ -1,5 +1,5 @@
 @use "color" as c;
-$time: .28s;
+$time: 0.28s;
 @mixin transition($property, $time) {
   transition: $property $time;
 }
