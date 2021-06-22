@@ -1,48 +1,50 @@
+@use "color" as c;
+@use "border" as b;
+@use "utility" as u;
+@use "width" as w;
+@use "height" as h;
+@use "padding" as p;
+
+pre[rel]::before {
+  background-color: c.$grey;
+  color: c.$text-dark;
+  content: attr(rel);
+  font-family: "Inconsolata", monospace;
+  font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
+  left: 0;
+  position: absolute;
+  text-indent: 1.5rem;
+  top: 0;
+  @include w.width(100%);
+}
 
 pre {
-    //background: white;
-    clear: both;
-    color: #3aaebf;
-    font-family: 'Inconsolata', monospace;
-    hyphens: none;
-    line-height: 2rem;
-    min-width: 100%;
-    position: relative;
-    word-break: normal;
-    border: 1px solid #787878;
-    border-radius: 4px;
+  background-color: c.$carbon;
+  @include c.dark-theme() {
+    @include b.border(c.$text-dark);
   }
-  
-  pre[rel]::before {
-    display: flex;
-    padding-top: 0;
+  @include c.light-theme() {
+    @include b.border(c.$carbon);
   }
-  
-  pre[rel]::before {
-      left: auto;
-      position: relative;
-      top: auto;
-      width: 30px;
+  clear: both;
+  color: c.$blue;
+  font-family: "Inconsolata", monospace;
+  hyphens: none;
+  line-height: 2rem;
+  @include w.min-width(100%);
+  overflow: auto;
+  position: relative;
+  word-break: normal;
+  &:hover {
+    cursor: pointer;
   }
-  pre[rel]::before {
-      background: #999;
-      color: #f1f8f9;
-      content: attr(rel);
-      left: 0;
-      padding: 1px 0;
-      position: absolute;
-      text-indent: 15px;
-      top: 0;
-      height: 100%;
-      writing-mode: vertical-lr;
-  }
-  
- 
-  
-  pre code {
-      display: block;
-      font-family: 'Inconsolata', monospace;
-      padding-left:3rem;
-      white-space: pre-wrap;
-      overflow: auto;
-  }
+}
+
+pre code {
+  @include u.d-block();
+  font-family: "Inconsolata", monospace;
+  font-size: 1.6rem;
+  overflow: auto;
+  @include p.padding-direction(left, 2rem);
+  white-space: pre;
+}

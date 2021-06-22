@@ -180,3 +180,19 @@ p {
     color: c.$text-light;
   }
 }
+
+@include c.dark-theme {
+  ion-icon  {
+    color: c.$text-dark;
+  }
+}
+
+@include c.light-theme {
+  ion-icon {
+    color: c.$text-light;
+  }
+}
+
+ion-icon {
+  font-size: 4rem;
+}

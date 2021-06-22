@@ -1197,6 +1197,20 @@ p {
     color: #323232;
   }
 }
+@media (prefers-color-scheme: dark) {
+  ion-icon {
+    color: #eee;
+  }
+}
+@media (prefers-color-scheme: light) {
+  ion-icon {
+    color: #323232;
+  }
+}
+ion-icon {
+  font-size: 4rem;
+}
+
 /*
 Percent
 */
@@ -13370,6 +13384,7 @@ Rem
   background-color: transparent;
   color: #212121;
   font-weight: 400;
+  line-height: 1rem;
   font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
 }
 .btn-red {
@@ -14692,8 +14707,15 @@ Order
 .card.card-h .card-title {
   font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
 }
-.card.card-h .card-img-container {
-  border-right: solid 1px #212121;
+@media (prefers-color-scheme: dark) {
+  .card.card-h .card-img-container {
+    border-right: solid 1px #eee;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .card.card-h .card-img-container {
+    border-right: solid 1px #212121;
+  }
 }
 .card.card-h .card-footer {
   border: 0;
@@ -14718,8 +14740,15 @@ Order
 .card.card-l .card-title {
   font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
 }
-.card.card-l .card-img-container {
-  border-right: solid 1px #212121;
+@media (prefers-color-scheme: dark) {
+  .card.card-l .card-img-container {
+    border-right: solid 1px #eee;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .card.card-l .card-img-container {
+    border-right: solid 1px #212121;
+  }
 }
 .card.card-l .card-footer {
   border: 0;
@@ -14841,50 +14870,52 @@ Theme
     background-color: #ffffff;
   }
 }
+pre[rel]::before {
+  background-color: #bdbdbd;
+  color: #eee;
+  content: attr(rel);
+  font-family: "Inconsolata", monospace;
+  font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
+  left: 0;
+  position: absolute;
+  text-indent: 1.5rem;
+  top: 0;
+  width: 100%;
+}
+
 pre {
+  background-color: #212121;
   clear: both;
-  color: #3aaebf;
+  color: #0091ea;
   font-family: "Inconsolata", monospace;
   hyphens: none;
   line-height: 2rem;
   min-width: 100%;
+  overflow: auto;
   position: relative;
   word-break: normal;
-  border: 1px solid #787878;
-  border-radius: 4px;
 }
-
-pre[rel]::before {
-  display: flex;
-  padding-top: 0;
+@media (prefers-color-scheme: dark) {
+  pre {
+    border: solid 1px #eee;
+  }
 }
-
-pre[rel]::before {
-  left: auto;
-  position: relative;
-  top: auto;
-  width: 30px;
+@media (prefers-color-scheme: light) {
+  pre {
+    border: solid 1px #212121;
+  }
 }
-
-pre[rel]::before {
-  background: #999;
-  color: #f1f8f9;
-  content: attr(rel);
-  left: 0;
-  padding: 1px 0;
-  position: absolute;
-  text-indent: 15px;
-  top: 0;
-  height: 100%;
-  writing-mode: vertical-lr;
+pre:hover {
+  cursor: pointer;
 }
 
 pre code {
   display: block;
   font-family: "Inconsolata", monospace;
-  padding-left: 3rem;
-  white-space: pre-wrap;
+  font-size: 1.6rem;
   overflow: auto;
+  padding-left: 2rem;
+  white-space: pre;
 }
 
 .container-fix {

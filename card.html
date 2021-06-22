@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description" content="Straight framework, Cards offers the possibility to make some actions, add some medias and many more. Perfect deal to preview your products, projects and more">
+    <meta name="description"
+        content="Straight framework, Cards offers the possibility to make some actions, add some medias and many more. Perfect deal to preview your products, projects and more">
     <title>Straight | Card</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
@@ -28,7 +29,7 @@
         <h1 class="presentation-title t-white">Cards</h1>
     </header>
 
-    <main class="container-screen">
+    <main class="container-fix">
 
         <section class="m-b-6">
             <article>
@@ -38,7 +39,7 @@
                 <p>
                     Cards allows you to show some many contents. Related Informations must be short, clear and explicit.
                     They offers the possibility to make some actions, add some medias and many more.
-                    Cards are the deal to preview your products, projects and more...
+                    Cards are the deal to preview your products, projects and more. Icons comes from <a href="https://ionic.io/ionicons" rel="noopener" target="_blank">ionic</a>.
                 </p>
             </article>
         </section>
@@ -49,20 +50,22 @@
                     Card models
                 </h3>
                 <p>From simple to complex card, there is many opportunities to pattern your contents.
+                    Feel free to mix, customize and rearrange your content.
                 </p>
             </article>
         </section>
         <!--OPEN card models-->
         <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-6">
-            <article class="card b-shadow-none">
+            <article class="card">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">simple card</h4>
                 </header>
                 <figure class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/card/grenade.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/grenade.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
                 </figure>
                 <footer class="card-footer">
@@ -77,17 +80,17 @@
             <article class="card b-shadow-hovered">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">card action</h4>
-                    <button class="card-cta open btn-circle-s" data-card="0">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
+                    <button class="card-cta btn open" data-card="0">
+                        <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <figure class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/card/lime.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/lime.jpg"
-                            alt="Photo de Jamal Yahya provenant de Pexels">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png"
+                            alt="">
                     </picture>
                 </figure>
                 <aside class="card-body d-none" data-card="0">
@@ -95,10 +98,8 @@
                         <h4 class="card-body-title">
                             card action
                         </h4>
-                        <button class="card-cta close" data-card="0">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
+                        <button class="card-cta btn close" data-card="0">
+                            <ion-icon name="close-outline" />
                         </button>
                     </div>
                     <p class="card-body-text">
@@ -107,7 +108,7 @@
                     <div class="card-body-footer">
                         <div class="card-footer-left-container">
                             <span class="card-left-text">
-                               Card action
+                                Card action
                             </span>
                         </div>
                     </div>
@@ -115,7 +116,7 @@
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                          This is an active card
+                            This is an active card
                         </span>
                     </div>
                 </footer>
@@ -124,28 +125,26 @@
             <article class="card b-shadow-hovered">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="171">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
+                    <button class="card-cta btn open" data-card="171">
+                        <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
-                <a href="" class="card-img-container">
+                <a href="" rel="noopener" class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png"
+                            alt="">
                     </picture>
                 </a>
                 <aside class="card-body d-none" data-card="171">
                     <div class="card-body-header">
                         <h4 class="card-body-title">
-                            <a href="">linked card</a>
+                            <a href="" rel="noopener">linked card</a>
                         </h4>
-                        <button class="card-cta close" data-card="171">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
+                        <button class="card-cta btn close" data-card="171">
+                            <ion-icon name="close-outline" />
                         </button>
                     </div>
                     <p class="card-body-text">
@@ -158,23 +157,17 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
+                            <button class="card-cta btn">
+                                <ion-icon name="remove-circle-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
+                            <button class="card-cta btn">
+                                <ion-icon name="add-circle-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
+                            <button class="card-cta btn">
+                                <ion-icon name="cart" />
                             </button>
                         </div>
                     </div>
@@ -182,14 +175,12 @@
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                           New
+                            New
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                               new_releases
-                            </span>
+                        <button class="card-cta btn">
+                            <ion-icon name="notifications-circle-outline" />
                         </button>
                     </div>
                 </footer>
@@ -198,38 +189,37 @@
             <article class="card b-shadow-hovered">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">card carousel</h4>
-                    <button class="card-cta open btn-circle-s" data-card="12">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
+                    <button class="card-cta btn open" data-card="12">
+                        <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <figure id="cardCarousel12" class="carousel card-img-container">
                     <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/card/meal.jpg"
-                            alt="Photo de Daniela Constantini provenant de Pexels">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/card/cardV.png"
+                            alt="">
                     </picture>
                     <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/card/eggs.jpg"
-                            alt="Photo de Daniela Constantini provenant de Pexels">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/card/cardVblue.png"
+                            alt="">
                     </picture>
                     <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/card/toast.jpg"
-                            alt="Photo de Daniela Constantini provenant de Pexels">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/card/cardVpurple.png"
+                            alt="">
                     </picture>
-                    <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/card/pancake.jpg"
-                            alt="Photo de Daniela Constantini provenant de Pexels">
-                    </picture>
-                    <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
-                        <span class="t-overlay material-icons md-36 md-light">
-                            navigate_before
-                        </span>
+                    <button class="carousel-cta carousel-prev btn">
+                        <ion-icon class="t-overlay" name="caret-back" />
                     </button>
                     <button class="carousel-cta carousel-next btn-square-m bg-transparent">
-                        <span class="t-overlay material-icons md-36 md-light">
-                            navigate_next
-                        </span>
+                        <ion-icon class="t-overlay" name="caret-forward" />
                     </button>
                 </figure>
                 <aside class="card-body d-none" data-card="12">
@@ -237,21 +227,19 @@
                         <h4 class="card-body-title t-ellipsis">
                             <a href="#">card carousel</a>
                         </h4>
-                        <button class="card-cta close p-0" data-card="12">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
+                        <button class="card-cta btn close" data-card="12">
+                            <ion-icon name="close-outline" />
                         </button>
                     </div>
                     <p class="card-body-text t-justify">
-                        5 skewers. 
-                        Grilled chicken skewers flavoured with aromatic Southeast Asian spices and herbs.
-                        Served with a peanut sauce on the side. Crispy and flaky Malaysian flatbread with a curry gravy dip.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <ul class="card-body-text">
-                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
+                        <li><ion-icon name="earth-sharp" size="small" class="m-r-1"></ion-icon>green</li>
+                        <li><ion-icon name="heart-sharp" size="small" class="m-r-1"></ion-icon>healthly</li>
+                        <li><ion-icon name="leaf-sharp" size="small" class="m-r-1"></ion-icon>smooth</li>
                     </ul>
                     <details class="card-body-text">
                         <summary class="m-b-1">ingredients</summary>
@@ -266,23 +254,17 @@
                             </span>
                         </div>
                         <div class="card-footer-center-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
+                            <button class="card-cta btn">
+                                <ion-icon name="remove-circle-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
+                            <button class="card-cta btn">
+                                <ion-icon name="add-circle-outline" />
                             </button>
                         </div>
                         <div class="card-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
+                            <button class="card-cta btn">
+                                <ion-icon name="cart" />
                             </button>
                         </div>
                     </div>
@@ -294,10 +276,8 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
+                        <button class="card-cta btn">
+                            <ion-icon name="cart" />
                         </button>
                     </div>
                 </footer>
@@ -305,101 +285,673 @@
         </section>
         <!--CLOSE card models-->
 
+        <section>
+            <article>
+                <h3 class="note-pink">
+                    Copy to clipboard
+                </h3>
+                <p>Simply click and paste card models to your project</p>
+            </article>
+        </section>
+
         <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-6">
-            
-            <pre rel="SIMPLE CARD">
+
+            <pre class="h-rem-46" rel="SIMPLE CARD">
                 <code>
-                    &lt;article&nbsp;class="card&nbsp;b-shadow-none"&gt;
-                    &nbsp;&lt;header&nbsp;class="card-header"&gt;
-                    &nbsp;&nbsp;&nbsp;&lt;h4&nbsp;class="card-title&nbsp;t-ellipsis"&gt;simple&nbsp;card&lt;/h4&gt;
-                    &nbsp;&lt;/header&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;figure&nbsp;class="card-img-container"&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;picture&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;source&nbsp;srcset="/assets/img/card/grenade.jpg"&nbsp;media="(min-width:&nbsp;768px)"&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img&nbsp;class="card-img"&nbsp;src="/assets/img/card/grenade.jpg"
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="Photo&nbsp;de Engin&nbsp;Akyurt provenant&nbsp;de Pexels"&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/picture&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/figure&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;footer&nbsp;class="card-footer"&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="card-footer-left-container"&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class="card-left-text"&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;This&nbsp;is&nbsp;a&nbsp;passive&nbsp;card&lt;/span&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/footer&gt;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/article&gt;
+&lt;article class=&quot;card&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;/header&gt;
+    &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                &lt;span&gt;This is a passive card&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
                 </code>
             </pre>
 
-            <pre rel="SIMPLE CARD">
+            <pre class="h-rem-46" rel="CARD ACTION">
                 <code>
-                <span>&lt;article class=&quot;card&quot;&gt;</span>
-                    <span>&nbsp;&nbsp;&lt;header class=&quot;card-header&quot;&gt;</span>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;</span>
-                    <span>&nbsp;&nbsp;&lt;/header&gt;</span>
-                    <span>&nbsp;&nbsp;&lt;figure class=&quot;card-img-container&quot;&gt;</span>
-                        <span>&nbsp;&nbsp;&lt;picture&gt;</span>
-                            <span>&nbsp;&nbsp;&lt;source srcset=&quot;/assets/img/card/grenade.jpg&quot; media=&quot;(min-width: 768px)&quot;&gt;</span>
-                            <span>&nbsp;&nbsp;&lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/grenade.jpg&quot; alt=&quot;Photo de&nbsp;Engin Akyurt&nbsp;provenant de&nbsp;Pexels&quot;&gt;</span>
-                        <span>&nbsp;&nbsp;&lt;/picture&gt;</span>
-                    <span>&nbsp;&nbsp;&lt;/figure&gt;</span>
-                    <span>&nbsp;&nbsp;&lt;footer class=&quot;card-footer&quot;&gt;</span>
-                        <span>&nbsp;&nbsp;&lt;div class=&quot;card-footer-left-container&quot;&gt;</span>
-                            <span>&nbsp;&nbsp;&lt;span class=&quot;card-left-text&quot;&gt;</span>
-                                this is a simple text card
-                            <span>&nbsp;&nbsp;&lt;/span&gt;</span>
-                        <span>&nbsp;&nbsp;&lt;/div&gt;</span>
-                    <span>&nbsp;&nbsp;&lt;/footer&gt;</span>
-                <span>&lt;/article&gt;</span>
+&lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;card action&lt;/h4&gt;
+        &lt;button class=&quot;card-cta btn open&quot; data-card=&quot;0&quot;&gt;
+            &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+        &lt;/button&gt;
+    &lt;/header&gt;
+    &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot;
+                alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;aside class=&quot;card-body d-none&quot; data-card=&quot;0&quot;&gt;
+        &lt;div class=&quot;card-body-header&quot;&gt;
+            &lt;h4 class=&quot;card-body-title&quot;&gt;
+                card action
+            &lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn close&quot; data-card=&quot;0&quot;&gt;
+                &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;card-body-text&quot;&gt;
+            your content here...
+        &lt;/p&gt;
+        &lt;div class=&quot;card-body-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    Card action
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                This is an active card
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
                 </code>
             </pre>
 
-            <pre rel="SIMPLE CARD">
+            <pre class="h-rem-46" rel="LINKED CARD">
                 <code>
-                    <span>&lt;article class=&quot;card&quot;&gt;</span>
-                        <span>&lt;header class=&quot;card-header&quot;&gt;</span>
-                            <span>&lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;</span>
-                        <span>&lt;/header&gt;</span>
-                        <span>&lt;figure class=&quot;card-img-container&quot;&gt;</span>
-                            <span>&lt;picture&gt;</span>
-                                <span> &lt;source srcset=&quot;/assets/img/card/grenade.jpg&quot; media=&quot;(min-width: 768px)&quot;&gt;</span>
-                                <span>&lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/grenade.jpg&quot; alt=&quot;Photo de&nbsp;Engin Akyurt&nbsp;provenant de&nbsp;Pexels&quot;&gt;</span>
-                            <span>&lt;/picture&gt;</span>
-                        <span>&lt;/figure&gt;</span>
-                        <span> &lt;footer class=&quot;card-footer&quot;&gt;</span>
-                            <span>&lt;div class=&quot;card-footer-left-container&quot;&gt;</span>
-                                <span>&lt;span class=&quot;card-left-text&quot;&gt;</span>
-                                    this is a simple text card
-                                <span>&lt;/span&gt;</span>
-                            <span>&lt;/div&gt;</span>
-                        <span>&lt;/footer&gt;</span>
-                    <span> &lt;/article&gt;</span>
+&lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+        &lt;button class=&quot;card-cta btn open&quot; data-card=&quot;171&quot;&gt;
+            &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+        &lt;/button&gt;
+    &lt;/header&gt;
+    &lt;a href=&quot;&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot;
+                alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/a&gt;
+    &lt;aside class=&quot;card-body d-none&quot; data-card=&quot;171&quot;&gt;
+        &lt;div class=&quot;card-body-header&quot;&gt;
+            &lt;h4 class=&quot;card-body-title&quot;&gt;
+                &lt;a href=&quot;&quot;rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn close&quot; data-card=&quot;171&quot;&gt;
+                &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;card-body-text&quot;&gt;
+            your content here...
+        &lt;/p&gt;
+        &lt;div class=&quot;card-body-footer&quot;&gt;
+            &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;remove-circle-outline&quot; /&gt;
+                &lt;/button&gt;
+                &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;add-circle-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;cart&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                New
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-footer-right-container&quot;&gt;
+            &lt;button class=&quot;card-cta btn&quot;&gt;
+                &lt;ion-icon name=&quot;notifications-circle-outline&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
                 </code>
             </pre>
 
-            <pre rel="SIMPLE CARD">
+            <pre class="h-rem-46" rel="CAROUSEL CARD">
                 <code>
-<span>&lt;article class=&quot;card&quot;&gt;</span>
-    <span>&lt;header class=&quot;card-header&quot;&gt;</span>
-        <span>&lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;</span>
-    <span>&lt;/header&gt;</span>
-    <span>&lt;figure class=&quot;card-img-container&quot;&gt;</span>
-        <span>&lt;picture&gt;</span>
-            <span> &lt;source srcset=&quot;/assets/img/card/grenade.jpg&quot; media=&quot;(min-width: 768px)&quot;&gt;</span>
-            <span>&lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/grenade.jpg&quot; alt=&quot;Photo de&nbsp;Engin Akyurt&nbsp;provenant de&nbsp;Pexels&quot;&gt;</span>
-        <span>&lt;/picture&gt;</span>
-    <span>&lt;/figure&gt;</span>
-    <span> &lt;footer class=&quot;card-footer&quot;&gt;</span>
-        <span>&lt;div class=&quot;card-footer-left-container&quot;&gt;</span>
-            <span>&lt;span class=&quot;card-left-text&quot;&gt;</span>
-                this is a simple text card
-            <span>&lt;/span&gt;</span>
-        <span>&lt;/div&gt;</span>
-    <span>&lt;/footer&gt;</span>
-<span> &lt;/article&gt;</span>
+&lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;card carousel&lt;/h4&gt;
+        &lt;button class=&quot;card-cta btn open&quot; data-card=&quot;12&quot;&gt;
+            &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+        &lt;/button&gt;
+    &lt;/header&gt;
+    &lt;figure id=&quot;cardCarousel12&quot; class=&quot;carousel card-img-container&quot;&gt;
+        &lt;picture class=&quot;carousel-slide&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/card/cardV.png&quot;
+                alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;picture class=&quot;carousel-slide&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/card/cardVblue.png&quot;
+                alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;picture class=&quot;carousel-slide&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/card/cardVpurple.png&quot;
+                alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;button class=&quot;carousel-cta carousel-prev btn&quot;&gt;
+            &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;caret-back-sharp&quot; /&gt;
+        &lt;/button&gt;
+        &lt;button class=&quot;carousel-cta carousel-next btn-square-m bg-transparent&quot;&gt;
+            &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;caret-forward-sharp&quot; /&gt;
+        &lt;/button&gt;
+    &lt;/figure&gt;
+    &lt;aside class=&quot;card-body d-none&quot; data-card=&quot;12&quot;&gt;
+        &lt;div class=&quot;card-body-header&quot;&gt;
+            &lt;h4 class=&quot;card-body-title t-ellipsis&quot;&gt;
+                &lt;a href=&quot;#&quot;rel=&quot;noopener&quot;&gt;card carousel&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn close&quot; data-card=&quot;12&quot;&gt;
+                &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;card-body-text t-justify&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        &lt;/p&gt;
+        &lt;ul class=&quot;card-body-text&quot;&gt;
+            &lt;li&gt;&lt;ion-icon name=&quot;earth-sharp&quot; size=&quot;small&quot; class=&quot;m-r-1&quot;&gt;&lt;/ion-icon&gt;green&lt;/li&gt;
+            &lt;li&gt;&lt;ion-icon name=&quot;heart-sharp&quot; size=&quot;small&quot; class=&quot;m-r-1&quot;&gt;&lt;/ion-icon&gt;healthly&lt;/li&gt;
+            &lt;li&gt;&lt;ion-icon name=&quot;leaf-sharp&quot; size=&quot;small&quot; class=&quot;m-r-1&quot;&gt;&lt;/ion-icon&gt;smooth&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;details class=&quot;card-body-text&quot;&gt;
+            &lt;summary class=&quot;m-b-1&quot;&gt;ingredients&lt;/summary&gt;
+            Whole wheat, wheat bran, sugar/glucose-fructose, salt, malt (corn flour, malted barley),
+            vitamins (thiamine hydrochloride, pyridoxine hydrochloride, folic acid, d-calcium pantothenate),
+            minerals (iron, zinc oxide).
+        &lt;/details&gt;
+        &lt;div class=&quot;card-body-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    11&lt;sup&gt;&euro;90&lt;/sup&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-center-container&quot;&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;remove-circle-outline&quot; /&gt;
+                &lt;/button&gt;
+                &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;add-circle-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;cart&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                11&lt;sup&gt;&euro;90&lt;/sup&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-footer-right-container&quot;&gt;
+            &lt;button class=&quot;card-cta btn&quot;&gt;
+                &lt;ion-icon name=&quot;cart&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section>
+            <article>
+                <h3 class="note-pink">
+                    Card-h models variant
+                </h3>
+                <p>.card-h</p>
+            </article>
+        </section>
+
+        <!--OPEN variant models h-->
+        <section class="g-col g-col-m-2 g-col-l-3 m-b-6">
+
+            <article class="card card-h">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="card card-h b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis"><a href="" rel="noopener">linked card</a></h4>
+                </header>
+                <a href="" rel="noopener" class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png"
+                            alt="">
+                    </picture>
+                </a>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            9<sup>€90</sup>
+                        </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-cta btn">
+                            <ion-icon name="cart" />
+                        </button>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="card card-h b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis"><a href="" rel="noopener">card action</a></h4>
+                    <button class="card-cta btn open" data-card="400">
+                        <ion-icon name="ellipsis-horizontal" size="small" />
+                    </button>
+                </header>
+                <figure class="card-img-container">
+                    <a href="" rel="noopener">
+                        <picture>
+                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                            <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                            <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                            <img class="card-img" src="/assets/img/card/cardV.png"
+                                alt="">
+                        </picture>
+                    </a>
+                </figure>
+                <aside class="card-body d-none" data-card="400">
+                    <div class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="" rel="noopener">card action</a>
+                        </h4>
+                        <button class="card-cta btn close" data-card="400">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </div>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <div class="card-body-footer">
+                        <div class="card-footer-left-container">
+                            <span class="card-left-text">
+                                119<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-footer-center-container">
+                            <button class="card-cta btn">
+                                <ion-icon name="remove-circle-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn">
+                                <ion-icon name="add-circle-outline" />
+                            </button>
+                        </div>
+                        <div class="card-footer-right-container">
+                            <button class="card-cta btn">
+                                <ion-icon name="cart" />
+                            </button>
+                        </div>
+                    </div>
+                </aside>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            119<sup>€90</sup>
+                        </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-cta btn">
+                            <ion-icon name="cart" />
+                        </button>
+                    </div>
+                </footer>
+            </article>
+        </section>
+        <!--CLOSE variant models h-->
+        <section>
+            <article>
+                <h3 class="note-pink">
+                    Copy to clipboard
+                </h3>
+                <p>Simply click and paste card-h to your project</p>
+            </article>
+        </section>
+
+        <section class="g-col g-col-m-2 g-col-l-3 m-b-6">
+            <pre class="h-rem-46" rel="CARD-H SIMPLE CARD">
+                <code>
+&lt;article class=&quot;card card-h&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;/header&gt;
+    &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                &lt;span&gt;This is a passive card&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
                 </code>
             </pre>
 
+            <pre class="h-rem-46" rel="CARD-H LINKED CARD">
+                <code>
+&lt;article class=&quot;card card-h b-shadow-hovered&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;&lt;a href=&quot;&quot;rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;&lt;/h4&gt;
+    &lt;/header&gt;
+    &lt;a href=&quot;&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot;alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/a&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                9&lt;sup&gt;&euro;90&lt;/sup&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-footer-right-container&quot;&gt;
+            &lt;button class=&quot;card-cta btn&quot;&gt;
+                &lt;ion-icon name=&quot;cart&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+                </code>
+            </pre>
+
+            <pre class="h-rem-46" rel="CARD-H ACTION CARD">
+                <code>
+&lt;article class=&quot;card card-h b-shadow-hovered&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;&lt;a href=&quot;&quot;rel=&quot;noopener&quot;&gt;card action&lt;/a&gt;&lt;/h4&gt;
+        &lt;button class=&quot;card-cta btn open&quot; data-card=&quot;400&quot;&gt;
+            &lt;ion-icon name=&quot;ellipsis-horizontal&quot; size=&quot;small&quot; /&gt;
+        &lt;/button&gt;
+    &lt;/header&gt;
+    &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;&quot;rel=&quot;noopener&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot;
+                    alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
+    &lt;/figure&gt;
+    &lt;aside class=&quot;card-body d-none&quot; data-card=&quot;400&quot;&gt;
+        &lt;div class=&quot;card-body-header&quot;&gt;
+            &lt;h4 class=&quot;card-body-title&quot;&gt;
+                &lt;a href=&quot;&quot;rel=&quot;noopener&quot;&gt;card action&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn close&quot; data-card=&quot;400&quot;&gt;
+                &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;p class=&quot;card-body-text&quot;&gt;
+            your scrollable content here...
+        &lt;/p&gt;
+        &lt;div class=&quot;card-body-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    119&lt;sup&gt;&euro;90&lt;/sup&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-center-container&quot;&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;remove-circle-outline&quot; /&gt;
+                &lt;/button&gt;
+                &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;add-circle-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;button class=&quot;card-cta btn&quot;&gt;
+                    &lt;ion-icon name=&quot;cart&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/aside&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                119&lt;sup&gt;&euro;90&lt;/sup&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-footer-right-container&quot;&gt;
+            &lt;button class=&quot;card-cta btn&quot;&gt;
+                &lt;ion-icon name=&quot;cart&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+                </code>
+            </pre>
+        </section>
+
+        <!--OPEN variant models l-->
+        <section>
+            <article>
+                <h3 class="note-pink">
+                    Card-l models variant
+                </h3>
+                <p>.card-l</p>
+            </article>
+        </section>
+
+        <section class="g-col g-col-s-1 g-col-l-2 m-b-6">
+            <article class="card card-l">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="card card-l b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">
+                        <a href="" rel="noopener">linked action card</a>
+                    </h4>
+                </header>
+                <figure class="card-img-container">
+                    <a href="" rel="noopener">
+                        <picture>
+                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                            <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                            <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                            <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                        </picture>
+                    </a>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            119<sup>€90</sup>
+                        </span>
+                    </div>
+                    <div class="card-footer-center-container">
+                        <button class="card-cta btn">
+                            <ion-icon name="remove-circle-outline" />
+                        </button>
+                        <span class="m-l-2 m-r-2">1</span>
+                        <button class="card-cta btn">
+                            <ion-icon name="add-circle-outline" />
+                        </button>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <button class="card-cta btn">
+                            <ion-icon name="cart" />
+                        </button>
+                    </div>
+                </footer>
+            </article>
+        </section>
+        <!--CLOSE variant models l-->
+        <section>
+            <article>
+                <h3 class="note-pink">
+                    Copy to clipboard
+                </h3>
+                <p>Simply click and paste card-l to your project</p>
+            </article>
+        </section>
+
+        <section class="g-col g-col-m-2 m-b-6">
+            <pre class="h-rem-46" rel="CARD-L SIMPLE CARD">
+                <code>
+&lt;article class=&quot;card card-l&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;/header&gt;
+    &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                &lt;span&gt;This is a passive card&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+                </code>
+            </pre>
+
+            <pre class="h-rem-46" rel="CARD-L LINKED ACTION CARD">
+                <code>
+&lt;article class=&quot;card card-l b-shadow-hovered&quot;&gt;
+    &lt;header class=&quot;card-header&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;
+            &lt;a href=&quot;&quot;rel=&quot;noopener&quot;&gt;linked action card&lt;/a&gt;
+        &lt;/h4&gt;
+    &lt;/header&gt;
+    &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;&quot;rel=&quot;noopener&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
+    &lt;/figure&gt;
+    &lt;footer class=&quot;card-footer&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                119&lt;sup&gt;&euro;90&lt;/sup&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-footer-center-container&quot;&gt;
+            &lt;button class=&quot;card-cta btn&quot;&gt;
+                &lt;ion-icon name=&quot;remove-circle-outline&quot; /&gt;
+            &lt;/button&gt;
+            &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+            &lt;button class=&quot;card-cta btn&quot;&gt;
+                &lt;ion-icon name=&quot;add-circle-outline&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-footer-right-container&quot;&gt;
+            &lt;button class=&quot;card-cta btn&quot;&gt;
+                &lt;ion-icon name=&quot;cart&quot; /&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+                </code>
+            </pre>
         </section>
 
         <section>
@@ -407,1073 +959,665 @@
                 <h3 class="note-pink">
                     Card gallery example
                 </h3>
-                <p>Here a basic grid layout exemple. Resize your window to see it in action.</p>
+                <p>Here a basic grid layout example. Resize your window to see it in action.</p>
+            </article>
+        </section>
+        
+        <!--OPEN card gallery-->
+        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-6">
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+        </section>
+        <!--CLOSE card gallery-->
+
+        <section>
+            <article>
+                <h3 class="note-pink">
+                    Copy to clipboard
+                </h3>
+                <p>Simply click and paste card gallery to your project</p>
             </article>
         </section>
 
-        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5  m-t-2 m-b-6">
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="177">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="177">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="177">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="617">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="617">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="617">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="417">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="417">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="417">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="517">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="517">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="517">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="317">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="317">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="317">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="417">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="417">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="417">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="217">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="217">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="217">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="817">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="817">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="817">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="p17">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="p17">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="p17">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="a17">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <a href="" class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
-                    </picture>
-                </a>
-                <aside class="card-body d-none" data-card="a17">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="a17">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text">
-                        your content here...
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-
+        <section class="m-b-6">
+            <pre class="h-rem-46" rel="SIMPLE CARD GALLERY">
+                <code>
+&lt;section class=&quot;g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-6&quot;&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/section&gt;
+                </code>
+            </pre>
         </section>
-
 
         <section>
             <article>
                 <h3 class="note-pink">
                     Card gallery example with variations
                 </h3>
+                <p>Click on one all of these buttons just below to see variations in action.</p>
             </article>
+        </section>
 
-            <button id="vGrid" class="btn card-btn-gallery m-r-2">
-                <span class="material-icons">
-                    crop_portrait
-                </span>
+        <div>
+            <button id="vGrid" class="btn card-btn-gallery m-r-8">
+                <ion-icon name="tablet-portrait" />
             </button>
 
             <button id="hGrid" class="btn card-btn-gallery">
-                <span class="material-icons">
-                    crop_5_4
-                </span>
+                <ion-icon name="tablet-landscape" />
             </button>
 
-            <button id="lGrid" class="btn card-btn-gallery m-l-2">
-                <span class="material-icons">
-                    crop_7_5
-                </span>
+            <button id="lGrid" class="btn card-btn-gallery m-l-8">
+                <ion-icon name="phone-landscape" />
             </button>
-        </section>
+        </div>
 
         <section id="cardGallery" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
-
-            <!--CARD SIMPLE-->
-            <article class="card b-shadow-hovered">
+            <article class="card">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">simple card</h4>
                 </header>
                 <figure class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/card/grenade.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/grenade.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
                 </figure>
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            this is a simple text card
+                            <span>your content</span>
                         </span>
                     </div>
                 </footer>
             </article>
-            <!--CARD SIMPLE-->
-
-            <!--CARD ACTION-->
-            <article class="card b-shadow-hovered">
+            <article class="card">
                 <header class="card-header">
-                    <h4 class="card-title t-ellipsis">card action</h4>
-                    <button class="card-cta open btn-circle-s" data-card="5">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
+                    <h4 class="card-title t-ellipsis">simple card</h4>
                 </header>
                 <figure class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/card/lime.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/lime.jpg"
-                            alt="Photo de Jamal Yahya provenant de Pexels">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
                 </figure>
-                <aside class="card-body d-none" data-card="5">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">card action</a>
-                        </h4>
-                        <button class="card-cta close" data-card="5">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text t-justify">
-                        Cards are surfaces that display content and actions on a single topic.
-                        They should be easy to scan for relevant and actionable information.
-                        Elements, like text and images, should be placed on them in a way that clearly indicates
-                        hierarchy.
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                6<sup>€90</sup>
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            6<sup>€90</sup>
+                            <span>your content</span>
                         </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
                     </div>
                 </footer>
             </article>
-            <!--CARD ACTION-->
-
-            <!--CARD-L-->
-            <article class="card b-shadow-hovered">
+            <article class="card">
                 <header class="card-header">
-                    <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta open btn-circle-s" data-card="6">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
+                    <h4 class="card-title t-ellipsis">simple card</h4>
                 </header>
-                <a href="" class="card-img-container">
+                <figure class="card-img-container">
                     <picture>
-                        <source srcset="/assets/img/card/tomatoes.jpg" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/tomatoes.jpg"
-                            alt="Photo de Engin Akyurt provenant de Pexels">
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </a>
-                <aside class="card-body d-none" data-card="6">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title">
-                            <a href="">linked card</a>
-                        </h4>
-                        <button class="card-cta close" data-card="6">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                   <p>Your content here</p>
-                    <div class="card-body-footer">
-                        <div class="card-body-footer-left-container">
-                            <span class="card-left-text">
-                                1790€
-                            </span>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            1790€
-                        </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
-            <!--CARD L-->
-
-            <!--CARD-CAROUSEL-->
-            <article class="card b-shadow-hovered">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">card carousel</h4>
-                    <button class="card-cta open btn-circle-s" data-card="7">
-                        <span class="material-icons md-36">
-                            more_horizontal
-                        </span>
-                    </button>
-                </header>
-                <figure id="cardCarousel2" class="carousel card-img-container">
-                    <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/card/meal.jpg"
-                            alt="Photo de Daniela Constantini provenant de Pexels">
-                    </picture>
-                    <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/card/eggs.jpg"
-                            alt="Photo de Daniela Constantini provenant de Pexels">
-                    </picture>
-                    <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/card/toast.jpg"
-                            alt="Photo de Daniela Constantini provenant de Pexels">
-                    </picture>
-                    <picture class="carousel-slide">
-                        <img class="responsive-img" src="/assets/img/card/pancake.jpg"
-                            alt="Photo de Daniela Constantini provenant de Pexels">
-                    </picture>
-                    <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
-                        <span class="t-overlay material-icons md-36 md-light">
-                            navigate_before
-                        </span>
-                    </button>
-                    <button class="carousel-cta carousel-next btn-square-m bg-transparent">
-                        <span class="t-overlay material-icons md-36 md-light">
-                            navigate_next
-                        </span>
-                    </button>
                 </figure>
-                <aside class="card-body d-none" data-card="7">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title t-ellipsis">
-                            <a href="#">card carousel</a>
-                        </h4>
-                        <button class="card-cta close p-0" data-card="7">
-                            <span class="material-icons md-36">
-                                cancel
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text t-justify">
-                        Cards are surfaces that display content and actions on a single topic.
-                        They should be easy to scan for relevant and actionable information.
-                        Elements, like text and images, should be placed on them in a way that clearly indicates
-                        hierarchy.
-                    </p>
-                    <ul class="card-body-text">
-                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                        <li><span class="material-icons md-18 m-r-1"> spa</span>free</li>
-                    </ul>
-                    <details class="card-body-text">
-                        <summary class="m-b-1">ingredients</summary>
-                        Notices are factual and to-the-point. The language used is simple and formal, not flowery.
-                        They are put up on display boards in schools or in public places.
-                    </details>
-                    <div class="card-body-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                11<sup>€90</sup>
-                            </span>
-                        </div>
-                        <div class="card-footer-center-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    remove_circle
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    add_circle
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta">
-                                <span class="material-icons md-36">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            11<sup>€90</sup>
+                            <span>your content</span>
                         </span>
-                    </div>
-                    <div class="card-footer-right-container">
-                        <button class="card-cta">
-                            <span class="material-icons md-36">
-                                shopping_cart
-                            </span>
-                        </button>
                     </div>
                 </footer>
             </article>
-            <!--CARD CAROUSEL-->
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
         </section>
 
     </main>
     <footer>
         footer
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script/card.js"></script>
     <script src="script/carousel.js"></script>
 </body>

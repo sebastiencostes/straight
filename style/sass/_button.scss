@@ -166,7 +166,7 @@
   background-color: c.$transparent;
   color: c.$carbon;
   font-weight: 400;
-  //line-height: 1.5;
+  line-height: 1rem;
   //padding: .375rem .75rem;
   font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
   &-red {

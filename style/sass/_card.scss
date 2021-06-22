@@ -37,7 +37,12 @@
       font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
     }
     & .card-img-container {
-      @include b.b-right(c.$carbon);
+      @include c.dark-theme() {
+        @include b.b-right(c.$text-dark);
+      }
+      @include c.light-theme() {
+        @include b.b-right(c.$carbon);
+      }
     }
     & .card-footer {
       @include b.no-border();
@@ -63,7 +68,12 @@
       font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
     }
     & .card-img-container {
-      @include b.b-right(c.$carbon);
+      @include c.dark-theme() {
+        @include b.b-right(c.$text-dark);
+      }
+      @include c.light-theme() {
+        @include b.b-right(c.$carbon);
+      }
     }
     & .card-footer {
       @include b.no-border();
