@@ -43,8 +43,30 @@ pre {
 pre code {
   @include u.d-block();
   font-family: "Inconsolata", monospace;
-  font-size: 1.6rem;
-  overflow: auto;
   @include p.padding-direction(left, 2rem);
   white-space: pre;
 }
+
+code span {
+  font-size: 1.6rem;
+}
+
+// .hljs {
+//   background-color: c.$carbon;
+// }
+
+// .hljs-bullet, .hljs-deletion, .hljs-name, .hljs-selector-tag, .hljs-template-variable, .hljs-variable {
+//   color: c.$navy;
+// }
+
+// .hljs-attr, .hljs-link, .hljs-literal, .hljs-number, .hljs-symbol, .hljs-variable.constant_ {
+//   color: c.$link;
+// }
+
+// .hljs-addition, .hljs-code, .hljs-string, .hljs-title.class_.inherited__ {
+//   color: c.$blue;
+// }
+
+// .hljs-tag {
+//   color: c.$text-dark;
+// }

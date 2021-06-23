@@ -9,9 +9,7 @@
     <meta name="description"
         content="Straight framework, Cards offers the possibility to make some actions, add some medias and many more. Perfect deal to preview your products, projects and more">
     <title>Straight | Card</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
-    <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/base16/dracula.min.css">
     <link rel="preload" href="style/css/style.css" as="style">
     <link rel="stylesheet" href="style/css/style.css">
 </head>
@@ -50,7 +48,10 @@
                     Card models
                 </h3>
                 <p>From simple to complex card, there is many opportunities to pattern your contents.
-                    Feel free to mix, customize and rearrange your content.
+                    Feel free to mix, customize and rearrange your content. When using <b>Card Carousel</b>
+                    you <b>must create and keep an id</b> on the figure tag. Thanks to <b>srcset</b> you can play around with your 
+                    media at different resolution but it's important to preserve 
+                    the image dimension ratio.
                 </p>
             </article>
         </section>
@@ -294,9 +295,9 @@
             </article>
         </section>
 
-        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-6">
+        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-6 stylesheet">
 
-            <pre class="h-rem-46" rel="SIMPLE CARD">
+            <pre class="h-rem-46 clipboard" rel="SIMPLE CARD">
                 <code>
 &lt;article class=&quot;card&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
@@ -321,7 +322,7 @@
                 </code>
             </pre>
 
-            <pre class="h-rem-46" rel="CARD ACTION">
+            <pre class="h-rem-46 clipboard" rel="CARD ACTION">
                 <code>
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
@@ -370,7 +371,7 @@
                 </code>
             </pre>
 
-            <pre class="h-rem-46" rel="LINKED CARD">
+            <pre class="h-rem-46 clipboard" rel="LINKED CARD">
                 <code>
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
@@ -438,7 +439,7 @@
                 </code>
             </pre>
 
-            <pre class="h-rem-46" rel="CAROUSEL CARD">
+            <pre class="h-rem-46 clipboard" rel="CAROUSEL CARD">
                 <code>
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
@@ -1409,47 +1410,7 @@
             </button>
         </div>
 
-        <section id="cardGallery" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-2">
-            <article class="card">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>your content</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card">
-                <header class="card-header">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>your content</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
+        <section id="cardGallery" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-2">
             <article class="card">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">simple card</h4>
@@ -1618,6 +1579,8 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="script/card.js"></script>
     <script src="script/carousel.js"></script>
 </body>

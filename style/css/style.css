@@ -1034,59 +1034,6 @@ no border
   padding-left: 2rem;
 }
 
-.material-icons {
-  font-size: 2.4rem;
-  /* Preferred icon size */
-  vertical-align: middle;
-}
-
-/* Rules for sizing the icon. */
-.material-icons.md-12 {
-  font-size: 1.35rem;
-}
-
-.material-icons.md-18 {
-  font-size: 1.8rem;
-}
-
-.material-icons.md-24 {
-  font-size: 2.4rem;
-}
-
-.material-icons.md-36 {
-  font-size: 3.6rem;
-}
-
-.material-icons.md-48 {
-  font-size: 4.8rem;
-}
-
-.material-icons.md-60 {
-  font-size: 6rem;
-}
-
-.material-icons.md-78 {
-  font-size: 7.2rem;
-}
-
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark {
-  color: #323232;
-}
-
-.material-icons.md-dark.md-inactive {
-  color: rgba(34, 34, 34, 0.26);
-}
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light {
-  color: #eee;
-}
-
-.material-icons.md-light.md-inactive {
-  color: rgba(238, 238, 238, 0.3);
-}
-
 .t-capitalize {
   text-transform: capitalize;
 }
@@ -14912,10 +14859,12 @@ pre:hover {
 pre code {
   display: block;
   font-family: "Inconsolata", monospace;
-  font-size: 1.6rem;
-  overflow: auto;
   padding-left: 2rem;
   white-space: pre;
+}
+
+code span {
+  font-size: 1.6rem;
 }
 
 .container-fix {
