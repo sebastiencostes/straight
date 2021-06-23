@@ -5,7 +5,12 @@
   border: solid 1px $color;
 }
 .border {
-  @include border(c.$carbon);
+  @include c.light-theme() {
+    @include border(c.$carbon);
+  }
+  @include c.dark-theme() {
+    @include border(c.$text-dark);
+  }
 }
 /*
 border direction
@@ -27,16 +32,36 @@ border direction
 }
 .b {
   &-top {
-    @include b-top(c.$carbon);
+    @include c.light-theme() {
+      @include b-top(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-top(c.$text-dark);
+    }
   }
   &-right {
-    @include b-top(c.$carbon);
+    @include c.light-theme() {
+      @include b-right(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-right(c.$text-dark);
+    }
   }
   &-bottom {
-    @include b-top(c.$carbon);
+    @include c.light-theme() {
+      @include b-bottom(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-bottom(c.$text-dark);
+    }
   }
   &-left {
-    @include b-top(c.$carbon);
+    @include c.light-theme() {
+      @include b-left(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-left(c.$text-dark);
+    }
   }
 }
 /*

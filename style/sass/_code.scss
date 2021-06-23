@@ -6,37 +6,30 @@
 @use "padding" as p;
 
 pre[rel]::before {
-  background-color: c.$grey;
+  background-color: c.$grey-dark;
   color: c.$text-dark;
   content: attr(rel);
   font-family: "Inconsolata", monospace;
-  font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
+  font-size: 1.6rem;
   left: 0;
+  @include p.padding-direction(left, .8rem);
   position: absolute;
-  text-indent: 1.5rem;
   top: 0;
   @include w.width(100%);
 }
 
 pre {
-  background-color: c.$carbon;
-  @include c.dark-theme() {
-    @include b.border(c.$text-dark);
-  }
-  @include c.light-theme() {
-    @include b.border(c.$carbon);
-  }
+  background-color: c.$grey-light;
+  border-radius: .3rem;
   clear: both;
-  color: c.$blue;
+  color: c.$navy-dark;
   font-family: "Inconsolata", monospace;
   hyphens: none;
-  line-height: 2rem;
   @include w.min-width(100%);
   overflow: auto;
   position: relative;
-  word-break: normal;
   &:hover {
-    cursor: pointer;
+    cursor: copy;
   }
 }
 
@@ -51,22 +44,23 @@ code span {
   font-size: 1.6rem;
 }
 
-// .hljs {
-//   background-color: c.$carbon;
-// }
+.hljs {
+  color: c.$navy;
+  background-color: c.$grey-light;
+}
 
-// .hljs-bullet, .hljs-deletion, .hljs-name, .hljs-selector-tag, .hljs-template-variable, .hljs-variable {
-//   color: c.$navy;
-// }
+.hljs-tag {
+  color: c.$grey-dark;
+}
 
-// .hljs-attr, .hljs-link, .hljs-literal, .hljs-number, .hljs-symbol, .hljs-variable.constant_ {
-//   color: c.$link;
-// }
+.hljs-bullet, .hljs-deletion, .hljs-name, .hljs-selector-tag, .hljs-template-variable, .hljs-variable {
+  color: c.$blue;
+}
 
-// .hljs-addition, .hljs-code, .hljs-string, .hljs-title.class_.inherited__ {
-//   color: c.$blue;
-// }
+.hljs-attr, .hljs-link, .hljs-literal, .hljs-number, .hljs-symbol, .hljs-variable.constant_ {
+  color: c.$pink-light;
+}
 
-// .hljs-tag {
-//   color: c.$text-dark;
-// }
+.hljs-addition, .hljs-code, .hljs-string, .hljs-title.class_.inherited__ {
+  color: c.$brown-light;
+}

@@ -11,12 +11,13 @@
 @use "z-index" as z;
 
 %card-shared {
-  @include c.dark-theme() {
-    @include b.border(c.$text-dark);
-  }
-  @include c.light-theme() {
-    @include b.border(c.$carbon);
-  }
+  //@include b.b-radius(2rem);
+  // @include c.dark-theme() {
+  //   @include b.border(c.$text-dark);
+  // }
+  // @include c.light-theme() {
+  //   @include b.border(c.$carbon);
+  // }
   @include fx.d-flex();
   @include h.height(100%);
   @include pos.position(relative);
@@ -36,16 +37,16 @@
     & .card-title {
       font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
     }
-    & .card-img-container {
-      @include c.dark-theme() {
-        @include b.b-right(c.$text-dark);
-      }
-      @include c.light-theme() {
-        @include b.b-right(c.$carbon);
-      }
-    }
+    // & .card-img-container {
+    //   @include c.dark-theme() {
+    //     @include b.b-right(c.$text-dark);
+    //   }
+    //   @include c.light-theme() {
+    //     @include b.b-right(c.$carbon);
+    //   }
+    // }
     & .card-footer {
-      @include b.no-border();
+      //@include b.no-border();
       @include fx.items-end();
       @include p.padding(1rem);
       @include pos.position(absolute);
@@ -57,7 +58,7 @@
   &%-l-shared {
     @include fx.f-dir-row-reverse();
     & .card-header {
-      @include fx.align-items(center);
+      @include fx.align-items(flex-start);
       @include h.height(50%);
       @include w.max-width(75%);
       -webkit-box-flex: 1;
@@ -67,17 +68,17 @@
     & .card-title {
       font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
     }
-    & .card-img-container {
-      @include c.dark-theme() {
-        @include b.b-right(c.$text-dark);
-      }
-      @include c.light-theme() {
-        @include b.b-right(c.$carbon);
-      }
-    }
+    // & .card-img-container {
+    //   @include c.dark-theme() {
+    //     @include b.b-right(c.$text-dark);
+    //   }
+    //   @include c.light-theme() {
+    //     @include b.b-right(c.$carbon);
+    //   }
+    // }
     & .card-footer {
-      @include b.no-border();
-      @include fx.align-items(center);
+      //@include b.no-border();
+      @include fx.align-items(flex-end);
       @include h.height(50%);
       @include p.padding(1rem);
       @include pos.position(absolute);
@@ -94,12 +95,12 @@
 }
 %card-header-shared,
 %card-body-header-shared {
-  @include c.light-theme() {
-    @include b.b-bottom(c.$carbon);
-  }
-  @include c.dark-theme() {
-    @include b.b-bottom(c.$text-dark);
-  }
+  // @include c.light-theme() {
+  //   @include b.b-bottom(c.$carbon);
+  // }
+  // @include c.dark-theme() {
+  //   @include b.b-bottom(c.$text-dark);
+  // }
   @include fx.d-flex();
   @include fx.justify-between();
   @include p.padding(1rem);
@@ -138,12 +139,12 @@
   @include fx.justify-between();
   @include fx.align-items(center);
   @include p.padding(1rem);
-  @include c.dark-theme() {
-   @include b.b-top(c.$text-dark);
-  }
-  @include c.light-theme() {
-    @include b.b-top(c.$carbon);
-   }
+  // @include c.dark-theme() {
+  //  @include b.b-top(c.$text-dark);
+  // }
+  // @include c.light-theme() {
+  //   @include b.b-top(c.$carbon);
+  //  }
   @include h.height(6rem);
 }
 %card-body-footer-shared {

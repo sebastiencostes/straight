@@ -22,7 +22,12 @@ $time: 0.28s;
   @include d-inline-block;
 }
 @mixin b-shadow {
-  box-shadow: 0 5px 10px c.$color-shadow;
+  @include c.light-theme() {
+    box-shadow: 0 5px 10px c.$color-shadow;
+  }
+  @include c.dark-theme() {
+    box-shadow: 0 5px 10px c.$color-shadow-dark;
+  }
 }
 
 @mixin b-shadow-hovered {
