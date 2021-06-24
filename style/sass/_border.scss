@@ -155,3 +155,14 @@ no border
   border-left-width: 0.5rem;
   @include p.padding-direction(left, 2rem);
 }
+/*
+smooth
+*/
+@mixin b-smooth() {
+  @include b-radius(.3rem);
+}
+
+.b-smooth {
+  @include b-smooth();
+}
+  

@@ -8,13 +8,6 @@
 /*
 .btn
 */
-@mixin btn-xs {
-  @include f.font-size(1.35rem);
-  @include p.padding(1rem);
-}
-.btn-xs {
-  @include btn-xs();
-}
 @mixin btn-s {
   @include f.font-size(2.4rem);
   @include p.padding(1rem);
@@ -50,112 +43,6 @@
 .btn-xxl {
   @include btn-xxl();
 }
-
-/*
-.btn-square
-*/
-@mixin btn-square-xs {
-  @include w.width(2.6rem);
-  @include h.height(2.6rem);
-  @include f.font-size(2.6rem);
-}
-.btn-square-xs {
-  @include btn-square-xs();
-}
-@mixin btn-square-s {
-  @include w.width(3.6rem);
-  @include h.height(3.6rem);
-  @include f.font-size(3.6rem);
-}
-.btn-square-s {
-  @include btn-square-s();
-}
-@mixin btn-square-m {
-  @include w.width(4.8rem);
-  @include h.height(4.8rem);
-  @include f.font-size(3.6rem);
-}
-.btn-square-m {
-  @include btn-square-m();
-}
-@mixin btn-square-l {
-  @include w.width(6rem);
-  @include h.height(6rem);
-  @include f.font-size(4.8rem);
-}
-.btn-square-l {
-  @include btn-square-l();
-}
-
-@mixin btn-square-xl {
-  @include w.width(7.2rem);
-  @include h.height(7.2rem);
-  @include f.font-size(6rem);
-}
-.btn-square-xl {
-  @include btn-square-xl();
-}
-@mixin btn-square-xxl {
-  @include w.width(8.4rem);
-  @include h.height(8.4rem);
-  @include f.font-size(7.2rem);
-}
-.btn-square-xxl {
-  @include btn-square-xxl();
-}
-
-/*
-.btn-circle
-*/
-@mixin btn-circle-xs {
-  @include w.width(2.6rem);
-  @include h.height(2.6rem);
-  @include b.b-radius(50%);
-}
-.btn-circle-xs {
-  @include btn-circle-xs();
-}
-@mixin btn-circle-s {
-  @include w.width(3.6rem);
-  @include h.height(3.6rem);
-  @include b.b-radius(50%);
-}
-.btn-circle-s {
-  @include btn-circle-s();
-}
-@mixin btn-circle-m {
-  @include w.width(4.8rem);
-  @include h.height(4.8rem);
-  @include b.b-radius(50%);
-}
-.btn-circle-m {
-  @include btn-circle-m();
-}
-@mixin btn-circle-l {
-  @include w.width(6rem);
-  @include h.height(6rem);
-  @include b.b-radius(50%);
-}
-.btn-circle-l {
-  @include btn-circle-l();
-}
-
-@mixin btn-circle-xl {
-  @include w.width(7.2rem);
-  @include h.height(7.2rem);
-  @include b.b-radius(50%);
-}
-.btn-circle-xl {
-  @include btn-circle-xl();
-}
-@mixin btn-circle-xxl {
-  @include w.width(8.4rem);
-  @include h.height(8.4rem);
-  @include b.b-radius(50%);
-}
-.btn-circle-xxl {
-  @include btn-circle-xxl();
-}
 /*
 .btn classes & colors
 */
@@ -167,7 +54,7 @@
   color: c.$carbon;
   font-weight: 400;
   line-height: 1rem;
-  //padding: .375rem .75rem;
+  @include p.padding(1.6rem 1rem);
   font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
   &-red {
     background-color: c.$red;
@@ -312,18 +199,74 @@
       background-color: c.$brown-light;
     }
   }
-}
-/*
-scheme colors
-*/
-@media (prefers-color-scheme: dark) {
-  button {
-    //background-color: c.$black-ultra-light;
+  &:disabled {
+    cursor: default;
+  }
+  span {
+    vertical-align: top;
+  }
+  &-smooth {
+    @include b.b-smooth();
   }
 }
-
-@media (prefers-color-scheme: light) {
-  button {
-    //background-color: c.$white-ultra-light;
+/*
+BTN circle
+*/
+.btn-circle {
+  @include b.b-radius(50%);
+  @include u.transition(background-color, u.$time);
+  @include u.d-inline-block();
+  font-weight: 400;
+  line-height: 1rem;
+  @include p.padding(0);
+  &-s {
+    @include w.width(4rem);
+    @include h.height(4rem);
+  }
+  &-m {
+    @include w.width(4.8rem);
+    @include h.height(4.8rem);
+  }
+  &-l {
+    @include w.width(5.6rem);
+    @include h.height(5.6rem);
+  }
+  &-xl {
+    @include w.width(6.4rem);
+    @include h.height(6.4rem);
+  }
+  &-xxl {
+    @include w.width(7.2rem);
+    @include h.height(7.2rem);
+  }
+}
+/*
+.btn-square
+*/
+.btn-square {
+  @include u.transition(background-color, u.$time);
+  @include u.d-inline-block();
+  font-weight: 400;
+  line-height: 1rem;
+  @include p.padding(0);
+  &-s {
+    @include w.width(4rem);
+    @include h.height(4rem);
+  }
+  &-m {
+    @include w.width(4.8rem);
+    @include h.height(4.8rem);
+  }
+  &-l {
+    @include w.width(5.6rem);
+    @include h.height(5.6rem);
+  }
+  &-xl {
+    @include w.width(6.4rem);
+    @include h.height(6.4rem);
+  }
+  &-xxl {
+    @include w.width(7.2rem);
+    @include h.height(7.2rem);
   }
 }

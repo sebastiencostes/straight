@@ -1,5 +1,6 @@
 @use "color" as c;
 @use "border" as b;
+@use "font" as f;
 @use "utility" as u;
 @use "width" as w;
 @use "height" as h;
@@ -14,13 +15,13 @@ pre[rel]::before {
   left: 0;
   @include p.padding-direction(left, .8rem);
   position: absolute;
+  @include f.text-transform(uppercase);
   top: 0;
   @include w.width(100%);
 }
 
 pre {
   background-color: c.$grey-light;
-  border-radius: .3rem;
   clear: both;
   color: c.$navy-dark;
   font-family: "Inconsolata", monospace;

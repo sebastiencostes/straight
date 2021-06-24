@@ -1069,6 +1069,13 @@ no border
   padding-left: 2rem;
 }
 
+/*
+smooth
+*/
+.b-smooth {
+  border-radius: 0.3rem;
+}
+
 .t-capitalize {
   text-transform: capitalize;
 }
@@ -13262,11 +13269,6 @@ Rem
 /*
 .btn
 */
-.btn-xs {
-  font-size: 1.35rem;
-  padding: 1rem;
-}
-
 .btn-s {
   font-size: 2.4rem;
   padding: 1rem;
@@ -13293,84 +13295,6 @@ Rem
 }
 
 /*
-.btn-square
-*/
-.btn-square-xs {
-  width: 2.6rem;
-  height: 2.6rem;
-  font-size: 2.6rem;
-}
-
-.btn-square-s {
-  width: 3.6rem;
-  height: 3.6rem;
-  font-size: 3.6rem;
-}
-
-.btn-square-m {
-  width: 4.8rem;
-  height: 4.8rem;
-  font-size: 3.6rem;
-}
-
-.btn-square-l {
-  width: 6rem;
-  height: 6rem;
-  font-size: 4.8rem;
-}
-
-.btn-square-xl {
-  width: 7.2rem;
-  height: 7.2rem;
-  font-size: 6rem;
-}
-
-.btn-square-xxl {
-  width: 8.4rem;
-  height: 8.4rem;
-  font-size: 7.2rem;
-}
-
-/*
-.btn-circle
-*/
-.btn-circle-xs {
-  width: 2.6rem;
-  height: 2.6rem;
-  border-radius: 50%;
-}
-
-.btn-circle-s {
-  width: 3.6rem;
-  height: 3.6rem;
-  border-radius: 50%;
-}
-
-.btn-circle-m {
-  width: 4.8rem;
-  height: 4.8rem;
-  border-radius: 50%;
-}
-
-.btn-circle-l {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
-}
-
-.btn-circle-xl {
-  width: 7.2rem;
-  height: 7.2rem;
-  border-radius: 50%;
-}
-
-.btn-circle-xxl {
-  width: 8.4rem;
-  height: 8.4rem;
-  border-radius: 50%;
-}
-
-/*
 .btn classes & colors
 */
 .btn {
@@ -13381,6 +13305,7 @@ Rem
   color: #212121;
   font-weight: 400;
   line-height: 1rem;
+  padding: 1.6rem 1rem;
   font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
 }
 .btn-red {
@@ -13493,10 +13418,79 @@ Rem
 .btn-brown:disabled {
   background-color: #be9c91;
 }
+.btn:disabled {
+  cursor: default;
+}
+.btn span {
+  vertical-align: top;
+}
+.btn-smooth {
+  border-radius: 0.3rem;
+}
 
 /*
-scheme colors
+BTN circle
 */
+.btn-circle {
+  border-radius: 50%;
+  transition: background-color 0.28s;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1rem;
+  padding: 0;
+}
+.btn-circle-s {
+  width: 4rem;
+  height: 4rem;
+}
+.btn-circle-m {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+.btn-circle-l {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+.btn-circle-xl {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+.btn-circle-xxl {
+  width: 7.2rem;
+  height: 7.2rem;
+}
+
+/*
+.btn-square
+*/
+.btn-square {
+  transition: background-color 0.28s;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1rem;
+  padding: 0;
+}
+.btn-square-s {
+  width: 4rem;
+  height: 4rem;
+}
+.btn-square-m {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+.btn-square-l {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+.btn-square-xl {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+.btn-square-xxl {
+  width: 7.2rem;
+  height: 7.2rem;
+}
+
 .d-flex {
   display: flex;
 }
@@ -14691,7 +14685,7 @@ Order
   flex: 1 0 50%;
 }
 .card.card-h .card-title {
-  font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
 }
 .card.card-h .card-footer {
   align-items: flex-end;
@@ -14713,7 +14707,7 @@ Order
   flex: 1 0 75%;
 }
 .card.card-l .card-title {
-  font-size: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
 }
 .card.card-l .card-footer {
   align-items: flex-end;
@@ -14743,7 +14737,7 @@ Order
 
 .card-title,
 .card-body-title {
-  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
 }
 .card-title::first-letter,
 .card-body-title::first-letter {
@@ -14819,13 +14813,13 @@ pre[rel]::before {
   left: 0;
   padding-left: 0.8rem;
   position: absolute;
+  text-transform: uppercase;
   top: 0;
   width: 100%;
 }
 
 pre {
   background-color: #efefef;
-  border-radius: 0.3rem;
   clear: both;
   color: #4b636e;
   font-family: "Inconsolata", monospace;

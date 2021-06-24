@@ -4,17 +4,10 @@ vars definition dark / light
 $black: #000000;
 $text-dark: #eee;
 $black-dark: #323232;
-//$black-medium: #2d3848;
-//$black-light: #3a4556;
-//$black-ultra-light: #4a5567;
 $link-dark: #436f70;
 $link: #54bbb6;
 $white: #ffffff;
 $text-light: #323232;
-//$white-ultra-light: #fefefe;
-//$white-light: #f7fafb;
-//$white-medium: #e2e8f0;
-//$white-dark: #cbd5df;
 $transparent: transparent;
 $color-shadow: rgb(119 119 119 / 26%);
 $color-shadow-dark: rgb(0 0 0 / 50%);
@@ -106,7 +99,6 @@ $colors: (
 .bg-transparent {
   background-color: $transparent;
 }
-
 
 /*
 theme
