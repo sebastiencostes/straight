@@ -64,12 +64,38 @@ G-container
   @include g-container-no-col();
 }
 
-@mixin g-container-no-r-g {
+@mixin g-no-row-col {
   @include g-col-gap(0);
   @include row-gap(0);
 }
 .g-no-row-col {
-  @include g-container-no-r-g();
+  @include g-no-row-col();
+}
+
+/*
+grid-column-end
+*/
+@mixin g-col-end($value) {
+  grid-column-end: $value;
+}
+
+@for $i from 1 through 16 {
+  .g-col-end-#{$i} {
+    grid-column-end: (span #{$i});
+  }
+}
+
+/*
+grid-row-end
+*/
+@mixin g-row-end($value) {
+  grid-row-end: $value;
+}
+
+@for $i from 1 through 16 {
+  .g-row-end-#{$i} {
+    grid-row-end: (span #{$i});
+  }
 }
 
 /*

@@ -1,6 +1,8 @@
 @use "font" as f;
+@use "device" as d;
 @use "color" as c;
 @use "height" as h;
+@use "grid" as g;
 @use "flexbox" as fx;
 @use "margin" as m;
 @use "padding" as p;
@@ -170,6 +172,18 @@
   &-l {
     @extend %-l-shared;
   }
+}
+
+.card-galllery-cta {
+  @include d.tablet-portrait() {
+    @include g.g-col-end(span 2);
+  } 
+  @include d.tablet-landscape() {
+    @include g.g-col-end(span 3);
+  }  
+  @include d.laptop() {
+    @include g.g-col-end(span 4);
+  }  
 }
 
 /*

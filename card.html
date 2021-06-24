@@ -41,20 +41,27 @@
             </article>
         </section>
 
-        <section>
+        <section class="m-b-4">
             <article>
                 <h3 class="note-pink">
                     Card models
                 </h3>
                 <p>From simple to complex card, there is many opportunities to pattern your contents.
-                    Feel free to mix, customize and rearrange your content. When using <b>Card Carousel</b>
-                    you <b>must create and keep an id</b> on the figure tag. Thanks to <b>srcset</b> you can play around with your 
-                    media at different resolution but it's important to preserve 
-                    the image dimension ratio.
+                    Feel free to mix, customize and rearrange your content.Thanks to <b>srcset</b> you can play around with your 
+                    media at different resolution but it's important to <b>preserve 
+                    the image dimension ratio</b>.
+                </p>
+                <p>
+                    When using <b>Card Carousel</b>
+                    you <b>must create and keep an id</b> on <code class="single-code"> &lt;figure id=&quot;yourID&quot; class=&quot;carousel&quot;&gt;</code>.
+                </p>
+                <p>
+                    When using <b>Card Action</b>
+                    you <b>must keep the data-attr</b> <code class="single-code"> &lt;data-card=&quot;let it blank&quot;&gt;</code> on appropriate tag elements.
                 </p>
             </article>
         </section>
-        <!--OPEN card models-->
+
         <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-6">
             <article class="card b-shadow">
                 <header class="card-header">
@@ -283,7 +290,6 @@
                 </footer>
             </article>
         </section>
-        <!--CLOSE card models-->
 
         <section>
             <article>
@@ -549,7 +555,6 @@
             </article>
         </section>
 
-        <!--OPEN variant models h-->
         <section class="g-col g-col-m-2 g-col-l-3 m-b-6">
 
             <article class="card card-h b-shadow">
@@ -666,7 +671,7 @@
                 </footer>
             </article>
         </section>
-        <!--CLOSE variant models h-->
+ 
         <section>
             <article>
                 <h3 class="note-pink">
@@ -803,7 +808,6 @@
             </pre>
         </section>
 
-        <!--OPEN variant models l-->
         <section>
             <article>
                 <h3 class="note-pink">
@@ -874,7 +878,7 @@
                 </footer>
             </article>
         </section>
-        <!--CLOSE variant models l-->
+
         <section>
             <article>
                 <h3 class="note-pink">
@@ -963,7 +967,6 @@
             </article>
         </section>
         
-        <!--OPEN card gallery-->
         <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-6">
             <article class="card border">
                 <header class="card-header b-bottom">
@@ -1166,7 +1169,6 @@
                 </footer>
             </article>
         </section>
-        <!--CLOSE card gallery-->
 
         <section>
             <article>
@@ -1391,28 +1393,25 @@
                 <h3 class="note-pink">
                     Card gallery example with variations
                 </h3>
-                <p><b>Click</b> on one all of these buttons just below to see variations in action.
+                <p><b>Click on one all of these buttons</b> just below to see variations in action.
                 Here a basic grid layout example with rounded bordered simple cards.
+                <b>You must preserve id</b> on each button.
                 </p>
             </article>
         </section>
 
-        <div class="t-center m-b-4 m-t-4">
-            <button id="vGrid" class="btn-circle btn-circle-l btn-pink card-btn-gallery m-r-5" type="button">
-                <ion-icon class="t-white" name="tablet-portrait" />
-            </button>
-
-            <button id="hGrid" class="btn-circle btn-circle-l btn-pink card-btn-gallery" type="button">
-                <ion-icon class="t-white" name="tablet-landscape" />
-            </button>
-
-
-            <button id="lGrid" class="btn-circle btn-circle-l btn-pink card-btn-gallery m-l-5" type="button">
-                <ion-icon class="t-white" name="phone-landscape" />
-            </button>
-        </div>
-
-        <section id="cardGallery" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-6">
+        <section id="cardGallery" class="card-gallery g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-6" data-card-gallery="">
+            <div class="card-galllery-cta t-right">
+                <button id="vGrid" class="v-grid btn-circle btn-circle-l btn-pink m-r-5" type="button" data-card-gallery="">
+                    <ion-icon class="t-white" name="tablet-portrait" />
+                </button>
+                <button id="hGrid" class="h-grid btn-circle btn-circle-l btn-pink" type="button" data-card-gallery="">
+                    <ion-icon class="t-white" name="tablet-landscape" />
+                </button>
+                <button id="lGrid" class="l-grid btn-circle btn-circle-l btn-pink m-l-5" type="button" data-card-gallery="">
+                    <ion-icon class="t-white" name="phone-landscape" />
+                </button>
+            </div>
             <article class="card b-shadow b-radius-s border">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">simple card</h4>
