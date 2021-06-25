@@ -1,0 +1,46 @@
+@use "position" as p;
+
+%carousel-slide-shared {
+  @include p.position(relative);
+  animation-name: carousel;
+  animation-duration: 0.28s;
+}
+%carousel-cta-shared {
+  @include p.position(absolute);
+  top: calc(50% - 2.2rem);
+  user-select: none;
+}
+%carousel-next-shared {
+  right: 0;
+}
+
+.carousel {
+  overflow: hidden;
+  &-slide {
+    @extend %carousel-slide-shared;
+  }
+  &-cta {
+    @extend %carousel-cta-shared;
+  }
+  &-next {
+    @extend %carousel-next-shared;
+  }
+}
+
+@-webkit-keyframes carousel {
+  from {
+    transform: scaleX(-1);
+  }
+  to {
+    ransform: scaleX(1);
+  }
+}
+
+@keyframes carousel {
+  from {
+    transform: scaleX(-1);
+  }
+  to {
+    ransform: scaleX(1);
+  }
+}

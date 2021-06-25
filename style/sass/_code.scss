@@ -1,0 +1,72 @@
+@use "color" as c;
+@use "border" as b;
+@use "font" as f;
+@use "utility" as u;
+@use "width" as w;
+@use "height" as h;
+@use "padding" as p;
+
+pre[rel]::before {
+  background-color: c.$grey-dark;
+  color: c.$text-dark;
+  content: attr(rel);
+  font-family: "Inconsolata", monospace;
+  font-size: 1.6rem;
+  left: 0;
+  @include p.padding-direction(left, .8rem);
+  position: absolute;
+  @include f.text-transform(uppercase);
+  top: 0;
+  @include w.width(100%);
+}
+
+pre {
+  background-color: c.$grey-light;
+  clear: both;
+  color: c.$navy-dark;
+  font-family: "Inconsolata", monospace;
+  hyphens: none;
+  @include w.min-width(100%);
+  overflow: auto;
+  position: relative;
+  &:hover {
+    cursor: copy;
+  }
+}
+
+pre code {
+  @include u.d-block();
+  font-family: "Inconsolata", monospace;
+  @include p.padding-direction(left, 2rem);
+  white-space: pre;
+}
+
+code span {
+  font-size: 1.6rem;
+}
+
+.single-code {
+  @include u.d-inline-block();
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+}
+
+.hljs {
+  color: c.$navy;
+  background-color: c.$grey-light;
+}
+
+.hljs-tag {
+  color: c.$grey-dark;
+}
+
+.hljs-bullet, .hljs-deletion, .hljs-name, .hljs-selector-tag, .hljs-template-variable, .hljs-variable {
+  color: c.$blue;
+}
+
+.hljs-attr, .hljs-link, .hljs-literal, .hljs-number, .hljs-symbol, .hljs-variable.constant_ {
+  color: c.$pink-light;
+}
+
+.hljs-addition, .hljs-code, .hljs-string, .hljs-title.class_.inherited__ {
+  color: c.$brown-light;
+}

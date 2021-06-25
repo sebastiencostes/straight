@@ -1,30 +1,174 @@
-$black: black;
+/*
+vars definition dark / light 
+*/
+$black: #000000;
 $text-dark: #eee;
-$black-dark: #1a202c;
-$black-medium: #2d3848;
-$black-light: #3a4556;
-$black-ultra-light: #4a5567;
-$blue-dark: #436f70;
-$blue: #54bbb6;
-$white: white;
-$text-light: #222;
-$white-ultra-light: #fefefe;
-$white-light: #f7fafb;
-$white-medium: #e2e8f0;
-$white-dark: #cbd5df;
+$black-dark: #323232;
+$link-dark: #436f70;
+$link: #54bbb6;
+$white: #ffffff;
+$text-light: #323232;
 $transparent: transparent;
+$color-shadow: rgb(119 119 119 / 26%);
+$color-shadow-dark: rgb(0 0 0 / 50%);
+
+/*
+colors
+*/
+$red: #d50000;
+$red-light: #ff5131;
+$red-dark: #9b0000;
+$yellow: #ffd600;
+$yellow-light: #ffff52;
+$yellow-dark: #c7a500;
+$blue: #0091ea;
+$blue-light: #64c1ff;
+$blue-dark: #0064b7;
+$green: #64dd17;
+$green-light: #9cff57;
+$green-dark: #1faa00;
+$purple: #aa00ff;
+$purple-light: #e254ff;
+$purple-dark: #7200ca;
+$orange: #ff6d00;
+$orange-light: #ff9e40;
+$orange-dark: #c43c00;
+$pink: #c51162;
+$pink-light: #fd558f;
+$pink-dark: #8e0038;
+$brown: #8d6e63;
+$brown-light: #be9c91;
+$brown-dark: #5f4339;
+$grey: #bdbdbd;
+$grey-light: #efefef;
+$grey-dark: #8d8d8d;
+$navy: #78909c;
+$navy-light: #a7c0cd;
+$navy-dark: #4b636e;
+$carbon: #212121;
+$carbon-light: #484848;
+$carbon-dark: #000000;
+
+/*
+vars definition for classes
+*/
+$colors: (
+  red: #d50000,
+  red-light: #ff5131,
+  red-dark: #9b0000,
+  yellow: #ffd600,
+  yellow-light: #ffff52,
+  yellow-dark: #c7a500,
+  blue: #0091ea,
+  blue-light: #64c1ff,
+  blue-dark: #0064b7,
+  green: #64dd17,
+  green-light: #9cff57,
+  green-dark: #1faa00,
+  purple: #aa00ff,
+  purple-light: #e254ff,
+  purple-dark: #7200ca,
+  orange: #ff6d00,
+  orange-light: #ff9e40,
+  orange-dark: #c43c00,
+  pink: #c51162,
+  pink-light: #fd558f,
+  pink-dark: #8e0038,
+  brown: #8d6e63,
+  brown-light: #be9c91,
+  brown-dark: #5f4339,
+  grey: #bdbdbd,
+  grey-light: #efefef,
+  grey-dark: #8d8d8d,
+  navy: #78909c,
+  navy-light: #a7c0cd,
+  navy-dark: #4b636e,
+  carbon: #212121,
+  carbon-light: #484848,
+  carbon-dark: #000000,
+);
+
+@each $name, $color in $colors {
+  #{".bg-" + $name} {
+    background-color: $color;
+  }
+  #{".text-" + $name} {
+    color: $color;
+  }
+}
+
+/*
+gradients
+*/
+$grad-red: linear-gradient(to top, #d50000, #e0210e, #ea341a, #f54326, #ff5131);
+$grad-red-dark: linear-gradient(to top, #9b0000, #a90001, #b80001, #c60001, #d50000);
+$grad-yellow: linear-gradient(to top, #ffd600, #ffe020, #ffeb33, #fff543, #ffff52);
+$grad-yellow-dark: linear-gradient(to top, #c7a500, #d5b100, #e3bd00, #f1ca00, #ffd600);
+$grad-blue: linear-gradient(to top, #0091ea, #279df0, #3ea9f5, #51b5fa, #64c1ff);
+$grad-blue-dark: linear-gradient(to top, #0064b7, #016fc4, #017ad0, #0185dd, #0091ea);
+$grad-green: linear-gradient(to top, #64dd17, #73e52c, #81ee3c, #8ff64a, #9cff57);
+$grad-green-dark: linear-gradient(to top, #1faa00, #33b706, #44c30c, #54d012, #64dd17);
+$grad-purple: linear-gradient(to top, #aa00ff, #ba21ff, #c934fe, #d645ff, #e254ff);
+$grad-purple-dark: linear-gradient(to top, #7200ca, #8001d7, #8d01e5, #9c01f2, #aa00ff);
+$grad-orange: linear-gradient(to top, #ff6d00, #ff7b14, #ff8724, #ff9332, #ff9e40);
+$grad-orange-dark: linear-gradient(to top, #c43c00, #d34800, #e25401, #f06100, #ff6d00);
+$grad-pink: linear-gradient(to top, #c51162, #d3286d, #e13878, #ef4783, #fd558f);
+$grad-pink-dark: linear-gradient(to top, #8e0038, #9c0342, #a9074c, #b70c57, #c51162);
+$grad-brown: linear-gradient(to top, #8d6e63, #99796e, #a5857a, #b29085, #be9c91);
+$grad-brown-dark: linear-gradient(to top, #5f4339, #6a4d43, #76584e, #816358, #8d6e63);
+$grad-grey: linear-gradient(to top, #bdbdbd, #c9c9c9, #d6d6d6, #e2e2e2, #efefef);
+$grad-grey-dark: linear-gradient(to top, #8d8d8d, #999999, #a5a5a5, #b1b1b1, #bdbdbd);
+$grad-navy: linear-gradient(to top, #78909c, #849ca8, #8fa8b4, #9bb4c1, #a7c0cd);
+$grad-navy-dark: linear-gradient(to top, #4b636e, #566e79, #617985, #6c8490, #78909c);
+$grad-carbon: linear-gradient(to top, #212121, #2a2a2a, #343434, #3e3e3e, #484848);
+$grad-carbon-dark: linear-gradient(to top, #000000, #0c0c0c, #141414, #1b1b1b, #212121);
+
+$gradients: (
+  grad-red: linear-gradient(to top, #d50000, #e0210e, #ea341a, #f54326, #ff5131),
+  grad-red-dark: linear-gradient(to top, #9b0000, #a90001, #b80001, #c60001, #d50000),
+  grad-yellow: linear-gradient(to top, #ffd600, #ffe020, #ffeb33, #fff543, #ffff52),
+  grad-yellow-dark: linear-gradient(to top, #c7a500, #d5b100, #e3bd00, #f1ca00, #ffd600),
+  grad-blue: linear-gradient(to top, #0091ea, #279df0, #3ea9f5, #51b5fa, #64c1ff),
+  grad-blue-dark: linear-gradient(to top, #0064b7, #016fc4, #017ad0, #0185dd, #0091ea),
+  grad-green: linear-gradient(to top, #64dd17, #73e52c, #81ee3c, #8ff64a, #9cff57),
+  grad-green-dark: linear-gradient(to top, #1faa00, #33b706, #44c30c, #54d012, #64dd17),
+  grad-purple: linear-gradient(to top, #aa00ff, #ba21ff, #c934fe, #d645ff, #e254ff),
+  grad-purple-dark: linear-gradient(to top, #7200ca, #8001d7, #8d01e5, #9c01f2, #aa00ff),
+  grad-orange: linear-gradient(to top, #ff6d00, #ff7b14, #ff8724, #ff9332, #ff9e40),
+  grad-orange-dark: linear-gradient(to top, #c43c00, #d34800, #e25401, #f06100, #ff6d00),
+  grad-pink: linear-gradient(to top, #c51162, #d3286d, #e13878, #ef4783, #fd558f),
+  grad-pink-dark: linear-gradient(to top, #8e0038, #9c0342, #a9074c, #b70c57, #c51162),
+  grad-brown: linear-gradient(to top, #8d6e63, #99796e, #a5857a, #b29085, #be9c91),
+  grad-brown-dark: linear-gradient(to top, #5f4339, #6a4d43, #76584e, #816358, #8d6e63),
+  grad-grey: linear-gradient(to top, #bdbdbd, #c9c9c9, #d6d6d6, #e2e2e2, #efefef),
+  grad-grey-dark: linear-gradient(to top, #8d8d8d, #999999, #a5a5a5, #b1b1b1, #bdbdbd),
+  grad-navy: linear-gradient(to top, #78909c, #849ca8, #8fa8b4, #9bb4c1, #a7c0cd),
+  grad-navy-dark: linear-gradient(to top, #4b636e, #566e79, #617985, #6c8490, #78909c),
+  grad-carbon: linear-gradient(to top, #212121, #2a2a2a, #343434, #3e3e3e, #484848),
+  grad-carbon-dark: linear-gradient(to top, #000000, #0c0c0c, #141414, #1b1b1b, #212121)
+);
+
+@each $name, $gradient in $gradients {
+  #{".bg-" + $name} {
+    background-image: $gradient;
+  }
+}
+
+.bg-transparent {
+  background-color: $transparent;
+}
 
 /*
 theme
 */
 @mixin dark-theme {
-    @media (prefers-color-scheme: dark) {
-        @content;
-    }
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
 }
 
 @mixin light-theme {
-    @media (prefers-color-scheme: light) {
-        @content;
-    }
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
 }

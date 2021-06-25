@@ -1,36 +1,52 @@
-@import 'device';
-@mixin container-fix(){
-    margin: 0 auto;
-    width: 1200px; 
+@use "device" as d;
+@use "margin" as m;
+@use "width" as w;
+
+@mixin container-fix() {
+  @include m.margin-direction(left, auto);
+  @include m.margin-direction(right, auto);
+  @include w.width(calc(100vw - 4rem));
+  @include d.laptop () {
+    @include w.width(120rem);
+  }
+  @include d.desktop () {
+    @include w.width(136.6rem);
+  }
 }
 .container-fix {
-    @include container-fix()
+  @include container-fix();
 }
-//relative to screen device
+/*
+relative to screen device
+*/
 @mixin container-screen() {
-    @include tablet-portrait {
-        margin: 0 auto;
-        width: calc(100vw - 4rem);
-    }
+  @include m.margin-direction(left, auto);
+  @include m.margin-direction(right, auto);
+    @include w.width(calc(100vw - 4rem));
 }
 .container-screen {
-    @include container-screen();
+  @include container-screen();
 }
-//relative to window
+/*
+relative to window
+*/
 @mixin container-window() {
-    @include tablet-portrait {
-        margin: 0 auto;
-        width: calc(100% - 4rem);
-    }
+  @include d.tablet-portrait {
+    @include m.margin-direction(left, auto);
+    @include m.margin-direction(right, auto);
+    @include w.width(calc(100% - 4rem));
+  }
 }
 .container-window {
-    @include container-window();
+  @include container-window();
 }
 
-//no-margin
+/*
+no-margin
+*/
 @mixin container-full() {
-    width: 100%;
+  @include w.width(100%);
 }
 .container-full {
-    @include container-full();
+  @include container-full();
 }

@@ -1,52 +1,4 @@
-@import "color";
-
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local("Material Icons"), local("MaterialIcons-Regular"),
-    url(/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2)
-      format("woff2"),
-    url(/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff)
-      format("woff"),
-    url(/node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf)
-      format("truetype");
-}
-.material-icons {
-  font-size: 2.4rem; /* Preferred icon size */
-  display: block;
-}
-
-/* Rules for sizing the icon. */
-.material-icons.md-18 {
-  font-size: 1.8rem;
-}
-.material-icons.md-24 {
-  font-size: 2.4rem;
-}
-.material-icons.md-36 {
-  font-size: 3.6rem;
-}
-.material-icons.md-48 {
-  font-size: 4.8rem;
-}
-
-/* Rules for using icons as black on a light background. */
-.material-icons.md-dark {
-  color: $text-light;
-}
-.material-icons.md-dark.md-inactive {
-  color: rgba(34, 34, 34, 0.26);
-}
-
-/* Rules for using icons as white on a dark background. */
-.material-icons.md-light {
-  color: $text-dark;
-}
-.material-icons.md-light.md-inactive {
-  color: rgba(238, 238, 238, 0.3);
-}
+@use "color" as c;
 
 @mixin font-size($value) {
   font-size: $value;
@@ -105,53 +57,84 @@
 }
 
 @mixin text-overlay() {
-  color: $white-ultra-light;
-  -webkit-filter: drop-shadow(2px 4px 6px black);
-  filter: drop-shadow(2px 4px 6px black);
-  font-weight: 200;
+  color: c.$white;
+  -webkit-filter: drop-shadow(1px 1px 2px c.$black);
+  filter: drop-shadow(1px 1px 2px c.$black);
+  font-weight: 400;
 }
 
 .t-overlay {
   @include text-overlay;
 }
 h1 {
-  font-size: 4.2rem;
-  line-height: 110%;
+  font-size: clamp(4rem, 3.44rem + 2vw, 7.2rem);
 }
 h2 {
-  font-size: 3.56rem;
-  line-height: 110%;
+  font-size: clamp(3.2rem, 2.64rem + 2vw, 6.4rem);
 }
 h3 {
-  font-size: 2.92rem;
-  line-height: 110%;
+  font-size: clamp(2.4rem, 1.84rem + 2vw, 5.6rem);
 }
 h4 {
-  font-size: 2.28rem;
-  line-height: 110%;
+  font-size: clamp(2.4rem, 1.98rem + 1.5vw, 4.8rem);
 }
 h5 {
-  font-size: 1.64rem;
-  line-height: 110%;
+  font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
 }
 h6 {
-  font-size: 1.15rem;
+  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+}
+p,
+span,
+li {
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+}
+h1,
+h2,
+h3,
+h4,
+H5,
+h6 {
   line-height: 110%;
 }
+h1,
+h2,
+h3,
+h4,
+H5,
+h6,
 p {
-  font-size: 1.4rem;
-
-  //font-size: 1.4rem; mob
-  //1.45rem pad
-  //1.5rem  1200px
-  //1.6rem desktop
-
-//TODO//
-  //1.68rem
-  //2.2rem
-  //2.8rem
-  //3.4rem
-  //4rem
-  //4.5rem
+  cursor: default;
 }
 
+.t-white {
+  color: c.$white;
+}
+
+@include c.dark-theme {
+  .material-icons {
+    color: c.$text-dark;
+  }
+}
+
+@include c.light-theme {
+  .material-icons {
+    color: c.$text-light;
+  }
+}
+
+@include c.dark-theme {
+  ion-icon {
+    color: c.$text-dark;
+  }
+}
+
+@include c.light-theme {
+  ion-icon {
+    color: c.$text-light;
+  }
+}
+
+ion-icon {
+  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
+}

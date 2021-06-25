@@ -1,7 +1,16 @@
+/*
+Text overlay
+*/
 @mixin text-overlay() {
-    filter: drop-shadow(2px 4px 6px black);
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .text-overlay {
-    @include text-overlay();
+  @include text-overlay();
+}
+
+@mixin filter($value) {
+  -webkit-filter: $value;
+  filter: $value;
 }

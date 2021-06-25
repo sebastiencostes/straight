@@ -7,277 +7,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
     <title>Straight</title>
-    <link rel="preload" href="node_modules/material-design-icons/iconfont/material-icons.css" as="style">
-    <link rel="stylesheet" href="node_modules/material-design-icons/iconfont/material-icons.css">
+    <meta name="description" content="Straight - HTML5, CSS3, Flexbox and Grid framework for building responsive, mobile-first sites">
     <link rel="preload" href="style/css/style.css" as="style">
     <link rel="stylesheet" href="style/css/style.css">
 </head>
 
 <body>
 
+    <nav>
+        <ul>
+            <li>
+                <a href="/index.html">
+                    home
+                </a>
+            </li>
+            <li>
+                <a href="/button.html">
+                    button
+                </a>
+            </li>
+            <li>
+                <a href="/card.html">
+                    card
+                </a>
+            </li>
+            <li>
+                <a href="/carousel.html">
+                    carousel
+                </a>
+            </li>
+        </ul>
+    </nav>
+
     <main class="container-screen">
+        <article>
+            <h1>nos plats préférés</h1>
+            <h2>nos plats préférés</h2>
+            <h3>nos plats préférés</h3>
+            <h4>nos plats préférés</h4>
+            <h5>nos plats préférés</h5>
+            <h6>nos plats préférés</h6>
+            <p>
+                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                pour l'inciter à cliquer sur l'article et à le lire.
+                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                pour l'inciter à cliquer sur l'article et à le lire.
+                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                pour l'inciter à cliquer sur l'article et à le lire.
+                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
+                pour l'inciter à cliquer sur l'article et à le lire.
+            </p>
+        </article>
 
-        <section id="cardContainer" class="g-container-1 m-t-2 m-b-2">
+        <article>
+            <!--CIRCLE-->
+            <button class="btn btn-circle-xs">
+                <span class="material-icons md-12">
+                    more_horizontal
+                </span>
+            </button>
 
-            <div>
-                <button id="vGrid" class="btn-square-m  card-btn-gallery">
-                    <span class="material-icons md-36">
-                        crop_portrait
-                    </span>
-                </button>
+            <button class="btn btn-circle-s">
+                <span class="material-icons">
+                    more_horizontal
+                </span>
+            </button>
 
-                <button id="hGrid" class="btn-square-m card-btn-gallery">
-                    <span class="material-icons md-36">
-                        crop_landscape
-                    </span>
-                </button>
+            <button class="btn btn-circle-m">
+                <span class="material-icons md-36">
+                    more_horizontal
+                </span>
+            </button>
 
-                <button id="lGrid" class="btn-square-m card-btn-gallery">
-                    <span class="material-icons md-36">
-                        list
-                    </span>
-                </button>
-            </div>
+            <button class="btn btn-circle-l">
+                <span class="material-icons md-48">
+                    more_horizontal
+                </span>
+            </button>
 
-            <!--CARD-->
-            <article class="card">
-                <header class="card-header">
-                    <h3 class="card-title t-ellipsis">vertical card</h3>
-                    <button class="card-header-cta btn-circle-s" data-number="1">
-                        <span class="material-icons">
-                            more_horiz
-                        </span>
-                    </button>
-                </header>
-                <picture class="card-img-container">
-                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                    <img class="card-img" src="/assets/img/card-img.jpg"
-                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
-                </picture>
-                <aside class="card-body d-none" data-number="1">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title"><a href="#">vertical card body</a></h4>
-                        <button class="card-header-cta btn-circle-s close" data-number="1">
-                            <span class="material-icons">
-                                close
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text t-justify">
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-info-container">
-                            <sapn class="card-info-text">
-                                17.90€
-                            </sapn>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
-                                    remove
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
-                                    add
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-cta-container">
-                            <button class="card-footer-cta">
-                                <span class="material-icons">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-info-container">
-                        <sapn class="card-info-text">
-                            17.90€
-                        </sapn>
-                    </div>
-                    <div class="card-cta-container">
-                        <button class="card-footer-cta">
-                            <span class="material-icons">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
+            <button class="btn btn-circle-xl">
+                <span class="material-icons md-60">
+                    more_horizontal
+                </span>
+            </button>
 
-            <!--CARD-H-->
-            <article class="card">
-                <header class="card-header">
-                    <h3 class="card-title t-ellipsis">horizontal card</h3>
-                    <button class="card-header-cta btn-circle-s" data-number="2">
-                        <span class="material-icons">
-                            more_horiz
-                        </span>
-                    </button>
-                </header>
-                <picture class="card-img-container">
-                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                    <img class="card-img" src="/assets/img/card-img.jpg"
-                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
-                </picture>
-                <aside class="card-body d-none" data-number="2">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title"><a href="#">horizontal card</a></h4>
-                        <button class="card-header-cta btn-circle-s close" data-number="2">
-                            <span class="material-icons">
-                                close
-                            </span>
-                        </button>
-                    </div>
-                    <p class="card-body-text t-justify">
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                        pour l'inciter à cliquer sur l'article et à le lire.
-                    </p>
-                    <div class="card-body-footer">
-                        <div class="card-body-info-container">
-                            <sapn class="card-info-text">
-                                17.90€
-                            </sapn>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
-                                    remove
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
-                                    add
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-cta-container">
-                            <button class="card-footer-cta">
-                                <span class="material-icons">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-info-container">
-                        <sapn class="card-info-text">
-                            17.90€
-                        </sapn>
-                    </div>
-                    <div class="card-cta-container">
-                        <button class="card-footer-cta">
-                            <span class="material-icons">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
+            <button class="btn circle-hover btn-circle-xxl">
+                <span class="material-icons md-78">
+                    more_horizontal
+                </span>
+            </button>
 
-            <!--CARD-L-->
-            <article class="card">
-                <header class="card-header">
-                    <h3 class="card-title t-ellipsis">list card</h3>
-                    <button class="card-header-cta btn-circle-s" data-number="3">
-                        <span class="material-icons">
-                            more_horiz
-                        </span>
-                    </button>
-                </header>
-                <picture class="card-img-container">
-                    <source srcset="/assets/img/img-card-mobile.jpg" media="(min-width: 768px)">
-                    <img class="card-img" src="/assets/img/card-img.jpg"
-                        alt="Photo de guitare par Gustavo Borges provenant de Pexels">
-                </picture>
-                <aside class="card-body d-none" data-number="3">
-                    <div class="card-body-header">
-                        <h4 class="card-body-title"><a href="#">list card</a></h4>
-                        <button class="card-header-cta btn-circle-s close" data-number="3">
-                            <span class="material-icons">
-                                close
-                            </span>
-                        </button>
-                    </div>
-                    <!-- <p class="card-body-text t-justify">
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
-                        Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel pour l'inciter à cliquer sur l'article et à le lire.
-                    </p> -->
-                    <div class="card-body-footer">
-                        <div class="card-body-info-container">
-                            <sapn class="card-info-text">
-                                17.90€
-                            </sapn>
-                        </div>
-                        <div class="card-body-info-qty">
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
-                                    remove
-                                </span>
-                            </button>
-                            <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-body-info-qty-cta">
-                                <span class="material-icons">
-                                    add
-                                </span>
-                            </button>
-                        </div>
-                        <div class="card-body-cta-container">
-                            <button class="card-footer-cta">
-                                <span class="material-icons">
-                                    shopping_cart
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-                <footer class="card-footer">
-                    <div class="card-info-container">
-                        <sapn class="card-info-text">
-                            17.90€
-                        </sapn>
-                    </div>
-                    <div class="card-cta-container">
-                        <button class="card-footer-cta">
-                            <span class="material-icons">
-                                shopping_cart
-                            </span>
-                        </button>
-                    </div>
-                </footer>
-            </article>
+            <!--SQUARE-->
 
-        </section>
+            <button class="btn btn-square-xs">
+                <span class="material-icons md-12">
+                    more_horizontal
+                </span>
+            </button>
 
+            <button class="btn btn-square-s">
+                <span class="material-icons">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-square-m">
+                <span class="material-icons md-36">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-square-l">
+                <span class="material-icons md-48">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn btn-square-xl">
+                <span class="material-icons md-60">
+                    more_horizontal
+                </span>
+            </button>
+
+            <button class="btn square-hover btn-square-xxl">
+                <span class="material-icons md-78">
+                    more_horizontal
+                </span>
+            </button>
+
+            <!--BTN-->
+
+            <button class="btn btn-xs">
+                button
+            </button>
+
+            <button class="btn btn-s">
+                button
+            </button>
+
+            <button class="btn btn-m">
+                button
+            </button>
+
+            <button class="btn btn-l">
+                button
+            </button>
+
+            <button class="btn btn-xl">
+                button
+            </button>
+
+            <button class="btn btn-xxl">
+                button
+            </button>
+        </article>
+
+        <div class="t-right">
+            <button id="vGrid" class="btn-square-s  card-btn-gallery m-r-2">
+                <span class="material-icons">
+                    crop_portrait
+                </span>
+            </button>
+
+            <button id="hGrid" class="btn-square-s card-btn-gallery">
+                <span class="material-icons">
+                    crop_5_4
+                </span>
+            </button>
+
+            <button id="lGrid" class="btn-square-s card-btn-gallery m-l-2">
+                <span class="material-icons">
+                    crop_7_5
+                </span>
+            </button>
+        </div>
     </main>
     <footer>
         footer
+        Icons comes from <a href="https://ionic.io/ionicons" rel="noopener" target="_blank">ionic</a>.
     </footer>
-    <script defer src="node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
-    <script defer src="node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
-    <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
     <script src="script/main.js"></script>
 </body>
 

@@ -1,6 +1,52 @@
+@use "color" as c;
+$time: 0.28s;
+@mixin transition($property, $time) {
+  transition: $property $time;
+}
 @mixin d-none {
   display: none;
 }
 .d-none {
-  @include d-none();
+  @include d-none;
+}
+@mixin d-block {
+  display: block;
+}
+.d-block {
+  @include d-block;
+}
+@mixin d-inline-block {
+  display: inline-block;
+}
+.d-inline-block {
+  @include d-inline-block;
+}
+@mixin b-shadow {
+  @include c.light-theme() {
+    box-shadow: 0 5px 10px c.$color-shadow;
+  }
+  @include c.dark-theme() {
+    box-shadow: 0 5px 10px c.$color-shadow-dark;
+  }
+}
+
+@mixin b-shadow-hovered {
+  @include transition(box-shadow, $time);
+  @include c.dark-theme() {
+    box-shadow: 10px 15px 10px c.$carbon;
+  }
+  @include c.light-theme() {
+    box-shadow: 10px 15px 10px c.$color-shadow;
+  }
+}
+
+.b-shadow {
+  @include b-shadow();
+}
+.b-shadow-hovered {
+  @include b-shadow();
+  &:hover {
+    @include transition(box-shadow, $time);
+    @include b-shadow-hovered();
+  }
 }

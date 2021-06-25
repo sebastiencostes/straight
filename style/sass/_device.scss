@@ -1,8 +1,14 @@
-$tablet-portrait: 768px;
-$tablet-landscape: 1024px;
-$laptop: 1440px;
-$desktop: 1920px;
+$phone: 280px;
+$tablet-portrait: 728px;
+$tablet-landscape: 992px;
+$laptop: 1400px;
+$desktop: 1880px;
 
+@mixin phone {
+  @media only screen and (min-width: $phone) {
+    @content;
+  }
+}
 @mixin tablet-portrait {
   @media only screen and (min-width: $tablet-portrait) {
     @content;
@@ -18,7 +24,7 @@ $desktop: 1920px;
     @content;
   }
 }
-@mixin  desktop {
+@mixin desktop {
   @media only screen and (min-width: $desktop) {
     @content;
   }

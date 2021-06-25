@@ -1,141 +1,140 @@
-@import "border";
-@import "color";
-@import "font";
-@import "height";
-@import "image";
-@import "flexbox";
-@import "margin";
-@import "padding";
-@import "position";
-@import "utility";
-@import "width";
-@import "z-index";
+@use "font" as f;
+@use "device" as d;
+@use "color" as c;
+@use "height" as h;
+@use "grid" as g;
+@use "flexbox" as fx;
+@use "margin" as m;
+@use "padding" as p;
+@use "position" as pos;
+@use "width" as w;
+@use "z-index" as z;
 
 %card-shared {
-  @include d-flex();
-  @include height(100%);
-  @include position(relative);
-  @include f-dir-col();
+  @include fx.d-flex();
+  @include h.height(100%);
+  @include pos.position(relative);
+  @include fx.f-dir-col();
   background-clip: border-box;
   overflow: hidden;
   &%-h-shared {
-    @include f-dir-row-reverse();
-    @include flex-wrap(wrap);
+    @include fx.f-dir-row-reverse();
     & .card-header {
-      @include height(50%);
-      @include max-width(50%);
-      @include items-start();
-      -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-      flex: 0 1 50%;
+      @include h.height(50%);
+      @include w.max-width(50%);
+      @include fx.items-start();
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+      flex: 1 0 50%;
     }
-    & .card-img-container {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-      flex: 0 1 50%;
+    & .card-title {
+      font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
     }
     & .card-footer {
-      @include items-end();
-      @include padding(1rem);
-      @include position(absolute);
-      @include height(50%);
-      @include width(50%);
+      @include fx.items-end();
+      @include p.padding(1rem);
+      @include pos.position(absolute);
+      @include h.height(50%);
+      @include w.width(50%);
       bottom: 0;
     }
   }
   &%-l-shared {
-    @include f-dir-row-reverse();
-    @include flex-wrap(wrap);
+    @include fx.f-dir-row-reverse();
     & .card-header {
-      @include align-items(center);
-      @include height(50%);
-      @include max-width(75%);
-      -webkit-box-flex: 0;
-      -ms-flex: 0 1 75%;
-      flex: 0 1 75%;
+      @include fx.align-items(flex-start);
+      @include h.height(50%);
+      @include w.max-width(75%);
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 75%;
+      flex: 1 0 75%;
     }
     & .card-title {
-      @include font-size(1.6rem);
-    }
-    & .card-img-container {
-      -webkit-box-flex: 0;
-      -ms-flex: 0 1 25%;
-      flex: 0 1 25%;
+      font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
     }
     & .card-footer {
-      @include align-items(center);
-      @include height(50%);
-      @include padding(1rem);
-      @include position(absolute);
-      @include width(75%);
+      @include fx.align-items(flex-end);
+      @include h.height(50%);
+      @include p.padding(1rem);
+      @include pos.position(absolute);
+      @include w.width(75%);
       bottom: 0;
     }
   }
 }
+%card-img-container-shared {
+  position: relative;
+}
 %card-img-shared {
-  @include width(100%);
+  @include w.width(100%);
 }
-%card-header-shared {
-  @include d-flex();
-  @include justify-between();
-  @include padding(1rem);
-  @include align-items(center);
+%card-header-shared,
+%card-body-header-shared {
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include p.padding(1rem);
+  @include fx.align-items(center);
+  @include h.height(6rem);
 }
-%card-title-shared {
-  @include text-transform(capitalize);
-  @include font-size(2.4rem);
-  font-weight: 300;
+%card-title-shared,
+%card-body-title-shared {
+  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+  &::first-letter {
+    @include f.text-transform(capitalize);
+  }
 }
 %card-body-shared {
-  @include f-dir-col();
-  @include position(absolute);
-  @include height(100%);
-  @include padding(1rem 1rem 1rem);
-  @include width(100%);
-  @include z-index(1);
+  @include fx.f-dir-col();
+  @include pos.position(absolute);
+  @include h.height(100%);
+  @include w.width(100%);
+  @include z.z-index(1);
   overflow-y: scroll;
   right: 0;
   top: 0;
 }
-%card-body-header-shared {
-  @include d-flex();
-  @include justify-between();
-  @include align-items(center);
-  @include padding-direction(bottom, 1rem);
-}
-%card-body-header-shared {
-  @include text-transform(capitalize);
-  @include font-size(2.4rem);
-  font-weight: 300;
+%card-body-text-shared {
+  &::first-letter {
+    @include f.text-transform(capitalize);
+  }
 }
 %card-body-text-shared {
-  @include margin(1rem 0);
+  @include m.margin(2rem 0 2rem);
+  @include p.padding(0 2rem);
+}
+%card-body-footer-shared,
+%card-footer-shared {
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include fx.align-items(center);
+  @include p.padding(1rem);
+  @include h.height(6rem);
 }
 %card-body-footer-shared {
-  @include d-flex();
-  @include justify-between();
-  @include align-items(center);
-  @include margin-direction(top, auto);
-  @include padding-direction(top, 2rem);
+  @include m.margin-direction(top, auto);
 }
-%card-footer-shared {
-  @include d-flex();
-  @include justify-between();
-  @include align-items(center);
-  @include padding(1.5rem 1rem);
+%card-left-text-shared {
+  cursor: default;
 }
-%card-info-text-shared {
-  @include font-size(1.6rem);
-  font-weight: 300;
+%card-sup {
+  top: inherit;
+  @include f.font-size(0.65em);
+  vertical-align: 0.41em;
 }
-%card-footer-cta-shared {
-  @include padding(0);
+%card-cta-shared {
+  @include p.padding(0);
 }
 
 .card {
   @extend %card-shared;
+  &-cta {
+    @extend %card-cta-shared;
+  }
   &-header {
     @extend %card-header-shared;
+  }
+  &-img-container {
+    @extend %card-img-container-shared;
   }
   &-img {
     @extend %card-img-shared;
@@ -148,6 +147,9 @@
     &-header {
       @extend %card-body-header-shared;
     }
+    &-title {
+      @extend %card-body-title-shared;
+    }
     &-text {
       @extend %card-body-text-shared;
     }
@@ -157,12 +159,12 @@
   }
   &-footer {
     @extend %card-footer-shared;
-    &-cta {
-      @extend %card-footer-cta-shared;
-    }
   }
-  &-info-text {
-    @extend %card-info-text-shared;
+  &-left-text {
+    @extend %card-left-text-shared;
+  }
+  & sup {
+    @extend %card-sup;
   }
   &-h {
     @extend %-h-shared;
@@ -172,72 +174,33 @@
   }
 }
 
+.card-galllery-example-cta {
+  @include d.tablet-portrait() {
+    @include g.g-col-end(3);
+  } 
+  @include d.tablet-landscape() {
+    @include g.g-col-end(4);
+  }  
+  @include d.laptop() {
+    @include g.g-col-end(5);
+  }  
+}
+
 /*
 Theme
 */
-@include dark-theme {
+@include c.dark-theme {
   .card {
-    background-color: $black-light;
-    &-header {
-      background-color: $black-medium;
-      color: $text-dark;
-      &-cta {
-        background-color: $black-ultra-light;
-      }
-    }
-    &-title {
-      color: $text-dark;
-    }
-    &-footer {
-      background-color: $black-light;
-      &-cta {
-        background-color: $transparent;
-        color: $text-dark;
-      }
-    }
     &-body {
-      background-color: $black-light;
-      &-text {
-        color: $text-dark;
-      }
-      &-info-qty-cta {
-        background-color: $transparent;
-      }
+      background-color: c.$black-dark;
     }
   }
 }
 
-@include light-theme {
+@include c.light-theme {
   .card {
-    background-color: $white-medium;
-    &-header {
-      background-color: $white-medium;
-      &-cta {
-        background-color: $white-ultra-light;
-        color: $text-light;
-      }
-    }
-    &-title {
-      color: $text-light;
-    }
     &-body {
-      background-color: $white-light;
-      &-text {
-        color: $text-light;
-      }
-      &-info-qty-cta {
-        background-color: $transparent;
-      }
-    }
-    &-footer {
-      background-color: $white-light;
-      &-cta {
-        background-color: $transparent;
-        color: $text-light;
-      }
-    }
-    &-info-text {
-      color: $text-light;
+      background-color: c.$white;
     }
   }
 }

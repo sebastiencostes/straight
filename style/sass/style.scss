@@ -1,11 +1,13 @@
 @use 'reset';
-// @use 'font';
+@use "carousel";
+//@use 'font';
 //@use 'address';
 //@use 'anchor';
 //@use 'border';
 @use 'button';
 @use 'card';
 //@use 'chart';
+@use 'code';
 //@use 'color';
 @use 'container';
 //@use 'device';
@@ -13,9 +15,9 @@
 //@use 'flexbox';
 //@use 'form';
 @use 'grid';
-//@use 'header';
-// @use 'height';
-//@use 'image';
+@use 'header';
+//@use 'height';
+@use 'image';
 //@use 'link';
 //@use 'loader';
 //@use 'margin';

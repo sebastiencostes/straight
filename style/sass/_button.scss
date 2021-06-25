@@ -1,119 +1,418 @@
-@import "border";
-@import "color";
-@import "font";
-@import "height";
-@import "width";
+@use "border" as b;
+@use "filter" as flt;
+@use "font" as f;
+@use "color" as c;
+@use "padding" as p;
+@use "height" as h;
+@use "width" as w;
+@use "utility" as u;
 /*
 .btn
 */
 @mixin btn-s {
-  @include font-size(2.4rem);
+  @include f.font-size(2.4rem);
+  @include p.padding(1rem);
 }
 .btn-s {
   @include btn-s();
 }
 @mixin btn-m {
-  @include font-size(3.6rem);
+  @include f.font-size(3.6rem);
+  @include p.padding(1rem);
 }
 .btn-m {
   @include btn-m();
 }
 @mixin btn-l {
-  @include font-size(4.8rem);
+  @include f.font-size(4.8rem);
+  @include p.padding(1rem);
 }
 .btn-l {
   @include btn-l();
 }
-
 @mixin btn-xl {
-  @include font-size(6rem);
+  @include f.font-size(6rem);
+  @include p.padding(1rem);
 }
 .btn-xl {
   @include btn-xl();
 }
-
+@mixin btn-xxl {
+  @include f.font-size(7.2rem);
+  @include p.padding(0 1.75rem 1rem 1.75rem);
+}
+.btn-xxl {
+  @include btn-xxl();
+}
+/*
+.btn classes & colors
+*/
+.btn {
+  @include u.transition(all, u.$time);
+  @include u.d-inline-block();
+  @include b.border(c.$transparent);
+  background-color: c.$transparent;
+  color: c.$carbon;
+  font-weight: 400;
+  line-height: 1rem;
+  @include p.padding(1.6rem 1rem);
+  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
+  &-red {
+    background-color: c.$red;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$red-dark;
+    }
+    &:disabled {
+      background-color: c.$red-light;
+    }
+  }
+  &-blue {
+    background-color: c.$blue;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$blue-dark;
+    }
+    &:disabled {
+      background-color: c.$blue-light;
+    }
+  }
+  &-yellow {
+    background-color: c.$yellow;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$yellow-dark;
+    }
+    &:disabled {
+      background-color: c.$yellow-light;
+    }
+  }
+  &-orange {
+    background-color: c.$orange;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$orange-dark;
+    }
+    &:disabled {
+      background-color: c.$orange-light;
+    }
+  }
+  &-purple {
+    background-color: c.$purple;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$purple-dark;
+    }
+    &:disabled {
+      background-color: c.$purple-light;
+    }
+  }
+  &-pink {
+    background-color: c.$pink;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$pink-dark;
+    }
+    &:disabled {
+      background-color: c.$pink-light;
+    }
+  }
+  &-green {
+    background-color: c.$green;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$green-dark;
+    }
+    &:disabled {
+      background-color: c.$green-light;
+    }
+  }
+  &-black {
+    background-color: c.$carbon;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$carbon-dark;
+    }
+    &:disabled {
+      background-color: c.$carbon-light;
+    }
+  }
+  &-navy {
+    background-color: c.$navy;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$navy-dark;
+    }
+    &:disabled {
+      background-color: c.$navy-light;
+    }
+  }
+  &-grey {
+    background-color: c.$grey;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$grey-dark;
+    }
+    &:disabled {
+      background-color: c.$grey-light;
+    }
+  }
+  &-brown {
+    background-color: c.$brown;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: c.$brown-dark;
+    }
+    &:disabled {
+      background-color: c.$brown-light;
+    }
+  }
+  &-grad-red {
+    background-image: c.$grad-red;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-blue {
+    background-image: c.$grad-blue;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-yellow {
+    background-image: c.$grad-yellow;
+    color: c.$text-dark;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3));
+      color: c.$text-light;
+    }
+  }
+  &-grad-orange {
+    background-image: c.$grad-orange;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-purple {
+    background-image: c.$grad-purple;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-pink {
+    background-image: c.$grad-pink;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-green {
+    background-image: c.$grad-green;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      color: c.$text-light;
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-black {
+    background-image: c.$grad-carbon;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-navy {
+    background-image: c.$grad-navy;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-grey {
+    background-image: c.$grad-grey;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &-grad-brown {
+    background-image: c.$grad-brown;
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include flt.filter(saturate(70%));
+    }
+    &:disabled {
+      @include flt.filter(brightness(1.3))
+    }
+  }
+  &:disabled {
+    cursor: default;
+  }
+  span {
+    vertical-align: top;
+  }
+  &-smooth {
+    @include b.b-smooth();
+  }
+}
+/*
+BTN circle
+*/
+.btn-circle {
+  @include b.b-radius(50%);
+  @include u.transition(all, u.$time);
+  @include u.d-inline-block();
+  font-weight: 400;
+  line-height: 1rem;
+  @include p.padding(0);
+  &-s {
+    @include w.width(4rem);
+    @include h.height(4rem);
+  }
+  &-m {
+    @include w.width(4.8rem);
+    @include h.height(4.8rem);
+  }
+  &-l {
+    @include w.width(5.6rem);
+    @include h.height(5.6rem);
+  }
+  &-xl {
+    @include w.width(6.4rem);
+    @include h.height(6.4rem);
+  }
+  &-xxl {
+    @include w.width(7.2rem);
+    @include h.height(7.2rem);
+  }
+}
 /*
 .btn-square
 */
-@mixin btn-square-s {
-  @include width(3.6rem);
-  @include height(3.6rem);
-  @include font-size(3.6rem);
-}
-.btn-square-s {
-  @include btn-square-s();
-}
-@mixin btn-square-m {
-  @include width(4.8rem);
-  @include height(4.8rem);
-  @include font-size(3.6rem);
-}
-.btn-square-m {
-  @include btn-square-m();
-}
-@mixin btn-square-l {
-  @include width(6rem);
-  @include height(6rem);
-  @include font-size(4.8rem);
-}
-.btn-square-l {
-  @include btn-square-l();
-}
-
-@mixin btn-square-xl {
-  @include width(7.2rem);
-  @include height(7.2rem);
-  @include font-size(6rem);
-}
-.btn-square-xl {
-  @include btn-square-xl();
-}
-
-/*
-.btn-circle
-*/
-@mixin btn-circle-s {
-  @include width(3.6rem);
-  @include height(3.6rem);
-  @include b-radius(50%);
-}
-.btn-circle-s {
-  @include btn-circle-s();
-}
-@mixin btn-circle-m {
-  @include width(4.8rem);
-  @include height(4.8rem);
-  @include b-radius(50%);
-}
-.btn-circle-m {
-  @include btn-circle-m();
-}
-@mixin btn-circle-l {
-  @include width(6rem);
-  @include height(6rem);
-  @include b-radius(50%);
-}
-.btn-circle-l {
-  @include btn-circle-l();
-}
-
-@mixin btn-circle-xl {
-  @include width(7.2rem);
-  @include height(7.2rem);
-  @include b-radius(50%);
-}
-.btn-circle-xl {
-  @include btn-circle-xl();
-}
-
-@media (prefers-color-scheme: dark) {
-  button {
-    background-color: $black-medium;
+.btn-square {
+  @include u.transition(all, u.$time);
+  @include u.d-inline-block();
+  font-weight: 400;
+  line-height: 1rem;
+  @include p.padding(0);
+  &-s {
+    @include w.width(4rem);
+    @include h.height(4rem);
   }
-}
-
-@media (prefers-color-scheme: light) {
-  button {
-    background-color: $white-medium;
+  &-m {
+    @include w.width(4.8rem);
+    @include h.height(4.8rem);
+  }
+  &-l {
+    @include w.width(5.6rem);
+    @include h.height(5.6rem);
+  }
+  &-xl {
+    @include w.width(6.4rem);
+    @include h.height(6.4rem);
+  }
+  &-xxl {
+    @include w.width(7.2rem);
+    @include h.height(7.2rem);
   }
 }

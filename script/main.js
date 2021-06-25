@@ -52,8 +52,8 @@ for (let button of btnHeaderCta) {
   button.addEventListener("click", (e) => {
     for (let content of cardBody) {
       if (
-        content.getAttribute("data-number") ===
-        button.getAttribute("data-number")
+        content.getAttribute("data-card") ===
+        button.getAttribute("data-card")
       ) {
         content.classList.remove("d-none");
         content.classList.add("d-flex");
@@ -67,8 +67,8 @@ for (let button of btnClose) {
   button.addEventListener("click", (e) => {
     for (let content of cardBody) {
       if (
-        content.getAttribute("data-number") ===
-        button.getAttribute("data-number")
+        content.getAttribute("data-card") ===
+        button.getAttribute("data-card")
       ) {
         content.classList.add("d-none");
         content.classList.remove("d-flex");

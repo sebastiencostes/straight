@@ -1,92 +1,186 @@
-@import "flexbox";
+@use "flexbox" as f;
+@use "device" as d;
+
 @mixin d-grid {
-  display: -ms-grid;
   display: grid;
 }
 .d-grid {
   @include d-grid();
 }
 @mixin d-inline-grid() {
-  display: -ms-inline-grid;
   display: inline-grid;
 }
 .d-inline-grid {
   @include d-inline-grid();
 }
-//grid-template-columns
-@mixin g-tmp-col($value) {
-  -ms-grid-columns: $value;
-  grid-template-columns: $value;
-}
-@mixin g-tmp-col-1() {
-  @include g-tmp-col(100%);
-}
-@mixin g-tmp-col-2() {
-  @include g-tmp-col(calc(50% - (1.8rem * 0.555)) calc(50% - (1.8rem * 0.555)));
-}
-@mixin g-tmp-col-3() {
-  @include g-tmp-col(
-    calc(33.333% - (3rem * 0.333)) calc(33.333% - (3rem * 0.667))
-      calc(33.333% - (3rem * 0.333))
-  );
-}
-@mixin g-tmp-col-4() {
-  @include g-tmp-col(
-    calc(25% - (2.5rem * 0.599)) calc(25% - (2.5rem * 0.599))
-      calc(25% - (2.5rem * 0.599)) calc(25% - (2.5rem * 0.599))
-  );
-}
-@mixin g-tmp-col-5() {
-  @include g-tmp-col(
-    calc(20% - (2.899rem * 0.555)) calc(20% - (2.899rem * 0.555))
-      calc(20% - (2.899rem * 0.555)) calc(20% - (2.899rem * 0.555))
-      calc(20% - (2.899rem * 0.555))
-  );
-}
-@mixin g-tmp-col-6() {
-  @include g-tmp-col(
-    calc(16.666% - (7.166rem * 0.231)) calc(16.666% - (7.166rem * 0.231))
-      calc(16.666% - (7.166rem * 0.231)) calc(16.666% - (7.166rem * 0.231))
-      calc(16.666% - (7.166rem * 0.231)) calc(16.666% - (7.166rem * 0.231))
-  );
-}
-//column-gap
+
+/*
+column-gap
+*/
 @mixin g-col-gap($value) {
   -webkit-column-gap: $value;
   -moz-column-gap: $value;
   column-gap: $value;
 }
-//row-gap
+
+/*
+row-gap
+*/
 @mixin row-gap($value) {
   row-gap: $value;
 }
-%g-container-shared {
+
+/*
+G-container
+*/
+@mixin g-container() {
   @include d-grid();
   @include g-col-gap(2rem);
-  @include justify-content(center);
+  @include f.justify-content(center);
   @include row-gap(2rem);
 }
-.g-container-1 {
-  @extend %g-container-shared;
-  @include g-tmp-col-1();
+
+.g-col {
+  @include g-container();
 }
-.g-container-2 {
-  @extend %g-container-shared;
-  @include g-tmp-col-2();
+
+@mixin g-container-no-rg() {
+  @include d-grid();
+  @include f.justify-content(center);
+  @include g-col-gap(0);
+  @include row-gap(0);
 }
-.g-container-3 {
-  @extend %g-container-shared;
-  @include g-tmp-col-3();
+
+@mixin g-container-no-row {
+  @include row-gap(0);
 }
-.g-container-4 {
-  @extend %g-container-shared;
-  @include g-tmp-col-4();
+.g-no-row {
+  @include g-container-no-row();
 }
-.g-container-5 {
-  @extend %g-container-shared;
-  @include g-tmp-col-5();
+@mixin g-container-no-col {
+  @include g-col-gap(0);
 }
-.g-container-6 {
-  @extend %g-container-shared;
-  @include g-tmp-col-6();
+.g-no-col {
+  @include g-container-no-col();
+}
+
+@mixin g-no-row-col {
+  @include g-col-gap(0);
+  @include row-gap(0);
+}
+.g-no-row-col {
+  @include g-no-row-col();
+}
+
+/*
+grid-column-end
+*/
+@mixin g-col-end($value) {
+  grid-column-end: $value;
+}
+@for $i from 1 through 16 {
+  .g-col-end-#{$i} {
+    grid-column-end: (#{$i});
+  }
+}
+@for $i from 1 through 16 {
+  .g-col-end-span-#{$i} {
+    grid-column-end: (span #{$i});
+  }
+}
+@for $i from -1 through -16 {
+  .g-col-end-minus#{$i} {
+    grid-column-end: (#{$i});
+  }
+}
+@for $i from -1 through -16 {
+  .g-col-end-minus-span#{$i} {
+    grid-column-end: (span #{$i});
+  }
+}
+.g-col-end-auto {
+  @include g-col-end(auto);
+}
+
+/*
+grid-row-end
+*/
+@mixin g-row-end($value) {
+  grid-row-end: $value;
+}
+@for $i from 1 through 16 {
+  .g-row-end-#{$i} {
+    grid-row-end: (#{$i});
+  }
+}
+@for $i from 1 through 16 {
+  .g-row-end-span-#{$i} {
+    grid-row-end: (span #{$i});
+  }
+}
+@for $i from -1 through -16 {
+  .g-row-end-minus#{$i} {
+    grid-row-end: (#{$i});
+  }
+}
+@for $i from -1 through -16 {
+  .g-row-end-minus-span#{$i} {
+    grid-row-end: (span #{$i});
+  }
+}
+.g-row-end-auto {
+  @include g-row-end(auto);
+}
+
+/*
+grid-template-columns
+*/
+@mixin g-tmp-col($value) {
+  grid-template-columns: $value;
+}
+
+@for $i from 1 through 16 {
+  .g-col-#{$i} {
+    grid-template-columns: (repeat(#{$i}, 1fr));
+  }
+}
+
+@include d.phone {
+  @for $i from 1 through 16 {
+    .g-col-s-#{$i} {
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
+}
+
+@include d.tablet-portrait {
+  @for $i from 1 through 16 {
+    .g-col-m-#{$i} {
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
+}
+
+@include d.tablet-landscape {
+  @for $i from 1 through 16 {
+    .g-col-l-#{$i} {
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
+}
+
+@include d.laptop {
+  @for $i from 1 through 16 {
+    .g-col-xl-#{$i} {
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
+}
+
+@include d.desktop {
+  @for $i from 1 through 16 {
+    .g-col-xxl-#{$i} {
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
 }

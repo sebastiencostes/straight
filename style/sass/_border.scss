@@ -1,16 +1,168 @@
-@import "color";
-@mixin border($type, $dim, $color) {
-  border: $type, $dim, $color;
+@use "color" as c;
+@use "padding"as p;
+
+@mixin border($color) {
+  border: solid 1px $color;
+}
+.border {
+  @include c.light-theme() {
+    @include border(c.$carbon);
+  }
+  @include c.dark-theme() {
+    @include border(c.$text-dark);
+  }
+}
+/*
+border direction
+*/
+@mixin b-top($color) {
+  border-top: solid 1px $color;
 }
 
+@mixin b-right($color) {
+  border-right: solid 1px $color;
+}
+
+@mixin b-bottom($color) {
+  border-bottom: solid 1px $color;
+}
+
+@mixin b-left($color) {
+  border-left: solid 1px $color;
+}
+.b {
+  &-top {
+    @include c.light-theme() {
+      @include b-top(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-top(c.$text-dark);
+    }
+  }
+  &-right {
+    @include c.light-theme() {
+      @include b-right(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-right(c.$text-dark);
+    }
+  }
+  &-bottom {
+    @include c.light-theme() {
+      @include b-bottom(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-bottom(c.$text-dark);
+    }
+  }
+  &-left {
+    @include c.light-theme() {
+      @include b-left(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-left(c.$text-dark);
+    }
+  }
+}
+/*
+border-radius
+*/
+@mixin b-radius($value) {
+  border-radius: $value;
+}
+.b-radius-s {
+  @include b-radius(1rem);
+}
+.b-radius-m {
+  @include b-radius(2rem);
+}
+.b-radius-l {
+  @include b-radius(3rem);
+}
+.b-radius-xl {
+  @include b-radius(4rem);
+}
+/*
+cricle
+*/
+.circle {
+  @include b-radius(50%);
+}
+/*
+no border
+*/
 @mixin no-border {
   border: 0;
 }
 .no-b {
   @include no-border;
 }
-
-@mixin b-radius($value) {
-  border-radius: $value;
+/*
+.note
+*/
+.note-black {
+  @include b-left(c.$carbon);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-blue {
+  @include b-left(c.$blue);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-red {
+  @include b-left(c.$red);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-green {
+  @include b-left(c.$green);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-pink {
+  @include b-left(c.$pink);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-purple {
+  @include b-left(c.$purple);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-navy {
+  @include b-left(c.$navy);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-orange {
+  @include b-left(c.$orange);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-yellow {
+  @include b-left(c.$yellow);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-brown {
+  @include b-left(c.$brown);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-grey {
+  @include b-left(c.$grey);
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+/*
+smooth
+*/
+@mixin b-smooth() {
+  @include b-radius(.3rem);
 }
 
+.b-smooth {
+  @include b-smooth();
+}
+  

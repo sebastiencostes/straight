@@ -1,14 +1,16 @@
-@import "color";
+@use "color" as c;
 *,
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  //scrollbar-width: none !important;
 }
 
 html {
   font-size: calc(1em * 0.625);
   line-height: 1.15;
+  overflow: scroll;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -34,6 +36,10 @@ body {
 
 body::-webkit-scrollbar {
   display: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 ::-webkit-file-upload-button {
@@ -65,13 +71,13 @@ strong,
 summary,
 button,
 mark,
-p,
 small,
 address,
 blockquote,
 cite,
 a,
 details,
+span,
 summary,
 input,
 code,
@@ -79,6 +85,11 @@ pre,
 samp {
   font-weight: 400;
   margin: 0;
+}
+
+p,
+li {
+  font-weight: 300;
 }
 
 b,
@@ -184,9 +195,7 @@ button:not(:disabled) {
 code,
 pre,
 samp {
-  display: inline-block;
-  padding: 0.5rem;
-  width: 100%;
+  display: block;
 }
 
 code,
@@ -234,10 +243,14 @@ abbr[title] {
   text-decoration: underline dotted;
 }
 
-button {
+button,
+a.btn,
+button.btn {
   border: 0;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
+  user-select: none;
   vertical-align: middle;
 }
 
@@ -247,6 +260,7 @@ caption {
 }
 
 details {
+  cursor: pointer;
   display: block;
 }
 
@@ -335,10 +349,10 @@ ul {
   color-scheme: light dark;
 }
 
-@include dark-theme {
+@include c.dark-theme {
   body {
-    color: $text-dark;
-    background: $black-dark;
+    color: c.$text-dark;
+    background: c.$black-dark;
   }
   img {
     -webkit-filter: brightness(0.8) contrast(1.2);
@@ -346,18 +360,17 @@ ul {
   }
   a,
   nav ul li {
-    color: $blue;
+    color: c.$link;
   }
 }
 
-@include light-theme {
+@include c.light-theme {
   body {
-    color: $text-light;
-    background: $white-dark;
+    color: c.$text-light;
   }
   a,
   nav ul li {
-    color: $blue;
+    color: c.$link;
   }
 }
 
