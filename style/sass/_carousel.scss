@@ -1,23 +1,50 @@
 @use "position" as p;
+@use "margin" as m;
+@use "device" as d;
 
-%carousel-slide-shared {
-  @include p.position(relative);
-  animation-name: carousel;
-  animation-duration: 0.28s;
-}
-%carousel-cta-shared {
-  @include p.position(absolute);
-  top: calc(50% - 2.2rem);
-  user-select: none;
-}
-%carousel-next-shared {
-  right: 0;
+%carousel-shared {
+  overflow: hidden;
+  %carousel-slide-shared {
+    @include p.position(relative);
+    animation-name: carousel;
+    animation-duration: 0.28s;
+  }
+  %carousel-title-shared {
+    //
+  }
+  %carousel-text-shared {
+    @include d.tablet-landscape() {
+      font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+    }
+    @include m.margin-direction(bottom, 0);
+  }
+  %carousel-cta-shared {
+    @include p.position(absolute);
+    top: calc(50% - 2.2rem);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  %carousel-next-shared {
+    right: 0;
+  }
+  &%t-inner-shared {
+    .carousel-cta {
+      top: calc(36% - 3rem);
+    }
+  }
 }
 
 .carousel {
-  overflow: hidden;
+  @extend %carousel-shared;
   &-slide {
     @extend %carousel-slide-shared;
+  }
+  @-title {
+    @extend %carousel-title-shared;
+  }
+  &-text {
+    @extend %carousel-text-shared;
   }
   &-cta {
     @extend %carousel-cta-shared;
@@ -25,22 +52,36 @@
   &-next {
     @extend %carousel-next-shared;
   }
+  &-t-inner {
+    @extend %t-inner-shared;
+  }
 }
 
 @-webkit-keyframes carousel {
   from {
-    transform: scaleX(-1);
+    -webkit-filter: brightness(.5);
+    filter: brightness(.5);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
   }
   to {
-    ransform: scaleX(1);
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
-
 @keyframes carousel {
   from {
-    transform: scaleX(-1);
+    -webkit-filter: brightness(.5);
+    filter: brightness(.5);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
   }
   to {
-    ransform: scaleX(1);
+    -webkit-filter: brightness(1);
+    filter: brightness(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }

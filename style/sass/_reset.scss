@@ -250,6 +250,8 @@ button.btn {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   user-select: none;
   vertical-align: middle;
 }

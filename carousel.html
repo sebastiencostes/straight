@@ -1,157 +1,257 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Carousels Carousels allow you to show mutli content in one component. Multi components are showed one by one.">
     <title>Straight | Carousel</title>
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link rel="preload" href="style/css/style.css" as="style">
     <link rel="stylesheet" href="style/css/style.css">
 </head>
 
 <body>
+    <header class="p-2 m-b-6 presentation bg-grad-orange white header" role="presentation">
+        <h1 class="presentation-title t-white">Carousels</h1>
+    </header>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="/card.html">
-                    card
-                </a>
-            </li>
-        </ul>
-    </nav>
+    <main class="container-fix">
 
-    
+        <section class="m-b-6">
+            <article>
+                <h2 class="note-orange">
+                    About
+                </h2>
+                <p>
+                   Carousels allow you to show mutli content in one component. Components are showed one by one.
+                </p>
+            </article>
+        </section>
 
-        <header class="p-2 m-b-6 presentation bg-orange white">
-            <h1 class="presentation-title">Carousel</h1>
-        </header>
+        <section class="m-b-4">
+            <article>
+                <h3 class="note-orange">
+                    Carousel models
+                </h3>
+                <p>
+                    Simple carousels are provided. There is three kinds purposed carousel. Each offers differents options about presentation.
+                    When using <b>Carousel</b> you <b>must create and keep an id</b> on each 
+                    <code class="single-code">&lt;yourtag id=&quot;yourCarouselID&quot; class=&quot;carousel&quot;&gt;</code>.
+                    Thanks to <b>srcset</b> you can call your optimized media for specific device's breakpoint.
+                </p>
+            </article>
+        </section>
 
-        <main class="container-screen">
+        <section class="m-t-2 m-b-6">
+            <article>
+                <h3 class="note-orange">
+                    Simple Carousel
+                </h3>
+                <p>.carousel</p>
+            </article>
+            <div id="carousel1" class="carousel pos-relative b-smooth">
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="/assets/img/carousel/carousel.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/carousel/carouselMedium.png" alt="">
+                    </picture>
+                </figure>
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="/assets/img/carousel/carouselGreen.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/carousel/carouselMediumGreen.png" alt="">
+                    </picture>
+                </figure>
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="/assets/img/carousel/carouselYellow.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/carousel/carouselMediumYellow.png" alt="">
+                    </picture>
+                </figure>
+                <button class="carousel-cta carousel-prev btn-square-m bg-transparent" type="button">
+                    <ion-icon class="t-overlay" name="caret-back" />
+                </button>
+                <button class="carousel-cta carousel-next btn-square-m bg-transparent" type="button">
+                    <ion-icon class="t-overlay" name="caret-forward" />
+                </button>
+            </div>
+        </section>
 
-        <article class="note-orange">
-            <h2>
-                Carousel with text overlay
-            </h2>
-        </article>
+        <section class="m-t-2 m-b-6">
+            <article>
+                <h3 class="note-orange">
+                    Copy to clipboard
+                </h3>
+                <p>Simply click and paste simple carousel to your project</p>
+            </article>
+            <pre class="h-rem-40 clipboard" rel="SIMPLE Carousel">
+                <code>
+&lt;div id=&quot;carousel1&quot; class=&quot;carousel pos-relative b-smooth&quot;&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/carousel/carousel.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/carousel/carouselMedium.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/carousel/carouselGreen.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/carousel/carouselMediumGreen.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/carousel/carouselYellow.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/carousel/carouselMediumYellow.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;button class=&quot;carousel-cta carousel-prev btn-square-m bg-transparent&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;caret-back&quot; /&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;carousel-cta carousel-next btn-square-m bg-transparent&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;caret-forward&quot; /&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </section>
 
-        <article id="carousel1" class="carousel pos-relative m-b-10">
+        <section class="m-t-2 m-b-6">
+            <article>
+                <h3 class="note-orange">
+                    Carousel with text overlay
+                </h3>
+                <p>.carousel-t-overlay</p>
+            </article>
+            <article id="carousel2" class="carousel b-smooth carousel-t-overlay pos-relative">
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="/assets/img/carousel/carousel.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/carousel/carouselMedium.png" alt="">
+                    </picture>
+                    <figcaption class="pos-absolute-centering t-center w-prc-100">
+                        <h4 class="t-overlay"><a href="" rel="noopener" class="t-white">Carousel with text overlay 1</a></h4>
+                        <p class="t-overlay carousel-text">This is a carousel with text overlay</p>
+                    </figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="/assets/img/carousel/carouselGreen.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/carousel/carouselMediumGreen.png" alt="">
+                    </picture>
+                    <figcaption class="pos-absolute-centering t-center w-prc-100">
+                        <h4 class="t-overlay"><a href="" rel="noopener" class="t-white">Carousel with text overlay 2</a></h4>
+                        <p class="t-overlay carousel-text">This is a carousel with text overlay</p>
+                    </figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="/assets/img/carousel/carouselYellow.png" media="(min-width: 768px)">
+                        <img class="responsive-img" src="/assets/img/carousel/carouselMediumYellow.png" alt="">
+                    </picture>
+                    <figcaption class="pos-absolute-centering t-center w-prc-100">
+                        <h4 class="t-overlay"><a href="" rel="noopener" class="t-white">Carousel with text overlay 3</a></h4>
+                        <p class="t-overlay carousel-text">This is a carousel with text overlay</p>
+                    </figcaption>
+                </figure>
+                <button class="carousel-cta carousel-prev btn-square-m bg-transparent" type="button">
+                    <ion-icon class="t-overlay" name="caret-back" />
+                </button>
+                <button class="carousel-cta carousel-next btn-square-m bg-transparent" type="button">
+                    <ion-icon class="t-overlay" name="caret-forward" />
+                </button>
+            </article>
+        </section>
+
+        <section class="m-t-2 m-b-6">
+            <article>
+                <h3 class="note-orange">
+                    Copy to clipboard
+                </h3>
+                <p>Simply click and paste carousel with text overlay to your project</p>
+            </article>
+            <pre class="h-rem-40 clipboard" rel="carousel with text overlay">
+                <code>
+&lt;article id=&quot;carousel2&quot; class=&quot;carousel b-smooth carousel-t-overlay pos-relative&quot;&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/carousel/carousel.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/carousel/carouselMedium.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;figcaption class=&quot;pos-absolute-centering t-center w-prc-100&quot;&gt;
+            &lt;h4 class=&quot;t-overlay&quot;&gt;&lt;a href=&quot;&quot; rel=&quot;noopener&quot; class=&quot;t-white&quot;&gt;Carousel with text overlay 1&lt;/a&gt;&lt;/h4&gt;
+            &lt;p class=&quot;t-overlay carousel-text&quot;&gt;This is a carousel with text overlay&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/carousel/carouselGreen.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/carousel/carouselMediumGreen.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;figcaption class=&quot;pos-absolute-centering t-center w-prc-100&quot;&gt;
+            &lt;h4 class=&quot;t-overlay&quot;&gt;&lt;a href=&quot;&quot; rel=&quot;noopener&quot; class=&quot;t-white&quot;&gt;Carousel with text overlay 2&lt;/a&gt;&lt;/h4&gt;
+            &lt;p class=&quot;t-overlay carousel-text&quot;&gt;This is a carousel with text overlay&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/assets/img/carousel/carouselYellow.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/carousel/carouselMediumYellow.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;figcaption class=&quot;pos-absolute-centering t-center w-prc-100&quot;&gt;
+            &lt;h4 class=&quot;t-overlay&quot;&gt;&lt;a href=&quot;&quot; rel=&quot;noopener&quot; class=&quot;t-white&quot;&gt;Carousel with text overlay 3&lt;/a&gt;&lt;/h4&gt;
+            &lt;p class=&quot;t-overlay carousel-text&quot;&gt;This is a carousel with text overlay&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;button class=&quot;carousel-cta carousel-prev btn-square-m bg-transparent&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;caret-back&quot; /&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;carousel-cta carousel-next btn-square-m bg-transparent&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;caret-forward&quot; /&gt;
+    &lt;/button&gt;
+&lt;/article&gt;
+                </code>
+            </pre>
+        </section>
+
+        <article id="carousel3" class="carousel carousel-t-inner b-smooth pos-relative b-shadow m-t-10">
             <figure class="carousel-slide">
                 <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-1.jpg">
-                </picture>
-            </figure>
-            <figure class="carousel-slide">
-                <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-2.jpg">
-                </picture>
-            </figure>
-            <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
-                <ion-icon class="t-overlay" name="caret-back" />
-            </button>
-            <button class="carousel-cta carousel-next btn-square-m bg-transparent">
-                <ion-icon class="t-overlay" name="caret-next" />
-            </button>
-        </article>
-
-        <article id="carousel2" class="carousel pos-relative">
-            <figure class="carousel-slide">
-                <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-1.jpg">
+                    <source srcset="/assets/img/carousel/carousel.png" media="(min-width: 768px)">
+                    <img class="responsive-img" src="/assets/img/carousel/carouselMedium.png" alt="">
                 </picture>
                 <figcaption class="t-center w-prc-100 p-2">
-                    <h3>Carousel with title 1</h3>
-                    <p>yes, this is a carousel</p>
+                    <h4 class="carousel-title"><a href="" rel="noopener">Carousel with title 1</a></h4>
+                    <p class="carousel-text">This is a carousel</p>
                 </figcaption>
             </figure>
             <figure class="carousel-slide">
                 <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-2.jpg">
+                    <source srcset="/assets/img/carousel/carouselGreen.png" media="(min-width: 768px)">
+                    <img class="responsive-img" src="/assets/img/carousel/carouselMediumGreen.png" alt="">
                 </picture>
                 <figcaption class="t-center w-prc-100 p-2">
-                    <h3>Carousel with title 2</h3>
-                    <p>yes, this is a carousel</p>
+                    <h4 class="carousel-title"><a href="" rel="noopener">Carousel with title 2</a></h4>
+                    <p class="carousel-text">This is a text carousel</p>
                 </figcaption>
             </figure>
             <figure class="carousel-slide">
                 <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-3.jpg">
+                    <source srcset="/assets/img/carousel/carouselYellow.png" media="(min-width: 768px)">
+                    <img class="responsive-img" src="/assets/img/carousel/carouselMediumYellow.png" alt="">
                 </picture>
                 <figcaption class="t-center w-prc-100 p-2">
-                    <h3>Carousel with title 3</h3>
-                    <p>yes, this is a carousel</p>
+                    <h4 class="carousel-title"><a href="" rel="noopener">Carousel with title 3</a></h4>
+                    <p class="carousel-text">This is a carousel</p>
                 </figcaption>
             </figure>
-            <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
+            <button class="carousel-cta carousel-prev btn-square-m bg-transparent" type="button">
                 <ion-icon class="t-overlay" name="caret-back" />
             </button>
-            <button class="carousel-cta carousel-next btn-square-m bg-transparent">
-                <ion-icon class="t-overlay" name="caret-forward" />
-            </button>
-        </article>
-
-        <article id="carousel3" class="carousel pos-relative m-t-10">
-            <figure class="carousel-slide">
-                <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-1.jpg">
-                </picture>
-                <figcaption class="pos-absolute-centering t-center w-prc-100">
-                    <h3 class="t-overlay">Carousel with text overlay 1</h3>
-                    <p class="t-overlay">This is a carousel with text overlay</p>
-                </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-                <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-2.jpg">
-                </picture>
-                <figcaption class="pos-absolute-centering t-center w-prc-100">
-                    <h3 class="t-overlay">Carousel with text overlay 2</h3>
-                    <p class="t-overlay">This is a carousel with text overlay</p>
-                </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-                <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-3.jpg">
-                </picture>
-                <figcaption class="pos-absolute-centering t-center w-prc-100">
-                    <h3 class="t-overlay">Carousel with text overlay 3</h3>
-                    <p class="t-overlay">This is a carousel with text overlay</p>
-                </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-                <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-1.jpg">
-                </picture>
-                <figcaption class="pos-absolute-centering t-center w-prc-100">
-                    <h3 class="t-overlay">Carousel with text overlay 4</h3>
-                    <p class="t-overlay">This is a carousel with text overlay</p>
-                </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-                <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-2.jpg">
-                </picture>
-                <figcaption class="pos-absolute-centering t-center w-prc-100">
-                    <h3 class="t-overlay">Carousel with text overlay 5</h3>
-                    <p class="t-overlay">This is a carousel with text overlay</p>
-                </figcaption>
-            </figure>
-            <figure class="carousel-slide">
-                <picture>
-                    <img class="responsive-img" src="/assets/img/carousel/carousel-3.jpg">
-                </picture>
-                <figcaption class="pos-absolute-centering t-center w-prc-100">
-                    <h3 class="t-overlay">Carousel with text overlay 6</h3>
-                    <p class="t-overlay">This is a carousel with text overlay</p>
-                </figcaption>
-            </figure>
-            <button class="carousel-cta carousel-prev btn-square-m bg-transparent">
-                <ion-icon class="t-overlay" name="caret-back" />
-            </button>
-            <button class="carousel-cta carousel-next btn-square-m bg-transparent">
+            <button class="carousel-cta carousel-next btn-square-m bg-transparent" type="button">
                 <ion-icon class="t-overlay" name="caret-forward" />
             </button>
         </article>
@@ -162,7 +262,10 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="script/carousel.js"></script>
+    <script src="script/clipboard.js"></script>
 </body>
 
 </html>
