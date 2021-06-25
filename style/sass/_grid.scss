@@ -78,11 +78,28 @@ grid-column-end
 @mixin g-col-end($value) {
   grid-column-end: $value;
 }
-
 @for $i from 1 through 16 {
   .g-col-end-#{$i} {
+    grid-column-end: (#{$i});
+  }
+}
+@for $i from 1 through 16 {
+  .g-col-end-span-#{$i} {
     grid-column-end: (span #{$i});
   }
+}
+@for $i from -1 through -16 {
+  .g-col-end-minus#{$i} {
+    grid-column-end: (#{$i});
+  }
+}
+@for $i from -1 through -16 {
+  .g-col-end-minus-span#{$i} {
+    grid-column-end: (span #{$i});
+  }
+}
+.g-col-end-auto {
+  @include g-col-end(auto);
 }
 
 /*
@@ -91,11 +108,28 @@ grid-row-end
 @mixin g-row-end($value) {
   grid-row-end: $value;
 }
-
 @for $i from 1 through 16 {
   .g-row-end-#{$i} {
+    grid-row-end: (#{$i});
+  }
+}
+@for $i from 1 through 16 {
+  .g-row-end-span-#{$i} {
     grid-row-end: (span #{$i});
   }
+}
+@for $i from -1 through -16 {
+  .g-row-end-minus#{$i} {
+    grid-row-end: (#{$i});
+  }
+}
+@for $i from -1 through -16 {
+  .g-row-end-minus-span#{$i} {
+    grid-row-end: (span #{$i});
+  }
+}
+.g-row-end-auto {
+  @include g-row-end(auto);
 }
 
 /*

@@ -174,15 +174,15 @@
   }
 }
 
-.card-galllery-cta {
+.card-galllery-example-cta {
   @include d.tablet-portrait() {
-    @include g.g-col-end(span 2);
+    @include g.g-col-end(3);
   } 
   @include d.tablet-landscape() {
-    @include g.g-col-end(span 3);
+    @include g.g-col-end(4);
   }  
   @include d.laptop() {
-    @include g.g-col-end(span 4);
+    @include g.g-col-end(5);
   }  
 }
 

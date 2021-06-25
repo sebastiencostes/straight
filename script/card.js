@@ -1,19 +1,10 @@
-// const allCards = document.querySelectorAll(".card-gallery .card");
-// const galleries = document.querySelectorAll(".card-gallery");
-// const allBtnV = document.querySelectorAll(".v-grid");
-// const allBtnH = document.querySelectorAll(".h-grid");
-// const allBtnL = document.querySelectorAll(".l-grid");
-const cards = document.querySelectorAll("#cardGallery .card");
+const cards = document.querySelectorAll("#cardGalleryExample .card");
 const btnV = document.querySelector("#vGrid");
 const btnH = document.querySelector("#hGrid");
 const btnL = document.querySelector("#lGrid");
 const btnOpen = document.querySelectorAll(".open");
 const cardBody = document.querySelectorAll(".card-body");
 const btnClose = document.querySelectorAll(".close");
-
-
-
-
 
 card = () => {
   /*
@@ -59,61 +50,6 @@ card = () => {
     });
   }
 
-  /*
-  GALLERY CARD
-  */
-  //fetch and set all data-attr on appropriate elements
-  // for(let i = 0; i < allBtnV.length; i++) {
-  //   allBtnV[i].setAttribute('data-card-gallery', i);
-  // }
-  // for(let i = 0; i < allBtnH.length; i++) {
-  //   allBtnH[i].setAttribute('data-card-gallery', i);
-  // }
-  // for(let i = 0; i < allBtnL.length; i++) {
-  //   allBtnL[i].setAttribute('data-card-gallery', i);
-  // }
-  // for(let i = 0; i < galleries.length; i++) {
-  //   galleries[i].setAttribute('data-card-gallery', i);
-  // }
-
-  // for(let btn of allBtnV) {
-  //   btn.setAttribute('id', )
-  //   btn.addEventListener("click", () => {
-  //     for(let gallery of galleries) {
-  //       for(let card of allCards) {
-  //         let isEqual = gallery.getAttribute("data-card-gallery") === btn.getAttribute('data-card-gallery') &&  gallery.getAttribute("data-card-gallery") === card.getAttribute('data-card-gallery');
-  //         isEqual ? card.classList.remove("card-l", "card-h") : null
-  //       }
-  //     }
-  //   });
-  // }
-
-  // for(let btn of allBtnH) {
-  //   btn.addEventListener("click", () => {
-  //     for(let gallery of galleries) {
-  //       for(let card of allCards) {
-  //         let isEqual = gallery.getAttribute("data-card-gallery") === btn.getAttribute('data-card-gallery') &&  gallery.getAttribute("data-card-gallery") === card.getAttribute('data-card-gallery');
-  //         isEqual ?  (card.classList.add("card-h"), card.classList.remove("card-l")) : null
-  //       }
-  //     }
-  //   });
-  // }
-
-  // for(let btn of allBtnL) {
-  //   btn.addEventListener("click", () => {
-  //     for(let gallery of galleries) {
-  //       for(let card of allCards) {
-  //         let isEqual = gallery.getAttribute("data-card-gallery") === btn.getAttribute('data-card-gallery') &&  gallery.getAttribute("data-card-gallery") === card.getAttribute('data-card-gallery');
-  //         isEqual ?  (card.classList.add("card-l"), card.classList.remove("card-h")) : null
-  //       }
-  //     }
-  //   });
-  // }
-
-
-  
-
-
   //V display
   btnV.addEventListener("click", () => {
     for (const card of cards) {
@@ -157,6 +93,3 @@ card = () => {
   });
 };
 card();
-
-
- 
