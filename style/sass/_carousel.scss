@@ -1,13 +1,14 @@
 @use "position" as p;
 @use "margin" as m;
 @use "device" as d;
+@use "utility" as u;
 
 %carousel-shared {
   overflow: hidden;
   %carousel-slide-shared {
     @include p.position(relative);
     animation-name: carousel;
-    animation-duration: 0.28s;
+    animation-duration: u.$time;
   }
   %carousel-text-shared {
     @include d.tablet-landscape() {
@@ -17,7 +18,7 @@
   }
   %carousel-cta-shared {
     @include p.position(absolute);
-    top: calc(50% - 2.2rem);
+    top: calc(50% - 2.4rem);
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -27,7 +28,7 @@
   }
   &%caption-shared {
     .carousel-cta {
-      top: calc(36% - 3rem);
+      top: calc(35% - 3rem);
     }
   }
 }
