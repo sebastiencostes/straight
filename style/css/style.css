@@ -1013,11 +1013,10 @@ nav ul li {
 .carousel .carousel-next {
   right: 0;
 }
-.carousel.carousel-t-inner .carousel-cta {
+.carousel.carousel-caption .carousel-cta {
   top: calc(36% - 3rem);
 }
 
-@-title {}
 @-webkit-keyframes carousel {
   from {
     -webkit-filter: brightness(0.5);

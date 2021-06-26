@@ -9,9 +9,6 @@
     animation-name: carousel;
     animation-duration: 0.28s;
   }
-  %carousel-title-shared {
-    //
-  }
   %carousel-text-shared {
     @include d.tablet-landscape() {
       font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
@@ -28,7 +25,7 @@
   %carousel-next-shared {
     right: 0;
   }
-  &%t-inner-shared {
+  &%caption-shared {
     .carousel-cta {
       top: calc(36% - 3rem);
     }
@@ -40,9 +37,6 @@
   &-slide {
     @extend %carousel-slide-shared;
   }
-  @-title {
-    @extend %carousel-title-shared;
-  }
   &-text {
     @extend %carousel-text-shared;
   }
@@ -52,8 +46,8 @@
   &-next {
     @extend %carousel-next-shared;
   }
-  &-t-inner {
-    @extend %t-inner-shared;
+  &-caption {
+    @extend %caption-shared;
   }
 }
 
