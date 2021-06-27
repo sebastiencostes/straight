@@ -125,7 +125,7 @@ select,
 textarea {
   font-family: inherit;
   font-size: 100%;
-  line-height: 1.15;
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -195,14 +195,14 @@ button:not(:disabled) {
 code,
 pre,
 samp {
-  display: block;
+  //display: block;
 }
 
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  //font-family: monospace, monospace;
+  //font-size: 1em;
 }
 
 img,
@@ -302,8 +302,8 @@ mark {
 }
 
 pre {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  //font-family: monospace, monospace;
+  //font-size: 1em;
 }
 
 progress {
