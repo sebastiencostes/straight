@@ -1,6 +1,5 @@
 @use "border" as b;
 @use "filter" as flt;
-@use "font" as f;
 @use "color" as c;
 @use "padding" as p;
 @use "height" as h;
@@ -50,7 +49,7 @@ Font sizes for .btn-*
 .btn-s {
   @include btn();
   @include btn-s();
-  @include p.padding( 0 .75rem);
+  @include p.padding(0 0.75rem);
 }
 .btn-m {
   @include btn();
@@ -167,7 +166,7 @@ Sizes for .btn-square-* & .btn-circle-*
   }
   &:disabled {
     background-color: c.$grey-light;
-    opacity: .33;
+    opacity: 0.33;
   }
   ion-icon {
     color: c.$text-light;
