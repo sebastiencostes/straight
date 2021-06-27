@@ -100,6 +100,7 @@ $colors: (
 /*
 gradients
 */
+$grad-white: linear-gradient(to top, #efefef, #f3f3f3, #f7f7f7, #fbfbfb, #ffffff);
 $grad-red: linear-gradient(to top, #d50000, #e0210e, #ea341a, #f54326, #ff5131);
 $grad-red-dark: linear-gradient(to top, #9b0000, #a90001, #b80001, #c60001, #d50000);
 $grad-yellow: linear-gradient(to top, #ffd600, #ffe020, #ffeb33, #fff543, #ffff52);
@@ -124,6 +125,7 @@ $grad-carbon: linear-gradient(to top, #212121, #2a2a2a, #343434, #3e3e3e, #48484
 $grad-carbon-dark: linear-gradient(to top, #000000, #0c0c0c, #141414, #1b1b1b, #212121);
 
 $gradients: (
+  grad-white :linear-gradient(to top, #efefef, #f3f3f3, #f7f7f7, #fbfbfb, #ffffff),
   grad-red: linear-gradient(to top, #d50000, #e0210e, #ea341a, #f54326, #ff5131),
   grad-red-dark: linear-gradient(to top, #9b0000, #a90001, #b80001, #c60001, #d50000),
   grad-yellow: linear-gradient(to top, #ffd600, #ffe020, #ffeb33, #fff543, #ffff52),
