@@ -64,7 +64,7 @@
 }
 
 .t-overlay {
-  @include text-overlay;
+  @include text-overlay();
 }
 h1 {
   font-size: clamp(4rem, 3.44rem + 2vw, 7.2rem);
@@ -89,6 +89,9 @@ span,
 li {
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
 }
+.t-small {
+  font-size: 1.6rem;
+}
 h1,
 h2,
 h3,
@@ -109,18 +112,6 @@ p {
 
 .t-white {
   color: c.$white;
-}
-
-@include c.dark-theme {
-  .material-icons {
-    color: c.$text-dark;
-  }
-}
-
-@include c.light-theme {
-  .material-icons {
-    color: c.$text-light;
-  }
 }
 
 @include c.dark-theme {
