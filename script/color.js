@@ -188,13 +188,13 @@ const gradPalette = document.querySelector(".gradient-palette");
 for (let color of arrayBgFlat) {
   flatPalette.innerHTML += `<div class="t-center">
         <span class="text">${color.colorClass}</span>
-        <div class="flat-color m-t-1 d-flex i-center h-rem-10 ${color.colorClass} j-center" />
+        <div class="b-smooth flat-color m-t-1 d-flex i-center h-rem-10 ${color.colorClass} j-center" />
     </div>`;
 }
 
 for (let color of arrayBgGrad) {
   gradPalette.innerHTML += `<div class="t-center">
           <span class="text">${color.colorClass}</span>
-          <div class="flat-color m-t-1 d-flex i-center h-rem-10 ${color.colorClass} j-center" />
+          <div class="b-smooth flat-color m-t-1 d-flex i-center h-rem-10 ${color.colorClass} j-center" />
       </div>`;
 }
