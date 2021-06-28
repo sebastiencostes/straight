@@ -1,0 +1,73 @@
+@use "device" as d;
+@use "flexbox"as flx;
+@use "position" as p;
+@use "height" as h;
+@use "width" as w;
+@use "margin" as m;
+@use "padding" as pd;
+@use "color" as c;
+@use "utility" as u;
+.nav {
+  @include p.position(fixed);
+  @include w.width(100vw);
+  @include u.b-shadow();
+  z-index: 2;
+  &-header {
+    @include flx.d-flex();
+    @include flx.justify-content(space-between);
+    @include flx.align-items(center);
+    @include pd.padding(2rem);
+  }
+  &-menu {
+    -webkit-animation-name: nav;
+    animation-name: nav;
+    -webkit-animation-duration: u.$time;
+    animation-duration: u.$time;
+    @include u.b-shadow();
+    @include h.height(calc(100vh - 8rem));
+    @include pd.padding(2rem);
+    @include w.width(100vw);
+    @include c.light-theme() {
+      background-color: c.$white;
+    }
+    @include c.dark-theme() {
+      background-color: c.$text-light;
+    }
+    @include d.tablet-portrait() {
+      @include w.width(25vw);
+    }
+    @include d.laptop() {
+      @include w.width(calc(100vw - 120rem));
+    }
+    @include d.desktop() {
+      @include w.width(calc((100vw - 136.6rem) / 2));
+    }
+    &-item {
+      @include m.margin-direction(top, 2rem);
+      &:first-child {
+        @include m.margin-direction(top, 0);
+      }
+    }
+  }
+}
+
+@-webkit-keyframes nav {
+  from {
+    -webkit-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes nav {
+  from {
+    -webkit-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

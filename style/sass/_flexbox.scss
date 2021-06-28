@@ -4,11 +4,11 @@
 .d-flex {
   @include d-flex();
 }
-@mixin display-inline-flex() {
+@mixin d-inline-flex() {
   display: inline-flex;
 }
 .d-inline-flex {
-  @include display-inline-flex();
+  @include d-inline-flex();
 }
 /*
 Direction

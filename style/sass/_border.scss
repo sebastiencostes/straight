@@ -82,6 +82,9 @@ border-radius
 .b-radius-xl {
   @include b-radius(4rem);
 }
+.no-b-radius {
+  @include b-radius(0);
+}
 /*
 cricle
 */
@@ -96,6 +99,16 @@ no border
 }
 .no-b {
   @include no-border;
+}
+/*
+smooth
+*/
+@mixin b-smooth() {
+  @include b-radius(0.3rem);
+}
+
+.b-smooth {
+  @include b-smooth();
 }
 /*
 .note
@@ -155,14 +168,3 @@ no border
   border-left-width: 0.5rem;
   @include p.padding-direction(left, 2rem);
 }
-/*
-smooth
-*/
-@mixin b-smooth() {
-  @include b-radius(.3rem);
-}
-
-.b-smooth {
-  @include b-smooth();
-}
-  
