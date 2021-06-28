@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="p-2 m-b-6 presentation bg-grad-purple white header" role="presentation">
+    <header class="p-2 m-b-6 presentation bg-grad-purple header" role="presentation">
         <h1 class="presentation-title t-white">Buttons</h1>
     </header>
 
@@ -28,9 +28,9 @@
             <p>
                 There is 3 kinds of button.
                 The button as a standard button for all your triggering actions.
-                The link button with <code class="single-code text-navy">role="button"</code> for redirecting to an
+                The link button with <code class="single-code t-navy">role="button"</code> for redirecting to an
                 internal page of your site.
-                The link button with <code class="single-code text-navy">target="_blank"</code> will open in a new tab
+                The link button with <code class="single-code t-navy">target="_blank"</code> will open in a new tab
                 for redirecting to an external site by example.
                 You can mix and select size, color and shape.
             </p>
@@ -79,10 +79,10 @@
                 Button shapes
             </h3>
             <p>
-                There is 3 button shapes, <b>button</b> <code class="single-code text-navy">class="btn-*"</code>,
-                <b>square</b> <code class="single-code text-navy">class="btn-square-*"</code>
-                and <b>circle</b> <code class="single-code text-navy">class="btn-circle-*"</code></code
-                    class="single-code text-navy">.
+                There is 3 button shapes, <b>button</b> <code class="single-code t-navy">class="btn-*"</code>,
+                <b>square</b> <code class="single-code t-navy">class="btn-square-*"</code>
+                and <b>circle</b> <code class="single-code t-navy">class="btn-circle-*"</code></code
+                    class="single-code t-navy">.
             </p>
             <div>
                 <button class="btn-s btn-purple" type="button">Button</button>
@@ -122,7 +122,7 @@
                 Button sizes
             </h3>
             <p>There is 5 purposes sizes, from <b>s</b> to <b>xxl</b>. For each <b>model</b> and <b>shape</b> just use
-                <code class="single-code text-navy">class="btn-*-*"</code>.</p>
+                <code class="single-code t-navy">class="btn-*-*"</code>.</p>
             <div class="d-flex j-between i-center f-wrap">
                 <a class="btn-s btn-purple" href="#" rel="noopener" role="button">Internal Link</a>
                 <a class="btn-m btn-purple" href="#" rel="noopener" target="blank" role="button">External Link</a>
@@ -150,12 +150,15 @@
             <h3 class="note-purple">
                 Button colors
             </h3>
-            <p>There is 12 button colors purposed, these 12 options have a gradient variation. Just use <code
-                    class="single-code text-navy">class="btn-*-* btn-*"</code> or
-                <code class="single-code text-navy">class="btn-*-* btn-grad-*"</code>.
+            <p>There is 13 button colors purposed, these 13 options have a gradient variation. Just use <code
+                    class="single-code t-navy">class="btn-*-* btn-*"</code> or
+                <code class="single-code t-navy">class="btn-*-* btn-grad-*"</code>.
             </p>
+            <aside>
+                <p>You can check more about colors at <a href="color.html" rel="noopener">color module</a>.</p>
+            </aside>
 
-            <div class="g-col g-col-s-2 g-col-m-3 g-col-xl-4 g-col-xxl-6 m-b-2">
+            <div class="g-col g-col-s-2 g-col-m-3 g-col-xl-6 g-col-xxl-7 m-b-2">
                 <button class="btn-s btn-white" type="button">White</button>
                 <button class="btn-s btn-yellow" type="button">Yellow</button>
                 <button class="btn-s btn-orange" type="button">Orange</button>
@@ -164,6 +167,7 @@
                 <button class="btn-s btn-purple" type="button">Purple</button>
                 <button class="btn-s btn-red" type="button">Red</button>
                 <button class="btn-s btn-green" type="button">Green</button>
+                <button class="btn-s btn-turquoise" type="button">Turquoise</button>
                 <button class="btn-s btn-blue" type="button">Blue</button>
                 <button class="btn-s btn-grey" type="button">Grey</button>
                 <button class="btn-s btn-navy" type="button">Navy</button>
@@ -177,13 +181,14 @@
                 <button class="btn-s btn-grad-purple" type="button">Grad Purple</button>
                 <button class="btn-s btn-grad-red" type="button">Grad Red</button>
                 <button class="btn-s btn-grad-green" type="button">Grad Green</button>
+                <button class="btn-s btn-grad-turquoise" type="button">Grad Turquoise</button>
                 <button class="btn-s btn-grad-blue" type="button">Grad Blue</button>
                 <button class="btn-s btn-grad-grey" type="button">Grad Grey</button>
                 <button class="btn-s btn-grad-navy" type="button">Grad Navy</button>
                 <button class="btn-s btn-grad-black" type="button">Grad Black</button>
             </div>
 
-            <div class="g-col g-col-s-4 g-col-m-6 g-col-l-12">
+            <div class="g-col g-col-s-4 g-col-m-6 g-col-l-13">
                 <button class="btn-square-l btn-white" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
@@ -208,6 +213,9 @@
                 <button class="btn-square-l btn-green" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
+                <button class="btn-square-l btn-turquoise" type="button">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
                 <button class="btn-square-l btn-blue" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
@@ -220,9 +228,6 @@
                 <button class="btn-square-l btn-black" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
-
-
-
 
                 <button class="btn-square-l btn-grad-white" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
@@ -246,6 +251,9 @@
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
                 <button class="btn-square-l btn-grad-green" type="button">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
+                <button class="btn-square-l btn-grad-turquoise" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
                 <button class="btn-square-l btn-grad-blue" type="button">
@@ -285,6 +293,9 @@
                 <button class="btn-circle-l btn-green" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
+                <button class="btn-circle-l btn-turquoise" type="button">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
                 <button class="btn-circle-l btn-blue" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
@@ -320,6 +331,9 @@
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
                 <button class="btn-circle-l btn-grad-green" type="button">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </button>
+                <button class="btn-circle-l btn-grad-turquoise" type="button">
                     <ion-icon name="add-circle-outline"></ion-icon>
                 </button>
                 <button class="btn-circle-l btn-grad-blue" type="button">
