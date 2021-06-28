@@ -114,6 +114,10 @@ p {
   color: c.$white;
 }
 
+.t-link {
+  color: c.$link;
+}
+
 @include c.dark-theme {
   ion-icon {
     color: c.$text-dark;

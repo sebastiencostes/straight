@@ -14840,6 +14840,10 @@ p {
   color: #ffffff;
 }
 
+.t-link {
+  color: #54bbb6;
+}
+
 @media (prefers-color-scheme: dark) {
   ion-icon {
     color: #eee;
@@ -16485,7 +16489,7 @@ no-margin
   column-gap: 2rem;
   justify-content: center;
   row-gap: 2rem;
-  height: 50vh;
+  height: calc(50vh - 8rem);
   align-items: center;
 }
 .presentation-title {
@@ -16539,16 +16543,6 @@ no-margin
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
-@media (prefers-color-scheme: light) {
-  .nav-menu {
-    background-color: #ffffff;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .nav-menu {
-    background-color: #323232;
-  }
-}
 @media only screen and (min-width: 728px) {
   .nav-menu {
     width: 25vw;
@@ -16571,6 +16565,40 @@ no-margin
   margin-top: 0;
 }
 
+/*
+Open innerNav
+*/
+#straightNav {
+  z-index: 3;
+}
+@media (prefers-color-scheme: light) {
+  #straightNav .nav-header, #straightNav .nav-menu {
+    background-color: #ffffff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  #straightNav .nav-header, #straightNav .nav-menu {
+    background-color: #323232;
+  }
+}
+
+/*
+Close innerNav
+*/
+/*
+Open nav example
+*/
+#navExample, #navExample2 {
+  position: relative;
+  width: 100%;
+}
+#navExample .nav-menu, #navExample2 .nav-menu {
+  height: calc(100% - 8rem);
+}
+
+/*
+Close nav example
+*/
 @-webkit-keyframes nav {
   from {
     -webkit-transform: translateX(-100vw);

@@ -15,46 +15,29 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <ul class="nav-header bg-white">
+
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
             <li>
-                <a class="btn-square-s" href="/index.html" role="button"><ion-icon name="home-outline"></ion-icon></a>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline"></ion-icon>
+                </a>
             </li>
             <li class="open d-block">
-                <button class="btn-square-s" type="button"><ion-icon name="menu"></ion-icon></button>
+                <button class="btn-square-s" type="button" data-nav="">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
             </li>
             <li class="d-none close">
-                <button class="btn-square-s" type="button"><ion-icon name="close"></ion-icon></button>
+                <button class="btn-square-s" type="button" data-nav="">
+                    <ion-icon name="close"></ion-icon>
+                </button>
             </li>
         </ul>
-        <ul class="nav-menu d-none" role="menu">
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/button.html" rel="noopener">
-                    button
-                </a>
-            </li>
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/card.html" rel="noopener">
-                    card
-                </a>
-            </li>
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/carousel.html" rel="noopener">
-                    carousel
-                </a>
-            </li>
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/color.html" rel="noopener">
-                    color
-                </a>
-            </li>
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/nav.html" rel="noopener">
-                    nav
-                </a>
-            </li>
+        <ul id="straightNavMenu" class="nav-menu d-none" role="menu" data-nav="">
         </ul>
     </nav>
+
     <header class="p-2 m-b-6 m-t-8 presentation bg-grad-blue header" role="presentation">
         <h1 class="presentation-title t-white">nav</h1>
     </header>
@@ -68,17 +51,179 @@
             <p>
                 Use Nav when you navigate within your webapp or site.
                 Nav represents a section of a page that has links to other internal pages or fragments of that page.
-                It is a section intended for navigation in a document. 
+                It is a section intended for navigation in a document.
             </p>
         </section>
 
+        <section class="m-b-6">
+            <h3 class="note-blue">
+                Nav models
+            </h3>
+            <p>
+                blablablabla
+            </p>
+
+            <div class="g-col g-col-s-1 g-col-l-2 m-b-2">
+                <nav id="navExample" class="nav">
+                    <ul class="nav-header">
+                        <li>
+                            <a class="btn-square-s" href="/index.html" role="button">
+                                <ion-icon class="t-link" name="home-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="open d-block">
+                            <button class="btn-square-s" type="button" data-nav="">
+                                <ion-icon name="menu"></ion-icon>
+                            </button>
+                        </li>
+                        <li class="d-none close">
+                            <button class="btn-square-s" type="button" data-nav="">
+                                <ion-icon name="close"></ion-icon>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="nav-menu d-none" role="menu" data-nav="">
+                        <li class="nav-menu-item" role="menuitem">
+                            <a class="nav-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                        <li class="nav-menu-item" role="menuitem">
+                            <a class="nav-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                        <li class="nav-menu-item" role="menuitem">
+                            <a class="nav-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                        <li class="nav-menu-item" role="menuitem">
+                            <a class="nav-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                        <li class="nav-menu-item" role="menuitem">
+                            <a class="nav-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav id="navExample2" class="nav-pad">
+                    <ul class="nav-pad-header">
+                        <li>
+                            <a class="btn-square-s" href="/index.html" role="button">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="open d-block">
+                            <button class="btn-square-s" type="button" data-nav="">
+                                <ion-icon name="menu"></ion-icon>
+                            </button>
+                        </li>
+                        <li class="d-none close">
+                            <button class="btn-square-s" type="button" data-nav="">
+                                <ion-icon name="close"></ion-icon>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="nav-pad-menu d-none" role="menu" data-nav="">
+                        <li class="nav-pad-menu-item" role="menuitem">
+                            <a class="nav-pad-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                        <li class="nav-pad-menu-item" role="menuitem">
+                            <a class="nav-pad-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                        <li class="nav-pad-menu-item" role="menuitem">
+                            <a class="nav-pad-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                        <li class="nav-pad-menu-item" role="menuitem">
+                            <a class="nav-pad-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                        <li class="nav-pad-menu-item" role="menuitem">
+                            <a class="nav-pad-menu-link" href="#" rel="noopener">
+                                item
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <h3 class="note-blue">
+                Copy to clipboard
+            </h3>
+            <p>Simply click and paste nav models to your project</p>
+            <div class="g-col g-col-l-2 m-t-2 m-b-6">
+                <pre class="clipboard h-rem-32" rel="classic nav">
+                    <code>
+&lt;nav class=&quot;nav&quot;&gt;
+    &lt;ul class=&quot;nav-header bg-white&quot;&gt;
+        &lt;li&gt;
+            &lt;a class=&quot;btn-square-s&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;&lt;ion-icon name=&quot;home-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;open d-block&quot;&gt;
+            &lt;button class=&quot;btn-square-s&quot; type=&quot;button&quot; data-nav=&quot;&quot;&gt;&lt;ion-icon name=&quot;menu&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;d-none close&quot;&gt;
+            &lt;button class=&quot;btn-square-s&quot; type=&quot;button&quot; data-nav=&quot;&quot;&gt;&lt;ion-icon name=&quot;close&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;nav-menu bg-white d-none&quot; role=&quot;menu&quot; data-nav=&quot;&quot;&gt;
+        &lt;li class=&quot;nav-menu-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;nav-menu-link&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+                item
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-menu-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;nav-menu-link&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            item
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-menu-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;nav-menu-link&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            item
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-menu-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;nav-menu-link&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            item
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-menu-item&quot; role=&quot;menuitem&quot;&gt;
+            &lt;a class=&quot;nav-menu-link&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            item
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-32" rel="pad nav">
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+        </section>
+
     </main>
-    <footer class="bg-grad-carbon">
+    <footer class="bg-grad-blue">
         footer
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="/script/nav.js"></script>
+    <script src="script/clipboard.js"></script>
 </body>
 
 </html>

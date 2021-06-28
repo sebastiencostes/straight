@@ -2,9 +2,9 @@ const cards = document.querySelectorAll("#cardGalleryExample .card");
 const btnV = document.querySelector("#vGrid");
 const btnH = document.querySelector("#hGrid");
 const btnL = document.querySelector("#lGrid");
-const btnOpen = document.querySelectorAll(".open");
-const cardBody = document.querySelectorAll(".card-body");
-const btnClose = document.querySelectorAll(".close");
+const btnOpen = document.querySelectorAll(".card .open");
+const cardBody = document.querySelectorAll(".card .card-body");
+const btnClose = document.querySelectorAll(".card .close");
 
 card = () => {
   /*

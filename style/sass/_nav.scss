@@ -27,12 +27,12 @@
     @include h.height(calc(100vh - 8rem));
     @include pd.padding(2rem);
     @include w.width(100vw);
-    @include c.light-theme() {
-      background-color: c.$white;
-    }
-    @include c.dark-theme() {
-      background-color: c.$text-light;
-    }
+    // @include c.light-theme() {
+    //   background-color: c.$white;
+    // }
+    // @include c.dark-theme() {
+    //   background-color: c.$text-light;
+    // }
     @include d.tablet-portrait() {
       @include w.width(25vw);
     }
@@ -51,6 +51,39 @@
   }
 }
 
+/*
+Open innerNav
+*/
+#straightNav {
+    z-index: 3;
+  .nav-header, .nav-menu {
+    @include c.light-theme() {
+      background-color: c.$white;
+    }
+    @include c.dark-theme() {
+      background-color: c.$text-light;
+    }
+  }
+}
+/*
+Close innerNav
+*/
+
+/*
+Open nav example
+*/
+#navExample, #navExample2 {
+  @include p.position(relative);
+  @include w.width(100%);
+  .nav-menu {
+    @include h.height(calc(100% - 8rem));
+  }
+}
+/*
+Close nav example
+*/
+
+//animation slide opening
 @-webkit-keyframes nav {
   from {
     -webkit-transform: translateX(-100vw);

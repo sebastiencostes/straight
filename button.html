@@ -15,44 +15,25 @@
 </head>
 
 <body>
-    <nav class="nav">
-        <ul class="nav-header bg-white">
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
             <li>
-                <a class="btn-square-s" href="/index.html" role="button"><ion-icon name="home-outline"></ion-icon></a>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon name="home-outline"></ion-icon>
+                </a>
             </li>
             <li class="open d-block">
-                <button class="btn-square-s" type="button"><ion-icon name="menu"></ion-icon></button>
+                <button class="btn-square-s" type="button" data-nav="">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
             </li>
             <li class="d-none close">
-                <button class="btn-square-s" type="button"><ion-icon name="close"></ion-icon></button>
+                <button class="btn-square-s" type="button" data-nav="">
+                    <ion-icon name="close"></ion-icon>
+                </button>
             </li>
         </ul>
-        <ul class="nav-menu d-none" role="menu">
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/button.html" rel="noopener">
-                    button
-                </a>
-            </li>
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/card.html" rel="noopener">
-                    card
-                </a>
-            </li>
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/carousel.html" rel="noopener">
-                    carousel
-                </a>
-            </li>
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/color.html" rel="noopener">
-                    color
-                </a>
-            </li>
-            <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link" href="/nav.html" rel="noopener">
-                    nav
-                </a>
-            </li>
+        <ul id="straightNavMenu" class="nav-menu d-none" role="menu" data-nav="">
         </ul>
     </nav>
     <header class="p-2 m-b-6 presentation bg-grad-purple m-t-8 header" role="presentation">
