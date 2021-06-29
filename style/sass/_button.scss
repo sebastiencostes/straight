@@ -49,6 +49,9 @@ Font sizes for .btn-*
 @mixin btn-xxl {
   font-size: clamp(4.8rem, 4.66rem + 0.5vw, 5.6rem);
 }
+@mixin btn-jumbo {
+  font-size: clamp(5.6rem, 5.4600rem + 0.5000vw, 6.4rem);
+}
 .btn-s {
   @include btn();
   @include btn-s();
@@ -74,6 +77,11 @@ Font sizes for .btn-*
   @include btn-xxl();
   @include p.padding(0 1.75rem);
 }
+.btn-jumbo {
+  @include btn();
+  @include btn-jumbo();
+  @include p.padding(0 1.75rem);
+}
 
 /*
 Sizes for .btn-square-* & .btn-circle-*
@@ -97,6 +105,10 @@ Sizes for .btn-square-* & .btn-circle-*
 @mixin btn-size-xxl() {
   @include w.width(7.2rem);
   @include h.height(7.2rem);
+}
+@mixin btn-size-jumbo() {
+  @include w.width(11.2rem);
+  @include h.height(11.2rem);
 }
 
 /*
@@ -126,6 +138,10 @@ Sizes for .btn-square-* & .btn-circle-*
   @include btn-square();
   @include btn-size-xxl();
 }
+.btn-square-jumbo {
+  @include btn-square();
+  @include btn-size-jumbo();
+}
 
 /*
 .btn-circle-*
@@ -153,6 +169,10 @@ Sizes for .btn-square-* & .btn-circle-*
 .btn-circle-xxl {
   @include btn-circle();
   @include btn-size-xxl();
+}
+.btn-circle-jumbo {
+  @include btn-circle();
+  @include btn-size-jumbo();
 }
 
 /*

@@ -13613,6 +13613,7 @@ Align items
 }
 
 .i-start {
+  -webkit-box-align: start;
   align-items: flex-start;
 }
 
@@ -13620,6 +13621,9 @@ Align items
   align-items: flex-end;
 }
 
+/*
+Align self
+*/
 /*
 Flex basis
 */
@@ -14163,6 +14167,22 @@ Font sizes for .btn-*
   padding: 0 1.75rem;
 }
 
+.btn-jumbo {
+  align-items: center;
+  background-color: transparent;
+  border: solid 1px transparent;
+  color: #212121;
+  display: inline-flex;
+  font-weight: 400;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.28s;
+  vertical-align: middle;
+  border-radius: 0.3rem;
+  font-size: clamp(5.6rem, 5.4600rem + 0.5000vw, 6.4rem);
+  padding: 0 1.75rem;
+}
+
 /*
 Sizes for .btn-square-* & .btn-circle-*
 */
@@ -14249,6 +14269,22 @@ Sizes for .btn-square-* & .btn-circle-*
   height: 7.2rem;
 }
 
+.btn-square-jumbo {
+  align-items: center;
+  background-color: transparent;
+  border: solid 1px transparent;
+  color: #212121;
+  display: inline-flex;
+  font-weight: 400;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.28s;
+  vertical-align: middle;
+  border-radius: 0.3rem;
+  width: 11.2rem;
+  height: 11.2rem;
+}
+
 /*
 .btn-circle-*
 */
@@ -14330,6 +14366,22 @@ Sizes for .btn-square-* & .btn-circle-*
   border-radius: 50%;
   width: 7.2rem;
   height: 7.2rem;
+}
+
+.btn-circle-jumbo {
+  align-items: center;
+  background-color: transparent;
+  border: solid 1px transparent;
+  color: #212121;
+  display: inline-flex;
+  font-weight: 400;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.28s;
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 11.2rem;
+  height: 11.2rem;
 }
 
 /*
@@ -14856,6 +14908,10 @@ p {
 }
 ion-icon {
   font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
+}
+
+ion-icon {
+  pointer-events: none;
 }
 
 .d-grid {
@@ -16233,6 +16289,7 @@ grid-template-columns
 .card.card-h .card-header {
   height: 50%;
   max-width: 50%;
+  -webkit-box-align: start;
   align-items: flex-start;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 50%;
@@ -16503,6 +16560,9 @@ no-margin
   height: auto;
 }
 
+/*
+OPEN classic nav
+*/
 .nav {
   position: fixed;
   width: 100vw;
@@ -16525,11 +16585,12 @@ no-margin
   padding: 2rem;
 }
 .nav-menu {
-  -webkit-animation-name: nav;
-  animation-name: nav;
+  -webkit-animation-name: classicNav;
+  animation-name: classicNav;
   -webkit-animation-duration: 0.28s;
   animation-duration: 0.28s;
   height: calc(100vh - 8rem);
+  overflow-y: scroll;
   padding: 2rem;
   width: 100vw;
 }
@@ -16545,7 +16606,7 @@ no-margin
 }
 @media only screen and (min-width: 728px) {
   .nav-menu {
-    width: 25vw;
+    width: 33.333vw;
   }
 }
 @media only screen and (min-width: 1400px) {
@@ -16564,6 +16625,9 @@ no-margin
 .nav-menu-item:first-child {
   margin-top: 0;
 }
+.nav-menu-link-text {
+  margin-left: 1rem;
+}
 
 /*
 Open innerNav
@@ -16572,12 +16636,14 @@ Open innerNav
   z-index: 3;
 }
 @media (prefers-color-scheme: light) {
-  #straightNav .nav-header, #straightNav .nav-menu {
+  #straightNav .nav-header,
+#straightNav .nav-menu {
     background-color: #ffffff;
   }
 }
 @media (prefers-color-scheme: dark) {
-  #straightNav .nav-header, #straightNav .nav-menu {
+  #straightNav .nav-header,
+#straightNav .nav-menu {
     background-color: #323232;
   }
 }
@@ -16586,20 +16652,74 @@ Open innerNav
 Close innerNav
 */
 /*
+CLOSE classic nav
+*/
+/*
+OPEN Pad nav
+*/
+.nav-pad-menu {
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  overflow-y: scroll;
+  -webkit-backdrop-filter: blur(1.6rem);
+  backdrop-filter: blur(1.6rem);
+  -webkit-animation-name: padNav;
+  animation-name: padNav;
+  -webkit-animation-duration: 0.28s;
+  animation-duration: 0.28s;
+  height: calc(100vh - 8rem);
+}
+.nav-pad-menu .nav-menu-item {
+  align-self: center;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-pad-menu .nav-menu-item:first-child {
+  margin-top: 2rem;
+}
+.nav-pad-menu .nav-menu-link {
+  border-radius: 1.6rem;
+  width: 11.2rem;
+  height: 11.2rem;
+}
+.nav-pad-menu .nav-menu-link-text {
+  color: #ffffff;
+  -webkit-filter: drop-shadow(1px 1px 2px #000000);
+  filter: drop-shadow(1px 1px 2px #000000);
+  font-weight: 400;
+  margin-left: 0;
+  margin-top: 1rem;
+}
+.nav-pad-menu .nav-menu-link ion-icon {
+  font-size: 8rem;
+}
+
+/*
+CLOSE Pad nav
+*/
+/*
 Open nav example
 */
-#navExample, #navExample2 {
+#navExample,
+#navExample2 {
   position: relative;
   width: 100%;
 }
-#navExample .nav-menu, #navExample2 .nav-menu {
+#navExample .nav-menu,
+#navExample2 .nav-menu {
   height: calc(100% - 8rem);
 }
 
 /*
 Close nav example
 */
-@-webkit-keyframes nav {
+/*
+animation slide opening for classic nav
+*/
+@-webkit-keyframes classicNav {
   from {
     -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw);
@@ -16609,7 +16729,7 @@ Close nav example
     transform: translateX(0);
   }
 }
-@keyframes nav {
+@keyframes classicNav {
   from {
     -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw);
@@ -16617,6 +16737,33 @@ Close nav example
   to {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+  }
+}
+/*
+animation slide opening for PAD NAV
+*/
+@-webkit-keyframes padNav {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes padNav {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 

@@ -1,4 +1,5 @@
 @use "device" as d;
+@use "border" as b;
 @use "flexbox"as flx;
 @use "position" as p;
 @use "height" as h;
@@ -7,6 +8,13 @@
 @use "padding" as pd;
 @use "color" as c;
 @use "utility" as u;
+@use "filter" as f;
+@use "font" as ft;
+@use "grid" as g;
+
+/*
+OPEN classic nav
+*/
 .nav {
   @include p.position(fixed);
   @include w.width(100vw);
@@ -19,12 +27,13 @@
     @include pd.padding(2rem);
   }
   &-menu {
-    -webkit-animation-name: nav;
-    animation-name: nav;
+    -webkit-animation-name: classicNav;
+    animation-name: classicNav;
     -webkit-animation-duration: u.$time;
     animation-duration: u.$time;
     @include u.b-shadow();
     @include h.height(calc(100vh - 8rem));
+    overflow-y: scroll;
     @include pd.padding(2rem);
     @include w.width(100vw);
     // @include c.light-theme() {
@@ -34,7 +43,7 @@
     //   background-color: c.$text-light;
     // }
     @include d.tablet-portrait() {
-      @include w.width(25vw);
+      @include w.width(33.333vw);
     }
     @include d.laptop() {
       @include w.width(calc(100vw - 120rem));
@@ -48,15 +57,20 @@
         @include m.margin-direction(top, 0);
       }
     }
+    &-link {
+      &-text {
+        @include m.margin-direction(left, 1rem);
+      }
+    }
   }
 }
-
 /*
 Open innerNav
 */
 #straightNav {
-    z-index: 3;
-  .nav-header, .nav-menu {
+  z-index: 3;
+  .nav-header,
+  .nav-menu {
     @include c.light-theme() {
       background-color: c.$white;
     }
@@ -68,11 +82,57 @@ Open innerNav
 /*
 Close innerNav
 */
+/*
+CLOSE classic nav
+*/
+
+/*
+OPEN Pad nav
+*/
+.nav-pad-menu {
+  @include g.g-col-gap(2rem);
+  @include g.row-gap(2rem);
+  overflow-y: scroll;
+  @include f.backdrop-filter(blur(1.6rem));
+    -webkit-animation-name: padNav;
+    animation-name: padNav;
+    -webkit-animation-duration: u.$time;
+    animation-duration: u.$time;
+    @include h.height(calc(100vh - 8rem));
+    .nav-menu-item {
+      @include flx.align-self(center);
+      @include flx.d-inline-flex();
+      @include flx.f-dir-col();
+      @include flx.align-items(center);
+      &:first-child {
+        @include m.margin-direction(top, 2rem);
+      }
+    }
+    .nav-menu-link {
+      @include b.b-radius(1.6rem);
+      @include w.width(11.2rem);
+      @include h.height(11.2rem);
+      &-text {
+        @include ft.text-overlay();
+        @include m.margin-direction(left, 0);
+        @include m.margin-direction(top, 1rem);
+      }
+      ion-icon {
+        font-size: 8rem;
+      }
+    }
+}
+/*
+CLOSE Pad nav
+*/
+
+
 
 /*
 Open nav example
 */
-#navExample, #navExample2 {
+#navExample,
+#navExample2 {
   @include p.position(relative);
   @include w.width(100%);
   .nav-menu {
@@ -83,8 +143,10 @@ Open nav example
 Close nav example
 */
 
-//animation slide opening
-@-webkit-keyframes nav {
+/*
+animation slide opening for classic nav
+*/
+@-webkit-keyframes classicNav {
   from {
     -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw);
@@ -94,7 +156,7 @@ Close nav example
     transform: translateX(0);
   }
 }
-@keyframes nav {
+@keyframes classicNav {
   from {
     -webkit-transform: translateX(-100vw);
     transform: translateX(-100vw);
@@ -102,5 +164,33 @@ Close nav example
   to {
     -webkit-transform: translateX(0);
     transform: translateX(0);
+  }
+}
+
+/*
+animation slide opening for PAD NAV
+*/
+@-webkit-keyframes padNav {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes padNav {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
