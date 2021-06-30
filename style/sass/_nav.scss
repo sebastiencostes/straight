@@ -31,6 +31,7 @@ OPEN classic nav
     animation-name: classicNav;
     -webkit-animation-duration: u.$time;
     animation-duration: u.$time;
+    @include p.position(absolute);
     @include u.b-shadow();
     @include h.height(calc(100vh - 8rem));
     overflow-y: scroll;
@@ -68,7 +69,7 @@ OPEN classic nav
 Open innerNav
 */
 #straightNav {
-  z-index: 3;
+  z-index: 2;
   .nav-header,
   .nav-menu {
     @include c.light-theme() {
@@ -94,49 +95,50 @@ OPEN Pad nav
   @include g.row-gap(2rem);
   overflow-y: scroll;
   @include f.backdrop-filter(blur(1.6rem));
-    -webkit-animation-name: padNav;
-    animation-name: padNav;
-    -webkit-animation-duration: u.$time;
-    animation-duration: u.$time;
-    @include h.height(calc(100vh - 8rem));
-    .nav-menu-item {
-      @include flx.align-self(center);
-      @include flx.d-inline-flex();
-      @include flx.f-dir-col();
-      @include flx.align-items(center);
-      &:first-child {
-        @include m.margin-direction(top, 2rem);
-      }
+  -webkit-animation-name: padNav;
+  animation-name: padNav;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+  @include h.height(calc(100vh - 8rem));
+  .nav-menu-item {
+    @include flx.align-self(center);
+    @include flx.d-inline-flex();
+    @include flx.f-dir-col();
+    @include flx.align-items(center);
+    &:first-child {
+      @include m.margin-direction(top, 2rem);
     }
-    .nav-menu-link {
-      @include b.b-radius(1.6rem);
-      @include w.width(11.2rem);
-      @include h.height(11.2rem);
-      &-text {
-        @include ft.text-overlay();
-        @include m.margin-direction(left, 0);
-        @include m.margin-direction(top, 1rem);
-      }
-      ion-icon {
-        font-size: 8rem;
-      }
+  }
+  .nav-menu-link {
+    @include b.b-radius(1.6rem);
+    @include w.width(11.2rem);
+    @include h.height(11.2rem);
+    &-text {
+      @include ft.text-overlay();
+      @include m.margin-direction(left, 0);
+      @include m.margin-direction(top, 1rem);
     }
+    ion-icon {
+      font-size: 8rem;
+    }
+  }
 }
 /*
 CLOSE Pad nav
 */
 
-
-
 /*
 Open nav example
 */
-#navExample,
-#navExample2 {
+#navExample1.nav,
+#navExample2.nav {
   @include p.position(relative);
   @include w.width(100%);
-  .nav-menu {
+  z-index: 0;
+  .nav-menu,
+  .nav-pad-menu {
     @include h.height(calc(100% - 8rem));
+    @include w.width(100%);
   }
 }
 /*

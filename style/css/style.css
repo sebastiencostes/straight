@@ -14167,22 +14167,6 @@ Font sizes for .btn-*
   padding: 0 1.75rem;
 }
 
-.btn-jumbo {
-  align-items: center;
-  background-color: transparent;
-  border: solid 1px transparent;
-  color: #212121;
-  display: inline-flex;
-  font-weight: 400;
-  justify-content: center;
-  text-align: center;
-  transition: all 0.28s;
-  vertical-align: middle;
-  border-radius: 0.3rem;
-  font-size: clamp(5.6rem, 5.4600rem + 0.5000vw, 6.4rem);
-  padding: 0 1.75rem;
-}
-
 /*
 Sizes for .btn-square-* & .btn-circle-*
 */
@@ -14269,22 +14253,6 @@ Sizes for .btn-square-* & .btn-circle-*
   height: 7.2rem;
 }
 
-.btn-square-jumbo {
-  align-items: center;
-  background-color: transparent;
-  border: solid 1px transparent;
-  color: #212121;
-  display: inline-flex;
-  font-weight: 400;
-  justify-content: center;
-  text-align: center;
-  transition: all 0.28s;
-  vertical-align: middle;
-  border-radius: 0.3rem;
-  width: 11.2rem;
-  height: 11.2rem;
-}
-
 /*
 .btn-circle-*
 */
@@ -14366,22 +14334,6 @@ Sizes for .btn-square-* & .btn-circle-*
   border-radius: 50%;
   width: 7.2rem;
   height: 7.2rem;
-}
-
-.btn-circle-jumbo {
-  align-items: center;
-  background-color: transparent;
-  border: solid 1px transparent;
-  color: #212121;
-  display: inline-flex;
-  font-weight: 400;
-  justify-content: center;
-  text-align: center;
-  transition: all 0.28s;
-  vertical-align: middle;
-  border-radius: 50%;
-  width: 11.2rem;
-  height: 11.2rem;
 }
 
 /*
@@ -16589,6 +16541,7 @@ OPEN classic nav
   animation-name: classicNav;
   -webkit-animation-duration: 0.28s;
   animation-duration: 0.28s;
+  position: absolute;
   height: calc(100vh - 8rem);
   overflow-y: scroll;
   padding: 2rem;
@@ -16633,7 +16586,7 @@ OPEN classic nav
 Open innerNav
 */
 #straightNav {
-  z-index: 3;
+  z-index: 2;
 }
 @media (prefers-color-scheme: light) {
   #straightNav .nav-header,
@@ -16703,14 +16656,18 @@ CLOSE Pad nav
 /*
 Open nav example
 */
-#navExample,
-#navExample2 {
+#navExample1.nav,
+#navExample2.nav {
   position: relative;
   width: 100%;
+  z-index: 0;
 }
-#navExample .nav-menu,
-#navExample2 .nav-menu {
+#navExample1.nav .nav-menu,
+#navExample1.nav .nav-pad-menu,
+#navExample2.nav .nav-menu,
+#navExample2.nav .nav-pad-menu {
   height: calc(100% - 8rem);
+  width: 100%;
 }
 
 /*
