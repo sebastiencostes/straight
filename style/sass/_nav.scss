@@ -37,12 +37,6 @@ OPEN classic nav
     overflow-y: scroll;
     @include pd.padding(2rem);
     @include w.width(100vw);
-    // @include c.light-theme() {
-    //   background-color: c.$white;
-    // }
-    // @include c.dark-theme() {
-    //   background-color: c.$text-light;
-    // }
     @include d.tablet-portrait() {
       @include w.width(33.333vw);
     }
