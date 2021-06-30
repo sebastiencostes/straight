@@ -753,11 +753,6 @@ ul {
     background: #323232;
   }
 
-  img {
-    -webkit-filter: brightness(0.8) contrast(1.2);
-    filter: brightness(0.8) contrast(1.2);
-  }
-
   a,
 nav ul li {
     color: #54bbb6;
@@ -1486,6 +1481,12 @@ smooth
 
 .note-grey {
   border-left: solid 1px #bdbdbd;
+  border-left-width: 0.5rem;
+  padding-left: 2rem;
+}
+
+.note-turquoise {
+  border-left: solid 1px #00bfa5;
   border-left-width: 0.5rem;
   padding-left: 2rem;
 }

@@ -361,10 +361,11 @@ ul {
     color: c.$text-dark;
     background: c.$black-dark;
   }
-  img {
-    -webkit-filter: brightness(0.8) contrast(1.2);
-    filter: brightness(0.8) contrast(1.2);
-  }
+  //TO MOVE IN IMAGE
+  // img {
+  //   -webkit-filter: brightness(0.8) contrast(1.2);
+  //   filter: brightness(0.8) contrast(1.2);
+  // }
   a,
   nav ul li {
     color: c.$link;
