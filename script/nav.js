@@ -80,14 +80,15 @@ const openBtn = document.querySelector(".nav .open");
 const closeBtn = document.querySelector(".nav .close");
 const gridBtn = document.querySelector(".nav .grid");
 const listBtn = document.querySelector(".nav .list");
+const main = document.querySelector("main");
 /*
 NAV
 */
 nav = () => {
-  let isList = "";
-  let isOpen = "";
+  let isList = true;
+  let isOpen = false;
 
-  //generating list
+  //creating menu list
   for (let url of arrayStraightNav) {
     switchNav.innerHTML += `<li class="nav-menu-item" role="menuitem">
     <a class="nav-menu-link btn-square-m btn-${url.color}" href="${url.link}" rel="noopener" role="button">
@@ -99,88 +100,27 @@ nav = () => {
     </li>`;
   }
 
-/*
-OPEN MENU
+  /*
+Switching between show and hide menu
 */
-  openMenu = (open, list) => {
+  toggleMenu = (open) => {
     isOpen = open;
-    isList = list;
-    gridBtn.classList.remove("d-none");
-    gridBtn.classList.add("d-block");
-    isOpen ? null : closeBtn.classList.remove("d-none"),
-      closeBtn.classList.add("d-block");
-    isList
-      ? (switchNav.classList.add("nav-menu"),
+
+    isOpen
+      ? (gridBtn.classList.add("d-block"),
+        gridBtn.classList.remove("d-none"),
+        closeBtn.classList.add("d-block"),
+        closeBtn.classList.remove("d-none"),
         switchNav.classList.remove("d-none"),
-        switchNav.classList.add("d-block"))
-      : null;
-  };
-  openBtn.addEventListener("click", (e) => {
-    openMenu(true, true);
-    e.currentTarget.classList.add("d-none");
-    e.currentTarget.classList.remove("d-block");
-  });
-
-/*
-CLOSE MENU
-*/
-  closeMenu = (close, list) => {
-    isOpen = close;
-    isList = list;
-    gridBtn.classList.remove("d-block");
-    gridBtn.classList.add("d-none");
-    isOpen ? null : openBtn.classList.remove("d-none"),
-      openBtn.classList.add("d-block");
-    isList
-      ? (switchNav.classList.remove("nav-menu"),
+        switchNav.classList.add("d-block", "nav-menu"))
+      : (gridBtn.classList.remove("d-block"),
+        gridBtn.classList.add("d-none"),
+        listBtn.classList.remove("d-block"),
+        listBtn.classList.add("d-none"),
+        openBtn.classList.add("d-block"),
+        openBtn.classList.remove("d-none"),
+        switchNav.classList.remove("nav-menu", "d-block"),
         switchNav.classList.add("d-none"),
-        switchNav.classList.remove("d-block"))
-      : null;
-  };
-  closeBtn.addEventListener("click", (e) => {
-    closeMenu(false, true);
-    e.currentTarget.classList.add("d-none");
-    e.currentTarget.classList.remove("d-block");
-  });
-
-/*
-GRID VIEW DISPLAYING
-*/
-  gridView = (list) => {
-    isList = list;
-    listBtn.classList.add("d-block");
-    listBtn.classList.remove("d-none");
-
-    isList
-      ? null
-      : (switchNav.classList.remove("nav-menu", "d-block"),
-        switchNav.classList.add(
-          "nav-pad-menu",
-          "d-grid",
-          "g-col-s-2",
-          "g-col-m-3",
-          "g-col-l-4",
-          "g-col-xl-5",
-          "g-col-xxl-6"
-        ));
-  };
-  gridBtn.addEventListener("click", (e) => {
-    gridView(false);
-    e.currentTarget.classList.remove("d-block");
-    e.currentTarget.classList.add("d-none");
-  });
-
-/*
-LIST VIEW DISPLAYING
-*/
-  listView = (list) => {
-    isList = list;
-    gridBtn.classList.add("d-block");
-    gridBtn.classList.remove("d-none");
-
-    isList
-      ? null
-      : (switchNav.classList.add("nav-menu", "d-block"),
         switchNav.classList.remove(
           "nav-pad-menu",
           "d-grid",
@@ -191,8 +131,63 @@ LIST VIEW DISPLAYING
           "g-col-xxl-6"
         ));
   };
+  //Call toggleMenu() to switch hide/show menu
+  openBtn.addEventListener("click", (e) => {
+    isOpen = true;
+    toggleMenu(isOpen, isList);
+    e.currentTarget.classList.add("d-none");
+    e.currentTarget.classList.remove("d-block");
+  });
+  //Call toggleMenu() to switch hide/show menu
+  closeBtn.addEventListener("click", (e) => {
+    isOpen = false;
+    toggleMenu(isOpen, isList);
+    e.currentTarget.classList.add("d-none");
+    e.currentTarget.classList.remove("d-block");
+  });
+
+  /*
+Switching between grid and list view
+*/
+  toggleView = (list) => {
+    isList = list;
+    isList
+      ? (gridBtn.classList.add("d-block"),
+        gridBtn.classList.remove("d-none"),
+        switchNav.classList.add("nav-menu", "d-block"),
+        switchNav.classList.remove(
+          "nav-pad-menu",
+          "d-grid",
+          "g-col-s-2",
+          "g-col-m-3",
+          "g-col-l-4",
+          "g-col-xl-5",
+          "g-col-xxl-6"
+        ))
+      : (listBtn.classList.add("d-block"),
+        listBtn.classList.remove("d-none"),
+        switchNav.classList.remove("nav-menu", "d-block"),
+        switchNav.classList.add(
+          "nav-pad-menu",
+          "d-grid",
+          "g-col-s-2",
+          "g-col-m-3",
+          "g-col-l-4",
+          "g-col-xl-5",
+          "g-col-xxl-6"
+        ));
+  };
+  //Call toggleView() to switch in list view
   listBtn.addEventListener("click", (e) => {
-    listView(false);
+    isList = true;
+    toggleView(isList);
+    e.currentTarget.classList.remove("d-block");
+    e.currentTarget.classList.add("d-none");
+  });
+  //Call toggleView() to switch in grid view
+  gridBtn.addEventListener("click", (e) => {
+    isList = false;
+    toggleView(isList);
     e.currentTarget.classList.remove("d-block");
     e.currentTarget.classList.add("d-none");
   });
