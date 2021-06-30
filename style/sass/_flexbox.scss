@@ -4,11 +4,11 @@
 .d-flex {
   @include d-flex();
 }
-@mixin display-inline-flex() {
+@mixin d-inline-flex() {
   display: inline-flex;
 }
 .d-inline-flex {
-  @include display-inline-flex();
+  @include d-inline-flex();
 }
 /*
 Direction
@@ -119,6 +119,7 @@ Align items
   @include align-items(stretch);
 }
 @mixin items-start {
+  -webkit-box-align: start;
   align-items: flex-start;
 }
 .i-start {
@@ -129,6 +130,13 @@ Align items
 }
 .i-end {
   @include items-end;
+}
+
+/*
+Align self
+*/
+@mixin align-self($value) {
+  align-self: $value;
 }
 
 /*

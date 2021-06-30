@@ -14,3 +14,8 @@ Text overlay
   -webkit-filter: $value;
   filter: $value;
 }
+
+@mixin backdrop-filter($value) {
+  -webkit-backdrop-filter: $value;
+  backdrop-filter: $value;
+}

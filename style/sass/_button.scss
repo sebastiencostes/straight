@@ -5,16 +5,19 @@
 @use "height" as h;
 @use "width" as w;
 @use "utility" as u;
+@use "flexbox" as flx;
 
 /*
 Button properties shared
 */
 @mixin btn-shared() {
+  @include flx.align-items(center);
   background-color: c.$transparent;
   @include b.border(c.$transparent);
   color: c.$carbon;
-  @include u.d-inline-block();
+  @include flx.d-inline-flex();
   font-weight: 400;
+  @include flx.justify-content(center);
   text-align: center;
   @include u.transition(all, u.$time);
   vertical-align: middle;
@@ -46,6 +49,7 @@ Font sizes for .btn-*
 @mixin btn-xxl {
   font-size: clamp(4.8rem, 4.66rem + 0.5vw, 5.6rem);
 }
+
 .btn-s {
   @include btn();
   @include btn-s();

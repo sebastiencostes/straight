@@ -114,6 +114,10 @@ p {
   color: c.$white;
 }
 
+.t-link {
+  color: c.$link;
+}
+
 @include c.dark-theme {
   ion-icon {
     color: c.$text-dark;
@@ -128,4 +132,8 @@ p {
 
 ion-icon {
   font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
+}
+
+ion-icon {
+  pointer-events: none;
 }

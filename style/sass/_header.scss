@@ -5,12 +5,12 @@
 @use "font" as f;
 
 .presentation {
-    @include g.g-container();
-    @include h.height(50vh);
-    @include fx.align-items(center);
-    &-title {
-        @include f.text-transform(uppercase);
-        font-size: clamp(4.1rem, 3.1375rem + 3.4375vw, 9.6rem);
-        letter-spacing: 1.6rem;
-    }
+  @include g.g-container();
+  @include h.height(calc(50vh - 8rem));
+  @include fx.align-items(center);
+  &-title {
+    @include f.text-transform(uppercase);
+    font-size: clamp(4.1rem, 3.1375rem + 3.4375vw, 9.6rem);
+    letter-spacing: 1.6rem;
+  }
 }

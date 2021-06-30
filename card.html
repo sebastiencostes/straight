@@ -15,8 +15,42 @@
 </head>
 
 <body>
-    <header class="p-2 m-b-6 presentation bg-grad-pink header" role="presentation">
-        <h1 class="presentation-title t-white">Cards</h1>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    
+    <header class="p-2 m-b-6 presentation bg-grad-pink header m-t-8" role="presentation">
+        <h1 class="presentation-title t-white">Card</h1>
     </header>
 
     <main class="container-fix">
@@ -1744,6 +1778,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script/libraries/highlight.js"></script>
     <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
     <script src="script/card.js"></script>
     <script src="script/carousel.js"></script>
     <script src="script/clipboard.js"></script>

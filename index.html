@@ -7,186 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
     <title>Straight</title>
-    <meta name="description" content="Straight - HTML5, CSS3, Flexbox and Grid framework for building responsive, mobile-first sites">
+    <meta name="description"
+        content="Straight - HTML5, CSS3, Flexbox and Grid framework for building responsive, mobile-first sites">
     <link rel="preload" href="style/css/style.css" as="style">
     <link rel="stylesheet" href="style/css/style.css">
 </head>
 
 <body>
-
-    <nav>
-        <ul>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
             <li>
-                <a href="/index.html">
-                    home
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
                 </a>
             </li>
-            <li>
-                <a href="/button.html">
-                    button
-                </a>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
             </li>
-            <li>
-                <a href="/card.html">
-                    card
-                </a>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
             </li>
-            <li>
-                <a href="/carousel.html">
-                    carousel
-                </a>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
             </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
         </ul>
     </nav>
 
-    <main class="container-screen">
-        <article>
-            <h1>nos plats préférés</h1>
-            <h2>nos plats préférés</h2>
-            <h3>nos plats préférés</h3>
-            <h4>nos plats préférés</h4>
-            <h5>nos plats préférés</h5>
-            <h6>nos plats préférés</h6>
-            <p>
-                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                pour l'inciter à cliquer sur l'article et à le lire.
-                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                pour l'inciter à cliquer sur l'article et à le lire.
-                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                pour l'inciter à cliquer sur l'article et à le lire.
-                Une carte est utilisée pour montrer à un utilisateur un extrait d'un article avec son visuel
-                pour l'inciter à cliquer sur l'article et à le lire.
-            </p>
-        </article>
+    <header class="p-2 m-b-6 presentation bg-grad-white header m-t-8" role="presentation">
+        <h1 class="presentation-title t-carbon">Straight</h1>
+    </header>
 
-        <article>
-            <!--CIRCLE-->
-            <button class="btn btn-circle-xs">
-                <span class="material-icons md-12">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-circle-s">
-                <span class="material-icons">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-circle-m">
-                <span class="material-icons md-36">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-circle-l">
-                <span class="material-icons md-48">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-circle-xl">
-                <span class="material-icons md-60">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn circle-hover btn-circle-xxl">
-                <span class="material-icons md-78">
-                    more_horizontal
-                </span>
-            </button>
-
-            <!--SQUARE-->
-
-            <button class="btn btn-square-xs">
-                <span class="material-icons md-12">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-square-s">
-                <span class="material-icons">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-square-m">
-                <span class="material-icons md-36">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-square-l">
-                <span class="material-icons md-48">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn btn-square-xl">
-                <span class="material-icons md-60">
-                    more_horizontal
-                </span>
-            </button>
-
-            <button class="btn square-hover btn-square-xxl">
-                <span class="material-icons md-78">
-                    more_horizontal
-                </span>
-            </button>
-
-            <!--BTN-->
-
-            <button class="btn btn-xs">
-                button
-            </button>
-
-            <button class="btn btn-s">
-                button
-            </button>
-
-            <button class="btn btn-m">
-                button
-            </button>
-
-            <button class="btn btn-l">
-                button
-            </button>
-
-            <button class="btn btn-xl">
-                button
-            </button>
-
-            <button class="btn btn-xxl">
-                button
-            </button>
-        </article>
-
-        <div class="t-right">
-            <button id="vGrid" class="btn-square-s  card-btn-gallery m-r-2">
-                <span class="material-icons">
-                    crop_portrait
-                </span>
-            </button>
-
-            <button id="hGrid" class="btn-square-s card-btn-gallery">
-                <span class="material-icons">
-                    crop_5_4
-                </span>
-            </button>
-
-            <button id="lGrid" class="btn-square-s card-btn-gallery m-l-2">
-                <span class="material-icons">
-                    crop_7_5
-                </span>
-            </button>
-        </div>
+    <main class="container-fix h-rem-300 bg-red">
     </main>
     <footer>
         footer
         Icons comes from <a href="https://ionic.io/ionicons" rel="noopener" target="_blank">ionic</a>.
     </footer>
-    <script src="script/main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/script/straightNav.js"></script>
 </body>
 
 </html>
