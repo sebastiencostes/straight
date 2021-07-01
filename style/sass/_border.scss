@@ -4,6 +4,48 @@
 @mixin border($color) {
   border: solid 1px $color;
 }
+.b-white {
+  @include border(c.$white);
+}
+.b-black {
+  @include border(c.$carbon);
+}
+.b-blue {
+  @include border(c.$blue);
+}
+.b-red {
+  @include border(c.$red);
+}
+.b-green {
+  @include border(c.$green);
+}
+.b-pink {
+  @include border(c.$pink);
+}
+.b-purple {
+  @include border(c.$purple);
+}
+.b-navy {
+  @include border(c.$navy);
+}
+.b-orange {
+  @include border(c.$orange);
+}
+.b-yellow {
+  @include border(c.$yellow);
+}
+.b-brown {
+  @include border(c.$brown);
+}
+.b-grey {
+  @include border(c.$grey);
+}
+.b-turquoise {
+  @include border(c.$turquoise);
+}
+/*
+Border theme
+*/
 .border {
   @include c.light-theme() {
     @include border(c.$carbon);
@@ -116,6 +158,10 @@ smooth
 @mixin note() {
   border-left-width: 0.5rem;
   @include p.padding-direction(left, 2rem);
+}
+.note-white {
+  @include b-left(c.$white);
+  @include note();
 }
 .note-black {
   @include b-left(c.$carbon);

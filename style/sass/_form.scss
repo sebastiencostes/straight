@@ -1,0 +1,489 @@
+@use "color" as c;
+@use "border" as b;
+@use "utility" as u;
+@use "flexbox" as flx;
+@use "height" as h;
+@use "padding" as p;
+@use "width" as w;
+
+/*
+TODO
+Sahred properties
+*/
+@mixin sharedProperties() {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  @include u.d-inline-block();
+  outline: none;
+}
+
+/*
+Checkable input
+*/
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, 0.3);
+    --border: #bbc1e1;
+    --background: #efefef;
+    --disabled: #bdbdbd;
+    --disabled-inner: #8d8d8d;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include h.height(2.1rem);
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    &:after {
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease),
+        opacity var(--d-o, 0.2s);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: 0.3s;
+      --d-t: 0.6s;
+      --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: 0.9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    &:not(.switch) {
+      width: 2.1rem;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
+    }
+    & + label {
+      font-size: clamp(0.8rem, 0.66rem + 0.5vw, 1.6rem);
+      line-height: 2.1rem;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+  }
+  input[type="checkbox"] {
+    &:not(.switch) {
+      @include b.b-smooth();
+      &:after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      width: 3.8rem;
+      @include b.b-radius(1.1rem);
+      &:after {
+        left: 2px;
+        top: 2px;
+        @include b.b-radius(50%);
+        @include w.width(1.5rem);
+        @include h.height(1.5rem);
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 1.7rem;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+  input[type="radio"] {
+    @include b.b-radius(50%);
+    &:after {
+      @include w.width(1.9rem);
+      @include h.height(1.9rem);
+      @include b.b-radius(50%);
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, 0.7));
+    }
+    &:checked {
+      --s: 0.5;
+    }
+  }
+}
+
+/*
+Check ,radio & switch colors
+*/
+input[type="checkbox"].check,
+input[type="radio"].radio {
+  &-red {
+    --active: #d50000;
+    --border: #d50000;
+    --border-hover: #d50000;
+  }
+  &-green {
+    --active: #64dd17;
+    --border: #64dd17;
+    --border-hover: #64dd17;
+  }
+  &-blue {
+    --active: #0091ea;
+    --border: #0091ea;
+    --border-hover: #0091ea;
+  }
+  &-turquoise {
+    --active: #00bfa5;
+    --border: #00bfa5;
+    --border-hover: #00bfa5;
+  }
+  &-yellow {
+    --active: #ffd600;
+    --border: #ffd600;
+    --border-hover: #ffd600;
+  }
+  &-orange {
+    --active: #ff6d00;
+    --border: #ff6d00;
+    --border-hover: #ff6d00;
+  }
+  &-pink {
+    --active: #c51162;
+    --border: #c51162;
+    --border-hover: #c51162;
+  }
+  &-purple {
+    --active: #aa00ff;
+    --border: #aa00ff;
+    --border-hover: #aa00ff;
+  }
+  &-brown {
+    --active: #8d6e63;
+    --border: #8d6e63;
+    --border-hover: #8d6e63;
+  }
+  &-navy {
+    --active: #78909c;
+    --border: #78909c;
+    --border-hover: #78909c;
+  }
+  &-black {
+    --active: #212121;
+    --border: #212121;
+    --border-hover: #212121;
+  }
+}
+
+/*
+Form shared
+*/
+
+/*
+Writable input
+*/
+// input[type="range"] {
+//   height: 0.8rem;
+//   padding: 0;
+// }
+// input[type="button"],
+// input[type="color"],
+// input[type="date"],
+// input[type="datetime-local"],
+// input[type="email"],
+// input[type="file"],
+// input[type="image"],
+// input[type="month"],
+// input[type="number"],
+// input[type="password"],
+// input[type="range"],
+// input[type="reset"],
+// input[type="search"],
+// input[type="submit"],
+// input[type="text"],
+// input[type="tel"],
+// input[type="url"],
+// input[type="week"] {
+
+// }
+
+/*
+Appareance writable inputs
+*/
+input[type="button"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="week"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: c.$grey-light;
+  border: 0;
+  color: c.$text-light;
+  outline: none;
+  &:focus-visible {
+    outline: none;
+  }
+  & + label {
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: default;
+    margin-left: 1rem;
+  }
+  &::placeholder {
+    color: c.$grey;
+  }
+}
+/*
+TEST shared
+*/
+%form-shared {
+}
+%form-input-container-shared {
+  @include flx.d-flex();
+  @include h.height(4.8rem);
+}
+%form-input-shared {
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+  @include p.padding(0.8rem 1.2rem);
+  @include w.width(100%);
+}
+%form-icon-shared {
+  @include flx.d-inline-flex();
+  @include flx.align-items(center);
+  @include flx.justify-content(center);
+  @include w.width(4.8rem);
+}
+
+.form {
+  &-input-container {
+    @extend %form-input-container-shared;
+  }
+  &-input {
+    @extend %form-input-shared;
+  }
+  &-icon {
+    @extend %form-icon-shared;
+  }
+}
+
+/*
+input container color's rules for writable inputs
+*/
+.input-container {
+  &-yellow {
+    background-color: c.$yellow;
+    .form-input {
+      background-color: c.$yellow-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$yellow-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-orange {
+    background-color: c.$orange;
+    .form-input {
+      background-color: c.$orange-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$orange-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-red {
+    background-color: c.$red;
+    .form-input {
+      background-color: c.$red-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$red-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-purple {
+    background-color: c.$purple;
+    .form-input {
+      background-color: c.$purple-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$purple-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-pink {
+    background-color: c.$pink;
+    .form-input {
+      background-color: c.$pink-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$pink-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-blue {
+    background-color: c.$blue;
+    .form-input {
+      background-color: c.$blue-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$blue-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-green {
+    background-color: c.$green;
+    .form-input {
+      background-color: c.$green-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$green-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-turquoise {
+    background-color: c.$turquoise;
+    .form-input {
+      background-color: c.$turquoise-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$turquoise-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-brown {
+    background-color: c.$brown;
+    .form-input {
+      background-color: c.$brown-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$brown-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-grey {
+    background-color: c.$grey;
+    .form-input {
+      background-color: c.$grey-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$grey-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-navy {
+    background-color: c.$navy;
+    .form-input {
+      background-color: c.$navy-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$navy-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-black {
+    background-color: c.$carbon;
+    .form-input {
+      background-color: c.$carbon-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$carbon-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+}

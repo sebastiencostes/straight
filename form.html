@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
     <meta name="description"
-        content="Straight framework, Chart, ...">
+        content="Straight framework, form element represents a document section containing interactive controls for submitting information.">
     <title>Straight | Form</title>
     <link rel="apple-touch-icon" href="/192x192.png">
     <link rel="preload" href="style/css/style.css" as="style">
@@ -48,6 +48,7 @@
         <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
         </ul>
     </nav>
+
     <header class="p-2 m-b-6 presentation bg-grad-turquoise header m-t-8" role="presentation">
         <h1 class="presentation-title t-white">Form</h1>
     </header>
@@ -56,30 +57,192 @@
 
         <section class="m-b-6">
             <h2 class="note-turquoise">
-                About
+                About form
             </h2>
             <p>
-               blabla
+                The form element represents a document section containing interactive controls for submitting
+                information.
             </p>
         </section>
 
+        <article class="m-b-6">
+            <h3 class="note-turquoise">
+                Writable inputs
+            </h3>
+            <p>
+                The <code class="single-code t-navy">&lt;input type=&quot;&quot;&gt;</code> element is used to create
+                interactive controls for web-based forms in order to accept data
+                from the user.
+                A wide variety of types of input data and control widgets are available, depending on the device and
+                user agent.
+            </p>
+            <ul>
+                <li>
+                    <label for="email">Type email</label>
+                    <div class="form-input-container input-container-yellow">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="mail-outline" />
+                        </span>
+                        <input class="form-input" type="email" id="email" minlength="8" maxlength="32" required
+                            placeholder="your email">
+                    </div>
+                </li>
+                <li>
+                    <label for="number">Type number</label>
+                    <div class="form-input-container input-container-orange">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="calculator-outline" />
+                        </span>
+                        <input class="form-input" type="number" id="number" name="number" min="7" max="99" required placeholder="0">
+                    </div>
+                </li>
+                <li>
+                    <label for="password">Type password</label>
+                    <div class="form-input-container input-container-pink">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="lock-closed-outline" />
+                        </span>
+                        <input class="form-input" type="password" id="password" name="password" minlength="8" required
+                            placeholder="your password">
+                    </div>
+                </li>
+                <li>
+                    <label for="search">Type search</label>
+                    <div class="form-input-container input-container-blue">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="search-outline" />
+                        </span>
+                        <input class="form-input" type="search" id="search" name="search" aria-label="Search" placeholder="your search">
+                    </div>
+                </li>
+                <li>
+                    <label for="tel">Type tel</label>
+                    <div class="form-input-container input-container-grey">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="call-outline" />
+                        </span>
+                        <input class="form-input" type="tel" id="tel" name="tel" minlength="10" maxlength="14" required
+                            placeholder="your phone number">
+                    </div>
+                </li>
+                <li>
+                    <label for="text">Type text</label>
+                    <div class="form-input-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="text-outline" />
+                        </span>
+                        <input class="form-input" type="text" id="text" name="text" required minlength="1" maxlength="8" size="10"
+                            placeholder="lorem ipsum">
+                    </div>
+                </li>
+            </ul>
+        </article>
 
+        <article class="m-b-6">
+            <h3 class="note-turquoise">
+                Checkable inputs
+            </h3>
+            <p>The <code class="single-code t-navy">&lt;input type=&quot;checkbox&quot;&gt;</code> defines a checkbox.
+                Checkboxes are used to let a user select one or more options of a limited number of choices.
+                Add the <code class="single-code t-navy">&lt;label&gt;</code> tag for accessibility.
+            </p>
+            <p>
+                The <code class="single-code t-navy">&lt;input type=&quot;radio&quot;&gt;</code> defines a radio button.
+                Input radio are normally presented in radio groups. Only one radio button in a group can be selected at
+                the same time.
+                The radio group must have share the same name to be treated as a group.
+                Add the <code class="single-code t-navy">&lt;label&gt;</code> tag for accessibility.
+            </p>
+            <h4 class="note-turquoise m-b-2 m-t-2">Input type checkbox</h4>
+            <ul class="g-col g-col-s-2 g-col-l-4">
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="checkbox1" class="check-yellow" type="checkbox">
+                    <label for="checkbox1">Checkbox</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="checkbox2" class="check-purple" type="checkbox" checked>
+                    <label for="checkbox2">Checkbox checked</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="checkbox1d" type="checkbox" disabled>
+                    <label for="checkbox1d">Checkbox disabled</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="checkbox2d" type="checkbox" checked disabled>
+                    <label for="checkbox2d">Checkbox checked disabled</label>
+                </li>
+            </ul>
+            <p class="note-turquoise">Simply click and paste input type checkbox to your project</p>
+            <pre class="clipboard m-t-2 h-rem-12" rel="input type checkbox">
+                    <code>
 
-       
+                    </code>
+                </pre>
+            <h4 class="note-turquoise m-b-2 m-t-2">Input type radio</h4>
+            <ul class="g-col g-col-s-2 g-col-l-4">
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="radio1" class="radio-red" type="radio" name="radio" value="1">
+                    <label for="radio1">Radio</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="radio2" class="radio-green" type="radio" name="radio" value="2" checked>
+                    <label for="radio2">Radio checked</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="r1d" type="radio" name="radiod" value="1" disabled>
+                    <label for="r1d">Radio disabled</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="r2d" type="radio" name="radiod" value="2" checked disabled>
+                    <label for="r2d">Radio checked disabled</label>
+                </li>
+            </ul>
+            <p class="note-turquoise">Simply click and paste input type radio to your project</p>
+            <pre class="clipboard m-t-2 h-rem-12" rel="input type radio">
+                    <code>
+
+                    </code>
+                </pre>
+            <h4 class="note-turquoise m-b-2 m-t-2">Switch input type checkbox</h4>
+            <ul class="g-col g-col-s-2 g-col-l-4">
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="switch1" type="checkbox" class="switch check-blue">
+                    <label for="switch1">Switch</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="s2" type="checkbox" class="switch check-orange" checked>
+                    <label for="s2">Switch checked</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="s1d" type="checkbox" class="switch" disabled>
+                    <label for="s1d">Switch disabled</label>
+                </li>
+                <li class="d-flex i-center j-center p-2 b-turquoise">
+                    <input id="s2d" type="checkbox" class="switch" checked disabled>
+                    <label for="s2d">Switch checked disabled</label>
+                </li>
+            </ul>
+            <p class="note-turquoise">Simply click and paste switch input to your project</p>
+            <pre class="clipboard m-t-2 h-rem-12" rel="switch">
+                    <code>
+
+                    </code>
+                </pre>
+        </article>
+
+        <section class="m-b-6">
+            <h3 class="note-turquoise">
+                Form Example
+            </h3>
         </section>
-
-                            
-
-
-                    
-
-                
     </main>
     <footer class="bg-grad-turquoise">
         footer
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
     <script src="/script/straightNav.js"></script>
 </body>
 
