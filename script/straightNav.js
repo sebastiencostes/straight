@@ -19,16 +19,16 @@ window.addEventListener("load", () => {
       color: "orange",
     },
     {
-      link: "/chart.html",
-      linkName: "chart",
-      icon: "stats-chart-outline",
-      color: "turquoise",
-    },
-    {
       link: "/color.html",
       linkName: "color",
       icon: "color-palette-outline",
       color: "black",
+    },
+    {
+      link: "/form.html",
+      linkName: "form",
+      icon: "mail-outline",
+      color: "turquoise",
     },
     {
       link: "/grid.html",
@@ -81,7 +81,6 @@ window.addEventListener("load", () => {
   ];
   const straightNav = document.querySelector("#straightNav.nav");
   const switchNav = document.querySelector("#straightNav .switch-nav");
-  const menu = document.querySelector("#straightNav .nav-menu");
   const menuItems = document.querySelectorAll(".nav-menu-item");
   const openBtn = document.querySelector("#straightNav.nav .open");
   const closeBtn = document.querySelector("#straightNav.nav .close");
