@@ -662,10 +662,6 @@ details {
   display: block;
 }
 
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
 hr {
   box-sizing: content-box;
   height: 0;
@@ -1008,6 +1004,26 @@ nav ul li {
 
 .m-b-auto {
   margin-bottom: auto;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.m-t-0 {
+  margin-top: 0;
+}
+
+.m-r-0 {
+  margin-right: 0;
+}
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
+.m-l-0 {
+  margin-left: 0;
 }
 
 .d-none {
@@ -14545,7 +14561,7 @@ Sizes for .btn-square-* & .btn-circle-*
 
 .btn-turquoise {
   background-color: #00bfa5;
-  color: #323232;
+  color: #eee;
 }
 .btn-turquoise:hover, .btn-turquoise:focus, .btn-turquoise:active, .btn-turquoise.active {
   background-color: #008e76;
@@ -14554,7 +14570,7 @@ Sizes for .btn-square-* & .btn-circle-*
   background-color: #5df2d6;
 }
 .btn-turquoise ion-icon {
-  color: #323232;
+  color: #eee;
 }
 
 .btn-blue {
@@ -14951,7 +14967,6 @@ G-container
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
-  justify-content: center;
   row-gap: 2rem;
 }
 
@@ -16875,8 +16890,23 @@ input[type=week]::placeholder {
 /*
 Form shared
 */
+.form {
+  overflow: hidden;
+}
+
+.form-title-container {
+  border: 0;
+  padding: 0;
+}
+
+.form-title {
+  font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
+  font-weight: 300;
+}
+
 .form-input-container {
   background-color: #bdbdbd;
+  border-radius: 0.8rem;
   display: flex;
 }
 
@@ -16891,6 +16921,15 @@ Form shared
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
   padding: 0.6rem 1.2rem;
   width: 100%;
+}
+
+.input-icon {
+  color: #323232;
+  font-size: 2.4rem;
+}
+
+.form-lastname {
+  text-transform: uppercase;
 }
 
 .form-icon {
@@ -17005,7 +17044,7 @@ input container color's rules for writable inputs
   color: #5df2d6;
 }
 .input-container-turquoise .input-icon {
-  color: #323232;
+  color: #eee;
 }
 .input-container-brown {
   background-color: #8d6e63;
@@ -17061,6 +17100,166 @@ input container color's rules for writable inputs
 }
 
 /*
+Form color's rules for writable inputs
+*/
+.form-yellow .form-input-container {
+  background-color: #ffd600;
+}
+.form-yellow .form-input-container .form-input {
+  background-color: #c7a500;
+  color: #ffffff;
+}
+.form-yellow .form-input-container .form-input::placeholder {
+  color: #ffff52;
+}
+.form-yellow .form-input-container .input-icon {
+  color: #323232;
+}
+.form-orange .form-input-container {
+  background-color: #ff6d00;
+}
+.form-orange .form-input-container .form-input {
+  background-color: #c43c00;
+  color: #ffffff;
+}
+.form-orange .form-input-container .form-input::placeholder {
+  color: #ff9e40;
+}
+.form-orange .form-input-container .input-icon {
+  color: #eee;
+}
+.form-red .form-input-container {
+  background-color: #d50000;
+}
+.form-red .form-input-container .form-input {
+  background-color: #9b0000;
+  color: #ffffff;
+}
+.form-red .form-input-container .form-input::placeholder {
+  color: #ff5131;
+}
+.form-red .form-input-container .input-icon {
+  color: #eee;
+}
+.form-purple .form-input-container {
+  background-color: #aa00ff;
+}
+.form-purple .form-input-container .form-input {
+  background-color: #7200ca;
+  color: #ffffff;
+}
+.form-purple .form-input-container .form-input::placeholder {
+  color: #e254ff;
+}
+.form-purple .form-input-container .input-icon {
+  color: #eee;
+}
+.form-pink .form-input-container {
+  background-color: #c51162;
+}
+.form-pink .form-input-container .form-input {
+  background-color: #8e0038;
+  color: #ffffff;
+}
+.form-pink .form-input-container .form-input::placeholder {
+  color: #fd558f;
+}
+.form-pink .form-input-container .input-icon {
+  color: #eee;
+}
+.form-blue .form-input-container {
+  background-color: #0091ea;
+}
+.form-blue .form-input-container .form-input {
+  background-color: #0064b7;
+  color: #ffffff;
+}
+.form-blue .form-input-container .form-input::placeholder {
+  color: #64c1ff;
+}
+.form-blue .form-input-container .input-icon {
+  color: #eee;
+}
+.form-green .form-input-container {
+  background-color: #64dd17;
+}
+.form-green .form-input-container .form-input {
+  background-color: #1faa00;
+  color: #ffffff;
+}
+.form-green .form-input-container .form-input::placeholder {
+  color: #9cff57;
+}
+.form-green .form-input-container .input-icon {
+  color: #323232;
+}
+.form-turquoise .form-input-container {
+  background-color: #00bfa5;
+}
+.form-turquoise .form-input-container .form-input {
+  background-color: #008e76;
+  color: #ffffff;
+}
+.form-turquoise .form-input-container .form-input::placeholder {
+  color: #5df2d6;
+}
+.form-turquoise .form-input-container .input-icon {
+  color: #eee;
+}
+.form-brown .form-input-container {
+  background-color: #8d6e63;
+}
+.form-brown .form-input-container .form-input {
+  background-color: #5f4339;
+  color: #ffffff;
+}
+.form-brown .form-input-container .form-input::placeholder {
+  color: #be9c91;
+}
+.form-brown .form-input-container .input-icon {
+  color: #eee;
+}
+.form-grey .form-input-container {
+  background-color: #bdbdbd;
+}
+.form-grey .form-input-container .form-input {
+  background-color: #8d8d8d;
+  color: #ffffff;
+}
+.form-grey .form-input-container .form-input::placeholder {
+  color: #efefef;
+}
+.form-grey .form-input-container .input-icon {
+  color: #323232;
+}
+.form-navy .form-input-container {
+  background-color: #78909c;
+}
+.form-navy .form-input-container .form-input {
+  background-color: #4b636e;
+  color: #ffffff;
+}
+.form-navy .form-input-container .form-input::placeholder {
+  color: #a7c0cd;
+}
+.form-navy .form-input-container .input-icon {
+  color: #eee;
+}
+.form-black .form-input-container {
+  background-color: #212121;
+}
+.form-black .form-input-container .form-input {
+  background-color: #000000;
+  color: #ffffff;
+}
+.form-black .form-input-container .form-input::placeholder {
+  color: #484848;
+}
+.form-black .form-input-container .input-icon {
+  color: #eee;
+}
+
+/*
 Textarea
 */
 .textarea-container {
@@ -17072,8 +17271,8 @@ Textarea
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
-  justify-content: center;
   row-gap: 2rem;
+  justify-content: center;
   height: calc(50vh - 8rem);
   align-items: center;
 }

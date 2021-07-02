@@ -7,7 +7,6 @@
 @use "utility" as u;
 @use "width" as w;
 
-
 /*
 TODO
 Sahred properties
@@ -301,9 +300,19 @@ input[type="week"] {
 Form shared
 */
 %form-shared {
+  overflow: hidden;
+}
+%form-title-container-shared {
+  border: 0;
+  padding: 0;
+}
+%form-title-shared {
+  font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
+  font-weight: 300;
 }
 %form-input-container-shared {
   background-color: c.$grey;
+  @include b.b-radius(0.8rem);
   @include flx.d-flex();
 }
 %form-label-shared {
@@ -317,6 +326,13 @@ Form shared
   @include p.padding(0.6rem 1.2rem);
   @include w.width(100%);
 }
+%input-icon-shared {
+  color: c.$text-light;
+  font-size: 2.4rem;
+}
+%form-lastname-shared {
+  text-transform: uppercase;
+}
 %form-icon-shared {
   @include flx.d-inline-flex();
   @include flx.align-items(center);
@@ -325,6 +341,13 @@ Form shared
 }
 
 .form {
+  @extend %form-shared;
+  &-title-container {
+    @extend %form-title-container-shared;
+  }
+  &-title {
+    @extend %form-title-shared;
+  }
   &-input-container {
     @extend %form-input-container-shared;
   }
@@ -334,9 +357,15 @@ Form shared
   &-input {
     @extend %form-input-shared;
   }
+  &-lastname {
+    @extend %form-lastname-shared;
+  }
   &-icon {
     @extend %form-icon-shared;
   }
+}
+.input-icon {
+  @extend %input-icon-shared;
 }
 
 /*
@@ -444,7 +473,7 @@ input container color's rules for writable inputs
       }
     }
     .input-icon {
-      color: c.$text-light;
+      color: c.$text-dark;
     }
   }
   &-brown {
@@ -500,6 +529,193 @@ input container color's rules for writable inputs
     }
   }
 }
+
+/*
+Form color's rules for writable inputs
+*/
+.form {
+  &-yellow {
+    .form-input-container {
+      background-color: c.$yellow;
+      .form-input {
+        background-color: c.$yellow-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$yellow-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-light;
+      }
+    }
+  }
+    &-orange {
+      .form-input-container {
+        background-color: c.$orange;
+        .form-input {
+          background-color: c.$orange-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$orange-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+    &-red {
+      .form-input-container {
+        background-color: c.$red;
+        .form-input {
+          background-color: c.$red-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$red-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+    &-purple {
+      .form-input-container {
+        background-color: c.$purple;
+        .form-input {
+          background-color: c.$purple-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$purple-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+    &-pink {
+      .form-input-container {
+        background-color: c.$pink;
+        .form-input {
+          background-color: c.$pink-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$pink-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+    &-blue {
+      .form-input-container {
+        background-color: c.$blue;
+        .form-input {
+          background-color: c.$blue-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$blue-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+    &-green {
+      .form-input-container {
+        background-color: c.$green;
+        .form-input {
+          background-color: c.$green-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$green-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-light;
+        }
+      }
+    }
+    &-turquoise {
+      .form-input-container {
+        background-color: c.$turquoise;
+        .form-input {
+          background-color: c.$turquoise-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$turquoise-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+    &-brown {
+      .form-input-container {
+        background-color: c.$brown;
+        .form-input {
+          background-color: c.$brown-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$brown-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+    &-grey {
+      .form-input-container {
+        background-color: c.$grey;
+        .form-input {
+          background-color: c.$grey-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$grey-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-light;
+        }
+      }
+    }
+    &-navy {
+      .form-input-container {
+        background-color: c.$navy;
+        .form-input {
+          background-color: c.$navy-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$navy-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+    &-black {
+      .form-input-container {
+        background-color: c.$carbon;
+        .form-input {
+          background-color: c.$carbon-dark;
+          color: c.$white;
+          &::placeholder {
+            color: c.$carbon-light;
+          }
+        }
+        .input-icon {
+          color: c.$text-dark;
+        }
+      }
+    }
+  }
+
 
 /*
 Textarea

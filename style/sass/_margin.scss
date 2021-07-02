@@ -48,3 +48,22 @@
 .m-b-auto {
   @include margin-direction(bottom, auto);
 }
+.m-0 {
+  @include margin(0);
+}
+
+.m-t-0 {
+  @include margin-direction(top, 0);
+}
+
+.m-r-0 {
+  @include margin-direction(right, 0);
+}
+
+.m-b-0 {
+  @include margin-direction(bottom, 0);
+}
+
+.m-l-0 {
+  @include margin-direction(left, 0);
+}

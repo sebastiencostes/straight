@@ -322,7 +322,7 @@ Sizes for .btn-square-* & .btn-circle-*
 }
 .btn-turquoise {
   background-color: c.$turquoise;
-  color: c.$text-light;
+  color: c.$text-dark;
   &:hover,
   &:focus,
   &:active,
@@ -333,7 +333,7 @@ Sizes for .btn-square-* & .btn-circle-*
     background-color: c.$turquoise-light;
   }
   ion-icon {
-    color: c.$text-light;
+    color: c.$text-dark;
   }
 }
 .btn-blue {

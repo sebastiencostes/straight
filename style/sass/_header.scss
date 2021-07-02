@@ -6,6 +6,7 @@
 
 .presentation {
   @include g.g-container();
+  @include fx.justify-content(center);
   @include h.height(calc(50vh - 8rem));
   @include fx.align-items(center);
   &-title {
