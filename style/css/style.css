@@ -731,6 +731,7 @@ template {
 }
 
 textarea {
+  resize: none;
   overflow: auto;
 }
 
@@ -16775,6 +16776,7 @@ Writable input
 /*
 Appareance writable inputs
 */
+textarea,
 input[type=button],
 input[type=color],
 input[type=date],
@@ -16801,6 +16803,7 @@ input[type=week] {
   color: #323232;
   outline: none;
 }
+textarea:focus-visible,
 input[type=button]:focus-visible,
 input[type=color]:focus-visible,
 input[type=date]:focus-visible,
@@ -16821,6 +16824,7 @@ input[type=url]:focus-visible,
 input[type=week]:focus-visible {
   outline: none;
 }
+textarea + label,
 input[type=button] + label,
 input[type=color] + label,
 input[type=date] + label,
@@ -16846,6 +16850,7 @@ input[type=week] + label {
   cursor: default;
   margin-left: 1rem;
 }
+textarea::placeholder,
 input[type=button]::placeholder,
 input[type=color]::placeholder,
 input[type=date]::placeholder,
@@ -16868,16 +16873,23 @@ input[type=week]::placeholder {
 }
 
 /*
-TEST shared
+Form shared
 */
 .form-input-container {
+  background-color: #bdbdbd;
   display: flex;
-  height: 4.8rem;
+}
+
+.form-label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .form-input {
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
-  padding: 0.8rem 1.2rem;
+  padding: 0.6rem 1.2rem;
   width: 100%;
 }
 
@@ -17048,6 +17060,13 @@ input container color's rules for writable inputs
   color: #eee;
 }
 
+/*
+Textarea
+*/
+.textarea-container {
+  height: 100%;
+}
+
 .presentation {
   display: grid;
   -webkit-column-gap: 2rem;
@@ -17191,9 +17210,16 @@ OPEN Pad nav
   margin-top: 2rem;
 }
 .nav-pad-menu .nav-menu-link {
-  border-radius: 1.6rem;
-  width: 11.2rem;
-  height: 11.2rem;
+  border-radius: 0.8rem;
+  width: 5.6rem;
+  height: 5.6rem;
+}
+@media only screen and (min-width: 728px) {
+  .nav-pad-menu .nav-menu-link {
+    border-radius: 1.6rem;
+    width: 11.2rem;
+    height: 11.2rem;
+  }
 }
 .nav-pad-menu .nav-menu-link-text {
   color: #ffffff;
@@ -17204,9 +17230,19 @@ OPEN Pad nav
   margin-top: 1rem;
 }
 .nav-pad-menu .nav-menu-link ion-icon {
-  font-size: 8rem;
+  font-size: 3.2rem;
+}
+@media only screen and (min-width: 728px) {
+  .nav-pad-menu .nav-menu-link ion-icon {
+    font-size: 8rem;
+  }
 }
 
+@supports not ((backdrop-filter: blur(1.6rem)) or (-moz-backdrop-filter: blur(1.6rem)) or (-webkit-backdrop-filter: blur(1.6rem))) {
+  .nav-pad-menu {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
 /*
 CLOSE Pad nav
 */

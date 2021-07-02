@@ -1,10 +1,12 @@
 @use "color" as c;
 @use "border" as b;
-@use "utility" as u;
 @use "flexbox" as flx;
 @use "height" as h;
+@use "margin" as m;
 @use "padding" as p;
+@use "utility" as u;
 @use "width" as w;
+
 
 /*
 TODO
@@ -253,6 +255,7 @@ Writable input
 /*
 Appareance writable inputs
 */
+textarea,
 input[type="button"],
 input[type="color"],
 input[type="date"],
@@ -293,18 +296,25 @@ input[type="week"] {
     color: c.$grey;
   }
 }
+
 /*
-TEST shared
+Form shared
 */
 %form-shared {
 }
 %form-input-container-shared {
+  background-color: c.$grey;
   @include flx.d-flex();
-  @include h.height(4.8rem);
+}
+%form-label-shared {
+  font-size: 1.6rem;
+  font-weight: 400;
+  @include u.d-inline-block();
+  @include m.margin-direction(bottom, 1rem);
 }
 %form-input-shared {
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
-  @include p.padding(0.8rem 1.2rem);
+  @include p.padding(0.6rem 1.2rem);
   @include w.width(100%);
 }
 %form-icon-shared {
@@ -317,6 +327,9 @@ TEST shared
 .form {
   &-input-container {
     @extend %form-input-container-shared;
+  }
+  &-label {
+    @extend %form-label-shared;
   }
   &-input {
     @extend %form-input-shared;
@@ -486,4 +499,11 @@ input container color's rules for writable inputs
       color: c.$text-dark;
     }
   }
+}
+
+/*
+Textarea
+*/
+.textarea-container {
+  @include h.height(100%);
 }

@@ -104,17 +104,33 @@ OPEN Pad nav
     }
   }
   .nav-menu-link {
-    @include b.b-radius(1.6rem);
-    @include w.width(11.2rem);
-    @include h.height(11.2rem);
+    @include b.b-radius(.8rem);
+    @include w.width(5.6rem);
+    @include h.height(5.6rem);
+    @include d.tablet-portrait() {
+      @include b.b-radius(1.6rem);
+      @include w.width(11.2rem);
+      @include h.height(11.2rem);
+    }
     &-text {
       @include ft.text-overlay();
       @include m.margin-direction(left, 0);
       @include m.margin-direction(top, 1rem);
     }
     ion-icon {
-      font-size: 8rem;
+      font-size: 3.2rem;
+      @include d.tablet-portrait() {
+        font-size: 8rem;
+      }
     }
+  }
+}
+@supports not (
+  (backdrop-filter: blur(1.6rem)) or (-moz-backdrop-filter: blur(1.6rem)) or
+    (-webkit-backdrop-filter: blur(1.6rem))
+) {
+  .nav-pad-menu {
+    background: rgba(255, 255, 255, 0.9);
   }
 }
 /*
