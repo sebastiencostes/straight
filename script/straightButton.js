@@ -48,7 +48,7 @@ arrayColorShape = [
 
 //creating buttons
 for (let btn of arrayColorShape) {
-  arrayFlat.innerHTML += `<button class="btn-s btn-${btn.color}" type="button">${btn.color}</button>`;
+  arrayFlat.innerHTML += `<button class="btn-s btn-${btn.color}" type="button" style="text-transform: capitalize;">${btn.color}</button>`;
 }
 
 //creating grad buttons

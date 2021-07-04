@@ -49,15 +49,15 @@
         </ul>
     </nav>
 
-    <header class="p-2 m-b-6 presentation bg-grad-turquoise header m-t-8" role="presentation">
+    <header class="presentation bg-grad-turquoise" role="presentation">
         <h1 class="presentation-title t-white">Form</h1>
     </header>
 
     <main class="container-fix">
 
-        <section class="m-b-6">
+        <section class="m-b-8">
             <h2 class="note-turquoise">
-                About form
+                About Form
             </h2>
             <p>
                 The form element represents a document section containing interactive controls for submitting
@@ -66,9 +66,9 @@
             </p>
         </section>
 
-        <section class="m-b-6">
-            <h3 class="note-turquoise m-b-2">
-                Form examples
+        <section class="m-b-8">
+            <h3 class="note-turquoise">
+                Form models
             </h3>
             <p>
                 Two basic examples of fake forms. One is a a validation's like, one just represents an acceptance of
@@ -76,12 +76,12 @@
                 Add or remove <a href="#formcolors">css classes</a> to boost or not the visual of your forms.
                 <b>You will need to implement conditions and rules with your own javascript or another language</b>.
             </p>
-            <div class="g-col g-col-l-2">
+            <div class="g-col g-col-xl-2">
                 <form id="formExample" class="form" action="" method="post">
                     <fieldset class="form-title-container">
                         <legend class="form-title">Simple form</legend>
                     </fieldset>
-                    <div class="form-body g-col g-col-l-2">
+                    <div class="form-body g-col g-col-m-2">
                         <div>
                             <div class="m-b-1">
                                 <label class="form-label" for="firstname">Firstname</label>
@@ -146,7 +146,9 @@
                             </div>
                         </div>
                         <div class="form-input-container input-container-turquoise m-t-2">
-                            <input id="submitExample" class="form-input" type="submit" value="submit">
+                            <button id="submitExample" class="form-input" type="submit">
+                                Submit
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -161,7 +163,7 @@
                             and display personalized advertising and content.
                         </p>
                     </div>
-                    <div>
+                    <div class="m-t-2 m-b-2">
                         <div class="d-flex i-center m-b-1">
                             <small class="m-r-auto">Select personalized ads</small>
                             <input class="switch check-turquoise" id="bb1" type="checkbox">
@@ -209,84 +211,91 @@
                 <h3 class="note-turquoise">
                     Copy to clipboard
                 </h3>
-                <p>Simply click and paste simple form to your project</p>
+                <p> Click and paste simple form to your project</p>
             </div>
             <div class="g-col g-col-m-2">
                 <pre class="clipboard h-rem-32" rel="simple form">
                     <code>
-    &lt;form class=&quot;form&quot; action=&quot;&quot; method=&quot;post&quot;&gt;
-        &lt;fieldset class=&quot;form-title-container&quot;&gt;
-            &lt;legend class=&quot;form-title&quot;&gt;Simple form&lt;/legend&gt;
-        &lt;/fieldset&gt;
-        &lt;div class=&quot;form-body g-col g-col-l-2&quot;&gt;
+&lt;form id=&quot;yourID&quot; class=&quot;form&quot; action=&quot;&quot; method=&quot;post&quot;&gt;
+    &lt;fieldset class=&quot;form-title-container&quot;&gt;
+        &lt;legend class=&quot;form-title&quot;&gt;Simple form&lt;/legend&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&quot;form-body g-col g-col-m-2&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;firstname&quot;&gt;Firstname&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;person-outline&quot; /&gt;
+                    &lt;/span&gt;
+                    &lt;input id=&quot;firstname&quot; class=&quot;form-input&quot; type=&quot;text&quot; placeholder=&quot;your firstname&quot;
+                        data-form=&quot;&quot; required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;mail&quot;&gt;Lastname&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;person-outline&quot; /&gt;
+                    &lt;/span&gt;
+                    &lt;input id=&quot;lastname&quot; class=&quot;form-input form-lastname&quot; type=&quot;text&quot;
+                        placeholder=&quot;your lastname&quot; data-form=&quot;&quot; required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;phone&quot;&gt;Phone number&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;call-outline&quot; /&gt;
+                    &lt;/span&gt;
+                    &lt;input id=&quot;phone&quot; class=&quot;form-input&quot; type=&quot;tel&quot; name=&quot;tel&quot;
+                        placeholder=&quot;dial your phone number&quot; data-form=&quot;&quot; required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;mail&quot;&gt;Type email&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;at-outline&quot; /&gt;
+                    &lt;/span&gt;
+                    &lt;input class=&quot;form-input&quot; type=&quot;email&quot; id=&quot;mail&quot; placeholder=&quot;your email&quot;
+                        data-form=&quot;&quot; required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;m-b-4&quot;&gt;
+            &lt;div class=&quot;h-prc-100&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;textarea&quot;&gt;Subject&lt;/label&gt;
+                &lt;div class=&quot;form-input-container textarea-container&quot;&gt;
+                    &lt;textarea id=&quot;textarea&quot; class=&quot;form-input&quot; name=&quot;textarea&quot;
+                        placeholder=&quot;Your text here...&quot; data-form=&quot;&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;g-col g-col-m-2&quot;&gt;
+        &lt;div class=&quot;d-flex i-center j-between m-t-3&quot;&gt;
             &lt;div&gt;
-                &lt;div class=&quot;m-b-1&quot;&gt;
-                    &lt;label class=&quot;form-label&quot; for=&quot;firstname&quot;&gt;Firstname&lt;/label&gt;
-                    &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
-                        &lt;span class=&quot;form-icon&quot;&gt;
-                            &lt;ion-icon class=&quot;input-icon&quot; name=&quot;person-outline&quot; /&gt;
-                        &lt;/span&gt;
-                        &lt;input id=&quot;firstname&quot; class=&quot;form-input&quot; type=&quot;text&quot; placeholder=&quot;your firstname&quot; data-form=&quot;&quot; required&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;m-b-1&quot;&gt;
-                    &lt;label class=&quot;form-label&quot; for=&quot;mail&quot;&gt;Lastname&lt;/label&gt;
-                    &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
-                        &lt;span class=&quot;form-icon&quot;&gt;
-                            &lt;ion-icon class=&quot;input-icon&quot; name=&quot;person-outline&quot; /&gt;
-                        &lt;/span&gt;
-                        &lt;input id=&quot;lastname&quot; class=&quot;form-input form-lastname&quot; type=&quot;text&quot; placeholder=&quot;your lastname&quot; data-form=&quot;&quot; required&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;m-b-1&quot;&gt;
-                    &lt;label class=&quot;form-label&quot; for=&quot;phone&quot;&gt;Phone number&lt;/label&gt;
-                    &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
-                        &lt;span class=&quot;form-icon&quot;&gt;
-                            &lt;ion-icon class=&quot;input-icon&quot; name=&quot;call-outline&quot; /&gt;
-                        &lt;/span&gt;
-                        &lt;input id=&quot;phone&quot; class=&quot;form-input&quot; type=&quot;tel&quot; name=&quot;tel&quot; placeholder=&quot;dial your phone number&quot; data-form=&quot;&quot; required&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;m-b-1&quot;&gt;
-                    &lt;label class=&quot;form-label&quot; for=&quot;mail&quot;&gt;Type email&lt;/label&gt;
-                    &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
-                        &lt;span class=&quot;form-icon&quot;&gt;
-                            &lt;ion-icon class=&quot;input-icon&quot; name=&quot;at-outline&quot; /&gt;
-                        &lt;/span&gt;
-                        &lt;input class=&quot;form-input&quot; type=&quot;email&quot; id=&quot;mail&quot; placeholder=&quot;your email&quot; data-form=&quot;&quot; required&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
+                &lt;input class=&quot;switch check-turquoise&quot; id=&quot;swi1&quot; type=&quot;checkbox&quot;&gt;
+                &lt;label for=&quot;swi1&quot;&gt;accept&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;m-b-4&quot;&gt;
-                &lt;div class=&quot;h-prc-100&quot;&gt;
-                    &lt;label class=&quot;form-label&quot; for=&quot;textarea&quot;&gt;Subject&lt;/label&gt;
-                    &lt;div class=&quot;form-input-container textarea-container&quot;&gt;
-                        &lt;textarea id=&quot;textarea&quot; class=&quot;form-input&quot; name=&quot;textarea&quot; placeholder=&quot;Your text here...&quot; data-form=&quot;&quot;&gt;&lt;/textarea&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
+            &lt;div&gt;
+                &lt;input class=&quot;switch check-turquoise&quot; id=&quot;swi2&quot; type=&quot;checkbox&quot;&gt;
+                &lt;label for=&quot;swi2&quot;&gt;accept&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-        &lt;div class=&quot;g-col g-col-m-2&quot;&gt;
-            &lt;div class=&quot;d-flex i-center j-between m-t-3&quot;&gt;
-                &lt;div&gt;
-                    &lt;input class=&quot;switch check-turquoise&quot; id=&quot;swi1&quot; type=&quot;checkbox&quot;&gt;
-                    &lt;label for=&quot;swi1&quot;&gt;accept&lt;/label&gt;
-                &lt;/div&gt;
-                &lt;div&gt;
-                    &lt;input class=&quot;switch check-turquoise&quot; id=&quot;swi2&quot; type=&quot;checkbox&quot;&gt;
-                    &lt;label for=&quot;swi2&quot;&gt;accept&lt;/label&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;form-input-container input-container-turquoise m-t-2&quot;&gt;
-                &lt;input id=&quot;submitExample&quot; class=&quot;form-input&quot; type=&quot;submit&quot; value=&quot;submit&quot;&gt;
-            &lt;/div&gt;
+        &lt;div class=&quot;form-input-container input-container-turquoise m-t-2&quot;&gt;
+            &lt;button id=&quot;yourID&quot; class=&quot;form-input&quot; type=&quot;submit&quot;&gt;
+                Submit
+            &lt;/button&gt;
         &lt;/div&gt;
-    &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
                     </code>
                 </pre>
                 <pre class="clipboard h-rem-32" rel="big brother form">
                     <code>
-&lt;form id=&quot;BBform&quot; class=&quot;form d-flex f-dir-col j-between&quot; class=&quot;form&quot; action=&quot;&quot; method=&quot;post&quot;&gt;
+&lt;form id=&quot;yourID&quot; class=&quot;form d-flex f-dir-col j-between&quot; class=&quot;form&quot; action=&quot;&quot; method=&quot;post&quot;&gt;
     &lt;fieldset class=&quot;form-title-container&quot;&gt;
         &lt;legend class=&quot;form-title&quot;&gt;Big brother form&lt;/legend&gt;
     &lt;/fieldset&gt;
@@ -297,7 +306,7 @@
             and display personalized advertising and content.
         &lt;/p&gt;
     &lt;/div&gt;
-    &lt;div&gt;
+    &lt;div class=&quot;m-t-2 m-b-2&quot;&gt;
         &lt;div class=&quot;d-flex i-center m-b-1&quot;&gt;
             &lt;small class=&quot;m-r-auto&quot;&gt;Select personalized ads&lt;/small&gt;
             &lt;input class=&quot;switch check-turquoise&quot; id=&quot;bb1&quot; type=&quot;checkbox&quot;&gt;
@@ -336,7 +345,7 @@
     &lt;div class=&quot;d-flex i-center j-between&quot;&gt;
         &lt;small&gt;Set all your preferences to save and continue&lt;/small&gt;
         &lt;div class=&quot;form-input-container input-container-turquoise&quot;&gt;
-            &lt;input id=&quot;submitBB&quot; class=&quot;form-input&quot; type=&quot;button&quot; value=&quot;Save&quot;&gt;
+            &lt;input id=&quot;yourID&quot; class=&quot;form-input&quot; type=&quot;button&quot; value=&quot;Save&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/form&gt;
@@ -345,9 +354,9 @@
             </div>
         </section>
 
-        <article class="m-b-6">
+        <article class="m-b-8">
             <h3 class="note-turquoise">
-                Writable inputs
+                Text inputs
             </h3>
             <p>
                 The <code class="single-code t-navy">&lt;input type=&quot;&quot;&gt;</code> element is used to create
@@ -357,7 +366,7 @@
                 user agent. Here, some samples represented.
             </p>
             <div class="g-col  g-col-xl-3">
-                <li>
+                <div>
                     <label class="form-label" for="email">Type email</label>
                     <div class="form-input-container">
                         <span class="form-icon">
@@ -366,8 +375,8 @@
                         <input class="form-input" type="email" id="email" minlength="8" maxlength="32" required
                             placeholder="your email">
                     </div>
-                </li>
-                <li>
+                </div>
+                <div>
                     <label class="form-label" for="number">Type number</label>
                     <div class="form-input-container">
                         <span class="form-icon">
@@ -376,8 +385,8 @@
                         <input class="form-input" type="number" id="number" name="number" min="7" max="99" required
                             placeholder="0">
                     </div>
-                </li>
-                <li>
+                </div>
+                <div>
                     <label class="form-label" for="password">Type password</label>
                     <div class="form-input-container">
                         <span class="form-icon">
@@ -386,30 +395,32 @@
                         <input class="form-input" type="password" id="password" name="password" minlength="8" required
                             placeholder="your password">
                     </div>
-                </li>
-                <pre class="clipboard h-rem-20" rel="Simply click and paste input type email">
+                </div>
+                <pre class="clipboard h-rem-20" rel="Click and paste input type email">
                     <code>
 &lt;label class=&quot;form-label&quot; for=&quot;email&quot;&gt;Type email&lt;/label&gt;
 &lt;div class=&quot;form-input-container&quot;&gt;
     &lt;span class=&quot;form-icon&quot;&gt;
         &lt;ion-icon class=&quot;input-icon&quot; name=&quot;mail-outline&quot; /&gt;
     &lt;/span&gt;
-    &lt;input class=&quot;form-input&quot; type=&quot;email&quot; id=&quot;email&quot; minlength=&quot;8&quot; maxlength=&quot;32&quot; required placeholder=&quot;your email&quot;&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;email&quot; id=&quot;email&quot; minlength=&quot;8&quot; maxlength=&quot;32&quot; required
+        placeholder=&quot;your email&quot;&gt;
 &lt;/div&gt;
                     </code>
                 </pre>
-                <pre class="clipboard h-rem-20" rel="Simply click and paste input type number">
+                <pre class="clipboard h-rem-20" rel="Click and paste input type number">
                     <code>
 &lt;label class=&quot;form-label&quot; for=&quot;number&quot;&gt;Type number&lt;/label&gt;
 &lt;div class=&quot;form-input-container&quot;&gt;
     &lt;span class=&quot;form-icon&quot;&gt;
-        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;calcdivator-outline&quot; /&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;calculator-outline&quot; /&gt;
     &lt;/span&gt;
-    &lt;input class=&quot;form-input&quot; type=&quot;number&quot; id=&quot;number&quot; name=&quot;number&quot; min=&quot;7&quot; max=&quot;99&quot; required placeholder=&quot;0&quot;&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;number&quot; id=&quot;number&quot; name=&quot;number&quot; min=&quot;7&quot; max=&quot;99&quot; required
+        placeholder=&quot;0&quot;&gt;
 &lt;/div&gt;
                     </code>
                 </pre>
-                <pre class="clipboard h-rem-20" rel="Simply click and paste input type password">
+                <pre class="clipboard h-rem-20" rel="Click and paste input type password">
                     <code>
 &lt;label class=&quot;form-label&quot; for=&quot;password&quot;&gt;Type password&lt;/label&gt;
 &lt;div class=&quot;form-input-container&quot;&gt;
@@ -421,7 +432,7 @@
 &lt;/div&gt;
                     </code>
                 </pre>
-                <li>
+                <div>
                     <label class="form-label" for="search">Type search</label>
                     <div class="form-input-container">
                         <span class="form-icon">
@@ -430,8 +441,8 @@
                         <input class="form-input" type="search" id="search" name="search" aria-label="Search"
                             placeholder="your search">
                     </div>
-                </li>
-                <li>
+                </div>
+                <div>
                     <label class="form-label" for="tel">Type tel</label>
                     <div class="form-input-container">
                         <span class="form-icon">
@@ -440,8 +451,8 @@
                         <input id="tel" class="form-input" type="tel" pattern="[0-9]+" name="tel" minlength="10"
                             maxlength="14" required placeholder="your phone number">
                     </div>
-                </li>
-                <li>
+                </div>
+                <div>
                     <label class="form-label" for="text">Type text</label>
                     <div class="form-input-container">
                         <span class="form-icon">
@@ -450,35 +461,37 @@
                         <input class="form-input" type="text" id="text" name="text" required minlength="1" maxlength="8"
                             size="10" placeholder="Your text here...">
                     </div>
-                </li>
-                <pre class="clipboard h-rem-20" rel="Simply click and paste input type search">
+                </div>
+                <pre class="clipboard h-rem-20" rel="Click and paste input type search">
                     <code>
 &lt;label class=&quot;form-label&quot; for=&quot;search&quot;&gt;Type search&lt;/label&gt;
 &lt;div class=&quot;form-input-container&quot;&gt;
     &lt;span class=&quot;form-icon&quot;&gt;
         &lt;ion-icon class=&quot;input-icon&quot; name=&quot;search-outline&quot; /&gt;
     &lt;/span&gt;
-    &lt;input class=&quot;form-input&quot; type=&quot;search&quot; id=&quot;search&quot; name=&quot;search&quot; aria-label=&quot;Search&quot; placeholder=&quot;your search&quot;&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;search&quot; id=&quot;search&quot; name=&quot;search&quot; aria-label=&quot;Search&quot;
+        placeholder=&quot;your search&quot;&gt;
 &lt;/div&gt;
                     </code>
                 </pre>
-                <pre class="clipboard h-rem-20" rel="Simply click and paste input type tel">
+                <pre class="clipboard h-rem-20" rel="Click and paste input type tel">
                     <code>
 &lt;label class=&quot;form-label&quot; for=&quot;tel&quot;&gt;Type tel&lt;/label&gt;
 &lt;div class=&quot;form-input-container&quot;&gt;
     &lt;span class=&quot;form-icon&quot;&gt;
         &lt;ion-icon class=&quot;input-icon&quot; name=&quot;call-outline&quot; /&gt;
     &lt;/span&gt;
-    &lt;input id=&quot;tel&quot; class=&quot;form-input&quot; type=&quot;tel&quot;  pattern=&quot;[0-9]+&quot; name=&quot;tel&quot; minlength=&quot;10&quot; maxlength=&quot;14&quot; required placeholder=&quot;your phone number&quot;&gt;
+    &lt;input id=&quot;tel&quot; class=&quot;form-input&quot; type=&quot;tel&quot; pattern=&quot;[0-9]+&quot; name=&quot;tel&quot; minlength=&quot;10&quot;
+        maxlength=&quot;14&quot; required placeholder=&quot;your phone number&quot;&gt;
 &lt;/div&gt;
                     </code>
                 </pre>
-                <pre class="clipboard h-rem-20" rel="Simply click and paste input type text">
+                <pre class="clipboard h-rem-20" rel="Click and paste input type text">
                     <code>
 &lt;label class=&quot;form-label&quot; for=&quot;text&quot;&gt;Type text&lt;/label&gt;
 &lt;div class=&quot;form-input-container&quot;&gt;
     &lt;span class=&quot;form-icon&quot;&gt;
-        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;text-outline&quot; /&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;pencil-outline&quot; /&gt;
     &lt;/span&gt;
     &lt;input class=&quot;form-input&quot; type=&quot;text&quot; id=&quot;text&quot; name=&quot;text&quot; required minlength=&quot;1&quot; maxlength=&quot;8&quot;
         size=&quot;10&quot; placeholder=&quot;Your text here...&quot;&gt;
@@ -486,29 +499,30 @@
                     </code>
                 </pre>
             </div>
-            <div class="m-t-3">
-                <li>
+            <div class="m-t-2">
+                <div>
                     <label class="form-label" for="textarea2">Textarea</label>
                     <div class="form-input-container textarea-container">
-                        <textarea id="textarea2" class="form-input" name="textarea2"
+                        <textarea id="textarea2" class="form-input h-rem-20" name="textarea2"
                             placeholder="Your text here..."></textarea>
                     </div>
-                </li>
+                </div>
             </div>
-            <p class="note-turquoise">Simply click and paste textarea to your project</p>
+            <p class="note-turquoise">Click and paste textarea to your project</p>
             <pre class="clipboard h-rem-20" rel="texarea">
                 <code>
-&lt;label class=&quot;form-label&quot; for=&quot;textarea&quot;&gt;Textarea&lt;/label&gt;
-&lt;div class=&quot;form-input-container textarea-container&quot;&gt;
-    &lt;textarea id=&quot;textarea&quot; class=&quot;form-input&quot; name=&quot;textarea&quot; placeholder=&quot;Your text here...&quot;&gt;&lt;/textarea&gt;
-&lt;/div&gt;
+    &lt;label class=&quot;form-label&quot; for=&quot;textarea2&quot;&gt;Textarea&lt;/label&gt;
+    &lt;div class=&quot;form-input-container textarea-container&quot;&gt;
+        &lt;textarea id=&quot;textarea2&quot; class=&quot;form-input&quot; name=&quot;textarea2&quot;
+            placeholder=&quot;Your text here...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
                 </code>
             </pre>
         </article>
 
-        <article class="m-b-6">
+        <article class="m-b-8">
             <h3 class="note-turquoise">
-                Checkable inputs
+                Checkbox & Radio inputs
             </h3>
             <p>The <code class="single-code t-navy">&lt;input type=&quot;checkbox&quot;&gt;</code> defines a checkbox.
                 Checkboxes are used to let a user select one or more options of a limited number of choices.
@@ -521,105 +535,111 @@
                 The radio group must have share the same name to be treated as a group.
                 Add the <code class="single-code t-navy">&lt;label&gt;</code> tag for accessibility.
             </p>
-            <h4 class="note-turquoise m-b-2 m-t-2">Input type checkbox</h4>
+            <h4 class="note-turquoise m-t-8">Input type checkbox</h4>
             <div class="g-col g-col-s-2 g-col-l-4">
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                <div class="d-flex i-center j-center p-2">
                     <input id="checkbox1" class="check-yellow" type="checkbox">
                     <label for="checkbox1">Checkbox</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="checkbox2" class="check-purple" type="checkbox" checked>
                     <label for="checkbox2">Checkbox checked</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="checkbox1d" type="checkbox" disabled>
                     <label for="checkbox1d">Checkbox disabled</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="checkbox2d" type="checkbox" checked disabled>
                     <label for="checkbox2d">Checkbox checked disabled</label>
-                </li>
+                </div>
             </div>
-            <p class="note-turquoise">Simply click and paste input type checkbox to your project</p>
-            <pre class="clipboard m-t-2 h-rem-12" rel="input type checkbox">
+            <pre class="clipboard h-rem-12" rel="Click and paste input type checkbox">
                     <code>
-&lt;input id=&quot;checkbox1&quot; class=&quot;check-yellow&quot; type=&quot;checkbox&quot;&gt;
-&lt;label for=&quot;checkbox1&quot;&gt;Checkbox&lt;/label&gt;
-&lt;input id=&quot;checkbox2&quot; class=&quot;check-purple&quot; type=&quot;checkbox&quot; checked&gt;
-&lt;label for=&quot;checkbox2&quot;&gt;Checkbox checked&lt;/label&gt;
-&lt;input id=&quot;checkbox1d&quot; type=&quot;checkbox&quot; disabled&gt;
-&lt;label for=&quot;checkbox1d&quot;&gt;Checkbox disabled&lt;/label&gt;
-&lt;input id=&quot;checkbox2d&quot; type=&quot;checkbox&quot; checked disabled&gt;
-&lt;label for=&quot;checkbox2d&quot;&gt;Checkbox checked disabled&lt;/label&gt;
+    &lt;input id=&quot;checkbox1&quot; class=&quot;check-yellow&quot; type=&quot;checkbox&quot;&gt;
+    &lt;label for=&quot;checkbox1&quot;&gt;Checkbox&lt;/label&gt;
+
+    &lt;input id=&quot;checkbox2&quot; class=&quot;check-purple&quot; type=&quot;checkbox&quot; checked&gt;
+    &lt;label for=&quot;checkbox2&quot;&gt;Checkbox checked&lt;/label&gt;
+
+    &lt;input id=&quot;checkbox1d&quot; type=&quot;checkbox&quot; disabled&gt;
+    &lt;label for=&quot;checkbox1d&quot;&gt;Checkbox disabled&lt;/label&gt;
+
+    &lt;input id=&quot;checkbox2d&quot; type=&quot;checkbox&quot; checked disabled&gt;
+    &lt;label for=&quot;checkbox2d&quot;&gt;Checkbox checked disabled&lt;/label&gt;
                     </code>
                 </pre>
-            <h4 class="note-turquoise m-b-2 m-t-2">Input type radio</h4>
+            <h4 class="note-turquoise m-t-8">Input type radio</h4>
             <div class="g-col g-col-s-2 g-col-l-4">
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                <div class="d-flex i-center j-center p-2">
                     <input id="radio1" class="radio-red" type="radio" name="radio" value="1">
                     <label for="radio1">Radio</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="radio2" class="radio-green" type="radio" name="radio" value="2" checked>
                     <label for="radio2">Radio checked</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="r1d" type="radio" name="radiod" value="1" disabled>
                     <label for="r1d">Radio disabled</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="r2d" type="radio" name="radiod" value="2" checked disabled>
                     <label for="r2d">Radio checked disabled</label>
-                </li>
+                </div>
             </div>
-            <p class="note-turquoise">Simply click and paste input type radio to your project</p>
-            <pre class="clipboard m-t-2 h-rem-12" rel="input type radio">
+            <pre class="clipboard h-rem-12" rel="Click and paste input type radio">
                     <code>
-&lt;input id=&quot;radio1&quot; class=&quot;radio-red&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;1&quot;&gt;
-&lt;label for=&quot;radio1&quot;&gt;Radio&lt;/label&gt;
-&lt;input id=&quot;radio2&quot; class=&quot;radio-green&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;2&quot; checked&gt;
-&lt;label for=&quot;radio2&quot;&gt;Radio checked&lt;/label&gt;
-&lt;input id=&quot;r1d&quot; type=&quot;radio&quot; name=&quot;radiod&quot; value=&quot;1&quot; disabled&gt;
-&lt;label for=&quot;r1d&quot;&gt;Radio disabled&lt;/label&gt;
-&lt;input id=&quot;r2d&quot; type=&quot;radio&quot; name=&quot;radiod&quot; value=&quot;2&quot; checked disabled&gt;
-&lt;label for=&quot;r2d&quot;&gt;Radio checked disabled&lt;/label&gt;
+    &lt;input id=&quot;radio1&quot; class=&quot;radio-red&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;1&quot;&gt;
+    &lt;label for=&quot;radio1&quot;&gt;Radio&lt;/label&gt;
+
+    &lt;input id=&quot;radio2&quot; class=&quot;radio-green&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;2&quot; checked&gt;
+    &lt;label for=&quot;radio2&quot;&gt;Radio checked&lt;/label&gt;
+
+    &lt;input id=&quot;r1d&quot; type=&quot;radio&quot; name=&quot;radiod&quot; value=&quot;1&quot; disabled&gt;
+    &lt;label for=&quot;r1d&quot;&gt;Radio disabled&lt;/label&gt;
+
+    &lt;input id=&quot;r2d&quot; type=&quot;radio&quot; name=&quot;radiod&quot; value=&quot;2&quot; checked disabled&gt;
+    &lt;label for=&quot;r2d&quot;&gt;Radio checked disabled&lt;/label&gt;
                     </code>
                 </pre>
-            <h4 class="note-turquoise m-b-2 m-t-2">Switch input type checkbox</h4>
+            <h4 class="note-turquoise m-t-8">Switch input type checkbox</h4>
             <div class="g-col g-col-s-2 g-col-l-4">
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                <div class="d-flex i-center j-center p-2">
                     <input id="switch1" type="checkbox" class="switch check-blue">
                     <label for="switch1">Switch</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="s2" type="checkbox" class="switch check-orange" checked>
                     <label for="s2">Switch checked</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="s1d" type="checkbox" class="switch" disabled>
                     <label for="s1d">Switch disabled</label>
-                </li>
-                <li class="d-flex i-center j-center p-2 b-turquoise">
+                </div>
+                <div class="d-flex i-center j-center p-2">
                     <input id="s2d" type="checkbox" class="switch" checked disabled>
                     <label for="s2d">Switch checked disabled</label>
-                </li>
+                </div>
             </div>
-            <p class="note-turquoise">Simply click and paste switch input to your project</p>
-            <pre class="clipboard m-t-2 h-rem-12" rel="switch">
+            <pre class="clipboard h-rem-12" rel="Click and paste switch input ">
                     <code>
-&lt;input id=&quot;switch1&quot; type=&quot;checkbox&quot; class=&quot;switch check-blue&quot;&gt;
-&lt;label for=&quot;switch1&quot;&gt;Switch&lt;/label&gt;
-&lt;input id=&quot;s2&quot; type=&quot;checkbox&quot; class=&quot;switch check-orange&quot; checked&gt;
-&lt;label for=&quot;s2&quot;&gt;Switch checked&lt;/label&gt;
-&lt;input id=&quot;s1d&quot; type=&quot;checkbox&quot; class=&quot;switch&quot; disabled&gt;
-&lt;label for=&quot;s1d&quot;&gt;Switch disabled&lt;/label&gt;
-&lt;input id=&quot;s2d&quot; type=&quot;checkbox&quot; class=&quot;switch&quot; checked disabled&gt;
-&lt;label for=&quot;s2d&quot;&gt;Switch checked disabled&lt;/label&gt;
+    &lt;input id=&quot;switch1&quot; type=&quot;checkbox&quot; class=&quot;switch check-blue&quot;&gt;
+    &lt;label for=&quot;switch1&quot;&gt;Switch&lt;/label&gt;
+
+    &lt;input id=&quot;s2&quot; type=&quot;checkbox&quot; class=&quot;switch check-orange&quot; checked&gt;
+    &lt;label for=&quot;s2&quot;&gt;Switch checked&lt;/label&gt;
+
+    &lt;input id=&quot;s1d&quot; type=&quot;checkbox&quot; class=&quot;switch&quot; disabled&gt;
+    &lt;label for=&quot;s1d&quot;&gt;Switch disabled&lt;/label&gt;
+
+    &lt;input id=&quot;s2d&quot; type=&quot;checkbox&quot; class=&quot;switch&quot; checked disabled&gt;
+    &lt;label for=&quot;s2d&quot;&gt;Switch checked disabled&lt;/label&gt;
                     </code>
                 </pre>
         </article>
 
-        <section id="formcolors" class="m-b-6">
+        <section id="formcolors" class="m-b-8">
             <h3 class="note-turquoise">
                 Form colors
             </h3>
@@ -708,7 +728,7 @@
                     </div>
                 </form>
             </div>
-            <p class="note-turquoise">Simply click and paste form colors to your project</p>
+            <p class="note-turquoise">Click and paste form colors to your project</p>
             <pre class="clipboard h-rem-20" rel="Form colors">
                 <code>
 &lt;form class=&quot;form form-blue&quot; action=&quot;&quot; method=&quot;&quot;&gt;
@@ -783,7 +803,7 @@
             </pre>
         </section>
 
-        <section class="m-b-6">
+        <section class="m-b-8">
             <h3 class="note-turquoise">
                 Input colors
             </h3>
@@ -794,7 +814,7 @@
                     class="single-code t-navy"> &lt;div class=&quot;form-input-container input-container-*&quot;&gt;</code>to
                 your item to change background color.
             </p>
-            <p class="note-turquoise">Writable input colors</p>
+            <p class="note-turquoise">Text input colors</p>
             <div id="arrayInputs" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4">
                 <div>
                     <label class="form-label" for="t1">default</label>
@@ -811,12 +831,12 @@
                 <div>
                     <label class="form-label" for="t13">.input-container-*</label>
                     <div class="form-input-container textarea-container input-container-turquoise">
-                        <textarea id="t13" class="form-input" name="t13"
+                        <textarea id="t13" class="form-input h-rem-20" name="t13"
                             placeholder="TEXTAREA : Your text here..."></textarea>
                     </div>
                 </div>
             </div>
-            <p class="note-turquoise">Simply click and paste input colors to your project</p>
+            <p class="note-turquoise">Click and paste input colors to your project</p>
             <pre class="clipboard h-rem-20" rel="writable input colors">
                 <code>
 &lt;label class=&quot;form-label&quot; for=&quot;t3&quot;&gt;input&lt;/label&gt;
@@ -836,7 +856,7 @@
             </pre>
         </section>
 
-        <section class="m-b-6">
+        <section class="m-b-8">
             <h3 class="note-turquoise">
                 Input icon colors
             </h3>
@@ -846,7 +866,7 @@
                     class="single-code t-navy"> &lt;div class=&quot;form-input-container input-icon-container-*&quot;&gt;</code>to
                 your item to change background color.
             </p>
-            <p class="note-turquoise">Writable input colors</p>
+            <p class="note-turquoise">Text input colors</p>
             <div id="arrayIconInputs" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4">
                 <div>
                     <label class="form-label" for="ta1">default</label>
@@ -859,38 +879,37 @@
                     </div>
                 </div>
             </div>
-            <p class="note-turquoise">Simply click and paste input icon colors to your project</p>
+            <p class="note-turquoise">Click and paste input icon colors to your project</p>
             <pre class="clipboard h-rem-20" rel="writable input icon colors">
                 <code>
-&lt;div&gt;
-    &lt;label class=&quot;form-label&quot; for=&quot;ta1&quot;&gt;default&lt;/label&gt;
-    &lt;div class=&quot;form-input-container input-icon-container-blue&quot;&gt;
-        &lt;span class=&quot;form-icon&quot;&gt;
-            &lt;ion-icon class=&quot;input-icon&quot; name=&quot;pencil-outline&quot; /&gt;
-        &lt;/span&gt;
-        &lt;input class=&quot;form-input&quot; type=&quot;text&quot; id=&quot;ta1&quot; name=&quot;ta1&quot; required minlength=&quot;1&quot; maxlength=&quot;8&quot;
-            size=&quot;10&quot; placeholder=&quot;Your text here...&quot;&gt;
-    &lt;/div&gt;
+&lt;label class=&quot;form-label&quot; for=&quot;ta1&quot;&gt;default&lt;/label&gt;
+&lt;div class=&quot;form-input-container input-icon-container-blue&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;pencil-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;text&quot; id=&quot;ta1&quot; name=&quot;ta1&quot; required minlength=&quot;1&quot; maxlength=&quot;8&quot;
+        size=&quot;10&quot; placeholder=&quot;Your text here...&quot;&gt;
 &lt;/div&gt;
                 </code>
             </pre>
         </section>
 
-        <section class="m-b-6">
+        <section class="m-b-8">
             <h3 class="note-turquoise">
-                Checkable & Radio input colors
+                Checkbox & Radio input colors
             </h3>
             <p>Just add <code
                     class="single-code t-navy">&lt;input id=&quot;yourID&quot; class=&quot;check-*&quot; type=&quot;checkbox&quot;&gt;</code>
                 to your item to change background color.</p>
-            <p class="note-turquoise">Checkable input colors</p>
+            <h4 class="note-turquoise m-b-2 m-t-8">Checkbox input colors</h4>
             <div id="arrayCheckboxes" class="g-col g-col-s-2 g-col-l-4 g-col-xl-5"></div>
             <pre class="clipboard m-t-2 h-rem-10" rel="checkbox colors">
                 <code>
-&lt;input id=&quot;yourID&quot; class=&quot;check-blue&quot; type=&quot;checkbox&quot;&gt;
+&lt;input id=&quot;j-1&quot; class=&quot;check-blue&quot; type=&quot;checkbox&quot; checked&gt;
+&lt;label for=&quot;j-1&quot;&gt;.check-blue&lt;/label&gt;
                 </code>
             </pre>
-            <p class="note-turquoise">Radio input colors</p>
+            <h4 class="note-turquoise m-t-8">Radio input colors</h4>
             <p>Just add <code
                     class="single-code t-navy">&lt;input id=&quot;yourID&quot; class=&quot;radio-*&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;X&quot;&gt;</code>
                 to your item to change background color.</p>
@@ -903,18 +922,18 @@
 &lt;label for=&quot;radio2&quot;&gt;Radio checked&lt;/label&gt;
                     </code>
                 </pre>
-            <p class="note-turquoise">Switch input colors</p>
+            <h4 class="note-turquoise m-t-8">Switch input colors</h4>
             <p>Just add <code
                     class="single-code t-navy">&lt;input id=&quot;yourID&quot; type=&quot;checkbox&quot; class=&quot;switch check-*&quot;&gt;</code>
                 to your item to change background color.</p>
             <div id="arraySwitches" class="g-col g-col-s-2 g-col-l-4 g-col-xl-5"></div>
             <pre class="clipboard m-t-2 h-rem-10" rel="switch colors">
                 <code>
-&lt;input id=&quot;yourID&quot; type=&quot;checkbox&quot; class=&quot;switch check-turquoise&quot;&gt;
+&lt;input id=&quot;l-2&quot; type=&quot;checkbox&quot; class=&quot;switch check-pink&quot; checked&gt;
+&lt;label for=&quot;l-2&quot;&gt;.switch .check-pink&lt;/label&gt;
                 </code>
             </pre>
-        </section>
-
+        </section>                        
     </main>
     <footer class="bg-grad-turquoise-dark">
         footer
@@ -926,6 +945,7 @@
     <script src="/script/straightNav.js"></script>
     <script src="script/straightForm.js"></script>
     <script src="script/form.js"></script>
+    <script src="script/clipboard.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,7 @@
 /*
-vars definition dark / light 
+***********
+THEME COLOR 
+***********
 */
 $black: #000000;
 $text-dark: #eee;
@@ -21,7 +23,9 @@ $color-shadow-dark: rgb(0 0 0 / 50%);
 }
 
 /*
-colors
+******
+COLORS
+******
 */
 $red: #d50000;
 $red-light: #ff5131;
@@ -112,7 +116,9 @@ $colors: (
 }
 
 /*
-gradients
+*********
+GRADIENTS
+*********
 */
 $grad-white: linear-gradient(
   to top,
@@ -343,7 +349,9 @@ $gradients: (
 }
 
 /*
-theme
+*****
+THEME
+*****
 */
 @mixin dark-theme {
   @media (prefers-color-scheme: dark) {
@@ -354,5 +362,26 @@ theme
 @mixin light-theme {
   @media (prefers-color-scheme: light) {
     @content;
+  }
+}
+
+@include dark-theme() {
+  body {
+    color: $text-dark;
+    background: $black-dark;
+  }
+  a,
+  nav ul li {
+    color: $link;
+  }
+}
+
+@include light-theme() {
+  body {
+    color: $text-light;
+  }
+  a,
+  nav ul li {
+    color: $link;
   }
 }

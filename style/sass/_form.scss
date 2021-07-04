@@ -9,156 +9,255 @@
 @use "width" as w;
 
 /*
-Checkable inputs (radio & checkbox)
+****
+FORM
+****
 */
-@supports (-webkit-appearance: none) or (-moz-appearance: none) {
-  input[type="checkbox"],
-  input[type="radio"] {
-    --active-inner: #fff;
-    --focus: 2px rgba(39, 94, 254, 0.3);
-    --border: #bbc1e1;
-    --background: #efefef;
-    --disabled: #bdbdbd;
-    --disabled-inner: #8d8d8d;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    @include h.height(2.1rem);
-    outline: none;
-    @include u.d-inline-block();
-    vertical-align: top;
-    @include pos.position(relative);
-    @include m.margin(0);
-    cursor: pointer;
-    border: 1px solid var(--bc, var(--border));
-    background-color: var(--b, var(--background));
-    transition: background-color u.$time, border-color u.$time,
-      box-shadow u.$time;
-    &:after {
-      content: "";
-      @include u.d-block();
-      left: 0;
-      top: 0;
-      @include pos.position(absolute);
-      transition: opacity var(--d-o, u.$time),
-        -webkit-transform var(--d-t, u.$time) var(--d-t-e, ease);
-      transition: transform var(--d-t, u.$time) var(--d-t-e, ease),
-        opacity var(--d-o, u.$time);
-      transition: transform var(--d-t, u.$time) var(--d-t-e, ease),
-        opacity var(--d-o, u.$time),
-        -webkit-transform var(--d-t, u.$time) var(--d-t-e, ease);
-    }
-    &:checked {
-      --b: var(--active);
-      --bc: var(--active);
-      --d-o: 0.3s;
-      --d-t: 0.6s;
-      --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
-    }
-    &:disabled {
-      --b: var(--disabled);
-      cursor: not-allowed;
-      opacity: 0.9;
-      &:checked {
-        --b: var(--disabled-inner);
-        --bc: var(--border);
-      }
-      & + label {
-        cursor: not-allowed;
-      }
-    }
-    &:hover {
-      &:not(:checked) {
-        &:not(:disabled) {
-          --bc: var(--border-hover);
-        }
-      }
-    }
-    &:focus {
-      box-shadow: 0 0 0 var(--focus);
-    }
-    &:not(.switch) {
-      @include w.width(2.1rem);
-      &:after {
-        opacity: var(--o, 0);
-      }
-      &:checked {
-        --o: 1;
-      }
-    }
-    & + label {
-      font-size: clamp(0.8rem, 0.66rem + 0.5vw, 1.6rem);
-      line-height: 2.1rem;
-      @include u.d-inline-block();
-      vertical-align: top;
-      cursor: pointer;
-      @include m.margin-direction(left, 1rem);
-    }
+%form-shared {
+  overflow: hidden;
+}
+%form-title-container-shared { 
+  border: 0;
+  padding: 0;
+}
+%form-title-shared {
+  font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
+  font-weight: 300;
+}
+%form-input-container-shared {
+  background-color: c.$grey;
+  @include b.b-radius(0.3rem);
+  @include flx.d-flex();
+}
+%form-label-shared {
+  font-size: 1.6rem;
+  font-weight: 400;
+  @include u.d-inline-block();
+  @include m.margin-direction(bottom, 1rem);
+}
+%form-input-shared {
+  font-size: 1.6rem;
+  @include p.padding(0.8rem 1.6rem);
+  @include w.width(100%);
+}
+%input-icon-shared {
+  color: c.$text-light;
+  font-size: 2.4rem;
+}
+%form-lastname-shared {
+  text-transform: uppercase;
+}
+%form-icon-shared {
+  @include flx.d-inline-flex();
+  @include flx.align-items(center);
+  @include flx.justify-content(center);
+  @include w.width(4rem);
+}
+
+.form {
+  @extend %form-shared;
+  &-title-container {
+    @extend %form-title-container-shared;
   }
-  input[type="checkbox"] {
-    &:not(.switch) {
-      @include b.b-smooth();
-      &:after {
-        @include w.width(5px);
-        @include h.height(9px);
-        border: 2px solid var(--active-inner);
-        border-top: 0;
-        border-left: 0;
-        left: 7px;
-        top: 4px;
-        -webkit-transform: rotate(var(--r, 20deg));
-        transform: rotate(var(--r, 20deg));
-      }
-      &:checked {
-        --r: 43deg;
-      }
-    }
-    &.switch {
-      @include w.width(3.8rem);
-      @include b.b-radius(1.1rem);
-      &:after {
-        left: 2px;
-        top: 2px;
-        @include b.b-radius(50%);
-        @include w.width(1.5rem);
-        @include h.height(1.5rem);
-        background: var(--ab, var(--border));
-        -webkit-transform: translateX(var(--x, 0));
-        transform: translateX(var(--x, 0));
-      }
-      &:checked {
-        --ab: var(--active-inner);
-        --x: 1.7rem;
-      }
-      &:disabled {
-        --active: #323232;
-        --border: #323232;
-        --border-hover: #323232;
-        &:not(:checked) {
-          &:after {
-            opacity: 0.6;
-          }
-        }
-      }
-    }
+  &-title {
+    @extend %form-title-shared;
   }
-  input[type="radio"] {
-    @include b.b-radius(50%);
-    &:after {
-      @include w.width(1.9rem);
-      @include h.height(1.9rem);
-      @include b.b-radius(50%);
-      background: var(--active-inner);
-      opacity: 0;
-      -webkit-transform: scale(var(--s, 0.7));
-      transform: scale(var(--s, 0.7));
-    }
-    &:checked {
-      --s: 0.5;
-    }
+  &-input-container {
+    @extend %form-input-container-shared;
+  }
+  &-label {
+    @extend %form-label-shared;
+  }
+  &-input {
+    @extend %form-input-shared;
+  }
+  &-lastname {
+    @extend %form-lastname-shared;
+  }
+  &-icon {
+    @extend %form-icon-shared;
+  }
+}
+.input-icon {
+  @extend %input-icon-shared;
+}
+/*
+Textarea
+*/
+.textarea-container {
+  @include h.height(100%);
+}
+
+/*
+***********
+TEXT INPUTS
+***********
+*/
+textarea,
+.form-input {
+  background-color: c.$grey-light;
+  color: c.$text-light;
+  &::placeholder {
+    color: c.$grey;
+  }
+  &:disabled {
+    background-color: c.$grey-light;
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
 
+/*
+****************
+CHECKBOX & RADIO
+****************
+*/
+input[type="checkbox"],
+input[type="radio"] {
+  --active-inner: #fff;
+  --focus: 2px rgba(39, 94, 254, 0.3);
+  --border: #bbc1e1;
+  --background: #efefef;
+  --disabled: #bdbdbd;
+  --disabled-inner: #8d8d8d;
+  @include h.height(2.1rem);
+  @include u.d-inline-block();
+  vertical-align: top;
+  @include pos.position(relative);
+  @include m.margin(0);
+  cursor: pointer;
+  border: 1px solid var(--bc, var(--border));
+  background-color: var(--b, var(--background));
+  transition: background-color u.$time, border-color u.$time, box-shadow u.$time;
+  &:after {
+    content: "";
+    @include u.d-block();
+    left: 0;
+    top: 0;
+    @include pos.position(absolute);
+    transition: opacity var(--d-o, u.$time),
+      -webkit-transform var(--d-t, u.$time) var(--d-t-e, ease);
+    transition: transform var(--d-t, u.$time) var(--d-t-e, ease),
+      opacity var(--d-o, u.$time);
+    transition: transform var(--d-t, u.$time) var(--d-t-e, ease),
+      opacity var(--d-o, u.$time),
+      -webkit-transform var(--d-t, u.$time) var(--d-t-e, ease);
+  }
+  &:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: 0.3s;
+    --d-t: 0.6s;
+    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  }
+  &:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+    &:checked {
+      --b: var(--disabled-inner);
+      --bc: var(--border);
+    }
+    & + label {
+      cursor: not-allowed;
+    }
+  }
+  &:hover {
+    &:not(:checked) {
+      &:not(:disabled) {
+        --bc: var(--border-hover);
+      }
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+  &:not(.switch) {
+    @include w.width(2.1rem);
+    &:after {
+      opacity: var(--o, 0);
+    }
+    &:checked {
+      --o: 1;
+    }
+  }
+  & + label {
+    font-size: clamp(0.8rem, 0.66rem + 0.5vw, 1.6rem);
+    line-height: 2.1rem;
+    @include u.d-inline-block();
+    vertical-align: top;
+    cursor: pointer;
+    @include m.margin-direction(left, 1rem);
+  }
+}
+input[type="checkbox"] {
+  &:not(.switch) {
+    @include b.b-smooth();
+    &:after {
+      @include w.width(5px);
+      @include h.height(9px);
+      border: 2px solid var(--active-inner);
+      border-top: 0;
+      border-left: 0;
+      left: 7px;
+      top: 4px;
+      -webkit-transform: rotate(var(--r, 20deg));
+      transform: rotate(var(--r, 20deg));
+    }
+    &:checked {
+      --r: 43deg;
+    }
+  }
+  &.switch {
+    @include w.width(3.8rem);
+    @include b.b-radius(1.1rem);
+    &:after {
+      left: 2px;
+      top: 2px;
+      @include b.b-radius(50%);
+      @include w.width(1.5rem);
+      @include h.height(1.5rem);
+      background: var(--ab, var(--border));
+      -webkit-transform: translateX(var(--x, 0));
+      transform: translateX(var(--x, 0));
+    }
+    &:checked {
+      --ab: var(--active-inner);
+      --x: 1.7rem;
+    }
+    &:disabled {
+      --active: #323232;
+      --border: #323232;
+      --border-hover: #323232;
+      &:not(:checked) {
+        &:after {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+input[type="radio"] {
+  @include b.b-radius(50%);
+  &:after {
+    @include w.width(1.9rem);
+    @include h.height(1.9rem);
+    @include b.b-radius(50%);
+    background: var(--active-inner);
+    opacity: 0;
+    -webkit-transform: scale(var(--s, 0.7));
+    transform: scale(var(--s, 0.7));
+  }
+  &:checked {
+    --s: 0.5;
+  }
+}
+
+/*
+******
+COLORS
+******
+*/
 /*
 Checkbox ,radio & switch.check colors
 */
@@ -222,135 +321,7 @@ input[type="radio"].radio {
 }
 
 /*
-Appareance writable inputs
-*/
-textarea,
-input[type="button"],
-input[type="color"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="file"],
-input[type="image"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="range"],
-input[type="reset"],
-input[type="search"],
-input[type="submit"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="week"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: c.$grey-light;
-  border: 0;
-  color: c.$text-light;
-  outline: none;
-  &:focus-visible {
-    outline: none;
-  }
-  & + label {
-    font-size: 1.6rem;
-    line-height: 2.1rem;
-    @include u.d-inline-block();
-    vertical-align: middle;
-    cursor: default;
-    @include m.margin-direction(left, 1rem);
-  }
-  &::placeholder {
-    color: c.$grey;
-  }
-  &:disabled {
-    background-color: c.$grey-light;
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-}
-
-/*
-Form shared
-*/
-%form-shared {
-  overflow: hidden;
-}
-%form-title-container-shared {
-  border: 0;
-  padding: 0;
-}
-%form-title-shared {
-  font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
-  font-weight: 300;
-}
-%form-input-container-shared {
-  background-color: c.$grey;
-  @include b.b-radius(0.3rem);
-  @include flx.d-flex();
-}
-%form-label-shared {
-  font-size: 1.6rem;
-  font-weight: 400;
-  @include u.d-inline-block();
-  @include m.margin-direction(bottom, 1rem);
-}
-%form-input-shared {
-  font-size: 1.6rem;
-  @include p.padding(0.6rem 1.2rem);
-  @include w.width(100%);
-}
-%input-icon-shared {
-  color: c.$text-light;
-  font-size: 2.4rem;
-}
-%form-lastname-shared {
-  text-transform: uppercase;
-}
-%form-icon-shared {
-  @include flx.d-inline-flex();
-  @include flx.align-items(center);
-  @include flx.justify-content(center);
-  @include w.width(4rem);
-}
-
-.form {
-  @extend %form-shared;
-  &-title-container {
-    @extend %form-title-container-shared;
-  }
-  &-title {
-    @extend %form-title-shared;
-  }
-  &-input-container {
-    @extend %form-input-container-shared;
-  }
-  &-label {
-    @extend %form-label-shared;
-  }
-  &-input {
-    @extend %form-input-shared;
-  }
-  &-lastname {
-    @extend %form-lastname-shared;
-  }
-  &-icon {
-    @extend %form-icon-shared;
-  }
-}
-.input-icon {
-  @extend %input-icon-shared;
-}
-/*
-Textarea
-*/
-.textarea-container {
-  @include h.height(100%);
-}
-
-/*
-input icon container background color's rules for writable inputs
+.input-icon-container background color's rules for text inputs
 */
 .input-icon-container {
   &-yellow {
@@ -428,7 +399,7 @@ input icon container background color's rules for writable inputs
 }
 
 /*
-input container color's rules for writable inputs
+.input-container color's rules for text inputs
 */
 .input-container {
   &-yellow {
@@ -590,7 +561,7 @@ input container color's rules for writable inputs
 }
 
 /*
-Form color's rules for writable inputs
+.form color's rules for text inputs
 */
 .form {
   &-yellow {
