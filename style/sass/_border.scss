@@ -4,6 +4,48 @@
 @mixin border($color) {
   border: solid 1px $color;
 }
+.b-white {
+  @include border(c.$white);
+}
+.b-black {
+  @include border(c.$carbon);
+}
+.b-blue {
+  @include border(c.$blue);
+}
+.b-red {
+  @include border(c.$red);
+}
+.b-green {
+  @include border(c.$green);
+}
+.b-pink {
+  @include border(c.$pink);
+}
+.b-purple {
+  @include border(c.$purple);
+}
+.b-navy {
+  @include border(c.$navy);
+}
+.b-orange {
+  @include border(c.$orange);
+}
+.b-yellow {
+  @include border(c.$yellow);
+}
+.b-brown {
+  @include border(c.$brown);
+}
+.b-grey {
+  @include border(c.$grey);
+}
+.b-turquoise {
+  @include border(c.$turquoise);
+}
+/*
+Border theme
+*/
 .border {
   @include c.light-theme() {
     @include border(c.$carbon);
@@ -113,58 +155,59 @@ smooth
 /*
 .note
 */
-.note-black {
-  @include b-left(c.$carbon);
+@mixin note() {
   border-left-width: 0.5rem;
   @include p.padding-direction(left, 2rem);
+}
+.note-white {
+  @include b-left(c.$white);
+  @include note();
+}
+.note-black {
+  @include b-left(c.$carbon);
+  @include note();
 }
 .note-blue {
   @include b-left(c.$blue);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-red {
   @include b-left(c.$red);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-green {
   @include b-left(c.$green);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-pink {
   @include b-left(c.$pink);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-purple {
   @include b-left(c.$purple);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-navy {
   @include b-left(c.$navy);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-orange {
   @include b-left(c.$orange);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-yellow {
   @include b-left(c.$yellow);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-brown {
   @include b-left(c.$brown);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
 }
 .note-grey {
   @include b-left(c.$grey);
-  border-left-width: 0.5rem;
-  @include p.padding-direction(left, 2rem);
+  @include note();
+}
+.note-turquoise {
+  @include b-left(c.$turquoise);
+  @include note();
 }

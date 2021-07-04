@@ -36,7 +36,6 @@ G-container
 @mixin g-container() {
   @include d-grid();
   @include g-col-gap(2rem);
-  @include f.justify-content(center);
   @include row-gap(2rem);
 }
 

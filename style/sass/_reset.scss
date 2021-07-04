@@ -1,4 +1,3 @@
-@use "color" as c;
 *,
 ::before,
 ::after {
@@ -151,7 +150,7 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  outline: none;
 }
 
 [type="button"],
@@ -159,6 +158,8 @@ button:-moz-focusring,
 [type="submit"],
 button {
   -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
 }
 
 [type="button"]:not(:disabled),
@@ -176,7 +177,18 @@ button:not(:disabled) {
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
+  appearance: none;
   height: auto;
+}
+
+input[type="number"] {
+  -moz-appearance: texfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 [type="search"] {
@@ -188,21 +200,14 @@ button:not(:disabled) {
   -webkit-appearance: none;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 [hidden] {
   display: none;
-}
-
-code,
-pre,
-samp {
-  //display: block;
-}
-
-code,
-kbd,
-samp {
-  //font-family: monospace, monospace;
-  //font-size: 1em;
 }
 
 img,
@@ -266,44 +271,97 @@ details {
   display: block;
 }
 
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
 hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
 
+/*
+******
+INPUTS
+******
+*/
+textarea,
+input[type="button"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="week"],
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+textarea,
+input[type="button"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="week"] {
+  border: 0;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+/*
+***
+IMG
+***
+*/
 img {
   border-style: none;
 }
 
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
+// legend {
+//   box-sizing: border-box;
+//   color: inherit;
+//   display: table;
+//   max-width: 100%;
+//   padding: 0;
+//   white-space: normal;
+// }
 
 li {
   list-style: none;
 }
 
-main {
-  display: block;
-}
+// main {
+//   display: block;
+// }
 
 mark {
   display: inline-block;
-}
-
-pre {
-  //font-family: monospace, monospace;
-  //font-size: 1em;
 }
 
 progress {
@@ -340,6 +398,7 @@ template {
 }
 
 textarea {
+  resize: none;
   overflow: auto;
 }
 
@@ -349,36 +408,11 @@ th {
 
 ul {
   padding-inline-start: 0;
-  margin:0;
+  margin: 0;
 }
 
 :root {
   color-scheme: light dark;
-}
-
-@include c.dark-theme {
-  body {
-    color: c.$text-dark;
-    background: c.$black-dark;
-  }
-  img {
-    -webkit-filter: brightness(0.8) contrast(1.2);
-    filter: brightness(0.8) contrast(1.2);
-  }
-  a,
-  nav ul li {
-    color: c.$link;
-  }
-}
-
-@include c.light-theme {
-  body {
-    color: c.$text-light;
-  }
-  a,
-  nav ul li {
-    color: c.$link;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

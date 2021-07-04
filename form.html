@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, form element represents a document section containing interactive controls for submitting information.">
+    <title>Straight | Form</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+
+    <header class="presentation bg-grad-turquoise" role="presentation">
+        <h1 class="presentation-title t-white">Form</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <section class="m-b-8">
+            <h2 class="note-turquoise">
+                About Form
+            </h2>
+            <p>
+                The form element represents a document section containing interactive controls for submitting
+                information. They are generally used for subscription tunnels, newsletter, cookies, terms of service,
+                privacy policy...
+            </p>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-turquoise">
+                Form models
+            </h3>
+            <p>
+                Two basic examples of fake forms. One is a a validation's like, one just represents an acceptance of
+                cookies.
+                Add or remove <a href="#formcolors">css classes</a> to boost or not the visual of your forms.
+                <b>You will need to implement conditions and rules with your own javascript or another language</b>.
+            </p>
+            <div class="g-col g-col-xl-2">
+                <form id="formExample" class="form" action="" method="post">
+                    <fieldset class="form-title-container">
+                        <legend class="form-title">Simple form</legend>
+                    </fieldset>
+                    <div class="form-body g-col g-col-m-2">
+                        <div>
+                            <div class="m-b-1">
+                                <label class="form-label" for="firstname">Firstname</label>
+                                <div class="form-input-container" data-form="">
+                                    <span class="form-icon">
+                                        <ion-icon class="input-icon" name="person-outline" />
+                                    </span>
+                                    <input id="firstname" class="form-input" type="text" placeholder="your firstname"
+                                        data-form="" required>
+                                </div>
+                            </div>
+                            <div class="m-b-1">
+                                <label class="form-label" for="mail">Lastname</label>
+                                <div class="form-input-container" data-form="">
+                                    <span class="form-icon">
+                                        <ion-icon class="input-icon" name="person-outline" />
+                                    </span>
+                                    <input id="lastname" class="form-input form-lastname" type="text"
+                                        placeholder="your lastname" data-form="" required>
+                                </div>
+                            </div>
+                            <div class="m-b-1">
+                                <label class="form-label" for="phone">Phone number</label>
+                                <div class="form-input-container" data-form="">
+                                    <span class="form-icon">
+                                        <ion-icon class="input-icon" name="call-outline" />
+                                    </span>
+                                    <input id="phone" class="form-input" type="tel" name="tel"
+                                        placeholder="dial your phone number" data-form="" required>
+                                </div>
+                            </div>
+                            <div class="m-b-1">
+                                <label class="form-label" for="mail">Type email</label>
+                                <div class="form-input-container" data-form="">
+                                    <span class="form-icon">
+                                        <ion-icon class="input-icon" name="at-outline" />
+                                    </span>
+                                    <input class="form-input" type="email" id="mail" placeholder="your email"
+                                        data-form="" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-b-4">
+                            <div class="h-prc-100">
+                                <label class="form-label" for="textarea">Subject</label>
+                                <div class="form-input-container textarea-container">
+                                    <textarea id="textarea" class="form-input" name="textarea"
+                                        placeholder="Your text here..." data-form=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-col g-col-m-2">
+                        <div class="d-flex i-center j-between m-t-3">
+                            <div>
+                                <input class="switch check-turquoise" id="swi1" type="checkbox">
+                                <label for="swi1">accept</label>
+                            </div>
+                            <div>
+                                <input class="switch check-turquoise" id="swi2" type="checkbox">
+                                <label for="swi2">accept</label>
+                            </div>
+                        </div>
+                        <div class="form-input-container input-container-turquoise m-t-2">
+                            <button id="submitExample" class="form-input" type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <form id="BBform" class="form d-flex f-dir-col j-between" class="form" action="" method="post">
+                    <fieldset class="form-title-container">
+                        <legend class="form-title">Big brother form</legend>
+                    </fieldset>
+                    <div>
+                        <p class="m-0">
+                            We and our partners set cookies and use non-sensitive information from your device to
+                            improve our products
+                            and display personalized advertising and content.
+                        </p>
+                    </div>
+                    <div class="m-t-2 m-b-2">
+                        <div class="d-flex i-center m-b-1">
+                            <small class="m-r-auto">Select personalized ads</small>
+                            <input class="switch check-turquoise" id="bb1" type="checkbox">
+                            <label for="bb1">accept</label>
+                        </div>
+                        <div class="d-flex i-center m-b-1">
+                            <small class="m-r-auto">
+                                Use market research to generate audience data</small>
+                            <input class="switch check-turquoise" id="bb2" type="checkbox">
+                            <label for="bb2">accept</label>
+                        </div>
+                        <div class="d-flex i-center m-b-1">
+                            <small class="m-r-auto">Use precise geolocation data</small>
+                            <input class="switch check-turquoise" id="bb3" type="checkbox">
+                            <label for="bb3">accept</label>
+                        </div>
+                        <div class="d-flex i-center m-b-1">
+                            <small class="m-r-auto">Select standard ads</small>
+                            <input class="switch check-turquoise" id="bb4" type="checkbox">
+                            <label for="bb4">accept</label>
+                        </div>
+                        <div class="d-flex i-center">
+                            <small class="m-r-auto">Measure advertising performance</small>
+                            <input class="switch check-turquoise" id="bb5" type="checkbox">
+                            <label for="bb5">accept</label>
+                        </div>
+                    </div>
+                    <small class="t-justify">
+                        By giving your consent to the above purposes, you also authorize this site and its partners to
+                        carry
+                        out the following data processing operations: Ensure security, prevent fraud and debug,
+                        Technically distribute advertisements or content, Match and combine offline data sources,
+                        Receive and use automatically sent device identification characteristics, and Link different
+                        terminals
+                    </small>
+                    <div class="d-flex i-center j-between">
+                        <small>Set all your preferences to save and continue</small>
+                        <div class="form-input-container input-container-turquoise">
+                            <input id="submitBB" class="form-input" type="button" value="Save">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="m-t-2">
+                <h3 class="note-turquoise">
+                    Copy to clipboard
+                </h3>
+                <p> Click and paste simple form to your project</p>
+            </div>
+            <div class="g-col g-col-m-2">
+                <pre class="clipboard h-rem-32" rel="simple form">
+                    <code>
+&lt;form id=&quot;yourID&quot; class=&quot;form&quot; action=&quot;&quot; method=&quot;post&quot;&gt;
+    &lt;fieldset class=&quot;form-title-container&quot;&gt;
+        &lt;legend class=&quot;form-title&quot;&gt;Simple form&lt;/legend&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&quot;form-body g-col g-col-m-2&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;firstname&quot;&gt;Firstname&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;person-outline&quot; /&gt;
+                    &lt;/span&gt;
+                    &lt;input id=&quot;firstname&quot; class=&quot;form-input&quot; type=&quot;text&quot; placeholder=&quot;your firstname&quot;
+                        data-form=&quot;&quot; required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;mail&quot;&gt;Lastname&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;person-outline&quot; /&gt;
+                    &lt;/span&gt;
+                    &lt;input id=&quot;lastname&quot; class=&quot;form-input form-lastname&quot; type=&quot;text&quot;
+                        placeholder=&quot;your lastname&quot; data-form=&quot;&quot; required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;phone&quot;&gt;Phone number&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;call-outline&quot; /&gt;
+                    &lt;/span&gt;
+                    &lt;input id=&quot;phone&quot; class=&quot;form-input&quot; type=&quot;tel&quot; name=&quot;tel&quot;
+                        placeholder=&quot;dial your phone number&quot; data-form=&quot;&quot; required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;mail&quot;&gt;Type email&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot; data-form=&quot;&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;at-outline&quot; /&gt;
+                    &lt;/span&gt;
+                    &lt;input class=&quot;form-input&quot; type=&quot;email&quot; id=&quot;mail&quot; placeholder=&quot;your email&quot;
+                        data-form=&quot;&quot; required&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;m-b-4&quot;&gt;
+            &lt;div class=&quot;h-prc-100&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;textarea&quot;&gt;Subject&lt;/label&gt;
+                &lt;div class=&quot;form-input-container textarea-container&quot;&gt;
+                    &lt;textarea id=&quot;textarea&quot; class=&quot;form-input&quot; name=&quot;textarea&quot;
+                        placeholder=&quot;Your text here...&quot; data-form=&quot;&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;g-col g-col-m-2&quot;&gt;
+        &lt;div class=&quot;d-flex i-center j-between m-t-3&quot;&gt;
+            &lt;div&gt;
+                &lt;input class=&quot;switch check-turquoise&quot; id=&quot;swi1&quot; type=&quot;checkbox&quot;&gt;
+                &lt;label for=&quot;swi1&quot;&gt;accept&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;input class=&quot;switch check-turquoise&quot; id=&quot;swi2&quot; type=&quot;checkbox&quot;&gt;
+                &lt;label for=&quot;swi2&quot;&gt;accept&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-input-container input-container-turquoise m-t-2&quot;&gt;
+            &lt;button id=&quot;yourID&quot; class=&quot;form-input&quot; type=&quot;submit&quot;&gt;
+                Submit
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-32" rel="big brother form">
+                    <code>
+&lt;form id=&quot;yourID&quot; class=&quot;form d-flex f-dir-col j-between&quot; class=&quot;form&quot; action=&quot;&quot; method=&quot;post&quot;&gt;
+    &lt;fieldset class=&quot;form-title-container&quot;&gt;
+        &lt;legend class=&quot;form-title&quot;&gt;Big brother form&lt;/legend&gt;
+    &lt;/fieldset&gt;
+    &lt;div&gt;
+        &lt;p class=&quot;m-0&quot;&gt;
+            We and our partners set cookies and use non-sensitive information from your device to
+            improve our products
+            and display personalized advertising and content.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;m-t-2 m-b-2&quot;&gt;
+        &lt;div class=&quot;d-flex i-center m-b-1&quot;&gt;
+            &lt;small class=&quot;m-r-auto&quot;&gt;Select personalized ads&lt;/small&gt;
+            &lt;input class=&quot;switch check-turquoise&quot; id=&quot;bb1&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;bb1&quot;&gt;accept&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;d-flex i-center m-b-1&quot;&gt;
+            &lt;small class=&quot;m-r-auto&quot;&gt;
+                Use market research to generate audience data&lt;/small&gt;
+            &lt;input class=&quot;switch check-turquoise&quot; id=&quot;bb2&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;bb2&quot;&gt;accept&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;d-flex i-center m-b-1&quot;&gt;
+            &lt;small class=&quot;m-r-auto&quot;&gt;Use precise geolocation data&lt;/small&gt;
+            &lt;input class=&quot;switch check-turquoise&quot; id=&quot;bb3&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;bb3&quot;&gt;accept&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;d-flex i-center m-b-1&quot;&gt;
+            &lt;small class=&quot;m-r-auto&quot;&gt;Select standard ads&lt;/small&gt;
+            &lt;input class=&quot;switch check-turquoise&quot; id=&quot;bb4&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;bb4&quot;&gt;accept&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;d-flex i-center&quot;&gt;
+            &lt;small class=&quot;m-r-auto&quot;&gt;Measure advertising performance&lt;/small&gt;
+            &lt;input class=&quot;switch check-turquoise&quot; id=&quot;bb5&quot; type=&quot;checkbox&quot;&gt;
+            &lt;label for=&quot;bb5&quot;&gt;accept&lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;small class=&quot;t-justify&quot;&gt;
+        By giving your consent to the above purposes, you also authorize this site and its partners to
+        carry
+        out the following data processing operations: Ensure security, prevent fraud and debug,
+        Technically distribute advertisements or content, Match and combine offline data sources,
+        Receive and use automatically sent device identification characteristics, and Link different
+        terminals
+    &lt;/small&gt;
+    &lt;div class=&quot;d-flex i-center j-between&quot;&gt;
+        &lt;small&gt;Set all your preferences to save and continue&lt;/small&gt;
+        &lt;div class=&quot;form-input-container input-container-turquoise&quot;&gt;
+            &lt;input id=&quot;yourID&quot; class=&quot;form-input&quot; type=&quot;button&quot; value=&quot;Save&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+                    </code>
+                </pre>
+            </div>
+        </section>
+
+        <article class="m-b-8">
+            <h3 class="note-turquoise">
+                Text inputs
+            </h3>
+            <p>
+                The <code class="single-code t-navy">&lt;input type=&quot;&quot;&gt;</code> element is used to create
+                interactive controls for web-based forms in order to accept data
+                from the user.
+                A wide variety of types of input data and control widgets are available, depending on the device and
+                user agent. Here, some samples represented.
+            </p>
+            <div class="g-col  g-col-xl-3">
+                <div>
+                    <label class="form-label" for="email">Type email</label>
+                    <div class="form-input-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="mail-outline" />
+                        </span>
+                        <input class="form-input" type="email" id="email" minlength="8" maxlength="32" required
+                            placeholder="your email">
+                    </div>
+                </div>
+                <div>
+                    <label class="form-label" for="number">Type number</label>
+                    <div class="form-input-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="calculator-outline" />
+                        </span>
+                        <input class="form-input" type="number" id="number" name="number" min="7" max="99" required
+                            placeholder="0">
+                    </div>
+                </div>
+                <div>
+                    <label class="form-label" for="password">Type password</label>
+                    <div class="form-input-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="lock-closed-outline" />
+                        </span>
+                        <input class="form-input" type="password" id="password" name="password" minlength="8" required
+                            placeholder="your password">
+                    </div>
+                </div>
+                <pre class="clipboard h-rem-20" rel="Click and paste input type email">
+                    <code>
+&lt;label class=&quot;form-label&quot; for=&quot;email&quot;&gt;Type email&lt;/label&gt;
+&lt;div class=&quot;form-input-container&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;mail-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;email&quot; id=&quot;email&quot; minlength=&quot;8&quot; maxlength=&quot;32&quot; required
+        placeholder=&quot;your email&quot;&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-20" rel="Click and paste input type number">
+                    <code>
+&lt;label class=&quot;form-label&quot; for=&quot;number&quot;&gt;Type number&lt;/label&gt;
+&lt;div class=&quot;form-input-container&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;calculator-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;number&quot; id=&quot;number&quot; name=&quot;number&quot; min=&quot;7&quot; max=&quot;99&quot; required
+        placeholder=&quot;0&quot;&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-20" rel="Click and paste input type password">
+                    <code>
+&lt;label class=&quot;form-label&quot; for=&quot;password&quot;&gt;Type password&lt;/label&gt;
+&lt;div class=&quot;form-input-container&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;lock-closed-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; minlength=&quot;8&quot; required
+        placeholder=&quot;your password&quot;&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <div>
+                    <label class="form-label" for="search">Type search</label>
+                    <div class="form-input-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="search-outline" />
+                        </span>
+                        <input class="form-input" type="search" id="search" name="search" aria-label="Search"
+                            placeholder="your search">
+                    </div>
+                </div>
+                <div>
+                    <label class="form-label" for="tel">Type tel</label>
+                    <div class="form-input-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="call-outline" />
+                        </span>
+                        <input id="tel" class="form-input" type="tel" pattern="[0-9]+" name="tel" minlength="10"
+                            maxlength="14" required placeholder="your phone number">
+                    </div>
+                </div>
+                <div>
+                    <label class="form-label" for="text">Type text</label>
+                    <div class="form-input-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="pencil-outline" />
+                        </span>
+                        <input class="form-input" type="text" id="text" name="text" required minlength="1" maxlength="8"
+                            size="10" placeholder="Your text here...">
+                    </div>
+                </div>
+                <pre class="clipboard h-rem-20" rel="Click and paste input type search">
+                    <code>
+&lt;label class=&quot;form-label&quot; for=&quot;search&quot;&gt;Type search&lt;/label&gt;
+&lt;div class=&quot;form-input-container&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;search-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;search&quot; id=&quot;search&quot; name=&quot;search&quot; aria-label=&quot;Search&quot;
+        placeholder=&quot;your search&quot;&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-20" rel="Click and paste input type tel">
+                    <code>
+&lt;label class=&quot;form-label&quot; for=&quot;tel&quot;&gt;Type tel&lt;/label&gt;
+&lt;div class=&quot;form-input-container&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;call-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input id=&quot;tel&quot; class=&quot;form-input&quot; type=&quot;tel&quot; pattern=&quot;[0-9]+&quot; name=&quot;tel&quot; minlength=&quot;10&quot;
+        maxlength=&quot;14&quot; required placeholder=&quot;your phone number&quot;&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-20" rel="Click and paste input type text">
+                    <code>
+&lt;label class=&quot;form-label&quot; for=&quot;text&quot;&gt;Type text&lt;/label&gt;
+&lt;div class=&quot;form-input-container&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;pencil-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;text&quot; id=&quot;text&quot; name=&quot;text&quot; required minlength=&quot;1&quot; maxlength=&quot;8&quot;
+        size=&quot;10&quot; placeholder=&quot;Your text here...&quot;&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </div>
+            <div class="m-t-2">
+                <div>
+                    <label class="form-label" for="textarea2">Textarea</label>
+                    <div class="form-input-container textarea-container">
+                        <textarea id="textarea2" class="form-input h-rem-20" name="textarea2"
+                            placeholder="Your text here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <p class="note-turquoise">Click and paste textarea to your project</p>
+            <pre class="clipboard h-rem-20" rel="texarea">
+                <code>
+    &lt;label class=&quot;form-label&quot; for=&quot;textarea2&quot;&gt;Textarea&lt;/label&gt;
+    &lt;div class=&quot;form-input-container textarea-container&quot;&gt;
+        &lt;textarea id=&quot;textarea2&quot; class=&quot;form-input&quot; name=&quot;textarea2&quot;
+            placeholder=&quot;Your text here...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+                </code>
+            </pre>
+        </article>
+
+        <article class="m-b-8">
+            <h3 class="note-turquoise">
+                Checkbox & Radio inputs
+            </h3>
+            <p>The <code class="single-code t-navy">&lt;input type=&quot;checkbox&quot;&gt;</code> defines a checkbox.
+                Checkboxes are used to let a user select one or more options of a limited number of choices.
+                Add the <code class="single-code t-navy">&lt;label&gt;</code> tag for accessibility.
+            </p>
+            <p>
+                The <code class="single-code t-navy">&lt;input type=&quot;radio&quot;&gt;</code> defines a radio button.
+                Input radio are normally presented in radio groups. Only one radio button in a group can be selected at
+                the same time.
+                The radio group must have share the same name to be treated as a group.
+                Add the <code class="single-code t-navy">&lt;label&gt;</code> tag for accessibility.
+            </p>
+            <h4 class="note-turquoise m-t-8">Input type checkbox</h4>
+            <div class="g-col g-col-s-2 g-col-l-4">
+                <div class="d-flex i-center j-center p-2">
+                    <input id="checkbox1" class="check-yellow" type="checkbox">
+                    <label for="checkbox1">Checkbox</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="checkbox2" class="check-purple" type="checkbox" checked>
+                    <label for="checkbox2">Checkbox checked</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="checkbox1d" type="checkbox" disabled>
+                    <label for="checkbox1d">Checkbox disabled</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="checkbox2d" type="checkbox" checked disabled>
+                    <label for="checkbox2d">Checkbox checked disabled</label>
+                </div>
+            </div>
+            <pre class="clipboard h-rem-12" rel="Click and paste input type checkbox">
+                    <code>
+    &lt;input id=&quot;checkbox1&quot; class=&quot;check-yellow&quot; type=&quot;checkbox&quot;&gt;
+    &lt;label for=&quot;checkbox1&quot;&gt;Checkbox&lt;/label&gt;
+
+    &lt;input id=&quot;checkbox2&quot; class=&quot;check-purple&quot; type=&quot;checkbox&quot; checked&gt;
+    &lt;label for=&quot;checkbox2&quot;&gt;Checkbox checked&lt;/label&gt;
+
+    &lt;input id=&quot;checkbox1d&quot; type=&quot;checkbox&quot; disabled&gt;
+    &lt;label for=&quot;checkbox1d&quot;&gt;Checkbox disabled&lt;/label&gt;
+
+    &lt;input id=&quot;checkbox2d&quot; type=&quot;checkbox&quot; checked disabled&gt;
+    &lt;label for=&quot;checkbox2d&quot;&gt;Checkbox checked disabled&lt;/label&gt;
+                    </code>
+                </pre>
+            <h4 class="note-turquoise m-t-8">Input type radio</h4>
+            <div class="g-col g-col-s-2 g-col-l-4">
+                <div class="d-flex i-center j-center p-2">
+                    <input id="radio1" class="radio-red" type="radio" name="radio" value="1">
+                    <label for="radio1">Radio</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="radio2" class="radio-green" type="radio" name="radio" value="2" checked>
+                    <label for="radio2">Radio checked</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="r1d" type="radio" name="radiod" value="1" disabled>
+                    <label for="r1d">Radio disabled</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="r2d" type="radio" name="radiod" value="2" checked disabled>
+                    <label for="r2d">Radio checked disabled</label>
+                </div>
+            </div>
+            <pre class="clipboard h-rem-12" rel="Click and paste input type radio">
+                    <code>
+    &lt;input id=&quot;radio1&quot; class=&quot;radio-red&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;1&quot;&gt;
+    &lt;label for=&quot;radio1&quot;&gt;Radio&lt;/label&gt;
+
+    &lt;input id=&quot;radio2&quot; class=&quot;radio-green&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;2&quot; checked&gt;
+    &lt;label for=&quot;radio2&quot;&gt;Radio checked&lt;/label&gt;
+
+    &lt;input id=&quot;r1d&quot; type=&quot;radio&quot; name=&quot;radiod&quot; value=&quot;1&quot; disabled&gt;
+    &lt;label for=&quot;r1d&quot;&gt;Radio disabled&lt;/label&gt;
+
+    &lt;input id=&quot;r2d&quot; type=&quot;radio&quot; name=&quot;radiod&quot; value=&quot;2&quot; checked disabled&gt;
+    &lt;label for=&quot;r2d&quot;&gt;Radio checked disabled&lt;/label&gt;
+                    </code>
+                </pre>
+            <h4 class="note-turquoise m-t-8">Switch input type checkbox</h4>
+            <div class="g-col g-col-s-2 g-col-l-4">
+                <div class="d-flex i-center j-center p-2">
+                    <input id="switch1" type="checkbox" class="switch check-blue">
+                    <label for="switch1">Switch</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="s2" type="checkbox" class="switch check-orange" checked>
+                    <label for="s2">Switch checked</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="s1d" type="checkbox" class="switch" disabled>
+                    <label for="s1d">Switch disabled</label>
+                </div>
+                <div class="d-flex i-center j-center p-2">
+                    <input id="s2d" type="checkbox" class="switch" checked disabled>
+                    <label for="s2d">Switch checked disabled</label>
+                </div>
+            </div>
+            <pre class="clipboard h-rem-12" rel="Click and paste switch input ">
+                    <code>
+    &lt;input id=&quot;switch1&quot; type=&quot;checkbox&quot; class=&quot;switch check-blue&quot;&gt;
+    &lt;label for=&quot;switch1&quot;&gt;Switch&lt;/label&gt;
+
+    &lt;input id=&quot;s2&quot; type=&quot;checkbox&quot; class=&quot;switch check-orange&quot; checked&gt;
+    &lt;label for=&quot;s2&quot;&gt;Switch checked&lt;/label&gt;
+
+    &lt;input id=&quot;s1d&quot; type=&quot;checkbox&quot; class=&quot;switch&quot; disabled&gt;
+    &lt;label for=&quot;s1d&quot;&gt;Switch disabled&lt;/label&gt;
+
+    &lt;input id=&quot;s2d&quot; type=&quot;checkbox&quot; class=&quot;switch&quot; checked disabled&gt;
+    &lt;label for=&quot;s2d&quot;&gt;Switch checked disabled&lt;/label&gt;
+                    </code>
+                </pre>
+        </article>
+
+        <section id="formcolors" class="m-b-8">
+            <h3 class="note-turquoise">
+                Form colors
+            </h3>
+            <p>
+                You also can play around with form colors.
+                Just add <code class="single-code t-navy"> &lt;form class=&quot;form form-*&quot;&gt;</code>to your item
+                to change background color.
+            </p>
+            <p class="note-turquoise">Available form colors</p>
+            <div id="arrayForms" class="g-col g-col-l-2">
+                <form class="form" action="" method="">
+                    <fieldset class="form-title-container">
+                        <legend class="form-title">default</legend>
+                    </fieldset>
+                    <div class="form-body g-col g-col-l-2">
+                        <div>
+                            <div class="m-b-1">
+                                <label class="form-label" for="firstnamex1">Firstname</label>
+                                <div class="form-input-container">
+                                    <span class="form-icon">
+                                        <ion-icon class="input-icon" name="person-outline" />
+                                    </span>
+                                    <input id="firstnafirstnamex1me" class="form-input" type="text" minlength="2"
+                                        maxlength="20" placeholder="your firstname" required>
+                                </div>
+                            </div>
+                            <div class="m-b-1">
+                                <label class="form-label" for="lastnamex1">Lastname</label>
+                                <div class="form-input-container">
+                                    <span class="form-icon">
+                                        <ion-icon class="input-icon" name="person-outline" />
+                                    </span>
+                                    <input id="lastnamex1" class="form-input form-lastname" type="text" minlength="1"
+                                        maxlength="40" placeholder="your lastname" required>
+                                </div>
+                            </div>
+                            <div class="m-b-1">
+                                <label class="form-label" for="phonex1">Phone number</label>
+                                <div class="form-input-container">
+                                    <span class="form-icon">
+                                        <ion-icon class="input-icon" name="call-outline" />
+                                    </span>
+                                    <input id="phonex1" class="form-input" type="tel" pattern="[0-9]+" name="tel"
+                                        minlength="10" maxlength="14" placeholder="dial your phone number" required>
+                                </div>
+                            </div>
+                            <div class="m-b-1">
+                                <label class="form-label" for="mailx1">Type email</label>
+                                <div class="form-input-container">
+                                    <span class="form-icon">
+                                        <ion-icon class="input-icon" name="at-outline" />
+                                    </span>
+                                    <input class="form-input" type="email" id="mailx1" minlength="" maxlength=""
+                                        placeholder="your email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="m-b-4">
+                            <div class="h-prc-100">
+                                <label class="form-label" for="textareax1">Subject</label>
+                                <div class="form-input-container textarea-container">
+                                    <textarea id="textareax1" class="form-input" name="textarea"
+                                        placeholder="Your text here..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="g-col g-col-m-2">
+                        <div class="d-flex i-center j-between m-t-3">
+                            <div>
+                                <input class="switch check-turquoise" id="swi1x1" type="checkbox">
+                                <label for="swi1x1">accept</label>
+                            </div>
+                            <div>
+                                <input class="switch check-turquoise" id="swi2x1" type="checkbox">
+                                <label for="swi2x1">accept</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="form-input-container m-t-2">
+                                    <input class="form-input" type="submit" id="subx1" value="submit">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <p class="note-turquoise">Click and paste form colors to your project</p>
+            <pre class="clipboard h-rem-20" rel="Form colors">
+                <code>
+&lt;form class=&quot;form form-blue&quot; action=&quot;&quot; method=&quot;&quot;&gt;
+    &lt;fieldset class=&quot;form-title-container&quot;&gt;
+        &lt;legend class=&quot;form-title&quot;&gt;.form-blue&lt;/legend&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&quot;form-body g-col g-col-l-2&quot;&gt;
+        &lt;div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;a-2&quot;&gt;Firstname&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon md hydrated&quot; name=&quot;person-outline&quot; role=&quot;img&quot; aria-label=&quot;person outline&quot;&gt;
+                    &lt;/ion-icon&gt;&lt;/span&gt;
+                    &lt;input id=&quot;a-2&quot; class=&quot;form-input&quot; type=&quot;text&quot; minlength=&quot;2&quot; maxlength=&quot;20&quot; placeholder=&quot;your firstname&quot; required=&quot;&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;b-2&quot;&gt;Lastname&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon md hydrated&quot; name=&quot;person-outline&quot; role=&quot;img&quot; aria-label=&quot;person outline&quot;&gt;
+                    &lt;/ion-icon&gt;&lt;/span&gt;
+                    &lt;input id=&quot;b-2&quot; class=&quot;form-input form-lastname&quot; type=&quot;text&quot; minlength=&quot;1&quot; maxlength=&quot;40&quot; placeholder=&quot;your lastname&quot; required=&quot;&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;c-2&quot;&gt;Phone number&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon md hydrated&quot; name=&quot;call-outline&quot; role=&quot;img&quot; aria-label=&quot;call outline&quot;&gt;
+                    &lt;/ion-icon&gt;&lt;/span&gt;
+                    &lt;input id=&quot;c-2&quot; class=&quot;form-input&quot; type=&quot;tel&quot; pattern=&quot;[0-9]+&quot; name=&quot;tel&quot; minlength=&quot;10&quot; maxlength=&quot;14&quot; placeholder=&quot;your phone number&quot; required=&quot;&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;m-b-1&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;d-2&quot;&gt;Type email&lt;/label&gt;
+                &lt;div class=&quot;form-input-container&quot;&gt;
+                    &lt;span class=&quot;form-icon&quot;&gt;
+                        &lt;ion-icon class=&quot;input-icon md hydrated&quot; name=&quot;at-outline&quot; role=&quot;img&quot; aria-label=&quot;at outline&quot;&gt;
+                    &lt;/ion-icon&gt;&lt;/span&gt;
+                    &lt;input id=&quot;d-2&quot; class=&quot;form-input&quot; type=&quot;email&quot; minlength=&quot;&quot; maxlength=&quot;&quot; placeholder=&quot;your email&quot; required=&quot;&quot;&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;m-b-4&quot;&gt;
+            &lt;div class=&quot;h-prc-100&quot;&gt;
+                &lt;label class=&quot;form-label&quot; for=&quot;e-2&quot;&gt;Subject&lt;/label&gt;
+                &lt;div class=&quot;form-input-container textarea-container&quot;&gt;
+                    &lt;textarea id=&quot;e-2&quot; class=&quot;form-input&quot; name=&quot;textarea&quot; placeholder=&quot;Your text here...&quot;&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;g-col g-col-m-2&quot;&gt;
+        &lt;div class=&quot;d-flex i-center j-between m-t-3&quot;&gt;
+            &lt;div&gt;
+                &lt;input class=&quot;switch check-turquoise&quot; id=&quot;f-2&quot; type=&quot;checkbox&quot;&gt;
+                &lt;label for=&quot;f-2&quot;&gt;accept&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;input class=&quot;switch check-turquoise&quot; id=&quot;g-2&quot; type=&quot;checkbox&quot;&gt;
+                &lt;label for=&quot;g-2&quot;&gt;accept&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-input-container m-t-2&quot;&gt;
+            &lt;input class=&quot;form-input&quot; type=&quot;submit&quot; id=&quot;sub-a2&quot; value=&quot;submit&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-turquoise">
+                Input colors
+            </h3>
+            <p>
+                You also can play around with input colors.
+                If you want more control on each input and focus on a target, by example if a field is required.
+                Just add <code
+                    class="single-code t-navy"> &lt;div class=&quot;form-input-container input-container-*&quot;&gt;</code>to
+                your item to change background color.
+            </p>
+            <p class="note-turquoise">Text input colors</p>
+            <div id="arrayInputs" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4">
+                <div>
+                    <label class="form-label" for="t1">default</label>
+                    <div class="form-input-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="pencil-outline" />
+                        </span>
+                        <input class="form-input" type="text" id="t1" name="t1" required minlength="1" maxlength="8"
+                            size="10" placeholder="Your text here...">
+                    </div>
+                </div>
+            </div>
+            <div class="m-t-2">
+                <div>
+                    <label class="form-label" for="t13">.input-container-*</label>
+                    <div class="form-input-container textarea-container input-container-turquoise">
+                        <textarea id="t13" class="form-input h-rem-20" name="t13"
+                            placeholder="TEXTAREA : Your text here..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <p class="note-turquoise">Click and paste input colors to your project</p>
+            <pre class="clipboard h-rem-20" rel="writable input colors">
+                <code>
+&lt;label class=&quot;form-label&quot; for=&quot;t3&quot;&gt;input&lt;/label&gt;
+&lt;div class=&quot;form-input-container input-container-blue&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;pencil-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;text&quot; id=&quot;t3&quot; name=&quot;t3&quot; required minlength=&quot;1&quot; maxlength=&quot;8&quot;
+        size=&quot;10&quot; placeholder=&quot;Your text here...&quot;&gt;
+&lt;/div&gt;
+
+&lt;label class=&quot;form-label&quot; for=&quot;t13&quot;&gt;textarea&lt;/label&gt;
+&lt;div class=&quot;form-input-container textarea-container input-container-turquoise&quot;&gt;
+    &lt;textarea id=&quot;t13&quot; class=&quot;form-input&quot; name=&quot;t13&quot; placeholder=&quot;TEXTAREA : Your text here...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-turquoise">
+                Input icon colors
+            </h3>
+            <p>
+                If you still want more control on each input and focus on a target, by example if a field is required,
+                just add <code
+                    class="single-code t-navy"> &lt;div class=&quot;form-input-container input-icon-container-*&quot;&gt;</code>to
+                your item to change background color.
+            </p>
+            <p class="note-turquoise">Text input colors</p>
+            <div id="arrayIconInputs" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4">
+                <div>
+                    <label class="form-label" for="ta1">default</label>
+                    <div class="form-input-container input-icon-container">
+                        <span class="form-icon">
+                            <ion-icon class="input-icon" name="pencil-outline" />
+                        </span>
+                        <input class="form-input" type="text" id="ta1" name="ta1" required minlength="1" maxlength="8"
+                            size="10" placeholder="Your text here...">
+                    </div>
+                </div>
+            </div>
+            <p class="note-turquoise">Click and paste input icon colors to your project</p>
+            <pre class="clipboard h-rem-20" rel="writable input icon colors">
+                <code>
+&lt;label class=&quot;form-label&quot; for=&quot;ta1&quot;&gt;default&lt;/label&gt;
+&lt;div class=&quot;form-input-container input-icon-container-blue&quot;&gt;
+    &lt;span class=&quot;form-icon&quot;&gt;
+        &lt;ion-icon class=&quot;input-icon&quot; name=&quot;pencil-outline&quot; /&gt;
+    &lt;/span&gt;
+    &lt;input class=&quot;form-input&quot; type=&quot;text&quot; id=&quot;ta1&quot; name=&quot;ta1&quot; required minlength=&quot;1&quot; maxlength=&quot;8&quot;
+        size=&quot;10&quot; placeholder=&quot;Your text here...&quot;&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-turquoise">
+                Checkbox & Radio input colors
+            </h3>
+            <p>Just add <code
+                    class="single-code t-navy">&lt;input id=&quot;yourID&quot; class=&quot;check-*&quot; type=&quot;checkbox&quot;&gt;</code>
+                to your item to change background color.</p>
+            <h4 class="note-turquoise m-b-2 m-t-8">Checkbox input colors</h4>
+            <div id="arrayCheckboxes" class="g-col g-col-s-2 g-col-l-4 g-col-xl-5"></div>
+            <pre class="clipboard m-t-2 h-rem-10" rel="checkbox colors">
+                <code>
+&lt;input id=&quot;j-1&quot; class=&quot;check-blue&quot; type=&quot;checkbox&quot; checked&gt;
+&lt;label for=&quot;j-1&quot;&gt;.check-blue&lt;/label&gt;
+                </code>
+            </pre>
+            <h4 class="note-turquoise m-t-8">Radio input colors</h4>
+            <p>Just add <code
+                    class="single-code t-navy">&lt;input id=&quot;yourID&quot; class=&quot;radio-*&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;X&quot;&gt;</code>
+                to your item to change background color.</p>
+            <div id="arrayRadios" class="g-col g-col-s-2 g-col-l-4 g-col-xl-5"></div>
+            <pre class="clipboard m-t-2 h-rem-10" rel="radio colors">
+                    <code>
+&lt;input id=&quot;radio1&quot; class=&quot;radio-red&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;1&quot;&gt;
+&lt;label for=&quot;radio1&quot;&gt;Radio&lt;/label&gt;
+&lt;input id=&quot;radio2&quot; class=&quot;radio-green&quot; type=&quot;radio&quot; name=&quot;radio&quot; value=&quot;2&quot; checked&gt;
+&lt;label for=&quot;radio2&quot;&gt;Radio checked&lt;/label&gt;
+                    </code>
+                </pre>
+            <h4 class="note-turquoise m-t-8">Switch input colors</h4>
+            <p>Just add <code
+                    class="single-code t-navy">&lt;input id=&quot;yourID&quot; type=&quot;checkbox&quot; class=&quot;switch check-*&quot;&gt;</code>
+                to your item to change background color.</p>
+            <div id="arraySwitches" class="g-col g-col-s-2 g-col-l-4 g-col-xl-5"></div>
+            <pre class="clipboard m-t-2 h-rem-10" rel="switch colors">
+                <code>
+&lt;input id=&quot;l-2&quot; type=&quot;checkbox&quot; class=&quot;switch check-pink&quot; checked&gt;
+&lt;label for=&quot;l-2&quot;&gt;.switch .check-pink&lt;/label&gt;
+                </code>
+            </pre>
+        </section>                        
+    </main>
+    <footer class="bg-grad-turquoise-dark">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="script/straightForm.js"></script>
+    <script src="script/form.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>

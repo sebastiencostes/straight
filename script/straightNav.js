@@ -19,16 +19,16 @@ window.addEventListener("load", () => {
       color: "orange",
     },
     {
-      link: "/chart.html",
-      linkName: "chart",
-      icon: "stats-chart-outline",
-      color: "turquoise",
-    },
-    {
       link: "/color.html",
       linkName: "color",
       icon: "color-palette-outline",
       color: "black",
+    },
+    {
+      link: "/form.html",
+      linkName: "form",
+      icon: "mail-outline",
+      color: "turquoise",
     },
     {
       link: "/grid.html",
@@ -81,7 +81,6 @@ window.addEventListener("load", () => {
   ];
   const straightNav = document.querySelector("#straightNav.nav");
   const switchNav = document.querySelector("#straightNav .switch-nav");
-  const menu = document.querySelector("#straightNav .nav-menu");
   const menuItems = document.querySelectorAll(".nav-menu-item");
   const openBtn = document.querySelector("#straightNav.nav .open");
   const closeBtn = document.querySelector("#straightNav.nav .close");
@@ -130,8 +129,7 @@ window.addEventListener("load", () => {
           switchNav.classList.remove(
             "nav-pad-menu",
             "d-grid",
-            "g-col-s-2",
-            "g-col-m-3",
+            "g-col-s-3",
             "g-col-l-4",
             "g-col-xl-5",
             "g-col-xxl-6"
@@ -164,8 +162,7 @@ window.addEventListener("load", () => {
           switchNav.classList.remove(
             "nav-pad-menu",
             "d-grid",
-            "g-col-s-2",
-            "g-col-m-3",
+            "g-col-s-3",
             "g-col-l-4",
             "g-col-xl-5",
             "g-col-xxl-6"
@@ -176,8 +173,7 @@ window.addEventListener("load", () => {
           switchNav.classList.add(
             "nav-pad-menu",
             "d-grid",
-            "g-col-s-2",
-            "g-col-m-3",
+            "g-col-s-3",
             "g-col-l-4",
             "g-col-xl-5",
             "g-col-xxl-6"

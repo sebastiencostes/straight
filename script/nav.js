@@ -29,8 +29,7 @@ Switching between show and hide menu
           menu.classList.remove(
             "nav-pad-menu",
             "d-grid",
-            "g-col-s-2",
-            "g-col-m-3",
+            "g-col-s-3",
             "g-col-l-4",
             "g-col-xl-5",
             "g-col-xxl-6"
@@ -97,8 +96,7 @@ Switching between show and hide menu
           menuPad.classList.add(
             "nav-pad-menu",
             "d-grid",
-            "g-col-s-2",
-            "g-col-m-3",
+            "g-col-s-3",
             "g-col-l-4",
             "g-col-xl-5",
             "g-col-xxl-6"
@@ -109,8 +107,7 @@ Switching between show and hide menu
           menuPad.classList.remove(
             "nav-pad-menu",
             "d-grid",
-            "g-col-s-2",
-            "g-col-m-3",
+            "g-col-s-3",
             "g-col-l-4",
             "g-col-xl-5",
             "g-col-xxl-6"
@@ -139,8 +136,7 @@ Switching between show and hide menu
         : (menuPad.classList.remove(
             "nav-pad-menu",
             "d-grid",
-            "g-col-s-2",
-            "g-col-m-3",
+            "g-col-s-3",
             "g-col-l-4",
             "g-col-xl-5",
             "g-col-xxl-6"
@@ -158,8 +154,7 @@ Switching between show and hide menu
         menuPad.classList.remove(
           "nav-pad-menu",
           "d-grid",
-          "g-col-s-2",
-          "g-col-m-3",
+          "g-col-s-3",
           "g-col-l-4",
           "g-col-xl-5",
           "g-col-xxl-6"
