@@ -15019,25 +15019,47 @@ button ion-icon {
 h1 {
   font-size: clamp(4rem, 3.44rem + 2vw, 7.2rem);
 }
+h1::first-letter {
+  text-transform: capitalize;
+}
 
 h2 {
   font-size: clamp(3.2rem, 2.64rem + 2vw, 6.4rem);
+}
+h2::first-letter {
+  text-transform: capitalize;
 }
 
 h3 {
   font-size: clamp(2.4rem, 1.84rem + 2vw, 5.6rem);
 }
+h3::first-letter {
+  text-transform: capitalize;
+}
 
 h4 {
   font-size: clamp(2.4rem, 1.98rem + 1.5vw, 4.8rem);
+}
+h4::first-letter {
+  text-transform: capitalize;
 }
 
 h5 {
   font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
 }
+h5::first-letter {
+  text-transform: capitalize;
+}
 
 h6 {
   font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+}
+h6::first-letter {
+  text-transform: capitalize;
+}
+
+p::first-letter {
+  text-transform: capitalize;
 }
 
 p,
@@ -16655,6 +16677,11 @@ code span {
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
 }
 
+/*
+*********
+HIGHLIGHT
+*********
+*/
 .hljs {
   color: #78909c;
   background-color: #efefef;
@@ -17419,23 +17446,45 @@ input[type=radio].radio-black {
   color: #eee;
 }
 
-.presentation {
+.header-presentation {
   display: grid;
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
   row-gap: 2rem;
-  justify-content: center;
   height: calc(50vh - 8rem);
   align-items: center;
   margin-bottom: 8rem;
   margin-top: 8rem;
   padding: 2rem;
 }
-.presentation-title {
+.header-presentation-title {
   text-transform: uppercase;
-  font-size: clamp(4.1rem, 3.1375rem + 3.4375vw, 9.6rem);
+  font-size: clamp(4.8rem, 3.9600rem + 3.0000vw, 9.6rem);
   letter-spacing: 1.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  display: grid;
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+}
+.header-title {
+  text-transform: uppercase;
+  font-size: clamp(3.2rem, 2.3600rem + 3.0000vw, 8rem);
+  letter-spacing: 1.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.header-article-title {
+  letter-spacing: 0.8rem;
 }
 
 .responsive-img {

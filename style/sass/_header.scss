@@ -6,9 +6,9 @@
 @use "margin" as m;
 @use "padding" as p;
 
-.presentation {
+.header {
+  &-presentation {
   @include g.g-container();
-  @include fx.justify-content(center);
   @include h.height(calc(50vh - 8rem));
   @include fx.align-items(center);
   @include m.margin-direction(bottom, 8rem);
@@ -16,7 +16,31 @@
   @include p.padding(2rem);
   &-title {
     @include f.text-transform(uppercase);
-    font-size: clamp(4.1rem, 3.1375rem + 3.4375vw, 9.6rem);
+    font-size: clamp(4.8rem, 3.9600rem + 3.0000vw, 9.6rem);
     letter-spacing: 1.6rem;
+    text-align: center;
+    width: 100%;
   }
+}
+}
+
+.header {
+  @include g.g-container();
+  @include fx.align-items(center);
+  @include p.padding(2rem);
+  &-title {
+    @include f.text-transform(uppercase);
+    font-size: clamp(3.2rem, 2.3600rem + 3.0000vw, 8rem);
+    letter-spacing: 1.6rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.header {
+  &-article {
+  &-title {
+    letter-spacing: .8rem;
+  }
+}
 }

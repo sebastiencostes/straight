@@ -50,6 +50,11 @@ code span {
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
 }
 
+/*
+*********
+HIGHLIGHT
+*********
+*/
 .hljs {
   color: c.$navy;
   background-color: c.$grey-light;

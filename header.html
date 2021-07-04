@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Header,">
+    <title>Straight | Header</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-yellow" role="presentation">
+        <h1 class="header-presentation-title t-carbon">header</h1>
+    </header>
+
+    <main class="container-fix">
+      
+        <h2 class="note-yellow header-article-title">
+            About Header
+        </h2>
+        <p>
+            Header represents introductory content, typically a group of introductory or navigational aids.
+            It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+            Despite its name, it is not necessarily placed at the beginning of the page.
+        </p>
+        <aside class="m-b-8">
+            <p>
+                If you don't use a background image, check more about colors at <a href="/color.html" rel="noopener">color module</a>.
+            </p>
+        </aside>
+     
+
+        <article class="m-b-8">
+            <header class="note-yellow header-article ">
+                <h3 class="header-article-title">
+                    Header models
+                </h3>
+            </header>
+            <p>
+                <b>Page Header</b> with class 
+                <code class="single-code t-navy"> &lt;header class=&quot;presentation&quot; role=&quot;presentation&quot;&gt;</code>
+                is designed to work with <a href="/nav.html" rel="noopener">Nav</a>.
+                <b>Header</b> with class <code class="single-code t-navy"> &lt;header class=&quot;header&quot;&gt;</code> is a standalone.
+                <b>Header article</b> with class <code class="single-code t-navy"> &lt;header class=&quot;header-article&quot;&gt;</code>  works inside an article.
+            </p>
+        </article>
+
+        <section>
+            <header class="header-presentation bg-yellow">
+                <h3 class="header-presentation-title t-carbon">
+                    Page Header
+                </h3>
+            </header>
+
+            <header class="note-yellow header h-vh-33 bg-yellow m-b-8">
+                <h3 class="header-title t-carbon">
+                    header
+                </h3>
+            </header>
+        
+            <header class="note-yellow header-article m-b-8">
+                <h3 class="header-article-title">
+                    Article header
+                </h3>
+            </header>
+        </section>
+    
+    </main>
+    <footer class="bg-grad-yellow-dark t-carbon">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>
