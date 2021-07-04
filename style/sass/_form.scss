@@ -131,6 +131,9 @@ Checkable inputs (radio & checkbox)
         --x: 1.7rem;
       }
       &:disabled {
+        --active: #323232;
+        --border: #323232;
+        --border-hover: #323232;
         &:not(:checked) {
           &:after {
             opacity: 0.6;
@@ -264,6 +267,7 @@ input[type="week"] {
   &:disabled {
     background-color: c.$grey-light;
     opacity: 0.6;
+    cursor: not-allowed;
   }
 }
 
@@ -337,6 +341,12 @@ Form shared
 }
 .input-icon {
   @extend %input-icon-shared;
+}
+/*
+Textarea
+*/
+.textarea-container {
+  @include h.height(100%);
 }
 
 /*
@@ -763,11 +773,4 @@ Form color's rules for writable inputs
       }
     }
   }
-}
-
-/*
-Textarea
-*/
-.textarea-container {
-  @include h.height(100%);
 }

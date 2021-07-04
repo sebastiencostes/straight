@@ -159,6 +159,8 @@ button:-moz-focusring,
 [type="submit"],
 button {
   -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
 }
 
 [type="button"]:not(:disabled),
@@ -176,8 +178,20 @@ button:not(:disabled) {
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
+  appearance: none;
   height: auto;
 }
+
+input[type=number] {
+  -moz-appearance: texfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 
 [type="search"] {
   -webkit-appearance: textfield;
@@ -188,21 +202,14 @@ button:not(:disabled) {
   -webkit-appearance: none;
 }
 
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; 
+}
+
 [hidden] {
   display: none;
-}
-
-code,
-pre,
-samp {
-  //display: block;
-}
-
-code,
-kbd,
-samp {
-  //font-family: monospace, monospace;
-  //font-size: 1em;
 }
 
 img,
@@ -266,10 +273,6 @@ details {
   display: block;
 }
 
-// fieldset {
-//   padding: 0.35em 0.75em 0.625em;
-// }
-
 hr {
   box-sizing: content-box;
   height: 0;
@@ -299,11 +302,6 @@ main {
 
 mark {
   display: inline-block;
-}
-
-pre {
-  //font-family: monospace, monospace;
-  //font-size: 1em;
 }
 
 progress {
@@ -350,7 +348,7 @@ th {
 
 ul {
   padding-inline-start: 0;
-  margin:0;
+  margin: 0;
 }
 
 :root {
