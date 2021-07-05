@@ -1,22 +1,54 @@
 @use "height" as h;
 @use "flexbox" as fx;
 @use "grid" as g;
-@use "color" as c;
 @use "font" as f;
 @use "margin" as m;
 @use "padding" as p;
+@use "position" as pos;
 
-.presentation {
+%header-shared {
   @include g.g-container();
-  @include fx.justify-content(center);
-  @include h.height(calc(50vh - 8rem));
   @include fx.align-items(center);
-  @include m.margin-direction(bottom, 8rem);
-  @include m.margin-direction(top, 8rem);
   @include p.padding(2rem);
+}
+
+%header-title-shared {
+  @include f.text-transform(uppercase);
+  letter-spacing: 1.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  &-presentation {
+    @extend %header-shared;
+    @include h.height(calc(50vh - 8rem));
+    @include m.margin-direction(bottom, 8rem);
+    @include m.margin-direction(top, 8rem);
+    &-title {
+      @extend %header-title-shared;
+      font-size: clamp(4.8rem, 3.96rem + 3vw, 9.6rem);
+    }
+  }
+}
+
+.header {
+  @extend %header-shared;
   &-title {
-    @include f.text-transform(uppercase);
-    font-size: clamp(4.1rem, 3.1375rem + 3.4375vw, 9.6rem);
-    letter-spacing: 1.6rem;
+    @extend %header-title-shared;
+    font-size: clamp(3.2rem, 2.36rem + 3vw, 8rem);
+  }
+}
+
+.header {
+  &-image {
+    @include p.padding(2rem);
+    @include pos.position(relative);
+    &-title {
+      @extend %header-title-shared;
+      @include pos.pos-absolute-centering();
+      @include f.text-overlay();
+      font-size: clamp(3.2rem, 2.36rem + 3vw, 8rem);
+    }
   }
 }

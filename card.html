@@ -49,24 +49,22 @@
         </ul>
     </nav>
     
-    <header class="presentation bg-grad-pink" role="presentation">
-        <h1 class="presentation-title t-white">Card</h1>
+    <header class="header-presentation bg-grad-pink" role="presentation">
+        <h1 class="header-presentation-title t-white">Card</h1>
     </header>
 
     <main class="container-fix">
 
-        <section class="m-b-8">
-            <h2 class="note-pink">
-                About Card
-            </h2>
-            <p>
-                Cards allows you to show some many contents. Related Informations must be short, clear and explicit.
-                They offers the possibility to make some actions, add some medias and many more.
-                Cards are the deal to preview your products, projects and more. 
-            </p>
-        </section>
-
-        <section>
+        <h2 class="note-pink">
+            About Card
+        </h2>
+        <p>
+            Cards allows you to show some many contents. Related Informations must be short, clear and explicit.
+            They offers the possibility to make some actions, add some medias and many more.
+            Cards are the deal to preview your products, projects and more. 
+        </p>
+   
+        <section class="m-t-8">
             <h3 class="note-pink">
                 Card models
             </h3>
@@ -79,16 +77,16 @@
                 When using <b>Card Carousel</b>
                 you <b>must create and keep an id</b> on <code class="single-code t-navy"> &lt;figure id=&quot;yourCarouselID&quot; class=&quot;carousel&quot;&gt;</code>.
             </p>
-            <aside>
-                <p>You can check more about carousel at <a href="carousel.html" rel="noopener">carousel module</a>.</p>
-            </aside>
+            <asside>
+                <p>You can check more about carousels at <a href="carousel.html" rel="noopener">carousel module</a>.</p>
+            </asside>
             <p>
                 When using <b>Card Action</b>
                 you <b>must keep the data-attr</b> <code class="single-code t-navy"> &lt;data-card=&quot;let it blank&quot;&gt;</code> on appropriate tag elements.
             </p>
         </section>
 
-        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2">
+        <div class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2">
             <article class="card b-shadow">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">simple card</h4>
@@ -126,26 +124,26 @@
                             alt="">
                     </picture>
                 </figure>
-                <aside class="card-body d-none" data-card="0">
-                    <div class="card-body-header">
+                <section class="card-body d-none" data-card="0">
+                    <heaheader class="card-body-header">
                         <h4 class="card-body-title">
                             card action
                         </h4>
                         <button class="card-cta btn-square-s close" type="button" data-card="0">
                             <ion-icon name="close-outline" />
                         </button>
-                    </div>
+                    </heaheader>
                     <p class="card-body-text">
                         your scrollable content here...
                     </p>
-                    <div class="card-body-footer">
+                    <foofooter class="card-body-footer">
                         <div class="card-footer-left-container">
                             <span class="card-left-text">
                                 Card action
                             </span>
                         </div>
-                    </div>
-                </aside>
+                    </foofooter>
+                </section>
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
@@ -171,19 +169,19 @@
                             alt="">
                     </picture>
                 </a>
-                <aside class="card-body d-none" data-card="171">
-                    <div class="card-body-header">
+                <section class="card-body d-none" data-card="171">
+                    <header class="card-body-header">
                         <h4 class="card-body-title">
                             <a href="#" rel="noopener">linked card</a>
                         </h4>
                         <button class="card-cta btn-square-s close" type="button" data-card="171">
                             <ion-icon name="close-outline" />
                         </button>
-                    </div>
+                    </header>
                     <p class="card-body-text">
                         your scrollable content here...
                     </p>
-                    <div class="card-body-footer">
+                    <footer class="card-body-footer">
                         <div class="card-body-footer-left-container">
                             <span class="card-left-text">
                                 23<sup>€90</sup>
@@ -203,8 +201,8 @@
                                 <ion-icon name="cart" />
                             </button>
                         </div>
-                    </div>
-                </aside>
+                    </footer>
+                </section>
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
@@ -255,15 +253,15 @@
                         <ion-icon class="t-overlay" name="caret-forward" />
                     </button>
                 </figure>
-                <aside class="card-body d-none" data-card="12">
-                    <div class="card-body-header">
+                <section class="card-body d-none" data-card="12">
+                    <header class="card-body-header">
                         <h4 class="card-body-title t-ellipsis">
                             <a href="#">card carousel</a>
                         </h4>
                         <button class="card-cta btn-square-s close" data-card="12" type="button">
                             <ion-icon name="close-outline" />
                         </button>
-                    </div>
+                    </header>
                     <p class="card-body-text t-justify">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -280,7 +278,7 @@
                         vitamins (thiamine hydrochloride, pyridoxine hydrochloride, folic acid, d-calcium pantothenate),
                         minerals (iron, zinc oxide).
                     </details>
-                    <div class="card-body-footer">
+                    <footer class="card-body-footer">
                         <div class="card-footer-left-container">
                             <span class="card-left-text">
                                 11<sup>€90</sup>
@@ -300,8 +298,8 @@
                                 <ion-icon name="cart" />
                             </button>
                         </div>
-                    </div>
-                </aside>
+                    </footer>
+                </section>
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
@@ -315,15 +313,13 @@
                     </div>
                 </footer>
             </article>
-        </section>
+        </div>
 
-        <section>
-            <h3 class="note-pink">
-                Copy to clipboard
-            </h3>
-            <p>Click and paste card models to your project</p>
-        </section>
-
+        <h3 class="note-pink">
+            Copy to clipboard
+        </h3>
+        <p>Click and paste card models to your project</p>
+  
         <div class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-t-2 m-b-8">
 
             <pre class="h-rem-46 clipboard" rel="SIMPLE CARD">
@@ -334,10 +330,10 @@
     &lt;/header&gt;
     &lt;figure class=&quot;card-img-container&quot;&gt;
         &lt;picture&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/image.png&quot; alt=&quot;&quot;&gt;
         &lt;/picture&gt;
     &lt;/figure&gt;
     &lt;footer class=&quot;card-footer&quot;&gt;
@@ -356,39 +352,39 @@
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;card action&lt;/h4&gt;
-        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;0&quot;&gt;
+        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
         &lt;/button&gt;
     &lt;/header&gt;
     &lt;figure class=&quot;card-img-container&quot;&gt;
         &lt;picture&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/image.png&quot;
                 alt=&quot;&quot;&gt;
         &lt;/picture&gt;
     &lt;/figure&gt;
-    &lt;aside class=&quot;card-body d-none&quot; data-card=&quot;0&quot;&gt;
-        &lt;div class=&quot;card-body-header&quot;&gt;
+    &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+        &lt;header class=&quot;card-body-header&quot;&gt;
             &lt;h4 class=&quot;card-body-title&quot;&gt;
                 card action
             &lt;/h4&gt;
-            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;0&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
                 &lt;ion-icon name=&quot;close-outline&quot; /&gt;
             &lt;/button&gt;
-        &lt;/div&gt;
+        &lt;/header&gt;
         &lt;p class=&quot;card-body-text&quot;&gt;
             your scrollable content here...
         &lt;/p&gt;
-        &lt;div class=&quot;card-body-footer&quot;&gt;
+        &lt;foofooter class=&quot;card-body-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
                     Card action
                 &lt;/span&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/aside&gt;
+        &lt;/foofooter&gt;
+    &lt;/section&gt;
     &lt;footer class=&quot;card-footer&quot;&gt;
         &lt;div class=&quot;card-footer-left-container&quot;&gt;
             &lt;span class=&quot;card-left-text&quot;&gt;
@@ -405,32 +401,32 @@
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
-        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;171&quot;&gt;
+        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
         &lt;/button&gt;
     &lt;/header&gt;
     &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
         &lt;picture&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/image.png&quot;
                 alt=&quot;&quot;&gt;
         &lt;/picture&gt;
     &lt;/a&gt;
-    &lt;aside class=&quot;card-body d-none&quot; data-card=&quot;171&quot;&gt;
-        &lt;div class=&quot;card-body-header&quot;&gt;
+    &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+        &lt;header class=&quot;card-body-header&quot;&gt;
             &lt;h4 class=&quot;card-body-title&quot;&gt;
                 &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
             &lt;/h4&gt;
-            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;171&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
                 &lt;ion-icon name=&quot;close-outline&quot; /&gt;
             &lt;/button&gt;
-        &lt;/div&gt;
+        &lt;/header&gt;
         &lt;p class=&quot;card-body-text&quot;&gt;
             your scrollable content here...
         &lt;/p&gt;
-        &lt;div class=&quot;card-body-footer&quot;&gt;
+        &lt;footer class=&quot;card-body-footer&quot;&gt;
             &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
                     23&lt;sup&gt;&euro;90&lt;/sup&gt;
@@ -450,8 +446,8 @@
                     &lt;ion-icon name=&quot;cart&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/aside&gt;
+        &lt;/footer&gt;
+    &lt;/section&gt;
     &lt;footer class=&quot;card-footer&quot;&gt;
         &lt;div class=&quot;card-footer-left-container&quot;&gt;
             &lt;span class=&quot;card-left-text&quot;&gt;
@@ -473,30 +469,30 @@
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;card carousel&lt;/h4&gt;
-        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;12&quot;&gt;
+        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
         &lt;/button&gt;
     &lt;/header&gt;
-    &lt;figure id=&quot;cardCarousel12&quot; class=&quot;carousel card-img-container&quot;&gt;
+    &lt;figure id=&quot;yourID&quot; class=&quot;carousel card-img-container&quot;&gt;
         &lt;picture class=&quot;carousel-slide&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/card/cardV.png&quot;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPathTo/image.png&quot;
                 alt=&quot;&quot;&gt;
         &lt;/picture&gt;
         &lt;picture class=&quot;carousel-slide&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/card/cardVblue.png&quot;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPathTo/image.png&quot;
                 alt=&quot;&quot;&gt;
         &lt;/picture&gt;
         &lt;picture class=&quot;carousel-slide&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/card/cardVpurple.png&quot;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/image.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPathTo/image.png&quot;
                 alt=&quot;&quot;&gt;
         &lt;/picture&gt;
         &lt;button class=&quot;carousel-cta carousel-prev btn-square-s&quot; type=&quot;button&quot;&gt;
@@ -506,15 +502,15 @@
             &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;caret-forward&quot; /&gt;
         &lt;/button&gt;
     &lt;/figure&gt;
-    &lt;aside class=&quot;card-body d-none&quot; data-card=&quot;12&quot;&gt;
-        &lt;div class=&quot;card-body-header&quot;&gt;
+    &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+        &lt;header class=&quot;card-body-header&quot;&gt;
             &lt;h4 class=&quot;card-body-title t-ellipsis&quot;&gt;
                 &lt;a href=&quot;#&quot;&gt;card carousel&lt;/a&gt;
             &lt;/h4&gt;
-            &lt;button class=&quot;card-cta btn-square-s close&quot; data-card=&quot;12&quot; type=&quot;button&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s close&quot; data-card=&quot;&quot; type=&quot;button&quot;&gt;
                 &lt;ion-icon name=&quot;close-outline&quot; /&gt;
             &lt;/button&gt;
-        &lt;/div&gt;
+        &lt;/header&gt;
         &lt;p class=&quot;card-body-text t-justify&quot;&gt;
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -531,7 +527,7 @@
             vitamins (thiamine hydrochloride, pyridoxine hydrochloride, folic acid, d-calcium pantothenate),
             minerals (iron, zinc oxide).
         &lt;/details&gt;
-        &lt;div class=&quot;card-body-footer&quot;&gt;
+        &lt;footer class=&quot;card-body-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
                     11&lt;sup&gt;&euro;90&lt;/sup&gt;
@@ -551,8 +547,8 @@
                     &lt;ion-icon name=&quot;cart&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/aside&gt;
+        &lt;/footer&gt;
+    &lt;/section&gt;
     &lt;footer class=&quot;card-footer&quot;&gt;
         &lt;div class=&quot;card-footer-left-container&quot;&gt;
             &lt;span class=&quot;card-left-text&quot;&gt;
@@ -570,14 +566,12 @@
             </pre>
         </div>
 
-        <section>
-            <h3 class="note-pink">
-                Card-h models variant
-            </h3>
-            <p><code class="single-code t-navy">&lt;article class=&quot;card card-h&quot;&gt;</code></p>
-        </section>
+        <h3 class="note-pink">
+            Card-h models
+        </h3>
+        <p><code class="single-code t-navy">&lt;article class=&quot;card card-h&quot;&gt;</code></p>
 
-        <section class="g-col g-col-m-2 g-col-l-3 m-b-2">
+        <div class="g-col g-col-m-2 g-col-l-3 m-b-2">
 
             <article class="card card-h b-shadow">
                 <header class="card-header">
@@ -645,19 +639,19 @@
                         </picture>
                     </a>
                 </figure>
-                <aside class="card-body d-none" data-card="400">
-                    <div class="card-body-header">
+                <section class="card-body d-none" data-card="400">
+                    <header class="card-body-header">
                         <h4 class="card-body-title">
                             <a href="#" rel="noopener">card action</a>
                         </h4>
                         <button class="card-cta btn-square-s close" type="button" data-card="400">
                             <ion-icon name="close-outline" />
                         </button>
-                    </div>
+                    </header>
                     <p class="card-body-text">
                         your scrollable content here...
                     </p>
-                    <div class="card-body-footer">
+                    <footer class="card-body-footer">
                         <div class="card-footer-left-container">
                             <span class="card-left-text">
                                 119<sup>€90</sup>
@@ -677,8 +671,8 @@
                                 <ion-icon name="cart" />
                             </button>
                         </div>
-                    </div>
-                </aside>
+                    </footer>
+                </section>
                 <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
@@ -692,14 +686,12 @@
                     </div>
                 </footer>
             </article>
-        </section>
+        </div>
  
-        <section>
-            <h3 class="note-pink">
-                Copy to clipboard
-            </h3>
-            <p>Click and paste card-h to your project</p>
-        </section>
+        <h3 class="note-pink">
+            Copy to clipboard
+        </h3>
+        <p>Click and paste card-h to your project</p>
 
         <div class="g-col g-col-m-2 g-col-l-3 m-b-8">
             <pre class="h-rem-28 clipboard" rel="CARD-H SIMPLE CARD">
@@ -710,10 +702,10 @@
     &lt;/header&gt;
     &lt;figure class=&quot;card-img-container&quot;&gt;
         &lt;picture&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
         &lt;/picture&gt;
     &lt;/figure&gt;
     &lt;footer class=&quot;card-footer&quot;&gt;
@@ -731,14 +723,15 @@
                 <code>
 &lt;article class=&quot;card card-h b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
-        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;&lt;a href=&quot;#&quot;rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;&lt;/h4&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;&lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;&lt;/h4&gt;
     &lt;/header&gt;
     &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
         &lt;picture&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot;alt=&quot;&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot;
+                alt=&quot;&quot;&gt;
         &lt;/picture&gt;
     &lt;/a&gt;
     &lt;footer class=&quot;card-footer&quot;&gt;
@@ -762,34 +755,34 @@
 &lt;article class=&quot;card card-h b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;&lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;card action&lt;/a&gt;&lt;/h4&gt;
-        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;400&quot;&gt;
+        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;ellipsis-horizontal&quot; size=&quot;small&quot; /&gt;
         &lt;/button&gt;
     &lt;/header&gt;
     &lt;figure class=&quot;card-img-container&quot;&gt;
         &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
             &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot;
                     alt=&quot;&quot;&gt;
             &lt;/picture&gt;
         &lt;/a&gt;
     &lt;/figure&gt;
-    &lt;aside class=&quot;card-body d-none&quot; data-card=&quot;400&quot;&gt;
-        &lt;div class=&quot;card-body-header&quot;&gt;
+    &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+        &lt;header class=&quot;card-body-header&quot;&gt;
             &lt;h4 class=&quot;card-body-title&quot;&gt;
                 &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;card action&lt;/a&gt;
             &lt;/h4&gt;
-            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;400&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
                 &lt;ion-icon name=&quot;close-outline&quot; /&gt;
             &lt;/button&gt;
-        &lt;/div&gt;
+        &lt;/header&gt;
         &lt;p class=&quot;card-body-text&quot;&gt;
             your scrollable content here...
         &lt;/p&gt;
-        &lt;div class=&quot;card-body-footer&quot;&gt;
+        &lt;footer class=&quot;card-body-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
                     119&lt;sup&gt;&euro;90&lt;/sup&gt;
@@ -809,8 +802,8 @@
                     &lt;ion-icon name=&quot;cart&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/aside&gt;
+        &lt;/footer&gt;
+    &lt;/section&gt;
     &lt;footer class=&quot;card-footer&quot;&gt;
         &lt;div class=&quot;card-footer-left-container&quot;&gt;
             &lt;span class=&quot;card-left-text&quot;&gt;
@@ -828,14 +821,12 @@
             </pre>
         </div>
 
-        <section>
-            <h3 class="note-pink">
-                Card-l models variant
-            </h3>
-            <p><code class="single-code t-navy">&lt;article class=&quot;card card-l&quot;&gt;</code></p>
-        </section>
+        <h3 class="note-pink">
+            Card-l models
+        </h3>
+        <p><code class="single-code t-navy">&lt;article class=&quot;card card-l&quot;&gt;</code></p>
 
-        <section class="g-col g-col-l-2 m-b-2">
+        <div class="g-col g-col-l-2 m-b-2">
             <article class="card card-l b-shadow">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">simple card</h4>
@@ -895,14 +886,12 @@
                     </div>
                 </footer>
             </article>
-        </section>
+        </div>
 
-        <section>
-            <h3 class="note-pink">
-                Copy to clipboard
-            </h3>
-            <p>Click and paste card-l to your project</p>
-        </section>
+        <h3 class="note-pink">
+            Copy to clipboard
+        </h3>
+        <p>Click and paste card-l to your project</p>
 
         <div class="g-col g-col-m-2 m-b-8">
             <pre class="h-rem-20 clipboard" rel="CARD-L SIMPLE CARD">
@@ -913,10 +902,10 @@
     &lt;/header&gt;
     &lt;figure class=&quot;card-img-container&quot;&gt;
         &lt;picture&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-            &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
         &lt;/picture&gt;
     &lt;/figure&gt;
     &lt;footer class=&quot;card-footer&quot;&gt;
@@ -935,16 +924,16 @@
 &lt;article class=&quot;card card-l b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;
-            &lt;a href=&quot;#&quot;rel=&quot;noopener&quot;&gt;linked action card&lt;/a&gt;
+            &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked action card&lt;/a&gt;
         &lt;/h4&gt;
     &lt;/header&gt;
     &lt;figure class=&quot;card-img-container&quot;&gt;
-        &lt;a href=&quot;#&quot;rel=&quot;noopener&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
             &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
         &lt;/a&gt;
     &lt;/figure&gt;
@@ -974,237 +963,316 @@
             </pre>
         </div>
 
-        <section>
-            <h3 class="note-pink">
-                Card gallery example
-            </h3>
-            <p>Here a basic grid layout example with bordered simple cards. Resize your window to see it in action.</p>
-        </section>
-        
-        <section class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-b-2">
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-        </section>
+        <h3 class="note-pink">
+            Card gallery example
+        </h3>
+        <p>Here a basic grid layout example with bordered simple cards. Resize your window to see it in action.</p>
+        <asidde>
+            <p>you can check more about layouts at <a href="/layout.html" rel="noopener">layout module</a></p>.
+        </asidde>
 
-        <section>
-            <h3 class="note-pink">
-                Copy to clipboard
-            </h3>
-            <p>Click and paste card gallery to your project</p>
-        </section>
+        <div class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-b-2">
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card border">
+                <header class="card-header b-bottom">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1200px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 768px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer b-top">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>This is a passive card</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+        </div>
+
+        <h3 class="note-pink">
+            Copy to clipboard
+        </h3>
+        <p>Click and paste card gallery to your project</p>
 
         <div class="m-b-8">
             <pre class="h-rem-46 clipboard" rel="SIMPLE CARD GALLERY">
                 <code>
-&lt;section class=&quot;g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-t-2 m-b-8&quot;&gt;
+&lt;div class=&quot;g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5&quot;&gt;
     &lt;article class=&quot;card border&quot;&gt;
         &lt;header class=&quot;card-header b-bottom&quot;&gt;
             &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
         &lt;/header&gt;
         &lt;figure class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card border&quot;&gt;
+    &lt;header class=&quot;card-header b-bottom&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;/header&gt;
+    &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                &lt;span&gt;This is a passive card&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/article&gt;
+&lt;article class=&quot;card border&quot;&gt;
+    &lt;header class=&quot;card-header b-bottom&quot;&gt;
+        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;/header&gt;
+    &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;div class=&quot;card-footer-left-container&quot;&gt;
+            &lt;span class=&quot;card-left-text&quot;&gt;
+                &lt;span&gt;This is a passive card&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+    &lt;/article&gt;
+        &lt;article class=&quot;card border&quot;&gt;
+        &lt;header class=&quot;card-header b-bottom&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+        &lt;article class=&quot;card border&quot;&gt;
+        &lt;header class=&quot;card-header b-bottom&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
         &lt;/figure&gt;
         &lt;footer class=&quot;card-footer b-top&quot;&gt;
@@ -1221,10 +1289,10 @@
         &lt;/header&gt;
         &lt;figure class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
         &lt;/figure&gt;
         &lt;footer class=&quot;card-footer b-top&quot;&gt;
@@ -1241,10 +1309,10 @@
         &lt;/header&gt;
         &lt;figure class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
         &lt;/figure&gt;
         &lt;footer class=&quot;card-footer b-top&quot;&gt;
@@ -1261,10 +1329,10 @@
         &lt;/header&gt;
         &lt;figure class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
         &lt;/figure&gt;
         &lt;footer class=&quot;card-footer b-top&quot;&gt;
@@ -1281,10 +1349,10 @@
         &lt;/header&gt;
         &lt;figure class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
         &lt;/figure&gt;
         &lt;footer class=&quot;card-footer b-top&quot;&gt;
@@ -1301,10 +1369,10 @@
         &lt;/header&gt;
         &lt;figure class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
         &lt;/figure&gt;
         &lt;footer class=&quot;card-footer b-top&quot;&gt;
@@ -1315,101 +1383,24 @@
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
-        &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
-            &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
-            &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
-            &lt;div class=&quot;card-footer-left-container&quot;&gt;
-                &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
-                &lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
-        &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
-            &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
-            &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
-            &lt;div class=&quot;card-footer-left-container&quot;&gt;
-                &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
-                &lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
-        &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
-            &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
-            &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
-            &lt;div class=&quot;card-footer-left-container&quot;&gt;
-                &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
-                &lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
-        &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
-            &lt;picture&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardV.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVpurple.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-                &lt;source srcset=&quot;/assets/img/card/cardVblue.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
-                &lt;img class=&quot;card-img&quot; src=&quot;/assets/img/card/cardV.png&quot; alt=&quot;&quot;&gt;
-            &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
-            &lt;div class=&quot;card-footer-left-container&quot;&gt;
-                &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
-                &lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/footer&gt;
-    &lt;/article&gt;
-&lt;/section&gt;
+&lt;/div&gt;
                 </code>
             </pre>
         </div>
 
-        <section>
-            <h3 class="note-pink">
-                Card gallery example with variations
-            </h3>
-            <p><b>Click on one all of these buttons</b> just below to see variations in action.
-            Here a basic example of possibilities.
+        <h3 class="note-pink">
+            Card gallery example with variations
+        </h3>
+        <p><b>Click on one all of these buttons</b> just below to see variations in action.
+        Here a basic example of possibilities.
+        </p>
+        <aside>
+            <p>
+                you can check more about buttons at <a href="/button.html" rel="noopener">button module</a>
             </p>
-        </section>
+        </aside>
 
-        <section id="cardGalleryExample" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2">
+        <div id="cardGalleryExample" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2">
             <div class="card-galllery-example-cta t-right">
                 <button id="vGrid" class="btn-square-l btn-pink m-r-5" type="button">
                     <ion-icon class="t-white" name="tablet-portrait" />
@@ -1581,7 +1572,7 @@
                     </div>
                 </footer>
             </article>
-        </section>
+        </div>
 
     </main>
     <footer>

@@ -441,6 +441,7 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -15019,25 +15020,47 @@ button ion-icon {
 h1 {
   font-size: clamp(4rem, 3.44rem + 2vw, 7.2rem);
 }
+h1::first-letter {
+  text-transform: capitalize;
+}
 
 h2 {
   font-size: clamp(3.2rem, 2.64rem + 2vw, 6.4rem);
+}
+h2::first-letter {
+  text-transform: capitalize;
 }
 
 h3 {
   font-size: clamp(2.4rem, 1.84rem + 2vw, 5.6rem);
 }
+h3::first-letter {
+  text-transform: capitalize;
+}
 
 h4 {
   font-size: clamp(2.4rem, 1.98rem + 1.5vw, 4.8rem);
+}
+h4::first-letter {
+  text-transform: capitalize;
 }
 
 h5 {
   font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
 }
+h5::first-letter {
+  text-transform: capitalize;
+}
 
 h6 {
   font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+}
+h6::first-letter {
+  text-transform: capitalize;
+}
+
+p::first-letter {
+  text-transform: capitalize;
 }
 
 p,
@@ -15069,6 +15092,10 @@ p {
   cursor: default;
 }
 
+.title {
+  letter-spacing: 0.8rem;
+}
+
 .t-white {
   color: #ffffff;
 }
@@ -15088,7 +15115,7 @@ p {
   }
 }
 ion-icon {
-  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
 }
 
 ion-icon {
@@ -16655,6 +16682,11 @@ code span {
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
 }
 
+/*
+*********
+HIGHLIGHT
+*********
+*/
 .hljs {
   color: #78909c;
   background-color: #efefef;
@@ -17419,23 +17451,51 @@ input[type=radio].radio-black {
   color: #eee;
 }
 
-.presentation {
+.header, .header-presentation {
   display: grid;
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
   row-gap: 2rem;
-  justify-content: center;
-  height: calc(50vh - 8rem);
   align-items: center;
-  margin-bottom: 8rem;
-  margin-top: 8rem;
   padding: 2rem;
 }
-.presentation-title {
+
+.header-image-title, .header-title, .header-presentation-title {
   text-transform: uppercase;
-  font-size: clamp(4.1rem, 3.1375rem + 3.4375vw, 9.6rem);
   letter-spacing: 1.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.header-presentation {
+  height: calc(50vh - 8rem);
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+}
+.header-presentation-title {
+  font-size: clamp(4.8rem, 3.96rem + 3vw, 9.6rem);
+}
+
+.header-title {
+  font-size: clamp(3.2rem, 2.36rem + 3vw, 8rem);
+}
+
+.header-image {
+  padding: 2rem;
+  position: relative;
+}
+.header-image-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  -webkit-filter: drop-shadow(1px 1px 2px #000000);
+  filter: drop-shadow(1px 1px 2px #000000);
+  font-weight: 400;
+  font-size: clamp(3.2rem, 2.36rem + 3vw, 8rem);
 }
 
 .responsive-img {
