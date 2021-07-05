@@ -441,6 +441,7 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -15091,6 +15092,10 @@ p {
   cursor: default;
 }
 
+.title {
+  letter-spacing: 0.8rem;
+}
+
 .t-white {
   color: #ffffff;
 }
@@ -15110,7 +15115,7 @@ p {
   }
 }
 ion-icon {
-  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
 }
 
 ion-icon {
@@ -17446,45 +17451,51 @@ input[type=radio].radio-black {
   color: #eee;
 }
 
-.header-presentation {
+.header, .header-presentation {
   display: grid;
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
   column-gap: 2rem;
   row-gap: 2rem;
-  height: calc(50vh - 8rem);
   align-items: center;
+  padding: 2rem;
+}
+
+.header-image-title, .header-title, .header-presentation-title {
+  text-transform: uppercase;
+  letter-spacing: 1.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+.header-presentation {
+  height: calc(50vh - 8rem);
   margin-bottom: 8rem;
   margin-top: 8rem;
-  padding: 2rem;
 }
 .header-presentation-title {
-  text-transform: uppercase;
-  font-size: clamp(4.8rem, 3.9600rem + 3.0000vw, 9.6rem);
-  letter-spacing: 1.6rem;
-  text-align: center;
-  width: 100%;
+  font-size: clamp(4.8rem, 3.96rem + 3vw, 9.6rem);
 }
 
-.header {
-  display: grid;
-  -webkit-column-gap: 2rem;
-  -moz-column-gap: 2rem;
-  column-gap: 2rem;
-  row-gap: 2rem;
-  align-items: center;
-  padding: 2rem;
-}
 .header-title {
-  text-transform: uppercase;
-  font-size: clamp(3.2rem, 2.3600rem + 3.0000vw, 8rem);
-  letter-spacing: 1.6rem;
-  text-align: center;
-  width: 100%;
+  font-size: clamp(3.2rem, 2.36rem + 3vw, 8rem);
 }
 
-.header-article-title {
-  letter-spacing: 0.8rem;
+.header-image {
+  padding: 2rem;
+  position: relative;
+}
+.header-image-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  -webkit-filter: drop-shadow(1px 1px 2px #000000);
+  filter: drop-shadow(1px 1px 2px #000000);
+  font-weight: 400;
+  font-size: clamp(3.2rem, 2.36rem + 3vw, 8rem);
 }
 
 .responsive-img {

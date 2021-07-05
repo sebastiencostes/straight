@@ -1,18 +1,22 @@
 @mixin position($value) {
-    position: $value;
+  position: $value;
 }
 .pos-relative {
-    @include position(relative);
+  @include position(relative);
 }
 .pos-absolute {
-    @include position(absolute);
+  @include position(absolute);
 }
 .pos-fixed {
-    @include position(fixed);
+  @include position(fixed);
+}
+@mixin pos-absolute-centering() {
+  @include position(absolute);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .pos-absolute-centering {
-    @include position(absolute);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  @include pos-absolute-centering();
 }

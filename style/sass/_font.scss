@@ -132,6 +132,9 @@ h6,
 p {
   cursor: default;
 }
+.title {
+  letter-spacing: 0.8rem;
+}
 
 .t-white {
   color: c.$white;
@@ -154,7 +157,7 @@ p {
 }
 
 ion-icon {
-  font-size: clamp(2.4rem, 2.2600rem + 0.5000vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
 }
 
 ion-icon {

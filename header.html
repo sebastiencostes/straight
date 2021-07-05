@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description"
-        content="Straight framework, Header,">
+    <meta name="description" content="Straight framework, Header represents introductory content, typically a group of introductory or navigational aids.">
     <title>Straight | Header</title>
     <link rel="apple-touch-icon" href="/192x192.png">
     <link rel="preload" href="style/css/style.css" as="style">
@@ -53,8 +52,8 @@
     </header>
 
     <main class="container-fix">
-      
-        <h2 class="note-yellow header-article-title">
+
+        <h2 class="note-yellow">
             About Header
         </h2>
         <p>
@@ -64,46 +63,111 @@
         </p>
         <aside class="m-b-8">
             <p>
-                If you don't use a background image, check more about colors at <a href="/color.html" rel="noopener">color module</a>.
+                If you don't use an image to your header, check more about colors at <a href="/color.html"
+                    rel="noopener">color module</a>.
             </p>
         </aside>
-     
 
         <article class="m-b-8">
-            <header class="note-yellow header-article ">
-                <h3 class="header-article-title">
+            <header class="note-yellow">
+                <h3>
                     Header models
                 </h3>
             </header>
             <p>
-                <b>Page Header</b> with class 
-                <code class="single-code t-navy"> &lt;header class=&quot;presentation&quot; role=&quot;presentation&quot;&gt;</code>
+                <b>Page Header</b> with class
+                <code
+                    class="single-code t-navy"> &lt;header class=&quot;header-presentation&quot; role=&quot;presentation&quot;&gt;</code>
                 is designed to work with <a href="/nav.html" rel="noopener">Nav</a>.
-                <b>Header</b> with class <code class="single-code t-navy"> &lt;header class=&quot;header&quot;&gt;</code> is a standalone.
-                <b>Header article</b> with class <code class="single-code t-navy"> &lt;header class=&quot;header-article&quot;&gt;</code>  works inside an article.
             </p>
+            <p><b>Header</b> with class <code class="single-code t-navy"> &lt;header class=&quot;header&quot;&gt;</code>
+                is a standalone.</p>
+            <p><b>Image header</b> with class <code
+                    class="single-code t-navy">&lt;header class=&quot;header-image bg-yellow&quot;&gt;</code> is a
+                standalone</p>
         </article>
 
         <section>
-            <header class="header-presentation bg-yellow">
-                <h3 class="header-presentation-title t-carbon">
+            <h3 class="note-yellow m-b-2">
+                Page header
+            </h3>
+            <p>This is the same model used into this site</p>
+            <div class="header h-vh-50 bg-yellow">
+                <h4 class="header-presentation-title t-carbon">
                     Page Header
-                </h3>
-            </header>
+                </h4>
+            </div>
+            <h4 class="note-yellow m-t-2">
+                Copy to clipboard
+            </h4>
+            <p>Click and paste page header to your project</p>
+            <pre class="clipboard m-b-8 h-rem-16" rel="page header">
+                <code>
+&lt;header class=&quot;header-presentation bg-yellow&quot; role=&quot;presentation&quot;&gt;
+    &lt;h1 class=&quot;header-presentation-title t-carbon&quot;&gt;your title&lt;/h1&gt;
+&lt;/header&gt;
+                </code>
+            </pre>
 
-            <header class="note-yellow header h-vh-33 bg-yellow m-b-8">
-                <h3 class="header-title t-carbon">
+            <h3 class="note-yellow m-b-2">
+                Header
+            </h3>
+            <div class="header h-vh-33 bg-yellow">
+                <h4 class="header-title t-carbon">
                     header
-                </h3>
-            </header>
-        
-            <header class="note-yellow header-article m-b-8">
-                <h3 class="header-article-title">
-                    Article header
-                </h3>
-            </header>
+                </h4>
+            </div>
+            <h4 class="note-yellow m-t-2">
+                Copy to clipboard
+            </h4>
+            <p>Click and paste header to your project</p>
+            <pre class="clipboard m-b-8 h-rem-16" rel="header">
+                <code>
+&lt;header class=&quot;header h-vh-33 bg-yellow&quot;&gt;
+    &lt;h3 class=&quot;header-title t-carbon&quot;&gt;
+        your title
+    &lt;/h3&gt;
+&lt;/header&gt;
+                </code>
+            </pre>
+
+            <h3 class="note-yellow m-b-2">
+                header with image
+            </h3>
+            <div class="header-image bg-yellow">
+                <h4 class="header-image-title">
+                    image header
+                </h4>
+                <picture>
+                    <source srcset="/assets/img/header/header.png" media="(min-width: 1200px)">
+                    <source srcset="/assets/img/header/headerDesktop.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/header/headerTabLand.png" media="(min-width: 768px)">
+                    <img class="responsive-img" src="/assets/img/header/headerTabPort.png" alt="">
+                </picture>
+            </div>
+            <h4 class="note-yellow m-t-2">
+                Copy to clipboard
+            </h4>
+            <p>Click and paste image header to your project</p>
+            <pre class="clipboard m-b-8 h-rem-16" rel="image header">
+                <code>
+&lt;header class=&quot;header-image bg-yellow&quot;&gt;
+    &lt;h3 class=&quot;header-image-title&quot;&gt;
+        your title
+    &lt;/h3&gt;
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/pathTo/image.png&quot; media=&quot;(min-width: 1366px)&quot;&gt;
+        &lt;source srcset=&quot;/pathTo/image.png&quot; media=&quot;(min-width: 1200px)&quot;&gt;
+        &lt;source srcset=&quot;/pathTo/image.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/pathTo/image.png&quot; media=&quot;(min-width: 768px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/image.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+&lt;/header&gt;
+                </code>
+            </pre>
+
         </section>
-    
+
     </main>
     <footer class="bg-grad-yellow-dark t-carbon">
         footer
