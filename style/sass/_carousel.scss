@@ -1,16 +1,28 @@
+@use "font" as f;
 @use "position" as p;
 @use "margin" as m;
 @use "device" as d;
 @use "utility" as u;
+@use "width" as w;
 
+/*
+***************
+CAROUSEL SHARED
+***************
+*/
 %carousel-shared {
   overflow: hidden;
+  @include p.position(relative);
   %carousel-slide-shared {
     @include p.position(relative);
     -webkit-animation-name: carousel;
     animation-name: carousel;
     -webkit-animation-duration: u.$time;
     animation-duration: u.$time;
+  }
+  %carousel-text-container-shared {
+    @include w.width(100%);
+    @include f.text-align(center);
   }
   %carousel-text-shared {
     @include d.tablet-landscape() {
@@ -20,18 +32,12 @@
   }
   %carousel-cta-shared {
     @include p.position(absolute);
-    top: calc(50% - 2.4rem);
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
   }
   %carousel-next-shared {
     right: 0;
-  }
-  &%caption-shared {
-    .carousel-cta {
-      top: calc(35% - 3rem);
-    }
   }
 }
 
@@ -40,20 +46,85 @@
   &-slide {
     @extend %carousel-slide-shared;
   }
-  &-text {
-    @extend %carousel-text-shared;
-  }
   &-cta {
     @extend %carousel-cta-shared;
+    top: calc(50% - 2.4rem);
+    &-icon {
+      @include f.text-overlay();
+    }
   }
   &-next {
     @extend %carousel-next-shared;
   }
-  &-caption {
-    @extend %caption-shared;
+}
+
+/*
+****************
+CAROUSEL OVERLAY
+****************
+*/
+.carousel-overlay {
+  @extend %carousel-shared;
+  .carousel-slide {
+    @extend %carousel-slide-shared;
+  }
+  .carousel-title {
+    @include f.text-overlay();
+  }
+  .carousel-text-container {
+    @extend %carousel-text-container-shared;
+    @include p.pos-absolute-centering();
+  }
+  .carousel-text {
+    @extend %carousel-text-shared;
+    @include f.text-overlay();
+  }
+  .carousel-cta {
+    @extend %carousel-cta-shared;
+    top: calc(50% - 2.4rem);
+    &-icon {
+      @include f.text-overlay();
+    }
+  }
+  .carousel-next {
+    @extend %carousel-next-shared;
   }
 }
 
+/*
+****************
+CAROUSEL CAPTION
+****************
+*/
+.carousel-caption {
+  @extend %carousel-shared;
+  .carousel-slide {
+    @extend %carousel-slide-shared;
+  }
+  .carousel-text-container {
+    @extend %carousel-text-container-shared;
+  }
+  .carousel-text {
+    @extend %carousel-text-shared;
+  }
+  .carousel-cta {
+    @extend %carousel-cta-shared;
+    top: calc(35% - 3rem);
+    &-icon {
+      @include f.text-overlay();
+    }
+  }
+  .carousel-next {
+    @extend %carousel-next-shared;
+  }
+}
+
+
+/*
+*********
+ANIMATION
+*********
+*/
 @-webkit-keyframes carousel {
   from {
     -webkit-filter: brightness(0.5);
