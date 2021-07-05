@@ -10,57 +10,27 @@
 @use "width" as w;
 @use "z-index" as z;
 
+/*
+************
+SHARED STYLE
+************
+*/
 %card-shared {
   @include fx.d-flex();
   @include h.height(100%);
   @include pos.position(relative);
-  @include fx.f-dir-col();
   background-clip: border-box;
   overflow: hidden;
-  &%-h-shared {
-    @include fx.f-dir-row-reverse();
-    & .card-header {
-      @include h.height(50%);
-      @include w.max-width(50%);
-      @include fx.items-start();
-      -webkit-box-flex: 1;
-      -ms-flex: 1 0 50%;
-      flex: 1 0 50%;
-    }
-    & .card-title {
-      font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
-    }
-    & .card-footer {
-      @include fx.items-end();
-      @include p.padding(1rem);
-      @include pos.position(absolute);
-      @include h.height(50%);
-      @include w.width(50%);
-      bottom: 0;
-    }
-  }
-  &%-l-shared {
-    @include fx.f-dir-row-reverse();
-    & .card-header {
-      @include fx.align-items(flex-start);
-      @include h.height(50%);
-      @include w.max-width(75%);
-      -webkit-box-flex: 1;
-      -ms-flex: 1 0 75%;
-      flex: 1 0 75%;
-    }
-    & .card-title {
-      font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
-    }
-    & .card-footer {
-      @include fx.align-items(flex-end);
-      @include h.height(50%);
-      @include p.padding(1rem);
-      @include pos.position(absolute);
-      @include w.width(75%);
-      bottom: 0;
-    }
-  }
+}
+%card-header-shared {
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include p.padding(1rem);
+  @include fx.align-items(center);
+  @include h.height(6rem);
+}
+%card-title-shared {
+  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
 }
 %card-img-container-shared {
   position: relative;
@@ -68,20 +38,12 @@
 %card-img-shared {
   @include w.width(100%);
 }
-%card-header-shared,
-%card-body-header-shared {
+%card-footer-shared {
   @include fx.d-flex();
   @include fx.justify-between();
-  @include p.padding(1rem);
   @include fx.align-items(center);
+  @include p.padding(1rem);
   @include h.height(6rem);
-}
-%card-title-shared,
-%card-body-title-shared {
-  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
-  &::first-letter {
-    @include f.text-transform(capitalize);
-  }
 }
 %card-body-shared {
   @include fx.f-dir-col();
@@ -94,21 +56,8 @@
   top: 0;
 }
 %card-body-text-shared {
-  &::first-letter {
-    @include f.text-transform(capitalize);
-  }
-}
-%card-body-text-shared {
   @include m.margin(2rem 0 2rem);
   @include p.padding(0 2rem);
-}
-%card-body-footer-shared,
-%card-footer-shared {
-  @include fx.d-flex();
-  @include fx.justify-between();
-  @include fx.align-items(center);
-  @include p.padding(1rem);
-  @include h.height(6rem);
 }
 %card-body-footer-shared {
   @include m.margin-direction(top, auto);
@@ -116,7 +65,7 @@
 %card-left-text-shared {
   cursor: default;
 }
-%card-sup {
+%card-sup-shared {
   top: inherit;
   @include f.font-size(0.65em);
   vertical-align: 0.41em;
@@ -124,70 +73,120 @@
 %card-cta-shared {
   @include p.padding(0);
 }
+%card-h-l-header-shared {
+  @include h.height(50%);
+  @include fx.items-start();
+}
+%card-h-l-footer-shared {
+  @include fx.items-end();
+  @include h.height(50%);
+  @include p.padding(1rem);
+  @include pos.position(absolute);
+  bottom: 0;
+}
+%card-h-l-title-shared {
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+}
 
+/*
+****
+CARD
+****
+*/
 .card {
   @extend %card-shared;
+  @include fx.f-dir-col();
   &-cta {
     @extend %card-cta-shared;
   }
   &-header {
     @extend %card-header-shared;
   }
-  &-img-container {
-    @extend %card-img-container-shared;
-  }
-  &-img {
-    @extend %card-img-shared;
-  }
   &-title {
     @extend %card-title-shared;
   }
-  &-body {
-    @extend %card-body-shared;
-    &-header {
-      @extend %card-body-header-shared;
-    }
-    &-title {
-      @extend %card-body-title-shared;
-    }
-    &-text {
-      @extend %card-body-text-shared;
-    }
-    &-footer {
-      @extend %card-body-footer-shared;
+  &-img {
+    @extend %card-img-shared;
+    &-container {
+      @extend %card-img-container-shared;
     }
   }
   &-footer {
     @extend %card-footer-shared;
   }
+  &-body {
+    @extend %card-body-shared;
+    &-header {
+      @extend %card-header-shared;
+    }
+    &-title {
+      @extend %card-title-shared;
+    }
+    &-text {
+      @extend %card-body-text-shared;
+    }
+    &-footer {
+      @extend %card-footer-shared;
+      @extend %card-body-footer-shared;
+    }
+  }
   &-left-text {
     @extend %card-left-text-shared;
   }
-  & sup {
-    @extend %card-sup;
+  sup {
+    @extend %card-sup-shared;
   }
-  &-h {
-    @extend %-h-shared;
-  }
-  &-l {
-    @extend %-l-shared;
-  }
-}
-
-.card-galllery-example-cta {
-  @include d.tablet-portrait() {
-    @include g.g-col-end(3);
-  } 
-  @include d.tablet-landscape() {
-    @include g.g-col-end(4);
-  }  
-  @include d.laptop() {
-    @include g.g-col-end(5);
-  }  
 }
 
 /*
-Theme
+******
+CARD-H
+******
+*/
+.card-h {
+  @include fx.f-dir-row-reverse();
+  .card-header {
+    @extend %card-h-l-header-shared;
+    @include w.max-width(50%);
+    -webkit-box-flex: 1;
+    flex: 1 0 50%;
+  }
+  .card-title {
+    @extend %card-h-l-title-shared;
+  }
+  .card-footer {
+    @extend %card-h-l-footer-shared;
+    @include w.width(50%);
+  }
+}
+
+/*
+******
+CARD-L
+******
+*/
+.card-l {
+  @include fx.f-dir-row-reverse();
+  .card-header {
+    @extend %card-h-l-header-shared;
+    @include w.max-width(75%);
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 75%;
+    flex: 1 0 75%;
+  }
+  .card-title {
+    @extend %card-h-l-title-shared;
+  }
+  .card-footer {
+    @extend %card-h-l-footer-shared;
+    @include w.width(75%);
+  }
+}
+
+/*
+*****
+THEME
+*****
 */
 @include c.dark-theme {
   .card {
@@ -202,5 +201,22 @@ Theme
     &-body {
       background-color: c.$white;
     }
+  }
+}
+
+/*
+*************
+INNER EXAMPLE
+*************
+*/
+.card-galllery-example-cta {
+  @include d.tablet-portrait() {
+    @include g.g-col-end(3);
+  }
+  @include d.tablet-landscape() {
+    @include g.g-col-end(4);
+  }
+  @include d.laptop() {
+    @include g.g-col-end(5);
   }
 }

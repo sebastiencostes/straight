@@ -31,8 +31,8 @@ window.addEventListener("load", () => {
       color: "turquoise",
     },
     {
-      link: "/grid.html",
-      linkName: "grid",
+      link: "/layout.html",
+      linkName: "layout",
       icon: "grid-outline",
       color: "navy",
     },

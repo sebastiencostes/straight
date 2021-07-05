@@ -126,6 +126,7 @@ Align items
   @include items-start;
 }
 @mixin items-end {
+  -webkit-box-align: end;
   align-items: flex-end;
 }
 .i-end {
