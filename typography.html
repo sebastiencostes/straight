@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Typography">
+    <title>Straight | Typography</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-brown" role="presentation">
+        <h1 class="header-presentation-title t-white">typography</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-brown">
+            About Typography
+        </h2>
+        <p>
+           Straight framework works with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()" target="_blank" rel="noopener">CSS clamp property </a>to sizing text.
+        </p>
+
+        <h3 class="note-brown m-t-8">
+            heading
+        </h3>
+        <p>
+            The <code class="single-code t-navy">&lt;h1&gt;</code>  to <code class="single-code t-navy">&lt;h6&gt;</code>HTML elements represent six levels of section headings.
+            <code class="single-code t-navy">&lt;h1&gt;</code> is the highest section level and <code class="single-code t-navy">&lt;h6&gt;</code> is the lowest.
+            Using more than one <code class="single-code t-navy">&lt;h1&gt;</code> is allowed by the HTML specification, but is not considered a best practice. 
+            Using only one <code class="single-code t-navy">&lt;h1&gt;</code> is beneficial for screenreader users. Heading classes are also available.
+            You can add some classes to align your text and more...
+        </p>
+        <div class="g-col g-col-l-2 m-b-8">
+
+        <section>
+            <p class="h1">h1 heading</p>
+            <p class="h2">h2 heading</p>
+            <p class="h3">h3 heading</p>
+            <p class="h4">h4 heading</p>
+            <p class="h5">h5 heading</p>
+            <p class="h6">h6 heading</p>
+        </section>
+
+        <section>
+            <p class="h1">h1 heading class</p>
+            <p class="h2">h2 heading class</p>
+            <p class="h3">h3 heading class</p>
+            <p class="h4">h4 heading class</p>
+            <p class="h5">h5 heading class</p>
+            <p class="h6">h6 heading class</p>
+        </section>
+
+        <pre class="clipboard h-rem-20" rel="heading">
+            <code>
+&lt;h1&gt;h1 heading&lt;/h1&gt;
+&lt;h2&gt;h2 heading&lt;/h2&gt;
+&lt;h3&gt;h3 heading&lt;/h3&gt;
+&lt;h4&gt;h4 heading&lt;/h4&gt;
+&lt;h5&gt;h5 heading&lt;/h5&gt;
+&lt;h6&gt;h6 heading&lt;/h6&gt;
+            </code>
+        </pre>
+
+        <pre class="clipboard h-rem-20" rel="heading class">
+            <code>
+&lt;p class=&quot;h1&quot;&gt;h1 heading class&lt;/p&gt;
+&lt;p class=&quot;h2&quot;&gt;h2 heading class&lt;/p&gt;
+&lt;p class=&quot;h3&quot;&gt;h3 heading class&lt;/p&gt;
+&lt;p class=&quot;h4&quot;&gt;h4 heading class&lt;/p&gt;
+&lt;p class=&quot;h5&quot;&gt;h5 heading class&lt;/p&gt;
+&lt;p class=&quot;h6&quot;&gt;h6 heading class&lt;/p&gt;
+            </code>
+        </pre>
+    </div>
+
+    <h3 class="note-brown">
+        paragraph
+    </h3>
+    <p>
+        The <code class="single-code t-navy">&lt;p&gt;</code> HTML element represents a paragraph.
+        Paragraphs are usually represented in visual media as blocks of text. You can add some classes to align your text and more...
+    </p>
+    <div class="m-b-8">
+        <p class="note-brown">
+            neutral
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="note-brown">
+            justify <code class="single-code t-navy">&lt;p class=&quot;t-justify&quot;&gt;</code>
+        </p>
+        <p class="t-justify">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="note-brown">
+            center <code class="single-code t-navy">&lt;p class=&quot;t-center&quot;&gt;</code>
+        </p>
+        <p class="t-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="note-brown">
+            left <code class="single-code t-navy">&lt;p class=&quot;t-left&quot;&gt;</code>
+        </p>
+        <p class="t-left">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="note-brown">
+            right <code class="single-code t-navy">&lt;p class=&quot;t-right&quot;&gt;</code>
+        </p>
+        <p class="t-right">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="note-brown">
+            ellipsis <code class="single-code t-navy">&lt;p class=&quot;t-ellipsis&quot;&gt;</code>
+        </p>
+        <p class="t-ellipsis">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="note-brown">
+            uppercase <code class="single-code t-navy">&lt;p class=&quot;t-uppercase&quot;&gt;</code>
+        </p>
+        <p class="t-uppercase">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="note-brown">
+            lowercase <code class="single-code t-navy">&lt;p class=&quot;t-capitalize&quot;&gt;</code>
+        </p>
+        <p class="t-capitalize">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
+
+    <h3 class="note-brown">
+        blockquotes
+    </h3>
+    <p>
+        The <code class="single-code t-navy">&lt;p&gt;</code> HTML element represents a paragraph.
+        Paragraphs are usually represented in visual media as blocks of text. You can add some classes to align your text and more...
+    </p>
+    <div class="m-b-8">
+
+    </div>
+
+       
+
+    </main>
+    <footer class="bg-grad-brown-dark">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>
