@@ -88,7 +88,7 @@ const switchContainer = document.querySelector("#arraySwitches");
 for (let i = 0; i < arrayForms.length; i++) {
   formContainer.innerHTML += `<form class="form form-${arrayForms[i].color}" action="" method="">
     <fieldset class="form-title-container">
-        <legend class="form-title">.form-${arrayForms[i].color}</legend>
+        <legend class="form-title">form-${arrayForms[i].color}</legend>
     </fieldset>
     <div class="form-body g-col g-col-l-2">
         <div>
@@ -158,7 +158,7 @@ for (let i = 0; i < arrayForms.length; i++) {
 //Creating input-container
 for (let i = 0; i < arrayForms.length; i++) {
   inputContainer.innerHTML += `<div>
-    <label class="form-label" for="h-${i}">.input-container-${arrayForms[i].color}</label>
+    <label class="form-label" for="h-${i}">input-container-${arrayForms[i].color}</label>
     <div class="form-input-container input-container-${arrayForms[i].color}">
         <span class="form-icon">
             <ion-icon class="input-icon" name="pencil-outline" />
@@ -172,7 +172,7 @@ for (let i = 0; i < arrayForms.length; i++) {
 //Creating input-icon-container
 for (let i = 0; i < arrayForms.length; i++) {
   inputIconContainer.innerHTML += `<div>
-      <label class="form-label" for="i-${i}">.input-icon-container-${arrayForms[i].color}</label>
+      <label class="form-label" for="i-${i}">input-icon-container-${arrayForms[i].color}</label>
       <div class="form-input-container input-icon-container-${arrayForms[i].color}">
           <span class="form-icon">
               <ion-icon class="input-icon" name="pencil-outline" />
@@ -187,7 +187,7 @@ for (let i = 0; i < arrayForms.length; i++) {
 for (let i = 0; i < arrayCheckboxes.length; i++) {
   checkboxContainer.innerHTML += `<div class="d-flex i-center">
     <input id="j-${i}" class="check-${arrayCheckboxes[i].color}" type="checkbox" checked>
-    <label for="j-${i}">.check-${arrayCheckboxes[i].color}</label>
+    <label for="j-${i}">check-${arrayCheckboxes[i].color}</label>
 </div>`;
 }
 
@@ -195,7 +195,7 @@ for (let i = 0; i < arrayCheckboxes.length; i++) {
 for (let i = 0; i < arrayCheckboxes.length; i++) {
   radioboxContainer.innerHTML += `<div class="d-flex i-center">
     <input id="k-${i}" class="radio-${arrayCheckboxes[i].color}" type="radio" name="k-${i}" value="k-${i}" checked>
-    <label for="k-${i}">.radio-${arrayCheckboxes[i].color}</label>
+    <label for="k-${i}">radio-${arrayCheckboxes[i].color}</label>
 </div>`;
 }
 
@@ -203,7 +203,7 @@ for (let i = 0; i < arrayCheckboxes.length; i++) {
 for (let i = 0; i < arrayCheckboxes.length; i++) {
   switchContainer.innerHTML += `<div class="d-flex i-center">
     <input id="l-${i}" type="checkbox" class="switch check-${arrayCheckboxes[i].color}" checked>
-    <label for="l-${i}">.switch .check-${arrayCheckboxes[i].color}</label>
+    <label for="l-${i}">switch check-${arrayCheckboxes[i].color}</label>
 </div>`;
 }
 

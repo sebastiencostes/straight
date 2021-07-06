@@ -1320,6 +1320,9 @@ ALIGN & CO
 .t-lowercase {
   text-transform: lowercase;
 }
+.t-lowercase::first-letter {
+  text-transform: lowercase;
+}
 
 .t-uppercase {
   text-transform: uppercase;

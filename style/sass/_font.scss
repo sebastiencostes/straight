@@ -29,6 +29,9 @@ ALIGN & CO
 
 .t-lowercase {
   @include text-transform(lowercase);
+  &::first-letter {
+    @include text-transform(lowercase);
+  }
 }
 
 .t-uppercase {
@@ -313,6 +316,7 @@ MARK
     color: c.$white;
   }
 }
+
 /*
 *****
 THEME
