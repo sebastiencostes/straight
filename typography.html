@@ -58,154 +58,251 @@
             About Typography
         </h2>
         <p>
-           Straight framework works with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp()" target="_blank" rel="noopener">CSS clamp property </a>to sizing text.
+           <a href="/index.html" rel="noopner">Straight framework</a> mostly works with <b>CSS clamp property and rem units</b> to sizing text.
+           If you need to add colors to your text see <a href="/color.html" rel="noopener">color module</a>.
         </p>
 
         <h3 class="note-brown m-t-8">
             heading
         </h3>
         <p>
-            The <code class="single-code t-navy">&lt;h1&gt;</code>  to <code class="single-code t-navy">&lt;h6&gt;</code>HTML elements represent six levels of section headings.
-            <code class="single-code t-navy">&lt;h1&gt;</code> is the highest section level and <code class="single-code t-navy">&lt;h6&gt;</code> is the lowest.
-            Using more than one <code class="single-code t-navy">&lt;h1&gt;</code> is allowed by the HTML specification, but is not considered a best practice. 
-            Using only one <code class="single-code t-navy">&lt;h1&gt;</code> is beneficial for screenreader users. Heading classes are also available.
+            The <code class="single-code">&lt;h1&gt;</code>  to <code class="single-code">&lt;h6&gt;</code> elements represent six levels of section headings.
+            <code class="single-code">&lt;h1&gt;</code> is the highest section level and <code class="single-code">&lt;h6&gt;</code> is the lowest.
+            Using more than one <code class="single-code">&lt;h1&gt;</code> is allowed by the HTML specification, but is not considered a best practice. 
+            Using only one <code class="single-code">&lt;h1&gt;</code> is beneficial for screenreader users and SEO. Heading classes are also available.
             You can add some classes to align your text and more...
         </p>
-        <div class="g-col g-col-l-2 m-b-8">
+        
+        <div class="g-col g-col-l-2 m-b-4">
+            <section>
+                <p class="h1">h1 heading</p>
+                <p class="h2">h2 heading</p>
+                <p class="h3">h3 heading</p>
+                <p class="h4">h4 heading</p>
+                <p class="h5">h5 heading</p>
+                <p class="h6">h6 heading</p>
+            </section>
 
+            <section>
+                <p class="h1">h1 heading class</p>
+                <p class="h2">h2 heading class</p>
+                <p class="h3">h3 heading class</p>
+                <p class="h4">h4 heading class</p>
+                <p class="h5">h5 heading class</p>
+                <p class="h6">h6 heading class</p>
+            </section>
+        </div>
+
+        <div class="g-col g-col-l-2 m-t-2 m-b-2">
+            <pre class="clipboard h-rem-20" rel="copy heading to clipboard">
+                <code>
+    &lt;h1&gt;h1 heading&lt;/h1&gt;
+    &lt;h2&gt;h2 heading&lt;/h2&gt;
+    &lt;h3&gt;h3 heading&lt;/h3&gt;
+    &lt;h4&gt;h4 heading&lt;/h4&gt;
+    &lt;h5&gt;h5 heading&lt;/h5&gt;
+    &lt;h6&gt;h6 heading&lt;/h6&gt;
+                </code>
+            </pre>
+
+            <pre class="clipboard h-rem-20" rel="copy heading class to clipboard">
+                <code>
+    &lt;p class=&quot;h1&quot;&gt;h1 heading class&lt;/p&gt;
+    &lt;p class=&quot;h2&quot;&gt;h2 heading class&lt;/p&gt;
+    &lt;p class=&quot;h3&quot;&gt;h3 heading class&lt;/p&gt;
+    &lt;p class=&quot;h4&quot;&gt;h4 heading class&lt;/p&gt;
+    &lt;p class=&quot;h5&quot;&gt;h5 heading class&lt;/p&gt;
+    &lt;p class=&quot;h6&quot;&gt;h6 heading class&lt;/p&gt;
+                </code>
+            </pre>
+        </div>
         <section>
-            <p class="h1">h1 heading</p>
-            <p class="h2">h2 heading</p>
-            <p class="h3">h3 heading</p>
-            <p class="h4">h4 heading</p>
-            <p class="h5">h5 heading</p>
-            <p class="h6">h6 heading</p>
+            <p class="h1">heading <small class="heading-text-secondary">secondary text</small></p>
+            <p class="h2">heading <small class="heading-text-secondary">secondary text</small></p>
+            <p class="h3">heading <small class="heading-text-secondary">secondary text</small></p>
+            <p class="h4">heading <small class="heading-text-secondary">secondary text</small></p>
+            <p class="h5">heading <small class="heading-text-secondary">secondary text</small></p>
+            <p class="h6">heading <small class="heading-text-secondary">secondary text</small></p>
         </section>
-
-        <section>
-            <p class="h1">h1 heading class</p>
-            <p class="h2">h2 heading class</p>
-            <p class="h3">h3 heading class</p>
-            <p class="h4">h4 heading class</p>
-            <p class="h5">h5 heading class</p>
-            <p class="h6">h6 heading class</p>
-        </section>
-
-        <pre class="clipboard h-rem-20" rel="heading">
+        <pre class="clipboard h-rem-20 m-t-2 m-b-8" rel="copy secondary text to clipboard">
             <code>
-&lt;h1&gt;h1 heading&lt;/h1&gt;
-&lt;h2&gt;h2 heading&lt;/h2&gt;
-&lt;h3&gt;h3 heading&lt;/h3&gt;
-&lt;h4&gt;h4 heading&lt;/h4&gt;
-&lt;h5&gt;h5 heading&lt;/h5&gt;
-&lt;h6&gt;h6 heading&lt;/h6&gt;
+&lt;h1&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h6&gt;
             </code>
         </pre>
 
-        <pre class="clipboard h-rem-20" rel="heading class">
-            <code>
-&lt;p class=&quot;h1&quot;&gt;h1 heading class&lt;/p&gt;
-&lt;p class=&quot;h2&quot;&gt;h2 heading class&lt;/p&gt;
-&lt;p class=&quot;h3&quot;&gt;h3 heading class&lt;/p&gt;
-&lt;p class=&quot;h4&quot;&gt;h4 heading class&lt;/p&gt;
-&lt;p class=&quot;h5&quot;&gt;h5 heading class&lt;/p&gt;
-&lt;p class=&quot;h6&quot;&gt;h6 heading class&lt;/p&gt;
-            </code>
-        </pre>
-    </div>
 
     <h3 class="note-brown">
         paragraph
     </h3>
     <p>
-        The <code class="single-code t-navy">&lt;p&gt;</code> HTML element represents a paragraph.
-        Paragraphs are usually represented in visual media as blocks of text. You can add some classes to align your text and more...
+        The <code class="single-code">&lt;p&gt;</code> element represents a paragraph.
+        Paragraphs are usually represented in visual media as blocks of text. You can add some classes to align an transform your text and more...
+    </p>
+    <section class="m-b-8">
+        <p class="note-brown">
+            default
+        </p>
+        <div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="note-brown">
+                justify <code class="single-code">&lt;p class=&quot;t-justify&quot;&gt;</code>
+            </p>
+            <p class="t-justify">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="note-brown">
+                align center <code class="single-code">&lt;p class=&quot;t-center&quot;&gt;</code>
+            </p>
+            <p class="t-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="note-brown">
+                align left <code class="single-code">&lt;p class=&quot;t-left&quot;&gt;</code>
+            </p>
+            <p class="t-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="note-brown">
+                align right <code class="single-code">&lt;p class=&quot;t-right&quot;&gt;</code>
+            </p>
+            <p class="t-right">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="note-brown">
+                ellipsis <code class="single-code">&lt;p class=&quot;t-ellipsis&quot;&gt;</code>
+            </p>
+            <p class="t-ellipsis">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="note-brown">
+                transform to uppercase <code class="single-code">&lt;p class=&quot;t-uppercase&quot;&gt;</code>
+            </p>
+            <p class="t-uppercase">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="note-brown">
+                capitalize <code class="single-code">&lt;p class=&quot;t-capitalize&quot;&gt;</code>
+            </p>
+            <p class="t-capitalize">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p class="note-brown">
+                text indent <code class="single-code">&lt;p class=&quot;t-indent&quot;&gt;</code>
+            </p>
+            <p class="t-indent">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </section>
+
+    <h3 class="note-brown">
+       blockquote
+    </h3>
+    <p>
+        The <code class="single-code">&lt;blockquote&gt;</code> indicates that the enclosed text is an extended quotation.
     </p>
     <div class="m-b-8">
-        <p class="note-brown">
-            neutral
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="note-brown">
-            justify <code class="single-code t-navy">&lt;p class=&quot;t-justify&quot;&gt;</code>
-        </p>
-        <p class="t-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="note-brown">
-            center <code class="single-code t-navy">&lt;p class=&quot;t-center&quot;&gt;</code>
-        </p>
-        <p class="t-center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="note-brown">
-            left <code class="single-code t-navy">&lt;p class=&quot;t-left&quot;&gt;</code>
-        </p>
-        <p class="t-left">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="note-brown">
-            right <code class="single-code t-navy">&lt;p class=&quot;t-right&quot;&gt;</code>
-        </p>
-        <p class="t-right">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="note-brown">
-            ellipsis <code class="single-code t-navy">&lt;p class=&quot;t-ellipsis&quot;&gt;</code>
-        </p>
-        <p class="t-ellipsis">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="note-brown">
-            uppercase <code class="single-code t-navy">&lt;p class=&quot;t-uppercase&quot;&gt;</code>
-        </p>
-        <p class="t-uppercase">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="note-brown">
-            lowercase <code class="single-code t-navy">&lt;p class=&quot;t-capitalize&quot;&gt;</code>
-        </p>
-        <p class="t-capitalize">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <blockquote class="blockquote">
+            <p class="blockquote-text t-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="blockquote-footer">
+               <cite class="blockquote-cite" title="Source Title">
+                  <a class="blockquote-link" href="#" rel="noopener">
+                    Source Author
+                  </a>
+               </cite>
+            </div>
+        </blockquote>
+        <pre class="clipboard h-rem-20 m-t-2" rel="copy blockquote to clipboard">
+            <code>
+&lt;blockquote class=&quot;blockquote&quot;&gt;
+    &lt;p class=&quot;blockquote-text t-justify&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;div class=&quot;blockquote-footer&quot;&gt;
+        &lt;cite class=&quot;blockquote-cite&quot; title=&quot;Source Title&quot;&gt;
+            &lt;a class=&quot;blockquote-link&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            Source Author
+            &lt;/a&gt;
+        &lt;/cite&gt;
+    &lt;/div&gt;
+&lt;/blockquote&gt;
+            </code>
+        </pre>
     </div>
 
     <h3 class="note-brown">
-        blockquotes
-    </h3>
-    <p>
-        The <code class="single-code t-navy">&lt;p&gt;</code> HTML element represents a paragraph.
-        Paragraphs are usually represented in visual media as blocks of text. You can add some classes to align your text and more...
-    </p>
-    <div class="m-b-8">
-
+        mark
+     </h3>
+     <p>
+         The <code class="single-code">&lt;mark&gt;</code> element represents text which is marked or highlighted for reference or notation purposes,
+          due to the marked passage's relevance or importance in the enclosing context.
+     </p>
+     <p>
+        just add <code class="single-code">&lt;mark class=&quot;mark-*&quot;&gt;</code>
+     </p>
+     <div class="g-col g-col-s-2 g-col-m-3 g-col-l-4">
+        <p>this is <mark class="mark-yellow">.mark-yellow</mark></p>
+        <p>this is <mark class="mark-orange">.mark-orange</mark></p>
+        <p>this is <mark class="mark-red">.mark-red</mark></p>
+        <p>this is <mark class="mark-purple">.mark-purple</mark></p>
+        <p>this is <mark class="mark-blue">.mark-blue</mark></p>
+        <p>this is <mark class="mark-green">.mark-green</mark></p>
+        <p>this is <mark class="mark-pink">.mark-pink</mark></p>
+        <p>this is <mark class="mark-turquoise">.mark-turquoise</mark></p>
+        <p>this is <mark class="mark-brown">.mark-brown</mark></p>
+        <p>this is <mark class="mark-grey">.mark-grey</mark></p>
+        <p>this is <mark class="mark-navy">.mark-navy</mark></p>
+        <p>this is <mark class="mark-black">.mark-black</mark></p>
     </div>
+    <pre class="clipboard m-b-8 m-t-2 h-rem-20" rel="copy mark to clipboard">
+        <code>
+&lt;p&gt;this is &lt;mark class=&quot;mark-yellow&quot;&gt;.mark-yellow&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-orange&quot;&gt;.mark-orange&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-red&quot;&gt;.mark-red&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-purple&quot;&gt;.mark-purple&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-blue&quot;&gt;.mark-blue&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-green&quot;&gt;.mark-green&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-pink&quot;&gt;.mark-pink&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-turquoise&quot;&gt;.mark-turquoise&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-brown&quot;&gt;.mark-brown&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-grey&quot;&gt;.mark-grey&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-navy&quot;&gt;.mark-navy&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-black&quot;&gt;.mark-black&lt;/mark&gt;&lt;/p&gt;
+        </code>
+    </pre>
+   
 
        
 

@@ -1,11 +1,26 @@
 @use "color" as c;
+@use "device" as d;
+@use "border" as b;
 
+/*
+**********
+ALIGN & CO
+**********
+*/
 @mixin font-size($value) {
   font-size: $value;
 }
 
 @mixin text-transform($value) {
   text-transform: $value;
+}
+
+@mixin text-indent() {
+  text-indent: 3.2rem;
+}
+
+.t-indent {
+  @include text-indent();
 }
 
 .t-capitalize {
@@ -64,6 +79,12 @@
 .t-overlay {
   @include text-overlay();
 }
+
+/*
+*******
+H1 to P
+*******
+*/
 h1,
 .h1 {
   font-size: clamp(4rem, 3.44rem + 2vw, 7.2rem);
@@ -115,7 +136,11 @@ h6,
   margin: 0;
   font-weight: 400;
 }
+.heading-text-secondary {
+  opacity: 0.6;
+}
 p {
+  line-height: 1.2;
   &::first-letter {
     @include text-transform(capitalize);
   }
@@ -157,18 +182,142 @@ h6,
 p {
   cursor: default;
 }
-.title {
-  letter-spacing: 0.8rem;
-}
 
+/*
+**********
+TEXT COLOR
+**********
+*/
 .t-white {
   color: c.$white;
 }
-
 .t-link {
   color: c.$link;
 }
 
+/*
+**********
+BLOCKQUOTE
+**********
+*/
+.blockquote {
+  padding: 4rem 4rem 1.6rem 4rem;
+  position: relative;
+  @include d.tablet-portrait() {
+    max-width: 50%;
+  }
+  &-text {
+    font-style: italic;
+    font-weight: 200;
+    margin: 0;
+    &::before {
+      position: absolute;
+      display: block;
+      content: "\201C";
+      font-family: sans-serif;
+      font-size: 8rem;
+      font-weight: 400;
+      color: c.$grey;
+      top: 0;
+      left: 0;
+    }
+  }
+  &-footer {
+    margin-top: 1rem;
+    text-align: right;
+  }
+  &-cite {
+    &::before {
+      content: "\2014 \2009";
+      color: c.$link;
+    }
+  }
+  &-link {
+    font-style: normal;
+  }
+}
+/*
+****
+MARK
+****
+*/
+@mixin mark() {
+  border: solid 3px;
+  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-weight: 500;
+  padding: 2px 4px;
+}
+.mark {
+  &-yellow {
+    @include mark();
+    background-color: c.$yellow-light;
+    border-color: c.$yellow;
+  }
+  &-orange {
+    @include mark();
+    background-color: c.$orange-light;
+    border-color: c.$orange;
+  }
+  &-red {
+    @include mark();
+    background-color: c.$red-light;
+    border-color: c.$red;
+    color: c.$white;
+  }
+  &-purple {
+    @include mark();
+    background-color: c.$purple-light;
+    border-color: c.$purple;
+    color: c.$white;
+  }
+  &-blue {
+    @include mark();
+    background-color: c.$blue-light;
+    border-color: c.$blue;
+  }
+  &-green {
+    @include mark();
+    background-color: c.$green-light;
+    border-color: c.$green;
+  }
+  &-pink {
+    @include mark();
+    background-color: c.$pink-light;
+    border-color: c.$pink;
+    color: c.$white;
+  }
+  &-turquoise {
+    @include mark();
+    background-color: c.$turquoise-light;
+    border-color: c.$turquoise;
+  }
+  &-brown {
+    @include mark();
+    background-color: c.$brown-light;
+    border-color: c.$brown;
+  }
+  &-navy {
+    @include mark();
+    background-color: c.$navy-light;
+    border-color: c.$navy;
+  }
+  &-grey {
+    @include mark();
+    background-color: c.$grey-light;
+    border-color: c.$grey;
+  }
+  &-black {
+    @include mark();
+    background-color: c.$carbon-light;
+    border-color: c.$carbon;
+    color: c.$white;
+  }
+}
+/*
+*****
+THEME
+*****
+*/
 @include c.dark-theme {
   ion-icon {
     color: c.$text-dark;

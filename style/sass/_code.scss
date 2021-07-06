@@ -46,6 +46,7 @@ code span {
 }
 
 .single-code {
+  color: c.$blue;
   @include u.d-inline-block();
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
 }
