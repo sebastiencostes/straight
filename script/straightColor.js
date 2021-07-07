@@ -183,9 +183,88 @@ window.addEventListener("load", () => {
       colorClass: "bg-grad-carbon-dark",
     },
   ];
+  arrayTextColors = [
+    {
+      colorClass: "yellow",
+    },
+    {
+      colorClass: "orange",
+    },
+    {
+      colorClass: "red",
+    },
+    {
+      colorClass: "purple",
+    },
+    {
+      colorClass: "blue",
+    },
+    {
+      colorClass: "green",
+    },
+    {
+      colorClass: "pink",
+    },
+    {
+      colorClass: "turquoise",
+    },
+    {
+      colorClass: "brown",
+    },
+    {
+      colorClass: "grey",
+    },
+    {
+      colorClass: "navy",
+    },
+    {
+      colorClass: "carbon",
+    },
+  ];
+  arrayBorderColors = [
+    {
+      colorClass: "yellow",
+    },
+    {
+      colorClass: "orange",
+    },
+    {
+      colorClass: "red",
+    },
+    {
+      colorClass: "purple",
+    },
+    {
+      colorClass: "blue",
+    },
+    {
+      colorClass: "green",
+    },
+    {
+      colorClass: "pink",
+    },
+    {
+      colorClass: "turquoise",
+    },
+    {
+      colorClass: "brown",
+    },
+    {
+      colorClass: "grey",
+    },
+    {
+      colorClass: "navy",
+    },
+    {
+      colorClass: "black",
+    },
+  ];
   const flatPalette = document.querySelector(".flat-palette");
   const gradPalette = document.querySelector(".gradient-palette");
+  const textPalette = document.querySelector(".text-palette");
+  const borderPalette = document.querySelector(".border-palette");
 
+  //bg-flat
   for (let color of arrayBgFlat) {
     flatPalette.innerHTML += `<div class="t-center">
         <span class="text">${color.colorClass}</span>
@@ -193,10 +272,43 @@ window.addEventListener("load", () => {
     </div>`;
   }
 
+  //bg-grad
   for (let color of arrayBgGrad) {
     gradPalette.innerHTML += `<div class="t-center">
           <span class="text">${color.colorClass}</span>
           <div class="b-smooth flat-color m-t-1 d-flex i-center h-rem-10 ${color.colorClass} j-center" />
       </div>`;
+  }
+
+  //text
+  for (let color of arrayTextColors) {
+    textPalette.innerHTML += `
+    <div class="t-center">
+      <p class="t-lowercase">
+        <span class="t-${color.colorClass}-light">t-${color.colorClass}-light</span>
+      </p>
+    </div>
+    <div class="t-center">
+      <p class="t-lowercase">
+        <span class="t-${color.colorClass}">t-${color.colorClass}</span>
+      </p>
+    </div>
+    <div class="t-center">
+      <p class="t-lowercase">
+        <span class="t-${color.colorClass}-dark">t-${color.colorClass}-dark</span>
+      </p>
+    </div>
+ `;
+  }
+
+  //border
+  for (let color of arrayBorderColors) {
+    borderPalette.innerHTML += `
+    <div class="t-center b-${color.colorClass}">
+      <p class="t-lowercase">
+        b-${color.colorClass}
+      </p>
+    </div>
+ `;
   }
 });

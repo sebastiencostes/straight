@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="Straight framework, Typography">
+    <title>Straight | Typography</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-brown" role="presentation">
+        <h1 class="header-presentation-title t-white">typography</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-brown">
+            About Typography
+        </h2>
+        <p>
+            <a href="/index.html" rel="noopner">Straight framework</a> mostly works with <b>CSS clamp property and rem
+                units</b> to sizing text for optimum text rendering on every device and OS. System font stack is
+            applied.
+        </p>
+        <aside>
+            <p>If you need to add colors to your text see <a href="/color.html" rel="noopener">color module</a>.</p>
+        </aside>
+
+        <article>
+            <h3 class="note-brown m-t-8">
+                heading
+            </h3>
+            <p>
+                The <code class="single-code">&lt;h1&gt;</code> to <code class="single-code">&lt;h6&gt;</code> elements
+                represent six levels of section headings.
+                <code class="single-code">&lt;h1&gt;</code> is the highest section level and <code
+                    class="single-code">&lt;h6&gt;</code> is the lowest.
+                Using more than one <code class="single-code">&lt;h1&gt;</code> is allowed by the HTML specification, but is
+                not considered a best practice.
+                Using only one <code class="single-code">&lt;h1&gt;</code> is beneficial for screenreader users and SEO.
+                Heading classes are also available.
+                You can add some classes to align your text and more...
+            </p>
+
+            <div class="g-col g-col-l-2 m-b-2">
+                <section>
+                    <p class="h1">h1 heading</p>
+                    <p class="h2">h2 heading</p>
+                    <p class="h3">h3 heading</p>
+                    <p class="h4">h4 heading</p>
+                    <p class="h5">h5 heading</p>
+                    <p class="h6">h6 heading</p>
+                </section>
+
+                <section>
+                    <p class="h1">h1 heading class</p>
+                    <p class="h2">h2 heading class</p>
+                    <p class="h3">h3 heading class</p>
+                    <p class="h4">h4 heading class</p>
+                    <p class="h5">h5 heading class</p>
+                    <p class="h6">h6 heading class</p>
+                </section>
+            </div>
+
+            <div class="g-col g-col-l-2 m-b-2">
+                <pre class="clipboard h-rem-20" rel="copy heading to clipboard">
+                    <code>
+    &lt;h1&gt;h1 heading&lt;/h1&gt;
+    &lt;h2&gt;h2 heading&lt;/h2&gt;
+    &lt;h3&gt;h3 heading&lt;/h3&gt;
+    &lt;h4&gt;h4 heading&lt;/h4&gt;
+    &lt;h5&gt;h5 heading&lt;/h5&gt;
+    &lt;h6&gt;h6 heading&lt;/h6&gt;
+                    </code>
+                </pre>
+
+                <pre class="clipboard h-rem-20" rel="copy heading class to clipboard">
+                    <code>
+    &lt;p class=&quot;h1&quot;&gt;h1 heading class&lt;/p&gt;
+    &lt;p class=&quot;h2&quot;&gt;h2 heading class&lt;/p&gt;
+    &lt;p class=&quot;h3&quot;&gt;h3 heading class&lt;/p&gt;
+    &lt;p class=&quot;h4&quot;&gt;h4 heading class&lt;/p&gt;
+    &lt;p class=&quot;h5&quot;&gt;h5 heading class&lt;/p&gt;
+    &lt;p class=&quot;h6&quot;&gt;h6 heading class&lt;/p&gt;
+                    </code>
+                </pre>
+            </div>
+            <section>
+                <p class="h1">heading <small class="heading-text-secondary">secondary text</small></p>
+                <p class="h2">heading <small class="heading-text-secondary">secondary text</small></p>
+                <p class="h3">heading <small class="heading-text-secondary">secondary text</small></p>
+                <p class="h4">heading <small class="heading-text-secondary">secondary text</small></p>
+                <p class="h5">heading <small class="heading-text-secondary">secondary text</small></p>
+                <p class="h6">heading <small class="heading-text-secondary">secondary text</small></p>
+            </section>
+            <pre class="clipboard h-rem-20 m-t-2 m-b-8" rel="copy secondary text to clipboard">
+                <code>
+&lt;h1&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h5&gt;
+&lt;h6&gt;heading &lt;small class=&quot;heading-text-secondary&quot;&gt;secondary text&lt;/small&gt;&lt;/h6&gt;
+                </code>
+            </pre>
+        </article>
+
+        <article>
+            <h3 class="note-brown">
+                paragraph
+            </h3>
+            <p>
+                The <code class="single-code">&lt;p&gt;</code> element represents a paragraph.
+                Paragraphs are usually represented in visual media as blocks of text. You can add some classes to align an
+                transform your text and more...
+            </p>
+            <section class="m-b-8">
+        
+                    <h4 class="note-brown">justify</h4>
+                    <p><code class="single-code">&lt;p class=&quot;t-justify&quot;&gt;</code></p>
+                    <p class="t-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+                
+                    <h4 class="note-brown">center</h4>
+                    <p><code class="single-code">&lt;p class=&quot;t-center&quot;&gt;</code></p>
+                    <p class="t-center">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+                
+                    <h4 class="note-brown">left</h4>
+                    <p><code class="single-code">&lt;p class=&quot;t-left&quot;&gt;</code></p>
+                    <p class="t-left">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+                
+                    <h4 class="note-brown">right</h4>
+                    <p><code class="single-code">&lt;p class=&quot;t-right&quot;&gt;</code></p>
+                    <p class="t-right">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+                
+                    <h4 class="note-brown">ellipsis</h4>
+                    <p> <code class="single-code">&lt;p class=&quot;t-ellipsis&quot;&gt;</code></p>
+                    <p class="t-ellipsis">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+                
+                    <h4 class="note-brown">uppercase</h4>
+                    <p><code class="single-code">&lt;p class=&quot;t-uppercase&quot;&gt;</code></p>
+                    <p class="t-uppercase">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+            
+                    <h4 class="note-brown">lowercase</h4>
+                    <p><code class="single-code">&lt;p class=&quot;t-lowercase&quot;&gt;</code></p>
+                    <p class="t-lowercase">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+                
+                    <h4 class="note-brown">capitalize</h4>
+                    <p><code class="single-code">&lt;p class=&quot;t-capitalize&quot;&gt;</code></p>
+                    <p class="t-capitalize">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+                
+                    <h4 class="note-brown">indent</h4>
+                    <p><code class="single-code">&lt;p class=&quot;t-indent&quot;&gt;</code></p>
+                    <p class="t-indent">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.
+                    </p>
+                </div>
+            </section>
+        </article>
+
+        <article class="m-b-8">
+            <h3 class="note-brown">
+                icon
+            </h3>
+            <p>
+            icons are small pictogram representing an action, an object, a software, a type of file and more.
+            In Straight framework inner icons are SVG formated.
+            </p>
+            <aside>
+                <p>
+                    These icons come from <a href="https://ionic.io/ionicons" rel="noopener" target="_blank">ionic ionicons</a>.
+                    Check out more to find icon you need.
+                </p>
+            </aside>
+            <section class="m-b-8">
+                <ion-icon name="accessibility-outline"></ion-icon>
+                <ion-icon name="call-outline"></ion-icon>
+                <ion-icon name="home-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="open-outline"></ion-icon>
+                <ion-icon name="airplane-outline"></ion-icon>
+                <pre class="clipboard m-t-2 h-rem-10" rel="copy icon to clipboard">
+                    <code>
+    &lt;ion-icon name=&quot;accessibility-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;ion-icon name=&quot;call-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;ion-icon name=&quot;home-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;ion-icon name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;ion-icon name=&quot;open-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;ion-icon name=&quot;airplane-outline&quot;&gt;&lt;/ion-icon&gt;
+                    </code>
+                </pre>
+            </section>
+
+            <section class="m-b-8">
+                <h4 class="note-brown m-b-2">Icon colors</h4>
+                <p>This is the same color class used for <a href="/color.html" rel="noopener">text color</a>. Just use <code class="single-code">class="t-*"</code>.</p>
+                <ion-icon class="t-green" name="accessibility-outline"></ion-icon>
+                <ion-icon class="t-orange-light" name="call-outline"></ion-icon>
+                <ion-icon class="t-blue" name="home-outline"></ion-icon>
+                <ion-icon class="t-pink-dark" name="star-outline"></ion-icon>
+                <ion-icon class="t-brown" name="open-outline"></ion-icon>
+                <ion-icon class="t-grey" name="airplane-outline"></ion-icon>
+                <pre class="clipboard m-t-2 h-rem-10" rel="copy icon colors to clipboard">
+                    <code>
+&lt;ion-icon class=&quot;t-green&quot; name=&quot;accessibility-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-orange-light&quot; name=&quot;call-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-blue&quot; name=&quot;home-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-pink-dark&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-brown&quot; name=&quot;open-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-grey&quot; name=&quot;airplane-outline&quot;&gt;&lt;/ion-icon&gt;
+                    </code>
+                </pre>
+            </section>
+
+            <section>
+                <h4 class="note-brown m-b-2">Icon sizes</h4>
+                <p>
+                5 sizes are purposed, from <b>s</b> to <b>xxl</b>. For each size just use <code class="single-code">class="icon-*".</code>. 
+                Icon with icon-s is the default size.
+            </p>
+                <ion-icon class="t-purple icon-s" name="accessibility-outline"></ion-icon>
+                <ion-icon class="t-blue-light icon-m" name="accessibility-outline"></ion-icon>
+                <ion-icon class="t-turquoise icon-l" name="accessibility-outline"></ion-icon>
+                <ion-icon class="t-red-dark icon-xl" name="accessibility-outline"></ion-icon>
+                <ion-icon class="t-yellow icon-xxl" name="accessibility-outline"></ion-icon>
+                <pre class="clipboard m-t-2 h-rem-10" rel="copy icon colors to clipboard">
+                    <code>
+&lt;ion-icon class=&quot;t-purple icon-s&quot; name=&quot;accessibility-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-blue-light icon-m&quot; name=&quot;call-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-turquoise icon-l&quot; name=&quot;home-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-red-dark icon-xl&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;ion-icon class=&quot;t-yellow icon-xxl&quot; name=&quot;open-outline&quot;&gt;&lt;/ion-icon&gt;
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article>
+            <h3 class="note-brown">
+                blockquote
+            </h3>
+            <p>
+                The <code class="single-code">&lt;blockquote&gt;</code> indicates that the enclosed text is an extended
+                quotation.
+            </p>
+            <div class="m-b-8">
+                <blockquote class="blockquote">
+                    <p class="blockquote-text t-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="blockquote-footer">
+                        <cite class="blockquote-cite" title="Source Title">
+                            <a class="blockquote-link" href="#" rel="noopener">
+                                Source Author
+                            </a>
+                        </cite>
+                    </div>
+                </blockquote>
+                <pre class="clipboard h-rem-20 m-t-2" rel="copy blockquote to clipboard">
+                <code>
+&lt;blockquote class=&quot;blockquote&quot;&gt;
+    &lt;p class=&quot;blockquote-text t-justify&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+    &lt;div class=&quot;blockquote-footer&quot;&gt;
+        &lt;cite class=&quot;blockquote-cite&quot; title=&quot;Source Title&quot;&gt;
+            &lt;a class=&quot;blockquote-link&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            Source Author
+            &lt;/a&gt;
+        &lt;/cite&gt;
+    &lt;/div&gt;
+&lt;/blockquote&gt;
+                </code>
+            </pre>
+            </div>
+        </article>
+
+        <article>
+            <h3 class="note-brown">
+                address
+            </h3>
+            <p>
+                The <code class="single-code">&lt;address&gt;</code> element indicates that the enclosed HTML
+                provides contact information for a person or people, or for an organization. <strong>No heading, sectioning,
+                    header or footer are allowed</strong>.
+            </p>
+            <div class="m-b-8">
+                <address class="address note-grey">
+                    <div class="address-title">
+                        Address title
+                    </div>
+                    <div class="address-body">
+                        <div>Visit us at:</div>
+                        <div class="address-text">Example</div>
+                        <div class="address-text">Box 777, Example road</div>
+                        <div class="address-text t-uppercase">wonderland</div>
+                    </div>
+                    <div class="address-footer">
+                        <div class="address-contact">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <a class="address-text m-l-1"
+                                href="mailto:contactaddress@example.com">contactaddress@example.com</a>
+                        </div>
+                        <div class="address-contact">
+                            <ion-icon name="call-outline"></ion-icon>
+                            <a class="address-text m-l-1" href="tel:+13115552368">(311) 000-1234</a>
+                        </div>
+                    </div>
+                </address>
+
+                <pre class="clipboard h-rem-20 m-t-2" rel="copy address to clipboard">
+                <code>
+&lt;address class=&quot;address note-grey&quot;&gt;
+    &lt;div class=&quot;address-title&quot;&gt;
+        Address title
+    &lt;/div&gt;
+    &lt;div class=&quot;address-body&quot;&gt;
+        &lt;div&gt;Visit us at:&lt;/div&gt;
+        &lt;div class=&quot;address-text&quot;&gt;Example&lt;/div&gt;
+        &lt;div class=&quot;address-text&quot;&gt;Box 777, Example road&lt;/div&gt;
+        &lt;div class=&quot;address-text t-uppercase&quot;&gt;wonderland&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;address-footer&quot;&gt;
+        &lt;div class=&quot;address-contact&quot;&gt;
+            &lt;ion-icon name=&quot;mail-outline&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class=&quot;address-text m-l-1&quot; href=&quot;mailto:contactaddress@example.com&quot;&gt;contactaddress@example.com&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;address-contact&quot;&gt;
+            &lt;ion-icon name=&quot;call-outline&quot;&gt;&lt;/ion-icon&gt;
+            &lt;a class=&quot;address-text m-l-1&quot; href=&quot;tel:+13115552368&quot;&gt;(311) 000-1234&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/address&gt;
+                </code>
+            </pre>
+            </div>
+        </article>
+
+        <article>
+            <h3 class="note-brown">
+                mark
+            </h3>
+            <p>
+                The <code class="single-code">&lt;mark&gt;</code> element represents text which is marked or highlighted for
+                reference or notation purposes,
+                due to the marked passage's relevance or importance in the enclosing context. Just add <code
+                    class="single-code">&lt;mark class=&quot;mark-*&quot;&gt;</code>.
+            </p>
+            <div class="g-col g-col-s-2 g-col-m-3 g-col-l-4">
+                <p>this is <mark class="mark-yellow">mark-yellow</mark></p>
+                <p>this is <mark class="mark-orange">mark-orange</mark></p>
+                <p>this is <mark class="mark-red">mark-red</mark></p>
+                <p>this is <mark class="mark-purple">mark-purple</mark></p>
+                <p>this is <mark class="mark-blue">mark-blue</mark></p>
+                <p>this is <mark class="mark-green">mark-green</mark></p>
+                <p>this is <mark class="mark-pink">mark-pink</mark></p>
+                <p>this is <mark class="mark-turquoise">mark-turquoise</mark></p>
+                <p>this is <mark class="mark-brown">mark-brown</mark></p>
+                <p>this is <mark class="mark-grey">mark-grey</mark></p>
+                <p>this is <mark class="mark-navy">mark-navy</mark></p>
+                <p>this is <mark class="mark-black">mark-black</mark></p>
+            </div>
+            <pre class="clipboard m-b-8 m-t-2 h-rem-20" rel="copy mark to clipboard">
+            <code>
+&lt;p&gt;this is &lt;mark class=&quot;mark-yellow&quot;&gt;mark-yellow&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-orange&quot;&gt;mark-orange&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-red&quot;&gt;mark-red&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-purple&quot;&gt;mark-purple&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-blue&quot;&gt;mark-blue&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-green&quot;&gt;mark-green&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-pink&quot;&gt;mark-pink&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-turquoise&quot;&gt;mark-turquoise&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-brown&quot;&gt;mark-brown&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-grey&quot;&gt;mark-grey&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-navy&quot;&gt;mark-navy&lt;/mark&gt;&lt;/p&gt;
+&lt;p&gt;this is &lt;mark class=&quot;mark-black&quot;&gt;mark-black&lt;/mark&gt;&lt;/p&gt;
+            </code>
+        </pre>
+    </article>
+
+        <article class="m-b-8">
+            <h3 class="note-brown">
+                note
+            </h3>
+            <p>
+                If you want to fragmenting paragraph, subparagraph, zone, section, region or focus some visitors about some contents,
+                just add <code class="single-code">&lt;yourtag class=&quot;note-*&quot;&gt;</code>.
+            </p>
+            <div class="g-col g-col-s-2 g-col-m-3 g-col-l-4 g-col-xl-6">
+                <p class="note-white t-lowercase">note-white</p>
+                <p class="note-yellow t-lowercase">note-yellow</p>
+                <p class="note-orange t-lowercase">note-orange</p>
+                <p class="note-red t-lowercase">note-red</p>
+                <p class="note-purple t-lowercase">note-purple</p>
+                <p class="note-blue t-lowercase">note-blue</p>
+                <p class="note-green t-lowercase">note-green</p>
+                <p class="note-pink t-lowercase">note-pink</p>
+                <p class="note-turquoise t-lowercase">note-turquoise</p>
+                <p class="note-brown t-lowercase">note-brown</p>
+                <p class="note-grey t-lowercase">note-grey</p>
+                <p class="note-navy t-lowercase">note-navy</p>
+                <p class="note-black t-lowercase">note-black</p>
+            </div>
+        </article>
+
+    </main>
+    <footer class="bg-grad-brown-dark">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>

@@ -109,7 +109,7 @@ CAROUSEL CAPTION
   }
   .carousel-cta {
     @extend %carousel-cta-shared;
-    top: calc(35% - 3rem);
+    top: calc(35% - 2.4rem);
     &-icon {
       @include f.text-overlay();
     }
