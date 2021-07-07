@@ -8,7 +8,7 @@
 
 html {
   font-size: calc(1em * 0.625);
-  line-height: 1.15;
+  //line-height: 1.15;
   overflow: scroll;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -20,7 +20,7 @@ body {
     “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
     sans-serif;
   font-size: 1.6rem;
-  line-height: 1.55;
+  line-height: 1.5;
   margin: 0;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -58,12 +58,6 @@ body::-webkit-scrollbar {
   text-shadow: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 b,
 strong,
 summary,
@@ -85,14 +79,9 @@ samp {
   margin: 0;
 }
 
-p,
-li {
-  font-weight: 300;
-}
-
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 400;
 }
 
 blockquote,

@@ -640,6 +640,222 @@ Sizes for .btn-square-* & .btn-circle-*
   }
 }
 
+/*
+***************
+BORDERED BUTTON
+***************
+*/
+.btn-b {
+  &-white {
+    @include b.border(c.$white);
+    color: c.$white;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$text-dark);
+      color: c.$text-dark;
+    }
+    &:disabled {
+      @include b.border(c.$white);
+      color: c.$white;
+      cursor: not-allowed;
+    }
+  }
+  &-yellow {
+    @include b.border(c.$yellow);
+    color: c.$yellow;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$yellow-dark);
+      color: c.$yellow-dark;
+    }
+    &:disabled {
+      @include b.border(c.$yellow-light);
+      color: c.$yellow-light;
+      cursor: not-allowed;
+    }
+  }
+  &-orange {
+    @include b.border(c.$orange);
+    color: c.$orange;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$orange-dark);
+      color: c.$orange-dark;
+    }
+    &:disabled {
+      @include b.border(c.$orange-light);
+      color: c.$orange-light;
+      cursor: not-allowed;
+    }
+  }
+  &-red {
+    @include b.border(c.$red);
+    color: c.$red;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$red-dark);
+      color: c.$red-dark;
+    }
+    &:disabled {
+      @include b.border(c.$red-light);
+      color: c.$red-light;
+      cursor: not-allowed;
+    }
+  }
+  &-purple {
+    @include b.border(c.$purple);
+    color: c.$purple;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$purple-dark);
+      color: c.$purple-dark;
+    }
+    &:disabled {
+      @include b.border(c.$purple-light);
+      color: c.$purple-light;
+      cursor: not-allowed;
+    }
+  }
+  &-blue {
+    @include b.border(c.$blue);
+    color: c.$blue;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$blue-dark);
+      color: c.$blue-dark;
+    }
+    &:disabled {
+      @include b.border(c.$blue-light);
+      color: c.$blue-light;
+      cursor: not-allowed;
+    }
+  }
+  &-green {
+    @include b.border(c.$green);
+    color: c.$green;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$green-dark);
+      color: c.$green-dark;
+    }
+    &:disabled {
+      @include b.border(c.$green-light);
+      color: c.$green-light;
+      cursor: not-allowed;
+    }
+  }
+  &-pink {
+    @include b.border(c.$pink);
+    color: c.$pink;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$pink-dark);
+      color: c.$pink-dark;
+    }
+    &:disabled {
+      @include b.border(c.$pink-light);
+      color: c.$pink-light;
+      cursor: not-allowed;
+    }
+  }
+  &-turquoise {
+    @include b.border(c.$turquoise);
+    color: c.$turquoise;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$turquoise-dark);
+      color: c.$turquoise-dark;
+    }
+    &:disabled {
+      @include b.border(c.$turquoise-light);
+      color: c.$turquoise-light;
+      cursor: not-allowed;
+    }
+  }
+  &-brown {
+    @include b.border(c.$brown);
+    color: c.$brown;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$brown-dark);
+      color: c.$brown-dark;
+    }
+    &:disabled {
+      @include b.border(c.$brown-light);
+      color: c.$brown-light;
+      cursor: not-allowed;
+    }
+  }
+  &-grey {
+    @include b.border(c.$grey);
+    color: c.$grey;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$grey-dark);
+      color: c.$grey-dark;
+    }
+    &:disabled {
+      @include b.border(c.$grey-light);
+      color: c.$grey-light;
+      cursor: not-allowed;
+    }
+  }
+  &-navy {
+    @include b.border(c.$navy);
+    color: c.$navy;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$navy-dark);
+      color: c.$navy-dark;
+    }
+    &:disabled {
+      @include b.border(c.$navy-light);
+      color: c.$navy-light;
+      cursor: not-allowed;
+    }
+  }
+  &-black {
+    @include b.border(c.$carbon);
+    color: c.$carbon;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$carbon-dark);
+      color: c.$carbon-dark;
+    }
+    &:disabled {
+      @include b.border(c.$carbon-light);
+      color: c.$carbon-light;
+      cursor: not-allowed;
+    }
+  }
+}
+
 button ion-icon {
   display: unset;
 }
