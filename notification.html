@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Colors, yeah life isn't just shade of grey. Bring colors to your templates">
+    <title>Straight | Color</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-red" role="presentation">
+        <h1 class="header-presentation-title t-white">notification</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-red">
+            About Notification
+        </h2>
+        <p>
+            information message or warning by which a person is kept informed,
+            indicating an automatic or manual change that has happened or is about to happen.
+        </p>
+
+        <section class="m-t-8 m-b-8">
+            <h3 class="note-red">
+                notification models
+            </h3>
+            <p>
+                You must keep <strong>the data attribute</strong> in <code class="single-code">&lt;div class=&quot;notification d-none&quot; data-notification=&quot;&quot;&gt;</code>.
+                <strong>Notification as notification</strong> will opening to top right.
+                You can test them on clicking one all of these buttons just below. These triggers are here for testing notifications. 
+                If you really want a <strong>notification as notification</strong> you will need something different than a click event as event listeners.
+            </p>
+            <div class="g-col g-col-m-2 g-col-l-4">
+
+                <button class="btn-m btn-grey open-notification" type="button" data-notification="">
+                    Notification
+                </button>
+
+
+                <button class="btn-m btn-red open-notification" type="button" data-notification="">
+                    Alert
+                </button>
+
+
+                <button class="btn-m btn-green open-notification" type="button" data-notification="">
+                    Check
+                </button>
+
+
+                <button class="btn-m btn-blue open-notification" type="button" data-notification="">
+                    Info
+                </button>
+
+                <div class="notification d-none" data-notification="">
+                    <header class="notification-header">
+                        <ion-icon name="notifications-circle-outline"></ion-icon>
+                        <h6 class="notification-text">notification</h6>
+                    </header>
+                    <section class="notification-body">
+                        <p class="notification-body-text">this is a notification</p>
+                    </section>
+                </div>
+        
+                <div class="notification d-none notification-alert" data-notification="">
+                    <header class="notification-header">
+                        <ion-icon name="alert-circle-outline"></ion-icon>
+                        <h6 class="notification-text">notification alert</h6>
+                    </header>
+                    <section class="notification-body notification-body-text">
+                        <p class="notification-text">To test is to doubt</p>
+                    </section>
+                </div>
+        
+                <div class="notification d-none notification-check" data-notification="">
+                    <header class="notification-header">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                        <h6 class="notification-text">notification check</h6>
+                    </header>
+                    <section class="notification-body notification-body-text">
+                        <p class="notification-text">succes granted</p>
+                    </section>
+                </div>
+        
+                <div class="notification d-none notification-info" data-notification="">
+                    <header class="notification-header">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                        <h6 class="notification-text">notification info</h6>
+                    </header>
+                    <section class="notification-body notification-body-text">
+                        <p class="notification-text">this is an informative notification</p>
+                    </section>
+                </div>
+            </div>
+            <div class="g-col g-col-m-2 g-col-l-4 m-t-2">
+                <pre class="clipboard h-rem-12" rel="copy notification">
+                    <code>
+
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-12" rel="copy notification alert">
+                    <code>
+
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-12" rel="copy notification check">
+                    <code>
+
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-12" rel="copy notification info">
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+            <aside class="m-t-2">
+                <h4 class="note-red">
+                    auto-dissmiss notifications
+                </h4>
+                <p>
+                    If you want auto-dismissible notifications you must add a value number between <span class="t-blue">2800</span>
+                    and <span class="t-blue">10000</span> during initialization. Example :
+                </p>
+            </aside>
+            <pre class="clipboard" rel="auto-dismiss">
+                <code>
+notification(3200);
+                </code>
+            </pre>
+        </section>
+
+        <section>
+
+        </section>
+
+
+
+    </main>
+    <footer class="bg-grad-red-dark">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="script/notification.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>

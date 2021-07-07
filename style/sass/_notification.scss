@@ -1,0 +1,149 @@
+@use "utility" as u;
+@use "color" as c;
+@use "flexbox" as f;
+@use "padding" as p;
+@use "position" as pos;
+@use "width" as w;
+
+%notification-shared {
+  -webkit-animation-name: notificationRight;
+  animation-name: notificationRight;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+  background-color: c.$white;
+  @include pos.position(fixed);
+  z-index: 1;
+  @include w.width(28rem);
+  top: 8rem;
+  right: 0;
+}
+%notification-header-shared {
+  @include f.d-flex();
+  @include f.align-items(center);
+  @include f.justify-between();
+  @include p.padding(1rem);
+}
+%notification-text-shared {
+  font-size: clamp(0.8rem, 0.66rem + 0.5vw, 1.6rem);
+  margin: 0;
+  font-weight: 400;
+}
+%notification-body-shared {
+  @include p.padding(1.6rem 1rem);
+  @include u.b-shadow();
+}
+%notification-body-text-shared {
+  @extend %notification-text-shared;
+  color: c.$carbon;
+}
+
+.notification {
+  @extend %notification-shared;
+  &-header {
+    @extend %notification-header-shared;
+    background-color: c.$grey;
+    color: c.$carbon;
+    ion-icon {
+      color: c.$carbon;
+    }
+  }
+  &-body {
+    @extend %notification-body-shared;
+    &-text {
+      @extend %notification-body-text-shared;
+    }
+  }
+  &-text {
+    @extend %notification-text-shared;
+  }
+}
+
+.notification-alert {
+  @extend %notification-shared;
+  .notification-header {
+    @extend %notification-header-shared;
+    background-color: c.$red;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+  }
+  .notification-body {
+    @extend %notification-body-shared;
+    &-text {
+      @extend %notification-body-text-shared;
+    }
+  }
+  .notification-text {
+    @extend %notification-text-shared;
+  }
+}
+
+.notification-check {
+  @extend %notification-shared;
+  .notification-header {
+    @extend %notification-header-shared;
+    background-color: c.$green;
+    color: c.$carbon;
+    ion-icon {
+      color: c.$carbon;
+    }
+  }
+  .notification-body {
+    @extend %notification-body-shared;
+    &-text {
+      @extend %notification-body-text-shared;
+    }
+  }
+  .notification-text {
+    @extend %notification-text-shared;
+  }
+}
+
+.notification-info {
+  @extend %notification-shared;
+  .notification-header {
+    @extend %notification-header-shared;
+    background-color: c.$blue;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+  }
+  .notification-body {
+    @extend %notification-body-shared;
+    &-text {
+      @extend %notification-body-text-shared;
+    }
+  }
+  .notification-text {
+    @extend %notification-text-shared;
+  }
+}
+
+/*
+*********
+ANIMATION
+*********
+*/
+
+@-webkit-keyframes notificationRight {
+  from {
+    -webkit-transform: translateX(28rem);
+    transform: translateX(28rem);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes notificationRight {
+  from {
+    -webkit-transform: translateX(28rem);
+    transform: translateX(28rem);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

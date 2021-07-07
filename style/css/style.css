@@ -1994,8 +1994,8 @@ h6,
 }
 
 p {
-  margin-top: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
-  margin-bottom: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
+  margin-top: clamp(0.8rem, 0.6600rem + 0.5000vw, 1.6rem);
+  margin-bottom: clamp(0.8rem, 0.6600rem + 0.5000vw, 1.6rem);
 }
 p::first-letter {
   text-transform: capitalize;
@@ -18233,6 +18233,103 @@ animation slide opening for PAD NAV
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+.notification-info, .notification-check, .notification-alert, .notification {
+  -webkit-animation-name: notificationRight;
+  animation-name: notificationRight;
+  -webkit-animation-duration: 0.28s;
+  animation-duration: 0.28s;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 1;
+  width: 28rem;
+  top: 8rem;
+  right: 0;
+}
+
+.notification-info .notification-header, .notification-check .notification-header, .notification-alert .notification-header, .notification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.notification-info .notification-text, .notification-check .notification-text, .notification-alert .notification-text, .notification-text, .notification-info .notification-body-text, .notification-check .notification-body-text, .notification-alert .notification-body-text, .notification-body-text {
+  font-size: clamp(0.8rem, 0.66rem + 0.5vw, 1.6rem);
+  margin: 0;
+  font-weight: 400;
+}
+
+.notification-info .notification-body, .notification-check .notification-body, .notification-alert .notification-body, .notification-body {
+  padding: 1.6rem 1rem;
+}
+@media (prefers-color-scheme: light) {
+  .notification-info .notification-body, .notification-check .notification-body, .notification-alert .notification-body, .notification-body {
+    box-shadow: 0 5px 10px rgba(119, 119, 119, 0.26);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .notification-info .notification-body, .notification-check .notification-body, .notification-alert .notification-body, .notification-body {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.notification-info .notification-body-text, .notification-check .notification-body-text, .notification-alert .notification-body-text, .notification-body-text {
+  color: #212121;
+}
+
+.notification-header {
+  background-color: #bdbdbd;
+  color: #212121;
+}
+.notification-header ion-icon {
+  color: #212121;
+}
+.notification-alert .notification-header {
+  background-color: #d50000;
+  color: #ffffff;
+}
+.notification-alert .notification-header ion-icon {
+  color: #ffffff;
+}
+.notification-check .notification-header {
+  background-color: #64dd17;
+  color: #212121;
+}
+.notification-check .notification-header ion-icon {
+  color: #212121;
+}
+.notification-info .notification-header {
+  background-color: #0091ea;
+  color: #ffffff;
+}
+.notification-info .notification-header ion-icon {
+  color: #ffffff;
+}
+/*
+*********
+ANIMATION
+*********
+*/
+@-webkit-keyframes notificationRight {
+  from {
+    -webkit-transform: translateX(28rem);
+    transform: translateX(28rem);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes notificationRight {
+  from {
+    -webkit-transform: translateX(28rem);
+    transform: translateX(28rem);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
