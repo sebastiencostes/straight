@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Colors, yeah life isn't just shade of grey. Bring colors to your templates">
+    <title>Straight | Layout</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-navy" role="presentation">
+        <h1 class="header-presentation-title t-white">Layout</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-navy">
+            About Layout
+        </h2>
+        <p>
+            built around a 16 column system, create your own layout. <strong>CSS grid</strong> and <strong>flexbox</strong> 
+            are used to allow you a great ratio between easiness to use and standard modern web displaying possibilities. 
+            Lot of helpers classes come to rescue too, you can check more at <a href="/helper.html" rel="noopener">Helper module</a>.
+            Of course <a href="/index.html" rel="noopener">Straight framework</a> is Mobile Friendly.
+        </p>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-navy">
+                Container
+            </h3>
+            <p>
+                4 containers are available. 1 <span class="t-blue">fixed</span>, 1 <span class="t-blue">relative to screen</span> width, 1 <span class="t-blue">relative to container</span> width
+                and 1 <sapn class="t-blue">full width </sapn>relative to container. 3 of them are spaced to left and right. In the example below you can see difference between each relativity.
+                Click on the button just below to see variation.
+            </p>
+            <div class="m-b-2">
+                <button id="containerTrigger" class="btn-s btn-blue" type="button">
+                    Remove Main Container
+                </button>
+            </div>
+            <div>
+                <section class="container-fix h-rem-8 bg-navy m-b-2 d-flex i-center j-center">
+                    <h4 class="t-white">container-fix</h4>
+                </section>
+                <section class="container-screen h-rem-8 bg-navy m-b-2 d-flex i-center j-center">
+                    <h4 class="t-white">container-screen</h4>
+                </section>
+                <section class="w-prc-64">
+                    <div class="container-window h-rem-8 bg-navy m-b-2 d-flex i-center j-center">
+                        <h4 class="t-white">container-window</h4>
+                    </div>
+                </section>
+                <section class="container-full h-rem-8 bg-navy m-b-2 d-flex i-center j-center">
+                    <h4 class="t-white">container-full</h4>
+                </section>
+            </div>
+            <pre class="clipboard h-rem-40" rel="copy container to clipboard">
+                <code>
+&lt;div&gt;
+    &lt;section class=&quot;container-fix h-rem-16 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
+        &lt;h4 class=&quot;t-white&quot;&gt;container-fix&lt;/h4&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;container-screen h-rem-16 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
+        &lt;h4 class=&quot;t-white&quot;&gt;container-screen&lt;/h4&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;w-prc-64&quot;&gt;
+        &lt;div class=&quot;container-window h-rem-16 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;container-window&lt;/h4&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;container-full h-rem-16 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
+        &lt;h4 class=&quot;t-white&quot;&gt;container-full&lt;/h4&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-navy">
+                Grid
+            </h3>
+            <p>
+                16 columns grid system based, 16 columns evenly offers more displaying opportunities on height / length <strong>screen</strong> ratio. 
+                In Straight framework <strong>1rem</strong> = <strong>10px</strong> and in most cases containers are in <span class="t-uppercase t-blue">grid</span>
+                and contents are in <span class="t-uppercase t-blue">flex</span>. There is no <b>flaoted</b> element.
+                Resize your window to see the grid in action.
+            </p>
+            <section class="m-t-2 m-b-8">
+                <h4 class="note-navy">
+                    Basic example
+                </h4>
+                <p>
+                    simple grid illustration with rows and cols
+                </p>
+                <p><code class="single-code">&lt;div class=&quot;g-col g-col-m-2 g-col-m-4 g-col-xl-8 g-col-xxl-16&quot;&gt;&lt;/div&gt;</code></p>
+                <div id="gridExample1" class="g-col g-col-m-2 g-col-m-4 g-col-xl-8 g-col-xxl-16 m-b-2">
+                
+                </div>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy">
+                    No row example
+                </h4>
+                <p>
+                    simple grid illustration with no row
+                </p>
+                <div id="gridExample2" class="g-col g-no-row g-col-m-2 g-col-m-4 g-col-xl-8 g-col-xxl-16 m-b-2">
+                
+                </div>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy m-b-2">
+                    No col example
+                </h4>
+                <p>
+                    simple grid illustration with no col
+                </p>
+                <div id="gridExample3" class="g-col g-no-col g-col-m-2 g-col-m-4 g-col-xl-8 g-col-xxl-16 m-b-2">
+                
+                </div>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy m-b-2">
+                    No row no col example
+                </h4>
+                <p>
+                    simple grid illustration with no row and no col
+                </p>
+                <div id="gridExample4" class="g-col g-no-row-col g-col-m-2 g-col-m-4 g-col-xl-8 g-col-xxl-16 m-b-2">
+                
+                </div>
+            </section>
+        </article>
+
+    </main>
+    <footer class="bg-grad-navy-dark">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="/script/straightLayout.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>
