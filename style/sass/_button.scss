@@ -345,7 +345,7 @@ Sizes for .btn-square-* & .btn-circle-*
 }
 .btn-green {
   background-color: c.$green;
-  color: c.$text-light;
+  color: c.$white;
   &:hover,
   &:focus,
   &:active,
@@ -357,12 +357,12 @@ Sizes for .btn-square-* & .btn-circle-*
     cursor: not-allowed;
   }
   ion-icon {
-    color: c.$text-light;
+    color: c.$white;
   }
 }
 .btn-turquoise {
   background-color: c.$turquoise;
-  color: c.$text-dark;
+  color: c.$white;
   &:hover,
   &:focus,
   &:active,
@@ -374,7 +374,7 @@ Sizes for .btn-square-* & .btn-circle-*
     cursor: not-allowed;
   }
   ion-icon {
-    color: c.$text-dark;
+    color: c.$white;
   }
 }
 .btn-blue {
@@ -434,7 +434,7 @@ Sizes for .btn-square-* & .btn-circle-*
 }
 .btn-grad-grey {
   background-image: c.$grad-grey;
-  color: c.$text-light;
+  color: c.$carbon;
   &:hover,
   &:focus,
   &:active,
@@ -446,7 +446,7 @@ Sizes for .btn-square-* & .btn-circle-*
     cursor: not-allowed;
   }
   ion-icon {
-    color: c.$text-light;
+    color: c.$carbon;
   }
 }
 .btn-grad-navy {
@@ -468,7 +468,7 @@ Sizes for .btn-square-* & .btn-circle-*
 }
 .btn-grad-yellow {
   background-image: c.$grad-yellow;
-  color: c.$text-light;
+  color: c.$carbon;
   &:hover,
   &:focus,
   &:active,
@@ -477,11 +477,11 @@ Sizes for .btn-square-* & .btn-circle-*
   }
   &:disabled {
     @include flt.filter(brightness(1.3));
-    color: c.$text-light;
+    color: c.$carbon;
     cursor: not-allowed;
   }
   ion-icon {
-    color: c.$text-light;
+    color: c.$carbon;
   }
 }
 .btn-grad-orange {
@@ -571,7 +571,7 @@ Sizes for .btn-square-* & .btn-circle-*
 }
 .btn-grad-green {
   background-image: c.$grad-green;
-  color: c.$text-light;
+  color: c.$carbon;
   &:hover,
   &:focus,
   &:active,
@@ -579,17 +579,17 @@ Sizes for .btn-square-* & .btn-circle-*
     @include flt.filter(brightness(80%) contrast(120%));
   }
   &:disabled {
-    color: c.$text-light;
+    color: c.$carbon;
     @include flt.filter(brightness(1.3));
     cursor: not-allowed;
   }
   ion-icon {
-    color: c.$text-light;
+    color: c.$carbon;
   }
 }
 .btn-grad-turquoise {
   background-image: c.$grad-turquoise;
-  color: c.$text-light;
+  color: c.$carbon;
   &:hover,
   &:focus,
   &:active,
@@ -597,12 +597,12 @@ Sizes for .btn-square-* & .btn-circle-*
     @include flt.filter(brightness(80%) contrast(120%));
   }
   &:disabled {
-    color: c.$text-light;
+    color: c.$carbon;
     @include flt.filter(brightness(1.3));
     cursor: not-allowed;
   }
   ion-icon {
-    color: c.$text-light;
+    color: c.$carbon;
   }
 }
 .btn-grad-blue {

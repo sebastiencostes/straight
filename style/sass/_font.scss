@@ -151,8 +151,8 @@ h6,
   opacity: 0.6;
 }
 p {
-  margin-top:  clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
-  margin-bottom: clamp(1.6rem, 1.4600rem + 0.5000vw, 2.4rem);
+  margin-top: clamp(0.8rem, 0.6600rem + 0.5000vw, 1.6rem);
+  margin-bottom: clamp(0.8rem, 0.6600rem + 0.5000vw, 1.6rem);
   &::first-letter {
     @include text-transform(capitalize);
   }

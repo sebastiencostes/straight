@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Colors, information message or warning by which a person is kept informed">
+    <title>Straight | Notification</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-red" role="presentation">
+        <h1 class="header-presentation-title t-white">notification</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-red">
+            About Notification
+        </h2>
+        <p>
+            information message or warning by which a person is kept informed,
+            indicating an automatic or manual change that has happened or is about to happen.
+        </p>
+
+        <section class="m-t-8 m-b-8">
+            <h3 class="note-red">
+                notification models
+            </h3>
+            <p>
+                You must keep <strong>the data attribute</strong> in <span class="t-blue">notification</span> itself.
+                <strong>Notification as notification</strong> will opening to top right.
+                You can test them on clicking one all of these buttons just below. These triggers are here for testing notifications. 
+                If you really want a <strong>notification as notification</strong> you will need something different than a click event as event listeners.
+            </p>
+            <p><code class="single-code">&lt;div class=&quot;notification d-none&quot; data-notification=&quot;&quot;&gt;</code></p>
+            <div class="g-col g-col-m-2 g-col-l-4">
+
+                <button class="btn-s btn-grey notification-open" type="button" data-notification="">
+                  Notification
+                </button>
+
+                <button class="btn-s btn-red notification-open" type="button" data-notification="">
+                    Alert
+                </button>
+
+                <button class="btn-s btn-green notification-open" type="button" data-notification="">
+                    Check
+                </button>
+
+                <button class="btn-s btn-blue notification-open" type="button" data-notification="">
+                    Info
+                </button>
+
+                <div class="notification d-none" data-notification="">
+                    <button class="btn-square-m notification-close" type="button">
+                        <ion-icon class="t-overlay" name="close-outline"></ion-icon>
+                    </button>
+                    <header class="notification-header bg-grey">
+                        <ion-icon name="notifications-outline"></ion-icon>
+                        <h6 class="notification-text">notification</h6>
+                    </header>
+                    <section class="notification-body">
+                        <p class="notification-body-text">this is a notification</p>
+                    </section>
+                </div>
+        
+                <div class="notification d-none notification-alert" data-notification="">
+                    <button class="btn-square-m notification-close" type="button">
+                        <ion-icon class="t-overlay" name="close-outline"></ion-icon>
+                    </button>
+                    <header class="notification-header">
+                        <ion-icon name="alert-outline"></ion-icon>
+                        <h6 class="notification-text">notification alert</h6>
+                    </header>
+                    <section class="notification-body notification-body-text">
+                        <p class="notification-text">To test is to doubt</p>
+                    </section>
+                </div>
+        
+                <div class="notification d-none notification-check" data-notification="">
+                    <button class="btn-square-m notification-close" type="button">
+                        <ion-icon class="t-overlay" name="close-outline"></ion-icon>
+                    </button>
+                    <header class="notification-header">
+                        <ion-icon name="checkmark-outline"></ion-icon>
+                        <h6 class="notification-text">notification check</h6>
+                    </header>
+                    <section class="notification-body notification-body-text">
+                        <p class="notification-text">succes granted</p>
+                    </section>
+                </div>
+        
+                <div class="notification d-none notification-info" data-notification="">
+                    <button class="btn-square-m notification-close" type="button">
+                        <ion-icon class="t-overlay" name="close-outline"></ion-icon>
+                    </button>
+                    <header class="notification-header">
+                        <ion-icon name="information-outline"></ion-icon>
+                        <h6 class="notification-text">notification info</h6>
+                    </header>
+                    <section class="notification-body notification-body-text">
+                        <p class="notification-text">this is an informative notification</p>
+                    </section>
+                </div>
+            </div>
+            <div class="g-col g-col-m-2 g-col-l-4 m-t-2">
+                <pre class="clipboard h-rem-16" rel="copy notification">
+                    <code>
+&lt;div class=&quot;notification d-none&quot; data-notification=&quot;&quot;&gt;
+    &lt;button class=&quot;btn-square-m notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;header class=&quot;notification-header&quot;&gt;
+        &lt;ion-icon name=&quot;notifications-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;h6 class=&quot;notification-text&quot;&gt;notification&lt;/h6&gt;
+    &lt;/header&gt;
+    &lt;section class=&quot;notification-body&quot;&gt;
+        &lt;p class=&quot;notification-body-text&quot;&gt;this is a notification&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-16" rel="copy notification alert">
+                    <code>
+&lt;div class=&quot;notification d-none notification-alert&quot; data-notification=&quot;&quot;&gt;
+    &lt;button class=&quot;btn-square-m notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;header class=&quot;notification-header&quot;&gt;
+        &lt;ion-icon name=&quot;alert-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;h6 class=&quot;notification-text&quot;&gt;notification alert&lt;/h6&gt;
+    &lt;/header&gt;
+    &lt;section class=&quot;notification-body notification-body-text&quot;&gt;
+        &lt;p class=&quot;notification-text&quot;&gt;To test is to doubt&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-16" rel="copy notification check">
+                    <code>
+&lt;div class=&quot;notification d-none notification-check&quot; data-notification=&quot;&quot;&gt;
+    &lt;button class=&quot;btn-square-m notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;header class=&quot;notification-header&quot;&gt;
+        &lt;ion-icon name=&quot;checkmark-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;h6 class=&quot;notification-text&quot;&gt;notification check&lt;/h6&gt;
+    &lt;/header&gt;
+    &lt;section class=&quot;notification-body notification-body-text&quot;&gt;
+        &lt;p class=&quot;notification-text&quot;&gt;succes granted&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-16" rel="copy notification info">
+                    <code>
+&lt;div class=&quot;notification d-none notification-info&quot; data-notification=&quot;&quot;&gt;
+    &lt;button class=&quot;btn-square-m notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;header class=&quot;notification-header&quot;&gt;
+        &lt;ion-icon name=&quot;information-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;h6 class=&quot;notification-text&quot;&gt;notification info&lt;/h6&gt;
+    &lt;/header&gt;
+    &lt;section class=&quot;notification-body notification-body-text&quot;&gt;
+        &lt;p class=&quot;notification-text&quot;&gt;this is an informative notification&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </div>
+            <aside class="m-t-8">
+                <h4 class="note-red">
+                    auto-dissmiss notifications
+                </h4>
+                <p>
+                    If you are looking for auto-dismissible notifications you must add <span class="t-blue">auto-dismiss</span>
+                    class into the <span class="t-blue">notification</span> class itself. 
+                    Notifications will automatically disappears after <b>4.2s</b>.
+                    You can test this one on the trigger just below.
+                </p>
+                <p> <code class="single-code">&lt;div class=&quot;notification d-none notification-check auto-dismiss&quot; data-notification=&quot;&quot;&gt;</code></p>
+            </aside>
+            <button class="btn-s btn-green notification-open" type="button" data-notification="">
+                Auto-dismiss
+            </button>
+            <div class="notification d-none notification-check auto-dismiss" data-notification="">
+                <button class="btn-square-m notification-close" type="button">
+                    <ion-icon class="t-overlay" name="close-outline"></ion-icon>
+                </button>
+                <header class="notification-header">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                    <h6 class="notification-text">Auto dissmissible notification</h6>
+                </header>
+                <section class="notification-body notification-body-text">
+                    <p class="notification-text">I appear then I disappear</p>
+                </section>
+            </div>
+            <pre class="clipboard h-rem-16 m-t-2" rel="copy auto-dismiss to clipboard">
+                <code>
+&lt;div class=&quot;notification d-none notification-check auto-dismiss&quot; data-notification=&quot;&quot;&gt;
+    &lt;button class=&quot;btn-square-m notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;t-overlay&quot; name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+    &lt;header class=&quot;notification-header&quot;&gt;
+        &lt;ion-icon name=&quot;checkmark-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;h6 class=&quot;notification-text&quot;&gt;Auto dissmissible notification&lt;/h6&gt;
+    &lt;/header&gt;
+    &lt;section class=&quot;notification-body notification-body-text&quot;&gt;
+        &lt;p class=&quot;notification-text&quot;&gt;I appear then I disappear&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-red">
+                modal
+            </h3>
+            <p>
+                if you are looking for popup opening as non notification, notifications as modal are the solution. <b>5</b> sizes are available from <b>S</b> to <b>XXL</b>.
+                They're all center displayed to window and they're all triggered.
+                Modals are associated with triggers, in this example triggers are buttons, it shall be everything you want as soon as
+                you keep the <strong>data attribute</strong> in in the <span class="t-blue">modal</span> itself and in the <span class="t-blue">trigger</span> itself.
+                You can test these with these triggers just below.
+            </p>
+            <p><code class="single-code">&lt;div class=&quot;notification modal-* d-none&quot; data-notification=&quot;&quot;&gt;</code></p>
+            <p><code class="single-code"> &lt;button class=&quot;btn-* btn-* notification-open&quot; type=&quot;button&quot; data-notification=&quot;&quot;&gt;</code></p>
+            <div class="g-col g-col-s-2 g-col-l-5">
+
+                <button class="btn-s btn-grey notification-open" type="button" data-notification="">
+                    Small
+                </button>
+
+                <button class="btn-s btn-grey notification-open" type="button" data-notification="">
+                    Medium
+                </button>
+
+                <button class="btn-s btn-grey notification-open" type="button" data-notification="">
+                    Large
+                </button>
+
+                <button class="btn-s btn-grey notification-open" type="button" data-notification="">
+                    X-large
+                </button>
+
+                <button class="btn-s btn-grey notification-open" type="button" data-notification="">
+                    XX-large
+                </button>
+
+                <div class="notification modal-s d-none" data-notification="">
+                    <header class="modal-header bg-grey-light">
+                        <h6 class="modal-text">small modal</h6>
+                        <button class="btn-square-s notification-close" type="button">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    </header>
+                    <section class="modal-body">
+                        <p class="modal-body-text">
+                            small modal content...
+                        </p>
+                    </section>
+                    <footer class="modal-footer bg-grey-light">
+                        <h6 class="modal-text">action</h6>
+                        <div>
+                            <button class="btn-s btn-red notification-close m-r-1" type="button">
+                                Close
+                            </button>
+                            <button class="btn-s btn-blue" type="button">
+                                Save
+                            </button>
+                        </div>
+                    </footer>
+                </div>
+
+                <div class="notification modal-m d-none" data-notification="">
+                    <header class="modal-header bg-grey-light">
+                        <h6 class="modal-text">modal is evil</h6>
+                        <button class="btn-square-s notification-close" type="button">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    </header>
+                    <section class="modal-body">
+                        <p class="modal-body-text t-red">
+                            redrum redrum redrum
+                            redrum redrum redrum
+                            redrum redrum redrum
+                            redrum redrum redrum
+                            redrum redrum redrum
+                            redrum redrum redrum
+                            redrum redrum redrum
+                            redrum redrum redrum
+                            redrum redrum redrum
+                        </p>
+                    </section>
+                    <footer class="modal-footer bg-grey-light">
+                        <h6 class="modal-text">action</h6>
+                        <div>
+                            <button class="btn-s btn-red notification-close m-r-1" type="button">
+                                Escape
+                            </button>
+                            <button class="btn-s btn-blue" type="button">
+                                Save
+                            </button>
+                        </div>
+                    </footer>
+                </div>
+
+
+                <div class="notification modal-l d-none" data-notification="">
+                    <header class="modal-header bg-grey-light">
+                        <h6 class="modal-text">large modal</h6>
+                        <button class="btn-square-s notification-close" type="button">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    </header>
+                    <section class="modal-body">
+                        <p class="modal-body-text">
+                            large modal content...
+                        </p>
+                    </section>
+                    <footer class="modal-footer bg-grey-light">
+                        <h6 class="modal-text">action</h6>
+                        <div>
+                            <button class="btn-s btn-red notification-close m-r-1" type="button">
+                                Close
+                            </button>
+                            <button class="btn-s btn-blue" type="button">
+                                Save
+                            </button>
+                        </div>
+                    </footer>
+                </div>
+
+                <div class="notification modal-xl d-none" data-notification="">
+                    <header class="modal-header bg-grey-light">
+                        <h6 class="modal-text">x-large modal</h6>
+                        <button class="btn-square-s notification-close" type="button">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    </header>
+                    <section class="modal-body">
+                        <p class="modal-body-text">
+                            x-large modal content...
+                        </p>
+                    </section>
+                    <footer class="modal-footer bg-grey-light">
+                        <h6 class="modal-text">action</h6>
+                        <div>
+                            <button class="btn-s btn-red notification-close m-r-1" type="button">
+                                Close
+                            </button>
+                            <button class="btn-s btn-blue" type="button">
+                                Save
+                            </button>
+                        </div>
+                    </footer>
+                </div>
+
+                <div class="notification modal-xxl d-none" data-notification="">
+                    <header class="modal-header bg-grey-light">
+                        <h6 class="modal-text">XX-l modal</h6>
+                        <button class="btn-square-s notification-close" type="button">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+                    </header>
+                    <section class="modal-body">
+                        <p class="modal-body-text">
+                            XX-large modal content...
+                        </p>
+                    </section>
+                    <footer class="modal-footer bg-grey-light">
+                        <h6 class="modal-text">action</h6>
+                        <div>
+                            <button class="btn-s btn-red notification-close m-r-1" type="button">
+                                Close
+                            </button>
+                            <button class="btn-s btn-blue" type="button">
+                                Save
+                            </button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+            <div class="g-col g-col-m-2 g-col-l-3 g-col-xl-5 m-t-2">
+                <pre class="clipboard h-rem-16" rel="copy small modal">
+                    <code>
+&lt;button class=&quot;btn-s btn-grey notification-open&quot; type=&quot;button&quot; data-notification=&quot;&quot;&gt;
+    Launch Modal
+&lt;/button&gt;
+&lt;div class=&quot;notification modal-s d-none&quot; data-notification=&quot;&quot;&gt;
+&lt;header class=&quot;modal-header bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;small modal&lt;/h6&gt;
+    &lt;button class=&quot;btn-square-s notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+&lt;/header&gt;
+&lt;section class=&quot;modal-body&quot;&gt;
+    &lt;p class=&quot;modal-body-text&quot;&gt;
+        small modal content...
+    &lt;/p&gt;
+&lt;/section&gt;
+&lt;footer class=&quot;modal-footer bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;action&lt;/h6&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;btn-s btn-red notification-close m-r-1&quot; type=&quot;button&quot;&gt;
+            Close
+        &lt;/button&gt;
+        &lt;button class=&quot;btn-s btn-blue&quot; type=&quot;button&quot;&gt;
+            Save
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-16" rel="copy medium modal">
+                    <code>
+&lt;button class=&quot;btn-s btn-grey notification-open&quot; type=&quot;button&quot; data-notification=&quot;&quot;&gt;
+    Launch Modal
+&lt;/button&gt;
+&lt;div class=&quot;notification modal-m d-none&quot; data-notification=&quot;&quot;&gt;
+&lt;header class=&quot;modal-header bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;medium modal&lt;/h6&gt;
+    &lt;button class=&quot;btn-square-s notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+&lt;/header&gt;
+&lt;section class=&quot;modal-body&quot;&gt;
+    &lt;p class=&quot;modal-body-text&quot;&gt;
+        medium modal content...
+    &lt;/p&gt;
+&lt;/section&gt;
+&lt;footer class=&quot;modal-footer bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;action&lt;/h6&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;btn-s btn-red notification-close m-r-1&quot; type=&quot;button&quot;&gt;
+            Close
+        &lt;/button&gt;
+        &lt;button class=&quot;btn-s btn-blue&quot; type=&quot;button&quot;&gt;
+            Save
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-16" rel="copy large modal">
+                    <code>
+&lt;button class=&quot;btn-s btn-grey notification-open&quot; type=&quot;button&quot; data-notification=&quot;&quot;&gt;
+    Launch Modal
+&lt;/button&gt;
+&lt;div class=&quot;notification modal-l d-none&quot; data-notification=&quot;&quot;&gt;
+&lt;header class=&quot;modal-header bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;large modal&lt;/h6&gt;
+    &lt;button class=&quot;btn-square-s notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+&lt;/header&gt;
+&lt;section class=&quot;modal-body&quot;&gt;
+    &lt;p class=&quot;modal-body-text&quot;&gt;
+        large modal content...
+    &lt;/p&gt;
+&lt;/section&gt;
+&lt;footer class=&quot;modal-footer bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;action&lt;/h6&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;btn-s btn-red notification-close m-r-1&quot; type=&quot;button&quot;&gt;
+            Close
+        &lt;/button&gt;
+        &lt;button class=&quot;btn-s btn-blue&quot; type=&quot;button&quot;&gt;
+            Save
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-16" rel="copy x-large modal">
+                    <code>
+&lt;button class=&quot;btn-s btn-grey notification-open&quot; type=&quot;button&quot; data-notification=&quot;&quot;&gt;
+    Launch Modal
+&lt;/button&gt;
+&lt;div class=&quot;notification modal-xl d-none&quot; data-notification=&quot;&quot;&gt;
+&lt;header class=&quot;modal-header bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;xl modal&lt;/h6&gt;
+    &lt;button class=&quot;btn-square-s notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+&lt;/header&gt;
+&lt;section class=&quot;modal-body&quot;&gt;
+    &lt;p class=&quot;modal-body-text&quot;&gt;
+        xl modal content...
+    &lt;/p&gt;
+&lt;/section&gt;
+&lt;footer class=&quot;modal-footer bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;action&lt;/h6&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;btn-s btn-red notification-close m-r-1&quot; type=&quot;button&quot;&gt;
+            Close
+        &lt;/button&gt;
+        &lt;button class=&quot;btn-s btn-blue&quot; type=&quot;button&quot;&gt;
+            Save
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+                <pre class="clipboard h-rem-16" rel="copy xxl modal">
+                    <code>
+&lt;button class=&quot;btn-s btn-grey notification-open&quot; type=&quot;button&quot; data-notification=&quot;&quot;&gt;
+    Launch Modal
+&lt;/button&gt;
+&lt;div class=&quot;notification modal-xxl d-none&quot; data-notification=&quot;&quot;&gt;
+&lt;header class=&quot;modal-header bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;xxl modal&lt;/h6&gt;
+    &lt;button class=&quot;btn-square-s notification-close&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon name=&quot;close-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/button&gt;
+&lt;/header&gt;
+&lt;section class=&quot;modal-body&quot;&gt;
+    &lt;p class=&quot;modal-body-text&quot;&gt;
+        xxl modal content...
+    &lt;/p&gt;
+&lt;/section&gt;
+&lt;footer class=&quot;modal-footer bg-grey-light&quot;&gt;
+    &lt;h6 class=&quot;modal-text&quot;&gt;action&lt;/h6&gt;
+    &lt;div&gt;
+        &lt;button class=&quot;btn-s btn-red notification-close m-r-1&quot; type=&quot;button&quot;&gt;
+            Close
+        &lt;/button&gt;
+        &lt;button class=&quot;btn-s btn-blue&quot; type=&quot;button&quot;&gt;
+            Save
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer class="bg-grad-red-dark">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="script/notification.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>

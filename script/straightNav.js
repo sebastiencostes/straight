@@ -31,12 +31,6 @@ window.addEventListener("load", () => {
       color: "turquoise",
     },
     {
-      link: "/layout.html",
-      linkName: "layout",
-      icon: "grid-outline",
-      color: "navy",
-    },
-    {
       link: "/header.html",
       linkName: "header",
       icon: "reader-outline",
@@ -47,6 +41,12 @@ window.addEventListener("load", () => {
       linkName: "image",
       icon: "image-outline",
       color: "green",
+    },
+    {
+      link: "/layout.html",
+      linkName: "layout",
+      icon: "grid-outline",
+      color: "navy",
     },
     {
       link: "/modal.html",
@@ -61,16 +61,16 @@ window.addEventListener("load", () => {
       color: "red",
     },
     {
-      link: "/typography.html",
-      linkName: "typography",
-      icon: "text-outline",
-      color: "brown",
-    },
-    {
       link: "/nav.html",
       linkName: "nav",
       icon: "navigate-outline",
       color: "blue",
+    },
+    {
+      link: "/typography.html",
+      linkName: "typography",
+      icon: "text-outline",
+      color: "brown",
     },
     {
       link: "/utility.html",
