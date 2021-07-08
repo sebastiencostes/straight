@@ -1,8 +1,7 @@
-window.addEventListener("load", () => {
   const arrayNotifications = document.querySelectorAll(".notification");
-  const arrayButtons = document.querySelectorAll(".open-notification");
-  const minTime = 2800;
-  const maxTime = 10000;
+  const arrayOpenButtons = document.querySelectorAll(".notification-open");
+  const arrayCloseButtons = document.querySelectorAll(".notification-close");
+  const dismissTime = 4200;
 
   /*
   Set atrr in notification
@@ -17,49 +16,77 @@ window.addEventListener("load", () => {
   Set attr in button
   */
   j = 0;
-  for (let btn of arrayButtons) {
+  for (let btn of arrayOpenButtons) {
     j++;
     btn.setAttribute("data-notification", j);
   }
-
-  /*
-  Notification auto-dismissed
-  */
-  notification = (lengthOfTime) => {
-    for (let btn of arrayButtons) {
-      btn.addEventListener("click", (e) => {
+  //notification
+  notification = () => {
+    //open
+    openNotification = (trigger) => {
+      for (let currentBtn of arrayOpenButtons) {
         //get current btn attr
-        let currentBtn = e.currentTarget.getAttribute("data-notification");
+        currentBtn = trigger;
         for (let notif of arrayNotifications) {
           //get current notif
-          let currentNotif = notif.getAttribute(
-            "data-notification",
-            currentBtn
-          );
-          if (currentNotif === currentBtn) {
+          let currentNotif = notif.getAttribute("data-notification", trigger);
+          if (currentNotif === trigger) {
             notif.classList.remove("d-none");
             notif.classList.add("d-block");
           }
-
-          if (lengthOfTime >= minTime && lengthOfTime <= maxTime) {
-            setTimeout(() => {
-              notif.classList.remove("d-block");
-              notif.classList.add("d-none");
-            }, lengthOfTime);
+          //toggling
+          if (trigger !== currentNotif) {
+            notif.classList.remove("d-block");
+            notif.classList.add("d-none");
           }
-
-          //hiding notidication when clicking outside
-          document.addEventListener("click", (e) => {
-            let isNotif = notif.contains(e.target);
-            if (isNotif) {
-              notif.classList.remove("d-block");
-              notif.classList.add("d-none");
-            }
-          });
         }
+      }
+    };
+    //call openNotification()
+    for (let btn of arrayOpenButtons) {
+      btn.addEventListener("click", (e) => {
+        let currentBtn = e.currentTarget.getAttribute("data-notification");
+        openNotification(currentBtn);
+      });
+    }
+    //close
+    closeNotification = (trigger) => {
+      for (let currentBtn of arrayCloseButtons) {
+        //get current btn attr
+        currentBtn = trigger;
+        for (let notif of arrayNotifications) {
+          //get current notif
+          let currentNotif = notif.getAttribute("data-notification", trigger);
+          if (currentNotif !== trigger) {
+            notif.classList.remove("d-block");
+            notif.classList.add("d-none");
+          }
+        }
+      }
+    };
+    //call closeNotification()
+    for (let btn of arrayCloseButtons) {
+      btn.addEventListener("click", (e) => {
+        let currentBtn = e.currentTarget.getAttribute("data-notification");
+        closeNotification(currentBtn);
+      });
+    }
+    //auto-dismiss
+    autoDismiss = () => {
+      for (let notif of arrayNotifications) {
+        if (notif.classList.contains("auto-dismiss")) {
+          setTimeout(() => {
+            notif.classList.remove("d-block");
+            notif.classList.add("d-none");
+          }, dismissTime);
+        } 
+      }
+    };
+    //call autoDismiss()
+    for (let btn of arrayOpenButtons) {
+      btn.addEventListener("click", () => {
+        autoDismiss();
       });
     }
   };
-  //Add value between 2800 & 8000 to auto dismiss notification
   notification();
-});
