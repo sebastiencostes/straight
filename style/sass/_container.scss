@@ -28,17 +28,17 @@ relative to screen device
   @include container-screen();
 }
 /*
-relative to window
+relative to window/box
 */
-@mixin container-window() {
+@mixin container-box() {
   @include d.tablet-portrait {
     @include m.margin-direction(left, auto);
     @include m.margin-direction(right, auto);
-    @include w.width(calc(100% - 4rem));
+    @include w.max-width(calc(100% - 4rem));
   }
 }
-.container-window {
-  @include container-window();
+.container-box {
+  @include container-box();
 }
 
 /*

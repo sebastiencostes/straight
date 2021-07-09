@@ -15,6 +15,17 @@
 }
 
 /*
+auto flow
+*/
+@mixin g-col-auto() {
+  grid-auto-flow: column;
+}
+
+.g-col-auto {
+  @include g-col-auto();
+}
+
+/*
 column-gap
 */
 @mixin g-col-gap($value) {
@@ -69,6 +80,110 @@ G-container
 }
 .g-no-row-col {
   @include g-no-row-col();
+}
+
+/*
+grid column span
+*/
+@mixin g-col-span($value) {
+  grid-column: span $value;
+}
+@for $i from 1 through 16 {
+  .col-push-#{$i} {
+    grid-column: (span #{$i});
+  }
+}
+
+@include d.phone() {
+  @for $i from 1 through 16 {
+    .col-push-s-#{$i} {
+      grid-column: (span #{$i});
+    }
+  }
+}
+
+@include d.tablet-portrait() {
+  @for $i from 1 through 16 {
+    .col-push-m-#{$i} {
+      grid-column: (span #{$i});
+    }
+  }
+}
+
+@include d.tablet-landscape() {
+  @for $i from 1 through 16 {
+    .col-push-l-#{$i} {
+      grid-column: (span #{$i});
+    }
+  }
+}
+
+@include d.laptop() {
+  @for $i from 1 through 16 {
+    .col-push-xl-#{$i} {
+      grid-column: (span #{$i});
+    }
+  }
+}
+
+@include d.desktop() {
+  @for $i from 1 through 16 {
+    .col-push-xxl-#{$i} {
+      grid-column: (span #{$i});
+    }
+  }
+}
+
+/*
+row span
+*/
+@mixin g-row-span($value) {
+  grid-row: span $value;
+}
+@for $i from 1 through 16 {
+  .row-push-#{$i} {
+    grid-row: (span #{$i});
+  }
+}
+
+@include d.phone() {
+  @for $i from 1 through 16 {
+    .row-push-s-#{$i} {
+      grid-row: (span #{$i});
+    }
+  }
+}
+
+@include d.tablet-portrait() {
+  @for $i from 1 through 16 {
+    .row-push-m-#{$i} {
+      grid-row: (span #{$i});
+    }
+  }
+}
+
+@include d.tablet-landscape() {
+  @for $i from 1 through 16 {
+    .row-push-l-#{$i} {
+      grid-row: (span #{$i});
+    }
+  }
+}
+
+@include d.laptop() {
+  @for $i from 1 through 16 {
+    .row-push-xl-#{$i} {
+      grid-row: (span #{$i});
+    }
+  }
+}
+
+@include d.desktop() {
+  @for $i from 1 through 16 {
+    .row-push-xxl-#{$i} {
+      grid-row: (span #{$i});
+    }
+  }
 }
 
 /*

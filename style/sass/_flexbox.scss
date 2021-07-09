@@ -1,10 +1,12 @@
 @mixin d-flex {
+  display: -webkit-box;
   display: flex;
 }
 .d-flex {
   @include d-flex();
 }
 @mixin d-inline-flex() {
+  display: -webkit-inline-box;
   display: inline-flex;
 }
 .d-inline-flex {
@@ -17,24 +19,32 @@ Direction
   flex-direction: $value;
 }
 @mixin f-dir-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 }
 .f-dir-col {
   @include f-dir-col;
 }
 @mixin f-dir-col-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
   flex-direction: column-reverse;
 }
 .f-dir-col-reverse {
   @include f-dir-col-reverse();
 }
 @mixin f-dir-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
   flex-direction: row;
 }
 .f-dir-row {
   @include f-dir-row;
 }
 @mixin f-dir-row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
   flex-direction: row-reverse;
 }
 .f-dir-row-reverse {
@@ -61,13 +71,15 @@ Wrap
 Justify
 */
 @mixin justify-content($value) {
+  -webkit-box-pack: $value;
   justify-content: $value;
 }
 @mixin justify-between {
+  -webkit-box-pack: justify;
   justify-content: space-between;
 }
 .j-between {
-  @include justify-between;
+  @include justify-between();
 }
 .j-evenly {
   @include justify-content(space-evenly);
@@ -79,18 +91,20 @@ Justify
   justify-content: space-around;
 }
 .j-around {
-  @include justify-around;
+  @include justify-around();
 }
 .j-stretch {
   @include justify-content(stretch);
 }
 @mixin justify-start {
+  -webkit-box-pack: start;
   justify-content: flex-start;
 }
 .j-start {
   @include justify-start;
 }
 @mixin justify-end() {
+  -webkit-box-pack: end;
   justify-content: flex-end;
 }
 .j-end {
@@ -104,6 +118,7 @@ Justify
 Align items
 */
 @mixin align-items($value) {
+  -webkit-box-align: $value;
   align-items: $value;
 }
 .i-base {
@@ -140,6 +155,30 @@ Align self
   align-self: $value;
 }
 
+.self-center {
+  @include align-self(center);
+}
+
+.self-f-end {
+  @include align-self(flex-end);
+}
+
+.self-f-start {
+  @include align-self(flex-start);
+}
+
+.self-start {
+  @include align-self(self-start);
+}
+
+.self-end {
+  @include align-self(self-end);
+}
+
+.self-stretch {
+  @include align-self(stretch);
+}
+
 /*
 Flex basis
 */
@@ -156,55 +195,88 @@ Flex basis
 Order
 */
 @mixin order-1 {
+  -webkit-box-ordinal-group: 2;
   order: 1;
 }
 
 @mixin order-2 {
+  -webkit-box-ordinal-group: 3;
   order: 2;
 }
 
 @mixin order-3 {
+  -webkit-box-ordinal-group: 4;
   order: 3;
 }
 
 @mixin order-4 {
+  -webkit-box-ordinal-group: 5;
   order: 4;
 }
 
 @mixin order-5 {
+  -webkit-box-ordinal-group: 6;
   order: 5;
 }
 
 @mixin order-6 {
+  -webkit-box-ordinal-group: 7;
   order: 6;
 }
 
 @mixin order-7 {
+  -webkit-box-ordinal-group: 8;
   order: 7;
 }
 
 @mixin order-8 {
+  -webkit-box-ordinal-group: 9;
   order: 8;
 }
 
 @mixin order-9 {
+  -webkit-box-ordinal-group: 10;
   order: 9;
 }
 
 @mixin order-10 {
+  -webkit-box-ordinal-group: 11;
   order: 10;
 }
 
 @mixin order-11 {
+  -webkit-box-ordinal-group: 12;
   order: 10;
 }
 
 @mixin order-12 {
+  -webkit-box-ordinal-group: 13;
   order: 12;
 }
 
-@for $i from 1 through 12 {
+@mixin order-13 {
+  -webkit-box-ordinal-group: 14;
+  order: 13;
+}
+
+@mixin order-14 {
+  -webkit-box-ordinal-group: 15;
+  order: 14;
+}
+
+@mixin order-15 {
+  -webkit-box-ordinal-group: 16;
+  order: 15;
+}
+
+@mixin order-16 {
+  -webkit-box-ordinal-group: 17;
+  order: 16;
+}
+
+@for $i from 1 through 16 {
   .order-#{$i} {
+    -webkit-box-ordinal-group:#{$i +1};
     order: #{$i};
   }
 }
