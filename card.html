@@ -77,7 +77,7 @@
                 When using <b>Card Carousel</b>
                 you <b>must create and keep an id</b> on <code class="single-code"> &lt;figure id=&quot;yourCarouselID&quot; class=&quot;carousel&quot;&gt;</code>.
                 When using <b>Card Action</b>
-                you <b>must keep the data-attr</b> <code class="single-code"> &lt;data-card=&quot;let it blank&quot;&gt;</code> on appropriate tag elements.
+                you <b>must keep the data-attr</b> <code class="single-code"> &lt;data-card=&quot;&quot;&gt;</code> on appropriate tag elements.
             </p>
             <asside>
                 <p>You can check more about carousels at <a href="carousel.html" rel="noopener">carousel module</a>.</p>
@@ -109,7 +109,7 @@
             <article class="card b-shadow-hovered">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">card action</h4>
-                    <button class="card-cta btn-square-s open" type="button" data-card="0">
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
@@ -127,7 +127,7 @@
                         <h4 class="card-body-title">
                             card action
                         </h4>
-                        <button class="card-cta btn-square-s close" type="button" data-card="0">
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
                             <ion-icon name="close-outline" />
                         </button>
                     </heaheader>
@@ -154,7 +154,7 @@
             <article class="card b-shadow-hovered">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">linked card</h4>
-                    <button class="card-cta btn-square-s open" type="button" data-card="171">
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
@@ -172,7 +172,7 @@
                         <h4 class="card-body-title">
                             <a href="#" rel="noopener">linked card</a>
                         </h4>
-                        <button class="card-cta btn-square-s close" type="button" data-card="171">
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
                             <ion-icon name="close-outline" />
                         </button>
                     </header>
@@ -186,17 +186,17 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s" type="button">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s" type="button">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s" type="button">
-                                <ion-icon name="cart" />
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
                             </button>
                         </div>
                     </footer>
@@ -209,7 +209,7 @@
                     </div>
                     <div class="card-footer-right-container">
                         <button class="card-cta btn-square-s">
-                            <ion-icon name="notifications-outline" />
+                            <ion-icon class="t-red" name="notifications-outline" />
                         </button>
                     </div>
                 </footer>
@@ -218,7 +218,7 @@
             <article class="card b-shadow-hovered">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">card carousel</h4>
-                    <button class="card-cta btn-square-s open" type="button" data-card="12">
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
@@ -256,7 +256,7 @@
                         <h4 class="card-body-title t-ellipsis">
                             <a href="#">card carousel</a>
                         </h4>
-                        <button class="card-cta btn-square-s close" data-card="12" type="button">
+                        <button class="card-cta btn-square-s card-close" data-card="" type="button">
                             <ion-icon name="close-outline" />
                         </button>
                     </header>
@@ -266,9 +266,9 @@
                         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                     <ul class="card-body-text">
-                        <li><ion-icon name="earth-sharp" size="small" class="m-r-1"></ion-icon>green</li>
-                        <li><ion-icon name="heart-sharp" size="small" class="m-r-1"></ion-icon>healthly</li>
-                        <li><ion-icon name="leaf-sharp" size="small" class="m-r-1"></ion-icon>smooth</li>
+                        <li><ion-icon name="earth" size="small" class="m-r-1"></ion-icon>world</li>
+                        <li><ion-icon name="heart" size="small" class="m-r-1"></ion-icon>healthy</li>
+                        <li><ion-icon name="leaf" size="small" class="m-r-1"></ion-icon>green</li>
                     </ul>
                     <details class="card-body-text">
                         <summary class="m-b-1">ingredients</summary>
@@ -283,17 +283,17 @@
                             </span>
                         </div>
                         <div class="card-footer-center-container">
-                            <button class="card-cta btn-square-s" type="button">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s" type="button">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s" type="button">
-                                <ion-icon name="cart" />
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
                             </button>
                         </div>
                     </footer>
@@ -305,8 +305,8 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s" type="button">
-                            <ion-icon name="cart" />
+                        <button class="card-cta btn-square-s btn-red" type="button">
+                            <ion-icon name="cart-outline" />
                         </button>
                     </div>
                 </footer>
@@ -345,7 +345,7 @@
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;card action&lt;/h4&gt;
-        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+        &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
         &lt;/button&gt;
     &lt;/header&gt;
@@ -363,7 +363,7 @@
             &lt;h4 class=&quot;card-body-title&quot;&gt;
                 card action
             &lt;/h4&gt;
-            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
                 &lt;ion-icon name=&quot;close-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/header&gt;
@@ -394,7 +394,7 @@
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
-        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+        &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
         &lt;/button&gt;
     &lt;/header&gt;
@@ -412,7 +412,7 @@
             &lt;h4 class=&quot;card-body-title&quot;&gt;
                 &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
             &lt;/h4&gt;
-            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
                 &lt;ion-icon name=&quot;close-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/header&gt;
@@ -426,17 +426,17 @@
                 &lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&quot;card-body-info-qty&quot;&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
                     &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
                 &lt;/button&gt;
                 &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
                     &lt;ion-icon name=&quot;add-outline&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
             &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
-                    &lt;ion-icon name=&quot;cart&quot; /&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                    &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
@@ -449,7 +449,7 @@
         &lt;/div&gt;
         &lt;div class=&quot;card-footer-right-container&quot;&gt;
             &lt;button class=&quot;card-cta btn-square-s&quot;&gt;
-                &lt;ion-icon name=&quot;notifications-outline&quot; /&gt;
+                &lt;ion-icon class=&quot;t-red&quot;&gt; name=&quot;notifications-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/footer&gt;
@@ -462,7 +462,7 @@
 &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;card carousel&lt;/h4&gt;
-        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+        &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
         &lt;/button&gt;
     &lt;/header&gt;
@@ -500,7 +500,7 @@
             &lt;h4 class=&quot;card-body-title t-ellipsis&quot;&gt;
                 &lt;a href=&quot;#&quot;&gt;card carousel&lt;/a&gt;
             &lt;/h4&gt;
-            &lt;button class=&quot;card-cta btn-square-s close&quot; data-card=&quot;&quot; type=&quot;button&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-close&quot; data-card=&quot;&quot; type=&quot;button&quot;&gt;
                 &lt;ion-icon name=&quot;close-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/header&gt;
@@ -511,7 +511,7 @@
         &lt;/p&gt;
         &lt;ul class=&quot;card-body-text&quot;&gt;
             &lt;li&gt;&lt;ion-icon name=&quot;earth-sharp&quot; size=&quot;small&quot; class=&quot;m-r-1&quot;&gt;&lt;/ion-icon&gt;green&lt;/li&gt;
-            &lt;li&gt;&lt;ion-icon name=&quot;heart-sharp&quot; size=&quot;small&quot; class=&quot;m-r-1&quot;&gt;&lt;/ion-icon&gt;healthly&lt;/li&gt;
+            &lt;li&gt;&lt;ion-icon name=&quot;heart-sharp&quot; size=&quot;small&quot; class=&quot;m-r-1&quot;&gt;&lt;/ion-icon&gt;healthy&lt;/li&gt;
             &lt;li&gt;&lt;ion-icon name=&quot;leaf-sharp&quot; size=&quot;small&quot; class=&quot;m-r-1&quot;&gt;&lt;/ion-icon&gt;smooth&lt;/li&gt;
         &lt;/ul&gt;
         &lt;details class=&quot;card-body-text&quot;&gt;
@@ -527,17 +527,17 @@
                 &lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&quot;card-footer-center-container&quot;&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
                     &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
                 &lt;/button&gt;
                 &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
                     &lt;ion-icon name=&quot;add-outline&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
             &lt;div class=&quot;card-footer-right-container&quot;&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
-                    &lt;ion-icon name=&quot;cart&quot; /&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                    &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
@@ -549,8 +549,8 @@
             &lt;/span&gt;
         &lt;/div&gt;
         &lt;div class=&quot;card-footer-right-container&quot;&gt;
-            &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
-                &lt;ion-icon name=&quot;cart&quot; /&gt;
+            &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/footer&gt;
@@ -607,8 +607,8 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s">
-                            <ion-icon name="cart" />
+                        <button class="card-cta btn-square-s btn-red">
+                            <ion-icon name="cart-outline" />
                         </button>
                     </div>
                 </footer>
@@ -617,7 +617,7 @@
             <article class="card card-h b-shadow-hovered">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis"><a href="#" rel="noopener">card action</a></h4>
-                    <button class="card-cta btn-square-s open" type="button" data-card="400">
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="400">
                         <ion-icon name="ellipsis-horizontal" size="small" />
                     </button>
                 </header>
@@ -637,7 +637,7 @@
                         <h4 class="card-body-title">
                             <a href="#" rel="noopener">card action</a>
                         </h4>
-                        <button class="card-cta btn-square-s close" type="button" data-card="400">
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="400">
                             <ion-icon name="close-outline" />
                         </button>
                     </header>
@@ -651,17 +651,17 @@
                             </span>
                         </div>
                         <div class="card-footer-center-container">
-                            <button class="card-cta btn-square-s" type="button">
-                                <ion-icon name="remove-circle-outline" />
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s" type="button">
-                                <ion-icon name="add-circle-outline" />
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s" type="button">
-                                <ion-icon name="cart" />
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
                             </button>
                         </div>
                     </footer>
@@ -673,8 +673,8 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s" type="button">
-                            <ion-icon name="cart" />
+                        <button class="card-cta btn-square-s btn-red" type="button">
+                            <ion-icon name="cart-outline" />
                         </button>
                     </div>
                 </footer>
@@ -729,8 +729,8 @@
             &lt;/span&gt;
         &lt;/div&gt;
         &lt;div class=&quot;card-footer-right-container&quot;&gt;
-            &lt;button class=&quot;card-cta btn-square-s&quot;&gt;
-                &lt;ion-icon name=&quot;cart&quot; /&gt;
+            &lt;button class=&quot;card-cta btn-square-s btn-red&quot;&gt;
+                &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/footer&gt;
@@ -743,7 +743,7 @@
 &lt;article class=&quot;card card-h b-shadow-hovered&quot;&gt;
     &lt;header class=&quot;card-header&quot;&gt;
         &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;&lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;card action&lt;/a&gt;&lt;/h4&gt;
-        &lt;button class=&quot;card-cta btn-square-s open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+        &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;ellipsis-horizontal&quot; size=&quot;small&quot; /&gt;
         &lt;/button&gt;
     &lt;/header&gt;
@@ -763,7 +763,7 @@
             &lt;h4 class=&quot;card-body-title&quot;&gt;
                 &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;card action&lt;/a&gt;
             &lt;/h4&gt;
-            &lt;button class=&quot;card-cta btn-square-s close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
                 &lt;ion-icon name=&quot;close-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/header&gt;
@@ -777,17 +777,17 @@
                 &lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&quot;card-footer-center-container&quot;&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
                     &lt;ion-icon name=&quot;remove-circle-outline&quot; /&gt;
                 &lt;/button&gt;
                 &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
                     &lt;ion-icon name=&quot;add-circle-outline&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
             &lt;div class=&quot;card-footer-right-container&quot;&gt;
-                &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
-                    &lt;ion-icon name=&quot;cart&quot; /&gt;
+                &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                    &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
                 &lt;/button&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
@@ -799,8 +799,8 @@
             &lt;/span&gt;
         &lt;/div&gt;
         &lt;div class=&quot;card-footer-right-container&quot;&gt;
-            &lt;button class=&quot;card-cta btn-square-s&quot; type=&quot;button&quot;&gt;
-                &lt;ion-icon name=&quot;cart&quot; /&gt;
+            &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/footer&gt;
@@ -859,17 +859,17 @@
                         </span>
                     </div>
                     <div class="card-footer-center-container">
-                        <button class="card-cta btn-square-s">
+                        <button class="card-cta btn-square-s btn-blue">
                             <ion-icon name="remove-outline" />
                         </button>
                         <span class="m-l-2 m-r-2">1</span>
-                        <button class="card-cta btn-square-s">
+                        <button class="card-cta btn-square-s btn-blue">
                             <ion-icon name="add-outline" />
                         </button>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s">
-                            <ion-icon name="cart" />
+                        <button class="card-cta btn-square-s btn-red">
+                            <ion-icon name="cart-outline" />
                         </button>
                     </div>
                 </footer>
@@ -927,17 +927,17 @@
             &lt;/span&gt;
         &lt;/div&gt;
         &lt;div class=&quot;card-footer-center-container&quot;&gt;
-            &lt;button class=&quot;card-cta btn-square-s&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s btn-blue&quot;&gt;
                 &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
             &lt;/button&gt;
             &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
-            &lt;button class=&quot;card-cta btn-square-s&quot;&gt;
+            &lt;button class=&quot;card-cta btn-square-s btn-blue&quot;&gt;
                 &lt;ion-icon name=&quot;add-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/div&gt;
         &lt;div class=&quot;card-footer-right-container&quot;&gt;
-            &lt;button class=&quot;card-cta btn-square-s&quot;&gt;
-                &lt;ion-icon name=&quot;cart&quot; /&gt;
+            &lt;button class=&quot;card-cta btn-square-s btn-red&quot;&gt;
+                &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/footer&gt;
@@ -947,417 +947,1041 @@
         </div>
 
         <h3 class="note-pink">
-            Card gallery example
+            Card gallery
         </h3>
         <p>Here a basic grid layout example with bordered simple cards. Resize your window to see it in action.</p>
         <asidde>
             <p>you can check more about layouts at <a href="/layout.html" rel="noopener">layout module</a></p>.
         </asidde>
 
-        <div class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-b-2">
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
+        <div class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2">
+            <article class="card b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">linked card</h4>
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                        <ion-icon name="ellipsis-horizontal" />
+                    </button>
                 </header>
-                <figure class="card-img-container">
+                <a href="#" rel="noopener" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
                         <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
                         <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
                         <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </figure>
-                <footer class="card-footer b-top">
+                </a>
+                <section class="card-body d-none" data-card="">
+                    <header class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="#" rel="noopener">linked card</a>
+                        </h4>
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </header>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <footer class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                23<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+                <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            <span>This is a passive card</span>
+                            New
                         </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
                     </div>
                 </footer>
             </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
+            <article class="card b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">linked card</h4>
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                        <ion-icon name="ellipsis-horizontal" />
+                    </button>
                 </header>
-                <figure class="card-img-container">
+                <a href="#" rel="noopener" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
                         <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
                         <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
                         <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </figure>
-                <footer class="card-footer b-top">
+                </a>
+                <section class="card-body d-none" data-card="">
+                    <header class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="#" rel="noopener">linked card</a>
+                        </h4>
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </header>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <footer class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                23<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+                <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            <span>This is a passive card</span>
+                            New
                         </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
                     </div>
                 </footer>
             </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
+            <article class="card b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">linked card</h4>
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                        <ion-icon name="ellipsis-horizontal" />
+                    </button>
                 </header>
-                <figure class="card-img-container">
+                <a href="#" rel="noopener" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
                         <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
                         <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
                         <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </figure>
-                <footer class="card-footer b-top">
+                </a>
+                <section class="card-body d-none" data-card="">
+                    <header class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="#" rel="noopener">linked card</a>
+                        </h4>
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </header>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <footer class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                23<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+                <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            <span>This is a passive card</span>
+                            New
                         </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
                     </div>
                 </footer>
             </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
+            <article class="card b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">linked card</h4>
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                        <ion-icon name="ellipsis-horizontal" />
+                    </button>
                 </header>
-                <figure class="card-img-container">
+                <a href="#" rel="noopener" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
                         <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
                         <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
                         <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </figure>
-                <footer class="card-footer b-top">
+                </a>
+                <section class="card-body d-none" data-card="">
+                    <header class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="#" rel="noopener">linked card</a>
+                        </h4>
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </header>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <footer class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                23<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+                <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            <span>This is a passive card</span>
+                            New
                         </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
                     </div>
                 </footer>
             </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
+            <article class="card b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">linked card</h4>
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                        <ion-icon name="ellipsis-horizontal" />
+                    </button>
                 </header>
-                <figure class="card-img-container">
+                <a href="#" rel="noopener" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
                         <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
                         <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
                         <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </figure>
-                <footer class="card-footer b-top">
+                </a>
+                <section class="card-body d-none" data-card="">
+                    <header class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="#" rel="noopener">linked card</a>
+                        </h4>
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </header>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <footer class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                23<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+                <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            <span>This is a passive card</span>
+                            New
                         </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
                     </div>
                 </footer>
             </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
+            <article class="card b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">linked card</h4>
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                        <ion-icon name="ellipsis-horizontal" />
+                    </button>
                 </header>
-                <figure class="card-img-container">
+                <a href="#" rel="noopener" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
                         <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
                         <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
                         <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </figure>
-                <footer class="card-footer b-top">
+                </a>
+                <section class="card-body d-none" data-card="">
+                    <header class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="#" rel="noopener">linked card</a>
+                        </h4>
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </header>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <footer class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                23<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+                <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            <span>This is a passive card</span>
+                            New
                         </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
                     </div>
                 </footer>
             </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
+            <article class="card b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">linked card</h4>
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                        <ion-icon name="ellipsis-horizontal" />
+                    </button>
                 </header>
-                <figure class="card-img-container">
+                <a href="#" rel="noopener" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
                         <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
                         <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
                         <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </figure>
-                <footer class="card-footer b-top">
+                </a>
+                <section class="card-body d-none" data-card="">
+                    <header class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="#" rel="noopener">linked card</a>
+                        </h4>
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </header>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <footer class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                23<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+                <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            <span>This is a passive card</span>
+                            New
                         </span>
+                    </div>
+                    <div class="card-footer-right-container">
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star-outline"></ion-icon>
                     </div>
                 </footer>
             </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
+            <article class="card b-shadow-hovered">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">linked card</h4>
+                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                        <ion-icon name="ellipsis-horizontal" />
+                    </button>
                 </header>
-                <figure class="card-img-container">
+                <a href="#" rel="noopener" class="card-img-container">
                     <picture>
                         <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
                         <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
                         <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
                         <img class="card-img" src="/assets/img/card/cardV.png" alt="">
                     </picture>
-                </figure>
-                <footer class="card-footer b-top">
+                </a>
+                <section class="card-body d-none" data-card="">
+                    <header class="card-body-header">
+                        <h4 class="card-body-title">
+                            <a href="#" rel="noopener">linked card</a>
+                        </h4>
+                        <button class="card-cta btn-square-s card-close" type="button" data-card="">
+                            <ion-icon name="close-outline" />
+                        </button>
+                    </header>
+                    <p class="card-body-text">
+                        your scrollable content here...
+                    </p>
+                    <footer class="card-body-footer">
+                        <div class="card-body-footer-left-container">
+                            <span class="card-left-text">
+                                23<sup>€90</sup>
+                            </span>
+                        </div>
+                        <div class="card-body-info-qty">
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="remove-outline" />
+                            </button>
+                            <span class="m-l-2 m-r-2">1</span>
+                            <button class="card-cta btn-square-s btn-blue" type="button">
+                                <ion-icon name="add-outline" />
+                            </button>
+                        </div>
+                        <div class="card-body-footer-right-container">
+                            <button class="card-cta btn-square-s btn-red" type="button">
+                                <ion-icon name="cart-outline" />
+                            </button>
+                        </div>
+                    </footer>
+                </section>
+                <footer class="card-footer">
                     <div class="card-footer-left-container">
                         <span class="card-left-text">
-                            <span>This is a passive card</span>
+                            New
                         </span>
                     </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
-                    </div>
-                </footer>
-            </article>
-            <article class="card border">
-                <header class="card-header b-bottom">
-                    <h4 class="card-title t-ellipsis">simple card</h4>
-                </header>
-                <figure class="card-img-container">
-                    <picture>
-                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
-                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
-                    </picture>
-                </figure>
-                <footer class="card-footer b-top">
-                    <div class="card-footer-left-container">
-                        <span class="card-left-text">
-                            <span>This is a passive card</span>
-                        </span>
+                    <div class="card-footer-right-container">
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
+                        <ion-icon class="t-yellow" name="star"></ion-icon>
                     </div>
                 </footer>
             </article>
         </div>
 
         <div class="m-b-8">
-            <pre class="h-rem-46 clipboard" rel="copy SIMPLE CARD GALLERY to clipboard">
+            <pre class="h-rem-46 clipboard" rel="copy GALLERY to clipboard">
                 <code>
-&lt;div class=&quot;g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5&quot;&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+&lt;div class=&quot;g-col g-col-m-2 g-col-l-3 g-col-xl-4&quot;&gt;
+    &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+            &lt;/button&gt;
         &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
                 &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;/a&gt;
+        &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+            &lt;header class=&quot;card-body-header&quot;&gt;
+                &lt;h4 class=&quot;card-body-title&quot;&gt;
+                    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                    &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/header&gt;
+            &lt;p class=&quot;card-body-text&quot;&gt;
+                your scrollable content here...
+            &lt;/p&gt;
+            &lt;footer class=&quot;card-body-footer&quot;&gt;
+                &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                    &lt;span class=&quot;card-left-text&quot;&gt;
+                        23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;add-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                    New
                 &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-    &lt;header class=&quot;card-header b-bottom&quot;&gt;
-        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
-    &lt;/header&gt;
-    &lt;figure class=&quot;card-img-container&quot;&gt;
-        &lt;picture&gt;
-            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
-        &lt;/picture&gt;
-    &lt;/figure&gt;
-    &lt;footer class=&quot;card-footer b-top&quot;&gt;
-        &lt;div class=&quot;card-footer-left-container&quot;&gt;
-            &lt;span class=&quot;card-left-text&quot;&gt;
-                &lt;span&gt;This is a passive card&lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/footer&gt;
-&lt;/article&gt;
-&lt;article class=&quot;card border&quot;&gt;
-    &lt;header class=&quot;card-header b-bottom&quot;&gt;
-        &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
-    &lt;/header&gt;
-    &lt;figure class=&quot;card-img-container&quot;&gt;
-        &lt;picture&gt;
-            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-            &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
-        &lt;/picture&gt;
-    &lt;/figure&gt;
-    &lt;footer class=&quot;card-footer b-top&quot;&gt;
-        &lt;div class=&quot;card-footer-left-container&quot;&gt;
-            &lt;span class=&quot;card-left-text&quot;&gt;
-                &lt;span&gt;This is a passive card&lt;/span&gt;
-            &lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/footer&gt;
-    &lt;/article&gt;
-        &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+            &lt;/button&gt;
         &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
                 &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;/a&gt;
+        &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+            &lt;header class=&quot;card-body-header&quot;&gt;
+                &lt;h4 class=&quot;card-body-title&quot;&gt;
+                    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                    &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/header&gt;
+            &lt;p class=&quot;card-body-text&quot;&gt;
+                your scrollable content here...
+            &lt;/p&gt;
+            &lt;footer class=&quot;card-body-footer&quot;&gt;
+                &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                    &lt;span class=&quot;card-left-text&quot;&gt;
+                        23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;add-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                    New
                 &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-        &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+            &lt;/button&gt;
         &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
                 &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;/a&gt;
+        &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+            &lt;header class=&quot;card-body-header&quot;&gt;
+                &lt;h4 class=&quot;card-body-title&quot;&gt;
+                    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                    &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/header&gt;
+            &lt;p class=&quot;card-body-text&quot;&gt;
+                your scrollable content here...
+            &lt;/p&gt;
+            &lt;footer class=&quot;card-body-footer&quot;&gt;
+                &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                    &lt;span class=&quot;card-left-text&quot;&gt;
+                        23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;add-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                    New
                 &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+            &lt;/button&gt;
         &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
                 &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;/a&gt;
+        &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+            &lt;header class=&quot;card-body-header&quot;&gt;
+                &lt;h4 class=&quot;card-body-title&quot;&gt;
+                    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                    &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/header&gt;
+            &lt;p class=&quot;card-body-text&quot;&gt;
+                your scrollable content here...
+            &lt;/p&gt;
+            &lt;footer class=&quot;card-body-footer&quot;&gt;
+                &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                    &lt;span class=&quot;card-left-text&quot;&gt;
+                        23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;add-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                    New
                 &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+            &lt;/button&gt;
         &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
                 &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;/a&gt;
+        &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+            &lt;header class=&quot;card-body-header&quot;&gt;
+                &lt;h4 class=&quot;card-body-title&quot;&gt;
+                    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                    &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/header&gt;
+            &lt;p class=&quot;card-body-text&quot;&gt;
+                your scrollable content here...
+            &lt;/p&gt;
+            &lt;footer class=&quot;card-body-footer&quot;&gt;
+                &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                    &lt;span class=&quot;card-left-text&quot;&gt;
+                        23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;add-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                    New
                 &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+            &lt;/button&gt;
         &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
                 &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;/a&gt;
+        &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+            &lt;header class=&quot;card-body-header&quot;&gt;
+                &lt;h4 class=&quot;card-body-title&quot;&gt;
+                    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                    &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/header&gt;
+            &lt;p class=&quot;card-body-text&quot;&gt;
+                your scrollable content here...
+            &lt;/p&gt;
+            &lt;footer class=&quot;card-body-footer&quot;&gt;
+                &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                    &lt;span class=&quot;card-left-text&quot;&gt;
+                        23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;add-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                    New
                 &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+            &lt;/button&gt;
         &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
                 &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;/a&gt;
+        &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+            &lt;header class=&quot;card-body-header&quot;&gt;
+                &lt;h4 class=&quot;card-body-title&quot;&gt;
+                    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                    &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/header&gt;
+            &lt;p class=&quot;card-body-text&quot;&gt;
+                your scrollable content here...
+            &lt;/p&gt;
+            &lt;footer class=&quot;card-body-footer&quot;&gt;
+                &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                    &lt;span class=&quot;card-left-text&quot;&gt;
+                        23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;add-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                    New
                 &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star-outline&quot;&gt;&lt;/ion-icon&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-    &lt;article class=&quot;card border&quot;&gt;
-        &lt;header class=&quot;card-header b-bottom&quot;&gt;
-            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+    &lt;article class=&quot;card b-shadow-hovered&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;linked card&lt;/h4&gt;
+            &lt;button class=&quot;card-cta btn-square-s card-open&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                &lt;ion-icon name=&quot;ellipsis-horizontal&quot; /&gt;
+            &lt;/button&gt;
         &lt;/header&gt;
-        &lt;figure class=&quot;card-img-container&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot; class=&quot;card-img-container&quot;&gt;
             &lt;picture&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
                 &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
                 &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
             &lt;/picture&gt;
-        &lt;/figure&gt;
-        &lt;footer class=&quot;card-footer b-top&quot;&gt;
+        &lt;/a&gt;
+        &lt;section class=&quot;card-body d-none&quot; data-card=&quot;&quot;&gt;
+            &lt;header class=&quot;card-body-header&quot;&gt;
+                &lt;h4 class=&quot;card-body-title&quot;&gt;
+                    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked card&lt;/a&gt;
+                &lt;/h4&gt;
+                &lt;button class=&quot;card-cta btn-square-s card-close&quot; type=&quot;button&quot; data-card=&quot;&quot;&gt;
+                    &lt;ion-icon name=&quot;close-outline&quot; /&gt;
+                &lt;/button&gt;
+            &lt;/header&gt;
+            &lt;p class=&quot;card-body-text&quot;&gt;
+                your scrollable content here...
+            &lt;/p&gt;
+            &lt;footer class=&quot;card-body-footer&quot;&gt;
+                &lt;div class=&quot;card-body-footer-left-container&quot;&gt;
+                    &lt;span class=&quot;card-left-text&quot;&gt;
+                        23&lt;sup&gt;&euro;90&lt;/sup&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-info-qty&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;remove-outline&quot; /&gt;
+                    &lt;/button&gt;
+                    &lt;span class=&quot;m-l-2 m-r-2&quot;&gt;1&lt;/span&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;add-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-body-footer-right-container&quot;&gt;
+                    &lt;button class=&quot;card-cta btn-square-s btn-red&quot; type=&quot;button&quot;&gt;
+                        &lt;ion-icon name=&quot;cart-outline&quot; /&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/footer&gt;
+        &lt;/section&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
             &lt;div class=&quot;card-footer-left-container&quot;&gt;
                 &lt;span class=&quot;card-left-text&quot;&gt;
-                    &lt;span&gt;This is a passive card&lt;/span&gt;
+                    New
                 &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;card-footer-right-container&quot;&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
+                &lt;ion-icon class=&quot;t-yellow&quot; name=&quot;star&quot;&gt;&lt;/ion-icon&gt;
             &lt;/div&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
@@ -1367,26 +1991,201 @@
         </div>
 
         <h3 class="note-pink">
-            Card gallery example with variations
+            Card gallery with variations
         </h3>
-        <p><b>Click on one all of these buttons</b> just below to see variations in action.
-        Here a basic example of possibilities.
+        <p>
+            When using <b>Card gallery with variations</b> you <strong>must preserve the data-attr</strong><code class="single-code">&lt;data-card-gallery=&quot;&quot;&gt;</code> on appropriate tag elements.
+            <b>Click on one all of these buttons</b> just below to see variations in action. Here a basic example of possibilities.
         </p>
         <aside>
             <p>
                 you can check more about buttons at <a href="/button.html" rel="noopener">button module</a>
             </p>
         </aside>
-
-        <div id="cardGalleryExample" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2">
-            <div class="card-galllery-example-cta t-right">
-                <button id="vGrid" class="btn-square-m btn-pink m-r-5" type="button">
+        <h3 class="note-pink m-t-4">Category A</h3>
+        <div class="card-gallery g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2" data-card-gallery="">
+            <div class="col-push-m-2 col-push-l-3 col-push-xl-4 t-right">
+                <button id="vGrid" class="card-gallery-v btn-square-m btn-blue m-r-5" type="button" data-card-gallery="">
                     <ion-icon class="t-white" name="tablet-portrait" />
                 </button>
-                <button id="hGrid" class="btn-square-m btn-pink" type="button">
+                <button id="hGrid" class="card-gallery-h btn-square-m btn-blue" type="button" data-card-gallery="">
                     <ion-icon class="t-white" name="tablet-landscape" />
                 </button>
-                <button id="lGrid" class=" btn-square-m btn-pink m-l-5" type="button">
+                <button id="lGrid" class="card-gallery-l btn-square-m btn-blue m-l-5" type="button" data-card-gallery="">
+                    <ion-icon class="t-white" name="phone-landscape" />
+                </button>
+            </div>
+            <article class="card b-shadow">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card b-shadow">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card b-shadow">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card b-shadow">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card b-shadow">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card b-shadow">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card b-shadow">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+            <article class="card b-shadow">
+                <header class="card-header">
+                    <h4 class="card-title t-ellipsis">simple card</h4>
+                </header>
+                <figure class="card-img-container">
+                    <picture>
+                        <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                        <img class="card-img" src="/assets/img/card/cardV.png" alt="">
+                    </picture>
+                </figure>
+                <footer class="card-footer">
+                    <div class="card-footer-left-container">
+                        <span class="card-left-text">
+                            <span>your content</span>
+                        </span>
+                    </div>
+                </footer>
+            </article>
+        </div>
+        <h3 class="note-pink m-t-6">Category B</h3>
+        <div class="card-gallery g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2" data-card-gallery="">
+            <div class="col-push-m-2 col-push-l-3 col-push-xl-4 t-right">
+                <button id="vGrid" class="card-gallery-v btn-square-m btn-blue m-r-5" type="button" data-card-gallery="">
+                    <ion-icon class="t-white" name="tablet-portrait" />
+                </button>
+                <button id="hGrid" class="card-gallery-h btn-square-m btn-blue" type="button" data-card-gallery="">
+                    <ion-icon class="t-white" name="tablet-landscape" />
+                </button>
+                <button id="lGrid" class="card-gallery-l btn-square-m btn-blue m-l-5" type="button" data-card-gallery="">
                     <ion-icon class="t-white" name="phone-landscape" />
                 </button>
             </div>
@@ -1552,6 +2351,359 @@
             </article>
         </div>
 
+        <pre class="clipboard m-t-2 m-b-8" rel="copy card gallery to clipboard">
+            <code>
+&lt;h3 class=&quot;note-pink m-t-4&quot;&gt;Category A&lt;/h3&gt;
+&lt;div class=&quot;card-gallery g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2&quot; data-card-gallery=&quot;&quot;&gt;
+    &lt;div class=&quot;col-push-m-2 col-push-l-3 col-push-xl-4 t-right&quot;&gt;
+        &lt;button id=&quot;vGrid&quot; class=&quot;card-gallery-v btn-square-m btn-blue m-r-5&quot; type=&quot;button&quot; data-card-gallery=&quot;&quot;&gt;
+            &lt;ion-icon class=&quot;t-white&quot; name=&quot;tablet-portrait&quot; /&gt;
+        &lt;/button&gt;
+        &lt;button id=&quot;hGrid&quot; class=&quot;card-gallery-h btn-square-m btn-blue&quot; type=&quot;button&quot; data-card-gallery=&quot;&quot;&gt;
+            &lt;ion-icon class=&quot;t-white&quot; name=&quot;tablet-landscape&quot; /&gt;
+        &lt;/button&gt;
+        &lt;button id=&quot;lGrid&quot; class=&quot;card-gallery-l btn-square-m btn-blue m-l-5&quot; type=&quot;button&quot; data-card-gallery=&quot;&quot;&gt;
+            &lt;ion-icon class=&quot;t-white&quot; name=&quot;phone-landscape&quot; /&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;note-pink m-t-6&quot;&gt;Category B&lt;/h3&gt;
+&lt;div class=&quot;card-gallery g-col g-col-m-2 g-col-l-3 g-col-xl-4 m-b-2&quot; data-card-gallery=&quot;&quot;&gt;
+    &lt;div class=&quot;col-push-m-2 col-push-l-3 col-push-xl-4 t-right&quot;&gt;
+        &lt;button id=&quot;vGrid&quot; class=&quot;card-gallery-v btn-square-m btn-blue m-r-5&quot; type=&quot;button&quot; data-card-gallery=&quot;&quot;&gt;
+            &lt;ion-icon class=&quot;t-white&quot; name=&quot;tablet-portrait&quot; /&gt;
+        &lt;/button&gt;
+        &lt;button id=&quot;hGrid&quot; class=&quot;card-gallery-h btn-square-m btn-blue&quot; type=&quot;button&quot; data-card-gallery=&quot;&quot;&gt;
+            &lt;ion-icon class=&quot;t-white&quot; name=&quot;tablet-landscape&quot; /&gt;
+        &lt;/button&gt;
+        &lt;button id=&quot;lGrid&quot; class=&quot;card-gallery-l btn-square-m btn-blue m-l-5&quot; type=&quot;button&quot; data-card-gallery=&quot;&quot;&gt;
+            &lt;ion-icon class=&quot;t-white&quot; name=&quot;phone-landscape&quot; /&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;card b-shadow&quot;&gt;
+        &lt;header class=&quot;card-header&quot;&gt;
+            &lt;h4 class=&quot;card-title t-ellipsis&quot;&gt;simple card&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;figure class=&quot;card-img-container&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+                &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;card-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/figure&gt;
+        &lt;footer class=&quot;card-footer&quot;&gt;
+            &lt;div class=&quot;card-footer-left-container&quot;&gt;
+                &lt;span class=&quot;card-left-text&quot;&gt;
+                    &lt;span&gt;your content&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
     </main>
     <footer>
         footer
@@ -1561,7 +2713,6 @@
     <script src="script/libraries/highlight.js"></script>
     <script>hljs.highlightAll();</script>
     <script src="/script/straightNav.js"></script>
-    <script src="script/straightCard.js"></script>
     <script src="script/card.js"></script>
     <script src="script/carousel.js"></script>
     <script src="script/clipboard.js"></script>

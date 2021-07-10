@@ -18049,27 +18049,6 @@ THEME
     background-color: #ffffff;
   }
 }
-/*
-*************
-INNER EXAMPLE
-*************
-*/
-@media only screen and (min-width: 728px) {
-  .card-galllery-example-cta {
-    grid-column-end: 3;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .card-galllery-example-cta {
-    grid-column-end: 4;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .card-galllery-example-cta {
-    grid-column-end: 5;
-  }
-}
-
 pre[rel]::before {
   background-color: #8d8d8d;
   color: #eee;
