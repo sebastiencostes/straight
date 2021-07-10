@@ -17941,6 +17941,10 @@ SHARED STYLE
   overflow-y: scroll;
   right: 0;
   top: 0;
+  -webkit-animation-name: cardBody;
+  animation-name: cardBody;
+  -webkit-animation-duration: 0.28s;
+  animation-duration: 0.28s;
 }
 
 .card-body-text {
@@ -18047,6 +18051,31 @@ THEME
 @media (prefers-color-scheme: light) {
   .card-body {
     background-color: #ffffff;
+  }
+}
+/*
+*********
+ANIMATION
+*********
+*/
+@-webkit-keyframes cardBody {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes cardBody {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 pre[rel]::before {
