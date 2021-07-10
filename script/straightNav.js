@@ -37,6 +37,12 @@ window.addEventListener("load", () => {
       color: "yellow",
     },
     {
+      link: "/helper.html",
+      linkName: "helper",
+      icon: "hammer-outline",
+      color: "grey",
+    },
+    {
       link: "/image.html",
       linkName: "image",
       icon: "image-outline",
@@ -71,13 +77,7 @@ window.addEventListener("load", () => {
       linkName: "typography",
       icon: "text-outline",
       color: "brown",
-    },
-    {
-      link: "/utility.html",
-      linkName: "utility",
-      icon: "hammer-outline",
-      color: "grey",
-    },
+    }
   ];
   const straightNav = document.querySelector("#straightNav.nav");
   const switchNav = document.querySelector("#straightNav .switch-nav");

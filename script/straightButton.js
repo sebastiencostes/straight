@@ -60,28 +60,28 @@ for (let btn of arrayColorShape) {
 //creating square flat buttons
 for (let btn of arrayColorShape) {
   arraySquareFlat.innerHTML += `<button class="btn-square-l btn-${btn.color}" type="button">
-    <ion-icon name="add-circle-outline"></ion-icon>
+    <ion-icon name="add-outline"></ion-icon>
 </button>`;
 }
 
 //creating square grad buttons
 for (let btn of arrayColorShape) {
   arraySquareGrad.innerHTML += `<button class="btn-square-l btn-grad-${btn.color}" type="button">
-    <ion-icon name="add-circle-outline"></ion-icon>
+    <ion-icon name="add-outline"></ion-icon>
 </button>`;
 }
 
 //creating circle flat buttons
 for (let btn of arrayColorShape) {
   arrayCircleFlat.innerHTML += `<button class="btn-circle-l btn-${btn.color}" type="button">
-    <ion-icon name="add-circle-outline"></ion-icon>
+    <ion-icon name="add-outline"></ion-icon>
 </button>`;
 }
 
 //creating circle grad buttons
 for (let btn of arrayColorShape) {
   arrayCircleGrad.innerHTML += `<button class="btn-circle-l btn-grad-${btn.color}" type="button">
-    <ion-icon name="add-circle-outline"></ion-icon>
+    <ion-icon name="add-outline"></ion-icon>
 </button>`;
 }
 //creating bordered buttons

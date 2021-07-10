@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Layout, 6 columns system...">
+    <title>Straight | Layout</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-navy" role="presentation">
+        <h1 class="header-presentation-title t-white">Layout</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-navy">
+            About Layout
+        </h2>
+        <p>
+            built around a 16 columns system, create your own layout. <strong>CSS grid</strong> and <strong>flexbox</strong> 
+            are used to allow you a great ratio between easiness to use and standard modern web displaying possibilities. 
+            In Straight framework <strong>1rem</strong> = <strong>10px</strong> and in most cases containers are in <span class="t-uppercase t-blue">grid</span>
+            and contents are in <span class="t-uppercase t-blue">flex</span>. There is no <b>flaoted</b> element.
+            Lot of helpers classes come to rescue too, you can check more at <a href="/helper.html" rel="noopener">Helper module</a>.
+            Of course <a href="/index.html" rel="noopener">Straight framework</a> is Mobile Friendly.
+        </p>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-navy">
+                Container
+            </h3>
+            <p>
+                4 containers are available. 1 <span class="t-blue">fixed</span>, 1 <span class="t-blue">relative to screen</span> width, 1 <span class="t-blue">relative to container</span> width
+                and 1 <sapn class="t-blue">full width </sapn>relative to container. 3 of them are spaced to left and right. In the example below you can see difference between each relativity.
+                Click on the button just below to see variation.
+            </p>
+            <div class="m-b-2">
+                <button id="containerTrigger" class="btn-s btn-blue" type="button">
+                    Remove Main Container
+                </button>
+            </div>
+            <div>
+                <section class="container-fix h-rem-8 bg-navy m-b-2 d-flex i-center j-center">
+                    <h4 class="t-white">container-fix</h4>
+                </section>
+                <section class="container-screen h-rem-8 bg-navy m-b-2 d-flex i-center j-center">
+                    <h4 class="t-white">container-screen</h4>
+                </section>
+                <section class="container-box h-rem-8 bg-navy m-b-2 d-flex i-center j-center">
+                    <h4 class="t-white">container-box</h4>
+                </section>
+                <section class="container-full h-rem-8 bg-navy m-b-2 d-flex i-center j-center">
+                    <h4 class="t-white">container-full</h4>
+                </section>
+            </div>
+            <pre class="clipboard h-rem-40" rel="copy container to clipboard">
+                <code>
+&lt;div&gt;
+    &lt;section class=&quot;container-fix h-rem-8 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
+        &lt;h4 class=&quot;t-white&quot;&gt;container-fix&lt;/h4&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;container-screen h-rem-8 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
+        &lt;h4 class=&quot;t-white&quot;&gt;container-screen&lt;/h4&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;container-box h-rem-8 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
+        &lt;h4 class=&quot;t-white&quot;&gt;container-box&lt;/h4&gt;
+    &lt;/section&gt;
+    &lt;section class=&quot;container-full h-rem-8 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
+        &lt;h4 class=&quot;t-white&quot;&gt;container-full&lt;/h4&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-navy">
+                Breakpoint
+            </h3>
+            <p>
+                Straight framework includes <strong>5 default breakpoints</strong>, from <b class="t-uppercase">s</b> to <b class="t-uppercase">xxl</b>.
+                These breakpoints refers to some devices screen width, from mobile to desktop screen. they don’t target every use case or device.
+            </p>
+            <p><span class="t-blue" >S</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 280px</small> is <b>phone</b></p>
+            <p><span class="t-blue" >M</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 728px</small> is <b>tablet portrait</b></p>
+            <p><span class="t-blue" >L</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 992px</small> is <b>tablet landscape</b></p>
+            <p><span class="t-blue" >XL</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 1400px</small> is <b>laptop</b></p>
+            <p><span class="t-blue" >XXL</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 1880px</small> is <b>desktop</b></p>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-navy">
+                Grid
+            </h3>
+            <p>
+                16 columns grid system based, 16 columns evenly offers more displaying opportunities on height / length <strong>screen</strong> ratio. 
+                <strong>Grid container and container explained earlier are 2 different things</strong>.
+                First, when you create your own grid system you <strong>must</strong> add <code class="single-code">class="g-col"</code> into that will be your <strong>grid container</strong>.
+                Thanks to <strong>breakpoints</strong> you can create different grids at each of them.
+                Inner grid system works with <code class="single-code">class="g-col g-col-*-*"</code>, in this case asterisks represents <strong>breakpoint and number of columns</strong>.
+                If you want <b>3 columns</b> at <b>landscape tablet breakpoint</b> just add <code class="single-code">class="g-col g-col-l-3"</code> and if you want too <b>6 columns</b> at <b>desktop breakpoint</b>
+                just add <code class="single-code">class="g-col g-col-l-3 g-col-xxl-6"</code> to the same grid container. Resize your window to see the grids in action.
+            </p>
+
+            <section class="m-t-2 m-b-8">
+                <h4 class="note-navy">
+                    Basic example
+                </h4>
+                <p>
+                    simple grid illustration with rows and cols
+                </p>
+                <div id="gridExample1" class="g-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2">
+                
+                </div>
+                <pre class="clipboard h-rem-24" rel="copy basic grid to clipboard">
+                    <code>
+&lt;div class=&quot;g-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2&quot;&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy">
+                    No row example
+                </h4>
+                <p>
+                    simple grid illustration with no row, just add <code class="single-code">class="g-no-row"</code> in grid container.
+                </p>
+                <div id="gridExample2" class="g-col g-no-row g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2">
+                
+                </div>
+                <pre class="clipboard h-rem-24" rel="copy no row grid to clipboard">
+                    <code>
+&lt;div class=&quot;g-col g-no-row g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2&quot;&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy m-b-2">
+                    No column example
+                </h4>
+                <p>
+                    simple grid illustration with no col just add <code class="single-code">class="g-no-col"</code> in grid container.
+                </p>
+                <div id="gridExample3" class="g-col g-no-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2">
+                
+                </div>
+                <pre class="clipboard h-rem-24" rel="copy no col grid to clipboard">
+                    <code>
+&lt;div class=&quot;g-col g-no-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2&quot;&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy m-b-2">
+                    No row and no column example
+                </h4>
+                <p>
+                    simple grid illustration with no row and no col, just add <code class="single-code">class="g-no-row-col"</code> in grid container.
+                </p>
+                <div id="gridExample4" class="g-col g-no-row-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2">
+                
+                </div>
+                <pre class="clipboard h-rem-24" rel="copy no col no row grid to clipboard">
+                    <code>
+&lt;div class=&quot;g-col g-no-row-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2&quot;&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy m-b-2">
+                    column & row span
+                </h4>
+                <p>
+                    randomised grid example with different rows and columns span, just add <code class="single-code">class="col-push-* row-push-*"</code> or <code class="single-code">class="col-push-*-* row-push-*-*"</code>
+                    on <b>child elements</b> from <b>grid container</b>. Span <b>column value</b> will stretch itself on his own <b>row</b> depending on quantity of setted columns in the grid container and it start position. Span <b>row value</b> will stretch itself on his own <b>column</b>
+                    depending on total floors and it start position. Of course you can just stretch only column or only row if you want. 
+                </p>
+                <div class="g-col g-col-s-2 g-col-m-4 g-col-xl-6 m-b-2">
+                    <div class="col-push-m-2 col-push-xl-6 col-push-xxl-4 h-rem-8 bg-navy"></div>
+                    <div class="h-rem-8 bg-navy"></div>
+                    <div class="h-rem-8 bg-navy"></div>
+                    <div class="row-push-m-5 row-push-xl-3 row-push-xxl-4 col-push-m-2 bg-navy"></div>
+                    <div class="h-rem-8 col-push-m-2 bg-navy"></div>
+                    <div class="row-push-m-6 row-push-xl-2 row-push-xxl-4 bg-navy"></div>
+                    <div class="row-push-m-4 row-push-xl-3 row-push-xxl-4 bg-navy"></div>
+                    <div class="h-rem-8 bg-navy"></div>
+                    <div class="h-rem-8 bg-navy"></div>
+                    <div class="h-rem-8 bg-navy"></div>
+                    <div class="h-rem-8 bg-navy"></div>
+                    <div class="h-rem-8 bg-navy"></div>
+                    <div class="h-rem-8 bg-navy"></div>
+                    <div class="h-rem-8 col-push-m-2 col-push-xl-1 col-push-xxl-3 bg-navy"></div>
+                    <div class="h-rem-8 col-push-m-2 col-push-xxl-3 bg-navy"></div>
+                </div>
+                <pre class="clipboard h-rem-24" rel="copy column & row span grid to clipboard">
+                    <code>
+&lt;div class=&quot;g-col g-col-s-2 g-col-m-4 g-col-xl-6&quot;&gt;
+    &lt;div class=&quot;col-push-m-2 col-push-xl-6 col-push-xxl-4 h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;row-push-m-5 row-push-xl-3 row-push-xxl-4 col-push-m-2 col-push-xl-2 col-push-xxl-2 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 col-push-m-2 col-push-xl-2 col-push-xxl-2 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;row-push-m-6 row-push-xl-2 row-push-xxl-4 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;row-push-m-4 row-push-xxl-4 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 col-push-m-2 col-push-xl-2 col-push-xxl-3 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 col-push-m-2 col-push-xl-2 col-push-xxl-3 bg-navy&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy m-b-2">
+                    auto column
+                </h4>
+                <p>
+                    simple grid illustration with auto flow on columns, just add <code class="single-code">class="g-col-auto"</code> to the grid container.
+                </p>
+                <div id="gridExample4a" class="g-col g-col-auto m-b-2">
+                
+                </div>
+                <pre class="clipboard h-rem-24" rel="copy auto flow grid to clipboard">
+                    <code>
+&lt;div class=&quot;g-col g-col-auto&quot;&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy m-b-2">
+                    Equal height items
+                </h4>
+                <p>
+                    this is an example with equal heihgts items.
+                </p>
+                <div id="gridExample5" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-b-2">
+                
+                </div>
+                <pre class="clipboard h-rem-24" rel="copy equal height items grid example to clipboard">
+                    <code>
+&lt;div class=&quot;g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-b-2&quot;&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </section>
+            <section class="m-b-8">
+                <h4 class="note-navy m-b-2">
+                    Different height items
+                </h4>
+                <p>
+                    this is an example with different heights items.
+                    In this case the <strong>grid container</strong> say to child elements align them to center. <strong>Child elements</strong> say to themselves stretch us all.
+                    Just add <code class="single-code">class="self-stretch"</code> to all childs. Click on the trigger just below to seet it in action.
+                </p>
+                <button id="gridTrigger" class="btn-s btn-blue m-b-2" type="button">
+                    Align Self
+                </button>
+                <div id="gridExample6" class="g-col i-center g-col-s-2 g-col-l-3 g-col-xl-4 m-b-2">
+                    
+                    <article class="demo-stretch p-2 d-flex j-between f-dir-col bg-navy">
+                        <header>
+                            <p class="h4 t-white">item title</p>
+                        </header>
+                        <section>
+                            <p class="t-white">item body</p>
+                        </section>
+                        <footer>
+                            <span class="t-white">item footer</span>
+                        </footer>
+                    </article>
+
+                    <article class="demo-stretch p-2 d-flex j-between f-dir-col bg-navy">
+                        <header>
+                            <p class="h4 t-white">item title</p>
+                        </header>
+                        <section>
+                            <p class="t-white">item body</p>
+                            <p class="t-white">item body</p>
+                            <p class="t-white">item body</p>
+                            <p class="t-white">item body</p>
+                        </section>
+                        <footer>
+                            <span class="t-white">item footer</span>
+                        </footer>
+                    </article>
+
+                    <article class="demo-stretch p-2 d-flex j-between f-dir-col bg-navy">
+                        <header>
+                            <p class="h4 t-white">item title</p>
+                        </header>
+                        <section>
+                            <p class="t-white">item body</p>
+                            <p class="t-white">item body</p>
+                            <p class="t-white">item body</p>
+                            <p class="t-white">item body</p>
+                            <p class="t-white">item body</p>
+                        </section>
+                        <footer>
+                            <span class="t-white">item footer</span>
+                        </footer>
+                    </article>
+
+                    <article class="demo-stretch p-2 d-flex j-between f-dir-col bg-navy">
+                        <header>
+                            <p class="h4 t-white">item title</p>
+                        </header>
+                        <section>
+                            <p class="t-white">item body</p>
+                        </section>
+                        <footer>
+                            <span class="t-white">item footer</span>
+                        </footer>
+                    </article>
+
+                </div>
+                <pre class="clipboard h-rem-24" rel="copy different height items grid example to clipboard">
+                    <code>
+&lt;div class=&quot;g-col i-center g-col-s-2 g-col-l-3 g-col-xl-4&quot;&gt;
+    &lt;article class=&quot;p-2 self-stretch d-flex j-between f-dir-col bg-navy&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 self-stretch d-flex j-between f-dir-col bg-navy&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 self-stretch d-flex j-between f-dir-col bg-navy&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+    &lt;article class=&quot;p-2 self-stretch d-flex j-between f-dir-col bg-navy&quot;&gt;
+        &lt;header&gt;
+            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
+        &lt;/header&gt;
+        &lt;section&gt;
+            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;footer&gt;
+            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/div&gt;
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+
+
+    </main>
+    <footer class="bg-grad-navy-dark">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="/script/straightLayout.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>

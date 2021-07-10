@@ -7,6 +7,7 @@
 @use "margin" as m;
 @use "padding" as p;
 @use "position" as pos;
+@use "utility" as u;
 @use "width" as w;
 @use "z-index" as z;
 
@@ -54,6 +55,10 @@ SHARED STYLE
   overflow-y: scroll;
   right: 0;
   top: 0;
+  -webkit-animation-name: cardBody;
+  animation-name: cardBody;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
 }
 %card-body-text-shared {
   @include m.margin(2rem 0 2rem);
@@ -205,18 +210,27 @@ THEME
 }
 
 /*
-*************
-INNER EXAMPLE
-*************
+*********
+ANIMATION
+*********
 */
-.card-galllery-example-cta {
-  @include d.tablet-portrait() {
-    @include g.g-col-end(3);
+@-webkit-keyframes cardBody {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
   }
-  @include d.tablet-landscape() {
-    @include g.g-col-end(4);
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
-  @include d.laptop() {
-    @include g.g-col-end(5);
+}
+@keyframes cardBody {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
