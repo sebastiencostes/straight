@@ -18959,11 +18959,83 @@ input[type=radio].radio-black {
   font-size: clamp(2.4rem, 1.4200rem + 3.5000vw, 8rem);
 }
 
+/*
+**************
+RESPONSIVE IMG
+**************
+*/
 .responsive-img {
   max-width: 100%;
   height: auto;
 }
 
+/*
+***********
+ROUNDED IMG
+***********
+*/
+.rounded-img-s {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+}
+
+.rounded-img-m {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.6rem;
+}
+
+.rounded-img-l {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2.4rem;
+}
+
+.rounded-img-xl {
+  max-width: 100%;
+  height: auto;
+  border-radius: 3.2rem;
+}
+
+.rounded-img-xxl {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4rem;
+}
+
+.rounded-img-smooth {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+}
+
+.circled-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/*
+*************
+IMAGE CAPTION
+*************
+*/
+.caption-img {
+  overflow: hidden;
+}
+
+.caption-img-title-container {
+  text-align: center;
+}
+
+.caption-img-title {
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+}
+
+.caption-img-title-container {
+  padding: 1rem;
+}
 /*
 OPEN classic nav
 */

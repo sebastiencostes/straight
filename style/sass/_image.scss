@@ -1,8 +1,89 @@
+@use "border" as b;
+@use "font" as f;
+@use "position" as p;
+
 @mixin responsive-img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
+/*
+**************
+RESPONSIVE IMG
+**************
+*/
 .responsive-img {
-    @include  responsive-img;
+  @include responsive-img;
 }
+
+/*
+***********
+ROUNDED IMG
+***********
+*/
+.rounded-img-s {
+  @include responsive-img;
+  @include b.b-radius(0.8rem);
+}
+
+.rounded-img-m {
+  @include responsive-img;
+  @include b.b-radius(1.6rem);
+}
+
+.rounded-img-l {
+  @include responsive-img;
+  @include b.b-radius(2.4rem);
+}
+
+.rounded-img-xl {
+  @include responsive-img;
+  @include b.b-radius(3.2rem);
+}
+
+.rounded-img-xxl {
+  @include responsive-img;
+  @include b.b-radius(4rem);
+}
+
+.rounded-img-smooth {
+  @include responsive-img;
+  @include b.b-smooth();
+}
+
+.circled-img {
+  @include responsive-img();
+  @include b.b-radius(50%);
+}
+
+/*
+*************
+IMAGE CAPTION
+*************
+*/
+
+%caption-img-shared {
+    overflow: hidden;
+}
+
+%caption-img-title-container-shared {
+  text-align: center;
+}
+
+%caption-img-title-shared {
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+}
+
+.caption-img {
+    @extend %caption-img-shared;
+  &-title-container {
+    @extend %caption-img-title-container-shared;
+    padding: 1rem;
+  }
+  &-title {
+    @extend %caption-img-title-shared;
+  }
+}
+
+
+

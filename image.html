@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Image, ...">
+    <title>Straight | Image</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-green" role="presentation">
+        <h1 class="header-presentation-title t-white">image</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-green">
+            About Image
+        </h2>
+        <p>
+            <a href="index.html" rel="noopener">Straight Framework</a> image...
+            attribute <code class="single-code">alt=""</code> <strong>must be present</strong> on each <code class="single-code">&lt;img src=&quot;...&quot; alt=&quot;&quot;&gt;</code> tag.
+        </p>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-green">
+                responsive image
+            </h3>
+            <p>
+                Work well on devices with widely different screen sizes, and other such features. To use it just add <code class="single-code">class="responsive-img"</code>. Resize your screen to see it in action.
+            </p>
+            <img class="responsive-img" src="assets/img/image/imageXLarge.png" alt="">
+            <pre class="clipboard m-t-2" rel="copy responsive image to clipboard">
+                <code>
+&lt;img class=&quot;responsive-img&quot; src=&quot;pathTo/img.png&quot; alt=&quot;&quot;&gt;
+                </code>
+            </pre>
+      
+            <h3 class="note-green m-t-8">
+                rounded image
+            </h3>
+            <p>
+                if you need rounded image just add <code class="single-code">class="rounded-img-*"</code> or <code class="single-code">class="rounded-img-smooth"</code> or <code class="single-code">class="circled-img"</code> , rounded images are responsive too.
+                4 rounded sizes are available <b class="t-uppercase">s</b>, <b class="t-uppercase">m</b>, <b class="t-uppercase">l</b> and <b class="t-uppercase">xl</b>.
+            </p>
+            <div class="g-col g-col-s-2 g-col-l-3 g-col-xl-6">
+                <img class="rounded-img-smooth" src="assets/img/image/imageXSmall.png" alt="">
+                <img class="rounded-img-s" src="assets/img/image/imageXSmall.png" alt="">
+                <img class="rounded-img-m" src="assets/img/image/imageXSmall.png" alt="">
+                <img class="rounded-img-l" src="assets/img/image/imageXSmall.png" alt="">
+                <img class="rounded-img-xl" src="assets/img/image/imageXSmall.png" alt="">
+                <img class="circled-img" src="assets/img/image/imageXSmall.png" alt="">
+            </div>
+            <pre class="clipboard m-t-2" rel="copy rounded image to clipboard">
+                <code>
+&lt;img class=&quot;rounded-img-smooth&quot; src=&quot;pathTo/img.pn&quot; alt=&quot;&quot;&gt;
+&lt;img class=&quot;rounded-img-s&quot; src=&quot;pathTo/img.pn&quot; alt=&quot;&quot;&gt;
+&lt;img class=&quot;rounded-img-m&quot; src=&quot;pathTo/img.pn&quot; alt=&quot;&quot;&gt;
+&lt;img class=&quot;rounded-img-l&quot; src=&quot;pathTo/img.pn&quot; alt=&quot;&quot;&gt;
+&lt;img class=&quot;rounded-img-xl&quot; src=&quot;pathTo/img.pn&quot; alt=&quot;&quot;&gt;
+&lt;img class=&quot;circled-img&quot; src=&quot;pathTo/img.png&quot; alt=&quot;&quot;&gt;
+                </code>
+            </pre>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-green">
+                srcset
+            </h3>
+            <p>
+                <strong>srcset</strong> defines the set of images we will allow the browser to choose between, and what size each image is.
+                It's a good way for <strong>website optimization</strong>. At each <code class="single-code">media=&quot;(min-width: ***px)&quot;</code> attribute the <b>same image but not the same file</b> at
+                different size is loaded. Each image have different file size. It permits from mobile to desktop displaying optimization.
+            </p>
+                            
+            <picture>
+                <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+            </picture>
+
+            <pre class="clipboard m-t-2" rel="copy srcset to clipboard">
+                <code>
+&lt;picture&gt;
+    &lt;source srcset=&quot;/yourpathTo/XLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+    &lt;source srcset=&quot;/yourpathTo/Large.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+    &lt;source srcset=&quot;/yourpathTo/Medium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+    &lt;img class=&quot;responsive-img&quot; src=&quot;/yourpathTo/defaultORmobile.png&quot; alt=&quot;&quot;&gt;
+&lt;/picture&gt;
+                </code>
+            </pre>
+             
+            <h3 class="note-green m-t-8">
+                image with caption
+            </h3>
+            <p>
+                element represents self-contained content, potentially with an optional caption, which is specified.
+                The figure, its caption, and its contents are referenced as a single unit. If you want your title 
+                in 1st position just inverse the <code class="single-code">  &lt;picture&gt;</code> and <code class="single-code">&lt;figcaption&gt;</code> position.
+            </p>
+
+            <div class="g-col g-col-m-2 g-col-l-4">
+                <figure class="caption-img">
+                    <picture>
+                        <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                    </picture>
+                    <figcaption class="caption-img-title-container">
+                        <h4 class="caption-img-title">image title</h4>
+                    </figcaption>
+                </figure>
+
+                <figure class="caption-img b-shadow-hovered">
+                    <a href="#" rel="noopener">
+                        <picture>
+                            <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                            <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                            <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                            <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                        </picture>
+                    </a>
+                    <figcaption class="caption-img-title-container bg-grey-light">
+                        <h4 class="caption-img-title">
+                            <a href="#" rel="noopener">linked image and title</a>
+                        </h4>
+                    </figcaption>
+                </figure>
+
+                <figure class="caption-img">
+                    <figcaption class="caption-img-title-container">
+                        <h4 class="caption-img-title">image title</h4>
+                    </figcaption>
+                    <picture>
+                        <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                        <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                        <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                    </picture>
+                </figure>
+
+                <figure class="caption-img b-shadow-hovered">
+                    <figcaption class="caption-img-title-container bg-grey-light">
+                        <h4 class="caption-img-title">
+                            <a href="#" rel="noopener">linked image and title</a>
+                        </h4>
+                    </figcaption>
+                    <a href="#" rel="noopener">
+                        <picture>
+                            <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                            <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                            <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                            <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                        </picture>
+                    </a>
+                </figure>
+            </div>
+            <pre class="clipboard m-t-2 h-rem-32" rel="copy image with caption to clipboard">
+                <code>
+&lt;figure class=&quot;caption-img&quot;&gt;
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+    &lt;figcaption class=&quot;caption-img-title-container&quot;&gt;
+        &lt;h4 class=&quot;caption-img-title&quot;&gt;image title&lt;/h4&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;caption-img b-shadow-hovered&quot;&gt;
+    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/a&gt;
+    &lt;figcaption class=&quot;caption-img-title-container bg-grey-light&quot;&gt;
+        &lt;h4 class=&quot;caption-img-title&quot;&gt;
+            &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked image and title&lt;/a&gt;
+        &lt;/h4&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;caption-img&quot;&gt;
+    &lt;figcaption class=&quot;caption-img-title-container&quot;&gt;
+        &lt;h4 class=&quot;caption-img-title&quot;&gt;image title&lt;/h4&gt;
+    &lt;/figcaption&gt;
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/yourPathTo/img.pngg&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;caption-img b-shadow-hovered&quot;&gt;
+    &lt;figcaption class=&quot;caption-img-title-container bg-grey-light&quot;&gt;
+        &lt;h4 class=&quot;caption-img-title&quot;&gt;
+            &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;linked image and title&lt;/a&gt;
+        &lt;/h4&gt;
+    &lt;/figcaption&gt;
+    &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+            &lt;source srcset=&quot;/yourPathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/a&gt;
+&lt;/figure&gt;
+                </code>
+            </pre>
+        </article>
+
+        <article class="m-b-8">
+            <h3 class="note-green">
+                image gallery
+            </h3>
+            <p>
+                Images gallery with the <b>same width / height ratio</b>.
+            </p>
+            <div class="g-col g-col-m-4 g-col-xl-8">
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+            </div>
+
+            <pre class="clipboard h-rem-32 m-b-8  m-t-2" rel="copy images gallery to clipboard">
+                <code>
+&lt;div class=&quot;g-col g-col-m-4 g-col-xl-8&quot;&gt;
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+
+            <h3 class="note-green">
+                image gallery
+            </h3>
+            <p>
+                Images gallery with <b>different widths / heights ratio</b>.
+            </p>
+            <div  class="image-gallery g-col g-no-row-col g-col-m-4 g-col-xl-8">
+                <picture>
+                    <source srcset="/assets/img/image/imageXLarge.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/image/imageLarge.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/image/imageMedium.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/image/imageSmall.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="assets/img/card/cardV.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/carousel/carousel.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/carousel/carousel.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/carousel/carousel.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="assets/img/carousel/carousel.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/header/headerDesktop.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/header/headerDesktop.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/header/headerDesktop.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/header/headerDesktop.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 1400px)">
+                    <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 992px)">
+                    <source srcset="/assets/img/card/cardVpurple.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="/assets/img/card/cardVpurple.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="assets/img/card/cardVblue.png" media="(min-width: 1400px)">
+                    <source srcset="assets/img/card/cardVblue.pngg" media="(min-width: 992px)">
+                    <source srcset="assets/img/card/cardVblue.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="assets/img/card/cardVblue.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="assets/img/header/headerDesktop.png" media="(min-width: 1400px)">
+                    <source srcset="assets/img/header/headerDesktop.png" media="(min-width: 992px)">
+                    <source srcset="assets/img/header/headerDesktop.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="assets/img/header/headerDesktop.png" alt="">
+                </picture>
+
+                <picture>
+                    <source srcset="assets/img/carousel/carouselGreen.png" media="(min-width: 1400px)">
+                    <source srcset="assets/img/carousel/carouselGreen.png" media="(min-width: 992px)">
+                    <source srcset="assets/img/carousel/carouselGreen.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="assets/img/carousel/carouselGreen.png" alt="">
+                </picture>
+
+            </div>
+
+        </article>
+
+    </main>
+    <footer class="bg-grad-green">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="script/clipboard.js"></script>
+</body>
+
+</html>
