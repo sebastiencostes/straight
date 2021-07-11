@@ -1,8 +1,176 @@
+@use "border" as b;
+@use "flexbox" as flx;
+@use "utility" as u;
+
+/*
+****************************
+OBJECT FIT & OBJECT POSITION
+****************************
+*/
+@mixin object-fit($value) {
+  -o-object-fit: $value;
+  object-fit: $value;
+}
+
+@mixin object-position($value) {
+  -o-object-position: $value;
+  object-position: $value;
+}
+
+/*
+**************
+RESPONSIVE IMG
+**************
+*/
 @mixin responsive-img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .responsive-img {
-    @include  responsive-img;
+  @include responsive-img();
+}
+
+/*
+***********
+ROUNDED IMG
+***********
+*/
+.rounded-img-s {
+  @include responsive-img();
+  @include b.b-radius(0.8rem);
+}
+
+.rounded-img-m {
+  @include responsive-img();
+  @include b.b-radius(1.6rem);
+}
+
+.rounded-img-l {
+  @include responsive-img();
+  @include b.b-radius(2.4rem);
+}
+
+.rounded-img-xl {
+  @include responsive-img();
+  @include b.b-radius(3.2rem);
+}
+
+.rounded-img-xxl {
+  @include responsive-img();
+  @include b.b-radius(4rem);
+}
+
+.rounded-img-smooth {
+  @include responsive-img();
+  @include b.b-smooth();
+}
+
+.circled-img {
+  @include responsive-img();
+  @include b.b-radius(50%);
+}
+
+/*
+*************
+IMAGE CAPTION
+*************
+*/
+%caption-img-shared {
+  overflow: hidden;
+}
+
+%caption-img-title-container-shared {
+  text-align: center;
+}
+
+%caption-img-title-shared {
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+}
+
+.caption-img {
+  @extend %caption-img-shared;
+  &-title-container {
+    @extend %caption-img-title-container-shared;
+    padding: 1rem;
+  }
+  &-title {
+    @extend %caption-img-title-shared;
+  }
+}
+
+/*
+*************
+IMAGE GALLERY
+*************
+*/
+%image-fit-shared {
+  @include responsive-img();
+  @include flx.align-self(stretch);
+  @include flx.justify-self(stretch);
+  @include object-fit(cover);
+}
+
+/*
+No col & no row gap
+*/
+.image-fit {
+  @extend %image-fit-shared;
+}
+
+.image-fit-portrait {
+  grid-row: auto / span 2;
+}
+
+.image-fit-landscape {
+  grid-column: auto / span 2;
+}
+
+.image-fit-square {
+  grid-row: auto / span 2;
+}
+
+/*
+***************
+IMAGE HIGHLIGHT
+***************
+*/
+.image-highlighted {
+  @include u.b-shadow-hovered();
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation-name: lightbox;
+  animation-name: lightbox;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+  z-index: 1;
+}
+
+/*
+*********
+ANIMATION
+*********
+*/
+@-webkit-keyframes lightbox {
+  from {
+    -webkit-transform: scale(0, 0) translate(-50%, -50%);
+    transform: scale(0, 0) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: scale(1, 1) translate(-50%, -50%);
+    transform: scale(1, 1) translate(-50%, -50%);
+  }
+}
+@keyframes lightbox {
+  from {
+    -webkit-transform: scale(0, 0) translate(-50%, -50%);
+    transform: scale(0, 0) translate(-50%, -50%);
+  }
+  to {
+    -webkit-transform: scale(1, 1) translate(-50%, -50%);
+    transform: scale(1, 1) translate(-50%, -50%);
+  }
 }
