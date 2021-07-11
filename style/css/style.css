@@ -1345,7 +1345,7 @@ Wrap
 }
 
 /*
-Justify
+Justify content
 */
 .j-between {
   -webkit-box-pack: justify;
@@ -1386,6 +1386,9 @@ Justify
   justify-content: revert;
 }
 
+/*
+Justify-self
+*/
 /*
 Align items
 */
@@ -18960,6 +18963,11 @@ input[type=radio].radio-black {
 }
 
 /*
+****************************
+OBJECT FIT & OBJECT POSITION
+****************************
+*/
+/*
 **************
 RESPONSIVE IMG
 **************
@@ -19036,6 +19044,63 @@ IMAGE CAPTION
 .caption-img-title-container {
   padding: 1rem;
 }
+/*
+*************
+IMAGE GALLERY
+*************
+*/
+.image-gallery-no-row-col, .image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  grid-auto-flow: dense;
+}
+@media only screen and (min-width: 728px) {
+  .image-gallery-no-row-col, .image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+@media only screen and (min-width: 1880px) {
+  .image-gallery-no-row-col, .image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  }
+}
+
+.image-fit {
+  align-self: stretch;
+  justify-self: stretch;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.image-gallery {
+  -webkit-column-gap: 2rem;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+
+/*
+No col & no row gap
+*/
+.image-gallery-no-row-col {
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+  row-gap: 0;
+}
+
+.image-fit-portrait {
+  grid-row: auto/span 2;
+}
+
+.image-fit-landscape {
+  grid-column: auto/span 2;
+}
+
+.image-fit-square {
+  grid-row: auto/span 2;
+}
+
 /*
 OPEN classic nav
 */

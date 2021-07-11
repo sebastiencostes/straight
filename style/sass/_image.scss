@@ -1,10 +1,23 @@
 @use "border" as b;
+@use "device" as d;
 @use "font" as f;
+@use "flexbox" as flx;
+@use "grid" as g;
 @use "position" as p;
 
-@mixin responsive-img {
-  max-width: 100%;
-  height: auto;
+/*
+****************************
+OBJECT FIT & OBJECT POSITION
+****************************
+*/
+@mixin object-fit($value) {
+  -o-object-fit : $value;
+   object-fit : $value;
+}
+
+@mixin object-position($value) {
+  -o-object-position: $value;
+   object-position: $value
 }
 
 /*
@@ -12,6 +25,12 @@
 RESPONSIVE IMG
 **************
 */
+@mixin responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .responsive-img {
   @include responsive-img;
 }
@@ -61,7 +80,6 @@ ROUNDED IMG
 IMAGE CAPTION
 *************
 */
-
 %caption-img-shared {
     overflow: hidden;
 }
@@ -85,5 +103,56 @@ IMAGE CAPTION
   }
 }
 
+/*
+*************
+IMAGE GALLERY
+*************
+*/
+%image-gallery-shared {
+  @include g.d-grid();
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  @include d.tablet-portrait() {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+  @include d.desktop() {
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+  }
+  grid-auto-flow: dense;
+}
 
+%image-fit-shared {
+  @include flx.align-self(stretch);
+  @include flx.justify-self(stretch);
+  @include object-fit(cover);
+}
 
+.image-gallery {
+  @extend %image-gallery-shared;
+  @include g.g-col-gap(2rem);
+  @include g.row-gap(2rem);
+}
+
+/*
+No col & no row gap
+*/
+.image-gallery-no-row-col {
+  @extend %image-gallery-shared;
+  @include g.g-col-gap(0);
+  @include g.row-gap(0);
+}
+
+.image-fit {
+@extend %image-fit-shared;
+}
+
+.image-fit-portrait {
+  grid-row: auto / span 2;
+}
+
+.image-fit-landscape {
+  grid-column: auto / span 2;
+}
+
+.image-fit-square {
+  grid-row: auto / span 2;
+}

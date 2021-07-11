@@ -68,7 +68,7 @@ Wrap
 }
 
 /*
-Justify
+Justify content
 */
 @mixin justify-content($value) {
   -webkit-box-pack: $value;
@@ -112,6 +112,13 @@ Justify
 }
 .j-revert {
   @include justify-content(revert);
+}
+
+/*
+Justify-self
+*/
+@mixin justify-self($value) {
+  justify-self: $value;
 }
 
 /*
