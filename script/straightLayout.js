@@ -8,7 +8,7 @@ const gridContainer4a = document.querySelector("#gridExample4a");
 const gridContainer5 = document.querySelector("#gridExample5");
 const gridContainer6 = document.querySelector("#gridExample6");
 const demoAlignSelves = document.querySelectorAll(".demo-stretch");
-const gridBtn = document.querySelector("#gridTrigger");
+const gridBtnLayout = document.querySelector("#gridTrigger");
 const timeContainer = 4200;
 
 //demo on container
@@ -55,6 +55,6 @@ playWithgrid = () => {
           }, timeContainer);
     }
 }
-gridBtn.addEventListener("click", () => {
+gridBtnLayout.addEventListener("click", () => {
     playWithgrid();
 });

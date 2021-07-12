@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description"
+        content="Straight framework, Helper...">
+    <title>Straight | Helper</title>
+    <link rel="apple-touch-icon" href="/192x192.png">
+    <link rel="preload" href="style/css/style.css" as="style">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s" href="/index.html" role="button">
+                    <ion-icon class="t-link" name="home-outline" />
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-grey" role="presentation">
+        <h1 class="header-presentation-title t-carbon">helper</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-grey">
+            About Helper
+        </h2>
+        <p>
+           Helper module give you some extra classes for different cases of use. In <a href="/index.html" rel="noopener">Straight framework</a> <strong>1rem = 10px</strong>.
+        </p>
+
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+              border
+            </h3>
+            <p>
+                border classes works with <strong>solid border style at 1px width</strong>.
+                if you need to add  or remove border these classes are available. if you need colored borders go to <a href="/color.html" rel="noopener">color module</a>.
+            </p>
+            <section>
+                <p class="note-grey">
+                    no border
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        no border : <code class="single-code">class=&quot;no-b&quot;</code>
+                    </li>                <li class="list-inside">
+                        no border top : <code class="single-code">class=&quot;no-b-top&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        no border right : <code class="single-code">class=&quot;no-b-right&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        no border bottom : <code class="single-code">class=&quot;no-b-botto&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        no border left : <code class="single-code">class=&quot;no-b-left&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    border & border direction
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        border : <code class="single-code">class=&quot;border&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        border top : <code class="single-code">class=&quot;b-top&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        border right : <code class="single-code">class=&quot;b-right&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        border bottom : <code class="single-code">class=&quot;b-bottom&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        border left : <code class="single-code">class=&quot;b-left&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    border radius
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        no border radius : <code class="single-code">class=&quot;no-b-radius&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                       smooth border : <code class="single-code">class=&quot;b-smooth&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        border radius small : <code class="single-code">class=&quot;b-radius-s&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        border radius medium : <code class="single-code">class=&quot;b-radius-m&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        border radius large : <code class="single-code">class=&quot;b-radius-l&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        border radius extra large : <code class="single-code">class=&quot;b-radius-xl&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        cicle : <code class="single-code">class=&quot;circle&quot;</code>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+                display
+            </h3>
+            <p>
+                if for some reason you have to change the displaying of your element check these classes.
+            </p>
+            <ul>
+                <li class="list-inside">
+                    display none : <code class="single-code">class=&quot;d-none&quot;</code>
+                </li>
+                <li class="list-inside">
+                    display block : <code class="single-code">class=&quot;d-block&quot;</code>
+                </li>
+                <li class="list-inside">
+                    display inline block : <code class="single-code">class=&quot;d-inline-block&quot;</code>
+                </li>
+                <li class="list-inside">
+                    display flex : <code class="single-code">class=&quot;d-flex&quot;</code>
+                </li>
+                <li class="list-inside">
+                    display inline flex : <code class="single-code">class=&quot;d-inline-flex&quot;</code>
+                </li>
+                <li class="list-inside">
+                    display grid : <code class="single-code">class=&quot;d-grid&quot;</code>
+                </li>
+                <li class="list-inside">
+                    display inline grid : <code class="single-code">class=&quot;d-inline-grid&quot;</code>
+                </li>
+            </ul>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+                flexbox
+            </h3>
+            <p>
+                Your displaying content will thank you. Your parent container must be in Flex displaying or in Grid displaying.
+            </p>
+            <section>
+                <p class="note-grey">
+                    flex direction
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        row direction : <code class="single-code">class=&quot;f-dir-row&quot;</code>, the native flex direction.
+                    </li>
+                    <li class="list-inside">
+                        row reverse : <code class="single-code">class=&quot;f-dir-row-reverse&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        column direction : <code class="single-code">class=&quot;f-dir-col&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        column reverse direction : <code class="single-code">class=&quot;f-dir-col-reverse&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    flex wrap
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        wrap : <code class="single-code">class=&quot;f-wrap&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        no wrap : <code class="single-code">class=&quot;f-nowrap&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        wrap reverse : <code class="single-code">class=&quot;f-wrap-reverse&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    justify content
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        justify between : <code class="single-code">class=&quot;j-between&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        justify evenly : <code class="single-code">class=&quot;j-evenly&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        justify center : <code class="single-code">class=&quot;j-center&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        justify around : <code class="single-code">class=&quot;j-around&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        justify stretch : <code class="single-code">class=&quot;j-stretch&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        justify start : <code class="single-code">class=&quot;j-start&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        justify end : <code class="single-code">class=&quot;j-end&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        justify revert : <code class="single-code">class=&quot;j-revert&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    align items
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        align baseline : <code class="single-code">class=&quot;i-base&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        align revert : <code class="single-code">class=&quot;i-revert&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        align center : <code class="single-code">class=&quot;i-center&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        align stretch : <code class="single-code">class=&quot;i-stretch&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        align start : <code class="single-code">class=&quot;i-start&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        align end : <code class="single-code">class=&quot;i-end&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    align self
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        self center : <code class="single-code">class=&quot;self-center&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        self stretch : <code class="single-code">class=&quot;self-stretch&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        self flex start : <code class="single-code">class=&quot;self-f-end&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        self flex end : <code class="single-code">class=&quot;self-f-start&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        self start : <code class="single-code">class=&quot;self-end&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        self end : <code class="single-code">class=&quot;self-start&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    flex basis, values are in <b>%</b> from <b>1</b> to <b>100</b>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        flex basis : <code class="single-code">class=&quot;f-basis-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    order, values from <b>1</b> to <b>16</b> are available.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        order : <code class="single-code">class=&quot;order-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+                height 
+            </h3>
+            <p>
+               height works with different kinds of values. height values can be relative to <b>container</b>, <b>screen</b> & <b>global</b>.
+               height relative to container works with value in <strong>%</strong>, relative to screen with <strong>vw</strong> and global with <strong>rem</strong>.
+            </p>
+            <section>
+                <p class="note-grey">
+                    percentage height <strong>relative to container</strong> works with values from <b>1</b> to <b>100</b>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        height in percentage : <code class="single-code">class=&quot;h-prc-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         max height in percentage : <code class="single-code">class=&quot;max-h-prc-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         min height in percentage : <code class="single-code">class=&quot;min-h-prc-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    screen height <strong>relative to screen</strong> works with values from <b>1</b> to <b>100</b>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        height in vh : <code class="single-code">class=&quot;h-vh-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         max height in vh : <code class="single-code">class=&quot;max-h-vh-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         min height in vh : <code class="single-code">class=&quot;min-h-vh-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    global height works with values from <b>1</b> to <b>300</b>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        height in rem : <code class="single-code">class=&quot;h-rem-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         max height in rem : <code class="single-code">class=&quot;max-h-rem-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         min height in rem : <code class="single-code">class=&quot;min-h-rem-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+                margin
+            </h3>
+            <p>if you need external margin, these classes are available.</p>
+            <section>
+                <p class="note-grey">
+                zero & auto
+                </p>
+                <ul>
+                    <li class="list-inside">
+                         margin zero : <code class="single-code">class=&quot;m-0&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin top zero = <code class="single-code">class=&quot;m-t-0&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin right zero <code class="single-code">class=&quot;m-r-0&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin left zero <code class="single-code">class=&quot;m-l-0&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin bottom zero <code class="single-code">class=&quot;m-b-0&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin horizontal axe auto <code class="single-code">class=&quot;m-x-auto&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin vertical axe auto <code class="single-code">class=&quot;m-y-auto&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin top auto <code class="single-code">class=&quot;m-t-auto&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin right auto <code class="single-code">class=&quot;m-r-auto&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin bottom auto <code class="single-code">class=&quot;m-b-auto&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         margin left auto <code class="single-code">class=&quot;m-l-auto&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    margin direction works with values from <b>1</b> to <b>16</b>. Units are in <strong>rem</strong>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        margin top : <code class="single-code">class=&quot;m-t-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        margin right : <code class="single-code">class=&quot;m-r-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        margin bottom : <code class="single-code">class=&quot;m-b-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        margin left : <code class="single-code">class=&quot;m-l-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+               padding
+            </h3>
+            <p>if you need internal "margin", these classes are available.</p>
+            <section>
+                <p class="note-grey">
+                    padding works with values from <b>1</b> to <b>16</b>. Units are in <strong>rem</strong>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        padding zero : <code class="single-code">class=&quot;p-0&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        padding : <code class="single-code">class=&quot;p-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        padding top : <code class="single-code">class=&quot;p-t-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        padding right : <code class="single-code">class=&quot;p-r-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        padding bottom : <code class="single-code">class=&quot;p-b-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                        padding left : <code class="single-code">class=&quot;p-l-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+                width 
+            </h3>
+            <p>
+               width works with different kinds of values. Width values can be relative to <b>container</b>, <b>screen</b> & <b>global</b>.
+               width relative to container works with value in <strong>%</strong>, relative to screen with <strong>vw</strong> and global with <strong>rem</strong>.
+            </p>
+            <section>
+                <p class="note-grey">
+                    percentage width <strong>relative to container</strong> works with values from <b>1</b> to <b>100</b>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        width in percentage : <code class="single-code">class=&quot;w-prc-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         max width in percentage : <code class="single-code">class=&quot;max-w-prc-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         min width in percentage : <code class="single-code">class=&quot;min-w-prc-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    screen width <strong>relative to screen</strong> works with values from <b>1</b> to <b>100</b>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        width in vw : <code class="single-code">class=&quot;w-vw-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         max width in vw : <code class="single-code">class=&quot;max-w-vw-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         min width in vw : <code class="single-code">class=&quot;min-w-vw-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
+                    global width works with values from <b>1</b> to <b>300</b>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        width in rem : <code class="single-code">class=&quot;w-rem-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         max width in rem : <code class="single-code">class=&quot;max-w-rem-*&quot;</code>
+                    </li>
+                    <li class="list-inside">
+                         min width in rem : <code class="single-code">class=&quot;min-w-rem-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+                z-index
+            </h3>
+            <p>
+                z-index works with value from <b>1</b> to <b>100</b>.
+            </p>
+            <ul>
+                <li class="list-inside">
+                    z-index : <code class="single-code">class=&quot;z-*&quot;</code>
+                </li>
+            </ul>
+        </article>
+
+    </main>
+    <footer class="bg-grad-grey">
+        footer
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/script/straightNav.js"></script>
+</body>
+
+</html>
