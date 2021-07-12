@@ -94,8 +94,13 @@
                     <h4 class="t-white">container-full</h4>
                 </section>
             </div>
-            <pre class="clipboard h-rem-40" rel="copy container to clipboard">
-                <code>
+
+            <figure class="clipboard-container">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
 &lt;div&gt;
     &lt;section class=&quot;container-fix h-rem-8 bg-navy m-b-2 d-flex i-center j-center&quot;&gt;
         &lt;h4 class=&quot;t-white&quot;&gt;container-fix&lt;/h4&gt;
@@ -110,8 +115,9 @@
         &lt;h4 class=&quot;t-white&quot;&gt;container-full&lt;/h4&gt;
     &lt;/section&gt;
 &lt;/div&gt;
-                </code>
-            </pre>
+                    </code>
+                </pre>
+            </figure>
         </article>
 
         <article class="m-b-8 m-t-8">
@@ -148,14 +154,17 @@
                     Basic example
                 </h4>
                 <p>
-                    simple grid illustration with rows and cols
+                    simple grid illustration with rows and columns
                 </p>
-                <div id="gridExample1" class="g-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2">
-                
-                </div>
-                <pre class="clipboard h-rem-24" rel="copy basic grid to clipboard">
-                    <code>
-&lt;div class=&quot;g-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2&quot;&gt;
+                <div id="gridExample1" class="g-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2"></div>
+
+                <figure class="clipboard-container m-t-2">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
+&lt;div class=&quot;g-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16&quot;&gt;
     &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
@@ -189,8 +198,9 @@
     &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
             </section>
             <section class="m-b-8">
                 <h4 class="note-navy">
@@ -199,48 +209,53 @@
                 <p>
                     simple grid illustration with no row, just add <code class="single-code">class="g-no-row"</code> in grid container.
                 </p>
-                <div id="gridExample2" class="g-col g-no-row g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2">
-                
-                </div>
-                <pre class="clipboard h-rem-24" rel="copy no row grid to clipboard">
-                    <code>
-&lt;div class=&quot;g-col g-no-row g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2&quot;&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+                <div id="gridExample2" class="g-col g-no-row g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2"></div>
+
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
+&lt;div class=&quot;g-col g-no-row g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16&quot;&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
             </section>
+
             <section class="m-b-8">
                 <h4 class="note-navy m-b-2">
                     No column example
@@ -248,47 +263,51 @@
                 <p>
                     simple grid illustration with no col just add <code class="single-code">class="g-no-col"</code> in grid container.
                 </p>
-                <div id="gridExample3" class="g-col g-no-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2">
-                
-                </div>
-                <pre class="clipboard h-rem-24" rel="copy no col grid to clipboard">
-                    <code>
-&lt;div class=&quot;g-col g-no-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2&quot;&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+                <div id="gridExample3" class="g-col g-no-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2"></div>
+
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
+&lt;div class=&quot;g-col g-no-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16&quot;&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
             </section>
             <section class="m-b-8">
                 <h4 class="note-navy m-b-2">
@@ -297,48 +316,53 @@
                 <p>
                     simple grid illustration with no row and no col, just add <code class="single-code">class="g-no-row-col"</code> in grid container.
                 </p>
-                <div id="gridExample4" class="g-col g-no-row-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2">
-                
-                </div>
-                <pre class="clipboard h-rem-24" rel="copy no col no row grid to clipboard">
-                    <code>
-&lt;div class=&quot;g-col g-no-row-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2&quot;&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
+                <div id="gridExample4" class="g-col g-no-row-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16 m-b-2"></div>
+
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
+&lt;div class=&quot;g-col g-no-row-col g-col-m-2 g-col-l-4 g-col-xl-8 g-col-xxl-16&quot;&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;h-rem-8 bg-navy border&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
             </section>
+
             <section class="m-b-8">
                 <h4 class="note-navy m-b-2">
                     column & row span
@@ -365,7 +389,12 @@
                     <div class="h-rem-8 col-push-m-2 col-push-xl-1 col-push-xxl-3 bg-navy"></div>
                     <div class="h-rem-8 col-push-m-2 col-push-xxl-3 bg-navy"></div>
                 </div>
-                <pre class="clipboard h-rem-24" rel="copy column & row span grid to clipboard">
+
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                <pre class="clipboard">
                     <code>
 &lt;div class=&quot;g-col g-col-s-2 g-col-m-4 g-col-xl-6&quot;&gt;
     &lt;div class=&quot;col-push-m-2 col-push-xl-6 col-push-xxl-4 h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
@@ -384,9 +413,11 @@
     &lt;div class=&quot;h-rem-8 col-push-m-2 col-push-xl-2 col-push-xxl-3 bg-navy&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;h-rem-8 col-push-m-2 col-push-xl-2 col-push-xxl-3 bg-navy&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
             </section>
+
             <section class="m-b-8">
                 <h4 class="note-navy m-b-2">
                     auto column
@@ -394,10 +425,13 @@
                 <p>
                     simple grid illustration with auto flow on columns, just add <code class="single-code">class="g-col-auto"</code> to the grid container.
                 </p>
-                <div id="gridExample4a" class="g-col g-col-auto m-b-2">
-                
-                </div>
-                <pre class="clipboard h-rem-24" rel="copy auto flow grid to clipboard">
+                <div id="gridExample4a" class="g-col g-col-auto m-b-2"></div>
+
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                <pre class="clipboard">
                     <code>
 &lt;div class=&quot;g-col g-col-auto&quot;&gt;
     &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
@@ -433,9 +467,11 @@
     &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;h-rem-8 bg-navy&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
             </section>
+
             <section class="m-b-8">
                 <h4 class="note-navy m-b-2">
                     Equal height items
@@ -443,10 +479,13 @@
                 <p>
                     this is an example with equal heihgts items.
                 </p>
-                <div id="gridExample5" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-b-2">
-                
-                </div>
-                <pre class="clipboard h-rem-24" rel="copy equal height items grid example to clipboard">
+                <div id="gridExample5" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-b-2"></div>
+
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                <pre class="clipboard">
                     <code>
 &lt;div class=&quot;g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5 m-b-2&quot;&gt;
     &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
@@ -515,54 +554,12 @@
             &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
         &lt;/footer&gt;
     &lt;/article&gt;
-    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
-        &lt;header&gt;
-            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
-        &lt;/header&gt;
-        &lt;section&gt;
-            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;footer&gt;
-            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
-        &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
-        &lt;header&gt;
-            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
-        &lt;/header&gt;
-        &lt;section&gt;
-            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;footer&gt;
-            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
-        &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
-        &lt;header&gt;
-            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
-        &lt;/header&gt;
-        &lt;section&gt;
-            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;footer&gt;
-            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
-        &lt;/footer&gt;
-    &lt;/article&gt;
-    &lt;article class=&quot;p-2 d-flex j-between f-dir-col bg-navy h-rem-40&quot;&gt;
-        &lt;header&gt;
-            &lt;h4 class=&quot;t-white&quot;&gt;item title&lt;/h4&gt;
-        &lt;/header&gt;
-        &lt;section&gt;
-            &lt;p class=&quot;t-white&quot;&gt;item body&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;footer&gt;
-            &lt;span class=&quot;t-white&quot;&gt;item footer&lt;/span&gt;
-        &lt;/footer&gt;
-    &lt;/article&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
             </section>
+
             <section class="m-b-8">
                 <h4 class="note-navy m-b-2">
                     Different height items
@@ -633,8 +630,13 @@
                     </article>
 
                 </div>
-                <pre class="clipboard h-rem-24" rel="copy different height items grid example to clipboard">
-                    <code>
+
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
 &lt;div class=&quot;g-col i-center g-col-s-2 g-col-l-3 g-col-xl-4&quot;&gt;
     &lt;article class=&quot;p-2 self-stretch d-flex j-between f-dir-col bg-navy&quot;&gt;
         &lt;header&gt;
@@ -688,8 +690,9 @@
         &lt;/footer&gt;
     &lt;/article&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
             </section>
         </article>
 

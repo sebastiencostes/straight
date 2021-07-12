@@ -91,7 +91,7 @@ for (let i = 0; i < arrayForms.length; i++) {
         <legend class="form-title">form-${arrayForms[i].color}</legend>
     </fieldset>
     <div class="form-body g-col g-col-l-2">
-        <div>
+        <section>
             <div class="m-b-1">
                 <label class="form-label" for="a-${i}">Firstname</label>
                 <div class="form-input-container">
@@ -128,18 +128,18 @@ for (let i = 0; i < arrayForms.length; i++) {
                     <input id="d-${i}" class="form-input" type="email" minlength="" maxlength="" placeholder="your email" required>
                 </div>
             </div>
-        </div>
-        <div class="m-b-4">
+        </section>
+        <section class="m-b-4">
             <div class="h-prc-100">
                 <label class="form-label" for="e-${i}">Subject</label>
                 <div class="form-input-container textarea-container">
                     <textarea id="e-${i}" class="form-input" name="textarea" placeholder="Your text here..."></textarea>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
     <div class="g-col g-col-m-2">
-        <div class="d-flex i-center j-between m-t-3">
+        <section class="d-flex i-center j-between m-t-3">
             <div>
                 <input class="switch check-turquoise" id="f-${i}" type="checkbox">
                 <label for="f-${i}">accept</label>
@@ -148,10 +148,10 @@ for (let i = 0; i < arrayForms.length; i++) {
                 <input class="switch check-turquoise" id="g-${i}" type="checkbox">
                 <label for="g-${i}">accept</label>
             </div>
-        </div>
-        <div class="form-input-container m-t-2">
+        </section>
+        <section class="form-input-container m-t-2">
             <input class="form-input" type="submit" id="sub-a${i}" value="submit">
-        </div>
+        </section>
     </div>
     </form>`;
 }

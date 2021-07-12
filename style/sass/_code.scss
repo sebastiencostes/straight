@@ -1,37 +1,30 @@
 @use "color" as c;
 @use "border" as b;
+@use "flexbox" as flx;
 @use "font" as f;
+@use "grid" as g; 
 @use "utility" as u;
 @use "width" as w;
 @use "height" as h;
 @use "padding" as p;
 
-pre[rel]::before {
-  background-color: c.$grey-dark;
-  color: c.$text-dark;
-  content: attr(rel);
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  font-size: 1.6rem;
-  left: 0;
-  @include p.padding-direction(left, 0.8rem);
+.clipboard-container {
+  @include g.d-grid();
+  position: relative;
+}
+
+.clipboard-cta {
   position: absolute;
-  @include f.text-transform(uppercase);
-  top: 0;
-  @include w.width(100%);
+  top: 2rem;
+  right: 2rem;
 }
 
 pre {
   background-color: c.$grey-light;
-  clear: both;
-  color: c.$navy-dark;
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  hyphens: none;
-  @include w.min-width(100%);
+  //font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  @include flx.d-inline-flex();
+  @include w.width(100%);
   overflow: auto;
-  position: relative;
-  &:hover {
-    cursor: copy;
-  }
 }
 
 pre code {
@@ -41,10 +34,12 @@ pre code {
   white-space: pre;
 }
 
-code span {
-  font-size: 1.6rem;
-}
 
+/*
+***********
+SINGLE CODE
+***********
+*/
 .single-code {
   color: c.$blue;
   @include u.d-inline-block();
@@ -53,6 +48,11 @@ code span {
   font-weight: 300;
 }
 
+code span {
+  font-size: 1.6rem;
+}
+
+
 /*
 *********
 HIGHLIGHT
@@ -60,7 +60,6 @@ HIGHLIGHT
 */
 .hljs {
   color: c.$navy;
-  background-color: c.$grey-light;
 }
 
 .hljs-tag {
