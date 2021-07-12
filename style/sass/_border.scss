@@ -1,9 +1,28 @@
 @use "color" as c;
 @use "padding"as p;
 
+/*
+Border color
+*/
 @mixin border($color) {
   border: solid 1px $color;
 }
+@mixin b-top($color) {
+  border-top: solid 1px $color;
+}
+
+@mixin b-right($color) {
+  border-right: solid 1px $color;
+}
+
+@mixin b-bottom($color) {
+  border-bottom: solid 1px $color;
+}
+
+@mixin b-left($color) {
+  border-left: solid 1px $color;
+}
+
 .b-white {
   @include border(c.$white);
 }
@@ -43,6 +62,166 @@
 .b-turquoise {
   @include border(c.$turquoise);
 }
+//b-top volors
+.b-top-white {
+  @include b-top(c.$white);
+}
+.b-top-black {
+  @include b-top(c.$carbon);
+}
+.b-top-blue {
+  @include b-top(c.$blue);
+}
+.b-top-red {
+  @include b-top(c.$red);
+}
+.b-top-green {
+  @include b-top(c.$green);
+}
+.b-top-pink {
+  @include b-top(c.$pink);
+}
+.b-top-purple {
+  @include b-top(c.$purple);
+}
+.b-top-navy {
+  @include b-top(c.$navy);
+}
+.b-top-orange {
+  @include b-top(c.$orange);
+}
+.b-top-yellow {
+  @include b-top(c.$yellow);
+}
+.b-top-brown {
+  @include b-top(c.$brown);
+}
+.b-top-grey {
+  @include b-top(c.$grey);
+}
+.b-top-turquoise {
+  @include b-top(c.$turquoise);
+}
+//b-right volors
+.b-right-white {
+  @include b-right(c.$white);
+}
+.b-right-black {
+  @include b-right(c.$carbon);
+}
+.b-right-blue {
+  @include b-right(c.$blue);
+}
+.b-right-red {
+  @include b-right(c.$red);
+}
+.b-right-green {
+  @include b-right(c.$green);
+}
+.b-right-pink {
+  @include b-right(c.$pink);
+}
+.b-right-purple {
+  @include b-right(c.$purple);
+}
+.b-right-navy {
+  @include b-right(c.$navy);
+}
+.b-right-orange {
+  @include b-right(c.$orange);
+}
+.b-right-yellow {
+  @include b-right(c.$yellow);
+}
+.b-right-brown {
+  @include b-right(c.$brown);
+}
+.b-right-grey {
+  @include b-right(c.$grey);
+}
+.b-right-turquoise {
+  @include b-right(c.$turquoise);
+}
+//b-bottom volors
+.b-bottom-white {
+  @include b-bottom(c.$white);
+}
+.b-bottom-black {
+  @include b-bottom(c.$carbon);
+}
+.b-bottom-blue {
+  @include b-bottom(c.$blue);
+}
+.b-bottom-red {
+  @include b-bottom(c.$red);
+}
+.b-bottom-green {
+  @include b-bottom(c.$green);
+}
+.b-bottom-pink {
+  @include b-bottom(c.$pink);
+}
+.b-bottom-purple {
+  @include b-bottom(c.$purple);
+}
+.b-bottom-navy {
+  @include b-bottom(c.$navy);
+}
+.b-bottom-orange {
+  @include b-bottom(c.$orange);
+}
+.b-bottom-yellow {
+  @include b-bottom(c.$yellow);
+}
+.b-bottom-brown {
+  @include b-bottom(c.$brown);
+}
+.b-bottom-grey {
+  @include b-bottom(c.$grey);
+}
+.b-bottom-turquoise {
+  @include b-bottom(c.$turquoise);
+}
+//b-left volors
+.b-left-white {
+  @include b-left(c.$white);
+}
+.b-left-black {
+  @include b-left(c.$carbon);
+}
+.b-left-blue {
+  @include b-left(c.$blue);
+}
+.b-left-red {
+  @include b-left(c.$red);
+}
+.b-left-green {
+  @include b-left(c.$green);
+}
+.b-left-pink {
+  @include b-left(c.$pink);
+}
+.b-left-purple {
+  @include b-left(c.$purple);
+}
+.b-left-navy {
+  @include b-left(c.$navy);
+}
+.b-left-orange {
+  @include b-left(c.$orange);
+}
+.b-left-yellow {
+  @include b-left(c.$yellow);
+}
+.b-left-brown {
+  @include b-left(c.$brown);
+}
+.b-left-grey {
+  @include b-left(c.$grey);
+}
+.b-left-turquoise {
+  @include b-left(c.$turquoise);
+}
 /*
 Border theme
 */
@@ -57,21 +236,6 @@ Border theme
 /*
 border direction
 */
-@mixin b-top($color) {
-  border-top: solid 1px $color;
-}
-
-@mixin b-right($color) {
-  border-right: solid 1px $color;
-}
-
-@mixin b-bottom($color) {
-  border-bottom: solid 1px $color;
-}
-
-@mixin b-left($color) {
-  border-left: solid 1px $color;
-}
 .b {
   &-top {
     @include c.light-theme() {
@@ -141,6 +305,22 @@ no border
 }
 .no-b {
   @include no-border;
+}
+.no-b-top {
+  border-top: 0;
+  border-top-width: 0;
+}
+.no-b-right {
+  border-right: 0;
+  border-right-width: 0;
+}
+.no-b-bottom {
+  border-bottom: 0;
+  border-bottom-width: 0;
+}
+.no-b-left {
+  border-left: 0;
+  border-left-width: 0;
 }
 /*
 smooth

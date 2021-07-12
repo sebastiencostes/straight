@@ -2,31 +2,31 @@
   margin: $value;
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 16 {
   .m-#{$i} {
     margin: #{$i}rem;
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 16 {
   .m-t-#{$i} {
     margin-top: #{$i}rem;
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 16 {
   .m-b-#{$i} {
     margin-bottom: #{$i}rem;
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 16 {
   .m-l-#{$i} {
     margin-left: #{$i}rem;
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 16 {
   .m-r-#{$i} {
     margin-right: #{$i}rem;
   }
@@ -46,6 +46,14 @@
   @include margin-direction(top, auto);
 }
 .m-b-auto {
+  @include margin-direction(bottom, auto);
+}
+.m-x-auto {
+  @include margin-direction(left, auto);
+  @include margin-direction(right, auto);
+}
+.m-y-auto {
+  @include margin-direction(top, auto);
   @include margin-direction(bottom, auto);
 }
 .m-0 {

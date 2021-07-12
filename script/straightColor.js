@@ -310,3 +310,43 @@ for (let color of arrayBorderColors) {
     </div>
  `;
 }
+
+for (let color of arrayBorderColors) {
+  borderPalette.innerHTML += `
+    <div class="t-center b-top-${color.colorClass}">
+      <p class="t-lowercase">
+        b-top-${color.colorClass}
+      </p>
+    </div>
+ `;
+}
+
+for (let color of arrayBorderColors) {
+  borderPalette.innerHTML += `
+    <div class="t-center b-right-${color.colorClass}">
+      <p class="t-lowercase">
+        b-right-${color.colorClass}
+      </p>
+    </div>
+ `;
+}
+
+for (let color of arrayBorderColors) {
+  borderPalette.innerHTML += `
+    <div class="t-center b-bottom-${color.colorClass}">
+      <p class="t-lowercase">
+        b-bottom-${color.colorClass}
+      </p>
+    </div>
+ `;
+}
+
+for (let color of arrayBorderColors) {
+  borderPalette.innerHTML += `
+    <div class="t-center b-left-${color.colorClass}">
+      <p class="t-lowercase">
+        b-left-${color.colorClass}
+      </p>
+    </div>
+ `;
+}
