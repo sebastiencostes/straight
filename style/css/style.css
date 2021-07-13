@@ -18595,51 +18595,47 @@ ANIMATION
     transform: translateY(0);
   }
 }
-pre[rel]::before {
-  background-color: #8d8d8d;
-  color: #eee;
-  content: attr(rel);
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  font-size: 1.6rem;
-  left: 0;
-  padding-left: 0.8rem;
-  position: absolute;
-  text-transform: uppercase;
-  top: 0;
-  width: 100%;
-}
-
-pre {
-  background-color: #efefef;
-  clear: both;
-  color: #4b636e;
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  hyphens: none;
-  min-width: 100%;
-  overflow: auto;
+.clipboard-container {
+  display: grid;
   position: relative;
 }
-pre:hover {
-  cursor: copy;
+
+.clipboard-cta {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
 }
 
-pre code {
+.clipboard {
+  background-color: #efefef;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  width: 100%;
+  overflow: auto;
+}
+
+.clipboard code {
   display: block;
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   padding-left: 2rem;
   white-space: pre;
 }
 
-code span {
-  font-size: 1.6rem;
-}
-
+/*
+***********
+SINGLE CODE
+***********
+*/
 .single-code {
   color: #0091ea;
   display: inline-block;
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  font-size: clamp(1.2rem, 1.0600rem + 0.5000vw, 2rem);
+  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
   font-weight: 300;
+}
+
+code span {
+  font-size: 1.6rem;
 }
 
 /*
@@ -18649,7 +18645,6 @@ HIGHLIGHT
 */
 .hljs {
   color: #78909c;
-  background-color: #efefef;
 }
 
 .hljs-tag {

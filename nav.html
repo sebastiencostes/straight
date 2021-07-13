@@ -72,9 +72,10 @@
                 Nav models
             </h3>
             <p>
-                2 nav models are purposed. Both are <b>fix positionned</b>. 1st nav works with a left slide opening to
+                2 nav models are available. Both are <b>fix positionned</b>. 1st nav works with a left slide opening to
                 show your menu, it's a <b>list view</b>. This menu is vertically scrollable.
                 2nd is a <b>navpad</b> still with vertically scrollable, it's a <b>grid view</b>.
+                These models are the same as used in this site.
             </p>
 
             <div class="g-col g-col-l-2 m-b-2">
@@ -242,8 +243,12 @@
             </div>
 
             <div class="g-col g-col-l-2 m-t-2 m-b-8">
-                <pre class="clipboard h-rem-32" rel="copy navlist to clipboard">
-                    <code>
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
 &lt;nav class=&quot;nav&quot;&gt;
     &lt;ul class=&quot;nav-header bg-white&quot;&gt;
         &lt;li&gt;
@@ -303,7 +308,13 @@
 &lt;/nav&gt;
                     </code>
                 </pre>
-                <pre class="clipboard h-rem-32" rel="copy navpad to clipboard">
+                </figure>
+
+                <figure class="clipboard-container">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                <pre class="clipboard">
                     <code>
 &lt;nav class=&quot;nav&quot;&gt;
     &lt;ul class=&quot;nav-header bg-white&quot;&gt;
@@ -362,8 +373,10 @@
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;
-                    </code>
-                </pre>
+                        </code>
+                    </pre>
+                </figure>
+
             </div>
         </section>
 
@@ -376,7 +389,7 @@
     <script src="script/libraries/highlight.js"></script>
     <script>hljs.highlightAll();</script>
     <script src="/script/straightNav.js"></script>
-    <script src="script/clipboard.js"></script>
+    <script src="script/straightClipboard.js"></script>
 </body>
 
 </html>
