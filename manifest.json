@@ -1,0 +1,25 @@
+{
+    "name": "Straight Frameork",
+    "short_name": "Straight",
+    "lang": "en",
+    "start_url": "/index.html",
+    "display": "fullscreen",
+    "theme_color": "#64dd17",
+    "icons": [
+      {
+        "src": "assets/img/logo/straightTouchIcon16x16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/img/logo/straightTouchIcon32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/img/logo/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      }
+    ]
+  }

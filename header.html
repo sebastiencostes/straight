@@ -1,24 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light">
-    <meta name="description" content="Straight framework, Header represents introductory content, typically a group of introductory or navigational aids.">
-    <title>Straight | Header</title>
-    <link rel="apple-touch-icon" href="/192x192.png">
-    <link rel="preload" href="style/css/style.css" as="style">
-    <link rel="stylesheet" href="style/css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Straight - Header">
+        <meta name="author" content="Sébastien COSTES">
+        <meta name="color-scheme" content="dark light">
+        <title>Straight | Header</title>
+        <link rel="preload" href="style/css/style.css" as="style">
+        <link rel="stylesheet" href="style/css/style.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Straight">
+        <meta name="apple-mobile-web-app-title" content="Straight">
+        <meta name="theme-color" content="#64dd17">
+        <meta name="msapplication-navbutton-color" content="#64dd17">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="/index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/straightTouchIcon16x16">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="assets/img/logo/straightTouchIcon16x16">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/straightTouchIcon32x32">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="assets/img/logo/straightTouchIcon32x32">
+        <link rel="icon" type="image/png" sizes="180x180" href="assets/img/logo/aple-touch-icon">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/logo/aple-touch-icon">
+    </head>
 
 <body>
     <nav id="straightNav" class="nav">
         <ul class="nav-header">
             <li>
                 <a class="btn-square-s" href="/index.html" role="button">
-                    <ion-icon class="t-link" name="home-outline" />
+                    <img class="circled-img" src="/assets/img/logo/straightLogo.png">
                 </a>
             </li>
             <li class="grid d-none t-blue">
@@ -80,6 +95,12 @@
                     class="single-code"> &lt;header class=&quot;header-presentation&quot; role=&quot;presentation&quot;&gt;</code>
                 is designed to work with <a href="/nav.html" rel="noopener">Nav</a>. Feel free to add your image and more...
             </p>
+            <p>
+                <b>Page Header with background image</b> with class
+                <code
+                    class="single-code"> &lt;header class=&quot;header-presentation-background&quot; role=&quot;presentation&quot;&gt;</code>
+                is also designed to work with <a href="/nav.html" rel="noopener">Nav</a>. Feel free to add your image and more...
+            </p>
             <p><b>Header</b> with class <code class="single-code"> &lt;header class=&quot;header&quot;&gt;</code>
                 is a standalone.</p>
             <p><b>Image header</b> with class <code
@@ -91,7 +112,7 @@
             <h3 class="note-yellow m-b-2">
                 Page header
             </h3>
-            <p>Designed to work with nav. This is the same model used into this site.</p>
+            <p>Designed to work with <b>nav</b>. This is the same model used into this site.</p>
             <div class="header h-vh-50 bg-yellow">
                 <h4 class="header-presentation-title t-carbon">
                     Page Header
@@ -108,6 +129,31 @@
     &lt;h1 class=&quot;header-presentation-title t-carbon&quot;&gt;your title&lt;/h1&gt;
 &lt;/header&gt;
                     </code>
+                </pre>
+            </figure>
+
+            <h3 class="note-yellow m-b-2">
+                Page header with background image
+            </h3>
+            <p>Designed to work with <b>nav</b> and large background image. This is the same model used at <a href="/index.html" rel="noopener">home page</a>. You will need to add <b>your own background image</b>.</p>
+            <div class="header h-vh-50 bg-yellow" style="background-image: url(/assets/img/header/headerDesktop.png); background-attachment: fixed;">
+                <h4 class="header-presentation-background-title t-white">
+                    Page Header background image
+                </h4>
+            </div>
+
+            <figure class="clipboard-container m-t-2 m-b-8">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+            <pre class="clipboard">
+                <code>
+&lt;header class=&quot;header-presentation-background&quot; role=&quot;presentation&quot;&gt;
+    &lt;h1 class=&quot;header-presentation-background-title t-white&quot;&gt;
+        Page Header
+    &lt;/h1&gt;
+&lt;/header&gt;
+                </code>
                 </pre>
             </figure>
 

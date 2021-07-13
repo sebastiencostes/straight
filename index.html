@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Straight - HTML5, CSS3, Flexbox and Grid framework for building responsive, mobile-first sites">
+    <meta name="author" content="Sébastien COSTES">
     <meta name="color-scheme" content="dark light">
-    <title>Straight</title>
-    <meta name="description"
-        content="Straight - HTML5, CSS3, Flexbox and Grid framework for building responsive, mobile-first sites">
+    <title>Straight framework</title>
     <link rel="preload" href="style/css/style.css" as="style">
     <link rel="stylesheet" href="style/css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Straight">
+    <meta name="apple-mobile-web-app-title" content="Straight">
+    <meta name="theme-color" content="#64dd17">
+    <meta name="msapplication-navbutton-color" content="#64dd17">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/index.html">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/straightTouchIcon16x16">
+    <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="assets/img/logo/straightTouchIcon16x16">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/straightTouchIcon32x32">
+    <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="assets/img/logo/straightTouchIcon32x32">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/logo/aple-touch-icon">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/logo/aple-touch-icon">
 </head>
-
 <body>
     <nav id="straightNav" class="nav">
         <ul class="nav-header">
             <li>
                 <a class="btn-square-s" href="/index.html" role="button">
-                    <ion-icon class="t-link" name="home-outline" />
+                    <img class="circled-img" src="/assets/img/logo/straightLogo.png">
                 </a>
             </li>
             <li class="grid d-none t-blue">
@@ -48,14 +61,40 @@
         </ul>
     </nav>
 
-    <header class="header-presentation bg-grad-white" role="presentation">
-        <h1 class="header-presentation-title t-carbon">Straight</h1>
+    <header class="header-presentation-background" style="background-image: url(/assets/img/logo/straightHeader.png);" role="presentation">
+        <h1 class="header-presentation-background-title t-white">
+           straight <small class="heading-text-secondary t-lowercase"> framework</small>
+        </h1>
     </header>
 
     <main class="container-fix">
 
         <section class="m-b-8">
             <h2 class="note-black">About Straight framework</h2>
+ 
+            <div class="g-col g-col-l-3">
+                <figure class="d-flex i-center j-center bg-red-light h-rem-17 m-t-5">
+                    <ion-icon style="font-size: 24rem;" class="t-red" name="logo-html5"></ion-icon>
+                </figure>
+
+                <figure class="d-flex i-center j-center bg-blue-light h-rem-17 m-t-5">
+                    <ion-icon style="font-size: 24rem;" class="t-blue" name="logo-css3"></ion-icon>
+                </figure>
+   
+                <figure class="d-flex i-center j-center bg-yellow-light h-rem-17 m-t-5">
+                    <ion-icon style="font-size: 23rem;" class="t-yellow" name="logo-javascript"></ion-icon>
+                </figure>
+              
+            </div>
+                    
+
+            <p class="m-t-4">
+                framework based on <strong>HTML5</strong>, <strong>Flexbox</strong>, <strong>CSS Grid</strong> with used of relative units and <strong>JS</strong>.
+                It works with modern browsers. You just have to click & paste code you want and voilà. According to <strong>microsoft</strong>, Internet Explorer 
+                <a href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/" rel="noopener" target="_blank"> 
+                    will be retired on June 15, 2022
+                </a>.
+            </p>
         </section>
 
         <section class="m-b-8">
@@ -77,579 +116,83 @@
 
         <section class="m-b-8">
             <h3 class="note-black m-b-2">Available Modules</h3>
-            <div class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5">
-                
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">button</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/card/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">button</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">card</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/card/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">card</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">carousel</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/card/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">carousel</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">color</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">color</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">form</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">form</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">header</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">header</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">helper</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">helper</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">image</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/card/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">image</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">layout</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">layout</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">nav</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">nav</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">notification</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">notification</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">template</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">template</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-
-                <article class="card b-shadow-hovered">
-                    <header class="card-header">
-                        <h4 class="card-title t-ellipsis">typography</h4>
-                        <button class="card-cta btn-square-s card-open" type="button" data-card="">
-                            <ion-icon name="ellipsis-horizontal" />
-                        </button>
-                    </header>
-                    <a href="#" rel="noopener" class="card-img-container">
-                        <picture>
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/card/cardV.png" media="(min-width: 728px)">
-                            <img class="card-img" src="/assets/img/image/cardV.png"
-                                alt="">
-                        </picture>
-                    </a>
-                    <section class="card-body d-none" data-card="">
-                        <header class="card-body-header">
-                            <h4 class="card-body-title">
-                                <a href="#" rel="noopener">typography</a>
-                            </h4>
-                            <button class="card-cta btn-square-s card-close" type="button" data-card="">
-                                <ion-icon name="close-outline" />
-                            </button>
-                        </header>
-                        <p class="card-body-text">
-                            your scrollable content here...
-                        </p>
-                    </section>
-                    <footer class="card-footer">
-                        <div class="card-footer-left-container">
-                            <span class="card-left-text">
-                                New
-                            </span>
-                        </div>
-                        <div class="card-footer-right-container">
-                            <button class="card-cta btn-square-s">
-                                <ion-icon class="t-red"> name="notifications-outline" />
-                            </button>
-                        </div>
-                    </footer>
-                </article>
-            </div>
+            <div id="straightAvailableModule" class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxl-5"></div>
         </section>
 
     </main>
-    <footer>
-        footer
-        Icons comes from <a href="https://ionic.io/ionicons" rel="noopener" target="_blank">ionic</a>.
+    <footer class="bg-grey-light">
+        <div class="container-fix j-between g-col g-col-m-3 p-t-2 p-b-2">
+    <section>
+        <a class="btn-square-s" href="/index.html" rel="noopener">
+            <img class="circled-img" src="/assets/img/logo/straightLogo.png">
+        </a>
+        <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <p class="t-x-small t-carbon">
+            Designed and built by <b>Sébastien COSTES</b>.
+            Code released under the MIT License. 
+            copyright 2020-2021
+        </p>
+    </section>
+
+        <ul>
+            <li class="t-x-small">
+                <a href="/index.html" rel="noopener">straight framework</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/button.html" rel="noopener">button</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/card.html" rel="noopener">card</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/carousel.html" rel="noopener">carousel</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/color.html" rel="noopener">color</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/form.html" rel="noopener">form</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/header.html" rel="noopener">header</a>
+            </li>
+        </ul>
+        <ul>
+            <li class="t-x-small">
+                <a href="/helper.html" rel="noopener">helper</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/image.html" rel="noopener">image</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/layout.html" rel="noopener">layout</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/nav.html" rel="noopener">nav</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/notification.html" rel="noopener">notification</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/template.html" rel="noopener">template</a>
+            </li>
+            <li class="t-x-small">
+                <a href="/typography.html" rel="noopener">typography</a>
+            </li>
+        </ul>
+    </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="script/libraries/highlight.js"></script>
     <script>hljs.highlightAll();</script>
     <script src="/script/straightNav.js"></script>
+    <script src="/script/straightIndex.js"></script>
     <script src="/script/card.js"></script>
     <script src="script/straightClipboard.js"></script>
 </body>

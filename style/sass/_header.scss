@@ -19,6 +19,7 @@
   width: 100%;
 }
 
+//page presentation
 .header {
   &-presentation {
     @extend %header-shared;
@@ -27,19 +28,21 @@
     @include m.margin-direction(top, 8rem);
     &-title {
       @extend %header-title-shared;
-      font-size: clamp(2.4rem, 1.1400rem + 4.5000vw, 9.6rem);
+      font-size: clamp(2.4rem, 1.14rem + 4.5vw, 9.6rem);
     }
   }
 }
 
+//header
 .header {
   @extend %header-shared;
   &-title {
     @extend %header-title-shared;
-    font-size: clamp(2.4rem, 1.4200rem + 3.5000vw, 8rem);
+    font-size: clamp(2.4rem, 1.42rem + 3.5vw, 8rem);
   }
 }
 
+//header text overlay
 .header {
   &-image {
     @include p.padding(2rem);
@@ -48,7 +51,23 @@
       @extend %header-title-shared;
       @include pos.pos-absolute-centering();
       @include f.text-overlay();
-      font-size: clamp(2.4rem, 1.4200rem + 3.5000vw, 8rem);
+      font-size: clamp(2.4rem, 1.42rem + 3.5vw, 8rem);
+    }
+  }
+}
+//header page background image
+.header {
+  &-presentation-background {
+    @extend %header-shared;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    @include h.height(calc(50vh - 8rem));
+    @include m.margin-direction(bottom, 8rem);
+    @include m.margin-direction(top, 8rem);
+    &-title {
+      @extend %header-title-shared;
+      @include f.text-overlay();
+      font-size: clamp(2.4rem, 1.14rem + 4.5vw, 9.6rem);
     }
   }
 }
