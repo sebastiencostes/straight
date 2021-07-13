@@ -18606,7 +18606,7 @@ ANIMATION
   right: 2rem;
 }
 
-pre {
+.clipboard {
   background-color: #efefef;
   display: -webkit-inline-box;
   display: inline-flex;
@@ -18614,7 +18614,7 @@ pre {
   overflow: auto;
 }
 
-pre code {
+.clipboard code {
   display: block;
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   padding-left: 2rem;
@@ -18630,7 +18630,7 @@ SINGLE CODE
   color: #0091ea;
   display: inline-block;
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  font-size: clamp(1.2rem, 1.0600rem + 0.5000vw, 2rem);
+  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
   font-weight: 300;
 }
 

@@ -54,10 +54,10 @@ const arrayStraightNav = [
     color: "navy",
   },
   {
-    link: "/modal.html",
-    linkName: "modal",
-    icon: "albums-outline",
-    color: "white",
+    link: "/nav.html",
+    linkName: "nav",
+    icon: "navigate-outline",
+    color: "blue",
   },
   {
     link: "/notification.html",
@@ -66,10 +66,10 @@ const arrayStraightNav = [
     color: "red",
   },
   {
-    link: "/nav.html",
-    linkName: "nav",
-    icon: "navigate-outline",
-    color: "blue",
+    link: "/template.html",
+    linkName: "template",
+    icon: "desktop-outline",
+    color: "white",
   },
   {
     link: "/typography.html",

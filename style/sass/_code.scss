@@ -1,11 +1,8 @@
 @use "color" as c;
-@use "border" as b;
 @use "flexbox" as flx;
-@use "font" as f;
-@use "grid" as g; 
+@use "grid" as g;
 @use "utility" as u;
 @use "width" as w;
-@use "height" as h;
 @use "padding" as p;
 
 .clipboard-container {
@@ -19,21 +16,21 @@
   right: 2rem;
 }
 
-pre {
+.clipboard {
   background-color: c.$grey-light;
-  //font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   @include flx.d-inline-flex();
   @include w.width(100%);
   overflow: auto;
 }
 
-pre code {
+.clipboard code {
   @include u.d-block();
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   @include p.padding-direction(left, 2rem);
   white-space: pre;
 }
-
 
 /*
 ***********
@@ -43,15 +40,16 @@ SINGLE CODE
 .single-code {
   color: c.$blue;
   @include u.d-inline-block();
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  font-size: clamp(1.2rem, 1.0600rem + 0.5000vw, 2rem);
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
   font-weight: 300;
 }
 
 code span {
   font-size: 1.6rem;
 }
-
 
 /*
 *********
