@@ -2441,7 +2441,7 @@ h6,
 }
 
 .heading-text-secondary {
-  opacity: 0.6;
+  text-transform: lowercase;
 }
 
 p {
@@ -2461,6 +2461,10 @@ li {
 
 .t-small {
   font-size: 1.6rem;
+}
+
+.t-x-small {
+  font-size: clamp(0.8rem, 0.6600rem + 0.5000vw, 1.6rem);
 }
 
 h1,
@@ -19423,7 +19427,7 @@ input[type=radio].radio-black {
   color: #eee;
 }
 
-.header, .header-presentation {
+.header-presentation-background, .header, .header-presentation {
   display: grid;
   -webkit-column-gap: 2rem;
   -moz-column-gap: 2rem;
@@ -19434,7 +19438,7 @@ input[type=radio].radio-black {
   padding: 2rem;
 }
 
-.header-image-title, .header-title, .header-presentation-title {
+.header-presentation-background-title, .header-image-title, .header-title, .header-presentation-title {
   text-transform: uppercase;
   letter-spacing: 1.6rem;
   text-align: center;
@@ -19447,11 +19451,11 @@ input[type=radio].radio-black {
   margin-top: 8rem;
 }
 .header-presentation-title {
-  font-size: clamp(2.4rem, 1.1400rem + 4.5000vw, 9.6rem);
+  font-size: clamp(2.4rem, 1.14rem + 4.5vw, 9.6rem);
 }
 
 .header-title {
-  font-size: clamp(2.4rem, 1.4200rem + 3.5000vw, 8rem);
+  font-size: clamp(2.4rem, 1.42rem + 3.5vw, 8rem);
 }
 
 .header-image {
@@ -19468,7 +19472,22 @@ input[type=radio].radio-black {
   -webkit-filter: drop-shadow(1px 1px 2px #000000);
   filter: drop-shadow(1px 1px 2px #000000);
   font-weight: 400;
-  font-size: clamp(2.4rem, 1.4200rem + 3.5000vw, 8rem);
+  font-size: clamp(2.4rem, 1.42rem + 3.5vw, 8rem);
+}
+
+.header-presentation-background {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: calc(50vh - 8rem);
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+}
+.header-presentation-background-title {
+  color: #ffffff;
+  -webkit-filter: drop-shadow(1px 1px 2px #000000);
+  filter: drop-shadow(1px 1px 2px #000000);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 1.14rem + 4.5vw, 9.6rem);
 }
 
 /*

@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark light">
-    <meta name="description"
-        content="Straight framework, Image, ...">
-    <title>Straight | Image</title>
-    <link rel="apple-touch-icon" href="/192x192.png">
-    <link rel="preload" href="style/css/style.css" as="style">
-    <link rel="stylesheet" href="style/css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Straight - Image">
+        <meta name="author" content="Sébastien COSTES">
+        <meta name="color-scheme" content="dark light">
+        <title>Straight | Image</title>
+        <link rel="preload" href="style/css/style.css" as="style">
+        <link rel="stylesheet" href="style/css/style.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Straight">
+        <meta name="apple-mobile-web-app-title" content="Straight">
+        <meta name="theme-color" content="#64dd17">
+        <meta name="msapplication-navbutton-color" content="#64dd17">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="/index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/logo16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="assets/img/logo/logo16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/logo32x32.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="assets/img/logo/logo32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="assets/img/logo/logo128x128.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="assets/img/logo/logo128x128.png">
+        <link rel="icon" type="imga/png" sizes="167x167" href="assets/img/logo/logo167x167.png">
+        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="assets/img/logo/logo167x167.png">
+        <link rel="icon" type="image/png" sizes="180x180" href="assets/img/logo/logo180x180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/logo/logo180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo/logo192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/img/logo/logo192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="assets/img/logo/logo512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="assets/img/logo/logo512x512.png">
+    </head>
 
 <body>
     <nav id="straightNav" class="nav">
         <ul class="nav-header">
             <li>
                 <a class="btn-square-s" href="/index.html" role="button">
-                    <ion-icon class="t-link" name="home-outline" />
+                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt=""> 
                 </a>
             </li>
             <li class="grid d-none t-blue">
@@ -609,8 +630,73 @@
         </article>
 
     </main>
-    <footer class="bg-grad-green">
-        footer
+    <footer class="bg-grey-light">
+        <div class="container-fix j-between g-col g-col-m-2 p-t-2 p-b-2">
+            <section>
+                <a class="btn-square-s" href="/index.html" rel="noopener">
+                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                </a>
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <p class="t-x-small t-carbon">
+                    Designed and built by <b>Sébastien COSTES</b>.
+                    Code released under the MIT License. 
+                    copyright 2020-2021
+                </p>
+            </section>
+            <section class="d-flex j-between">
+                <ul>
+                    <li class="t-x-small">
+                        <a href="/index.html" rel="noopener">straight framework</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/button.html" rel="noopener">button module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/card.html" rel="noopener">card module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/carousel.html" rel="noopener">carousel module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/color.html" rel="noopener">color module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/form.html" rel="noopener">form module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/header.html" rel="noopener">header module</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="t-x-small">
+                        <a href="/helper.html" rel="noopener">helper module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/image.html" rel="noopener">image module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/nav.html" rel="noopener">nav module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/notification.html" rel="noopener">notification module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/template.html" rel="noopener">template module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/typography.html" rel="noopener">typography module</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
