@@ -41,7 +41,7 @@
         <ul class="nav-header">
             <li>
                 <a class="btn-square-s" href="/index.html" role="button">
-                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                    <img class="h-rem-3" src="/assets/img/logo/logo.svg" alt="">
                 </a>
             </li>
             <li class="grid d-none t-blue">
@@ -112,8 +112,9 @@
             <p><b>Header</b> with class <code class="single-code"> &lt;header class=&quot;header&quot;&gt;</code>
                 is a standalone.</p>
             <p><b>Image header</b> with class <code
-                    class="single-code">&lt;header class=&quot;header-image bg-yellow&quot;&gt;</code> is a
-                standalone</p>
+                    class="single-code">&lt;header class=&quot;header-image&quot;&gt;</code> is a
+                standalone.</p>
+                <p><b>Sticky header</b> with class <code class="single-code">&lt;header class=&quot;header-sticky&quot;&gt;</code> is a standalone too.</p>
         </article>
 
         <section>
@@ -160,6 +161,35 @@
     &lt;h1 class=&quot;header-presentation-background-title t-white&quot;&gt;
         Page Header
     &lt;/h1&gt;
+&lt;/header&gt;
+                </code>
+                </pre>
+            </figure>
+
+            <h3 class="note-yellow m-b-2">
+                Sticky header
+            </h3>
+            <p>Standalone header. You will need to add <b>your own background image</b>. In fact this is more a sticky title than a sticky header.</p>
+            <aside>
+                <p>You can view it in action at <a href="/template.html" rel="noopener">template module</a>.</p>
+            </aside>
+            
+            <div class="header-sticky  h-vh-50 bg-yellow" style="background-image: url(/assets/img/header/headerDesktop.png); background-attachment: fixed;">
+                <h4 class="header-sticky-title t-white bg-yellow">
+                    your fancy title
+                </h4>
+            </div>
+
+            <figure class="clipboard-container m-t-2 m-b-8">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+            <pre class="clipboard">
+                <code>
+&lt;header class=&quot;header-sticky  h-vh-50 bg-yellow&quot;&gt;
+    &lt;h4 class=&quot;header-sticky-title t-white bg-yellow&quot;&gt;
+        your fancy title
+    &lt;/h4&gt;
 &lt;/header&gt;
                 </code>
                 </pre>
@@ -234,7 +264,7 @@
         <div class="container-fix j-between g-col g-col-m-2 p-t-2 p-b-2">
             <section>
                 <a class="btn-square-s" href="/index.html" rel="noopener">
-                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                    <img class="h-rem-3" src="/assets/img/logo/logo.svg" alt="">
                 </a>
                 <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank">
                     <ion-icon name="logo-github"></ion-icon>

@@ -50,3 +50,48 @@ $time: 0.28s;
     @include b-shadow-hovered();
   }
 }
+
+.b-shadow-inset {
+  @include c.dark-theme() {
+    -webkit-box-shadow: inset 0 0 8px 0px #000000;
+    box-shadow: inset 0 0 8px 0px #000000;
+  }
+  @include c.light-theme() {
+    -webkit-box-shadow: inset 0 0 8px 0px #00000030;
+    box-shadow: inset 0 0 8px 0px #00000030;
+  }
+}
+
+.op-0 {
+  opacity: 0
+}
+.op-01 {
+  opacity: .1;
+}
+.op-02 {
+  opacity: .2;
+}
+.op-03 {
+  opacity: .3;
+}
+.op-04 {
+  opacity: .4;
+}
+.op-05 {
+  opacity: .5;
+}
+.op-06 {
+  opacity: .6;
+}
+.op-07 {
+  opacity: .7;
+}
+.op-08 {
+  opacity: .8;
+}
+.op-09 {
+  opacity: .9;
+}
+.op-1 {
+  opacity: 1
+}

@@ -9,7 +9,7 @@
 %header-shared {
   @include g.g-container();
   @include fx.align-items(center);
-  @include p.padding(2rem);
+  //@include p.padding(2rem);
 }
 
 %header-title-shared {
@@ -38,7 +38,6 @@
   @extend %header-shared;
   &-title {
     @extend %header-title-shared;
-    font-size: clamp(2.4rem, 1.42rem + 3.5vw, 8rem);
   }
 }
 
@@ -51,7 +50,6 @@
       @extend %header-title-shared;
       @include pos.pos-absolute-centering();
       @include f.text-overlay();
-      font-size: clamp(2.4rem, 1.42rem + 3.5vw, 8rem);
     }
   }
 }
@@ -67,7 +65,21 @@
     &-title {
       @extend %header-title-shared;
       @include f.text-overlay();
-      font-size: clamp(2.4rem, 1.14rem + 4.5vw, 9.6rem);
+    }
+  }
+}
+
+//header sticky
+.header {
+  &-sticky {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    &-title {
+      @extend %header-title-shared;
+      position: -webkit-sticky;
+      position: sticky;
+      bottom: 50%;
+      top: 50%;
     }
   }
 }

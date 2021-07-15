@@ -17,8 +17,10 @@ OPEN classic nav
 */
 .nav {
   @include p.position(fixed);
-  @include w.width(100vw);
   @include u.b-shadow();
+  left: 0;
+  right:0;
+  top: 0;
   z-index: 2;
   &-header {
     @include flx.d-flex();

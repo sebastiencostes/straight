@@ -8,7 +8,6 @@
 
 html {
   font-size: calc(1em * 0.625);
-  overflow: scroll;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -3159,6 +3158,63 @@ LIST
   .b-shadow-hovered:hover {
     box-shadow: 10px 15px 10px rgba(119, 119, 119, 0.26);
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  .b-shadow-inset {
+    -webkit-box-shadow: inset 0 0 8px 0px #000000;
+    box-shadow: inset 0 0 8px 0px #000000;
+  }
+}
+@media (prefers-color-scheme: light) {
+  .b-shadow-inset {
+    -webkit-box-shadow: inset 0 0 8px 0px #00000030;
+    box-shadow: inset 0 0 8px 0px #00000030;
+  }
+}
+
+.op-0 {
+  opacity: 0;
+}
+
+.op-01 {
+  opacity: 0.1;
+}
+
+.op-02 {
+  opacity: 0.2;
+}
+
+.op-03 {
+  opacity: 0.3;
+}
+
+.op-04 {
+  opacity: 0.4;
+}
+
+.op-05 {
+  opacity: 0.5;
+}
+
+.op-06 {
+  opacity: 0.6;
+}
+
+.op-07 {
+  opacity: 0.7;
+}
+
+.op-08 {
+  opacity: 0.8;
+}
+
+.op-09 {
+  opacity: 0.9;
+}
+
+.op-1 {
+  opacity: 1;
 }
 
 /*
@@ -19435,10 +19491,9 @@ input[type=radio].radio-black {
   row-gap: 2rem;
   -webkit-box-align: center;
   align-items: center;
-  padding: 2rem;
 }
 
-.header-presentation-background-title, .header-image-title, .header-title, .header-presentation-title {
+.header-sticky-title, .header-presentation-background-title, .header-image-title, .header-title, .header-presentation-title {
   text-transform: uppercase;
   letter-spacing: 1.6rem;
   text-align: center;
@@ -19452,10 +19507,6 @@ input[type=radio].radio-black {
 }
 .header-presentation-title {
   font-size: clamp(2.4rem, 1.14rem + 4.5vw, 9.6rem);
-}
-
-.header-title {
-  font-size: clamp(2.4rem, 1.42rem + 3.5vw, 8rem);
 }
 
 .header-image {
@@ -19472,7 +19523,6 @@ input[type=radio].radio-black {
   -webkit-filter: drop-shadow(1px 1px 2px #000000);
   filter: drop-shadow(1px 1px 2px #000000);
   font-weight: 400;
-  font-size: clamp(2.4rem, 1.42rem + 3.5vw, 8rem);
 }
 
 .header-presentation-background {
@@ -19487,7 +19537,17 @@ input[type=radio].radio-black {
   -webkit-filter: drop-shadow(1px 1px 2px #000000);
   filter: drop-shadow(1px 1px 2px #000000);
   font-weight: 400;
-  font-size: clamp(2.4rem, 1.14rem + 4.5vw, 9.6rem);
+}
+
+.header-sticky {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.header-sticky-title {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 50%;
+  top: 50%;
 }
 
 /*
@@ -19660,7 +19720,9 @@ OPEN classic nav
 */
 .nav {
   position: fixed;
-  width: 100vw;
+  left: 0;
+  right: 0;
+  top: 0;
   z-index: 2;
 }
 @media (prefers-color-scheme: light) {
