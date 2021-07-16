@@ -41,7 +41,7 @@
         <ul class="nav-header">
             <li>
                 <a class="btn-square-s" href="/index.html" role="button">
-                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                    <img class="h-rem-2" src="/assets/img/logo/logo.svg" alt="">
                 </a>
             </li>
             <li class="grid d-none t-blue">
@@ -271,7 +271,7 @@
                     <pre class="clipboard">
                         <code>
 &lt;nav class=&quot;nav&quot;&gt;
-    &lt;ul class=&quot;nav-header bg-white&quot;&gt;
+    &lt;ul class=&quot;nav-header&quot;&gt;
         &lt;li&gt;
             &lt;a class=&quot;btn-square-s&quot; href=&quot;/index.html&quot; rel=&quot;noopener&quot; role=&quot;button&quot;&gt;
                 &lt;ion-icon class=&quot;t-link&quot; name=&quot;home-outline&quot;&gt;
@@ -291,7 +291,7 @@
             &lt;/button&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
-    &lt;ul class=&quot;d-none nav-menu bg-white&quot; role=&quot;menu&quot;&gt;
+    &lt;ul class=&quot;d-none nav-menu&quot; role=&quot;menu&quot;&gt;
         &lt;li class=&quot;nav-menu-item&quot; role=&quot;menuitem&quot;&gt;
             &lt;a class=&quot;nav-menu-link btn-square-m btn-blue&quot; href=&quot;#&quot; rel=&quot;noopener&quot; role=&quot;button&quot;&gt;
                 &lt;ion-icon name=&quot;ellipsis-horizontal-outline&quot;&gt;&lt;/ion-icon&gt;
@@ -338,7 +338,7 @@
                 <pre class="clipboard">
                     <code>
 &lt;nav class=&quot;nav nav-pad&quot;&gt;
-    &lt;ul class=&quot;nav-header bg-white&quot;&gt;
+    &lt;ul class=&quot;nav-header&quot;&gt;
         &lt;li&gt;
             &lt;a class=&quot;btn-square-s&quot; href=&quot;/index.html&quot; rel=&quot;noopener&quot; role=&quot;button&quot;&gt;
                 &lt;ion-icon class=&quot;t-link&quot; name=&quot;home-outline&quot;&gt;
@@ -402,22 +402,22 @@
         </section>
 
     </main>
-    <footer class="bg-grey-light">
+    <footer id="straightFooter" class="bg-grey-light">
         <div class="container-fix j-between g-col g-col-m-2 p-t-2 p-b-2">
             <section>
-                <a class="btn-square-s" href="/index.html" rel="noopener">
-                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                <a class="btn-square-s btn-green" href="/index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
                 </a>
-                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank">
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
                     <ion-icon name="logo-github"></ion-icon>
                 </a>
-                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank">
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
                     <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
                 <p class="t-x-small t-carbon">
-                    Designed and built by <b>Sébastien COSTES</b>.
-                    Code released under the MIT License. 
-                    copyright 2020-2021
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="/" trget="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
                 </p>
             </section>
             <section class="d-flex j-between">
@@ -476,6 +476,7 @@
     <script>hljs.highlightAll();</script>
     <script src="/script/straightNav.js"></script>
     <script src="script/straightClipboard.js"></script>
+    <script src="script/straightFooter.js"></script>
 </body>
 
 </html>

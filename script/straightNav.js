@@ -79,6 +79,9 @@ const arrayStraightNav = [
   },
 ];
 const straightNav = document.querySelector("#straightNav.nav");
+const straightNavHeader = document.querySelector(
+  "#straightNav.nav .nav-header"
+);
 const switchNav = document.querySelector("#straightNav .switch-nav");
 const menuItems = document.querySelectorAll(".nav-menu-item");
 const openBtn = document.querySelector("#straightNav.nav .open");
@@ -116,7 +119,8 @@ nav = () => {
         closeBtn.classList.add("d-block"),
         closeBtn.classList.remove("d-none"),
         switchNav.classList.remove("d-none"),
-        switchNav.classList.add("d-block", "nav-menu"))
+        switchNav.classList.add("d-block", "nav-menu", "bg-nav", "b-shadow"),
+        straightNav.classList.add("bg-nav", "b-shadow"))
       : (gridBtn.classList.remove("d-block"),
         gridBtn.classList.add("d-none"),
         listBtn.classList.remove("d-block"),
@@ -131,8 +135,12 @@ nav = () => {
           "g-col-s-3",
           "g-col-l-4",
           "g-col-xl-5",
-          "g-col-xxl-6"
-        ));
+          "g-col-xxl-6",
+          "bg-nav",
+          "b-shadow"
+        ),
+        straightNav.classList.remove("bg-nav", "b-shadow"),
+        straightNavHeader.classList.remove("bg-nav", "b-shadow"));
   };
   //Call toggleMenu() to switch hide/show menu
   openBtn.addEventListener("click", (e) => {
@@ -157,7 +165,9 @@ nav = () => {
     isList
       ? (gridBtn.classList.add("d-block"),
         gridBtn.classList.remove("d-none"),
-        switchNav.classList.add("nav-menu", "d-block"),
+        straightNav.classList.add("bg-nav", "b-shadow"),
+        switchNav.classList.add("nav-menu", "d-block", "bg-nav", "b-shadow"),
+        straightNavHeader.classList.remove("bg-nav", "b-shadow"),
         switchNav.classList.remove(
           "nav-pad-menu",
           "d-grid",
@@ -168,7 +178,9 @@ nav = () => {
         ))
       : (listBtn.classList.add("d-block"),
         listBtn.classList.remove("d-none"),
-        switchNav.classList.remove("nav-menu", "d-block"),
+        switchNav.classList.remove("nav-menu", "d-block", "bg-nav", "b-shadow"),
+        straightNav.classList.remove("bg-nav", "b-shadow"),
+        straightNavHeader.classList.add("bg-nav", "b-shadow"),
         switchNav.classList.add(
           "nav-pad-menu",
           "d-grid",
@@ -198,7 +210,8 @@ nav = () => {
     let isNav = straightNav.contains(event.target);
     isNav
       ? null
-      : (switchNav.classList.remove("d-block"),
+      : (switchNav.classList.remove("d-block", "bg-nav", "b-shadow"),
+        straightNav.classList.remove("bg-nav", "b-shadow"),
         switchNav.classList.add("d-none"),
         closeBtn.classList.add("d-none"),
         closeBtn.classList.remove("d-block"),
@@ -211,7 +224,8 @@ nav = () => {
   //hide menu when clicking on li
   for (let item of menuItems) {
     item.addEventListener("click", () => {
-      switchNav.classList.remove("d-block");
+      switchNav.classList.remove("d-block", "bg-nav", "b-shadow");
+      straightNav.classList.remove("bg-nav", "b-shadow");
       switchNav.classList.add("d-none");
       closeBtn.classList.add("d-none");
       closeBtn.classList.remove("d-block");

@@ -1,6 +1,8 @@
 @use "color" as c;
 $time: 0.28s;
 @mixin transition($property, $time) {
+  -webkit-transition: $property $time;
+  -o-transition: $property $time;
   transition: $property $time;
 }
 @mixin d-none {

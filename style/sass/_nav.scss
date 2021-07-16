@@ -17,9 +17,9 @@ OPEN classic nav
 */
 .nav {
   @include p.position(fixed);
-  @include u.b-shadow();
+  @include u.transition(background-color, u.$time);
   left: 0;
-  right:0;
+  right: 0;
   top: 0;
   z-index: 2;
   &-header {
@@ -69,15 +69,6 @@ Open innerNav
 */
 #straightNav {
   z-index: 2;
-  .nav-header,
-  .nav-menu {
-    @include c.light-theme() {
-      background-color: c.$white;
-    }
-    @include c.dark-theme() {
-      background-color: c.$text-light;
-    }
-  }
 }
 /*
 Close innerNav
@@ -109,7 +100,7 @@ OPEN Pad nav
     }
   }
   .nav-menu-link {
-    @include b.b-radius(.8rem);
+    @include b.b-radius(0.8rem);
     @include w.width(5.6rem);
     @include h.height(5.6rem);
     @include d.tablet-portrait() {
@@ -209,5 +200,20 @@ animation slide opening for PAD NAV
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
+  }
+}
+
+/*
+**************
+THEME BG COLOR
+**************
+*/
+
+.bg-nav {
+  @include c.light-theme() {
+    background-color: c.$white;
+  }
+  @include c.dark-theme() {
+    background-color: c.$text-light;
   }
 }

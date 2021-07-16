@@ -5,6 +5,8 @@ const arraySquareGrad = document.querySelector("#arraySquareGrad");
 const arrayCircleflat = document.querySelector("#arrayCircleFlat");
 const arrayCircleGrad = document.querySelector("#arrayCircleGrad");
 const arrayDefaultBorders = document.querySelector("#arrayDefaultBorders");
+const arraySquareBorders = document.querySelector("#arraySquareBorders");
+const arrayCircleBorders = document.querySelector("#arrayCircleBorders");
 arrayColorShape = [
   {
     color: "white",
@@ -93,14 +95,14 @@ for (let btn of arrayColorShape) {
 
 //creating squared bordered buttons
 for (let btn of arrayColorShape) {
-  arrayDefaultBorders.innerHTML += `<button class="btn-square-m btn-b-${btn.color}" type="button">
+  arraySquareBorders.innerHTML += `<button class="btn-square-m btn-b-${btn.color}" type="button">
   <ion-icon name="add-outline"></ion-icon>
 </button>`;
 }
 
 //creating circled bordered buttons
 for (let btn of arrayColorShape) {
-  arrayDefaultBorders.innerHTML += `<button class="btn-circle-m btn-b-${btn.color}" type="button">
+  arrayCircleBorders.innerHTML += `<button class="btn-circle-m btn-b-${btn.color}" type="button">
   <ion-icon name="add-outline"></ion-icon>
 </button>`;
 }

@@ -1,4 +1,5 @@
 const navPadElement = document.querySelector(".nav-pad");
+const navPadHeader = document.querySelector(".nav-pad .nav-header");
 const menuPad = document.querySelector(".nav-pad-menu");
 const menuPadItems = document.querySelectorAll(".nav-pad .nav-menu-item");
 const openPadBtn = document.querySelector(".nav-pad .open-pad");
@@ -10,6 +11,7 @@ togglePadMenu = (isOpen) => {
     ? (closePadBtn.classList.add("d-block"),
       closePadBtn.classList.remove("d-none"),
       menuPad.classList.remove("d-none"),
+      navPadHeader.classList.add("bg-nav", "b-shadow"),
       menuPad.classList.add(
         "nav-pad-menu",
         "d-grid",
@@ -21,6 +23,7 @@ togglePadMenu = (isOpen) => {
     : (openPadBtn.classList.add("d-block"),
       openPadBtn.classList.remove("d-none"),
       menuPad.classList.add("d-none"),
+      navPadHeader.classList.remove("bg-nav", "b-shadow"),
       menuPad.classList.remove(
         "nav-pad-menu",
         "d-grid",
@@ -46,10 +49,11 @@ navPadOutside = (isNavpad) => {
       closePadBtn.classList.add("d-none"),
       closePadBtn.classList.remove("d-block"),
       openPadBtn.classList.remove("d-none"),
-      openPadBtn.classList.add("d-block"));
+      openPadBtn.classList.add("d-block"),
+      navPadHeader.classList.remove("bg-nav", "b-shadow"));
 };
 //close nav pad when clicking on items
-navPaditem = () => {
+navPaditem = (isOpen) => {
   menuPad.classList.remove(
     "nav-pad-menu",
     "d-grid",
@@ -63,6 +67,9 @@ navPaditem = () => {
   closePadBtn.classList.remove("d-block");
   openPadBtn.classList.remove("d-none");
   openPadBtn.classList.add("d-block");
+  isOpen
+    ? navPadHeader.classList.add("bg-nav", "b-shadow")
+    : navPadHeader.classList.remove("bg-nav", "b-shadow");
 };
 //Call togglePadMenu() to switch hide/show menu
 openPadBtn.addEventListener("click", (e) => {
@@ -88,6 +95,7 @@ document.addEventListener("click", function (event) {
 //hide menuPad when clicking on li
 for (let item of menuPadItems) {
   item.addEventListener("click", () => {
-    navPaditem();
+    let open = false;
+    navPaditem(open);
   });
 }

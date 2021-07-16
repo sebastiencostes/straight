@@ -3151,7 +3151,11 @@ LIST
   }
 }
 .b-shadow-hovered:hover {
+  -webkit-transition: box-shadow 0.28s;
+  -o-transition: box-shadow 0.28s;
   transition: box-shadow 0.28s;
+  -webkit-transition: box-shadow 0.28s;
+  -o-transition: box-shadow 0.28s;
   transition: box-shadow 0.28s;
 }
 @media (prefers-color-scheme: dark) {
@@ -15396,6 +15400,8 @@ Font sizes for .btn-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15415,6 +15421,8 @@ Font sizes for .btn-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15434,6 +15442,8 @@ Font sizes for .btn-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15453,6 +15463,8 @@ Font sizes for .btn-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15472,6 +15484,8 @@ Font sizes for .btn-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15491,6 +15505,8 @@ Font sizes for .btn-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15516,6 +15532,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15538,6 +15556,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15560,6 +15580,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15582,6 +15604,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15604,6 +15628,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15626,6 +15652,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
@@ -15651,6 +15679,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 50%;
@@ -15673,6 +15703,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 50%;
@@ -15695,6 +15727,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 50%;
@@ -15717,6 +15751,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 50%;
@@ -15739,6 +15775,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 50%;
@@ -15761,6 +15799,8 @@ Sizes for .btn-square-* & .btn-circle-*
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
+  -webkit-transition: all 0.28s;
+  -o-transition: all 0.28s;
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 50%;
@@ -20065,6 +20105,8 @@ IMAGE HIGHLIGHT
 ***************
 */
 .image-highlighted {
+  -webkit-transition: box-shadow 0.28s;
+  -o-transition: box-shadow 0.28s;
   transition: box-shadow 0.28s;
   position: fixed;
   top: 50%;
@@ -20118,20 +20160,13 @@ OPEN classic nav
 */
 .nav {
   position: fixed;
+  -webkit-transition: background-color 0.28s;
+  -o-transition: background-color 0.28s;
+  transition: background-color 0.28s;
   left: 0;
   right: 0;
   top: 0;
   z-index: 2;
-}
-@media (prefers-color-scheme: light) {
-  .nav {
-    box-shadow: 0 5px 10px rgba(119, 119, 119, 0.26);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  .nav {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-  }
 }
 .nav-header {
   display: -webkit-box;
@@ -20198,18 +20233,6 @@ Open innerNav
 */
 #straightNav {
   z-index: 2;
-}
-@media (prefers-color-scheme: light) {
-  #straightNav .nav-header,
-#straightNav .nav-menu {
-    background-color: #ffffff;
-  }
-}
-@media (prefers-color-scheme: dark) {
-  #straightNav .nav-header,
-#straightNav .nav-menu {
-    background-color: #323232;
-  }
 }
 
 /*
@@ -20355,6 +20378,22 @@ animation slide opening for PAD NAV
     transform: scale(1);
   }
 }
+/*
+**************
+THEME BG COLOR
+**************
+*/
+@media (prefers-color-scheme: light) {
+  .bg-nav {
+    background-color: #ffffff;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .bg-nav {
+    background-color: #323232;
+  }
+}
+
 /*
 ************
 NOTIFICATION

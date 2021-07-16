@@ -13,7 +13,6 @@ navList = (isOpen) => {
       menu.classList.add("d-block", "nav-menu"))
     : (openBtn.classList.add("d-block"),
       openBtn.classList.remove("d-none"),
-      menu.classList.remove("nav-menu", "d-block"),
       menu.classList.add("d-none"),
       menu.classList.remove(
         "nav-pad-menu",
@@ -21,8 +20,21 @@ navList = (isOpen) => {
         "g-col-s-3",
         "g-col-l-4",
         "g-col-xl-5",
-        "g-col-xxl-6"
+        "g-col-xxl-6",
+        "nav-menu",
+        "d-block"
       ));
+  isOpen
+    ? [
+        navElement.classList.add("bg-nav"),
+        navElement.classList.add("b-shadow"),
+        menu.classList.add("bg-nav"),
+        menu.classList.add("b-shadow"),
+      ]
+    : [
+        navElement.classList.remove("bg-nav", "b-shadow"),
+        menu.classList.remove("bg-nav", "b-shadow"),
+      ];
 };
 
 //close nav list when clicking outside
@@ -34,17 +46,28 @@ navListOutside = (isNav) => {
       closeBtn.classList.add("d-none"),
       closeBtn.classList.remove("d-block"),
       openBtn.classList.remove("d-none"),
-      openBtn.classList.add("d-block"));
+      openBtn.classList.add("d-block"),
+      navElement.classList.remove("bg-nav", "b-shadow"),
+      menu.classList.remove("bg-nav", "b-shadow"));
 };
 
 //close nav list when clicking on items
-navListItem = () => {
+navListItem = (isOpen) => {
   menu.classList.remove("d-block");
   menu.classList.add("d-none");
   closeBtn.classList.add("d-none");
   closeBtn.classList.remove("d-block");
   openBtn.classList.remove("d-none");
   openBtn.classList.add("d-block");
+  isOpen
+    ? [
+        navElement.classList.add("bg-nav", "b-shadow"),
+        menu.classList.add("bg-nav", "b-shadow"),
+      ]
+    : [
+        navElement.classList.remove("bg-nav", "b-shadow"),
+        menu.classList.remove("bg-nav", "b-shadow"),
+      ];
 };
 
 //Call navList() to open hide/show menu
@@ -72,6 +95,7 @@ document.addEventListener("click", function (event) {
 //hide menu when clicking on li
 for (let item of menuItems) {
   item.addEventListener("click", () => {
-    navListItem();
+    let open = false;
+    navListItem(open);
   });
 }
