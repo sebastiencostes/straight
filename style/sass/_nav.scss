@@ -48,6 +48,9 @@ OPEN classic nav
     @include d.desktop() {
       @include w.width(calc((100vw - 136.6rem) / 2));
     }
+    @include d.desktop-large() {
+      @include w.width(calc((100vw - 188rem) / 2));
+    }
     &-item {
       @include m.margin-direction(top, 2rem);
       &:first-child {

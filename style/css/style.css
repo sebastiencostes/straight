@@ -8,6 +8,7 @@
 
 html {
   font-size: calc(1em * 0.625);
+  overflow: initial;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
@@ -2370,7 +2371,7 @@ H1 to P
 */
 h1,
 .h1 {
-  font-size: clamp(4rem, 3.44rem + 2vw, 7.2rem);
+  font-size: clamp(4rem, 3.6035rem + 1.4159vw, 7.2rem);
 }
 h1::first-letter,
 .h1::first-letter {
@@ -2379,7 +2380,7 @@ h1::first-letter,
 
 h2,
 .h2 {
-  font-size: clamp(3.2rem, 2.64rem + 2vw, 6.4rem);
+  font-size: clamp(3.2rem, 2.8035rem + 1.4159vw, 6.4rem);
 }
 h2::first-letter,
 .h2::first-letter {
@@ -2388,7 +2389,7 @@ h2::first-letter,
 
 h3,
 .h3 {
-  font-size: clamp(2.4rem, 1.84rem + 2vw, 5.6rem);
+  font-size: clamp(2.4rem, 2.0035rem + 1.4159vw, 5.6rem);
 }
 h3::first-letter,
 .h3::first-letter {
@@ -2397,7 +2398,7 @@ h3::first-letter,
 
 h4,
 .h4 {
-  font-size: clamp(2.4rem, 1.98rem + 1.5vw, 4.8rem);
+  font-size: clamp(2.4rem, 2.1027rem + 1.0619vw, 4.8rem);
 }
 h4::first-letter,
 .h4::first-letter {
@@ -2406,7 +2407,7 @@ h4::first-letter,
 
 h5,
 .h5 {
-  font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
+  font-size: clamp(2.4rem, 2.2018rem + 0.7080vw, 4rem);
 }
 h5::first-letter,
 .h5::first-letter {
@@ -2415,7 +2416,7 @@ h5::first-letter,
 
 h6,
 .h6 {
-  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
 }
 h6::first-letter,
 .h6::first-letter {
@@ -2444,8 +2445,8 @@ h6,
 }
 
 p {
-  margin-top: clamp(0.8rem, 0.6600rem + 0.5000vw, 1.6rem);
-  margin-bottom: clamp(0.8rem, 0.6600rem + 0.5000vw, 1.6rem);
+  margin-top: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
+  margin-bottom: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
 }
 p::first-letter {
   text-transform: capitalize;
@@ -2454,7 +2455,7 @@ p::first-letter {
 p,
 span,
 li {
-  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.5009rem + 0.3540vw, 2.4rem);
   font-weight: 300;
 }
 
@@ -2463,7 +2464,7 @@ li {
 }
 
 .t-x-small {
-  font-size: clamp(0.8rem, 0.6600rem + 0.5000vw, 1.6rem);
+  font-size: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
 }
 
 h1,
@@ -2543,7 +2544,7 @@ ADDRESS
 *******
 */
 .address-title {
-  font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
+  font-size: clamp(2.4rem, 2.2018rem + 0.7080vw, 4rem);
 }
 .address-body {
   margin-bottom: 1rem;
@@ -2556,7 +2557,7 @@ ADDRESS
   align-items: center;
 }
 .address-text {
-  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.5009rem + 0.3540vw, 2.4rem);
 }
 
 /*
@@ -2566,7 +2567,7 @@ MARK
 */
 .mark-yellow {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #ffff52;
@@ -2574,7 +2575,7 @@ MARK
 }
 .mark-orange {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #ff9e40;
@@ -2582,7 +2583,7 @@ MARK
 }
 .mark-red {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #ff5131;
@@ -2591,7 +2592,7 @@ MARK
 }
 .mark-purple {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #e254ff;
@@ -2600,7 +2601,7 @@ MARK
 }
 .mark-blue {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #64c1ff;
@@ -2608,7 +2609,7 @@ MARK
 }
 .mark-green {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #9cff57;
@@ -2616,7 +2617,7 @@ MARK
 }
 .mark-pink {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #fd558f;
@@ -2625,7 +2626,7 @@ MARK
 }
 .mark-turquoise {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #5df2d6;
@@ -2633,7 +2634,7 @@ MARK
 }
 .mark-brown {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #be9c91;
@@ -2641,7 +2642,7 @@ MARK
 }
 .mark-navy {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #a7c0cd;
@@ -2649,7 +2650,7 @@ MARK
 }
 .mark-grey {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #efefef;
@@ -2657,7 +2658,7 @@ MARK
 }
 .mark-black {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #484848;
@@ -2671,27 +2672,31 @@ ICON
 ****
 */
 ion-icon.icon-s {
-  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
 }
 
 ion-icon.icon-m {
-  font-size: clamp(3.2rem, 3.06rem + 0.5vw, 4rem);
+  font-size: clamp(3.2rem, 3.1009rem + 0.3540vw, 4rem);
 }
 
 ion-icon.icon-l {
-  font-size: clamp(4rem, 3.86rem + 0.5vw, 4.8rem);
+  font-size: clamp(4rem, 3.9009rem + 0.3540vw, 4.8rem);
 }
 
 ion-icon.icon-xl {
-  font-size: clamp(4.8rem, 4.66rem + 0.5vw, 5.6rem);
+  font-size: clamp(4.8rem, 4.7009rem + 0.3540vw, 5.6rem);
 }
 
 ion-icon.icon-xxl {
-  font-size: clamp(5.6rem, 5.46rem + 0.5vw, 6.4rem);
+  font-size: clamp(5.6rem, 5.5009rem + 0.3540vw, 6.4rem);
+}
+
+ion-icon.icon-xxxl {
+  font-size: clamp(6.4rem, 6.3009rem + 0.3540vw, 7.2rem);
 }
 
 ion-icon {
-  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
 }
 
 ion-icon {
@@ -15394,7 +15399,7 @@ Font sizes for .btn-*
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
-  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
   padding: 0 0.75rem;
 }
 
@@ -15413,7 +15418,7 @@ Font sizes for .btn-*
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
-  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
   padding: 0 1rem;
 }
 
@@ -15432,7 +15437,7 @@ Font sizes for .btn-*
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
-  font-size: clamp(3.2rem, 3.06rem + 0.5vw, 4rem);
+  font-size: clamp(3.2rem, 3.1009rem + 0.354vw, 4rem);
   padding: 0 1.25rem;
 }
 
@@ -15451,7 +15456,7 @@ Font sizes for .btn-*
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
-  font-size: clamp(4rem, 3.86rem + 0.5vw, 4.8rem);
+  font-size: clamp(4rem, 3.9009rem + 0.354vw, 4.8rem);
   padding: 0 1.75rem;
 }
 
@@ -15470,7 +15475,26 @@ Font sizes for .btn-*
   transition: all 0.28s;
   vertical-align: middle;
   border-radius: 0.3rem;
-  font-size: clamp(4.8rem, 4.66rem + 0.5vw, 5.6rem);
+  font-size: clamp(4.8rem, 4.7009rem + 0.354vw, 5.6rem);
+  padding: 0 1.75rem;
+}
+
+.btn-xxxl {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: solid 1px transparent;
+  color: #212121;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  font-weight: 400;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.28s;
+  vertical-align: middle;
+  border-radius: 0.3rem;
+  font-size: clamp(5.6rem, 5.5009rem + 0.354vw, 6.4rem);
   padding: 0 1.75rem;
 }
 
@@ -15590,6 +15614,28 @@ Sizes for .btn-square-* & .btn-circle-*
   font-size: 5.6rem;
 }
 
+.btn-square-xxxl {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: solid 1px transparent;
+  color: #212121;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  font-weight: 400;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.28s;
+  vertical-align: middle;
+  border-radius: 0.3rem;
+  width: 8rem;
+  height: 8rem;
+}
+.btn-square-xxxl ion-icon {
+  font-size: 6.4rem;
+}
+
 /*
 .btn-circle-*
 */
@@ -15701,6 +15747,28 @@ Sizes for .btn-square-* & .btn-circle-*
 }
 .btn-circle-xxl ion-icon {
   font-size: 5.6rem;
+}
+
+.btn-circle-xxxl {
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: solid 1px transparent;
+  color: #212121;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  font-weight: 400;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.28s;
+  vertical-align: middle;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+}
+.btn-circle-xxxl ion-icon {
+  font-size: 6.4rem;
 }
 
 /*
@@ -16131,11 +16199,14 @@ Sizes for .btn-square-* & .btn-circle-*
 
 /*
 ***************
-BORDERED BUTTON
+BORDERED BUTTON ion-icon
 ***************
 */
 .btn-b-white {
   border: solid 1px #ffffff;
+  color: #ffffff;
+}
+.btn-b-white ion-icon {
   color: #ffffff;
 }
 .btn-b-white:hover, .btn-b-white:focus, .btn-b-white:active, .btn-b-white.active {
@@ -16147,8 +16218,18 @@ BORDERED BUTTON
   color: #ffffff;
   cursor: not-allowed;
 }
+.btn-b-white:hover ion-icon, .btn-b-white:focus ion-icon, .btn-b-white:active ion-icon, .btn-b-white.active ion-icon {
+  color: #eee;
+}
+.btn-b-white:disabled ion-icon {
+  color: #ffffff;
+  cursor: not-allowed;
+}
 .btn-b-yellow {
   border: solid 1px #ffd600;
+  color: #ffd600;
+}
+.btn-b-yellow ion-icon {
   color: #ffd600;
 }
 .btn-b-yellow:hover, .btn-b-yellow:focus, .btn-b-yellow:active, .btn-b-yellow.active {
@@ -16160,8 +16241,18 @@ BORDERED BUTTON
   color: #ffff52;
   cursor: not-allowed;
 }
+.btn-b-yellow:hover ion-icon, .btn-b-yellow:focus ion-icon, .btn-b-yellow:active ion-icon, .btn-b-yellow.active ion-icon {
+  color: #c7a500;
+}
+.btn-b-yellow:disabled ion-icon {
+  color: #ffff52;
+  cursor: not-allowed;
+}
 .btn-b-orange {
   border: solid 1px #ff6d00;
+  color: #ff6d00;
+}
+.btn-b-orange ion-icon {
   color: #ff6d00;
 }
 .btn-b-orange:hover, .btn-b-orange:focus, .btn-b-orange:active, .btn-b-orange.active {
@@ -16173,8 +16264,18 @@ BORDERED BUTTON
   color: #ff9e40;
   cursor: not-allowed;
 }
+.btn-b-orange:hover ion-icon, .btn-b-orange:focus ion-icon, .btn-b-orange:active ion-icon, .btn-b-orange.active ion-icon {
+  color: #c43c00;
+}
+.btn-b-orange:disabled ion-icon {
+  color: #ff9e40;
+  cursor: not-allowed;
+}
 .btn-b-red {
   border: solid 1px #d50000;
+  color: #d50000;
+}
+.btn-b-red ion-icon {
   color: #d50000;
 }
 .btn-b-red:hover, .btn-b-red:focus, .btn-b-red:active, .btn-b-red.active {
@@ -16186,8 +16287,18 @@ BORDERED BUTTON
   color: #ff5131;
   cursor: not-allowed;
 }
+.btn-b-red:hover ion-icon, .btn-b-red:focus ion-icon, .btn-b-red:active ion-icon, .btn-b-red.active ion-icon {
+  color: #9b0000;
+}
+.btn-b-red:disabled ion-icon {
+  color: #ff5131;
+  cursor: not-allowed;
+}
 .btn-b-purple {
   border: solid 1px #aa00ff;
+  color: #aa00ff;
+}
+.btn-b-purple ion-icon {
   color: #aa00ff;
 }
 .btn-b-purple:hover, .btn-b-purple:focus, .btn-b-purple:active, .btn-b-purple.active {
@@ -16199,8 +16310,18 @@ BORDERED BUTTON
   color: #e254ff;
   cursor: not-allowed;
 }
+.btn-b-purple:hover ion-icon, .btn-b-purple:focus ion-icon, .btn-b-purple:active ion-icon, .btn-b-purple.active ion-icon {
+  color: #7200ca;
+}
+.btn-b-purple:disabled ion-icon {
+  color: #e254ff;
+  cursor: not-allowed;
+}
 .btn-b-blue {
   border: solid 1px #0091ea;
+  color: #0091ea;
+}
+.btn-b-blue ion-icon {
   color: #0091ea;
 }
 .btn-b-blue:hover, .btn-b-blue:focus, .btn-b-blue:active, .btn-b-blue.active {
@@ -16212,8 +16333,18 @@ BORDERED BUTTON
   color: #64c1ff;
   cursor: not-allowed;
 }
+.btn-b-blue:hover ion-icon, .btn-b-blue:focus ion-icon, .btn-b-blue:active ion-icon, .btn-b-blue.active ion-icon {
+  color: #0064b7;
+}
+.btn-b-blue:disabled ion-icon {
+  color: #64c1ff;
+  cursor: not-allowed;
+}
 .btn-b-green {
   border: solid 1px #64dd17;
+  color: #64dd17;
+}
+.btn-b-green ion-icon {
   color: #64dd17;
 }
 .btn-b-green:hover, .btn-b-green:focus, .btn-b-green:active, .btn-b-green.active {
@@ -16225,8 +16356,18 @@ BORDERED BUTTON
   color: #9cff57;
   cursor: not-allowed;
 }
+.btn-b-green:hover ion-icon, .btn-b-green:focus ion-icon, .btn-b-green:active ion-icon, .btn-b-green.active ion-icon {
+  color: #1faa00;
+}
+.btn-b-green:disabled ion-icon {
+  color: #9cff57;
+  cursor: not-allowed;
+}
 .btn-b-pink {
   border: solid 1px #c51162;
+  color: #c51162;
+}
+.btn-b-pink ion-icon {
   color: #c51162;
 }
 .btn-b-pink:hover, .btn-b-pink:focus, .btn-b-pink:active, .btn-b-pink.active {
@@ -16238,8 +16379,18 @@ BORDERED BUTTON
   color: #fd558f;
   cursor: not-allowed;
 }
+.btn-b-pink:hover ion-icon, .btn-b-pink:focus ion-icon, .btn-b-pink:active ion-icon, .btn-b-pink.active ion-icon {
+  color: #8e0038;
+}
+.btn-b-pink:disabled ion-icon {
+  color: #fd558f;
+  cursor: not-allowed;
+}
 .btn-b-turquoise {
   border: solid 1px #00bfa5;
+  color: #00bfa5;
+}
+.btn-b-turquoise ion-icon {
   color: #00bfa5;
 }
 .btn-b-turquoise:hover, .btn-b-turquoise:focus, .btn-b-turquoise:active, .btn-b-turquoise.active {
@@ -16251,8 +16402,18 @@ BORDERED BUTTON
   color: #5df2d6;
   cursor: not-allowed;
 }
+.btn-b-turquoise:hover ion-icon, .btn-b-turquoise:focus ion-icon, .btn-b-turquoise:active ion-icon, .btn-b-turquoise.active ion-icon {
+  color: #008e76;
+}
+.btn-b-turquoise:disabled ion-icon {
+  color: #5df2d6;
+  cursor: not-allowed;
+}
 .btn-b-brown {
   border: solid 1px #8d6e63;
+  color: #8d6e63;
+}
+.btn-b-brown ion-icon {
   color: #8d6e63;
 }
 .btn-b-brown:hover, .btn-b-brown:focus, .btn-b-brown:active, .btn-b-brown.active {
@@ -16264,8 +16425,18 @@ BORDERED BUTTON
   color: #be9c91;
   cursor: not-allowed;
 }
+.btn-b-brown:hover ion-icon, .btn-b-brown:focus ion-icon, .btn-b-brown:active ion-icon, .btn-b-brown.active ion-icon {
+  color: #5f4339;
+}
+.btn-b-brown:disabled ion-icon {
+  color: #be9c91;
+  cursor: not-allowed;
+}
 .btn-b-grey {
   border: solid 1px #bdbdbd;
+  color: #bdbdbd;
+}
+.btn-b-grey ion-icon {
   color: #bdbdbd;
 }
 .btn-b-grey:hover, .btn-b-grey:focus, .btn-b-grey:active, .btn-b-grey.active {
@@ -16277,8 +16448,18 @@ BORDERED BUTTON
   color: #efefef;
   cursor: not-allowed;
 }
+.btn-b-grey:hover ion-icon, .btn-b-grey:focus ion-icon, .btn-b-grey:active ion-icon, .btn-b-grey.active ion-icon {
+  color: #8d8d8d;
+}
+.btn-b-grey:disabled ion-icon {
+  color: #efefef;
+  cursor: not-allowed;
+}
 .btn-b-navy {
   border: solid 1px #78909c;
+  color: #78909c;
+}
+.btn-b-navy ion-icon {
   color: #78909c;
 }
 .btn-b-navy:hover, .btn-b-navy:focus, .btn-b-navy:active, .btn-b-navy.active {
@@ -16290,8 +16471,18 @@ BORDERED BUTTON
   color: #a7c0cd;
   cursor: not-allowed;
 }
+.btn-b-navy:hover ion-icon, .btn-b-navy:focus ion-icon, .btn-b-navy:active ion-icon, .btn-b-navy.active ion-icon {
+  color: #4b636e;
+}
+.btn-b-navy:disabled ion-icon {
+  color: #a7c0cd;
+  cursor: not-allowed;
+}
 .btn-b-black {
   border: solid 1px #212121;
+  color: #212121;
+}
+.btn-b-black ion-icon {
   color: #212121;
 }
 .btn-b-black:hover, .btn-b-black:focus, .btn-b-black:active, .btn-b-black.active {
@@ -16300,6 +16491,13 @@ BORDERED BUTTON
 }
 .btn-b-black:disabled {
   border: solid 1px #484848;
+  color: #484848;
+  cursor: not-allowed;
+}
+.btn-b-black:hover ion-icon, .btn-b-black:focus ion-icon, .btn-b-black:active ion-icon, .btn-b-black.active ion-icon {
+  color: #000000;
+}
+.btn-b-black:disabled ion-icon {
   color: #484848;
   cursor: not-allowed;
 }
@@ -16749,6 +16947,71 @@ grid column span
     grid-column: span 16;
   }
 }
+@media only screen and (min-width: 2540px) {
+  .col-push-xxxl-1 {
+    grid-column: span 1;
+  }
+
+  .col-push-xxxl-2 {
+    grid-column: span 2;
+  }
+
+  .col-push-xxxl-3 {
+    grid-column: span 3;
+  }
+
+  .col-push-xxxl-4 {
+    grid-column: span 4;
+  }
+
+  .col-push-xxxl-5 {
+    grid-column: span 5;
+  }
+
+  .col-push-xxxl-6 {
+    grid-column: span 6;
+  }
+
+  .col-push-xxxl-7 {
+    grid-column: span 7;
+  }
+
+  .col-push-xxxl-8 {
+    grid-column: span 8;
+  }
+
+  .col-push-xxxl-9 {
+    grid-column: span 9;
+  }
+
+  .col-push-xxxl-10 {
+    grid-column: span 10;
+  }
+
+  .col-push-xxxl-11 {
+    grid-column: span 11;
+  }
+
+  .col-push-xxxl-12 {
+    grid-column: span 12;
+  }
+
+  .col-push-xxxl-13 {
+    grid-column: span 13;
+  }
+
+  .col-push-xxxl-14 {
+    grid-column: span 14;
+  }
+
+  .col-push-xxxl-15 {
+    grid-column: span 15;
+  }
+
+  .col-push-xxxl-16 {
+    grid-column: span 16;
+  }
+}
 /*
 row span
 */
@@ -17138,6 +17401,71 @@ row span
   }
 
   .row-push-xxl-16 {
+    grid-row: span 16;
+  }
+}
+@media only screen and (min-width: 2540px) {
+  .row-push-xxxl-1 {
+    grid-row: span 1;
+  }
+
+  .row-push-xxxl-2 {
+    grid-row: span 2;
+  }
+
+  .row-push-xxxl-3 {
+    grid-row: span 3;
+  }
+
+  .row-push-xxxl-4 {
+    grid-row: span 4;
+  }
+
+  .row-push-xxxl-5 {
+    grid-row: span 5;
+  }
+
+  .row-push-xxxl-6 {
+    grid-row: span 6;
+  }
+
+  .row-push-xxxl-7 {
+    grid-row: span 7;
+  }
+
+  .row-push-xxxl-8 {
+    grid-row: span 8;
+  }
+
+  .row-push-xxxl-9 {
+    grid-row: span 9;
+  }
+
+  .row-push-xxxl-10 {
+    grid-row: span 10;
+  }
+
+  .row-push-xxxl-11 {
+    grid-row: span 11;
+  }
+
+  .row-push-xxxl-12 {
+    grid-row: span 12;
+  }
+
+  .row-push-xxxl-13 {
+    grid-row: span 13;
+  }
+
+  .row-push-xxxl-14 {
+    grid-row: span 14;
+  }
+
+  .row-push-xxxl-15 {
+    grid-row: span 15;
+  }
+
+  .row-push-xxxl-16 {
     grid-row: span 16;
   }
 }
@@ -18059,6 +18387,71 @@ grid-template-columns
     grid-template-columns: repeat(16, 1fr);
   }
 }
+@media only screen and (min-width: 2540px) {
+  .g-col-xxxl-1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .g-col-xxxl-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .g-col-xxxl-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .g-col-xxxl-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .g-col-xxxl-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .g-col-xxxl-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .g-col-xxxl-7 {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .g-col-xxxl-8 {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .g-col-xxxl-9 {
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  .g-col-xxxl-10 {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .g-col-xxxl-11 {
+    grid-template-columns: repeat(11, 1fr);
+  }
+
+  .g-col-xxxl-12 {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .g-col-xxxl-13 {
+    grid-template-columns: repeat(13, 1fr);
+  }
+
+  .g-col-xxxl-14 {
+    grid-template-columns: repeat(14, 1fr);
+  }
+
+  .g-col-xxxl-15 {
+    grid-template-columns: repeat(15, 1fr);
+  }
+
+  .g-col-xxxl-16 {
+    grid-template-columns: repeat(16, 1fr);
+  }
+}
 .z-1 {
   z-index: 1;
 }
@@ -18690,7 +19083,7 @@ SINGLE CODE
   color: #0091ea;
   display: inline-block;
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  font-size: clamp(1.2rem, 1.06rem + 0.5vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
   font-weight: 300;
 }
 
@@ -18749,6 +19142,11 @@ HIGHLIGHT
 @media only screen and (min-width: 1880px) {
   .container-fix {
     width: 136.6rem;
+  }
+}
+@media only screen and (min-width: 2540px) {
+  .container-fix {
+    width: 188rem;
   }
 }
 
@@ -19780,6 +20178,11 @@ OPEN classic nav
     width: calc((100vw - 136.6rem) / 2);
   }
 }
+@media only screen and (min-width: 2540px) {
+  .nav-menu {
+    width: calc((100vw - 188rem) / 2);
+  }
+}
 .nav-menu-item {
   margin-top: 2rem;
 }
@@ -19969,7 +20372,8 @@ NOTIFICATION
   right: 0;
 }
 
-.modal-xxl .modal-header,
+.modal-xxxl .modal-header,
+.modal-xxxl .modal-footer, .modal-xxl .modal-header,
 .modal-xxl .modal-footer, .modal-xl .modal-header,
 .modal-xl .modal-footer, .modal-l .modal-header,
 .modal-l .modal-footer, .modal-m .modal-header,
@@ -20051,7 +20455,7 @@ NOTIFICATION
 MODAL
 *****
 */
-.modal-xxl, .modal-xl, .modal-l, .modal-m, .modal-s {
+.modal-xxxl, .modal-xxl, .modal-xl, .modal-l, .modal-m, .modal-s {
   background-color: #ffffff;
   color: #212121;
   border-radius: 0.3rem;
@@ -20065,17 +20469,18 @@ MODAL
   animation-duration: 0.28s;
 }
 @media (prefers-color-scheme: light) {
-  .modal-xxl, .modal-xl, .modal-l, .modal-m, .modal-s {
+  .modal-xxxl, .modal-xxl, .modal-xl, .modal-l, .modal-m, .modal-s {
     box-shadow: 0 5px 10px rgba(119, 119, 119, 0.26);
   }
 }
 @media (prefers-color-scheme: dark) {
-  .modal-xxl, .modal-xl, .modal-l, .modal-m, .modal-s {
+  .modal-xxxl, .modal-xxl, .modal-xl, .modal-l, .modal-m, .modal-s {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   }
 }
 
-.modal-xxl .modal-header,
+.modal-xxxl .modal-header,
+.modal-xxxl .modal-footer, .modal-xxl .modal-header,
 .modal-xxl .modal-footer, .modal-xl .modal-header,
 .modal-xl .modal-footer, .modal-l .modal-header,
 .modal-l .modal-footer, .modal-m .modal-header,
@@ -20083,7 +20488,8 @@ MODAL
 .modal-s .modal-footer {
   padding: 1rem;
 }
-.modal-xxl .modal-header ion-icon,
+.modal-xxxl .modal-header ion-icon,
+.modal-xxxl .modal-footer ion-icon, .modal-xxl .modal-header ion-icon,
 .modal-xxl .modal-footer ion-icon, .modal-xl .modal-header ion-icon,
 .modal-xl .modal-footer ion-icon, .modal-l .modal-header ion-icon,
 .modal-l .modal-footer ion-icon, .modal-m .modal-header ion-icon,
@@ -20092,22 +20498,22 @@ MODAL
   color: #212121;
 }
 
-.modal-xxl .modal-body, .modal-xl .modal-body, .modal-l .modal-body, .modal-m .modal-body, .modal-s .modal-body {
+.modal-xxxl .modal-body, .modal-xxl .modal-body, .modal-xl .modal-body, .modal-l .modal-body, .modal-m .modal-body, .modal-s .modal-body {
   overflow-x: hidden;
   overflow-y: auto;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.modal-xxl .notification-close, .modal-xl .notification-close, .modal-l .notification-close, .modal-m .notification-close, .modal-s .notification-close {
+.modal-xxxl .notification-close, .modal-xxl .notification-close, .modal-xl .notification-close, .modal-l .notification-close, .modal-m .notification-close, .modal-s .notification-close {
   position: static;
 }
 
-.modal-xxl .modal-text, .modal-xl .modal-text, .modal-l .modal-text, .modal-m .modal-text, .modal-s .modal-text {
+.modal-xxxl .modal-text, .modal-xxl .modal-text, .modal-xl .modal-text, .modal-l .modal-text, .modal-m .modal-text, .modal-s .modal-text {
   font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
 }
 
-.modal-xxl, .modal-xl, .modal-l, .modal-m {
+.modal-xxxl, .modal-xxl, .modal-xl, .modal-l, .modal-m {
   max-width: calc(100vw - 4rem);
   width: 100%;
 }
@@ -20149,6 +20555,15 @@ MODAL
   }
 }
 .modal-xxl .modal-footer {
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 1880px) {
+  .modal-xxxl {
+    max-width: 188rem;
+  }
+}
+.modal-xxxl .modal-footer {
   padding: 1rem;
 }
 

@@ -90,3 +90,17 @@ for (let btn of arrayColorShape) {
   ${btn.color}
 </button>`;
 }
+
+//creating squared bordered buttons
+for (let btn of arrayColorShape) {
+  arrayDefaultBorders.innerHTML += `<button class="btn-square-m btn-b-${btn.color}" type="button">
+  <ion-icon name="add-outline"></ion-icon>
+</button>`;
+}
+
+//creating circled bordered buttons
+for (let btn of arrayColorShape) {
+  arrayDefaultBorders.innerHTML += `<button class="btn-circle-m btn-b-${btn.color}" type="button">
+  <ion-icon name="add-outline"></ion-icon>
+</button>`;
+}

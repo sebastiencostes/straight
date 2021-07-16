@@ -134,6 +134,14 @@ grid column span
   }
 }
 
+@include d.desktop-large() {
+  @for $i from 1 through 16 {
+    .col-push-xxxl-#{$i} {
+      grid-column: (span #{$i});
+    }
+  }
+}
+
 /*
 row span
 */
@@ -181,6 +189,14 @@ row span
 @include d.desktop() {
   @for $i from 1 through 16 {
     .row-push-xxl-#{$i} {
+      grid-row: (span #{$i});
+    }
+  }
+}
+
+@include d.desktop-large() {
+  @for $i from 1 through 16 {
+    .row-push-xxxl-#{$i} {
       grid-row: (span #{$i});
     }
   }
@@ -294,6 +310,14 @@ grid-template-columns
 @include d.desktop {
   @for $i from 1 through 16 {
     .g-col-xxl-#{$i} {
+      grid-template-columns: (repeat(#{$i}, 1fr));
+    }
+  }
+}
+
+@include d.desktop-large {
+  @for $i from 1 through 16 {
+    .g-col-xxxl-#{$i} {
       grid-template-columns: (repeat(#{$i}, 1fr));
     }
   }
