@@ -2,7 +2,7 @@ const straightAvailableModule = document.querySelector('#straightAvailableModule
 const arrayModules  = [
     {   
         title: 'button',
-        url: 'card',
+        url: 'button',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
@@ -16,77 +16,77 @@ const arrayModules  = [
     },
     {   
         title: 'carousel',
-        url: 'card',
-        img: 'cardV',
+        url: 'carousel',
+        img: 'carouselBig',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'color',
-        url: 'card',
+        url: 'color',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'form',
-        url: 'card',
+        url: 'form',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'header',
-        url: 'card',
-        img: 'cardV',
+        url: 'header',
+        img: 'header',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'helper',
-        url: 'card',
+        url: 'helper',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'image',
-        url: 'card',
-        img: 'cardV',
+        url: 'image',
+        img: 'image',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'layout',
-        url: 'card',
+        url: 'layout',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'nav',
-        url: 'card',
+        url: 'nav',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'notification',
-        url: 'card',
+        url: 'notification',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'template',
-        url: 'card',
+        url: 'template',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'typography',
-        url: 'card',
+        url: 'typography',
         img: 'cardV',
         content: 'lorem ipsum',
         subtitle: 'push it'
@@ -108,7 +108,7 @@ for(let module of arrayModules) {
             <source srcset="/assets/img/${module.url}/${module.img}.png" media="(min-width: 992px)">
             <source srcset="/assets/img/${module.url}/${module.img}.png" media="(min-width: 728px)">
             <img class="card-img" src="/assets/img/${module.url}/${module.img}.png"
-                alt="">
+                alt="${module.title} module">
         </picture>
     </a>
     <section class="card-body d-none" data-card="">
