@@ -315,6 +315,30 @@ MODAL
   }
 }
 
+.modal-xxxl {
+  @extend %modal-shared;
+  @extend %modal-size-shared;
+  @include d.desktop() {
+    max-width: 188rem;
+  }
+  .modal-body {
+    @extend %modal-body-shared;
+  }
+  .modal-text {
+    @extend %modal-text-shared;
+  }
+  .modal-header,
+  .modal-footer {
+    @extend %modal-header-shared;
+  }
+  .notification-close {
+    @extend %modal-close-shared;
+  }
+  .modal-footer {
+    padding: 1rem;
+  }
+}
+
 /*
 *********
 ANIMATION

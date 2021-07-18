@@ -40,8 +40,8 @@
     <nav id="straightNav" class="nav">
         <ul class="nav-header">
             <li>
-                <a class="btn-square-s" href="/index.html" role="button">
-                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                <a class="btn-square-s btn-green" href="/index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
                 </a>
             </li>
             <li class="grid d-none t-blue">
@@ -147,7 +147,7 @@
                 Breakpoint
             </h3>
             <p>
-                Straight framework includes <strong>5 default breakpoints</strong>, from <b class="t-uppercase">s</b> to <b class="t-uppercase">xxl</b>.
+                Straight framework includes <strong>6 default breakpoints</strong>, from <b class="t-uppercase">s</b> to <b class="t-uppercase">xxl</b>.
                 These breakpoints refers to some devices screen width, from mobile to desktop screen. they don’t target every use case or device.
             </p>
             <p><span class="t-blue" >S</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 280px</small> is <b>phone</b></p>
@@ -155,6 +155,7 @@
             <p><span class="t-blue" >L</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 992px</small> is <b>tablet landscape</b></p>
             <p><span class="t-blue" >XL</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 1400px</small> is <b>laptop</b></p>
             <p><span class="t-blue" >XXL</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 1880px</small> is <b>desktop</b></p>
+            <p><span class="t-blue" >XXXL</span><small> breakpoint </small><span class="t-blue" >≥</span><small> 2540px</small> is <b>desktop large</b></p>
         </article>
 
         <article class="m-b-8 m-t-8">
@@ -718,29 +719,26 @@
             </section>
         </article>
     </main>
-    <footer class="bg-grey-light">
-        <div class="container-fix j-between g-col g-col-m-2 p-t-2 p-b-2">
+    <footer id="straightFooter" class="bg-grey-light">
+        <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
             <section>
-                <a class="btn-square-s" href="/index.html" rel="noopener">
-                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                <a class="btn-square-s btn-green" href="/index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
                 </a>
-                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank">
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
                     <ion-icon name="logo-github"></ion-icon>
                 </a>
-                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank">
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
                     <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
                 <p class="t-x-small t-carbon">
-                    Designed and built by <b>Sébastien COSTES</b>.
-                    Code released under the MIT License. 
-                    copyright 2020-2021
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="/" trget="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
                 </p>
             </section>
             <section class="d-flex j-between">
                 <ul>
-                    <li class="t-x-small">
-                        <a href="/index.html" rel="noopener">straight framework</a>
-                    </li>
                     <li class="t-x-small">
                         <a href="/button.html" rel="noopener">button module</a>
                     </li>
@@ -759,16 +757,19 @@
                     <li class="t-x-small">
                         <a href="/header.html" rel="noopener">header module</a>
                     </li>
-                </ul>
-                <ul>
                     <li class="t-x-small">
                         <a href="/helper.html" rel="noopener">helper module</a>
                     </li>
+                </ul>
+                <ul>
                     <li class="t-x-small">
                         <a href="/image.html" rel="noopener">image module</a>
                     </li>
                     <li class="t-x-small">
                         <a href="/layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/list.html" rel="noopener">list module</a>
                     </li>
                     <li class="t-x-small">
                         <a href="/nav.html" rel="noopener">nav module</a>
@@ -793,6 +794,7 @@
     <script src="/script/straightNav.js"></script>
     <script src="/script/straightLayout.js"></script>
     <script src="script/straightClipboard.js"></script>
+    <script src="script/straightFooter.js"></script>
 </body>
 
 </html>

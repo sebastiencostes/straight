@@ -39,8 +39,8 @@
     <nav id="straightNav" class="nav">
         <ul class="nav-header">
             <li>
-                <a class="btn-square-s" href="/index.html" role="button">
-                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                <a class="btn-square-s btn-green" href="/index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
                 </a>
             </li>
             <li class="grid d-none t-blue">
@@ -158,7 +158,7 @@
                         border radius extra large : <code class="single-code">class=&quot;b-radius-xl&quot;</code>
                     </li>
                     <li class="list-inside">
-                        cicle : <code class="single-code">class=&quot;circle&quot;</code>
+                        circle : <code class="single-code">class=&quot;circle&quot;</code>
                     </li>
                 </ul>
             </section>
@@ -446,6 +446,16 @@
             </section>
             <section>
                 <p class="note-grey">
+                    margin works with values from <b>1</b> to <b>16</b>. Units are in <strong>rem</strong>.
+                </p>
+                <ul>
+                    <li class="list-inside">
+                        margin : <code class="single-code">class=&quot;m-*&quot;</code>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p class="note-grey">
                     margin direction works with values from <b>1</b> to <b>16</b>. Units are in <strong>rem</strong>.
                 </p>
                 <ul>
@@ -463,6 +473,26 @@
                     </li>
                 </ul>
             </section>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+                opacity
+            </h3>
+            <p>
+                opacity works with value from <b>0</b> by <b>0X</b> to <b>1</b>.
+            </p>
+            <ul>
+                <li class="list-inside">
+                    opacity 0 : <code class="single-code">class=&quot;op-0&quot;</code>
+                </li>
+                <li class="list-inside">
+                    opacity X : <code class="single-code">class=&quot;op-0X&quot;</code>
+                </li>
+                <li class="list-inside">
+                    opacity 1 : <code class="single-code">class=&quot;op-1&quot;</code>
+                </li>
+            </ul>
         </article>
 
         <article class="m-b-8 m-t-8">
@@ -495,6 +525,44 @@
                     </li>
                 </ul>
             </section>
+        </article>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-grey">
+                position
+            </h3>
+            <p>
+                if for some reason you have to change the positioning of your element check these classes.
+            </p>
+            <ul>
+                <li class="list-inside">
+                    position absolute : <code class="single-code">class=&quot;pos-absolute&quot;</code>
+                </li>
+                <li class="list-inside">
+                    position absolute center : <code class="single-code">class=&quot;pos-absolute-centering&quot;</code>
+                </li>
+                <li class="list-inside">
+                    position relative : <code class="single-code">class=&quot;pos-relative&quot;</code>
+                </li>
+                <li class="list-inside">
+                    position sticky : <code class="single-code">class=&quot;pos-sticky&quot;</code>
+                </li>
+                <li class="list-inside">
+                    position fixed : <code class="single-code">class=&quot;pos-fixed&quot;</code>
+                </li>
+                <li class="list-inside">
+                    position fixed top : <code class="single-code">class=&quot;pos-fixed-top&quot;</code>
+                </li>
+                <li class="list-inside">
+                    position fixed right : <code class="single-code">class=&quot;pos-fixed-right&quot;</code>
+                </li>
+                <li class="list-inside">
+                    position fixed left : <code class="single-code">class=&quot;pos-fixed-left&quot;</code>
+                </li>
+                <li class="list-inside">
+                    position fixed bottom : <code class="single-code">class=&quot;pos-fixed-bottom&quot;</code>
+                </li>
+            </ul>
         </article>
 
         <article class="m-b-8 m-t-8">
@@ -570,29 +638,26 @@
         </article>
 
     </main>
-    <footer class="bg-grey-light">
-        <div class="container-fix j-between g-col g-col-m-2 p-t-2 p-b-2">
+    <footer id="straightFooter" class="bg-grey-light">
+        <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
             <section>
-                <a class="btn-square-s" href="/index.html" rel="noopener">
-                    <img class="h-rem-4" src="/assets/img/logo/logo.svg" alt="">
+                <a class="btn-square-s btn-green" href="/index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
                 </a>
-                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank">
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
                     <ion-icon name="logo-github"></ion-icon>
                 </a>
-                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank">
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
                     <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
                 <p class="t-x-small t-carbon">
-                    Designed and built by <b>Sébastien COSTES</b>.
-                    Code released under the MIT License. 
-                    copyright 2020-2021
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="/" trget="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
                 </p>
             </section>
             <section class="d-flex j-between">
                 <ul>
-                    <li class="t-x-small">
-                        <a href="/index.html" rel="noopener">straight framework</a>
-                    </li>
                     <li class="t-x-small">
                         <a href="/button.html" rel="noopener">button module</a>
                     </li>
@@ -611,16 +676,19 @@
                     <li class="t-x-small">
                         <a href="/header.html" rel="noopener">header module</a>
                     </li>
-                </ul>
-                <ul>
                     <li class="t-x-small">
                         <a href="/helper.html" rel="noopener">helper module</a>
                     </li>
+                </ul>
+                <ul>
                     <li class="t-x-small">
                         <a href="/image.html" rel="noopener">image module</a>
                     </li>
                     <li class="t-x-small">
                         <a href="/layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/list.html" rel="noopener">list module</a>
                     </li>
                     <li class="t-x-small">
                         <a href="/nav.html" rel="noopener">nav module</a>
@@ -641,6 +709,7 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="/script/straightNav.js"></script>
+    <script src="script/straightFooter.js"></script>
 </body>
 
 </html>

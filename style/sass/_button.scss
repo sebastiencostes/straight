@@ -35,19 +35,22 @@ Button properties shared
 Font sizes for .btn-*
 */
 @mixin btn-s {
-  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
 }
 @mixin btn-m {
-  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
 }
 @mixin btn-l {
-  font-size: clamp(3.2rem, 3.06rem + 0.5vw, 4rem);
+  font-size: clamp(3.2rem, 3.1009rem + 0.354vw, 4rem);
 }
 @mixin btn-xl {
-  font-size: clamp(4rem, 3.86rem + 0.5vw, 4.8rem);
+  font-size: clamp(4rem, 3.9009rem + 0.354vw, 4.8rem);
 }
 @mixin btn-xxl {
-  font-size: clamp(4.8rem, 4.66rem + 0.5vw, 5.6rem);
+  font-size: clamp(4.8rem, 4.7009rem + 0.354vw, 5.6rem);
+}
+@mixin btn-xxxl {
+  font-size: clamp(5.6rem, 5.5009rem + 0.354vw, 6.4rem);
 }
 
 .btn-s {
@@ -75,6 +78,11 @@ Font sizes for .btn-*
   @include btn-xxl();
   @include p.padding(0 1.75rem);
 }
+.btn-xxxl {
+  @include btn();
+  @include btn-xxxl();
+  @include p.padding(0 1.75rem);
+}
 
 /*
 Sizes for .btn-square-* & .btn-circle-*
@@ -98,6 +106,10 @@ Sizes for .btn-square-* & .btn-circle-*
 @mixin btn-size-xxl() {
   @include w.width(7.2rem);
   @include h.height(7.2rem);
+}
+@mixin btn-size-xxxl() {
+  @include w.width(8rem);
+  @include h.height(8rem);
 }
 
 /*
@@ -142,6 +154,13 @@ Sizes for .btn-square-* & .btn-circle-*
     font-size: 5.6rem;
   }
 }
+.btn-square-xxxl {
+  @include btn-square();
+  @include btn-size-xxxl();
+  ion-icon {
+    font-size: 6.4rem;
+  }
+}
 
 /*
 .btn-circle-*
@@ -183,6 +202,13 @@ Sizes for .btn-square-* & .btn-circle-*
   @include btn-size-xxl();
   ion-icon {
     font-size: 5.6rem;
+  }
+}
+.btn-circle-xxxl {
+  @include btn-circle();
+  @include btn-size-xxxl();
+  ion-icon {
+    font-size: 6.4rem;
   }
 }
 
@@ -642,13 +668,16 @@ Sizes for .btn-square-* & .btn-circle-*
 
 /*
 ***************
-BORDERED BUTTON
+BORDERED BUTTON ion-icon
 ***************
 */
 .btn-b {
   &-white {
     @include b.border(c.$white);
     color: c.$white;
+    ion-icon{
+      color: c.$white;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -661,10 +690,23 @@ BORDERED BUTTON
       color: c.$white;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$text-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$white;
+      cursor: not-allowed;
+    }
   }
   &-yellow {
     @include b.border(c.$yellow);
     color: c.$yellow;
+    ion-icon{
+      color: c.$yellow;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -677,10 +719,23 @@ BORDERED BUTTON
       color: c.$yellow-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$yellow-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$yellow-light;
+      cursor: not-allowed;
+    }
   }
   &-orange {
     @include b.border(c.$orange);
     color: c.$orange;
+    ion-icon{
+      color: c.$orange;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -693,10 +748,23 @@ BORDERED BUTTON
       color: c.$orange-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$orange-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$orange-light;
+      cursor: not-allowed;
+    }
   }
   &-red {
     @include b.border(c.$red);
     color: c.$red;
+    ion-icon{
+      color: c.$red;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -709,10 +777,23 @@ BORDERED BUTTON
       color: c.$red-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$red-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$red-light;
+      cursor: not-allowed;
+    }
   }
   &-purple {
     @include b.border(c.$purple);
     color: c.$purple;
+    ion-icon{
+      color: c.$purple;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -725,10 +806,23 @@ BORDERED BUTTON
       color: c.$purple-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$purple-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$purple-light;
+      cursor: not-allowed;
+    }
   }
   &-blue {
     @include b.border(c.$blue);
     color: c.$blue;
+    ion-icon{
+      color: c.$blue;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -741,10 +835,23 @@ BORDERED BUTTON
       color: c.$blue-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$blue-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$blue-light;
+      cursor: not-allowed;
+    }
   }
   &-green {
     @include b.border(c.$green);
     color: c.$green;
+    ion-icon{
+      color: c.$green;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -757,10 +864,23 @@ BORDERED BUTTON
       color: c.$green-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$green-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$green-light;
+      cursor: not-allowed;
+    }
   }
   &-pink {
     @include b.border(c.$pink);
     color: c.$pink;
+    ion-icon{
+      color: c.$pink;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -773,10 +893,23 @@ BORDERED BUTTON
       color: c.$pink-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$pink-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$pink-light;
+      cursor: not-allowed;
+    }
   }
   &-turquoise {
     @include b.border(c.$turquoise);
     color: c.$turquoise;
+    ion-icon{
+      color: c.$turquoise;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -789,10 +922,23 @@ BORDERED BUTTON
       color: c.$turquoise-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$turquoise-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$turquoise-light;
+      cursor: not-allowed;
+    }
   }
   &-brown {
     @include b.border(c.$brown);
     color: c.$brown;
+    ion-icon{
+      color: c.$brown;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -805,10 +951,23 @@ BORDERED BUTTON
       color: c.$brown-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$brown-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$brown-light;
+      cursor: not-allowed;
+    }
   }
   &-grey {
     @include b.border(c.$grey);
     color: c.$grey;
+    ion-icon{
+      color: c.$grey;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -821,10 +980,23 @@ BORDERED BUTTON
       color: c.$grey-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$grey-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$grey-light;
+      cursor: not-allowed;
+    }
   }
   &-navy {
     @include b.border(c.$navy);
     color: c.$navy;
+    ion-icon{
+      color: c.$navy;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -837,10 +1009,23 @@ BORDERED BUTTON
       color: c.$navy-light;
       cursor: not-allowed;
     }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$navy-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$navy-light;
+      cursor: not-allowed;
+    }
   }
   &-black {
     @include b.border(c.$carbon);
     color: c.$carbon;
+    ion-icon{
+      color: c.$carbon;
+    }
     &:hover,
     &:focus,
     &:active,
@@ -850,6 +1035,16 @@ BORDERED BUTTON
     }
     &:disabled {
       @include b.border(c.$carbon-light);
+      color: c.$carbon-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$carbon-dark;
+    }
+    &:disabled ion-icon {
       color: c.$carbon-light;
       cursor: not-allowed;
     }

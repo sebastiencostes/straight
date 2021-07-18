@@ -12,6 +12,9 @@
   @include d.desktop () {
     @include w.width(136.6rem);
   }
+  @include d.desktop-large () {
+    @include w.width(188rem);
+  }
 }
 .container-fix {
   @include container-fix();
