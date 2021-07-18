@@ -41,19 +41,18 @@
     <nav class="nav">
         <ul class="nav-header">
             <li>
-                <a class="btn-square-s btn-turquoise" href="/index.html" rel="noopener" role="button">
-                    <ion-icon name="home-outline">
-                    </ion-icon>
+                <a class="btn-square-s btn-green" href="/index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
                 </a>
             </li>
             <li class="open d-block">
-                <button class="btn-square-s btn-turquoise" aria-label="open" type="button">
+                <button class="btn-circle-s btn-turquoise" aria-label="open" type="button">
                     <ion-icon name="menu">
                     </ion-icon>
                 </button>
             </li>
             <li class="close d-none">
-                <button class="btn-square-s btn-red" aria-label="close" type="button">
+                <button class="btn-circle-s btn-b-red" aria-label="close" type="button">
                     <ion-icon name="close">
                     </ion-icon>
                 </button>
@@ -61,7 +60,7 @@
         </ul>
         <ul class="d-none nav-menu" role="menu">
             <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link btn-square-m btn-b-turquoise" href="#about" rel="noopener" role="button">
+                <a class="nav-menu-link btn-circle-s btn-turquoise" href="#about" rel="noopener" role="button">
                     <ion-icon name="help-outline"></ion-icon>
                 </a>
                 <a class="nav-menu-link-text" href="#about" rel="noopener">
@@ -69,7 +68,7 @@
                 </a>
             </li>
             <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link btn-square-m btn-b-turquoise" href="#team" rel="noopener" role="button">
+                <a class="nav-menu-link btn-circle-s btn-turquoise" href="#team" rel="noopener" role="button">
                     <ion-icon name="people-outline"></ion-icon>
                 </a>
                 <a class="nav-menu-link-text" href="#team" rel="noopener">
@@ -77,7 +76,7 @@
                 </a>
             </li>
             <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link btn-square-m btn-b-turquoise" href="#feature" rel="noopener" role="button">
+                <a class="nav-menu-link btn-circle-s btn-turquoise" href="#feature" rel="noopener" role="button">
                     <ion-icon name="easel-outline"></ion-icon>
                 </a>
                 <a class="nav-menu-link-text" href="#feature" rel="noopener">
@@ -85,7 +84,7 @@
                 </a>
             </li>
             <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link btn-square-m btn-b-turquoise" href="#solution" rel="noopener" role="button">
+                <a class="nav-menu-link btn-circle-s btn-turquoise" href="#solution" rel="noopener" role="button">
                     <ion-icon name="server-outline"></ion-icon>
                 </a>
                 <a class="nav-menu-link-text" href="#solution" rel="noopener">
@@ -93,7 +92,15 @@
                 </a>
             </li>
             <li class="nav-menu-item" role="menuitem">
-                <a class="nav-menu-link btn-square-m btn-b-turquoise" href="#contact" rel="noopener" role="button">
+                <a class="nav-menu-link btn-circle-s btn-turquoise" href="#trust" rel="noopener" role="button">
+                    <ion-icon name="checkmark-outline"></ion-icon>
+                </a>
+                <a class="nav-menu-link-text" href="#contact" rel="noopener">
+                    they trust us
+                </a>
+            </li>
+            <li class="nav-menu-item" role="menuitem">
+                <a class="nav-menu-link btn-circle-s btn-turquoise" href="#contact" rel="noopener" role="button">
                     <ion-icon name="at-outline"></ion-icon>
                 </a>
                 <a class="nav-menu-link-text" href="#contact" rel="noopener">
@@ -109,22 +116,36 @@
         </h1>
     </header>
   
-    <main>
-    <h2 class="h6 t-center t-uppercase m-b-8" style="letter-spacing: .8rem;">your project - our job</h2>
-    <section id="about" class="bg-grad-blue p-b-2">
+    <main class="container-full">
+    <h2 class="h6 t-center t-uppercase" style="letter-spacing: .8rem;">your project - our job</h2>
+    <blockquote class="blockquote m-x-auto m-b-8">
+        <p class="blockquote-text t-justify">
+            We are more human than human and more expert than expert. Beyond the the horizon and digital transformation,
+            we reinvent the horizon and the digital beacause we are at the top of the top.
+        </p>
+        <div class="blockquote-footer">
+            <cite class="blockquote-cite" title="Source Title">
+                <a class="blockquote-link" href="./template.html" rel="noopener">
+                Straight template
+                </a>
+            </cite>
+        </div>
+    </blockquote>
+    <section id="about" class="p-b-2">
         <header class="header-sticky h-vh-50 m-b-2" style="background: url(/assets/img/template/horizon.jpg) no-repeat bottom fixed ; background-size: cover;">
             <h3 class="header-sticky-title t-white bg-blue-light op-06">
                 About your company
             </h3>
         </header>
+                                
         <div class="g-col g-col-m-2 g-col-l-4 container-fix">
-            <article class="bg-grey-light">
+            <article class="bg-grey-light b-grey">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/ui_ux_design.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/ui_ux_design.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/ui_ux_design.jpg" media="(min-width: 728px)">
-                        <img class="responsive-img" src="/assets/img/template/ui_ux_design.jpg" alt="">
+                        <source srcset="./assets/img/template/ui_ux_design.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/ui_ux_design.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/ui_ux_design.jpg" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/template/ui_ux_design.jpg" alt="">
                     </picture>
                     <figcaption class="caption-img-title-container b-top-grey b-bottom-grey bg-grey-light">
                         <h4 class="caption-img-title t-uppercase t-grey-dark">ui / ux design</h4>
@@ -132,12 +153,12 @@
                 </figure>
                 <p class="t-justify p-l-2 p-r-2 t-grey-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
             </article>
-            <article class="bg-grey-light">
+            <article class="bg-grey-light b-grey">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/agile.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/agile.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/agile.jpg" media="(min-width: 728px)">
+                        <source srcset="./assets/img/template/agile.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/agile.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/agile.jpg" media="(min-width: 728px)">
                         <img class="responsive-img" src="/assets/img/template/agile.jpg" alt="">
                     </picture>
                     <figcaption class="caption-img-title-container b-top-grey b-bottom-grey bg-grey-light">
@@ -146,12 +167,12 @@
                 </figure>
                 <p class="t-justify p-l-2 p-r-2 t-grey-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
             </article>
-            <article class="bg-grey-light">
+            <article class="bg-grey-light b-grey">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/code.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/code.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/code.jpg" media="(min-width: 728px)">
+                        <source srcset="./assets/img/template/code.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/code.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/code.jpg" media="(min-width: 728px)">
                         <img class="responsive-img" src="/assets/img/template/code.jpg" alt="">
                     </picture>
                     <figcaption class="caption-img-title-container b-top-grey b-bottom-grey bg-grey-light">
@@ -160,12 +181,12 @@
                 </figure>
                 <p class="t-justify p-l-2 p-r-2 t-grey-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet.</p>
             </article>
-            <article class="bg-grey-light">
+            <article class="bg-grey-light b-grey">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/data.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/data.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/data.jpg" media="(min-width: 728px)">
+                        <source srcset="./assets/img/template/data.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/data.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/data.jpg" media="(min-width: 728px)">
                         <img class="responsive-img" src="/assets/img/template/data.jpg" alt="">
                     </picture>
                     <figcaption class="caption-img-title-container b-top-grey b-bottom-grey bg-grey-light">
@@ -187,10 +208,10 @@
             <article class="p-2 col-push-l-2 row-push-l-2 col-push-xl-1 row-push-xl-1 col-push-xxxl-2 row-push-xxxl-2">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/ceo.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/ceo.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/ceo.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/ceo.jpg" alt="">
+                        <source srcset="./assets/img/template/ceo.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/ceo.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/ceo.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/ceo.jpg" alt="photo by Emmy E">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">deborah</h4>
@@ -201,10 +222,10 @@
             <article class="p-2 col-push-xl-2 row-push-xl-2 col-push-xxxl-1 row-push-xxxl-1">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/managingPartner.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/managingPartner.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/managingPartner.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/managingPartner.jpg" alt="">
+                        <source srcset="./assets/img/template/managingPartner.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/managingPartner.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/managingPartner.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/managingPartner.jpg" alt="photo by canva studio">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">allan</h4>
@@ -215,10 +236,10 @@
             <article class="p-2 col-push-xxxl-2 row-push-xxxl-2">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/executiveAssistant.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/executiveAssistant.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/executiveAssistant.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/executiveAssistant.jpg" alt="">
+                        <source srcset="./assets/img/template/executiveAssistant.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/executiveAssistant.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/executiveAssistant.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/executiveAssistant.jpg" alt="photo by Karolina Grabowska">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">sarah</h4>
@@ -229,10 +250,10 @@
             <article class="p-2">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/teamManager.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/teamManager.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/teamManager.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/teamManager.jpg" alt="">
+                        <source srcset="./assets/img/template/teamManager.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/teamManager.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/teamManager.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/teamManager.jpg" alt="photo by Andrea Piacquadio">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">paul</h4>
@@ -243,10 +264,10 @@
             <article class="p-2 col-push-l-2 row-push-l-2 col-push-xl-1 row-push-xl-1">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/productOwner.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/productOwner.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/productOwner.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/productOwner.jpg" alt="">
+                        <source srcset="./assets/img/template/productOwner.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/productOwner.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/productOwner.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/productOwner.jpg" alt="photo by Moose photo">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">jane</h4>
@@ -257,10 +278,10 @@
             <article class="p-2 col-push-xl-2 row-push-xl-2 col-push-xxxl-1 row-push-xxxl-1">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/backEndDeveloper.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/backEndDeveloper.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/backEndDeveloper.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/backEndDeveloper.jpg" alt="">
+                        <source srcset="./assets/img/template/backEndDeveloper.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/backEndDeveloper.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/backEndDeveloper.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/backEndDeveloper.jpg" alt="photo by Djordje Petrovic">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">miguel</h4>
@@ -271,10 +292,10 @@
             <article class="p-2 col-push-l-2 row-push-l-2 col-push-xxxl-1 row-push-xxxl-1">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/frontEndDeveloper.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/frontEndDeveloper.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/frontEndDeveloper.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/frontEndDeveloper.jpg" alt="">
+                        <source srcset="./assets/img/template/frontEndDeveloper.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/frontEndDeveloper.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/frontEndDeveloper.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/frontEndDeveloper.jpg" alt="photo by ThisIsEngineering">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">diana</h4>
@@ -285,10 +306,10 @@
             <article class="p-2 col-push-xxxl-2 row-push-xxxl-2">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template//backendDev.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template//backendDev.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template//backendDev.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template//backendDev.jpg" alt="">
+                        <source srcset="./assets/img/template//backendDev.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template//backendDev.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template//backendDev.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template//backendDev.jpg" alt="photo by Andrea Piacquadio">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">michelle</h4>
@@ -299,10 +320,10 @@
             <article class="p-2 col-push-xl-2 row-push-xl-2 col-push-xxxl-1 row-push-xxxl-1">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/uiUxDesigner.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/uiUxDesigner.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/uiUxDesigner.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/uiUxDesigner.jpg" alt="">
+                        <source srcset="./assets/img/template/uiUxDesigner.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/uiUxDesigner.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/uiUxDesigner.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/uiUxDesigner.jpg" alt="photo by Andrea Piacquadio">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">lucy</h4>
@@ -313,9 +334,9 @@
             <article class="p-2 col-push-xxxl-2 row-push-xxxl-2">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/analyst.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/analyst.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/analyst.jpg" media="(min-width: 728px)">
+                        <source srcset="./assets/img/template/analyst.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/analyst.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/analyst.jpg" media="(min-width: 728px)">
                         <img class="circled-img b-shadow" src="/assets/img/template/analyst.jpg" alt="">
                     </picture>
                     <figcaption class="caption-img-title-container">
@@ -327,10 +348,10 @@
             <article class="p-2 col-push-l-2 row-push-l-2 col-push-xl-1 row-push-xl-1">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/communotyManagement.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/communotyManagement.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/communotyManagement.jpg" media="(min-width: 728px)">
-                        <img class="circled-img b-shadow" src="/assets/img/template/communotyManagement.jpg" alt="">
+                        <source srcset="./assets/img/template/communotyManagement.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/communotyManagement.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/communotyManagement.jpg" media="(min-width: 728px)">
+                        <img class="circled-img b-shadow" src="/assets/img/template/communotyManagement.jpg" alt="photo by Andrea Piacquadio">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title t-uppercase m-t-2">charlotte</h4>
@@ -341,9 +362,9 @@
             <article class="p-2">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/template/businessDeveloper.jpg" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/template/businessDeveloper.jpg" media="(min-width: 992px)">
-                        <source srcset="/assets/img/template/businessDeveloper.jpg" media="(min-width: 728px)">
+                        <source srcset="./assets/img/template/businessDeveloper.jpg" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/template/businessDeveloper.jpg" media="(min-width: 992px)">
+                        <source srcset="./assets/img/template/businessDeveloper.jpg" media="(min-width: 728px)">
                         <img class="circled-img b-shadow" src="/assets/img/template/businessDeveloper.jpg" alt="">
                     </picture>
                     <figcaption class="caption-img-title-container">
@@ -355,7 +376,7 @@
         </div>
     </section>
 
-    <section id="feature" class="bg-grad-blue">
+    <section id="feature">
         <header class="header-sticky h-vh-50 m-b-2" style="background: url(/assets/img/template/horizon.jpg) no-repeat bottom fixed ; background-size: cover;">
             <h3 class="header-sticky-title t-white bg-blue-light op-06">
                 our latest features
@@ -366,71 +387,71 @@
                 <figure class="carousel-slide">
                     <a href="#" rel="noopener">
                         <picture>
-                            <source srcset="/assets/img/template/pexels-karina-zhukovskaya-6446685.jpg" media="(min-width: 992px)">
+                            <source srcset="./assets/img/template/pexels-karina-zhukovskaya-6446685.jpg" media="(min-width: 992px)">
                             <img class="responsive-img" src="/assets/img/template/mob-pexels-karina-zhukovskaya-6446685.jpg" alt="photo by karina zhukovskaya">
                         </picture>
                     </a>
                     <figcaption class="carousel-text-container p-2">
                         <h4 class="carousel-title">
-                            <a class="t-white" href="#" rel="noopener">Share your data</a>
+                            <a href="#" rel="noopener">Share your data</a>
                         </h4>
-                        <p class="carousel-text t-white">cross platform application</p>
+                        <p class="carousel-text">cross platform application</p>
                     </figcaption>
                 </figure>
                 <figure class="carousel-slide">
                     <a href="#" rel="noopener">
                         <picture>
-                            <source srcset="/assets/img/template/pexels-karina-zhukovskaya-6446667.jpg" media="(min-width: 992px)">
+                            <source srcset="./assets/img/template/pexels-karina-zhukovskaya-6446667.jpg" media="(min-width: 992px)">
                             <img class="responsive-img" src="/assets/img/template/mob-pexels-karina-zhukovskaya-6449926.jpg" alt="photo by karina zhukovskaya">
                         </picture>
                     </a>
                     <figcaption class="carousel-text-container p-2">
                         <h4 class="carousel-title">
-                            <a class="t-white" href="#" rel="noopener">Share your data</a>
+                            <a href="#" rel="noopener">Share your data</a>
                         </h4>
-                        <p class="carousel-text t-white">cross platform application</p>
+                        <p class="carousel-text">cross platform application</p>
                     </figcaption>
                 </figure>
                 <figure class="carousel-slide">
                     <a href="#" rel="noopener">
                         <picture>
-                            <source srcset="/assets/img/template/pexels-karina-zhukovskaya-6446710.jpg" media="(min-width: 992px)">
+                            <source srcset="./assets/img/template/pexels-karina-zhukovskaya-6446710.jpg" media="(min-width: 992px)">
                             <img class="responsive-img" src="/assets/img/template/mob-pexels-karina-zhukovskaya-6446710.jpg" alt="photo by karina zhukovskaya">
                         </picture>
                     </a>
                     <figcaption class="carousel-text-container p-2">
                         <h4 class="carousel-title">
-                            <a class="t-white" href="#" rel="noopener">Share your data</a>
+                            <a href="#" rel="noopener">Share your data</a>
                         </h4>
-                        <p class="carousel-text t-white">cross platform application</p>
+                        <p class="carousel-text">cross platform application</p>
                     </figcaption>
                 </figure>
                 <figure class="carousel-slide">
                     <a href="#" rel="noopener">
                         <picture>
-                            <source srcset="/assets/img/template/pexels-karina-zhukovskaya-6446681.jpg" media="(min-width: 992px)">
+                            <source srcset="./assets/img/template/pexels-karina-zhukovskaya-6446681.jpg" media="(min-width: 992px)">
                             <img class="responsive-img" src="/assets/img/template/mob-pexels-karina-zhukovskaya-6446681.jpg" alt="photo by karina zhukovskaya">
                         </picture>
                     </a>
                     <figcaption class="carousel-text-container p-2">
                         <h4 class="carousel-title">
-                            <a class="t-white" href="#" rel="noopener">Share your data</a>
+                            <a href="#" rel="noopener">Share your data</a>
                         </h4>
-                        <p class="carousel-text t-white">cross platform application</p>
+                        <p class="carousel-text">cross platform application</p>
                     </figcaption>
                 </figure>
                 <figure class="carousel-slide">
                     <a href="#" rel="noopener">
                         <picture>
-                            <source srcset="/assets/img/template/pexels-karina-zhukovskaya-6446676.jpg" media="(min-width: 992px)">
+                            <source srcset="./assets/img/template/pexels-karina-zhukovskaya-6446676.jpg" media="(min-width: 992px)">
                             <img class="responsive-img" src="/assets/img/template/mob-pexels-karina-zhukovskaya-6446685.jpg" alt="photo by karina zhukovskaya">
                         </picture>
                     </a>
                     <figcaption class="carousel-text-container p-2">
                         <h4 class="carousel-title">
-                            <a class="t-white" href="#" rel="noopener">Share your data</a>
+                            <a href="#" rel="noopener">Share your data</a>
                         </h4>
-                        <p class="carousel-text t-white">cross platform application</p>
+                        <p class="carousel-text">cross platform application</p>
                     </figcaption>
                 </figure>
                 <button class="carousel-cta carousel-prev btn-square-m" type="button">
@@ -443,7 +464,7 @@
         </div>     
     </section>
 
-    <section id="solution" class="p-b-2" style="background: url(/assets/img/template/backTemplate.png) no-repeat bottom fixed; background-size: cover;">
+    <section id="solution" class="p-b-2">
         <header class="header-sticky h-vh-50 m-b-2" style="background: url(/assets/img/template/horizon.jpg) no-repeat bottom fixed ; background-size: cover;">
             <h3 class="header-sticky-title t-white bg-blue-light op-06">
                 our solutions
@@ -451,15 +472,15 @@
         </header>
                         
         <div class="g-col g-col-m-2 g-col-l-3 g-col-xl-4 g-col-xxxl-5 container-fix">
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">up your sales</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/digital-market-pexels-mikael-blomkvist-6483583.jpg" alt="photo by mikael blomkvist">
+                    <img class="card-img" src="./assets/img/template/pexels-karolina-grabowska-5632388.jpg" alt="photo by karolina grabowska">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -480,16 +501,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -502,21 +523,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="calendar-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">design overhaul</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/dsgn-pexels-joão-jesus-921322.jpg" alt="photo by joão jesus">
+                    <img class="card-img" src="./assets/img/template/pexels-david-buchi-1070345.jpg" alt="photo by david buchi">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -537,16 +558,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -559,21 +580,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="pricetag-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">app development</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/keyboard-pexels-omkar-patyane-211492.jpg" alt="photo by omkar patyane">
+                    <img class="card-img" src="./assets/img/template/keyboard-pexels-omkar-patyane-211492.jpg" alt="photo by omkar patyane">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -594,16 +615,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -616,21 +637,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="pricetag-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">from scratch ui/ux</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/ui-pexels-olia-danilevich-5088026.jpg" alt="photo by olia danilevich">
+                    <img class="card-img" src="./assets/img/template/pexels-picjumbocom-196645.jpg" alt="photo by picjumbocom">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -651,16 +672,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -673,21 +694,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="pricetag-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">Business angel</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/brain-pexels-darina-belonogova-8373825.jpg" alt="photo by darina belonogova">
+                    <img class="card-img" src="./assets/img/template/brain-pexels-darina-belonogova-8373825.jpg" alt="photo by darina belonogova">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -708,16 +729,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -730,21 +751,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="calendar-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">data growth</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/data-pexels-thisisengineering-3861976.jpg" alt="photo from pexels">
+                    <img class="card-img" src="./assets/img/template/data-pexels-thisisengineering-3861976.jpg" alt="photo from pexels">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -765,16 +786,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -787,21 +808,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="calendar-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">saas service</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/growth-pexels-anna-nekrashevich-6802052.jpg" alt="photo by anna nekrashevich">
+                    <img class="card-img" src="./assets/img/template/growth-pexels-anna-nekrashevich-6802052.jpg" alt="photo by anna nekrashevich">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -822,16 +843,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -844,21 +865,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="calendar-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">data storage</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/server-pexels-josh-sorenson-1054397.jpg" alt="photo by josh sorenson">
+                    <img class="card-img" src="./assets/img/template/pexels-panumas-nikhomkhai-1148820.jpg" alt="photo by panumas nikhomkhai">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -879,16 +900,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -901,21 +922,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="calendar-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">Seo/sea optimization</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/market-pexels-karolina-grabowska-5632379.jpg" alt="photo by karolina grabowska">
+                    <img class="card-img" src="./assets/img/template/pexels-freeboilergrants-7119258.jpg" alt="photo by reeboilergrants">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -936,16 +957,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -958,21 +979,21 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="pricetag-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
-            <article class="card b-shadow-hovered">
+            <article class="card b-shadow-hovered b-radius-m">
                 <header class="card-header">
                     <h4 class="card-title t-ellipsis">Crypto business</h4>
-                    <button class="card-cta btn-square-s card-open" type="button" data-card="">
+                    <button class="card-cta btn-circle-s card-open" type="button" data-card="">
                         <ion-icon name="ellipsis-horizontal" />
                     </button>
                 </header>
                 <a href="#" rel="noopener" class="card-img-container">
-                    <img class="card-img" src="/assets/img/template/exch-pexels-alesia-kozik-6771985.jpg" alt="photo by alesia kozik">
+                    <img class="card-img" src="./assets/img/template/pexels-karolina-grabowska-5980887.jpg" alt="photo karolina grabowska">
                 </a>
                 <section class="card-body d-none" data-card="">
                     <header class="card-body-header">
@@ -993,16 +1014,16 @@
                             </span>
                         </div>
                         <div class="card-body-info-qty">
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="remove-outline" />
                             </button>
                             <span class="m-l-2 m-r-2">1</span>
-                            <button class="card-cta btn-square-s btn-blue" type="button">
+                            <button class="card-cta btn-circle-s btn-blue" type="button">
                                 <ion-icon name="add-outline" />
                             </button>
                         </div>
                         <div class="card-body-footer-right-container">
-                            <button class="card-cta btn-square-s btn-red" type="button">
+                            <button class="card-cta btn-circle-s btn-red" type="button">
                                 <ion-icon name="cart-outline" />
                             </button>
                         </div>
@@ -1015,13 +1036,170 @@
                         </span>
                     </div>
                     <div class="card-footer-right-container">
-                        <button class="card-cta btn-square-s btn-blue" type="button">
+                        <button class="card-cta btn-circle-s btn-blue" type="button">
                             <ion-icon name="calendar-outline"></ion-icon>
                         </button>
                     </div>
                 </footer>
             </article>
         </div>
+    </section>
+
+    <section id="trust" class="p-b-2">
+        <header class="header-sticky h-vh-50 m-b-2" style="background: url(/assets/img/template/horizon.jpg) no-repeat bottom fixed ; background-size: cover;">
+            <h3 class="header-sticky-title t-white bg-blue-light op-06">
+                they trust us
+            </h3>
+        </header>
+
+        <div class="g-col g-col-s-2 g-col-m-4 g-col-xl-8 g-col-xxxl-12 container-fix">
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+            <picture>
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/template/trust.png" media="(min-width: 728px)">
+                <img class="responsive-img b-smooth" src="./assets/img/template/trust.png" alt="">
+            </picture>
+        </div>
+                    
+
     </section>
 
     <section id="contact" class="p-b-4" style="background: url(/assets/img/template/backTemplate.png) no-repeat bottom; background-size: contain;">
@@ -1103,8 +1281,7 @@
                     <input class="form-input" type="submit" id="subx1ww" value="submit">
                 </section>
             </div>
-        </form>
-                    
+        </form>  
     </section>
                     
     </main>
@@ -1130,9 +1307,6 @@
             <section class="d-flex j-between">
                 <ul>
                     <li class="t-x-small">
-                        <a href="/index.html" rel="noopener">straight framework</a>
-                    </li>
-                    <li class="t-x-small">
                         <a href="/button.html" rel="noopener">button module</a>
                     </li>
                     <li class="t-x-small">
@@ -1150,16 +1324,19 @@
                     <li class="t-x-small">
                         <a href="/header.html" rel="noopener">header module</a>
                     </li>
-                </ul>
-                <ul>
                     <li class="t-x-small">
                         <a href="/helper.html" rel="noopener">helper module</a>
                     </li>
+                </ul>
+                <ul>
                     <li class="t-x-small">
                         <a href="/image.html" rel="noopener">image module</a>
                     </li>
                     <li class="t-x-small">
                         <a href="/layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/list.html" rel="noopener">list module</a>
                     </li>
                     <li class="t-x-small">
                         <a href="/nav.html" rel="noopener">nav module</a>

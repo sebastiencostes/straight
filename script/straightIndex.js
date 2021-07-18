@@ -2,94 +2,101 @@ const straightAvailableModule = document.querySelector('#straightAvailableModule
 const arrayModules  = [
     {   
         title: 'button',
-        url: 'button',
-        img: 'cardV',
+        url: 'module',
+        img: 'button',
         content: 'lorem ipsum',
         subtitle: 'push it'
     },
     {   
         title: 'card',
-        url: 'card',
-        img: 'cardV',
+        url: 'module',
+        img: 'card',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'highlight product'
     },
     {   
         title: 'carousel',
-        url: 'carousel',
-        img: 'carouselBig',
+        url: 'module',
+        img: 'carousel',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'next & prev'
     },
     {   
         title: 'color',
-        url: 'color',
-        img: 'cardV',
+        url: 'module',
+        img: 'color',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'palette'
     },
     {   
         title: 'form',
-        url: 'form',
-        img: 'cardV',
+        url: 'module',
+        img: 'form',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'keep in touch'
     },
     {   
         title: 'header',
-        url: 'header',
+        url: 'module',
         img: 'header',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'head-up your site'
     },
     {   
         title: 'helper',
-        url: 'helper',
-        img: 'cardV',
+        url: 'module',
+        img: 'helper',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'fix & customize'
     },
     {   
         title: 'image',
-        url: 'image',
+        url: 'module',
         img: 'image',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'responsive & gallery'
     },
     {   
         title: 'layout',
-        url: 'layout',
-        img: 'cardV',
+        url: 'module',
+        img: 'layout',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'grid system & more'
+    },
+    {   
+        title: 'list',
+        url: 'module',
+        img: 'list',
+        content: 'lorem ipsum',
+        subtitle: 'standard & accordion'
     },
     {   
         title: 'nav',
-        url: 'nav',
-        img: 'cardV',
+        url: 'module',
+        img: 'nav',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'list & pad'
     },
     {   
         title: 'notification',
-        url: 'notification',
-        img: 'cardV',
+        url: 'module',
+        img: 'notification',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'toast & modal'
     },
     {   
         title: 'template',
-        url: 'template',
-        img: 'cardV',
+        url: 'module',
+        img: 'template',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'example'
     },
     {   
         title: 'typography',
-        url: 'typography',
-        img: 'cardV',
+        url: 'module',
+        img: 'typography',
         content: 'lorem ipsum',
-        subtitle: 'push it'
+        subtitle: 'from A to Z'
     }
 ];
 
@@ -102,7 +109,7 @@ for(let module of arrayModules) {
             <ion-icon name="ellipsis-horizontal" />
         </button>
     </header>
-    <a href="/${module.url}.html" rel="noopener" class="card-img-container">
+    <a href="/${module.title}.html" rel="noopener" class="card-img-container">
         <picture>
             <source srcset="/assets/img/${module.url}/${module.img}.png" media="(min-width: 1400px)">
             <source srcset="/assets/img/${module.url}/${module.img}.png" media="(min-width: 992px)">
@@ -114,7 +121,7 @@ for(let module of arrayModules) {
     <section class="card-body d-none" data-card="">
         <header class="card-body-header">
             <h4 class="card-body-title">
-                <a href="/${module.url}.html" rel="noopener">${module.title}</a>
+                <a href="/${module.title}.html" rel="noopener">${module.title}</a>
             </h4>
             <button class="card-cta btn-square-s card-close" type="button" aria-label="close" data-card="">
                 <ion-icon name="close-outline" />

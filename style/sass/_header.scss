@@ -9,7 +9,6 @@
 %header-shared {
   @include g.g-container();
   @include fx.align-items(center);
-  //@include p.padding(2rem);
 }
 
 %header-title-shared {

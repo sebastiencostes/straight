@@ -10,6 +10,27 @@
 .pos-fixed {
   @include position(fixed);
 }
+.pos-fixed-top {
+  @include position(fixed);
+  top: 0;
+}
+.pos-fixed-right {
+  @include position(fixed);
+  right: 0;
+}
+.pos-fixed-bottom {
+  @include position(fixed);
+  bottom: 0;
+}
+.pos-fixed-left {
+  @include position(fixed);
+  left: 0;
+}
+.pos-sticky {
+  position: -webkit-sticky;
+  position: sticky
+}
+
 @mixin pos-absolute-centering() {
   @include position(absolute);
   top: 50%;

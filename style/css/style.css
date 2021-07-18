@@ -2743,6 +2743,31 @@ LIST
   position: fixed;
 }
 
+.pos-fixed-top {
+  position: fixed;
+  top: 0;
+}
+
+.pos-fixed-right {
+  position: fixed;
+  right: 0;
+}
+
+.pos-fixed-bottom {
+  position: fixed;
+  bottom: 0;
+}
+
+.pos-fixed-left {
+  position: fixed;
+  left: 0;
+}
+
+.pos-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .pos-absolute-centering {
   position: absolute;
   top: 50%;
