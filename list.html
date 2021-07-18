@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Straight - List">
+        <meta name="author" content="Sébastien COSTES">
+        <meta name="color-scheme" content="dark light">
+        <title>Straight | List</title>
+        <link rel="preload" href="style/css/style.css" as="style">
+        <link rel="stylesheet" href="style/css/style.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Straight">
+        <meta name="apple-mobile-web-app-title" content="Straight">
+        <meta name="theme-color" content="#64dd17">
+        <meta name="msapplication-navbutton-color" content="#64dd17">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="/index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/logo16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="assets/img/logo/logo16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/logo32x32.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="assets/img/logo/logo32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="assets/img/logo/logo128x128.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="assets/img/logo/logo128x128.png">
+        <link rel="icon" type="imga/png" sizes="167x167" href="assets/img/logo/logo167x167.png">
+        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="assets/img/logo/logo167x167.png">
+        <link rel="icon" type="image/png" sizes="180x180" href="assets/img/logo/logo180x180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/logo/logo180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo/logo192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/img/logo/logo192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="assets/img/logo/logo512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="assets/img/logo/logo512x512.png">
+    </head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s btn-green" href="/index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-purple" role="presentation">
+        <h1 class="header-presentation-title t-white">list</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-purple">
+            About List
+        </h2>
+        <p>
+        bla bla
+        </p>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-purple">
+                list
+            </h3>
+            <p>
+                A simple list element. Duplicate it and you have a list.
+            </p>
+            <section class="list-content">
+                <div class="list-left-zone">
+                    <figure class="list-left-zone-image">
+                        <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                        <figcaption class="caption-img-title-container">
+                            <p class="caption-img-title">title</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="list-center-zone">
+                    your content
+                </div>
+                <div class="list-right-zone">
+                    <button class="btn-square-s btn-blue m-r-1">
+                        <ion-icon name="remove-outline"></ion-icon>
+                    </button>
+                    <span>
+                        1
+                    </span>
+                    <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                        <ion-icon name="add-outline"></ion-icon>
+                    </button>
+                    <button class="btn-square-s btn-red m-l-1">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </button>
+                </div>
+            </section>
+
+            <figure class="clipboard-container m-t-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;section class=&quot;list-content&quot;&gt;
+    &lt;div class=&quot;list-left-zone&quot;&gt;
+        &lt;figure class=&quot;list-left-zone-image&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;figcaption class=&quot;caption-img-title-container&quot;&gt;
+                &lt;p class=&quot;caption-img-title&quot;&gt;title&lt;/p&gt;
+            &lt;/figcaption&gt;
+        &lt;/figure&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;list-center-zone&quot;&gt;
+        your content
+    &lt;/div&gt;
+    &lt;div class=&quot;list-right-zone&quot;&gt;
+        &lt;button class=&quot;btn-square-s btn-blue m-r-1&quot;&gt;
+            &lt;ion-icon name=&quot;remove-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/button&gt;
+        &lt;span&gt;
+            1
+        &lt;/span&gt;
+        &lt;button class=&quot;btn-square-s btn-blue m-l-1 m-r-1&quot;&gt;
+            &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/button&gt;
+        &lt;button class=&quot;btn-square-s btn-red m-l-1&quot;&gt;
+            &lt;ion-icon name=&quot;trash-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+                    </code>
+                </pre>
+            </figure>
+        </article>
+
+        <article class="m-b-8">
+            <h3 class="note-purple">
+                Accordion
+            </h3>
+            <p>
+                An action triggered list with extensible elements. If you want your list already open you just have to remove the
+                <span class="t-blue">d-none</span> class from <code class="single-code"> &lt;ul class=&quot;list-container d-none&quot;&gt;</code>.
+                You <strong>must preserve</strong> the <code class="single-code">data-accordion=&quot;&quot;</code> attribute on appropriate tags elements.
+                If you want to play around with colors you can add to <code class="single-code"> &lt;div class=&quot;accordion-container-cta accordion-*&quot;&gt;</code>.
+                If you want more collapsible elements in your list, just duplicate the <code class="single-code">&lt;li class=&quot;list-content&quot;&gt;</code>.
+            </p>
+            <section class="accordion-container">
+                <div class="accordion-container-cta">
+                    <p>default</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-yellow">
+                    <p>Accordion yellow</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-orange">
+                    <p>Accordion orange</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-red">
+                    <p>Accordion red</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-purple">
+                    <p>Accordion purple</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-blue">
+                    <p>Accordion blue</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-green">
+                    <p>Accordion green</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-pink">
+                    <p>Accordion pink</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-turquoise">
+                    <p>Accordion turquoise</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-brown">
+                    <p>Accordion brown</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-grey">
+                    <p>Accordion grey</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-navy">
+                    <p>Accordion navy</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="accordion-container">
+                <div class="accordion-container-cta accordion-black">
+                    <p>Accordion black</p>
+                    <button class="btn-square-m accordion-cta" data-accordion="">
+                        <ion-icon name="caret-down-outline"></ion-icon>
+                    </button>
+                </div>
+                <ul class="list-container d-none" data-accordion="">
+                    <li class="list-content">
+                        <div class="list-left-zone">
+                            <figure class="list-left-zone-image">
+                                <img class="responsive-img" src="/assets/img/list/list.png" alt="">
+                                <figcaption class="caption-img-title-container">
+                                    <p class="caption-img-title">title</p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="list-center-zone">
+                            your content
+                        </div>
+                        <div class="list-right-zone">
+                            <button class="btn-square-s btn-blue m-r-1">
+                                <ion-icon name="remove-outline"></ion-icon>
+                            </button>
+                            <span>
+                                1
+                            </span>
+                            <button class="btn-square-s btn-blue m-l-1 m-r-1">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <figure class="clipboard-container m-t-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;section class=&quot;accordion-container&quot;&gt;
+    &lt;div class=&quot;accordion-container-cta accordion-grey&quot;&gt;
+        &lt;p&gt;Accordion grey&lt;/p&gt;
+        &lt;button class=&quot;btn-square-m accordion-cta&quot; data-accordion=&quot;&quot;&gt;
+            &lt;ion-icon name=&quot;caret-down-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;list-container d-none&quot; data-accordion=&quot;&quot;&gt;
+        &lt;li class=&quot;list-content&quot;&gt;
+            &lt;div class=&quot;list-left-zone&quot;&gt;
+                &lt;figure class=&quot;list-left-zone-image&quot;&gt;
+                    &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/list/list.png&quot; alt=&quot;&quot;&gt;
+                    &lt;figcaption class=&quot;caption-img-title-container&quot;&gt;
+                        &lt;p class=&quot;caption-img-title&quot;&gt;title&lt;/p&gt;
+                    &lt;/figcaption&gt;
+                &lt;/figure&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;list-center-zone&quot;&gt;
+                your content
+            &lt;/div&gt;
+            &lt;div class=&quot;list-right-zone&quot;&gt;
+                &lt;button class=&quot;btn-square-s btn-blue m-r-1&quot;&gt;
+                    &lt;ion-icon name=&quot;remove-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;span&gt;
+                    1
+                &lt;/span&gt;
+                &lt;button class=&quot;btn-square-s btn-blue m-l-1 m-r-1&quot;&gt;
+                    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-red m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;trash-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/section&gt;
+                    </code>
+                </pre>
+            </figure>
+        </article>
+
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-purple">
+                Details
+            </h3>
+            <p>
+                bla bla
+            </p>
+        </article>
+
+    </main>
+    <footer id="straightFooter" class="bg-grey-light">
+        <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
+            <section>
+                <a class="btn-square-s btn-green" href="/index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
+                </a>
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <p class="t-x-small t-carbon">
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="/" trget="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
+                </p>
+            </section>
+            <section class="d-flex j-between">
+                <ul>
+                    <li class="t-x-small">
+                        <a href="/button.html" rel="noopener">button module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/card.html" rel="noopener">card module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/carousel.html" rel="noopener">carousel module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/color.html" rel="noopener">color module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/form.html" rel="noopener">form module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/header.html" rel="noopener">header module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/helper.html" rel="noopener">helper module</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="t-x-small">
+                        <a href="/image.html" rel="noopener">image module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/list.html" rel="noopener">list module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/nav.html" rel="noopener">nav module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/notification.html" rel="noopener">notification module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/template.html" rel="noopener">template module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/typography.html" rel="noopener">typography module</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="/script/list.js"></script>
+    <script src="script/straightClipboard.js"></script>
+    <script src="script/straightFooter.js"></script>
+</body>
+
+</html>

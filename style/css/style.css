@@ -20180,6 +20180,213 @@ ANIMATION
     transform: scale(1, 1) translate(-50%, -50%);
   }
 }
+.accordion-container-cta, .list-content .list-left-zone-image, .list-content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.list-content {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.accordion-container-cta {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.accordion-container .list-container {
+  -webkit-animation-name: listOpening;
+  animation-name: listOpening;
+  -webkit-animation-duration: 0.28s;
+  animation-duration: 0.28s;
+}
+.accordion-container .list-content {
+  padding: 2rem;
+}
+
+/*
+****************
+ACCORDION COLORS
+****************
+*/
+.accordion-yellow {
+  background-color: #ffd600;
+  color: #212121;
+}
+.accordion-yellow ion-icon {
+  color: #212121;
+}
+.accordion-yellow + .list-container {
+  background-color: #ffff52;
+  border-bottom: solid 1px #c7a500;
+  color: #212121;
+}
+.accordion-orange {
+  background-color: #ff6d00;
+  color: #ffffff;
+}
+.accordion-orange ion-icon {
+  color: #ffffff;
+}
+.accordion-orange + .list-container {
+  background-color: #ff9e40;
+  border-bottom: solid 1px #c43c00;
+  color: #ffffff;
+}
+.accordion-red {
+  background-color: #d50000;
+  color: #ffffff;
+}
+.accordion-red ion-icon {
+  color: #ffffff;
+}
+.accordion-red + .list-container {
+  background-color: #ff5131;
+  border-bottom: solid 1px #9b0000;
+  color: #ffffff;
+}
+.accordion-purple {
+  background-color: #aa00ff;
+  color: #ffffff;
+}
+.accordion-purple ion-icon {
+  color: #ffffff;
+}
+.accordion-purple + .list-container {
+  background-color: #e254ff;
+  border-bottom: solid 1px #7200ca;
+  color: #ffffff;
+}
+.accordion-blue {
+  background-color: #0091ea;
+  color: #ffffff;
+}
+.accordion-blue ion-icon {
+  color: #ffffff;
+}
+.accordion-blue + .list-container {
+  background-color: #64c1ff;
+  border-bottom: solid 1px #0064b7;
+  color: #ffffff;
+}
+.accordion-green {
+  background-color: #64dd17;
+  color: #ffffff;
+}
+.accordion-green ion-icon {
+  color: #ffffff;
+}
+.accordion-green + .list-container {
+  background-color: #9cff57;
+  border-bottom: solid 1px #1faa00;
+  color: #212121;
+}
+.accordion-pink {
+  background-color: #c51162;
+  color: #ffffff;
+}
+.accordion-pink ion-icon {
+  color: #ffffff;
+}
+.accordion-pink + .list-container {
+  background-color: #fd558f;
+  border-bottom: solid 1px #8e0038;
+  color: #ffffff;
+}
+.accordion-turquoise {
+  background-color: #00bfa5;
+  color: #ffffff;
+}
+.accordion-turquoise ion-icon {
+  color: #ffffff;
+}
+.accordion-turquoise + .list-container {
+  background-color: #5df2d6;
+  border-bottom: solid 1px #008e76;
+  color: #212121;
+}
+.accordion-brown {
+  background-color: #8d6e63;
+  color: #ffffff;
+}
+.accordion-brown ion-icon {
+  color: #ffffff;
+}
+.accordion-brown + .list-container {
+  background-color: #be9c91;
+  border-bottom: solid 1px #5f4339;
+  color: #ffffff;
+}
+.accordion-grey {
+  background-color: #bdbdbd;
+  color: #212121;
+}
+.accordion-grey ion-icon {
+  color: #212121;
+}
+.accordion-grey + .list-container {
+  background-color: #efefef;
+  border-bottom: solid 1px #8d8d8d;
+  color: #212121;
+}
+.accordion-navy {
+  background-color: #78909c;
+  color: #ffffff;
+}
+.accordion-navy ion-icon {
+  color: #ffffff;
+}
+.accordion-navy + .list-container {
+  background-color: #a7c0cd;
+  border-bottom: solid 1px #4b636e;
+  color: #ffffff;
+}
+.accordion-black {
+  background-color: #212121;
+  color: #ffffff;
+}
+.accordion-black ion-icon {
+  color: #ffffff;
+}
+.accordion-black + .list-container {
+  background-color: #484848;
+  border-bottom: solid 1px #000000;
+  color: #ffffff;
+}
+
+/*
+*********
+ANIMATION
+*********
+*/
+@-webkit-keyframes listOpening {
+  from {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes listOpening {
+  from {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+.accordion-rotate-trigger {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 /*
 OPEN classic nav
 */

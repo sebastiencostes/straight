@@ -1,0 +1,245 @@
+@use 'border' as b;
+@use 'color' as c;
+@use 'flexbox' as flx;
+@use 'utility' as u;
+
+%list-shared {
+  @include flx.d-flex();
+  @include flx.align-items(center);
+}
+
+.list-content {
+  @extend %list-shared;
+  @include flx.justify-between();
+  .list-left-zone {
+    &-image {
+      @extend %list-shared;
+    }
+  }
+}
+
+.accordion-container {
+  &-cta {
+    @extend %list-shared;
+    @include flx.justify-between();
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .list-container {
+    -webkit-animation-name: listOpening;
+    animation-name: listOpening;
+    -webkit-animation-duration: u.$time;
+    animation-duration: u.$time;
+  }
+  .list-content {
+    padding: 2rem;
+  }
+}
+
+/*
+****************
+ACCORDION COLORS
+****************
+*/
+.accordion {
+  &-yellow {
+    background-color: c.$yellow;
+    color: c.$carbon;
+    ion-icon {
+      color: c.$carbon;
+    }
+    + .list-container {
+      background-color: c.$yellow-light;
+      @include b.b-bottom(c.$yellow-dark);
+      color: c.$carbon;
+    }
+  }
+  &-orange {
+    background-color: c.$orange;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$orange-light;
+      @include b.b-bottom(c.$orange-dark);
+      color: c.$white;
+    }
+  }
+  &-red {
+    background-color: c.$red;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$red-light;
+      @include b.b-bottom(c.$red-dark);
+      color: c.$white;
+    }
+  }
+  &-purple {
+    background-color: c.$purple;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$purple-light;
+      @include b.b-bottom(c.$purple-dark);
+      color: c.$white;
+    }
+  }
+  &-blue {
+    background-color: c.$blue;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$blue-light;
+      @include b.b-bottom(c.$blue-dark);
+      color: c.$white;
+    }
+  }
+  &-green {
+    background-color: c.$green;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$green-light;
+      @include b.b-bottom(c.$green-dark);
+      color: c.$carbon;
+    }
+  }
+  &-pink {
+    background-color: c.$pink;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$pink-light;
+      @include b.b-bottom(c.$pink-dark);
+      color: c.$white;
+    }
+  }
+  &-turquoise {
+    background-color: c.$turquoise;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$turquoise-light;
+      @include b.b-bottom(c.$turquoise-dark);
+      color: c.$carbon;
+    }
+  }
+  &-brown {
+    background-color: c.$brown;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$brown-light;
+      @include b.b-bottom(c.$brown-dark);
+      color: c.$white;
+    }
+  }
+  &-grey {
+    background-color: c.$grey;
+    color: c.$carbon;
+    ion-icon {
+      color: c.$carbon;
+    }
+    + .list-container {
+      background-color: c.$grey-light;
+      @include b.b-bottom(c.$grey-dark);
+      color: c.$carbon;
+    }
+  }
+  &-navy {
+    background-color: c.$navy;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$navy-light;
+      @include b.b-bottom(c.$navy-dark);
+      color: c.$white;
+    }
+  }
+  &-black {
+    background-color: c.$carbon;
+    color: c.$white;
+    ion-icon {
+      color: c.$white;
+    }
+    + .list-container {
+      background-color: c.$carbon-light;
+      @include b.b-bottom(c.$carbon-dark);
+      color: c.$white;
+    }
+  }
+}
+
+/*
+*********
+ANIMATION
+*********
+*/
+
+//open
+@-webkit-keyframes listOpening {
+  from {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes listOpening {
+  from {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  to {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+//close
+// @-webkit-keyframes listClosing {
+//     from {
+//       -webkit-transform: scaleY(1);
+//       transform: scaleY(1);
+//     }
+//     to {
+//       -webkit-transform: scaleY(0);
+//       transform: scaleY(0);
+//     }
+//   }
+//   @keyframes listClosing {
+//     from {
+//       -webkit-transform: scaleY(1);
+//       transform: scaleY(1);
+//     }
+//     to {
+//       -webkit-transform: scaleY(0);
+//       transform: scaleY(0);
+//     }
+//   }
+
+//Rotate the caret
+.accordion-rotate-trigger {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
