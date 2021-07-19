@@ -1,3 +1,4 @@
+@use 'color' as c;
 *,
 ::before,
 ::after {
@@ -25,20 +26,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "liga";
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-  overflow-x: hidden;
+  // -ms-overflow-style: none;
+  // /* IE and Edge */
+  // scrollbar-width: none;
+  // /* Firefox */
+  // overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
+// body::-webkit-scrollbar {
+//   display: none;
+// }
+// ::-webkit-scrollbar {
+//   width: 0px;
+//   background: transparent;
+// }
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
@@ -46,14 +47,14 @@ body::-webkit-scrollbar {
 }
 
 ::-moz-selection {
-  background-color: #b3d4fc;
-  color: #000000;
+  background-color: c.$blue-light;
+  color: c.$carbon;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #b3d4fc;
-  color: #000000;
+  background-color: c.$blue-light;
+  color: c.$carbon;
   text-shadow: none;
 }
 
@@ -402,9 +403,9 @@ ul {
   color-scheme: light dark;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: unset !important;
-    transition: none !important;
-  }
-}
+// @media (prefers-reduced-motion: reduce) {
+//   * {
+//     animation: unset !important;
+//     transition: none !important;
+//   }
+// }

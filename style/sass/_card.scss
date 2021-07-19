@@ -52,7 +52,7 @@ SHARED STYLE
   @include h.height(100%);
   @include w.width(100%);
   @include z.z-index(1);
-  overflow-y: scroll;
+  overflow-y: auto;
   right: 0;
   top: 0;
   -webkit-animation-name: cardBody;
