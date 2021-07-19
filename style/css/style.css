@@ -20181,6 +20181,288 @@ ANIMATION
   }
 }
 /*
+****************
+LIST & ACCORDION
+****************
+*/
+.accordion-container-cta, .list-content .list-left-zone-image, .list-content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.list-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+@media only screen and (min-width: 728px) {
+  .list-content {
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+  }
+}
+.list-content .list-center-zone {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 728px) {
+  .list-content .list-center-zone {
+    margin-bottom: unset;
+    margin-top: unset;
+  }
+}
+.accordion-container-cta {
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.accordion-container .list-container {
+  -webkit-transition: max-height 0.28s linear;
+  transition: max-height 0.28s linear;
+}
+.accordion-container .list-content {
+  padding: 2rem;
+  border-bottom: solid 1px #bdbdbd;
+}
+
+.accordion-close {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.accordion-open {
+  max-height: 50vh;
+  overflow: auto;
+}
+
+.accordion-rotate-trigger {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/*
+****************
+ACCORDION COLORS
+****************
+*/
+.accordion-yellow {
+  background-color: #ffd600;
+  color: #212121;
+}
+.accordion-yellow ion-icon {
+  color: #212121;
+}
+.accordion-yellow + .list-container {
+  background-color: #ffff52;
+  border-bottom: solid 1px #c7a500;
+  color: #212121;
+}
+.accordion-yellow + .list-container .list-content {
+  border-bottom: solid 1px #c7a500;
+}
+.accordion-orange {
+  background-color: #ff6d00;
+  color: #ffffff;
+}
+.accordion-orange ion-icon {
+  color: #ffffff;
+}
+.accordion-orange + .list-container {
+  background-color: #ff9e40;
+  border-bottom: solid 1px #c43c00;
+  color: #ffffff;
+}
+.accordion-orange + .list-container .list-content {
+  border-bottom: solid 1px #c43c00;
+}
+.accordion-red {
+  background-color: #d50000;
+  color: #ffffff;
+}
+.accordion-red ion-icon {
+  color: #ffffff;
+}
+.accordion-red + .list-container {
+  background-color: #ff5131;
+  border-bottom: solid 1px #9b0000;
+  color: #ffffff;
+}
+.accordion-red + .list-container .list-content {
+  border-bottom: solid 1px #9b0000;
+}
+.accordion-purple {
+  background-color: #aa00ff;
+  color: #ffffff;
+}
+.accordion-purple ion-icon {
+  color: #ffffff;
+}
+.accordion-purple + .list-container {
+  background-color: #e254ff;
+  border-bottom: solid 1px #7200ca;
+  color: #ffffff;
+}
+.accordion-purple + .list-container .list-content {
+  border-bottom: solid 1px #7200ca;
+}
+.accordion-blue {
+  background-color: #0091ea;
+  color: #ffffff;
+}
+.accordion-blue ion-icon {
+  color: #ffffff;
+}
+.accordion-blue + .list-container {
+  background-color: #64c1ff;
+  border-bottom: solid 1px #0064b7;
+  color: #ffffff;
+}
+.accordion-blue + .list-container .list-content {
+  border-bottom: solid 1px #0064b7;
+}
+.accordion-green {
+  background-color: #64dd17;
+  color: #ffffff;
+}
+.accordion-green ion-icon {
+  color: #ffffff;
+}
+.accordion-green + .list-container {
+  background-color: #9cff57;
+  border-bottom: solid 1px #1faa00;
+  color: #212121;
+}
+.accordion-green + .list-container .list-content {
+  border-bottom: solid 1px #1faa00;
+}
+.accordion-pink {
+  background-color: #c51162;
+  color: #ffffff;
+}
+.accordion-pink ion-icon {
+  color: #ffffff;
+}
+.accordion-pink + .list-container {
+  background-color: #fd558f;
+  border-bottom: solid 1px #8e0038;
+  color: #ffffff;
+}
+.accordion-pink + .list-container .list-content {
+  border-bottom: solid 1px #8e0038;
+}
+.accordion-turquoise {
+  background-color: #00bfa5;
+  color: #ffffff;
+}
+.accordion-turquoise ion-icon {
+  color: #ffffff;
+}
+.accordion-turquoise + .list-container {
+  background-color: #5df2d6;
+  border-bottom: solid 1px #008e76;
+  color: #212121;
+}
+.accordion-turquoise + .list-container .list-content {
+  border-bottom: solid 1px #008e76;
+}
+.accordion-brown {
+  background-color: #8d6e63;
+  color: #ffffff;
+}
+.accordion-brown ion-icon {
+  color: #ffffff;
+}
+.accordion-brown + .list-container {
+  background-color: #be9c91;
+  border-bottom: solid 1px #5f4339;
+  color: #ffffff;
+}
+.accordion-brown + .list-container .list-content {
+  border-bottom: solid 1px #5f4339;
+}
+.accordion-grey {
+  background-color: #bdbdbd;
+  color: #212121;
+}
+.accordion-grey ion-icon {
+  color: #212121;
+}
+.accordion-grey + .list-container {
+  background-color: #efefef;
+  border-bottom: solid 1px #8d8d8d;
+  color: #212121;
+}
+.accordion-grey + .list-container .list-content {
+  border-bottom: solid 1px #8d8d8d;
+}
+.accordion-navy {
+  background-color: #78909c;
+  color: #ffffff;
+}
+.accordion-navy ion-icon {
+  color: #ffffff;
+}
+.accordion-navy + .list-container {
+  background-color: #a7c0cd;
+  border-bottom: solid 1px #4b636e;
+  color: #ffffff;
+}
+.accordion-navy + .list-container .list-content {
+  border-bottom: solid 1px #4b636e;
+}
+.accordion-black {
+  background-color: #212121;
+  color: #ffffff;
+}
+.accordion-black ion-icon {
+  color: #ffffff;
+}
+.accordion-black + .list-container {
+  background-color: #484848;
+  border-bottom: solid 1px #000000;
+  color: #ffffff;
+}
+.accordion-black + .list-container .list-content {
+  border-bottom: solid 1px #000000;
+}
+
+/*
+*******
+DETAILS
+*******
+*/
+.details {
+  border: solid 1px #bdbdbd;
+  margin-bottom: 1rem;
+}
+
+.details-summary {
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
+  padding: 2rem;
+}
+
+.details-text {
+  border-top: solid 1px #bdbdbd;
+  margin: 0;
+  padding: 2rem;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/*
 OPEN classic nav
 */
 .nav {
