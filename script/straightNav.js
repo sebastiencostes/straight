@@ -72,6 +72,12 @@ const arrayStraightNav = [
     color: "red",
   },
   {
+    link: "/table.html",
+    linkName: "table",
+    icon: "filter-outline",
+    color: "pink",
+  },
+  {
     link: "/template.html",
     linkName: "template",
     icon: "desktop-outline",

@@ -20958,5 +20958,78 @@ ANIMATION
     transform: scale(1, 1) translate(-50%, -50%);
   }
 }
+/*
+*****
+TABLE
+*****
+*/
+.table {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  width: auto;
+}
+@media only screen and (min-width: 992px) {
+  .table {
+    display: table;
+    width: 100%;
+  }
+}
+
+.table-title {
+  caption-side: top;
+  margin-bottom: 2rem;
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
+}
+
+.table-header-column {
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
+  font-weight: 400;
+  padding: 2rem;
+}
+
+.table-body {
+  display: block;
+  width: auto;
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+@media only screen and (min-width: 992px) {
+  .table-body {
+    display: table-row-group;
+    width: 100%;
+  }
+}
+
+.table-row {
+  border-bottom: solid 1px #bdbdbd;
+}
+.table-row:nth-child(even) {
+  background-color: #efefef;
+  color: #212121;
+}
+
+.table-column {
+  font-size: clamp(0.8rem, 0.7009rem + 0.354vw, 1.6rem);
+  font-weight: 300;
+  padding: 2rem;
+}
+
+/*
+****************
+SCROLLABLE TABLE
+****************
+*/
+.table-scrollable-body, .table-scrollable {
+  display: block;
+  width: auto;
+  position: relative;
+  white-space: nowrap;
+}
+
+.table-scrollable-body {
+  overflow-x: auto;
+}
 
 /*# sourceMappingURL=style.css.map */
