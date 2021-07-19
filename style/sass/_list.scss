@@ -1,8 +1,15 @@
 @use 'border' as b;
 @use 'color' as c;
+@use 'device' as d;
 @use 'flexbox' as flx;
+@use 'font' as f;
 @use 'utility' as u;
 
+/*
+****************
+LIST & ACCORDION
+****************
+*/
 %list-shared {
   @include flx.d-flex();
   @include flx.align-items(center);
@@ -10,7 +17,21 @@
 
 .list-content {
   @extend %list-shared;
-  @include flx.justify-between();
+  @include flx.f-dir-col();
+  @include flx.items-start();
+  @include d.tablet-portrait() {
+    @include flx.justify-between();
+    @include flx.f-dir-row();
+    @include flx.align-items(center);
+  }
+  .list-center-zone {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    @include d.tablet-portrait() {
+      margin-bottom: unset;
+      margin-top: unset;
+    }
+  }
   .list-left-zone {
     &-image {
       @extend %list-shared;
@@ -26,14 +47,29 @@
     padding-right: 2rem;
   }
   .list-container {
-    -webkit-animation-name: listOpening;
-    animation-name: listOpening;
-    -webkit-animation-duration: u.$time;
-    animation-duration: u.$time;
+    -webkit-transition: max-height u.$time linear;
+    transition: max-height u.$time linear;
   }
   .list-content {
     padding: 2rem;
+    @include b.b-bottom(c.$grey);
   }
+}
+//close
+.accordion-close {
+  max-height: 0;
+  overflow: hidden;
+}
+//open
+.accordion-open {
+  max-height: 50vh;
+  overflow: auto;
+}
+
+//Rotate the caret
+.accordion-rotate-trigger {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /*
@@ -52,6 +88,9 @@ ACCORDION COLORS
       background-color: c.$yellow-light;
       @include b.b-bottom(c.$yellow-dark);
       color: c.$carbon;
+      .list-content {
+        @include b.b-bottom(c.$yellow-dark);
+      }
     }
   }
   &-orange {
@@ -64,6 +103,9 @@ ACCORDION COLORS
       background-color: c.$orange-light;
       @include b.b-bottom(c.$orange-dark);
       color: c.$white;
+      .list-content {
+        @include b.b-bottom(c.$orange-dark);
+      }
     }
   }
   &-red {
@@ -76,6 +118,9 @@ ACCORDION COLORS
       background-color: c.$red-light;
       @include b.b-bottom(c.$red-dark);
       color: c.$white;
+      .list-content {
+        @include b.b-bottom(c.$red-dark);
+      }
     }
   }
   &-purple {
@@ -88,6 +133,9 @@ ACCORDION COLORS
       background-color: c.$purple-light;
       @include b.b-bottom(c.$purple-dark);
       color: c.$white;
+      .list-content {
+        @include b.b-bottom(c.$purple-dark);
+      }
     }
   }
   &-blue {
@@ -100,6 +148,9 @@ ACCORDION COLORS
       background-color: c.$blue-light;
       @include b.b-bottom(c.$blue-dark);
       color: c.$white;
+      .list-content {
+        @include b.b-bottom(c.$blue-dark);
+      }
     }
   }
   &-green {
@@ -112,6 +163,9 @@ ACCORDION COLORS
       background-color: c.$green-light;
       @include b.b-bottom(c.$green-dark);
       color: c.$carbon;
+      .list-content {
+        @include b.b-bottom(c.$green-dark);
+      }
     }
   }
   &-pink {
@@ -124,6 +178,9 @@ ACCORDION COLORS
       background-color: c.$pink-light;
       @include b.b-bottom(c.$pink-dark);
       color: c.$white;
+      .list-content {
+        @include b.b-bottom(c.$pink-dark);
+      }
     }
   }
   &-turquoise {
@@ -136,6 +193,9 @@ ACCORDION COLORS
       background-color: c.$turquoise-light;
       @include b.b-bottom(c.$turquoise-dark);
       color: c.$carbon;
+      .list-content {
+        @include b.b-bottom(c.$turquoise-dark);
+      }
     }
   }
   &-brown {
@@ -148,6 +208,9 @@ ACCORDION COLORS
       background-color: c.$brown-light;
       @include b.b-bottom(c.$brown-dark);
       color: c.$white;
+      .list-content {
+        @include b.b-bottom(c.$brown-dark);
+      }
     }
   }
   &-grey {
@@ -160,6 +223,9 @@ ACCORDION COLORS
       background-color: c.$grey-light;
       @include b.b-bottom(c.$grey-dark);
       color: c.$carbon;
+      .list-content {
+        @include b.b-bottom(c.$grey-dark);
+      }
     }
   }
   &-navy {
@@ -172,6 +238,9 @@ ACCORDION COLORS
       background-color: c.$navy-light;
       @include b.b-bottom(c.$navy-dark);
       color: c.$white;
+      .list-content {
+        @include b.b-bottom(c.$navy-dark);
+      }
     }
   }
   &-black {
@@ -184,62 +253,47 @@ ACCORDION COLORS
       background-color: c.$carbon-light;
       @include b.b-bottom(c.$carbon-dark);
       color: c.$white;
+      .list-content {
+        @include b.b-bottom(c.$carbon-dark);
+      }
     }
   }
 }
 
 /*
-*********
-ANIMATION
-*********
+*******
+DETAILS
+*******
 */
 
-//open
-@-webkit-keyframes listOpening {
-  from {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-  }
-  to {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
-}
-@keyframes listOpening {
-  from {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-  }
-  to {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-  }
+%details-shared {
+  @include b.border(c.$grey);
+  margin-bottom: 1rem;
 }
 
-//close
-// @-webkit-keyframes listClosing {
-//     from {
-//       -webkit-transform: scaleY(1);
-//       transform: scaleY(1);
-//     }
-//     to {
-//       -webkit-transform: scaleY(0);
-//       transform: scaleY(0);
-//     }
-//   }
-//   @keyframes listClosing {
-//     from {
-//       -webkit-transform: scaleY(1);
-//       transform: scaleY(1);
-//     }
-//     to {
-//       -webkit-transform: scaleY(0);
-//       transform: scaleY(0);
-//     }
-//   }
+%details-summary-shared {
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
+  padding: 2rem;
+}
 
-//Rotate the caret
-.accordion-rotate-trigger {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
+%details-text-shared {
+  @include b.b-top(c.$grey);
+  margin: 0;
+  padding: 2rem;
+  @include f.text-align(justify);
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.details {
+  @extend %details-shared;
+  &-summary {
+    @extend %details-summary-shared;
+  }
+
+  &-text {
+    @extend %details-text-shared;
+  }
 }
