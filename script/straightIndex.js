@@ -85,6 +85,13 @@ const arrayModules  = [
         subtitle: 'toast & modal'
     },
     {   
+        title: 'table',
+        url: 'module',
+        img: 'table',
+        content: 'lorem ipsum',
+        subtitle: 'sortable'
+    },
+    {   
         title: 'template',
         url: 'module',
         img: 'template',

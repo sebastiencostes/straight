@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Straight - Table">
+        <meta name="author" content="Sébastien COSTES">
+        <meta name="color-scheme" content="dark light">
+        <title>Straight | Table</title>
+        <link rel="preload" href="style/css/style.css" as="style">
+        <link rel="stylesheet" href="style/css/style.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Straight">
+        <meta name="apple-mobile-web-app-title" content="Straight">
+        <meta name="theme-color" content="#64dd17">
+        <meta name="msapplication-navbutton-color" content="#64dd17">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="/index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/logo16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="assets/img/logo/logo16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/logo32x32.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="assets/img/logo/logo32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="assets/img/logo/logo128x128.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="assets/img/logo/logo128x128.png">
+        <link rel="icon" type="imga/png" sizes="167x167" href="assets/img/logo/logo167x167.png">
+        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="assets/img/logo/logo167x167.png">
+        <link rel="icon" type="image/png" sizes="180x180" href="assets/img/logo/logo180x180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/logo/logo180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo/logo192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/img/logo/logo192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="assets/img/logo/logo512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="assets/img/logo/logo512x512.png">
+    </head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s btn-green" href="/index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-pink" role="presentation">
+        <h1 class="header-presentation-title t-white">table</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-pink">
+            About Table
+        </h2>
+        <p>
+            information presented in a two-dimensional table comprised of rows and columns of cells containing data.
+        </p>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-pink">
+                static table
+            </h3>
+            <p>
+                these 2 models below are horizontally scrollable when their content overflow the container.
+                The <strong>basic table</strong> model is horizontally scrollable from <strong>phone</strong> breakpoint to <strong>tablet landscape orientation</strong> breakpoint.
+                The <strong>scrollable table</strong> model is always horizontally scrollable.
+            </p>
+            <aside>
+                <p>
+                    You can check more about breakpoint at <a href= "./layout.html" rel="noopener"> layout module</a>.
+                </p>
+            </aside>
+
+            <table class="table">
+                <caption class="table-title">Basic table</caption>
+                </thead>
+                <tbody class="table-body">
+                    <tr class="table-row">
+                        <td class="table-header-column">
+                            firstname
+                        </td>
+                        <td class="table-header-column">
+                            lastname
+                        </td>
+                        <td class="table-header-column">
+                            pseudo
+                        </td>
+                        <td class="table-header-column">
+                            company
+                        </td>
+                        <td class="table-header-column">
+                            phone
+                        </td>
+                        <td class="table-header-column">
+                            email
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">jane</td>
+                        <td class="table-column t-uppercase">doe</td>
+                        <td class="table-column">batman</td>
+                        <td class="table-column">global enterprise</td>
+                        <td class="table-column">000-555-111-444</td>
+                        <td class="table-column">superandverylongexample@exampletoolong.mail</td>
+                    <tr class="table-row">
+                        <td class="table-column">patrick</td>
+                        <td class="table-column t-uppercase">smith</td>
+                        <td class="table-column">bruce</td>
+                        <td class="table-column">global enterprise</td>
+                        <td class="table-column">000-555-111-444</td>
+                        <td class="table-column">uperandverylongexample@exampletoolong.mail</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">joe</td>
+                        <td class="table-column t-uppercase">smith</td>
+                        <td class="table-column">barbarella</td>
+                        <td class="table-column">global enterprise</td>
+                        <td class="table-column">000-555-111-444</td>
+                        <td class="table-column">uperandverylongexample@exampletoolong.mail</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">martin</td>
+                        <td class="table-column t-uppercase">martin</td>
+                        <td class="table-column">jane</td>
+                        <td class="table-column">global enterprise</td>
+                        <td class="table-column">000-555-111-444</td>
+                        <td class="table-column">uperandverylongexample@exampletoolong.mail</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure class="clipboard-container m-t-2 m-b-8">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;table class=&quot;table&quot;&gt;
+    &lt;caption class=&quot;table-title&quot;&gt;Basic table&lt;/caption&gt;
+    &lt;/thead&gt;
+    &lt;tbody class=&quot;table-body&quot;&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                firstname
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                lastname
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                pseudo
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                company
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                phone
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                email
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-column&quot;&gt;jane&lt;/td&gt;
+            &lt;td class=&quot;table-column t-uppercase&quot;&gt;doe&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;batman&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;global enterprise&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;000-555-111-444&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;superandverylongexample@exampletoolong.mail&lt;/td&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-column&quot;&gt;patrick&lt;/td&gt;
+            &lt;td class=&quot;table-column t-uppercase&quot;&gt;smith&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;bruce&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;global enterprise&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;000-555-111-444&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;uperandverylongexample@exampletoolong.mail&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-column&quot;&gt;joe&lt;/td&gt;
+            &lt;td class=&quot;table-column t-uppercase&quot;&gt;smith&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;barbarella&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;global enterprise&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;000-555-111-444&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;uperandverylongexample@exampletoolong.mail&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-column&quot;&gt;martin&lt;/td&gt;
+            &lt;td class=&quot;table-column t-uppercase&quot;&gt;martin&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;jane&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;global enterprise&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;000-555-111-444&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;uperandverylongexample@exampletoolong.mail&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                    </code>
+                </pre>
+            </figure>
+     
+            <table class="table-scrollable">
+                <caption class="table-title">Scrollable table</caption>
+                <tbody class="table-scrollable-body">
+                    <tr class="table-row">
+                        <td class="table-header-column">
+                            firstname
+                        </td>
+                        <td class="table-header-column">
+                            lastname
+                        </td>
+                        <td class="table-header-column">
+                            pseudo
+                        </td>
+                        <td class="table-header-column">
+                            company
+                        </td>
+                        <td class="table-header-column">
+                            offer
+                        </td>
+                        <td class="table-header-column">
+                            account
+                        </td>
+                        <td class="table-header-column">
+                            phone
+                        </td>
+                        <td class="table-header-column">
+                            email
+                        </td>
+                        <td class="table-header-column">
+                            last connection
+                        </td>
+                        <td class="table-header-column">
+                            action
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">jane</td>
+                        <td class="table-column t-uppercase">doe</td>
+                        <td class="table-column">batman</td>
+                        <td class="table-column">global enterprise</td>
+                        <td class="table-column">package</td>
+                        <td class="table-column">10000</td>
+                        <td class="table-column">000-555-111-444</td>
+                        <td class="table-column">superandverylongexample@exampletoolong.mail</td>
+                        <td class="table-column">04/05/22</td>
+                        <td class="table-column">
+                            <button class="btn-square-s btn-blue">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-blue m-l-1">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-green m-l-1">
+                                <ion-icon name="happy-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-orange m-l-1">
+                                <ion-icon name="sad-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">patrick</td>
+                        <td class="table-column t-uppercase">smith</td>
+                        <td class="table-column">bruce</td>
+                        <td class="table-column">global enterprise</td>
+                        <td class="table-column">subscription</td>
+                        <td class="table-column">10000</td>
+                        <td class="table-column">000-555-111-444</td>
+                        <td class="table-column">uperandverylongexample@exampletoolong.mail</td>
+                        <td class="table-column">07/06/22</td>
+                        <td class="table-column">
+                            <button class="btn-square-s btn-blue">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-blue m-l-1">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-green m-l-1">
+                                <ion-icon name="happy-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-orange m-l-1">
+                                <ion-icon name="sad-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">joe</td>
+                        <td class="table-column t-uppercase">smith</td>
+                        <td class="table-column">barbarella</td>
+                        <td class="table-column">global enterprise</td>
+                        <td class="table-column">package</td>
+                        <td class="table-column">10000</td>
+                        <td class="table-column">000-555-111-444</td>
+                        <td class="table-column">uperandverylongexample@exampletoolong.mail</td>
+                        <td class="table-column">01/01/22</td>
+                        <td class="table-column">
+                            <button class="btn-square-s btn-blue">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-blue m-l-1">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-green m-l-1">
+                                <ion-icon name="happy-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-orange m-l-1">
+                                <ion-icon name="sad-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td class="table-column">martin</td>
+                        <td class="table-column t-uppercase">martin</td>
+                        <td class="table-column">jane</td>
+                        <td class="table-column">global enterprise</td>
+                        <td class="table-column">subscription</td>
+                        <td class="table-column">10000</td>
+                        <td class="table-column">000-555-111-444</td>
+                        <td class="table-column">uperandverylongexample@exampletoolong.mail</td>
+                        <td class="table-column">03/10/22</td>
+                        <td class="table-column">
+                            <button class="btn-square-s btn-blue">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-blue m-l-1">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-green m-l-1">
+                                <ion-icon name="happy-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-orange m-l-1">
+                                <ion-icon name="sad-outline"></ion-icon>
+                            </button>
+                            <button class="btn-square-s btn-red m-l-1">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <figure class="clipboard-container m-t-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;table class=&quot;table-scrollable&quot;&gt;
+    &lt;caption class=&quot;table-title&quot;&gt;Scrollable table&lt;/caption&gt;
+    &lt;tbody class=&quot;table-scrollable-body&quot;&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                firstname
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                lastname
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                pseudo
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                company
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                offer
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                account
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                phone
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                email
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                last connection
+            &lt;/td&gt;
+            &lt;td class=&quot;table-header-column&quot;&gt;
+                action
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-column&quot;&gt;jane&lt;/td&gt;
+            &lt;td class=&quot;table-column t-uppercase&quot;&gt;doe&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;batman&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;global enterprise&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;package&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;10000&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;000-555-111-444&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;superandverylongexample@exampletoolong.mail&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;04/05/22&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;
+                &lt;button class=&quot;btn-square-s btn-blue&quot;&gt;
+                    &lt;ion-icon name=&quot;call-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-blue m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;mail-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-green m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;happy-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-orange m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;sad-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-red m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;trash-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-column&quot;&gt;patrick&lt;/td&gt;
+            &lt;td class=&quot;table-column t-uppercase&quot;&gt;smith&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;bruce&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;global enterprise&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;subscription&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;10000&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;000-555-111-444&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;uperandverylongexample@exampletoolong.mail&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;07/06/22&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;
+                &lt;button class=&quot;btn-square-s btn-blue&quot;&gt;
+                    &lt;ion-icon name=&quot;call-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-blue m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;mail-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-green m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;happy-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-orange m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;sad-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-red m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;trash-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-column&quot;&gt;joe&lt;/td&gt;
+            &lt;td class=&quot;table-column t-uppercase&quot;&gt;smith&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;barbarella&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;global enterprise&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;package&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;10000&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;000-555-111-444&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;uperandverylongexample@exampletoolong.mail&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;01/01/22&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;
+                &lt;button class=&quot;btn-square-s btn-blue&quot;&gt;
+                    &lt;ion-icon name=&quot;call-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-blue m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;mail-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-green m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;happy-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-orange m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;sad-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-red m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;trash-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;table-row&quot;&gt;
+            &lt;td class=&quot;table-column&quot;&gt;martin&lt;/td&gt;
+            &lt;td class=&quot;table-column t-uppercase&quot;&gt;martin&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;jane&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;global enterprise&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;subscription&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;10000&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;000-555-111-444&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;uperandverylongexample@exampletoolong.mail&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;03/10/22&lt;/td&gt;
+            &lt;td class=&quot;table-column&quot;&gt;
+                &lt;button class=&quot;btn-square-s btn-blue&quot;&gt;
+                    &lt;ion-icon name=&quot;call-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-blue m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;mail-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-green m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;happy-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-orange m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;sad-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-red m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;trash-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                    </code>
+                </pre>
+            </figure>
+        
+        </article>
+       
+    </main>
+    <footer id="straightFooter" class="bg-grey-light">
+        <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
+            <section>
+                <a class="btn-square-s btn-green" href="/index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
+                </a>
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <p class="t-x-small t-carbon">
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="/" trget="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
+                </p>
+            </section>
+            <section class="d-flex j-between">
+                <ul>
+                    <li class="t-x-small">
+                        <a href="/button.html" rel="noopener">button module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/card.html" rel="noopener">card module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/carousel.html" rel="noopener">carousel module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/color.html" rel="noopener">color module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/form.html" rel="noopener">form module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/header.html" rel="noopener">header module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/helper.html" rel="noopener">helper module</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="t-x-small">
+                        <a href="/image.html" rel="noopener">image module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/list.html" rel="noopener">list module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/nav.html" rel="noopener">nav module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/notification.html" rel="noopener">notification module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/template.html" rel="noopener">template module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="/typography.html" rel="noopener">typography module</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/script/straightNav.js"></script>
+    <script src="script/straightFooter.js"></script>
+    <script src="script/straightClipboard.js"></script>
+</body>
+
+</html>
