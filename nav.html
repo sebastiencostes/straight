@@ -57,7 +57,7 @@
                 return to list view
             </li>
             <li class="open d-block">
-                <button class="btn-square-s" type="button">
+                <button class="btn-square-s btn-green" type="button">
                     <ion-icon name="menu" />
                 </button>
             </li>
@@ -90,6 +90,38 @@
 
         <section class="m-b-8">
             <h3 class="note-blue">
+                Activation
+            </h3>
+            <p>
+                To activate <span class="t-blue">nav</span>, insert this line of code into your JavaScript file.
+            </p>
+            <figure class="clipboard-container">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+S.nav()
+                </code>
+            </pre>
+            </figure>
+            <p>
+                To activate <span class="t-blue">nav-pad</span>, insert this line of code into your JavaScript file.
+            </p>
+            <figure class="clipboard-container">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+S.navPad()
+                </code>
+            </pre>
+            </figure>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-blue">
                 Nav models
             </h3>
             <p>
@@ -98,7 +130,6 @@
                 2nd is a <b>navpad</b> still with vertically scrollable, it's a <b>grid view</b>.
                 These models are the same as used in this site.
             </p>
-
             <div class="g-col g-col-l-2 m-b-2">
                 <div id="navExample1" class="nav h-rem-32">
                     <ul class="nav-header">

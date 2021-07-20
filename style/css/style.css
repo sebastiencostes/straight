@@ -457,6 +457,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
@@ -468,6 +469,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "liga";
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 ::-webkit-file-upload-button {
@@ -18953,6 +18964,7 @@ SHARED STYLE
   height: 100%;
   width: 100%;
   z-index: 1;
+  scrollbar-width: none;
   overflow-y: auto;
   right: 0;
   top: 0;
@@ -19110,6 +19122,23 @@ ANIMATION
   display: inline-flex;
   width: 100%;
   overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd #efefef;
+}
+
+.clipboard::-webkit-scrollbar {
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+.clipboard::-webkit-scrollbar-track {
+  background: #efefef;
+}
+
+.clipboard::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  border-radius: 0;
+  border: 0;
 }
 
 .clipboard code {
@@ -19128,7 +19157,7 @@ SINGLE CODE
   color: #0091ea;
   display: inline-block;
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 300;
 }
 
@@ -19142,7 +19171,7 @@ HIGHLIGHT
 *********
 */
 .hljs {
-  color: #78909c;
+  color: #0091ea;
 }
 
 .hljs-tag {
@@ -20209,6 +20238,7 @@ LIST & ACCORDION
 .accordion-container .list-container {
   -webkit-transition: max-height 0.28s linear;
   transition: max-height 0.28s linear;
+  scrollbar-width: none;
 }
 .accordion-container .list-content {
   padding: 2rem;
@@ -20471,7 +20501,8 @@ OPEN classic nav
   animation-duration: 0.28s;
   position: absolute;
   height: calc(100vh - 8rem);
-  overflow-y: scroll;
+  scrollbar-width: none;
+  overflow-y: auto;
   padding: 2rem;
   width: 100vw;
 }
@@ -20536,7 +20567,8 @@ OPEN Pad nav
   -moz-column-gap: 2rem;
   column-gap: 2rem;
   row-gap: 2rem;
-  overflow-y: scroll;
+  scrollbar-width: none;
+  overflow-y: auto;
   -webkit-backdrop-filter: blur(1.6rem);
   backdrop-filter: blur(1.6rem);
   -webkit-animation-name: padNav;
@@ -20588,8 +20620,15 @@ OPEN Pad nav
 }
 
 @supports not ((backdrop-filter: blur(1.6rem)) or (-moz-backdrop-filter: blur(1.6rem)) or (-webkit-backdrop-filter: blur(1.6rem))) {
-  .nav-pad-menu {
-    background: rgba(255, 255, 255, 0.9);
+  @media (prefers-color-scheme: dark) {
+    .nav-pad-menu {
+      background: rgba(3, 3, 3, 0.9);
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    .nav-pad-menu {
+      background: rgba(255, 255, 255, 0.9);
+    }
   }
 }
 /*
@@ -21008,8 +21047,32 @@ SCROLLABLE TABLE
   white-space: nowrap;
 }
 
+.table-body {
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd #efefef;
+}
 .table-scrollable-body {
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd #efefef;
   overflow-x: auto;
+}
+
+.table-scrollable-body::-webkit-scrollbar,
+.table-body::-webkit-scrollbar {
+  height: 0.8rem;
+  width: 0.8rem;
+}
+
+.table-scrollable-body::-webkit-scrollbar-track,
+.table-body::-webkit-scrollbar-track {
+  background: #efefef;
+}
+
+.table-scrollable-body::-webkit-scrollbar-thumb,
+.table-body::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  border-radius: 0;
+  border: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

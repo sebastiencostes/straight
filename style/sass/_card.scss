@@ -52,6 +52,8 @@ SHARED STYLE
   @include h.height(100%);
   @include w.width(100%);
   @include z.z-index(1);
+  //firefox hide scrollbar and preserve scrolling
+  scrollbar-width: none;
   overflow-y: auto;
   right: 0;
   top: 0;

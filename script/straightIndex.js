@@ -89,14 +89,14 @@ const arrayModules  = [
         url: 'module',
         img: 'table',
         content: 'lorem ipsum',
-        subtitle: 'sortable'
+        subtitle: 'show your data'
     },
     {   
         title: 'template',
         url: 'module',
         img: 'template',
         content: 'lorem ipsum',
-        subtitle: 'example'
+        subtitle: 'miscellaneous example'
     },
     {   
         title: 'typography',

@@ -4,21 +4,22 @@
 ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  //scrollbar-width: none !important;
 }
 
 html {
   font-size: calc(1em * 0.625);
-  //line-height: 1.15;
-  //overflow: scroll;
-  overflow: initial; //TO CHECK!!!!!!!!
+  overflow: initial;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
+  //firefox / hide scrollbar and preserve scroll
+  scrollbar-width: none;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   margin: 0;
@@ -26,20 +27,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "liga";
-  // -ms-overflow-style: none;
-  // /* IE and Edge */
-  // scrollbar-width: none;
-  // /* Firefox */
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
-// body::-webkit-scrollbar {
-//   display: none;
-// }
-// ::-webkit-scrollbar {
-//   width: 0px;
-//   background: transparent;
-// }
+//edge, safari, opera & chrome / hide scrollbar and preserve scroll
+body::-webkit-scrollbar {
+  display: none;
+}
+//edge, safari, opera & chrome / hide scrollbar and preserve scroll
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
@@ -331,22 +330,9 @@ img {
   border-style: none;
 }
 
-// legend {
-//   box-sizing: border-box;
-//   color: inherit;
-//   display: table;
-//   max-width: 100%;
-//   padding: 0;
-//   white-space: normal;
-// }
-
 li {
   list-style: none;
 }
-
-// main {
-//   display: block;
-// }
 
 mark {
   display: inline-block;
@@ -402,10 +388,3 @@ ul {
 :root {
   color-scheme: light dark;
 }
-
-// @media (prefers-reduced-motion: reduce) {
-//   * {
-//     animation: unset !important;
-//     transition: none !important;
-//   }
-// }

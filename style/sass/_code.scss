@@ -21,6 +21,22 @@
   @include flx.d-inline-flex();
   @include w.width(100%);
   overflow: auto;
+  //firefox scrollbar
+  scrollbar-width: thin;
+  scrollbar-color: c.$grey c.$grey-light;
+}
+//edge, safari, chrome, opera scrollbar
+.clipboard::-webkit-scrollbar {
+  height: 0.8rem;
+  width: 0.8rem;
+}
+.clipboard::-webkit-scrollbar-track {
+  background: c.$grey-light;
+}
+.clipboard::-webkit-scrollbar-thumb {
+  background-color: c.$grey;
+  border-radius: 0;
+  border: 0;
 }
 
 .clipboard code {
@@ -43,7 +59,7 @@ SINGLE CODE
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 300;
 }
 
@@ -57,7 +73,7 @@ HIGHLIGHT
 *********
 */
 .hljs {
-  color: c.$navy;
+  color: c.$blue;
 }
 
 .hljs-tag {

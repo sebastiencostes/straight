@@ -49,6 +49,8 @@ LIST & ACCORDION
   .list-container {
     -webkit-transition: max-height u.$time linear;
     transition: max-height u.$time linear;
+    //firfox hide scrolbar and preserve scrolling
+    scrollbar-width: none;
   }
   .list-content {
     padding: 2rem;

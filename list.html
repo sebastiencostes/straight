@@ -57,7 +57,7 @@
                 return to list view
             </li>
             <li class="open d-block">
-                <button class="btn-square-s" type="button">
+                <button class="btn-square-s btn-green" type="button">
                     <ion-icon name="menu" />
                 </button>
             </li>
@@ -82,6 +82,26 @@
         <p>
             3 list models are available. One <b>static</b>, another one like <b>accordion</b> style and finally the HTML5 <b>details tag</b> for all your lists like <b>TOU</b>, <b>CGU</b> and many more...
         </p>
+
+        <section class="m-t-8">
+            <h3 class="note-purple">
+                Activation
+            </h3>
+            <p>
+                To activate <span class="t-blue">list</span>, insert this line of code into your JavaScript file.
+                This will activate accordion.
+            </p>
+            <figure class="clipboard-container">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+S.list()
+                </code>
+            </pre>
+            </figure>
+        </section>
 
         <article class="m-b-8 m-t-8">
             <h3 class="note-purple">
@@ -382,8 +402,45 @@
                 <pre class="clipboard">
                     <code>
 &lt;section class=&quot;accordion-container&quot;&gt;
-    &lt;div class=&quot;accordion-container-cta accordion-grey&quot;&gt;
-        &lt;p&gt;Accordion orange&lt;/p&gt;
+    &lt;div class=&quot;accordion-container-cta&quot;&gt;
+        &lt;p&gt;Accordion&lt;/p&gt;
+        &lt;button class=&quot;btn-square-m accordion-cta&quot; data-accordion=&quot;&quot;&gt;
+            &lt;ion-icon name=&quot;caret-down-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;list-container accordion-close&quot; data-accordion=&quot;&quot;&gt;
+        &lt;li class=&quot;list-content&quot;&gt;
+            &lt;div class=&quot;list-left-zone&quot;&gt;
+                &lt;figure class=&quot;list-left-zone-image&quot;&gt;
+                    &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/list/list.png&quot; alt=&quot;&quot;&gt;
+                    &lt;figcaption class=&quot;caption-img-title-container&quot;&gt;
+                        &lt;p class=&quot;caption-img-title&quot;&gt;title&lt;/p&gt;
+                    &lt;/figcaption&gt;
+                &lt;/figure&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;list-center-zone&quot;&gt;
+                your content
+            &lt;/div&gt;
+            &lt;div class=&quot;list-right-zone&quot;&gt;
+                &lt;button class=&quot;btn-square-s btn-blue m-r-1&quot;&gt;
+                    &lt;ion-icon name=&quot;remove-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;span&gt;
+                    1
+                &lt;/span&gt;
+                &lt;button class=&quot;btn-square-s btn-blue m-l-1 m-r-1&quot;&gt;
+                    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+                &lt;button class=&quot;btn-square-s btn-red m-l-1&quot;&gt;
+                    &lt;ion-icon name=&quot;trash-outline&quot;&gt;&lt;/ion-icon&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/section&gt;
+&lt;section class=&quot;accordion-container&quot;&gt;
+    &lt;div class=&quot;accordion-container-cta accordion-blue&quot;&gt;
+        &lt;p&gt;Accordion&lt;/p&gt;
         &lt;button class=&quot;btn-square-m accordion-cta&quot; data-accordion=&quot;&quot;&gt;
             &lt;ion-icon name=&quot;caret-down-outline&quot;&gt;&lt;/ion-icon&gt;
         &lt;/button&gt;
