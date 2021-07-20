@@ -367,50 +367,68 @@ const S = {
   carousel() {
     const carousels = document.querySelectorAll(".carousel");
     const controls = document.querySelectorAll(".carousel-cta");
+    const carouselSlides = document.querySelectorAll(".carousel-slide");
     const arrayCarousels = [];
     let currentIndex = 1;
-    //get all id from .carousel and push them in arrayCarousels
-    for (let carousel of carousels) {
-      let tmpCarousel = carousel.getAttribute("id");
-      arrayCarousels.push("#" + tmpCarousel);
-    }
 
-    straightCarousel = (id, idx) => {
-      const carouselID = document.querySelector(id);
-      const sliders = carouselID.querySelectorAll(".carousel-slide");
-
-      if (currentIndex < 1) {
-        currentIndex = sliders.length;
-      }
-      if (currentIndex > sliders.length) {
-        currentIndex = 1;
+    carousel = () => {
+      //get all id from .carousel and push them in arrayCarousels
+      for (let carousel of carousels) {
+        let tmpCarousel = carousel.getAttribute("id");
+        arrayCarousels.push("#" + tmpCarousel);
       }
 
-      for (let slide of sliders) {
-        slide.classList.remove("d-block");
-        slide.classList.add("d-none");
+      straightCarousel = (id, idx) => {
+        const carouselID = document.querySelector(id);
+        const sliders = carouselID.querySelectorAll(".carousel-slide");
+
+        if (currentIndex < 1) {
+          currentIndex = sliders.length;
+        }
+        if (currentIndex > sliders.length) {
+          currentIndex = 1;
+        }
+
+        for (let slide of sliders) {
+          slide.classList.remove("d-block");
+          slide.classList.add("d-none");
+        }
+
+        sliders[currentIndex - 1].classList.remove("d-none");
+        sliders[currentIndex - 1].classList.add("d-block");
+      };
+
+      slideTo = (isLeft) => {
+        for (let slide of carouselSlides) {
+          if (isLeft) {
+            slide.classList.add("carousel-slide-to-left");
+            slide.classList.remove("carousel-slide-to-right");
+          }
+          if (!isLeft) {
+            slide.classList.add("carousel-slide-to-right");
+            slide.classList.remove("carousel-slide-to-left");
+          }
+        }
+      };
+
+      for (let btn of controls) {
+        btn.addEventListener("click", (e) => {
+          //fetch current carousel id
+          let tmpId = "#" + e.currentTarget.parentNode.id;
+          //check if cta is prev or next and go to to next or prev slide
+          let isPrev = e.currentTarget.classList.contains("carousel-prev");
+          isPrev
+            ? [straightCarousel(tmpId, currentIndex--), slideTo(isPrev)]
+            : [straightCarousel(tmpId, currentIndex++), slideTo(isPrev)];
+        });
       }
 
-      sliders[currentIndex - 1].classList.remove("d-none");
-      sliders[currentIndex - 1].classList.add("d-block");
+      //get all id to auto launch straightCarousel()
+      for (let id of arrayCarousels) {
+        straightCarousel(id, currentIndex);
+      }
     };
-
-    for (let btn of controls) {
-      btn.addEventListener("click", (e) => {
-        //fetch current carousel id
-        let tmpId = "#" + e.currentTarget.parentNode.id;
-        //check if cta is prev or next and go to to next or prev slide
-        let isPrev = e.currentTarget.classList.contains("carousel-prev");
-        isPrev
-          ? straightCarousel(tmpId, currentIndex--)
-          : straightCarousel(tmpId, currentIndex++);
-      });
-    }
-
-    //get all id to auto launch straightCarousel()
-    for (let id of arrayCarousels) {
-      straightCarousel(id, currentIndex);
-    }
+    carousel();
   },
   form() {
     document.addEventListener(
@@ -435,7 +453,7 @@ const S = {
       if (width < height) image.classList.add("image-fit-portrait");
       if (width === height) image.classList.add("image-fit-square");
     }
-    
+
     //lightbox function with toggling class
     imgLightBox = (picture) => {
       picture.classList.toggle("image-highlighted");
@@ -446,7 +464,7 @@ const S = {
         imgLightBox(image);
       });
     }
-    
+
     //close targeted image when clicking outside
     for (let image of imagesLightbox) {
       document.addEventListener("click", function (event) {
@@ -456,9 +474,6 @@ const S = {
     }
   },
   list() {
-    const accordionContainer = document.querySelectorAll(
-      ".accordion-container"
-    );
     const listContainer = document.querySelectorAll(
       ".accordion-container .list-container"
     );
@@ -476,7 +491,6 @@ const S = {
         accordion.getAttribute("data-accordion") ===
         trigger.getAttribute("data-accordion")
       ) {
-        //accordion.classList.toggle("d-none");
         accordion.classList.toggle("accordion-open");
         accordion.classList.toggle("accordion-close");
       }
@@ -584,14 +598,3 @@ const S = {
     }
   },
 };
-
-window.addEventListener("load", () => {
-  //   S.nav();
-  //   S.navPad();
-  //S.card
-  //S.carousel
-  //S.form
-  //S.image
-  //S.list
-  //S.notification
-});

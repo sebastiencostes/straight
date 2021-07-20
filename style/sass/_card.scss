@@ -120,6 +120,7 @@ CARD
   }
   &-footer {
     @extend %card-footer-shared;
+    z-index: 0;
   }
   &-body {
     @extend %card-body-shared;
@@ -164,6 +165,7 @@ CARD-H
   .card-footer {
     @extend %card-h-l-footer-shared;
     @include w.width(50%);
+    z-index: 0;
   }
 }
 
@@ -187,6 +189,7 @@ CARD-L
   .card-footer {
     @extend %card-h-l-footer-shared;
     @include w.width(75%);
+    z-index: 0;
   }
 }
 

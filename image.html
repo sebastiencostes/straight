@@ -8,9 +8,9 @@
         <meta name="author" content="Sébastien COSTES">
         <meta name="color-scheme" content="dark light">
         <title>Straight | Image</title>
-        <link rel="preload" href="style/css/style.css" as="style">
-        <link rel="stylesheet" href="style/css/style.css">
-        <link rel="manifest" href="manifest.json">
+        <link rel="preload" href="./style/css/style.css" as="style">
+        <link rel="stylesheet" href="./style/css/style.css">
+        <link rel="manifest" href="./manifest.json">
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="application-name" content="Straight">
@@ -18,29 +18,29 @@
         <meta name="theme-color" content="#64dd17">
         <meta name="msapplication-navbutton-color" content="#64dd17">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="msapplication-starturl" content="/index.html">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/logo16x16.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="assets/img/logo/logo16x16.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/logo32x32.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="assets/img/logo/logo32x32.png">
-        <link rel="icon" type="image/png" sizes="128x128" href="assets/img/logo/logo128x128.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="assets/img/logo/logo128x128.png">
-        <link rel="icon" type="imga/png" sizes="167x167" href="assets/img/logo/logo167x167.png">
-        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="assets/img/logo/logo167x167.png">
-        <link rel="icon" type="image/png" sizes="180x180" href="assets/img/logo/logo180x180.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/logo/logo180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo/logo192x192.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/img/logo/logo192x192.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="assets/img/logo/logo512x512.png">
-        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="assets/img/logo/logo512x512.png">
+        <meta name="msapplication-starturl" content="./index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
     </head>
 
 <body>
     <nav id="straightNav" class="nav">
         <ul class="nav-header">
             <li>
-                <a class="btn-square-s btn-green" href="/index.html" role="button" rel="noopener">
-                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
+                <a class="btn-square-s btn-green" href="./index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
                 </a>
             </li>
             <li class="grid d-none t-blue">
@@ -79,7 +79,7 @@
             About Image
         </h2>
         <p>
-            <a href="index.html" rel="noopener">Straight Framework</a> image module, discover different kinds of process for displaying your images as images. the
+            <a href="./index.html" rel="noopener">Straight Framework</a> image module, discover different kinds of process for displaying your images as images. the
             attribute <code class="single-code">alt=""</code> <strong>must be present</strong> on each <code class="single-code">&lt;img src=&quot;...&quot; alt=&quot;&quot;&gt;</code> tag.
             It must be specified only if it adds some crucial info.
         </p>
@@ -98,7 +98,7 @@
                 </button>
                 <pre class="clipboard">
                     <code>
-S.image()
+S.image();
                 </code>
             </pre>
             </figure>
@@ -112,7 +112,7 @@ S.image()
                 Work well on devices with widely different screen sizes, and other such features. It will preserve your aspect image ratio.
                 To use it just add <code class="single-code">class="responsive-img"</code>. Resize your screen to see it in action.
             </p>
-            <img class="responsive-img" src="assets/img/image/image169.png" alt="">
+            <img class="responsive-img" src="./assets/img/image/image169.png" alt="">
 
             <figure class="clipboard-container m-t-2">
                 <button class="btn-square-s btn-grey clipboard-cta" type="button">
@@ -133,12 +133,12 @@ S.image()
                 4 rounded sizes are available <b class="t-uppercase">s</b>, <b class="t-uppercase">m</b>, <b class="t-uppercase">l</b> and <b class="t-uppercase">xl</b>.
             </p>
             <div class="g-col g-col-s-2 g-col-l-3 g-col-xl-6">
-                <img class="rounded-img-smooth" src="assets/img/image/imageS.png" alt="">
-                <img class="rounded-img-s" src="assets/img/image/imageS.png" alt="">
-                <img class="rounded-img-m" src="assets/img/image/imageS.png" alt="">
-                <img class="rounded-img-l" src="assets/img/image/imageS.png" alt="">
-                <img class="rounded-img-xl" src="assets/img/image/imageS.png" alt="">
-                <img class="circled-img" src="assets/img/image/imageS.png" alt="">
+                <img class="rounded-img-smooth" src="./assets/img/image/imageS.png" alt="">
+                <img class="rounded-img-s" src="./assets/img/image/imageS.png" alt="">
+                <img class="rounded-img-m" src="./assets/img/image/imageS.png" alt="">
+                <img class="rounded-img-l" src="./assets/img/image/imageS.png" alt="">
+                <img class="rounded-img-xl" src="./assets/img/image/imageS.png" alt="">
+                <img class="circled-img" src="./assets/img/image/imageS.png" alt="">
             </div>
 
             <figure class="clipboard-container m-t-2">
@@ -170,10 +170,10 @@ S.image()
             </p>
                             
             <picture>
-                <source srcset="/assets/img/image/image169.png" media="(min-width: 1400px)">
-                <source srcset="/assets/img/image/image43L.png" media="(min-width: 992px)">
-                <source srcset="/assets/img/image/imageM.png" media="(min-width: 728px)">
-                <img class="responsive-img" src="/assets/img/image/image169S.png" alt="">
+                <source srcset="./assets/img/image/image169.png" media="(min-width: 1400px)">
+                <source srcset="./assets/img/image/image43L.png" media="(min-width: 992px)">
+                <source srcset="./assets/img/image/imageM.png" media="(min-width: 728px)">
+                <img class="responsive-img" src="./assets/img/image/image169S.png" alt="">
             </picture>
 
             <figure class="clipboard-container m-t-2">
@@ -204,10 +204,10 @@ S.image()
             <div class="g-col g-col-m-2 g-col-l-4">
                 <figure class="caption-img">
                     <picture>
-                        <source srcset="/assets/img/image/imageS.png" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/image/image43S.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/image/image169S.png" media="(min-width: 728px)">
-                        <img class="responsive-img" src="/assets/img/image/image43S.png" alt="">
+                        <source srcset="./assets/img/image/imageS.png" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/image/image43S.png" media="(min-width: 992px)">
+                        <source srcset="./assets/img/image/image169S.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/image/image43S.png" alt="">
                     </picture>
                     <figcaption class="caption-img-title-container">
                         <h4 class="caption-img-title">image title</h4>
@@ -217,10 +217,10 @@ S.image()
                 <figure class="caption-img b-shadow-hovered">
                     <a href="#" rel="noopener">
                         <picture>
-                            <source srcset="/assets/img/image/imageS.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/image/image43S.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/image/image169S.png" media="(min-width: 728px)">
-                            <img class="responsive-img" src="/assets/img/image/image43S.png" alt="">
+                            <source srcset="./assets/img/image/imageS.png" media="(min-width: 1400px)">
+                            <source srcset="./assets/img/image/image43S.png" media="(min-width: 992px)">
+                            <source srcset="./assets/img/image/image169S.png" media="(min-width: 728px)">
+                            <img class="responsive-img" src="./assets/img/image/image43S.png" alt="">
                         </picture>
                     </a>
                     <figcaption class="caption-img-title-container bg-grey-light">
@@ -235,10 +235,10 @@ S.image()
                         <h4 class="caption-img-title">image title</h4>
                     </figcaption>
                     <picture>
-                        <source srcset="/assets/img/image/imageS.png" media="(min-width: 1400px)">
-                        <source srcset="/assets/img/image/image43S.png" media="(min-width: 992px)">
-                        <source srcset="/assets/img/image/image169S.png" media="(min-width: 728px)">
-                        <img class="responsive-img" src="/assets/img/image/image43S.png" alt="">
+                        <source srcset="./assets/img/image/imageS.png" media="(min-width: 1400px)">
+                        <source srcset="./assets/img/image/image43S.png" media="(min-width: 992px)">
+                        <source srcset="./assets/img/image/image169S.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/image/image43S.png" alt="">
                     </picture>
                 </figure>
 
@@ -250,10 +250,10 @@ S.image()
                     </figcaption>
                     <a href="#" rel="noopener">
                         <picture>
-                            <source srcset="/assets/img/image/imageS.png" media="(min-width: 1400px)">
-                            <source srcset="/assets/img/image/image43S.png" media="(min-width: 992px)">
-                            <source srcset="/assets/img/image/image169S.png" media="(min-width: 728px)">
-                            <img class="responsive-img" src="/assets/img/image/image43S.png" alt="">
+                            <source srcset="./assets/img/image/imageS.png" media="(min-width: 1400px)">
+                            <source srcset="./assets/img/image/image43S.png" media="(min-width: 992px)">
+                            <source srcset="./assets/img/image/image169S.png" media="(min-width: 728px)">
+                            <img class="responsive-img" src="./assets/img/image/image43S.png" alt="">
                         </picture>
                     </a>
                 </figure>
@@ -334,115 +334,115 @@ S.image()
             </p>
             <div class="g-col g-col-m-4 g-col-xl-8">
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
 
                 <picture>
-                    <source srcset="/assets/img/image/image43S.png" media="(min-width: 1400px)">
-                    <source srcset="/assets/img/image/image169S.png" media="(min-width: 992px)">
-                    <source srcset="/assets/img/image/imageVS.png" media="(min-width: 728px)">
-                    <img class="responsive-img" src="/assets/img/image/imageS.png" alt="">
+                    <source srcset="./assets/img/image/image43S.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/image/image169S.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/image/imageVS.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/image/imageS.png" alt="">
                 </picture>
             </div>
 
@@ -454,59 +454,59 @@ S.image()
                     <code>
 &lt;div class=&quot;g-col g-col-m-4 g-col-xl-8&quot;&gt;
     &lt;picture&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPath/img.png&quot; alt=&quot;&quot;&gt;
     &lt;/picture&gt;
 
     &lt;picture&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPath/img.png&quot; alt=&quot;&quot;&gt;
     &lt;/picture&gt;
 
     &lt;picture&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPath/img.png&quot; alt=&quot;&quot;&gt;
     &lt;/picture&gt;
 
     &lt;picture&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPath/img.png&quot; alt=&quot;&quot;&gt;
     &lt;/picture&gt;
 
     &lt;picture&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPath/img.png&quot; alt=&quot;&quot;&gt;
     &lt;/picture&gt;
 
     &lt;picture&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPath/img.png&quot; alt=&quot;&quot;&gt;
     &lt;/picture&gt;
 
     &lt;picture&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPath/img.png&quot; alt=&quot;&quot;&gt;
     &lt;/picture&gt;
 
     &lt;picture&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageXLarge.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageLarge.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
-        &lt;source srcset=&quot;/assets/img/image/imageMedium.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
-        &lt;img class=&quot;responsive-img&quot; src=&quot;/assets/img/image/imageSmall.png&quot; alt=&quot;&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/yourPath/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/yourPath/img.png&quot; alt=&quot;&quot;&gt;
     &lt;/picture&gt;
 &lt;/div&gt;
                     </code>
@@ -518,23 +518,23 @@ S.image()
             </h3>
             <p>
                 Images gallery with <b>different widths / heights ratio</b>. Int this case the gallery will auto detect if your images are portrait, landscape or square orientation.
-                All the images will be center positionned and they will cover their own space <strong>without any width/height ratio deformation</strong>. Just add <code class="single-code">&lt;div class=&quot;image-gallery&quot;&gt;</code>
-                to the container.
+                All the images will be center positionned and they will cover their own space <strong>without any width/height ratio deformation</strong>.
+                Just add <code class="single-code"> &lt;img class=&quot;image-fit&quot; src=&quot;...&quot; alt=&quot;&quot;&gt;</code> to images.
             </p>
             <aside>
                 <p>you can learn more about layout at<a href="/layout.html" rel="noopener"> layout module</a>.</p>
             </aside>
             <div class="g-col g-col-s-1 g-col-m-4 g-col-l-10">
-                <img class="image-fit" src="/assets/img/image/imageS.png" alt="">
-                <img class="image-fit" src="/assets/img/image/imageVS.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/imageS.png" alt="">
-                <img class="image-fit" src="/assets/img/image/imageVS.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image169S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image169S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image169S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/imageS.png" alt="">
+                <img class="image-fit" src="./assets/img/image/imageVS.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/imageS.png" alt="">
+                <img class="image-fit" src="./assets/img/image/imageVS.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image169S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image169S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image169S.png" alt="">
             </div>
 
             <figure class="clipboard-container m-t-2">
@@ -567,16 +567,16 @@ S.image()
              <code class="single-code">&lt;div class=&quot;g-no-row-col&quot;&gt;</code> on the container.
             </p>
             <div class="g-col g-col-s-1 g-no-row-col g-col-m-4 g-col-l-10">
-                <img class="image-fit" src="/assets/img/image/imageS.png" alt="">
-                <img class="image-fit" src="/assets/img/image/imageVS.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/imageS.png" alt="">
-                <img class="image-fit" src="/assets/img/image/imageVS.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image169S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image169S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit" src="/assets/img/image/image169S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/imageS.png" alt="">
+                <img class="image-fit" src="./assets/img/image/imageVS.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/imageS.png" alt="">
+                <img class="image-fit" src="./assets/img/image/imageVS.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image169S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image169S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit" src="./assets/img/image/image169S.png" alt="">
             </div>
 
             <figure class="clipboard-container m-t-2">
@@ -607,23 +607,23 @@ S.image()
                 image lightbox
             </h3>
             <p>
-                Highlighted images permit you to scale up your pictures, artworks, projecys and more to visitors.
-                Just add <code class="single-code">class=&quot;image-highlight&quot;</code> to your 
-                <code class="single-code"> &lt;img class=&quot;...&quot; src=&quot;...&quot; alt=&quot;&quot;&gt;</code>
+                Highlighted images permit you to scale up your pictures, artworks, projects and more to visitors.
+                Just add <code class="single-code">class=&quot;image-lightbox&quot;</code> to your 
+                <code class="single-code"> &lt;img class=&quot;image-fit&quot; src=&quot;...&quot; alt=&quot;&quot;&gt;</code>
                 tag.
-                To scale up and scale down image you have just to clicking on images themselves just below. 
+                To scale up and scale down image you have just to clicking on images itselves just below. 
             </p>
             <div class="g-col g-col-s-1 g-col-m-4 g-col-l-10">
-                <img class="image-fit image-lightbox" src="/assets/img/image/imageS.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/imageVS.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/imageS.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/imageVS.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/image169S.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/image169S.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/image43S.png" alt="">
-                <img class="image-fit image-lightbox" src="/assets/img/image/image169S.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/imageS.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/imageVS.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/imageS.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/imageVS.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/image169S.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/image169S.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/image43S.png" alt="">
+                <img class="image-fit image-lightbox" src="./assets/img/image/image169S.png" alt="">
             </div>
 
             <figure class="clipboard-container m-t-2">
@@ -633,16 +633,16 @@ S.image()
                 <pre class="clipboard">
                     <code>
 &lt;div class=&quot;g-col g-col-s-1 g-col-m-4 g-col-l-10&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
-    &lt;img class=&quot;image-fit image-lightboxt&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
+    &lt;img class=&quot;image-fit image-lightbox&quot; src=&quot;yourPahTo/img.png&quot; alt=&quot;&quot;&gt;
 &lt;/div&gt;
                     </code>
                 </pre>
@@ -653,8 +653,8 @@ S.image()
     <footer id="straightFooter" class="bg-grey-light">
         <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
             <section>
-                <a class="btn-square-s btn-green" href="/index.html" rel="noopener" role="button">
-                    <img class="h-rem-2" src="/assets/img/logo/logoWhite.svg" alt="">
+                <a class="btn-square-s btn-green" href="./index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
                 </a>
                 <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
                     <ion-icon name="logo-github"></ion-icon>
@@ -671,61 +671,65 @@ S.image()
             <section class="d-flex j-between">
                 <ul>
                     <li class="t-x-small">
-                        <a href="/button.html" rel="noopener">button module</a>
+                        <a href="./button.html" rel="noopener">button module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/card.html" rel="noopener">card module</a>
+                        <a href="./card.html" rel="noopener">card module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/carousel.html" rel="noopener">carousel module</a>
+                        <a href="./carousel.html" rel="noopener">carousel module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/color.html" rel="noopener">color module</a>
+                        <a href="./color.html" rel="noopener">color module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/form.html" rel="noopener">form module</a>
+                        <a href="./form.html" rel="noopener">form module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/header.html" rel="noopener">header module</a>
+                        <a href="./header.html" rel="noopener">header module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/helper.html" rel="noopener">helper module</a>
+                        <a href="./helper.html" rel="noopener">helper module</a>
                     </li>
                 </ul>
                 <ul>
                     <li class="t-x-small">
-                        <a href="/image.html" rel="noopener">image module</a>
+                        <a href="./image.html" rel="noopener">image module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/layout.html" rel="noopener">layout module</a>
+                        <a href="./layout.html" rel="noopener">layout module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/list.html" rel="noopener">list module</a>
+                        <a href="./list.html" rel="noopener">list module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/nav.html" rel="noopener">nav module</a>
+                        <a href="./nav.html" rel="noopener">nav module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/notification.html" rel="noopener">notification module</a>
+                        <a href="./notification.html" rel="noopener">notification module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/template.html" rel="noopener">template module</a>
+                        <a href="./table.html" rel="noopener">table module</a>
                     </li>
                     <li class="t-x-small">
-                        <a href="/typography.html" rel="noopener">typography module</a>
+                        <a href="./template.html" rel="noopener">template module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./typography.html" rel="noopener">typography module</a>
                     </li>
                 </ul>
             </section>
         </div>
     </footer>
+    <script src="./script/detectIE.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="script/libraries/highlight.js"></script>
+    <script src="./script/libraries/highlight.js"></script>
     <script>hljs.highlightAll();</script>
-    <script src="/script/straightNav.js"></script>
-    <script src="script/image.js"></script>
-    <script src="script/straightClipboard.js"></script>
-    <script src="script/straightFooter.js"></script>
+    <script src="./script/straightNav.js"></script>
+    <script src="./script/image.js"></script>
+    <script src="./script/straightClipboard.js"></script>
+    <script src="./script/straightFooter.js"></script>
 </body>
 
 </html>

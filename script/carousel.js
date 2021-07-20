@@ -1,5 +1,6 @@
 const carousels = document.querySelectorAll(".carousel");
 const controls = document.querySelectorAll(".carousel-cta");
+const carouselSlides = document.querySelectorAll(".carousel-slide");
 const arrayCarousels = [];
 let currentIndex = 1;
 
@@ -30,6 +31,20 @@ carousel = () => {
     sliders[currentIndex - 1].classList.add("d-block");
   };
 
+  //slide to left or right
+  slideTo = (isLeft) => {
+    for (let slide of carouselSlides) {
+      if (isLeft) {
+        slide.classList.add("carousel-slide-to-left");
+        slide.classList.remove("carousel-slide-to-right");
+      }
+      if (!isLeft) {
+        slide.classList.add("carousel-slide-to-right");
+        slide.classList.remove("carousel-slide-to-left");
+      }
+    }
+  };
+
   for (let btn of controls) {
     btn.addEventListener("click", (e) => {
       //fetch current carousel id
@@ -37,8 +52,8 @@ carousel = () => {
       //check if cta is prev or next and go to to next or prev slide
       let isPrev = e.currentTarget.classList.contains("carousel-prev");
       isPrev
-        ? straightCarousel(tmpId, currentIndex--)
-        : straightCarousel(tmpId, currentIndex++);
+        ? [straightCarousel(tmpId, currentIndex--), slideTo(isPrev)]
+        : [straightCarousel(tmpId, currentIndex++), slideTo(isPrev)];
     });
   }
 

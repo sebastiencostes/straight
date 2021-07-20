@@ -2398,7 +2398,7 @@ h4::first-letter,
 
 h5,
 .h5 {
-  font-size: clamp(2.4rem, 2.2018rem + 0.7080vw, 4rem);
+  font-size: clamp(2.4rem, 2.2018rem + 0.708vw, 4rem);
 }
 h5::first-letter,
 .h5::first-letter {
@@ -2407,7 +2407,7 @@ h5::first-letter,
 
 h6,
 .h6 {
-  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
 }
 h6::first-letter,
 .h6::first-letter {
@@ -2436,8 +2436,8 @@ h6,
 }
 
 p {
-  margin-top: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
-  margin-bottom: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
+  margin-top: clamp(0.8rem, 0.7009rem + 0.354vw, 1.6rem);
+  margin-bottom: clamp(0.8rem, 0.7009rem + 0.354vw, 1.6rem);
 }
 p::first-letter {
   text-transform: capitalize;
@@ -2446,8 +2446,13 @@ p::first-letter {
 p,
 span,
 li {
-  font-size: clamp(1.6rem, 1.5009rem + 0.3540vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
   font-weight: 300;
+}
+
+a:hover,
+a:active {
+  color: #008e76;
 }
 
 .t-small {
@@ -2455,7 +2460,7 @@ li {
 }
 
 .t-x-small {
-  font-size: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
+  font-size: clamp(0.8rem, 0.7009rem + 0.354vw, 1.6rem);
 }
 
 h1,
@@ -2535,7 +2540,7 @@ ADDRESS
 *******
 */
 .address-title {
-  font-size: clamp(2.4rem, 2.2018rem + 0.7080vw, 4rem);
+  font-size: clamp(2.4rem, 2.2018rem + 0.708vw, 4rem);
 }
 .address-body {
   margin-bottom: 1rem;
@@ -2548,7 +2553,7 @@ ADDRESS
   align-items: center;
 }
 .address-text {
-  font-size: clamp(1.6rem, 1.5009rem + 0.3540vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
 }
 
 /*
@@ -2558,7 +2563,7 @@ MARK
 */
 .mark-yellow {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #ffff52;
@@ -2566,7 +2571,7 @@ MARK
 }
 .mark-orange {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #ff9e40;
@@ -2574,7 +2579,7 @@ MARK
 }
 .mark-red {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #ff5131;
@@ -2583,7 +2588,7 @@ MARK
 }
 .mark-purple {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #e254ff;
@@ -2592,7 +2597,7 @@ MARK
 }
 .mark-blue {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #64c1ff;
@@ -2600,7 +2605,7 @@ MARK
 }
 .mark-green {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #9cff57;
@@ -2608,7 +2613,7 @@ MARK
 }
 .mark-pink {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #fd558f;
@@ -2617,7 +2622,7 @@ MARK
 }
 .mark-turquoise {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #5df2d6;
@@ -2625,7 +2630,7 @@ MARK
 }
 .mark-brown {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #be9c91;
@@ -2633,7 +2638,7 @@ MARK
 }
 .mark-navy {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #a7c0cd;
@@ -2641,7 +2646,7 @@ MARK
 }
 .mark-grey {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #efefef;
@@ -2649,7 +2654,7 @@ MARK
 }
 .mark-black {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
   background-color: #484848;
@@ -2663,31 +2668,31 @@ ICON
 ****
 */
 ion-icon.icon-s {
-  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
 }
 
 ion-icon.icon-m {
-  font-size: clamp(3.2rem, 3.1009rem + 0.3540vw, 4rem);
+  font-size: clamp(3.2rem, 3.1009rem + 0.354vw, 4rem);
 }
 
 ion-icon.icon-l {
-  font-size: clamp(4rem, 3.9009rem + 0.3540vw, 4.8rem);
+  font-size: clamp(4rem, 3.9009rem + 0.354vw, 4.8rem);
 }
 
 ion-icon.icon-xl {
-  font-size: clamp(4.8rem, 4.7009rem + 0.3540vw, 5.6rem);
+  font-size: clamp(4.8rem, 4.7009rem + 0.354vw, 5.6rem);
 }
 
 ion-icon.icon-xxl {
-  font-size: clamp(5.6rem, 5.5009rem + 0.3540vw, 6.4rem);
+  font-size: clamp(5.6rem, 5.5009rem + 0.354vw, 6.4rem);
 }
 
 ion-icon.icon-xxxl {
-  font-size: clamp(6.4rem, 6.3009rem + 0.3540vw, 7.2rem);
+  font-size: clamp(6.4rem, 6.3009rem + 0.354vw, 7.2rem);
 }
 
 ion-icon {
-  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
 }
 
 ion-icon {
@@ -9262,10 +9267,6 @@ CAROUSEL SHARED
 }
 .carousel-caption .carousel-slide, .carousel-overlay .carousel-slide, .carousel .carousel-slide {
   position: relative;
-  -webkit-animation-name: carousel;
-  animation-name: carousel;
-  -webkit-animation-duration: 0.28s;
-  animation-duration: 0.28s;
 }
 .carousel-caption .carousel-text-container, .carousel-overlay .carousel-text-container {
   width: 100%;
@@ -9350,34 +9351,60 @@ CAROUSEL CAPTION
 ANIMATION
 *********
 */
-@-webkit-keyframes carousel {
+.carousel-slide-to-left {
+  -webkit-animation-name: carouselSlideToLeft;
+  animation-name: carouselSlideToLeft;
+  -webkit-animation-duration: 0.28s;
+  animation-duration: 0.28s;
+}
+@-webkit-keyframes carouselSlideToLeft {
   from {
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   to {
-    -webkit-filter: brightness(1);
-    filter: brightness(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
-@keyframes carousel {
+@keyframes carouselSlideToLeft {
   from {
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
   to {
-    -webkit-filter: brightness(1);
-    filter: brightness(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
+
+.carousel-slide-to-right {
+  -webkit-animation-name: carouselSlideToRight;
+  animation-name: carouselSlideToRight;
+  -webkit-animation-duration: 0.28s;
+  animation-duration: 0.28s;
+}
+@-webkit-keyframes carouselSlideToRight {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes carouselSlideToRight {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
 /*
 Text overlay
 */
@@ -19026,6 +19053,9 @@ CARD
   -webkit-box-direction: normal;
   flex-direction: column;
 }
+.card-footer {
+  z-index: 0;
+}
 /*
 ******
 CARD-H
@@ -19043,6 +19073,7 @@ CARD-H
 }
 .card-h .card-footer {
   width: 50%;
+  z-index: 0;
 }
 
 /*
@@ -19063,6 +19094,7 @@ CARD-L
 }
 .card-l .card-footer {
   width: 75%;
+  z-index: 0;
 }
 
 /*
