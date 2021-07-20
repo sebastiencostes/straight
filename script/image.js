@@ -20,3 +20,11 @@ for (let image of imagesLightbox) {
     imgLightBox(image);
   });
 }
+
+//close targeted image when clicking outside
+for (let image of imagesLightbox) {
+  document.addEventListener("click", function (event) {
+    let isImage = image.contains(event.target);
+    !isImage ? image.classList.remove("image-highlighted") : null;
+  });
+}

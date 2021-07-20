@@ -435,7 +435,7 @@ const S = {
       if (width < height) image.classList.add("image-fit-portrait");
       if (width === height) image.classList.add("image-fit-square");
     }
-
+    
     //lightbox function with toggling class
     imgLightBox = (picture) => {
       picture.classList.toggle("image-highlighted");
@@ -444,6 +444,14 @@ const S = {
     for (let image of imagesLightbox) {
       image.addEventListener("click", () => {
         imgLightBox(image);
+      });
+    }
+    
+    //close targeted image when clicking outside
+    for (let image of imagesLightbox) {
+      document.addEventListener("click", function (event) {
+        let isImage = image.contains(event.target);
+        !isImage ? image.classList.remove("image-highlighted") : null;
       });
     }
   },
