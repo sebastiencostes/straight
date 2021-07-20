@@ -15,10 +15,6 @@ CAROUSEL SHARED
   @include p.position(relative);
   %carousel-slide-shared {
     @include p.position(relative);
-    -webkit-animation-name: carousel;
-    animation-name: carousel;
-    -webkit-animation-duration: u.$time;
-    animation-duration: u.$time;
   }
   %carousel-text-container-shared {
     @include w.width(100%);
@@ -119,37 +115,61 @@ CAROUSEL CAPTION
   }
 }
 
-
 /*
 *********
 ANIMATION
 *********
 */
-@-webkit-keyframes carousel {
-  from {
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
+.carousel-slide-to-left {
+  -webkit-animation-name: carouselSlideToLeft;
+  animation-name: carouselSlideToLeft;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+  @-webkit-keyframes carouselSlideToLeft {
+    from {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
-  to {
-    -webkit-filter: brightness(1);
-    filter: brightness(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+  @keyframes carouselSlideToLeft {
+    from {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
 }
-@keyframes carousel {
-  from {
-    -webkit-filter: brightness(0.5);
-    filter: brightness(0.5);
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
+
+.carousel-slide-to-right {
+  -webkit-animation-name: carouselSlideToRight;
+  animation-name: carouselSlideToRight;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+  @-webkit-keyframes carouselSlideToRight {
+    from {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
-  to {
-    -webkit-filter: brightness(1);
-    filter: brightness(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+  @keyframes carouselSlideToRight {
+    from {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
   }
 }

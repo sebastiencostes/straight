@@ -52,7 +52,9 @@ SHARED STYLE
   @include h.height(100%);
   @include w.width(100%);
   @include z.z-index(1);
-  overflow-y: scroll;
+  //firefox hide scrollbar and preserve scrolling
+  scrollbar-width: none;
+  overflow-y: auto;
   right: 0;
   top: 0;
   -webkit-animation-name: cardBody;
@@ -118,6 +120,7 @@ CARD
   }
   &-footer {
     @extend %card-footer-shared;
+    z-index: 0;
   }
   &-body {
     @extend %card-body-shared;
@@ -162,6 +165,7 @@ CARD-H
   .card-footer {
     @extend %card-h-l-footer-shared;
     @include w.width(50%);
+    z-index: 0;
   }
 }
 
@@ -185,6 +189,7 @@ CARD-L
   .card-footer {
     @extend %card-h-l-footer-shared;
     @include w.width(75%);
+    z-index: 0;
   }
 }
 

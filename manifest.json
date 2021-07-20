@@ -5,6 +5,7 @@
   "start_url": "/index.html",
   "display": "fullscreen",
   "theme_color": "#64dd17",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "assets/img/logo/logo16x16.png",

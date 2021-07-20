@@ -82,6 +82,9 @@ SCROLLABLE TABLE
   }
   &-body {
     @extend %table-body-shared;
+    //firefox scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: c.$grey c.$grey-light;
   }
   &-row {
     @extend %table-row-shared;
@@ -96,6 +99,26 @@ SCROLLABLE TABLE
   @extend %table-scrollabe;
   &-body {
     @extend %table-scrollabe;
+    //firefox scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: c.$grey c.$grey-light;
     overflow-x: auto;
   }
+}
+
+//edge, safri, chrome,opera scrollbar
+.table-scrollable-body::-webkit-scrollbar,
+.table-body::-webkit-scrollbar {
+  height: 0.8rem;
+  width: 0.8rem;
+}
+.table-scrollable-body::-webkit-scrollbar-track,
+.table-body::-webkit-scrollbar-track {
+  background: c.$grey-light;
+}
+.table-scrollable-body::-webkit-scrollbar-thumb,
+.table-body::-webkit-scrollbar-thumb {
+  background-color: c.$grey;
+  border-radius: 0;
+  border: 0;
 }

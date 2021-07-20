@@ -1,5 +1,6 @@
-const accordionContainer = document.querySelectorAll(".accordion-container");
-const listContainer = document.querySelectorAll(".accordion-container .list-container");
+const listContainer = document.querySelectorAll(
+  ".accordion-container .list-container"
+);
 const accordionCta = document.querySelectorAll(".accordion-cta");
 
 //set attr for each triiger and list container
@@ -14,7 +15,6 @@ toggleList = (accordion, trigger) => {
     accordion.getAttribute("data-accordion") ===
     trigger.getAttribute("data-accordion")
   ) {
-    //accordion.classList.toggle("d-none");
     accordion.classList.toggle("accordion-open");
     accordion.classList.toggle("accordion-close");
   }

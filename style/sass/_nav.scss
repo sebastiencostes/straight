@@ -36,7 +36,9 @@ OPEN classic nav
     @include p.position(absolute);
     @include u.b-shadow();
     @include h.height(calc(100vh - 8rem));
-    overflow-y: scroll;
+    //firefox hide scrollbar and preserve scrolling
+    scrollbar-width: none;
+    overflow-y: auto;
     @include pd.padding(2rem);
     @include w.width(100vw);
     @include d.tablet-portrait() {
@@ -83,7 +85,9 @@ OPEN Pad nav
 .nav-pad-menu {
   @include g.g-col-gap(2rem);
   @include g.row-gap(2rem);
-  overflow-y: scroll;
+  //firefox hide scrollbar and preserve scrolling
+  scrollbar-width: none;
+  overflow-y: auto;
   @include f.backdrop-filter(blur(1.6rem));
   -webkit-animation-name: padNav;
   animation-name: padNav;
@@ -121,12 +125,18 @@ OPEN Pad nav
     }
   }
 }
+
 @supports not (
   (backdrop-filter: blur(1.6rem)) or (-moz-backdrop-filter: blur(1.6rem)) or
     (-webkit-backdrop-filter: blur(1.6rem))
 ) {
   .nav-pad-menu {
-    background: rgba(255, 255, 255, 0.9);
+    @include c.dark-theme() {
+      background: rgba(3, 3, 3, 0.9);
+    }
+    @include c.light-theme() {
+      background: rgba(255, 255, 255, 0.9);
+    }
   }
 }
 /*

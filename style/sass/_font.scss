@@ -119,14 +119,14 @@ h4,
 }
 h5,
 .h5 {
-  font-size: clamp(2.4rem, 2.2018rem + 0.7080vw, 4rem);
+  font-size: clamp(2.4rem, 2.2018rem + 0.708vw, 4rem);
   &::first-letter {
     @include text-transform(capitalize);
   }
 }
 h6,
 .h6 {
-  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
   &::first-letter {
     @include text-transform(capitalize);
   }
@@ -151,8 +151,8 @@ h6,
   @include text-transform(lowercase);
 }
 p {
-  margin-top: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
-  margin-bottom: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
+  margin-top: clamp(0.8rem, 0.7009rem + 0.354vw, 1.6rem);
+  margin-bottom: clamp(0.8rem, 0.7009rem + 0.354vw, 1.6rem);
   &::first-letter {
     @include text-transform(capitalize);
   }
@@ -160,15 +160,19 @@ p {
 p,
 span,
 li {
-  font-size: clamp(1.6rem, 1.5009rem + 0.3540vw, 2.4rem);
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
   font-weight: 300;
+}
+a:hover,
+a:active {
+  color: c.$turquoise-dark;
 }
 .t-small {
   font-size: 1.6rem;
 }
 
 .t-x-small {
-  font-size: clamp(0.8rem, 0.7009rem + 0.3540vw, 1.6rem);
+  font-size: clamp(0.8rem, 0.7009rem + 0.354vw, 1.6rem);
 }
 
 h1,
@@ -247,7 +251,7 @@ ADDRESS
 */
 .address {
   &-title {
-    font-size: clamp(2.4rem, 2.2018rem + 0.7080vw, 4rem);
+    font-size: clamp(2.4rem, 2.2018rem + 0.708vw, 4rem);
   }
   &-body {
     margin-bottom: 1rem;
@@ -258,7 +262,7 @@ ADDRESS
     @include f.align-items(center);
   }
   &-text {
-    font-size: clamp(1.6rem, 1.5009rem + 0.3540vw, 2.4rem);
+    font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
   }
 }
 
@@ -269,7 +273,7 @@ MARK
 */
 @mixin mark() {
   border: solid 3px;
-  font-size: clamp(1.2rem, 1.1009rem + 0.3540vw, 2rem);
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
   font-weight: 500;
   padding: 2px 4px;
 }
@@ -346,30 +350,30 @@ ICON
 ****
 */
 ion-icon.icon-s {
-  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
 }
 
 ion-icon.icon-m {
-  font-size: clamp(3.2rem, 3.1009rem + 0.3540vw, 4rem);
+  font-size: clamp(3.2rem, 3.1009rem + 0.354vw, 4rem);
 }
 
 ion-icon.icon-l {
-  font-size: clamp(4rem, 3.9009rem + 0.3540vw, 4.8rem);
+  font-size: clamp(4rem, 3.9009rem + 0.354vw, 4.8rem);
 }
 
 ion-icon.icon-xl {
-  font-size: clamp(4.8rem, 4.7009rem + 0.3540vw, 5.6rem);
+  font-size: clamp(4.8rem, 4.7009rem + 0.354vw, 5.6rem);
 }
 
 ion-icon.icon-xxl {
-  font-size: clamp(5.6rem, 5.5009rem + 0.3540vw, 6.4rem);
+  font-size: clamp(5.6rem, 5.5009rem + 0.354vw, 6.4rem);
 }
 
 ion-icon.icon-xxxl {
-  font-size: clamp(6.4rem, 6.3009rem + 0.3540vw, 7.2rem);
+  font-size: clamp(6.4rem, 6.3009rem + 0.354vw, 7.2rem);
 }
 ion-icon {
-  font-size: clamp(2.4rem, 2.3009rem + 0.3540vw, 3.2rem);
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
 }
 ion-icon {
   pointer-events: none;
