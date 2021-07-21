@@ -1,3 +1,4 @@
+//future : navigator.userAgentData.brands[0].brand
 const ua = window.navigator.userAgent;
 const isIE = /MSIE|Trident/.test(ua);
 const isIE11 = /Trident\/7\./.test(ua);

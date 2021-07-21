@@ -22,5 +22,5 @@ getVersion = (versionNumber) => {
 window.addEventListener("load", () => {
     getAuthor();
     getCurrentYear(year);
-    getVersion("0.9");
+    getVersion("0.1");
 });

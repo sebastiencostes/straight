@@ -3203,6 +3203,54 @@ LIST
   }
 }
 
+.no-b-shadow {
+  box-shadow: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .b-shadow-s {
+    box-shadow: 0 4px 8px rgba(119, 119, 119, 0.26);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .b-shadow-s {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .b-shadow-m {
+    box-shadow: 0 8px 16px rgba(119, 119, 119, 0.26);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .b-shadow-m {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .b-shadow-l {
+    box-shadow: 0 16px 32px rgba(119, 119, 119, 0.26);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .b-shadow-l {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .b-shadow-xl {
+    box-shadow: 0 32px 64px rgba(119, 119, 119, 0.26);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .b-shadow-xl {
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+  }
+}
+
 .op-0 {
   opacity: 0;
 }
@@ -20194,6 +20242,10 @@ IMAGE HIGHLIGHT
   .image-highlighted {
     box-shadow: 10px 15px 10px rgba(119, 119, 119, 0.26);
   }
+}
+
+.image-lightbox {
+  cursor: pointer;
 }
 
 /*
