@@ -6,6 +6,7 @@ clipBoard = (targetCode, currentBtn) => {
   let copy = targetCode.nextSibling.nextSibling;
   let range = document.createRange();
   range.selectNode(copy);
+  window.getSelection().removeAllRanges(); 
   window.getSelection().addRange(range);
 
   try {
