@@ -23,7 +23,7 @@ const arrayModules = [
     url: "module",
     img: "carousel",
     content:
-      "  Carousels allow you to show mutli content in one component. Generally picutres with or without text are provided.",
+      "Carousels allow you to show multi content in one component. Generally pictures with or without text are provided.",
     subtitle: "next & prev",
   },
   {
@@ -31,7 +31,7 @@ const arrayModules = [
     url: "module",
     img: "color",
     content:
-      "Bring some colors to your project. Flat, gradient palettes and some other stuffs are available",
+      "Bring some colors to your project. Flat, gradient palettes and some other stuffs are available.",
     subtitle: "palette",
   },
   {
@@ -61,7 +61,7 @@ const arrayModules = [
     title: "image",
     url: "module",
     img: "image",
-    content: "element embeds an image into the document",
+    content: "element embeds an image into the document.",
     subtitle: "responsive & gallery",
   },
   {
@@ -106,7 +106,7 @@ const arrayModules = [
     title: "template",
     url: "module",
     img: "template",
-    content: "totally random example of possibilities",
+    content: "totally random example of possibilities.",
     subtitle: "miscellaneous example",
   },
   {

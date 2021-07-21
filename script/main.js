@@ -583,16 +583,18 @@ const S = {
     autoDismiss = () => {
       for (let notif of arrayNotifications) {
         if (notif.classList.contains("auto-dismiss")) {
-          setTimeout(() => {
+          reinit = setTimeout(() => {
             notif.classList.remove("d-block");
             notif.classList.add("d-none");
           }, dismissTime);
         }
       }
     };
-    //call autoDismiss()
+    autoDismiss();
+    //call autoDismiss() and reinit
     for (let btn of arrayOpenButtons) {
       btn.addEventListener("click", () => {
+        clearTimeout(reinit);
         autoDismiss();
       });
     }
