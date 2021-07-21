@@ -1,0 +1,241 @@
+@use "font" as f;
+@use "device" as d;
+@use "color" as c;
+@use "height" as h;
+@use "grid" as g;
+@use "flexbox" as fx;
+@use "margin" as m;
+@use "padding" as p;
+@use "position" as pos;
+@use "utility" as u;
+@use "width" as w;
+@use "z-index" as z;
+
+/*
+************
+SHARED STYLE
+************
+*/
+%card-shared {
+  @include fx.d-flex();
+  @include h.height(100%);
+  @include pos.position(relative);
+  background-clip: border-box;
+  overflow: hidden;
+}
+%card-header-shared {
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include p.padding(1rem);
+  @include fx.align-items(center);
+  @include h.height(6rem);
+}
+%card-title-shared {
+  font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+}
+%card-img-container-shared {
+  position: relative;
+}
+%card-img-shared {
+  @include w.width(100%);
+}
+%card-footer-shared {
+  @include fx.d-flex();
+  @include fx.justify-between();
+  @include fx.align-items(center);
+  @include p.padding(1rem);
+  @include h.height(6rem);
+}
+%card-body-shared {
+  @include fx.f-dir-col();
+  @include pos.position(absolute);
+  @include h.height(100%);
+  @include w.width(100%);
+  @include z.z-index(1);
+  //firefox hide scrollbar and preserve scrolling
+  scrollbar-width: none;
+  overflow-y: auto;
+  right: 0;
+  top: 0;
+  -webkit-animation-name: cardBody;
+  animation-name: cardBody;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+}
+%card-body-text-shared {
+  @include m.margin(2rem 0 2rem);
+  @include p.padding(0 2rem);
+}
+%card-body-footer-shared {
+  @include m.margin-direction(top, auto);
+}
+%card-left-text-shared {
+  cursor: default;
+}
+%card-sup-shared {
+  top: inherit;
+  @include f.font-size(0.65em);
+  vertical-align: 0.41em;
+}
+%card-cta-shared {
+  @include p.padding(0);
+}
+%card-h-l-header-shared {
+  @include h.height(50%);
+  @include fx.items-start();
+}
+%card-h-l-footer-shared {
+  @include fx.items-end();
+  @include h.height(50%);
+  @include p.padding(1rem);
+  @include pos.position(absolute);
+  bottom: 0;
+}
+%card-h-l-title-shared {
+  font-size: clamp(1.6rem, 1.46rem + 0.5vw, 2.4rem);
+}
+
+/*
+****
+CARD
+****
+*/
+.card {
+  @extend %card-shared;
+  @include fx.f-dir-col();
+  &-cta {
+    @extend %card-cta-shared;
+  }
+  &-header {
+    @extend %card-header-shared;
+  }
+  &-title {
+    @extend %card-title-shared;
+  }
+  &-img {
+    @extend %card-img-shared;
+    &-container {
+      @extend %card-img-container-shared;
+    }
+  }
+  &-footer {
+    @extend %card-footer-shared;
+    z-index: 0;
+  }
+  &-body {
+    @extend %card-body-shared;
+    &-header {
+      @extend %card-header-shared;
+    }
+    &-title {
+      @extend %card-title-shared;
+    }
+    &-text {
+      @extend %card-body-text-shared;
+    }
+    &-footer {
+      @extend %card-footer-shared;
+      @extend %card-body-footer-shared;
+    }
+  }
+  &-left-text {
+    @extend %card-left-text-shared;
+  }
+  sup {
+    @extend %card-sup-shared;
+  }
+}
+
+/*
+******
+CARD-H
+******
+*/
+.card-h {
+  @include fx.f-dir-row-reverse();
+  .card-header {
+    @extend %card-h-l-header-shared;
+    @include w.max-width(50%);
+    -webkit-box-flex: 1;
+    flex: 1 0 50%;
+  }
+  .card-title {
+    @extend %card-h-l-title-shared;
+  }
+  .card-footer {
+    @extend %card-h-l-footer-shared;
+    @include w.width(50%);
+    z-index: 0;
+  }
+}
+
+/*
+******
+CARD-L
+******
+*/
+.card-l {
+  @include fx.f-dir-row-reverse();
+  .card-header {
+    @extend %card-h-l-header-shared;
+    @include w.max-width(75%);
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 75%;
+    flex: 1 0 75%;
+  }
+  .card-title {
+    @extend %card-h-l-title-shared;
+  }
+  .card-footer {
+    @extend %card-h-l-footer-shared;
+    @include w.width(75%);
+    z-index: 0;
+  }
+}
+
+/*
+*****
+THEME
+*****
+*/
+@include c.dark-theme {
+  .card {
+    &-body {
+      background-color: c.$black-dark;
+    }
+  }
+}
+
+@include c.light-theme {
+  .card {
+    &-body {
+      background-color: c.$white;
+    }
+  }
+}
+
+/*
+*********
+ANIMATION
+*********
+*/
+@-webkit-keyframes cardBody {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes cardBody {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

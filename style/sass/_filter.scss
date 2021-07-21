@@ -1,0 +1,21 @@
+/*
+Text overlay
+*/
+@mixin text-overlay() {
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 4px 6px black);
+}
+
+.text-overlay {
+  @include text-overlay();
+}
+
+@mixin filter($value) {
+  -webkit-filter: $value;
+  filter: $value;
+}
+
+@mixin backdrop-filter($value) {
+  -webkit-backdrop-filter: $value;
+  backdrop-filter: $value;
+}

@@ -1,0 +1,390 @@
+@use 'color' as c;
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: calc(1em * 0.625);
+  overflow: initial;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+  //firefox / hide scrollbar and preserve scroll
+  scrollbar-width: none;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  overflow-x: hidden;
+}
+
+//edge, safari, opera & chrome / hide scrollbar and preserve scroll
+body::-webkit-scrollbar {
+  display: none;
+}
+//edge, safari, opera & chrome / hide scrollbar and preserve scroll
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+::-moz-selection {
+  background-color: c.$blue-light;
+  color: c.$carbon;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: c.$blue-light;
+  color: c.$carbon;
+  text-shadow: none;
+}
+
+b,
+strong,
+summary,
+button,
+mark,
+small,
+address,
+blockquote,
+cite,
+a,
+details,
+span,
+summary,
+input,
+code,
+pre,
+samp {
+  font-weight: 400;
+  margin: 0;
+}
+
+b,
+strong {
+  font-weight: 400;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+blockquote,
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.55;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: none;
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  height: auto;
+}
+
+input[type="number"] {
+  -moz-appearance: texfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+nav ul li,
+a {
+  cursor: pointer;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+button,
+a.btn,
+button.btn {
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+}
+
+caption {
+  text-align: left;
+  caption-side: bottom;
+}
+
+details {
+  cursor: pointer;
+  display: block;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+/*
+******
+INPUTS
+******
+*/
+textarea,
+input[type="button"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="week"],
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+textarea,
+input[type="button"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="reset"],
+input[type="search"],
+input[type="submit"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="week"] {
+  border: 0;
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+/*
+***
+IMG
+***
+*/
+img {
+  border-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+mark {
+  display: inline-block;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+small {
+  font-size: 80%;
+}
+
+span {
+  cursor: default;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+summary {
+  display: list-item;
+}
+
+sup {
+  top: -0.5em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+template {
+  display: none;
+}
+
+textarea {
+  resize: none;
+  overflow: auto;
+}
+
+th {
+  text-align: inherit;
+}
+
+ul {
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+:root {
+  color-scheme: light dark;
+}

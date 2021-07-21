@@ -1,0 +1,84 @@
+@use "height" as h;
+@use "flexbox" as fx;
+@use "grid" as g;
+@use "font" as f;
+@use "margin" as m;
+@use "padding" as p;
+@use "position" as pos;
+
+%header-shared {
+  @include g.g-container();
+  @include fx.align-items(center);
+}
+
+%header-title-shared {
+  @include f.text-transform(uppercase);
+  letter-spacing: 1.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+//page presentation
+.header {
+  &-presentation {
+    @extend %header-shared;
+    @include h.height(calc(50vh - 8rem));
+    @include m.margin-direction(bottom, 8rem);
+    @include m.margin-direction(top, 8rem);
+    &-title {
+      @extend %header-title-shared;
+      font-size: clamp(2.4rem, 1.14rem + 4.5vw, 9.6rem);
+    }
+  }
+}
+
+//header
+.header {
+  @extend %header-shared;
+  &-title {
+    @extend %header-title-shared;
+  }
+}
+
+//header text overlay
+.header {
+  &-image {
+    @include p.padding(2rem);
+    @include pos.position(relative);
+    &-title {
+      @extend %header-title-shared;
+      @include pos.pos-absolute-centering();
+      @include f.text-overlay();
+    }
+  }
+}
+//header page background image
+.header {
+  &-presentation-background {
+    @extend %header-shared;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    @include h.height(calc(50vh - 8rem));
+    @include m.margin-direction(bottom, 8rem);
+    @include m.margin-direction(top, 8rem);
+    &-title {
+      @extend %header-title-shared;
+      @include f.text-overlay();
+    }
+  }
+}
+
+//header sticky
+.header {
+  &-sticky {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    &-title {
+      @extend %header-title-shared;
+      position: -webkit-sticky;
+      position: sticky;
+      bottom: 50%;
+      top: 50%;
+    }
+  }
+}

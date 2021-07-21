@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Straight Carousel - Carousels allow you to show mutli content in one component. Generally picutres with or without text are provided. Pictures, text or both can be linked. Components are showed one by one.">
+        <meta name="author" content="Sébastien COSTES">
+        <meta name="color-scheme" content="dark light">
+        <title>Straight | Carousel</title>
+        <link href="https://cdn.jsdelivr.net/gh/sebastiencostes/straight@develop/style/css/style.min.css" rel="stylesheet" crossorigin="anonymous">    
+        <link rel="manifest" href="./manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Straight">
+        <meta name="apple-mobile-web-app-title" content="Straight">
+        <meta name="theme-color" content="#64dd17">
+        <meta name="msapplication-navbutton-color" content="#64dd17">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="./index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+    </head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s btn-green" href="./index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s btn-green" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-orange" role="presentation">
+        <h1 class="header-presentation-title t-white">Carousel</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-orange">
+            About Carousel
+        </h2>
+        <p>
+            Carousels allow you to show multi content in one component.
+            Generally pictures with or without text are provided.
+            Pictures, text or both can be linked. Components are showed one by one.
+        </p>
+
+        <section class="m-t-8">
+            <h3 class="note-orange">
+                Activation
+            </h3>
+            <p>
+                To activate <span class="t-blue">carousel</span>, insert this line of code into your JavaScript file.
+            </p>
+            <figure class="clipboard-container">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+S.carousel();
+                </code>
+            </pre>
+            </figure>
+        </section>
+
+
+        <h3 class="note-orange m-t-8">
+            Carousel models
+        </h3>
+        <p>
+            3 Carousel models are available. Simple carousels are provided. Each offers differents options about
+            presentation.
+            When using <b>Carousel</b> you <b>must specify an id</b> on each
+            <code
+                class="single-code">&lt;yourtag id=&quot;yourCarouselID&quot; class=&quot;carousel&quot;&gt;</code>.
+            Thanks to <b>srcset</b> you can call your optimized media for specific device's breakpoint.
+        </p>
+
+        <article class="m-t-8">
+            <h3 class="note-orange">
+                Carousel
+            </h3>
+            <p>Specify an ID in <code class="single-code">  &lt;div id=&quot;yourID&quot; class=&quot;carousel&quot;&gt;</code>.
+            </p>
+
+            <div id="carousel1" class="carousel b-smooth">
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="./assets/img/carousel/carouselBig.png" media="(min-width: 2540px)">
+                        <source srcset="./assets/img/carousel/carousel.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/carousel/carouselMedium.png" alt="">
+                    </picture>
+                </figure>
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="./assets/img/carousel/carouselBigGreen.png" media="(min-width: 2540px)">
+                        <source srcset="./assets/img/carousel/carouselGreen.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/carousel/carouselMediumGreen.png" alt="">
+                    </picture>
+                </figure>
+                <figure class="carousel-slide">
+                    <picture>
+                        <source srcset="./assets/img/carousel/carouselBigYellow.png" media="(min-width: 2540px)">
+                        <source srcset="./assets/img/carousel/carouselYellow.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/carousel/carouselMediumYellow.png" alt="">
+                    </picture>
+                </figure>
+                <button class="carousel-cta carousel-prev btn-square-m" type="button">
+                    <ion-icon class="carousel-cta-icon" name="caret-back" />
+                </button>
+                <button class="carousel-cta carousel-next btn-square-m" type="button">
+                    <ion-icon class="carousel-cta-icon" name="caret-forward" />
+                </button>
+            </div>
+        </article>
+
+        <figure class="clipboard-container m-t-2">
+            <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                <ion-icon name="clipboard-outline"></ion-icon>
+            </button>
+            <pre class="clipboard">
+                    <code>
+&lt;div id=&quot;yourID&quot; class=&quot;carousel&quot;&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+    &lt;/figure&gt;
+    &lt;button class=&quot;carousel-cta carousel-prev btn-square-m&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;carousel-cta-icon&quot; name=&quot;caret-back&quot; /&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;carousel-cta carousel-next btn-square-m&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;carousel-cta-icon&quot; name=&quot;caret-forward&quot; /&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+                </code>
+            </pre>
+        </figure>
+
+        <h3 class="note-orange m-t-8">
+            Carousel with text overlay
+        </h3>
+        <p>Title is linked.</p>
+        <p>
+            Specify an ID in <code class="single-code">&lt;article id=&quot;yourID&quot; class=&quot;carousel carousel-overlay&quot;&gt;</code>.
+        </p>
+
+        <article id="carousel2" class="carousel carousel-overlay b-smooth">
+            <figure class="carousel-slide">
+                <picture>
+                    <source srcset="./assets/img/carousel/carouselBig.png" media="(min-width: 2540px)">
+                    <source srcset="./assets/img/carousel/carousel.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/carousel/carouselMedium.png" alt="">
+                </picture>
+                <figcaption class="carousel-text-container">
+                    <h4 class="carousel-title">
+                        <a class="t-white" href="#" rel="noopener">Carousel with text overlay 1</a>
+                    </h4>
+                    <p class="carousel-text">This is a carousel with text overlay</p>
+                </figcaption>
+            </figure>
+            <figure class="carousel-slide">
+                <picture>
+                    <source srcset="./assets/img/carousel/carouselBigGreen.png" media="(min-width: 2540px)">
+                    <source srcset="./assets/img/carousel/carouselGreen.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/carousel/carouselMediumGreen.png" alt="">
+                </picture>
+                <figcaption class="carousel-text-container">
+                    <h4 class="carousel-title">
+                        <a class="t-white" href="#" rel="noopener">Carousel with text overlay 2</a>
+                    </h4>
+                    <p class="carousel-text">This is a carousel with text overlay</p>
+                </figcaption>
+            </figure>
+            <figure class="carousel-slide">
+                <picture>
+                    <source srcset="./assets/img/carousel/carouselBigYellow.png" media="(min-width: 2540px)">
+                    <source srcset="./assets/img/carousel/carouselYellow.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/carousel/carouselMediumYellow.png" alt="">
+                </picture>
+                <figcaption class="carousel-text-container">
+                    <h4 class="carousel-title">
+                        <a class="t-white" href="#" rel="noopener">Carousel with text overlay 3</a>
+                    </h4>
+                    <p class="carousel-text">This is a carousel with text overlay</p>
+                </figcaption>
+            </figure>
+            <button class="carousel-cta carousel-prev btn-square-m" type="button">
+                <ion-icon class="carousel-cta-icon" name="caret-back" />
+            </button>
+            <button class="carousel-cta carousel-next btn-square-m" type="button">
+                <ion-icon class="carousel-cta-icon" name="caret-forward" />
+            </button>
+        </article>
+
+        <figure class="clipboard-container m-t-2">
+            <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                <ion-icon name="clipboard-outline"></ion-icon>
+            </button>
+            <pre class="clipboard" rel="copy carousel with text overlay to clipboard">
+                    <code>
+&lt;article id=&quot;yourID&quot; class=&quot;carousel carousel-overlay&quot;&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.pngg&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;figcaption class=&quot;carousel-text-container&quot;&gt;
+            &lt;h4 class=&quot;carousel-title&quot;&gt;
+                &lt;a class=&quot;t-white&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;Carousel with text overlay 1&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;p class=&quot;carousel-text&quot;&gt;This is a carousel with text overlay&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;figcaption class=&quot;carousel-text-container&quot;&gt;
+            &lt;h4 class=&quot;carousel-title&quot;&gt;
+                &lt;a class=&quot;t-white&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;Carousel with text overlay 2&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;p class=&quot;carousel-text&quot;&gt;This is a carousel with text overlay&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;picture&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+            &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+            &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.png&quot; alt=&quot;&quot;&gt;
+        &lt;/picture&gt;
+        &lt;figcaption class=&quot;carousel-text-container&quot;&gt;
+            &lt;h4 class=&quot;carousel-title&quot;&gt;
+                &lt;a class=&quot;t-white&quot; href=&quot;#&quot; rel=&quot;noopener&quot;&gt;Carousel with text overlay 3&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;p class=&quot;carousel-text&quot;&gt;This is a carousel with text overlay&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;button class=&quot;carousel-cta carousel-prev btn-square-m&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;carousel-cta-icon&quot; name=&quot;caret-back&quot; /&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;carousel-cta carousel-next btn-square-m&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;carousel-cta-icon&quot; name=&quot;caret-forward&quot; /&gt;
+    &lt;/button&gt;
+&lt;/article&gt;
+                </code>
+            </pre>
+        </figure>
+
+        <h3 class="note-orange m-t-8">
+            Carousel with caption
+        </h3>
+        <p>Both image and title are linked.</p>
+        <p>
+            Specify an ID in <code class="single-code"> &lt;article id=&quot;yourID&quot; class=&quot;carousel carousel-caption&quot;&gt;</code>.
+        </p>
+
+        <article id="carousel3" class="carousel carousel-caption b-smooth b-shadow">
+            <figure class="carousel-slide">
+                <a href="#" rel="noopener">
+                    <picture>
+                        <source srcset="./assets/img/carousel/carouselBig.png" media="(min-width: 2540px)">
+                        <source srcset="./assets/img/carousel/carousel.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/carousel/carouselMedium.png" alt="">
+                    </picture>
+                </a>
+                <figcaption class="carousel-text-container p-2">
+                    <h4 class="carousel-title">
+                        <a href="#" rel="noopener">Carousel with caption 1</a>
+                    </h4>
+                    <p class="carousel-text">This is a text carousel</p>
+                </figcaption>
+            </figure>
+            <figure class="carousel-slide">
+                <a href="#" rel="noopener">
+                    <picture>
+                        <source srcset="./assets/img/carousel/carouselBigGreen.png" media="(min-width: 2540px)">
+                        <source srcset="./assets/img/carousel/carouselGreen.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/carousel/carouselMediumGreen.png" alt="">
+                    </picture>
+                </a>
+                <figcaption class="carousel-text-container p-2">
+                    <h4 class="carousel-title">
+                        <a href="#" rel="noopener">Carousel with caption 2</a>
+                    </h4>
+                    <p class="carousel-text">This is a text carousel</p>
+                </figcaption>
+            </figure>
+            <figure class="carousel-slide">
+                <a href="#" rel="noopener">
+                    <picture>
+                        <source srcset="./assets/img/carousel/carouselBigYellow.png" media="(min-width: 2540px)">
+                        <source srcset="./assets/img/carousel/carouselYellow.png" media="(min-width: 728px)">
+                        <img class="responsive-img" src="./assets/img/carousel/carouselMediumYellow.png" alt="">
+                    </picture>
+                </a>
+                <figcaption class="carousel-text-container p-2">
+                    <h4 class="carousel-title">
+                        <a href="#" rel="noopener">Carousel with caption 3</a>
+                    </h4>
+                    <p class="carousel-text">This is a text carousel</p>
+                </figcaption>
+            </figure>
+            <button class="carousel-cta carousel-prev btn-square-m" type="button">
+                <ion-icon class="carousel-cta-icon" name="caret-back" />
+            </button>
+            <button class="carousel-cta carousel-next btn-square-m" type="button">
+                <ion-icon class="carousel-cta-icon" name="caret-forward" />
+            </button>
+        </article>
+
+        <figure class="clipboard-container m-b-8 m-t-2">
+            <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                <ion-icon name="clipboard-outline"></ion-icon>
+            </button>
+        <pre class="clipboard">
+                <code>
+&lt;article id=&quot;yourID&quot; class=&quot;carousel carousel-caption&quot;&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+                &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
+        &lt;figcaption class=&quot;carousel-text-container p-2&quot;&gt;
+            &lt;h4 class=&quot;carousel-title&quot;&gt;
+                &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;Carousel with caption 1&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;p class=&quot;carousel-text&quot;&gt;This is a text carousel&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+                &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
+        &lt;figcaption class=&quot;carousel-text-container p-2&quot;&gt;
+            &lt;h4 class=&quot;carousel-title&quot;&gt;
+                &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;Carousel with caption 2&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;p class=&quot;carousel-text&quot;&gt;This is a text carousel&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class=&quot;carousel-slide&quot;&gt;
+        &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;
+            &lt;picture&gt;
+                &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 2540px)&quot;&gt;
+                &lt;source srcset=&quot;/pathTo/img.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+                &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/img.png&quot; alt=&quot;&quot;&gt;
+            &lt;/picture&gt;
+        &lt;/a&gt;
+        &lt;figcaption class=&quot;carousel-text-container p-2&quot;&gt;
+            &lt;h4 class=&quot;carousel-title&quot;&gt;
+                &lt;a href=&quot;#&quot; rel=&quot;noopener&quot;&gt;Carousel with caption 3&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;p class=&quot;carousel-text&quot;&gt;This is a text carousel&lt;/p&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;button class=&quot;carousel-cta carousel-prev btn-square-m&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;carousel-cta-icon&quot; name=&quot;caret-back&quot; /&gt;
+    &lt;/button&gt;
+    &lt;button class=&quot;carousel-cta carousel-next btn-square-m&quot; type=&quot;button&quot;&gt;
+        &lt;ion-icon class=&quot;carousel-cta-icon&quot; name=&quot;caret-forward&quot; /&gt;
+    &lt;/button&gt;
+&lt;/article&gt;
+                </code>
+            </pre>
+        </figure>
+    </main>
+    <footer id="straightFooter" class="bg-grey-light">
+        <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
+            <section>
+                <a class="btn-square-s btn-green" href="./index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
+                </a>
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <p class="t-x-small t-carbon">
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="/" trget="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
+                </p>
+            </section>
+            <section class="d-flex j-between">
+                <ul>
+                    <li class="t-x-small">
+                        <a href="./button.html" rel="noopener">button module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./card.html" rel="noopener">card module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./carousel.html" rel="noopener">carousel module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./color.html" rel="noopener">color module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./form.html" rel="noopener">form module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./header.html" rel="noopener">header module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./helper.html" rel="noopener">helper module</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="t-x-small">
+                        <a href="./image.html" rel="noopener">image module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./list.html" rel="noopener">list module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./nav.html" rel="noopener">nav module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./notification.html" rel="noopener">notification module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./table.html" rel="noopener">table module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./template.html" rel="noopener">template module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./typography.html" rel="noopener">typography module</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <script src="./script/detectIE.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="./script/straightNav.js"></script>
+    <script src="./script/carousel.js"></script>
+    <script src="./script/straightClipboard.js"></script>
+    <script src="./script/straightFooter.js"></script>
+</body>
+
+</html>

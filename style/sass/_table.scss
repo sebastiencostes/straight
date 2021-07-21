@@ -1,0 +1,124 @@
+@use 'border' as b;
+@use 'color' as c;
+@use 'device' as d;
+@use 'utility' as u;
+
+/*
+*****
+TABLE
+*****
+*/
+%table-shared {
+  @include u.d-block();
+  position: relative;
+  white-space: nowrap;
+  width: auto;
+  @include d.tablet-landscape() {
+    display: table;
+    width: 100%;
+  }
+}
+
+%table-title-shared {
+  caption-side: top;
+  margin-bottom: 2rem;
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
+}
+
+%table-header-column {
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
+  font-weight: 400;
+  padding: 2rem;
+}
+
+%table-body-shared {
+  @include u.d-block();
+  width: auto;
+  position: relative;
+  overflow-x: auto;
+  white-space: nowrap;
+  @include d.tablet-landscape() {
+    display: table-row-group;
+    width: 100%;
+  }
+}
+
+%table-row-shared {
+  @include b.b-bottom(c.$grey);
+  &:nth-child(even) {
+    background-color: c.$grey-light;
+    color: c.$carbon;
+  }
+}
+
+%table-column-shared {
+  font-size: clamp(0.8rem, 0.7009rem + 0.354vw, 1.6rem);
+  font-weight: 300;
+  padding: 2rem;
+}
+
+/*
+****************
+SCROLLABLE TABLE
+****************
+*/
+%table-scrollabe {
+  @include u.d-block();
+  width: auto;
+  position: relative;
+  white-space: nowrap;
+}
+
+//table
+.table {
+  @extend %table-shared;
+  &-title {
+    @extend %table-title-shared;
+  }
+  &-header {
+    &-column {
+      @extend %table-header-column;
+    }
+  }
+  &-body {
+    @extend %table-body-shared;
+    //firefox scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: c.$grey c.$grey-light;
+  }
+  &-row {
+    @extend %table-row-shared;
+  }
+  &-column {
+    @extend %table-column-shared;
+  }
+}
+
+//table-scrollable
+.table-scrollable {
+  @extend %table-scrollabe;
+  &-body {
+    @extend %table-scrollabe;
+    //firefox scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: c.$grey c.$grey-light;
+    overflow-x: auto;
+  }
+}
+
+//edge, safri, chrome,opera scrollbar
+.table-scrollable-body::-webkit-scrollbar,
+.table-body::-webkit-scrollbar {
+  height: 0.8rem;
+  width: 0.8rem;
+}
+.table-scrollable-body::-webkit-scrollbar-track,
+.table-body::-webkit-scrollbar-track {
+  background: c.$grey-light;
+}
+.table-scrollable-body::-webkit-scrollbar-thumb,
+.table-body::-webkit-scrollbar-thumb {
+  background-color: c.$grey;
+  border-radius: 0;
+  border: 0;
+}

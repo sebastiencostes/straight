@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Straight Button -  Button as trigger and button trigger as link">
+        <meta name="author" content="Sébastien COSTES">
+        <meta name="color-scheme" content="dark light">
+        <title>Straight | Button</title>
+        <link href="https://cdn.jsdelivr.net/gh/sebastiencostes/straight@develop/style/css/style.min.css" rel="stylesheet" crossorigin="anonymous">    
+        <link rel="manifest" href="./manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Straight">
+        <meta name="apple-mobile-web-app-title" content="Straight">
+        <meta name="theme-color" content="#64dd17">
+        <meta name="msapplication-navbutton-color" content="#64dd17">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="./index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+    </head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s btn-green" href="./index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s btn-green" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-purple" role="presentation">
+        <h1 class="header-presentation-title t-white">Button</h1>
+    </header>
+
+    <main class="container-fix">
+ 
+        <h2 class="note-purple">
+            About Button
+        </h2>
+        <p>
+            3 kinds of button are available.
+            The button as a standard button for all your triggering actions.
+            The link button with <code class="single-code">role="button"</code> for redirecting to an
+            internal page of your site.
+            The link button with <code class="single-code">target="_blank"</code> will open in a new tab
+            for redirecting to an external site by example.
+            You can mix and select size, color and shape.
+        </p>
+
+
+        <section class="m-b-8 m-t-8">
+            <h3 class="note-purple">
+                Button models
+            </h3>
+            <p>
+                3 button models are available, button as trigger and button trigger as link.
+            </p>
+            <div>
+                <div>
+                    <button class="btn-s btn-blue" type="button">Button Trigger</button>
+                   
+                    <figure class="clipboard-container m-t-2 m-b-2">
+                        <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </button>
+                        <pre class="clipboard">
+                            <code>
+&lt;button class=&quot;btn-s btn-blue&quot; type=&quot;button&quot;&gt;Button Trigger&lt;/button&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                </div>
+                <div>
+                    <a class="btn-s btn-blue" href="#" rel="noopener" target="_blank" role="button">External Link</a>
+
+                    <figure class="clipboard-container m-t-2 m-b-2">
+                        <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </button>
+                        <pre class="clipboard">
+                            <code>
+&lt;a class=&quot;btn-s btn-blue&quot; href=&quot;#&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot; role=&quot;button&quot;&gt;External Link&lt;/a&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                </div>
+                <div>
+                    <a class="btn-s btn-blue" href="#" rel="noopener" role="button">Internal Iink</a>
+                    <figure class="clipboard-container m-t-2 m-b-2">
+                        <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                            <ion-icon name="clipboard-outline"></ion-icon>
+                        </button>
+                        <pre class="clipboard">
+                            <code>
+&lt;a class=&quot;btn-s btn-blue&quot; href=&quot;#&quot; rel=&quot;noopener&quot; role=&quot;button&quot;&gt;Internal Iink&lt;/a&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-purple">
+                Button shapes
+            </h3>
+            <p>
+                3 button shapes are available, <b>button</b> <code class="single-code">class="btn-*"</code>,
+                <b>square</b> <code class="single-code">class="btn-square-*"</code>
+                and <b>circle</b> <code class="single-code">class="btn-circle-*"</code></code
+                    class="single-code">.
+            </p>
+            <div>
+                <button class="btn-s btn-blue" type="button">Button</button>
+                <figure class="clipboard-container m-t-2 m-b-2">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
+&lt;button class=&quot;btn-s btn-blue&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+                        </code>
+                    </pre>
+                <figure>
+            </div>
+            <div>
+                <button class="btn-square-s btn-blue" type="button">
+                    <ion-icon name="add-outline" />
+                </button>
+                <figure class="clipboard-container m-t-2 m-b-2">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
+&lt;button class=&quot;btn-square-s btn-blue&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot; /&gt;&lt;/button&gt;
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+            <div>
+                <button class="btn-circle-s btn-blue" type="button">
+                    <ion-icon name="add-outline" />
+                </button>
+                <figure class="clipboard-container m-t-2 m-b-2">
+                    <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                        <ion-icon name="clipboard-outline"></ion-icon>
+                    </button>
+                    <pre class="clipboard">
+                        <code>
+&lt;button class=&quot;btn-circle-s btn-blue&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot; /&gt;&lt;/button&gt;
+                        </code>
+                    </pre>
+                </figure>
+            </div>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-purple">
+                Button sizes
+            </h3>
+            <p>5 sizes are purposed, from <b>s</b> to <b>xxxl</b>. For each <b>size</b> and <b>shape</b> just use
+                <code class="single-code">class="btn-*-*"</code>.
+            </p>
+            <div class="d-flex j-between i-center f-wrap">
+                <a class="btn-s btn-blue" href="#" rel="noopener" role="button">Internal Link</a>
+                <a class="btn-m btn-blue" href="#" rel="noopener" target="blank" role="button">External Link</a>
+                <button class="btn-circle-l btn-blue" type="button">
+                    <ion-icon name="add-outline"></ion-icon>
+                </button>
+                <button class="btn-square-xl btn-blue" type="button">
+                    <ion-icon name="add-outline"></ion-icon>
+                </button>
+                <button class="btn-xxl btn-blue" type="button">Button Trigger</button>
+                <button class="btn-xxxl btn-blue" type="button">Button Xxxl</button>
+            </div>
+            <figure class="clipboard-container m-t-2 m-b-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;a class=&quot;btn-s btn-blue&quot; href=&quot;#&quot; rel=&quot;noopener&quot; role=&quot;button&quot;&gt;Internal Link&lt;/a&gt;
+&lt;a class=&quot;btn-m btn-blue&quot; href=&quot;#&quot; rel=&quot;noopener&quot; target=&quot;blank&quot; role=&quot;button&quot;&gt;External Link&lt;/a&gt;
+&lt;button class=&quot;btn-circle-l btn-blue&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-xl btn-blue&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-xxl btn-blue&quot; type=&quot;button&quot;&gt;Button Trigger&lt;/button&gt;
+&lt;button class=&quot;btn-xxxl btn-blue&quot; type=&quot;button&quot;&gt;Button Xxxl&lt;/button&gt;
+                    </code>
+                </pre>
+            </figure>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-purple">
+                Button colors
+            </h3>
+            <p>13 button colors are purposed, these 13 options have a gradient variation. Just use <code
+                    class="single-code">class="btn-*-* btn-*"</code> or
+                <code class="single-code">class="btn-*-* btn-grad-*"</code>.
+            </p>
+            <aside>
+                <p>You can check more about colors at <a href="color.html" rel="noopener">color module</a>.</p>
+            </aside>
+
+            <h4 class="note-purple m-b-2">Flat background color</h4>
+            <div id="arrayFlat" class="g-col g-col-s-2 g-col-m-3 g-col-l-10 g-col-xl-13 m-b-2"></div>
+            <figure class="clipboard-container m-t-2 m-b-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;button class=&quot;btn-s btn-white&quot; type=&quot;button&quot;&gt;White&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-yellow&quot; type=&quot;button&quot;&gt;Yellow&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-orange&quot; type=&quot;button&quot;&gt;Orange&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-brown&quot; type=&quot;button&quot;&gt;Brown&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-pink&quot; type=&quot;button&quot;&gt;Pink&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-purple&quot; type=&quot;button&quot;&gt;Purple&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-red&quot; type=&quot;button&quot;&gt;Red&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-green&quot; type=&quot;button&quot;&gt;Green&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-blue&quot; type=&quot;button&quot;&gt;Blue&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grey&quot; type=&quot;button&quot;&gt;Grey&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-navy&quot; type=&quot;button&quot;&gt;Navy&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-black&quot; type=&quot;button&quot;&gt;Black&lt;/button&gt;
+                    </code>
+                </pre>
+            </figure>
+
+            <h4 class="note-purple m-b-2">Gradient background image</h4>
+            <div id="arrayGrad" class="g-col g-col-s-2 g-col-m-3 g-col-l-5 g-col-xl-6 g-col-xxl-7 m-b-2"></div>
+            <figure class="clipboard-container m-t-2 m-b-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;button class=&quot;btn-s btn-grad-white&quot; type=&quot;button&quot;&gt;Grad White&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-yellow&quot; type=&quot;button&quot;&gt;Grad Yellow&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-orange&quot; type=&quot;button&quot;&gt;Grad Orange&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-brown&quot; type=&quot;button&quot;&gt;Grad Brown&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-pink&quot; type=&quot;button&quot;&gt;Grad Pink&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-purple&quot; type=&quot;button&quot;&gt;Grad Purple&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-red&quot; type=&quot;button&quot;&gt;Grad Red&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-green&quot; type=&quot;button&quot;&gt;Grad Green&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-blue&quot; type=&quot;button&quot;&gt;Grad Blue&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-grey&quot; type=&quot;button&quot;&gt;Grad Grey&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-navy&quot; type=&quot;button&quot;&gt;Grad Navy&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-grad-black&quot; type=&quot;button&quot;&gt;Grad Black&lt;/button&gt;
+                    </code>
+                </pre>
+            </figure>
+
+            <h4 class="note-purple m-b-2">Square shape flat background color</h4>
+            <div id="arraySquareFlat" class="g-col g-col-s-4 g-col-m-10 g-col-l-13 m-b-2"></div>
+            <figure class="clipboard-container m-t-2 m-b-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;button class=&quot;btn-square-l btn-white&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-yellow&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-orange&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-brown&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-pink&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-purple&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-red&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-green&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-blue&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grey&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-navy&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-black&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+                    </code>
+                </pre>
+            </figure>
+
+            <h4 class="note-purple m-b-2">Square shape with gradient background</h4>
+            <div id="arraySquareGrad" class="g-col g-col-s-4 g-col-m-10 g-col-l-13 m-b-2"></div>
+            <figure class="clipboard-container m-t-2 m-b-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;button class=&quot;btn-square-l btn-grad-white&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-yellow&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-orange&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-brown&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-pink&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-purple&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-red&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-green&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-blue&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-grey&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-navy&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-square-l btn-grad-black&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+                    </code>
+                </pre>
+            </figure>
+
+            <h4 class="note-purple m-b-2">Circle shape with flat background color</h4>
+            <div id="arrayCircleFlat" class="g-col g-col-s-4 g-col-m-10 g-col-l-13 m-b-2"></div>
+            <figure class="clipboard-container m-t-2 m-b-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;button class=&quot;btn-circle-l btn-white&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-yellow&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-orange&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-brown&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-pink&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-purple&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-red&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-green&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-blue&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grey&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-navy&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-black&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+                    </code>
+                </pre>
+            </figure>
+
+            <h4 class="note-purple m-b-2">Circle shape with gradient background image</h4>
+            <div id="arrayCircleGrad" class="g-col g-col-s-4 g-col-m-10 g-col-l-13 m-b-2"></div>
+            <figure class="clipboard-container m-t-2 m-b-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;button class=&quot;btn-circle-l btn-grad-white&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-yellow&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-orange&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-brown&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-pink&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-purple&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-red&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-green&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-blue&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-grey&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-navy&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+&lt;button class=&quot;btn-circle-l btn-grad-black&quot; type=&quot;button&quot;&gt;&lt;ion-icon name=&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;&lt;/button&gt;
+                    </code>
+                </pre>
+            </figure>
+        </section>
+
+        <section class="m-b-8">
+            <h3 class="note-purple">
+                bordered button
+            </h3>
+            <p>also bordered buttons are available, in this case just add <code class="single-code">class="btn-*-* btn-b-*"</code>.
+            <div id="arrayDefaultBorders" class="g-col g-col-s-2 g-col-m-3 g-col-l-10 g-col-xl-13 m-b-2"></div>
+            <div id="arraySquareBorders" class="g-col g-col-s-4 g-col-m-10 g-col-l-13 m-b-2"></div>
+            <div id="arrayCircleBorders" class="g-col g-col-s-4 g-col-m-10 g-col-l-13 m-b-2"></div>
+            <figure class="clipboard-container m-t-2 m-b-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;button class=&quot;btn-s btn-b-white&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-b-green&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-b-purple&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-b-grey&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn-s btn-b-black&quot; type=&quot;button&quot;&gt;Button&lt;/button&gt;
+
+&lt;button class=&quot;btn-square-m btn-b-orange&quot; type=&quot;button&quot;&gt;
+  &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-square-m btn-b-yellow&quot; type=&quot;button&quot;&gt;
+    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-square-m btn-b-turquoise&quot; type=&quot;button&quot;&gt;
+    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-square-m btn-b-red&quot; type=&quot;button&quot;&gt;
+    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+
+&lt;button class=&quot;btn-circle-m btn-b-navy&quot; type=&quot;button&quot;&gt;
+    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-circle-m btn-b-pink&quot; type=&quot;button&quot;&gt;
+    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-circle-m btn-b-brown&quot; type=&quot;button&quot;&gt;
+    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn-circle-m btn-b-blue&quot; type=&quot;button&quot;&gt;
+    &lt;ion-icon name=&quot;add-outline&quot;&gt;&lt;/ion-icon&gt;
+&lt;/button&gt;
+                    </code>
+                </pre>
+            </figure>
+        </section>
+
+    </main>
+    <footer id="straightFooter" class="bg-grey-light">
+        <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
+            <section>
+                <a class="btn-square-s btn-green" href="./index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
+                </a>
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <p class="t-x-small t-carbon">
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="/" trget="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
+                </p>
+            </section>
+            <section class="d-flex j-between">
+                <ul>
+                    <li class="t-x-small">
+                        <a href="./button.html" rel="noopener">button module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./card.html" rel="noopener">card module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./carousel.html" rel="noopener">carousel module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./color.html" rel="noopener">color module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./form.html" rel="noopener">form module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./header.html" rel="noopener">header module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./helper.html" rel="noopener">helper module</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="t-x-small">
+                        <a href="./image.html" rel="noopener">image module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./list.html" rel="noopener">list module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./nav.html" rel="noopener">nav module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./notification.html" rel="noopener">notification module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./table.html" rel="noopener">table module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./template.html" rel="noopener">template module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./typography.html" rel="noopener">typography module</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <script src="./script/detectIE.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="./script/straightNav.js"></script>
+    <script src="./script/straightButton.js"></script>
+    <script src="./script/straightClipboard.js"></script>
+    <script src="./script/straightFooter.js"></script>
+</body>
+
+</html>

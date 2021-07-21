@@ -1,0 +1,1056 @@
+@use "border" as b;
+@use "filter" as flt;
+@use "color" as c;
+@use "padding" as p;
+@use "height" as h;
+@use "width" as w;
+@use "utility" as u;
+@use "flexbox" as flx;
+
+/*
+Button properties shared
+*/
+@mixin btn-shared() {
+  @include flx.align-items(center);
+  background-color: c.$transparent;
+  @include b.border(c.$transparent);
+  color: c.$carbon;
+  @include flx.d-inline-flex();
+  font-weight: 400;
+  @include flx.justify-content(center);
+  text-align: center;
+  @include u.transition(all, u.$time);
+  vertical-align: middle;
+}
+
+/*
+.btn 
+*/
+@mixin btn() {
+  @include btn-shared();
+  @include b.b-smooth();
+}
+
+/*
+Font sizes for .btn-*
+*/
+@mixin btn-s {
+  font-size: clamp(1.6rem, 1.5009rem + 0.354vw, 2.4rem);
+}
+@mixin btn-m {
+  font-size: clamp(2.4rem, 2.3009rem + 0.354vw, 3.2rem);
+}
+@mixin btn-l {
+  font-size: clamp(3.2rem, 3.1009rem + 0.354vw, 4rem);
+}
+@mixin btn-xl {
+  font-size: clamp(4rem, 3.9009rem + 0.354vw, 4.8rem);
+}
+@mixin btn-xxl {
+  font-size: clamp(4.8rem, 4.7009rem + 0.354vw, 5.6rem);
+}
+@mixin btn-xxxl {
+  font-size: clamp(5.6rem, 5.5009rem + 0.354vw, 6.4rem);
+}
+
+.btn-s {
+  @include btn();
+  @include btn-s();
+  @include p.padding(0 0.75rem);
+}
+.btn-m {
+  @include btn();
+  @include btn-m();
+  @include p.padding(0 1rem);
+}
+.btn-l {
+  @include btn();
+  @include btn-l();
+  @include p.padding(0 1.25rem);
+}
+.btn-xl {
+  @include btn();
+  @include btn-xl();
+  @include p.padding(0 1.75rem);
+}
+.btn-xxl {
+  @include btn();
+  @include btn-xxl();
+  @include p.padding(0 1.75rem);
+}
+.btn-xxxl {
+  @include btn();
+  @include btn-xxxl();
+  @include p.padding(0 1.75rem);
+}
+
+/*
+Sizes for .btn-square-* & .btn-circle-*
+*/
+@mixin btn-size-s() {
+  @include w.width(4rem);
+  @include h.height(4rem);
+}
+@mixin btn-size-m() {
+  @include w.width(4.8rem);
+  @include h.height(4.8rem);
+}
+@mixin btn-size-l() {
+  @include w.width(5.6rem);
+  @include h.height(5.6rem);
+}
+@mixin btn-size-xl() {
+  @include w.width(6.4rem);
+  @include h.height(6.4rem);
+}
+@mixin btn-size-xxl() {
+  @include w.width(7.2rem);
+  @include h.height(7.2rem);
+}
+@mixin btn-size-xxxl() {
+  @include w.width(8rem);
+  @include h.height(8rem);
+}
+
+/*
+.btn-square-*
+*/
+@mixin btn-square() {
+  @include btn-shared();
+  @include b.b-smooth();
+}
+.btn-square-s {
+  @include btn-square();
+  @include btn-size-s();
+  ion-icon {
+    font-size: 2.4rem;
+  }
+}
+.btn-square-m {
+  @include btn-square();
+  @include btn-size-m();
+  ion-icon {
+    font-size: 3.2rem;
+  }
+}
+.btn-square-l {
+  @include btn-square();
+  @include btn-size-l();
+  ion-icon {
+    font-size: 4rem;
+  }
+}
+.btn-square-xl {
+  @include btn-square();
+  @include btn-size-xl();
+  ion-icon {
+    font-size: 4.8rem;
+  }
+}
+.btn-square-xxl {
+  @include btn-square();
+  @include btn-size-xxl();
+  ion-icon {
+    font-size: 5.6rem;
+  }
+}
+.btn-square-xxxl {
+  @include btn-square();
+  @include btn-size-xxxl();
+  ion-icon {
+    font-size: 6.4rem;
+  }
+}
+
+/*
+.btn-circle-*
+*/
+@mixin btn-circle() {
+  @include btn-shared();
+  @include b.b-radius(50%);
+}
+.btn-circle-s {
+  @include btn-circle();
+  @include btn-size-s();
+  ion-icon {
+    font-size: 2.4rem;
+  }
+}
+.btn-circle-m {
+  @include btn-circle();
+  @include btn-size-m();
+  ion-icon {
+    font-size: 3.2rem;
+  }
+}
+.btn-circle-l {
+  @include btn-circle();
+  @include btn-size-l();
+  ion-icon {
+    font-size: 4rem;
+  }
+}
+.btn-circle-xl {
+  @include btn-circle();
+  @include btn-size-xl();
+  ion-icon {
+    font-size: 4.8rem;
+  }
+}
+.btn-circle-xxl {
+  @include btn-circle();
+  @include btn-size-xxl();
+  ion-icon {
+    font-size: 5.6rem;
+  }
+}
+.btn-circle-xxxl {
+  @include btn-circle();
+  @include btn-size-xxxl();
+  ion-icon {
+    font-size: 6.4rem;
+  }
+}
+
+/*
+.btn-colors-*
+*/
+.btn-white {
+  background-color: c.$white;
+  color: c.$text-light;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$grey;
+  }
+  &:disabled {
+    background-color: c.$grey-light;
+    opacity: 0.33;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$text-light;
+  }
+}
+.btn-grey {
+  background-color: c.$grey;
+  color: c.$text-light;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$grey-dark;
+  }
+  &:disabled {
+    background-color: c.$grey-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$text-light;
+  }
+}
+.btn-navy {
+  background-color: c.$navy;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$navy-dark;
+  }
+  &:disabled {
+    background-color: c.$navy-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-yellow {
+  background-color: c.$yellow;
+  color: c.$text-light;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$yellow-dark;
+  }
+  &:disabled {
+    background-color: c.$yellow-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$text-light;
+  }
+}
+.btn-orange {
+  background-color: c.$orange;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$orange-dark;
+  }
+  &:disabled {
+    background-color: c.$orange-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-brown {
+  background-color: c.$brown;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$brown-dark;
+  }
+  &:disabled {
+    background-color: c.$brown-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-pink {
+  background-color: c.$pink;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$pink-dark;
+  }
+  &:disabled {
+    background-color: c.$pink-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-purple {
+  background-color: c.$purple;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$purple-dark;
+  }
+  &:disabled {
+    background-color: c.$purple-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-red {
+  background-color: c.$red;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$red-dark;
+  }
+  &:disabled {
+    background-color: c.$red-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-green {
+  background-color: c.$green;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$green-dark;
+  }
+  &:disabled {
+    background-color: c.$green-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-turquoise {
+  background-color: c.$turquoise;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$turquoise-dark;
+  }
+  &:disabled {
+    background-color: c.$turquoise-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-blue {
+  background-color: c.$blue;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$blue-dark;
+  }
+  &:disabled {
+    background-color: c.$blue-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-black {
+  background-color: c.$carbon;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: c.$carbon-dark;
+  }
+  &:disabled {
+    background-color: c.$carbon-light;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+
+/*
+.btn-grad-colors-*
+*/
+.btn-grad-white {
+  background-image: c.$grad-white;
+  color: c.$text-light;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$text-light;
+  }
+}
+.btn-grad-grey {
+  background-image: c.$grad-grey;
+  color: c.$carbon;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$carbon;
+  }
+}
+.btn-grad-navy {
+  background-image: c.$grad-navy;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-grad-yellow {
+  background-image: c.$grad-yellow;
+  color: c.$carbon;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    color: c.$carbon;
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$carbon;
+  }
+}
+.btn-grad-orange {
+  background-image: c.$grad-orange;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-grad-brown {
+  background-image: c.$grad-brown;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-grad-pink {
+  background-image: c.$grad-pink;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-grad-purple {
+  background-image: c.$grad-purple;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-grad-red {
+  background-image: c.$grad-red;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-grad-green {
+  background-image: c.$grad-green;
+  color: c.$carbon;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    color: c.$carbon;
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$carbon;
+  }
+}
+.btn-grad-turquoise {
+  background-image: c.$grad-turquoise;
+  color: c.$carbon;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    color: c.$carbon;
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$carbon;
+  }
+}
+.btn-grad-blue {
+  background-image: c.$grad-blue;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+.btn-grad-black {
+  background-image: c.$grad-carbon;
+  color: c.$white;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    @include flt.filter(brightness(80%) contrast(120%));
+  }
+  &:disabled {
+    @include flt.filter(brightness(1.3));
+    cursor: not-allowed;
+  }
+  ion-icon {
+    color: c.$white;
+  }
+}
+
+/*
+***************
+BORDERED BUTTON ion-icon
+***************
+*/
+.btn-b {
+  &-white {
+    @include b.border(c.$white);
+    color: c.$white;
+    ion-icon{
+      color: c.$white;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$text-dark);
+      color: c.$text-dark;
+    }
+    &:disabled {
+      @include b.border(c.$white);
+      color: c.$white;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$text-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$white;
+      cursor: not-allowed;
+    }
+  }
+  &-yellow {
+    @include b.border(c.$yellow);
+    color: c.$yellow;
+    ion-icon{
+      color: c.$yellow;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$yellow-dark);
+      color: c.$yellow-dark;
+    }
+    &:disabled {
+      @include b.border(c.$yellow-light);
+      color: c.$yellow-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$yellow-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$yellow-light;
+      cursor: not-allowed;
+    }
+  }
+  &-orange {
+    @include b.border(c.$orange);
+    color: c.$orange;
+    ion-icon{
+      color: c.$orange;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$orange-dark);
+      color: c.$orange-dark;
+    }
+    &:disabled {
+      @include b.border(c.$orange-light);
+      color: c.$orange-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$orange-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$orange-light;
+      cursor: not-allowed;
+    }
+  }
+  &-red {
+    @include b.border(c.$red);
+    color: c.$red;
+    ion-icon{
+      color: c.$red;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$red-dark);
+      color: c.$red-dark;
+    }
+    &:disabled {
+      @include b.border(c.$red-light);
+      color: c.$red-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$red-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$red-light;
+      cursor: not-allowed;
+    }
+  }
+  &-purple {
+    @include b.border(c.$purple);
+    color: c.$purple;
+    ion-icon{
+      color: c.$purple;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$purple-dark);
+      color: c.$purple-dark;
+    }
+    &:disabled {
+      @include b.border(c.$purple-light);
+      color: c.$purple-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$purple-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$purple-light;
+      cursor: not-allowed;
+    }
+  }
+  &-blue {
+    @include b.border(c.$blue);
+    color: c.$blue;
+    ion-icon{
+      color: c.$blue;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$blue-dark);
+      color: c.$blue-dark;
+    }
+    &:disabled {
+      @include b.border(c.$blue-light);
+      color: c.$blue-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$blue-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$blue-light;
+      cursor: not-allowed;
+    }
+  }
+  &-green {
+    @include b.border(c.$green);
+    color: c.$green;
+    ion-icon{
+      color: c.$green;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$green-dark);
+      color: c.$green-dark;
+    }
+    &:disabled {
+      @include b.border(c.$green-light);
+      color: c.$green-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$green-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$green-light;
+      cursor: not-allowed;
+    }
+  }
+  &-pink {
+    @include b.border(c.$pink);
+    color: c.$pink;
+    ion-icon{
+      color: c.$pink;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$pink-dark);
+      color: c.$pink-dark;
+    }
+    &:disabled {
+      @include b.border(c.$pink-light);
+      color: c.$pink-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$pink-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$pink-light;
+      cursor: not-allowed;
+    }
+  }
+  &-turquoise {
+    @include b.border(c.$turquoise);
+    color: c.$turquoise;
+    ion-icon{
+      color: c.$turquoise;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$turquoise-dark);
+      color: c.$turquoise-dark;
+    }
+    &:disabled {
+      @include b.border(c.$turquoise-light);
+      color: c.$turquoise-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$turquoise-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$turquoise-light;
+      cursor: not-allowed;
+    }
+  }
+  &-brown {
+    @include b.border(c.$brown);
+    color: c.$brown;
+    ion-icon{
+      color: c.$brown;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$brown-dark);
+      color: c.$brown-dark;
+    }
+    &:disabled {
+      @include b.border(c.$brown-light);
+      color: c.$brown-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$brown-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$brown-light;
+      cursor: not-allowed;
+    }
+  }
+  &-grey {
+    @include b.border(c.$grey);
+    color: c.$grey;
+    ion-icon{
+      color: c.$grey;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$grey-dark);
+      color: c.$grey-dark;
+    }
+    &:disabled {
+      @include b.border(c.$grey-light);
+      color: c.$grey-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$grey-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$grey-light;
+      cursor: not-allowed;
+    }
+  }
+  &-navy {
+    @include b.border(c.$navy);
+    color: c.$navy;
+    ion-icon{
+      color: c.$navy;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$navy-dark);
+      color: c.$navy-dark;
+    }
+    &:disabled {
+      @include b.border(c.$navy-light);
+      color: c.$navy-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$navy-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$navy-light;
+      cursor: not-allowed;
+    }
+  }
+  &-black {
+    @include b.border(c.$carbon);
+    color: c.$carbon;
+    ion-icon{
+      color: c.$carbon;
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      @include b.border(c.$carbon-dark);
+      color: c.$carbon-dark;
+    }
+    &:disabled {
+      @include b.border(c.$carbon-light);
+      color: c.$carbon-light;
+      cursor: not-allowed;
+    }
+    &:hover ion-icon,
+    &:focus ion-icon,
+    &:active ion-icon,
+    &.active ion-icon {
+      color: c.$carbon-dark;
+    }
+    &:disabled ion-icon {
+      color: c.$carbon-light;
+      cursor: not-allowed;
+    }
+  }
+}
+
+button ion-icon {
+  display: unset;
+}

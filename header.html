@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Straight Header - Header represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.">
+        <meta name="author" content="Sébastien COSTES">
+        <meta name="color-scheme" content="dark light">
+        <title>Straight | Header</title>
+        <link href="https://cdn.jsdelivr.net/gh/sebastiencostes/straight@develop/style/css/style.min.css" rel="stylesheet" crossorigin="anonymous">    
+        <link rel="manifest" href="./manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Straight">
+        <meta name="apple-mobile-web-app-title" content="Straight">
+        <meta name="theme-color" content="#64dd17">
+        <meta name="msapplication-navbutton-color" content="#64dd17">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="./index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+    </head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s btn-green" href="./index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s btn-green" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-yellow" role="presentation">
+        <h1 class="header-presentation-title t-carbon">header</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-yellow">
+            About Header
+        </h2>
+        <p>
+            Header represents introductory content, typically a group of introductory or navigational aids.
+            It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+            Despite its name, it is not necessarily placed at the beginning of the page.
+        </p>
+        <aside class="m-b-8">
+            <p>
+                If you don't use an image to your header, check more about colors at <a href="./color.html"
+                    rel="noopener">color module</a>.
+            </p>
+        </aside>
+
+        <article class="m-b-8">
+            <header class="note-yellow">
+                <h3>
+                    Header models
+                </h3>
+            </header>
+            <p>
+                <b>Page Header</b> with class
+                <code
+                    class="single-code"> &lt;header class=&quot;header-presentation&quot; role=&quot;presentation&quot;&gt;</code>
+                is designed to work with <a href="./nav.html" rel="noopener">Nav</a>. Feel free to add your image and more...
+            </p>
+            <p>
+                <b>Page Header with background image</b> with class
+                <code
+                    class="single-code"> &lt;header class=&quot;header-presentation-background&quot; role=&quot;presentation&quot;&gt;</code>
+                is also designed to work with <a href="./nav.html" rel="noopener">Nav</a>. Feel free to add your image and more...
+            </p>
+            <p><b>Header</b> with class <code class="single-code"> &lt;header class=&quot;header&quot;&gt;</code>
+                is a standalone.</p>
+            <p><b>Image header</b> with class <code
+                    class="single-code">&lt;header class=&quot;header-image&quot;&gt;</code> is a
+                standalone.</p>
+                <p><b>Sticky header</b> with class <code class="single-code">&lt;header class=&quot;header-sticky&quot;&gt;</code> is a standalone too.</p>
+        </article>
+
+        <section>
+            <h3 class="note-yellow m-b-2">
+                Page header
+            </h3>
+            <p>Designed to work with <b>nav</b>. This is the same model used into this site.</p>
+            <div class="header h-vh-50 bg-yellow">
+                <h4 class="header-presentation-title t-carbon">
+                    Page Header
+                </h4>
+            </div>
+
+            <figure class="clipboard-container m-t-2 m-b-8">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+            <pre class="clipboard">
+                <code>
+&lt;header class=&quot;header-presentation bg-yellow&quot; role=&quot;presentation&quot;&gt;
+    &lt;h1 class=&quot;header-presentation-title t-carbon&quot;&gt;your title&lt;/h1&gt;
+&lt;/header&gt;
+                    </code>
+                </pre>
+            </figure>
+
+            <h3 class="note-yellow m-b-2">
+                Page header with background image
+            </h3>
+            <p>Designed to work with <b>nav</b> and large background image. This is the same model used at <a href="./index.html" rel="noopener">home page</a>. You will need to add <b>your own background image</b>.</p>
+            <div class="header h-vh-50 bg-yellow" style="background-image: url(/assets/img/header/headerDesktop.png); background-attachment: fixed;">
+                <h4 class="header-presentation-background-title t-white">
+                    Page Header background image
+                </h4>
+            </div>
+
+            <figure class="clipboard-container m-t-2 m-b-8">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+            <pre class="clipboard">
+                <code>
+&lt;header class=&quot;header-presentation-background&quot; role=&quot;presentation&quot;&gt;
+    &lt;h1 class=&quot;header-presentation-background-title t-white&quot;&gt;
+        Page Header
+    &lt;/h1&gt;
+&lt;/header&gt;
+                </code>
+                </pre>
+            </figure>
+
+            <h3 class="note-yellow m-b-2">
+                Sticky header
+            </h3>
+            <p>Standalone header. You will need to add <b>your own background image</b>. In fact this is more a sticky title than a sticky header.</p>
+            <aside>
+                <p>You can view it in action at <a href="./template.html" rel="noopener">template module</a>.</p>
+            </aside>
+            
+            <div class="header-sticky  h-vh-50 bg-yellow" style="background-image: url(/assets/img/header/headerDesktop.png); background-attachment: fixed;">
+                <h4 class="header-sticky-title t-white bg-yellow">
+                    your fancy title
+                </h4>
+            </div>
+
+            <figure class="clipboard-container m-t-2 m-b-8">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+            <pre class="clipboard">
+                <code>
+&lt;header class=&quot;header-sticky  h-vh-50 bg-yellow&quot;&gt;
+    &lt;h4 class=&quot;header-sticky-title t-white bg-yellow&quot;&gt;
+        your fancy title
+    &lt;/h4&gt;
+&lt;/header&gt;
+                </code>
+                </pre>
+            </figure>
+
+            <h3 class="note-yellow m-b-2">
+                Header
+            </h3>
+            <p>Standalone header</p>
+            <div class="header h-vh-33 bg-yellow">
+                <h4 class="header-title t-carbon">
+                    header
+                </h4>
+            </div>
+
+            <figure class="clipboard-container  m-t-2 m-b-8">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+            <pre class="clipboard">
+                <code>
+&lt;header class=&quot;header h-vh-33 bg-yellow&quot;&gt;
+    &lt;h3 class=&quot;header-title t-carbon&quot;&gt;
+        your title
+    &lt;/h3&gt;
+&lt;/header&gt;
+                    </code>
+                </pre>
+            </figure>
+
+            <h3 class="note-yellow m-b-2">
+                header with image
+            </h3>
+            <p>Standalone header</p>
+            <div class="header-image bg-yellow">
+                <h4 class="header-image-title">
+                    image header
+                </h4>
+                <picture>
+                    <source srcset="./assets/img/header/header.png" media="(min-width: 1400px)">
+                    <source srcset="./assets/img/header/headerDesktop.png" media="(min-width: 992px)">
+                    <source srcset="./assets/img/header/headerTabLand.png" media="(min-width: 728px)">
+                    <img class="responsive-img" src="./assets/img/header/headerTabPort.png" alt="">
+                </picture>
+            </div>
+
+            <figure class="clipboard-container m-t-2 m-b-8">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+            <pre class="clipboard">
+                <code>
+&lt;header class=&quot;header-image bg-yellow&quot;&gt;
+    &lt;h3 class=&quot;header-image-title&quot;&gt;
+        your title
+    &lt;/h3&gt;
+    &lt;picture&gt;
+        &lt;source srcset=&quot;/pathTo/image.png&quot; media=&quot;(min-width: 1400px)&quot;&gt;
+        &lt;source srcset=&quot;/pathTo/image.png&quot; media=&quot;(min-width: 992px)&quot;&gt;
+        &lt;source srcset=&quot;/pathTo/image.png&quot; media=&quot;(min-width: 728px)&quot;&gt;
+        &lt;img class=&quot;responsive-img&quot; src=&quot;/pathTo/image.png&quot; alt=&quot;&quot;&gt;
+    &lt;/picture&gt;
+&lt;/header&gt;
+                    </code>
+                </pre>
+            </figure>
+
+        </section>
+
+    </main>
+    <footer id="straightFooter" class="bg-grey-light">
+        <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
+            <section>
+                <a class="btn-square-s btn-green" href="./index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
+                </a>
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <p class="t-x-small t-carbon">
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="/" trget="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
+                </p>
+            </section>
+            <section class="d-flex j-between">
+                <ul>
+                    <li class="t-x-small">
+                        <a href="./button.html" rel="noopener">button module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./card.html" rel="noopener">card module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./carousel.html" rel="noopener">carousel module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./color.html" rel="noopener">color module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./form.html" rel="noopener">form module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./header.html" rel="noopener">header module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./helper.html" rel="noopener">helper module</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="t-x-small">
+                        <a href="./image.html" rel="noopener">image module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./layout.html" rel="noopener">layout module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./list.html" rel="noopener">list module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./nav.html" rel="noopener">nav module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./notification.html" rel="noopener">notification module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./table.html" rel="noopener">table module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./template.html" rel="noopener">template module</a>
+                    </li>
+                    <li class="t-x-small">
+                        <a href="./typography.html" rel="noopener">typography module</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </footer>
+    <script src="./script/detectIE.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="./script/straightNav.js"></script>
+    <script src="./script/straightClipboard.js"></script>
+    <script src="./script/straightFooter.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@mixin width($value) {
+  width: $value;
+}
+@mixin max-width($value) {
+  max-width: $value;
+}
+@mixin min-width($value) {
+  min-width: $value;
+}
+/*
+Percent
+*/
+@for $i from 1 through 100 {
+  .w-prc-#{$i} {
+    width: #{1% * $i};
+  }
+}
+@for $i from 1 through 100 {
+  .max-w-prc-#{$i} {
+    max-width: #{1% * $i};
+  }
+}
+@for $i from 1 through 100 {
+  .min-w-prc-#{$i} {
+    min-width: #{1% * $i};
+  }
+}
+
+/*
+Vw
+*/
+@for $i from 1 through 100 {
+  .w-vw-#{$i} {
+    width: #{1vw * $i};
+  }
+}
+@for $i from 1 through 100 {
+  .max-w-vw-#{$i} {
+    max-width: #{1vw * $i};
+  }
+}
+@for $i from 1 through 100 {
+  .min-w-vw-#{$i} {
+    min-width: #{1vw * $i};
+  }
+}
+
+/*
+Rem
+*/
+@for $i from 1 through 300 {
+  .w-rem-#{$i} {
+    width: #{1rem * $i};
+  }
+}
+@for $i from 1 through 300 {
+  .max-w-rem-#{$i} {
+    max-width: #{1rem * $i};
+  }
+}
+@for $i from 1 through 300 {
+  .min-w-rem-#{$i} {
+    min-width: #{1rem * $i};
+  }
+}

@@ -1,0 +1,175 @@
+@use "font" as f;
+@use "position" as p;
+@use "margin" as m;
+@use "device" as d;
+@use "utility" as u;
+@use "width" as w;
+
+/*
+***************
+CAROUSEL SHARED
+***************
+*/
+%carousel-shared {
+  overflow: hidden;
+  @include p.position(relative);
+  %carousel-slide-shared {
+    @include p.position(relative);
+  }
+  %carousel-text-container-shared {
+    @include w.width(100%);
+    @include f.text-align(center);
+  }
+  %carousel-text-shared {
+    @include d.tablet-landscape() {
+      font-size: clamp(2.4rem, 2.26rem + 0.5vw, 3.2rem);
+    }
+    @include m.margin-direction(bottom, 0);
+  }
+  %carousel-cta-shared {
+    @include p.position(absolute);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  %carousel-next-shared {
+    right: 0;
+  }
+}
+
+.carousel {
+  @extend %carousel-shared;
+  &-slide {
+    @extend %carousel-slide-shared;
+  }
+  &-cta {
+    @extend %carousel-cta-shared;
+    top: calc(50% - 2.4rem);
+    &-icon {
+      @include f.text-overlay();
+    }
+  }
+  &-next {
+    @extend %carousel-next-shared;
+  }
+}
+
+/*
+****************
+CAROUSEL OVERLAY
+****************
+*/
+.carousel-overlay {
+  @extend %carousel-shared;
+  .carousel-slide {
+    @extend %carousel-slide-shared;
+  }
+  .carousel-title {
+    @include f.text-overlay();
+  }
+  .carousel-text-container {
+    @extend %carousel-text-container-shared;
+    @include p.pos-absolute-centering();
+  }
+  .carousel-text {
+    @extend %carousel-text-shared;
+    @include f.text-overlay();
+  }
+  .carousel-cta {
+    @extend %carousel-cta-shared;
+    top: calc(50% - 2.4rem);
+    &-icon {
+      @include f.text-overlay();
+    }
+  }
+  .carousel-next {
+    @extend %carousel-next-shared;
+  }
+}
+
+/*
+****************
+CAROUSEL CAPTION
+****************
+*/
+.carousel-caption {
+  @extend %carousel-shared;
+  .carousel-slide {
+    @extend %carousel-slide-shared;
+  }
+  .carousel-text-container {
+    @extend %carousel-text-container-shared;
+  }
+  .carousel-text {
+    @extend %carousel-text-shared;
+  }
+  .carousel-cta {
+    @extend %carousel-cta-shared;
+    top: calc(35% - 2.4rem);
+    &-icon {
+      @include f.text-overlay();
+    }
+  }
+  .carousel-next {
+    @extend %carousel-next-shared;
+  }
+}
+
+/*
+*********
+ANIMATION
+*********
+*/
+.carousel-slide-to-left {
+  -webkit-animation-name: carouselSlideToLeft;
+  animation-name: carouselSlideToLeft;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+  @-webkit-keyframes carouselSlideToLeft {
+    from {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes carouselSlideToLeft {
+    from {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}
+
+.carousel-slide-to-right {
+  -webkit-animation-name: carouselSlideToRight;
+  animation-name: carouselSlideToRight;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+  @-webkit-keyframes carouselSlideToRight {
+    from {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+  @keyframes carouselSlideToRight {
+    from {
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+  }
+}

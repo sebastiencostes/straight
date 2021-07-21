@@ -1,0 +1,55 @@
+@use "device" as d;
+@use "margin" as m;
+@use "width" as w;
+
+@mixin container-fix() {
+  @include m.margin-direction(left, auto);
+  @include m.margin-direction(right, auto);
+  @include w.width(calc(100vw - 4rem));
+  @include d.laptop () {
+    @include w.width(120rem);
+  }
+  @include d.desktop () {
+    @include w.width(136.6rem);
+  }
+  @include d.desktop-large () {
+    @include w.width(188rem);
+  }
+}
+.container-fix {
+  @include container-fix();
+}
+/*
+relative to screen device
+*/
+@mixin container-screen() {
+  @include m.margin-direction(left, auto);
+  @include m.margin-direction(right, auto);
+    @include w.width(calc(100vw - 4rem));
+}
+.container-screen {
+  @include container-screen();
+}
+/*
+relative to window/box
+*/
+@mixin container-box() {
+  @include d.tablet-portrait {
+    @include m.margin-direction(left, auto);
+    @include m.margin-direction(right, auto);
+    @include w.max-width(calc(100% - 4rem));
+  }
+}
+.container-box {
+  @include container-box();
+}
+
+/*
+no-margin
+*/
+@mixin container-full() {
+  @include w.width(100%);
+}
+.container-full {
+  @include container-full();
+}

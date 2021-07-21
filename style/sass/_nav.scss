@@ -1,0 +1,229 @@
+@use "device" as d;
+@use "border" as b;
+@use "flexbox"as flx;
+@use "position" as p;
+@use "height" as h;
+@use "width" as w;
+@use "margin" as m;
+@use "padding" as pd;
+@use "color" as c;
+@use "utility" as u;
+@use "filter" as f;
+@use "font" as ft;
+@use "grid" as g;
+
+/*
+OPEN classic nav
+*/
+.nav {
+  @include p.position(fixed);
+  @include u.transition(background-color, u.$time);
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  &-header {
+    @include flx.d-flex();
+    @include flx.justify-content(space-between);
+    @include flx.align-items(center);
+    @include pd.padding(2rem);
+  }
+  &-menu {
+    -webkit-animation-name: classicNav;
+    animation-name: classicNav;
+    -webkit-animation-duration: u.$time;
+    animation-duration: u.$time;
+    @include p.position(absolute);
+    @include u.b-shadow();
+    @include h.height(calc(100vh - 8rem));
+    //firefox hide scrollbar and preserve scrolling
+    scrollbar-width: none;
+    overflow-y: auto;
+    @include pd.padding(2rem);
+    @include w.width(100vw);
+    @include d.tablet-portrait() {
+      @include w.width(33.333vw);
+    }
+    @include d.laptop() {
+      @include w.width(calc(100vw - 120rem));
+    }
+    @include d.desktop() {
+      @include w.width(calc((100vw - 136.6rem) / 2));
+    }
+    @include d.desktop-large() {
+      @include w.width(calc((100vw - 188rem) / 2));
+    }
+    &-item {
+      @include m.margin-direction(top, 2rem);
+      &:first-child {
+        @include m.margin-direction(top, 0);
+      }
+    }
+    &-link {
+      &-text {
+        @include m.margin-direction(left, 1rem);
+      }
+    }
+  }
+}
+/*
+Open innerNav
+*/
+#straightNav {
+  z-index: 2;
+}
+/*
+Close innerNav
+*/
+/*
+CLOSE classic nav
+*/
+
+/*
+OPEN Pad nav
+*/
+.nav-pad-menu {
+  @include g.g-col-gap(2rem);
+  @include g.row-gap(2rem);
+  //firefox hide scrollbar and preserve scrolling
+  scrollbar-width: none;
+  overflow-y: auto;
+  @include f.backdrop-filter(blur(1.6rem));
+  -webkit-animation-name: padNav;
+  animation-name: padNav;
+  -webkit-animation-duration: u.$time;
+  animation-duration: u.$time;
+  @include h.height(calc(100vh - 8rem));
+  .nav-menu-item {
+    @include flx.align-self(center);
+    @include flx.d-inline-flex();
+    @include flx.f-dir-col();
+    @include flx.align-items(center);
+    &:first-child {
+      @include m.margin-direction(top, 2rem);
+    }
+  }
+  .nav-menu-link {
+    @include b.b-radius(0.8rem);
+    @include w.width(5.6rem);
+    @include h.height(5.6rem);
+    @include d.tablet-portrait() {
+      @include b.b-radius(1.6rem);
+      @include w.width(11.2rem);
+      @include h.height(11.2rem);
+    }
+    &-text {
+      @include ft.text-overlay();
+      @include m.margin-direction(left, 0);
+      @include m.margin-direction(top, 1rem);
+    }
+    ion-icon {
+      font-size: 3.2rem;
+      @include d.tablet-portrait() {
+        font-size: 8rem;
+      }
+    }
+  }
+}
+
+@supports not (
+  (backdrop-filter: blur(1.6rem)) or (-moz-backdrop-filter: blur(1.6rem)) or
+    (-webkit-backdrop-filter: blur(1.6rem))
+) {
+  .nav-pad-menu {
+    @include c.dark-theme() {
+      background: rgba(3, 3, 3, 0.9);
+    }
+    @include c.light-theme() {
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+/*
+CLOSE Pad nav
+*/
+
+/*
+Open nav example
+*/
+#navExample1.nav,
+#navExample2.nav {
+  @include p.position(relative);
+  @include w.width(100%);
+  z-index: 0;
+  .nav-menu,
+  .nav-pad-menu {
+    @include h.height(calc(100% - 8rem));
+    @include w.width(100%);
+  }
+}
+/*
+Close nav example
+*/
+
+/*
+animation slide opening for classic nav
+*/
+@-webkit-keyframes classicNav {
+  from {
+    -webkit-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes classicNav {
+  from {
+    -webkit-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*
+animation slide opening for PAD NAV
+*/
+@-webkit-keyframes padNav {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes padNav {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/*
+**************
+THEME BG COLOR
+**************
+*/
+
+.bg-nav {
+  @include c.light-theme() {
+    background-color: c.$white;
+  }
+  @include c.dark-theme() {
+    background-color: c.$text-light;
+  }
+}

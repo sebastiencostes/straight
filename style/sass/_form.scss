@@ -1,0 +1,747 @@
+@use "color" as c;
+@use "border" as b;
+@use "flexbox" as flx;
+@use "height" as h;
+@use "margin" as m;
+@use "padding" as p;
+@use "position" as pos;
+@use "utility" as u;
+@use "width" as w;
+
+/*
+****
+FORM
+****
+*/
+%form-shared {
+  overflow: hidden;
+}
+%form-title-container-shared { 
+  border: 0;
+  padding: 0;
+}
+%form-title-shared {
+  font-size: clamp(2.4rem, 2.12rem + 1vw, 4rem);
+  font-weight: 300;
+}
+%form-input-container-shared {
+  background-color: c.$grey;
+  @include b.b-radius(0.3rem);
+  @include flx.d-flex();
+}
+%form-label-shared {
+  font-size: 1.6rem;
+  font-weight: 400;
+  @include u.d-inline-block();
+  @include m.margin-direction(bottom, 1rem);
+}
+%form-input-shared {
+  font-size: 1.6rem;
+  @include p.padding(0.8rem 1.6rem);
+  @include w.width(100%);
+}
+%input-icon-shared {
+  color: c.$text-light;
+  font-size: 2.4rem;
+}
+%form-lastname-shared {
+  text-transform: uppercase;
+}
+%form-icon-shared {
+  @include flx.d-inline-flex();
+  @include flx.align-items(center);
+  @include flx.justify-content(center);
+  @include w.width(4rem);
+}
+
+.form {
+  @extend %form-shared;
+  &-title-container {
+    @extend %form-title-container-shared;
+  }
+  &-title {
+    @extend %form-title-shared;
+  }
+  &-input-container {
+    @extend %form-input-container-shared;
+  }
+  &-label {
+    @extend %form-label-shared;
+  }
+  &-input {
+    @extend %form-input-shared;
+  }
+  &-lastname {
+    @extend %form-lastname-shared;
+  }
+  &-icon {
+    @extend %form-icon-shared;
+  }
+}
+.input-icon {
+  @extend %input-icon-shared;
+}
+/*
+Textarea
+*/
+.textarea-container {
+  @include h.height(100%);
+}
+
+/*
+***********
+TEXT INPUTS
+***********
+*/
+textarea,
+.form-input {
+  background-color: c.$grey-light;
+  color: c.$text-light;
+  &::placeholder {
+    color: c.$grey;
+  }
+  &:disabled {
+    background-color: c.$grey-light;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+/*
+****************
+CHECKBOX & RADIO
+****************
+*/
+input[type="checkbox"],
+input[type="radio"] {
+  --active-inner: #fff;
+  --focus: 2px rgba(39, 94, 254, 0.3);
+  --border: #bbc1e1;
+  --background: #efefef;
+  --disabled: #bdbdbd;
+  --disabled-inner: #8d8d8d;
+  @include h.height(2.1rem);
+  @include u.d-inline-block();
+  vertical-align: top;
+  @include pos.position(relative);
+  @include m.margin(0);
+  cursor: pointer;
+  border: 1px solid var(--bc, var(--border));
+  background-color: var(--b, var(--background));
+  transition: background-color u.$time, border-color u.$time, box-shadow u.$time;
+  &:after {
+    content: "";
+    @include u.d-block();
+    left: 0;
+    top: 0;
+    @include pos.position(absolute);
+    transition: opacity var(--d-o, u.$time),
+      -webkit-transform var(--d-t, u.$time) var(--d-t-e, ease);
+    transition: transform var(--d-t, u.$time) var(--d-t-e, ease),
+      opacity var(--d-o, u.$time);
+    transition: transform var(--d-t, u.$time) var(--d-t-e, ease),
+      opacity var(--d-o, u.$time),
+      -webkit-transform var(--d-t, u.$time) var(--d-t-e, ease);
+  }
+  &:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: 0.3s;
+    --d-t: 0.6s;
+    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  }
+  &:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+    &:checked {
+      --b: var(--disabled-inner);
+      --bc: var(--border);
+    }
+    & + label {
+      cursor: not-allowed;
+    }
+  }
+  &:hover {
+    &:not(:checked) {
+      &:not(:disabled) {
+        --bc: var(--border-hover);
+      }
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+  &:not(.switch) {
+    @include w.width(2.1rem);
+    &:after {
+      opacity: var(--o, 0);
+    }
+    &:checked {
+      --o: 1;
+    }
+  }
+  & + label {
+    font-size: clamp(0.8rem, 0.66rem + 0.5vw, 1.6rem);
+    line-height: 2.1rem;
+    @include u.d-inline-block();
+    vertical-align: top;
+    cursor: pointer;
+    @include m.margin-direction(left, 1rem);
+  }
+}
+input[type="checkbox"] {
+  &:not(.switch) {
+    @include b.b-smooth();
+    &:after {
+      @include w.width(5px);
+      @include h.height(9px);
+      border: 2px solid var(--active-inner);
+      border-top: 0;
+      border-left: 0;
+      left: 7px;
+      top: 4px;
+      -webkit-transform: rotate(var(--r, 20deg));
+      transform: rotate(var(--r, 20deg));
+    }
+    &:checked {
+      --r: 43deg;
+    }
+  }
+  &.switch {
+    @include w.width(3.8rem);
+    @include b.b-radius(1.1rem);
+    &:after {
+      left: 2px;
+      top: 2px;
+      @include b.b-radius(50%);
+      @include w.width(1.5rem);
+      @include h.height(1.5rem);
+      background: var(--ab, var(--border));
+      -webkit-transform: translateX(var(--x, 0));
+      transform: translateX(var(--x, 0));
+    }
+    &:checked {
+      --ab: var(--active-inner);
+      --x: 1.7rem;
+    }
+    &:disabled {
+      --active: #323232;
+      --border: #323232;
+      --border-hover: #323232;
+      &:not(:checked) {
+        &:after {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+input[type="radio"] {
+  @include b.b-radius(50%);
+  &:after {
+    @include w.width(1.9rem);
+    @include h.height(1.9rem);
+    @include b.b-radius(50%);
+    background: var(--active-inner);
+    opacity: 0;
+    -webkit-transform: scale(var(--s, 0.7));
+    transform: scale(var(--s, 0.7));
+  }
+  &:checked {
+    --s: 0.5;
+  }
+}
+
+/*
+******
+COLORS
+******
+*/
+/*
+Checkbox ,radio & switch.check colors
+*/
+input[type="checkbox"].check,
+input[type="radio"].radio {
+  &-red {
+    --active: #d50000;
+    --border: #d50000;
+    --border-hover: #d50000;
+  }
+  &-green {
+    --active: #64dd17;
+    --border: #64dd17;
+    --border-hover: #64dd17;
+  }
+  &-blue {
+    --active: #0091ea;
+    --border: #0091ea;
+    --border-hover: #0091ea;
+  }
+  &-turquoise {
+    --active: #00bfa5;
+    --border: #00bfa5;
+    --border-hover: #00bfa5;
+  }
+  &-yellow {
+    --active: #ffd600;
+    --border: #ffd600;
+    --border-hover: #ffd600;
+  }
+  &-orange {
+    --active: #ff6d00;
+    --border: #ff6d00;
+    --border-hover: #ff6d00;
+  }
+  &-pink {
+    --active: #c51162;
+    --border: #c51162;
+    --border-hover: #c51162;
+  }
+  &-purple {
+    --active: #aa00ff;
+    --border: #aa00ff;
+    --border-hover: #aa00ff;
+  }
+  &-brown {
+    --active: #8d6e63;
+    --border: #8d6e63;
+    --border-hover: #8d6e63;
+  }
+  &-navy {
+    --active: #78909c;
+    --border: #78909c;
+    --border-hover: #78909c;
+  }
+  &-black {
+    --active: #212121;
+    --border: #212121;
+    --border-hover: #212121;
+  }
+}
+
+/*
+.input-icon-container background color's rules for text inputs
+*/
+.input-icon-container {
+  &-yellow {
+    background-color: c.$yellow;
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-orange {
+    background-color: c.$orange;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-red {
+    background-color: c.$red;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-purple {
+    background-color: c.$purple;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-pink {
+    background-color: c.$pink;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-blue {
+    background-color: c.$blue;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-green {
+    background-color: c.$green;
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-turquoise {
+    background-color: c.$turquoise;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-brown {
+    background-color: c.$brown;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-grey {
+    background-color: c.$grey;
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-navy {
+    background-color: c.$navy;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-black {
+    background-color: c.$carbon;
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+}
+
+/*
+.input-container color's rules for text inputs
+*/
+.input-container {
+  &-yellow {
+    background-color: c.$yellow;
+    .form-input {
+      background-color: c.$yellow-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$yellow-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-orange {
+    background-color: c.$orange;
+    .form-input {
+      background-color: c.$orange-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$orange-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-red {
+    background-color: c.$red;
+    .form-input {
+      background-color: c.$red-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$red-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-purple {
+    background-color: c.$purple;
+    .form-input {
+      background-color: c.$purple-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$purple-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-pink {
+    background-color: c.$pink;
+    .form-input {
+      background-color: c.$pink-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$pink-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-blue {
+    background-color: c.$blue;
+    .form-input {
+      background-color: c.$blue-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$blue-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-green {
+    background-color: c.$green;
+    .form-input {
+      background-color: c.$green-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$green-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-turquoise {
+    background-color: c.$turquoise;
+    .form-input {
+      background-color: c.$turquoise-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$turquoise-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-brown {
+    background-color: c.$brown;
+    .form-input {
+      background-color: c.$brown-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$brown-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-grey {
+    background-color: c.$grey;
+    .form-input {
+      background-color: c.$grey-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$grey-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-light;
+    }
+  }
+  &-navy {
+    background-color: c.$navy;
+    .form-input {
+      background-color: c.$navy-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$navy-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+  &-black {
+    background-color: c.$carbon;
+    .form-input {
+      background-color: c.$carbon-dark;
+      color: c.$white;
+      &::placeholder {
+        color: c.$carbon-light;
+      }
+    }
+    .input-icon {
+      color: c.$text-dark;
+    }
+  }
+}
+
+/*
+.form color's rules for text inputs
+*/
+.form {
+  &-yellow {
+    .form-input-container {
+      background-color: c.$yellow;
+      .form-input {
+        background-color: c.$yellow-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$yellow-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-light;
+      }
+    }
+  }
+  &-orange {
+    .form-input-container {
+      background-color: c.$orange;
+      .form-input {
+        background-color: c.$orange-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$orange-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+  &-red {
+    .form-input-container {
+      background-color: c.$red;
+      .form-input {
+        background-color: c.$red-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$red-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+  &-purple {
+    .form-input-container {
+      background-color: c.$purple;
+      .form-input {
+        background-color: c.$purple-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$purple-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+  &-pink {
+    .form-input-container {
+      background-color: c.$pink;
+      .form-input {
+        background-color: c.$pink-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$pink-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+  &-blue {
+    .form-input-container {
+      background-color: c.$blue;
+      .form-input {
+        background-color: c.$blue-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$blue-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+  &-green {
+    .form-input-container {
+      background-color: c.$green;
+      .form-input {
+        background-color: c.$green-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$green-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-light;
+      }
+    }
+  }
+  &-turquoise {
+    .form-input-container {
+      background-color: c.$turquoise;
+      .form-input {
+        background-color: c.$turquoise-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$turquoise-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+  &-brown {
+    .form-input-container {
+      background-color: c.$brown;
+      .form-input {
+        background-color: c.$brown-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$brown-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+  &-grey {
+    .form-input-container {
+      background-color: c.$grey;
+      .form-input {
+        background-color: c.$grey-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$grey-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-light;
+      }
+    }
+  }
+  &-navy {
+    .form-input-container {
+      background-color: c.$navy;
+      .form-input {
+        background-color: c.$navy-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$navy-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+  &-black {
+    .form-input-container {
+      background-color: c.$carbon;
+      .form-input {
+        background-color: c.$carbon-dark;
+        color: c.$white;
+        &::placeholder {
+          color: c.$carbon-light;
+        }
+      }
+      .input-icon {
+        color: c.$text-dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,393 @@
+@use "color" as c;
+@use "padding"as p;
+
+/*
+Border color
+*/
+@mixin border($color) {
+  border: solid 1px $color;
+}
+@mixin b-top($color) {
+  border-top: solid 1px $color;
+}
+
+@mixin b-right($color) {
+  border-right: solid 1px $color;
+}
+
+@mixin b-bottom($color) {
+  border-bottom: solid 1px $color;
+}
+
+@mixin b-left($color) {
+  border-left: solid 1px $color;
+}
+
+.b-white {
+  @include border(c.$white);
+}
+.b-black {
+  @include border(c.$carbon);
+}
+.b-blue {
+  @include border(c.$blue);
+}
+.b-red {
+  @include border(c.$red);
+}
+.b-green {
+  @include border(c.$green);
+}
+.b-pink {
+  @include border(c.$pink);
+}
+.b-purple {
+  @include border(c.$purple);
+}
+.b-navy {
+  @include border(c.$navy);
+}
+.b-orange {
+  @include border(c.$orange);
+}
+.b-yellow {
+  @include border(c.$yellow);
+}
+.b-brown {
+  @include border(c.$brown);
+}
+.b-grey {
+  @include border(c.$grey);
+}
+.b-turquoise {
+  @include border(c.$turquoise);
+}
+//b-top volors
+.b-top-white {
+  @include b-top(c.$white);
+}
+.b-top-black {
+  @include b-top(c.$carbon);
+}
+.b-top-blue {
+  @include b-top(c.$blue);
+}
+.b-top-red {
+  @include b-top(c.$red);
+}
+.b-top-green {
+  @include b-top(c.$green);
+}
+.b-top-pink {
+  @include b-top(c.$pink);
+}
+.b-top-purple {
+  @include b-top(c.$purple);
+}
+.b-top-navy {
+  @include b-top(c.$navy);
+}
+.b-top-orange {
+  @include b-top(c.$orange);
+}
+.b-top-yellow {
+  @include b-top(c.$yellow);
+}
+.b-top-brown {
+  @include b-top(c.$brown);
+}
+.b-top-grey {
+  @include b-top(c.$grey);
+}
+.b-top-turquoise {
+  @include b-top(c.$turquoise);
+}
+//b-right volors
+.b-right-white {
+  @include b-right(c.$white);
+}
+.b-right-black {
+  @include b-right(c.$carbon);
+}
+.b-right-blue {
+  @include b-right(c.$blue);
+}
+.b-right-red {
+  @include b-right(c.$red);
+}
+.b-right-green {
+  @include b-right(c.$green);
+}
+.b-right-pink {
+  @include b-right(c.$pink);
+}
+.b-right-purple {
+  @include b-right(c.$purple);
+}
+.b-right-navy {
+  @include b-right(c.$navy);
+}
+.b-right-orange {
+  @include b-right(c.$orange);
+}
+.b-right-yellow {
+  @include b-right(c.$yellow);
+}
+.b-right-brown {
+  @include b-right(c.$brown);
+}
+.b-right-grey {
+  @include b-right(c.$grey);
+}
+.b-right-turquoise {
+  @include b-right(c.$turquoise);
+}
+//b-bottom volors
+.b-bottom-white {
+  @include b-bottom(c.$white);
+}
+.b-bottom-black {
+  @include b-bottom(c.$carbon);
+}
+.b-bottom-blue {
+  @include b-bottom(c.$blue);
+}
+.b-bottom-red {
+  @include b-bottom(c.$red);
+}
+.b-bottom-green {
+  @include b-bottom(c.$green);
+}
+.b-bottom-pink {
+  @include b-bottom(c.$pink);
+}
+.b-bottom-purple {
+  @include b-bottom(c.$purple);
+}
+.b-bottom-navy {
+  @include b-bottom(c.$navy);
+}
+.b-bottom-orange {
+  @include b-bottom(c.$orange);
+}
+.b-bottom-yellow {
+  @include b-bottom(c.$yellow);
+}
+.b-bottom-brown {
+  @include b-bottom(c.$brown);
+}
+.b-bottom-grey {
+  @include b-bottom(c.$grey);
+}
+.b-bottom-turquoise {
+  @include b-bottom(c.$turquoise);
+}
+//b-left volors
+.b-left-white {
+  @include b-left(c.$white);
+}
+.b-left-black {
+  @include b-left(c.$carbon);
+}
+.b-left-blue {
+  @include b-left(c.$blue);
+}
+.b-left-red {
+  @include b-left(c.$red);
+}
+.b-left-green {
+  @include b-left(c.$green);
+}
+.b-left-pink {
+  @include b-left(c.$pink);
+}
+.b-left-purple {
+  @include b-left(c.$purple);
+}
+.b-left-navy {
+  @include b-left(c.$navy);
+}
+.b-left-orange {
+  @include b-left(c.$orange);
+}
+.b-left-yellow {
+  @include b-left(c.$yellow);
+}
+.b-left-brown {
+  @include b-left(c.$brown);
+}
+.b-left-grey {
+  @include b-left(c.$grey);
+}
+.b-left-turquoise {
+  @include b-left(c.$turquoise);
+}
+/*
+Border theme
+*/
+.border {
+  @include c.light-theme() {
+    @include border(c.$carbon);
+  }
+  @include c.dark-theme() {
+    @include border(c.$text-dark);
+  }
+}
+/*
+border direction
+*/
+.b {
+  &-top {
+    @include c.light-theme() {
+      @include b-top(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-top(c.$text-dark);
+    }
+  }
+  &-right {
+    @include c.light-theme() {
+      @include b-right(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-right(c.$text-dark);
+    }
+  }
+  &-bottom {
+    @include c.light-theme() {
+      @include b-bottom(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-bottom(c.$text-dark);
+    }
+  }
+  &-left {
+    @include c.light-theme() {
+      @include b-left(c.$carbon);
+    }
+    @include c.dark-theme() {
+      @include b-left(c.$text-dark);
+    }
+  }
+}
+/*
+border-radius
+*/
+@mixin b-radius($value) {
+  border-radius: $value;
+}
+.b-radius-s {
+  @include b-radius(1rem);
+}
+.b-radius-m {
+  @include b-radius(2rem);
+}
+.b-radius-l {
+  @include b-radius(3rem);
+}
+.b-radius-xl {
+  @include b-radius(4rem);
+}
+.no-b-radius {
+  @include b-radius(0);
+}
+/*
+cricle
+*/
+.circle {
+  @include b-radius(50%);
+}
+/*
+no border
+*/
+@mixin no-border {
+  border: 0;
+}
+.no-b {
+  @include no-border;
+}
+.no-b-top {
+  border-top: 0;
+  border-top-width: 0;
+}
+.no-b-right {
+  border-right: 0;
+  border-right-width: 0;
+}
+.no-b-bottom {
+  border-bottom: 0;
+  border-bottom-width: 0;
+}
+.no-b-left {
+  border-left: 0;
+  border-left-width: 0;
+}
+/*
+smooth
+*/
+@mixin b-smooth() {
+  @include b-radius(0.3rem);
+}
+
+.b-smooth {
+  @include b-smooth();
+}
+/*
+.note
+*/
+@mixin note() {
+  border-left-width: 0.5rem;
+  @include p.padding-direction(left, 2rem);
+}
+.note-white {
+  @include b-left(c.$white);
+  @include note();
+}
+.note-black {
+  @include b-left(c.$carbon);
+  @include note();
+}
+.note-blue {
+  @include b-left(c.$blue);
+  @include note();
+}
+.note-red {
+  @include b-left(c.$red);
+  @include note();
+}
+.note-green {
+  @include b-left(c.$green);
+  @include note();
+}
+.note-pink {
+  @include b-left(c.$pink);
+  @include note();
+}
+.note-purple {
+  @include b-left(c.$purple);
+  @include note();
+}
+.note-navy {
+  @include b-left(c.$navy);
+  @include note();
+}
+.note-orange {
+  @include b-left(c.$orange);
+  @include note();
+}
+.note-yellow {
+  @include b-left(c.$yellow);
+  @include note();
+}
+.note-brown {
+  @include b-left(c.$brown);
+  @include note();
+}
+.note-grey {
+  @include b-left(c.$grey);
+  @include note();
+}
+.note-turquoise {
+  @include b-left(c.$turquoise);
+  @include note();
+}

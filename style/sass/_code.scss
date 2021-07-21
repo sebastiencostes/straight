@@ -1,0 +1,106 @@
+@use "color" as c;
+@use "flexbox" as flx;
+@use "grid" as g;
+@use "utility" as u;
+@use "width" as w;
+@use "padding" as p;
+
+.clipboard-container {
+  @include g.d-grid();
+  position: relative;
+}
+
+.clipboard-cta {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.clipboard {
+  background-color: c.$grey-light;
+  @include flx.d-inline-flex();
+  @include w.width(100%);
+  overflow: auto;
+  //firefox scrollbar
+  scrollbar-width: thin;
+  scrollbar-color: c.$grey c.$grey-light;
+}
+//edge, safari, chrome, opera scrollbar
+.clipboard::-webkit-scrollbar {
+  height: 0.8rem;
+  width: 0.8rem;
+}
+.clipboard::-webkit-scrollbar-track {
+  background: c.$grey-light;
+}
+.clipboard::-webkit-scrollbar-thumb {
+  background-color: c.$grey;
+  border-radius: 0;
+  border: 0;
+}
+
+.clipboard code {
+  @include u.d-block();
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  @include p.padding-direction(left, 2rem);
+  white-space: pre;
+}
+
+/*
+***********
+SINGLE CODE
+***********
+*/
+.single-code {
+  color: c.$blue;
+  @include u.d-inline-block();
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  font-size: clamp(1.2rem, 1.1009rem + 0.354vw, 2rem);
+  font-weight: 300;
+}
+
+code span {
+  font-size: 1.6rem;
+}
+
+/*
+*********
+HIGHLIGHT
+*********
+*/
+.hljs {
+  color: c.$blue;
+}
+
+.hljs-tag {
+  color: c.$grey-dark;
+}
+
+.hljs-bullet,
+.hljs-deletion,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-template-variable,
+.hljs-variable {
+  color: c.$blue;
+}
+
+.hljs-attr,
+.hljs-link,
+.hljs-literal,
+.hljs-number,
+.hljs-symbol,
+.hljs-variable.constant_ {
+  color: c.$pink-light;
+}
+
+.hljs-addition,
+.hljs-code,
+.hljs-string,
+.hljs-title.class_.inherited__ {
+  color: c.$brown-light;
+}
