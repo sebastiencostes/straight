@@ -1,4 +1,25 @@
 const footer = document.querySelector('#straightFooter');
+const footerListA = footer.querySelector('#straightFooterListA');
+const footerListB = footer.querySelector('#straightFooterListB');
+const arrayFooterListA = [
+    {footerLink : 'button'},
+    {footerLink : 'card'},
+    {footerLink : 'carousel'},
+    {footerLink : 'color'},
+    {footerLink : 'form'},
+    {footerLink : 'header'},
+    {footerLink : 'helper'}
+];
+const arrayFooterListB = [
+    {footerLink : 'image'},
+    {footerLink : 'layout'},
+    {footerLink : 'list'},
+    {footerLink : 'nav'},
+    {footerLink : 'notification'},
+    {footerLink : 'table'},
+    {footerLink : 'template'},
+    {footerLink : 'typography'}
+];
 const author = footer.querySelector('.author');
 const version = footer.querySelector('.version');
 const authorString = "Sébastien COSTES";
@@ -18,9 +39,29 @@ getVersion = (versionNumber) => {
     version.innerHTML = versionString + versionNumber;
 }
 
-//call getCurentYear, getAuthor on load
+getFooterListA = () => {
+    for(let listA of arrayFooterListA) {
+    footerListA.innerHTML += ` 
+    <li class="t-x-small">
+        <a href="./${listA.footerLink}.html" rel="noopener">${listA.footerLink} module</a>
+    </li>`
+    }
+}
+
+getFooterListB = () => {
+    for(let listB of arrayFooterListB) {
+    footerListB.innerHTML += ` 
+    <li class="t-x-small">
+        <a href="./${listB.footerLink}.html" rel="noopener">${listB.footerLink} module</a>
+    </li>`
+    }
+}
+
+//call getCurentYear, getAuthor, lists on load
 window.addEventListener("load", () => {
     getAuthor();
     getCurrentYear(year);
     getVersion("0.1");
+    getFooterListA();
+    getFooterListB();
 });
