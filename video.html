@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Straight Video - ">
+        <meta name="author" content="Sébastien COSTES">
+        <meta name="color-scheme" content="dark light">
+        <title>Straight | Video</title>
+        <link href="https://cdn.jsdelivr.net/gh/sebastiencostes/straight@straight/dist/straight.min.css" rel="stylesheet" crossorigin="anonymous">    
+        <link rel="manifest" href="./manifest.json">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Straight">
+        <meta name="apple-mobile-web-app-title" content="Straight">
+        <meta name="theme-color" content="#64dd17">
+        <meta name="msapplication-navbutton-color" content="#64dd17">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="./index.html">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="16x16" href="./assets/img/logo/logo16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="32x32" href="./assets/img/logo/logo32x32.png">
+        <link rel="icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="./assets/img/logo/logo128x128.png">
+        <link rel="icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="apple-touch-icon" type="imga/png" sizes="167x167" href="./assets/img/logo/logo167x167.png">
+        <link rel="icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./assets/img/logo/logo180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./assets/img/logo/logo192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./assets/img/logo/logo512x512.png">
+    </head>
+
+<body>
+    <nav id="straightNav" class="nav">
+        <ul class="nav-header">
+            <li>
+                <a class="btn-square-s btn-green" href="./index.html" role="button" rel="noopener">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
+                </a>
+            </li>
+            <li class="grid d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="grid-outline" />
+                </button>
+                preview to navpad
+            </li>
+            <li class="list d-none t-blue">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="list" />
+                </button>
+                return to list view
+            </li>
+            <li class="open d-block">
+                <button class="btn-square-s btn-green" type="button">
+                    <ion-icon name="menu" />
+                </button>
+            </li>
+            <li class="close d-none">
+                <button class="btn-square-s" type="button">
+                    <ion-icon name="close" />
+                </button>
+            </li>
+        </ul>
+        <ul id="straightNavMenu" class="d-none switch-nav" role="menu">
+        </ul>
+    </nav>
+    <header class="header-presentation bg-grad-orange" role="presentation">
+        <h1 class="header-presentation-title t-white">video</h1>
+    </header>
+
+    <main class="container-fix">
+
+        <h2 class="note-orange">
+            About Video
+        </h2>
+        <p>
+            embeds media player which supports video playback into the document.
+        </p>
+
+        <article class="m-b-8 m-t-8">
+            <h3 class="note-orange">
+                Embedded video
+            </h3>
+            <p>
+                The <strong>controls attribute</strong> adds video controls, like play, pause, and volume.
+                The <span class="t-blue">video</span> class allows the <code class="single-code">&lt;video&gt;</code> to be responsive.
+                The <code class="single-code">&lt;source&gt;</code> element allows you to specify alternative video files which the browser may choose from.
+                The browser will use the first recognized format.
+                The text between the video and video tags will only be displayed in browsers that do not support the video element.     
+            </p>
+            <p class="note-orange">Currently three video formats are supported by the HTML5 specification: </p>
+            <ul>
+                <li class="list-inside">
+                    WebM
+               
+                </li>
+                <li class="list-inside">
+                    Ogg
+                </li>
+                <li class="list-inside">
+                    MP4
+                </li>
+            </ul>
+
+            <p class="note-orange">Attributes : </p>
+            <ul>
+                <li class="list-inside">
+                    autoplay : play automatically
+                </li>
+                <li class="list-inside">
+                    controls : play/pause, volume, full-screen, seek slider
+                </li>
+                <li class="list-inside">
+                    controlsList : nofullscreen, nodownload, noremoteplayback
+                </li>
+                <li class="list-inside">
+                    loop : video played in a loop
+                </li>
+                <li class="list-inside">
+                    muted : mute the sound
+                </li>
+                <li class="list-inside">
+                    poster :  <code class="single-code">poster=&quot;pathTo/img.png&quot;</code>
+                </li>
+                <li class="list-inside">
+                    preload : none, metadata, auto
+                </li>
+            </ul>
+            <p class="note-orange">
+                Accessibility & subtitles
+            </p>
+            <p>
+                For achieving this you will need a <a href="https://developer.mozilla.org/fr/docs/Web/API/WebVTT_API" rel="noopener" target="_blank">.vtt</a> file.
+                Format for displaying timed text tracks alongside video using <code class="single-code">&lt;track&gt;</code>.
+            </p>
+            <p class="note-orange">
+                <code class="single-code">&lt;track&gt;</code> attributes :
+            </p>
+            <ul>
+                <li class="list-inside">
+                    default : enabled automatically when the video starts playing
+                </li>
+                <li class="list-inside">
+                    kind : kind of text track provided
+                </li>
+                <li class="list-inside">
+                    label : defines the title of the text track
+                </li>
+                <li class="list-inside">
+                    src : path to your <span class="t-blue">.vtt</span> file
+                </li>
+                <li class="list-inside">
+                    srclang : language the track is in
+                </li>
+            </ul>
+            <p class="note-orange">
+                <span class="t-blue">kind</span> values :
+            </p>
+            <ul>
+                <li class="list-inside">
+                    captions : overlays transcription of audio onto the video
+                </li>
+                <li class="list-inside">
+                    chapters : titles for different portions
+                </li>
+                <li class="list-inside">
+                    descriptions : overlays a full audio description
+                </li>
+                <li class="list-inside">
+                    subtitles : overlays written translations
+                </li>
+            </ul>
+
+            <video 
+                class="video m-t-2" 
+                controls 
+                controlsList="nodownload"
+                preload 
+                poster="./assets/img/video/videoPreloader.png">
+                <source src="./assets/img/video/video.mp4" type="video/mp4">
+                <track 
+                    default 
+                    label="Vidéo from Free Creative Stuff - Pexels Video" 
+                    kind="subtitles" 
+                    srclang="en" 
+                    src="./assets/img/video/video.vtt">
+                <p>embedded videos not supported.</p>
+            </video>
+
+            <figure class="clipboard-container m-t-2">
+                <button class="btn-square-s btn-grey clipboard-cta" type="button">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </button>
+                <pre class="clipboard">
+                    <code>
+&lt;video 
+    class=&quot;video&quot; 
+    controls 
+    controlsList=&quot;nodownload&quot;
+    preload 
+    poster=&quot;pathTo/img.png&quot;&gt;
+    &lt;source src=&quot;pathTo/video.webm&quot; type=&quot;video/webm&quot;&gt;
+    &lt;source src=&quot;pathTo/video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;source src=&quot;pathTo/video.ogg&quot; type=&quot;video/ogg&quot;&gt;
+    &lt;track 
+        default 
+        label=&quot;Your label&quot; 
+        kind=&quot;subtitles&quot; 
+        srclang=&quot;en&quot; 
+        src=&quot;pathTo/file.vtt&quot;&gt;
+    &lt;p&gt;embedded videos not supported.&lt;/p&gt;
+&lt;/video&gt;
+                    </code>
+                </pre>
+            </figure>
+        </article>
+
+    </main>
+    <footer id="straightFooter" class="bg-grey-light">
+        <div class="j-between g-col g-col-m-2 p-t-2 p-b-2 container-fix">
+            <section>
+                <a class="btn-square-s btn-green" href="./index.html" rel="noopener" role="button">
+                    <img class="h-rem-2" src="./assets/img/logo/logoWhite.svg" alt="">
+                </a>
+                <a class="btn-square-s btn-black" href="https://github.com/sebastiencostes" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a class="btn-square-s btn-blue" href="https://www.linkedin.com/in/sebastiencostes/" rel="noopener" target="_blank" role="button">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <p class="t-x-small t-carbon">
+                    Designed and built by &copy <b class="author"></b> 2020-<span class="current-year t-x-small"></span>.
+                    Code released under the <a href="https://github.com/sebastiencostes/straight/blob/master/LICENSE" target="_blank" rel="noopener">MIT License</a>.
+                    Currently <span class="version t-x-small"></span>
+                </p>
+            </section>
+            <section class="d-flex j-between">
+                <ul id="straightFooterListA"></ul>
+                <ul id="straightFooterListB"></ul>
+            </section>
+        </div>
+    </footer>
+    <script src="./script/detectIE.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./script/libraries/highlight.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="./script/straightNav.js"></script>
+    <script src="./script/straightClipboard.js"></script>
+    <script src="./script/straightFooter.js"></script>
+</body>
+
+</html>
