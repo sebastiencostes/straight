@@ -89,6 +89,12 @@ const arrayStraightNav = [
     icon: "text-outline",
     color: "brown",
   },
+  {
+    link: "./video.html",
+    linkName: "video",
+    icon: "play-circle-outline",
+    color: "orange",
+  }
 ];
 const straightNav = document.querySelector("#straightNav.nav");
 const straightNavHeader = document.querySelector(
