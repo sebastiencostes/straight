@@ -8,17 +8,18 @@ const arrayFooterListA = [
     {footerLink : 'color'},
     {footerLink : 'form'},
     {footerLink : 'header'},
-    {footerLink : 'helper'}
+    {footerLink : 'helper'},
+    {footerLink : 'image'}
 ];
 const arrayFooterListB = [
-    {footerLink : 'image'},
     {footerLink : 'layout'},
     {footerLink : 'list'},
     {footerLink : 'nav'},
     {footerLink : 'notification'},
     {footerLink : 'table'},
     {footerLink : 'template'},
-    {footerLink : 'typography'}
+    {footerLink : 'typography'},
+    {footerLink : 'video'}
 ];
 const author = footer.querySelector('.author');
 const version = footer.querySelector('.version');
@@ -61,7 +62,7 @@ getFooterListB = () => {
 window.addEventListener("load", () => {
     getAuthor();
     getCurrentYear(year);
-    getVersion("0.1");
+    getVersion("0.2");
     getFooterListA();
     getFooterListB();
 });

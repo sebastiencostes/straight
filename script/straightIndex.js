@@ -116,6 +116,13 @@ const arrayModules = [
     content: "everything you need about text.",
     subtitle: "from A to Z",
   },
+  {
+    title: "video",
+    url: "module",
+    img: "video",
+    content: "Embeds media player which supports video playback into the document.",
+    subtitle: "play",
+  }
 ];
 
 for (let module of arrayModules) {
