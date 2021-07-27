@@ -62,7 +62,7 @@ getFooterListB = () => {
 window.addEventListener("load", () => {
     getAuthor();
     getCurrentYear(year);
-    getVersion("0.2");
+    getVersion("0.3");
     getFooterListA();
     getFooterListB();
 });
